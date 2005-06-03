@@ -54,11 +54,14 @@ div.navigation a, div.subnavigation a
     font-size: 12pt;
     padding: 2px;
     border: 1px solid black;
-    color: red;
+    color: black;
 }
 
-div.navigation a.used, div.subnavigation a.used { 
-    background-color: #cccccc;
+div.navigation a.used { 
+    background-color: #ffcccc;
+}
+div.subnavigation a.used { 
+    background-color: #ffdddd;
 }
 
 div.subnavigation a 
