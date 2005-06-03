@@ -1,0 +1,37 @@
+
+#define S_HOME
+#define S_HOME_ABOUT
+#define PAGE About
+#define SUBPAGE Overview
+#define KEYWORDS "overview api high-performance distributed Equalizer OpenGL scalable cluster visualization"
+
+#include "header.html"
+
+<h2>Overview</h2>
+<p>
+Equalizer is a minimally invasive framework for the development of
+high-performance, scalable visualization software. An Equalizer
+application can run unmodified on any visualization system, from a
+single-pipe workstation to large-scale distributed and shared memory
+parallel visualization systems.
+</p><p>
+Using a client-server model, the Equalizer server automatically configures
+Equalizer applications -the clients- to use the provided visualization
+resources. Traditional OpenGL applications can be transparently executed using
+an Equalizer-ready Chromium version, and thus take advantage of the system's
+resources without any additional configuration.
+<a href="configuration.html">More about configuration...</a>
+</p><p>
+In addition to traditional multi-pipe execution, where one graphics card is
+connected to one display device, Equalizer offers a broad range of decomposition
+modes to accelerate the rendering of a single view by combining the results of
+multipe graphics cards. <a href="">More about scalability...</a>
+</p><p>
+Equalizer provides the natural execution framework for any multi-pipe
+application and does not impose any specific rendering framework, such
+as a scenegraph, to the application. It uses a callback-driven architecture,
+making it easy to port existing applications to Equalizer. <a href="">More about
+the API...</a>
+</p>
+
+#include "footer.html"

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- Copyright (c) 2005 Stefan Eilemann. All rights reserved. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <head>
+    
+    <meta name="author" content="Stefan Eilemann"/>
+#ifdef KEYWORDS
+    <meta name="keywords" content=KEYWORDS/>
+#endif
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann"/>
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page"/>
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen"/>
+  
+#ifdef PAGE
+    <title>Equalizer: PAGE</title>
+#else
+    <title>Equalizer</title>
+#endif
+  </head>
+
+  <body class="index">
+    <h1>Equalizer</h1>
+
+  <!-- Navigation -->
+
+  <div class="navigation">
+    <a href="index.html"
+#ifdef S_HOME
+       class="used"
+#endif
+    >About</a>
+
+    <a href="news.html"
+#ifdef S_NEWS
+       class="used"
+#endif
+    >News</a>
+  </div>
+
+  <!-- About sub-navigation-->
+#ifdef S_HOME
+  <div class="subnavigation">
+
+    <a href="index.html"
+#ifdef S_HOME_ABOUT
+       class="used"
+#endif
+    >Overview</a>
+
+    <a href="configuration.html"
+#ifdef S_HOME_CONFIG
+       class="used"
+#endif
+    >Configuration</a>
+    
+  </div>
+#endif 
+

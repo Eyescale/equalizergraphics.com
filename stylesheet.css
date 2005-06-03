@@ -1,0 +1,73 @@
+/*
+ * Copyright (c) 2005 Stefan Eilemann. All rights reserved.
+ */
+
+body {
+    font-family: Georgia, Garamond, Palatino, Times, serif;
+}
+
+pre, code {
+    font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+}
+
+h1 { 
+    text-align: center;
+}
+
+h2 {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+
+p
+{ 
+    text-align: justify;
+}
+
+img {
+    border: none;
+}
+
+table {
+    margin: 2ex auto 2ex auto;
+    text-align: center;
+}
+
+div.navigation { 
+    background-color: #aaaaaa;
+    padding: 6px 3px 6px 3px;
+}
+
+div.subnavigation { 
+    background-color: #bbbbbb;
+    padding: 6px 3px 6px 3px;
+}
+
+div.navigation a, div.subnavigation a 
+{ 
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12pt;
+    padding: 2px;
+    border: 1px solid black;
+    color: red;
+}
+
+div.navigation a.used, div.subnavigation a.used { 
+    background-color: #cccccc;
+}
+
+div.subnavigation a 
+{ 
+    font-size: 10pt;
+}
+
+div.footer p {
+    text-align: right; 
+    background-color: #999999;
+    padding: 3px;
+}
