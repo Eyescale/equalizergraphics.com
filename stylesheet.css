@@ -33,16 +33,17 @@ table {
     text-align: center;
 }
 
-div.titleframe table, div.titleframe td, div.titleframe a {
+div.titleframe table, div.titleframe td, div.titleframe tr, div.titleframe a {
     text-align: center;
     vertical-align: center;
     padding: 0px;
     border-collapse: collapse;
     color: black;
+    background-repeat: none;
 }
 
 div.titleframe h1 { 
-    font-size: 36pt;
+    font-size: 24pt;
 }
 
 div.navigation { 
