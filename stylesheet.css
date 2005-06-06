@@ -4,6 +4,7 @@
 
 body {
     font-family: Georgia, Garamond, Palatino, Times, serif;
+    background-color: #f0f0e0;
 }
 
 pre, code {
@@ -22,19 +23,26 @@ h2 {
     padding-bottom: 0.2em;
 }
 
-
 p
 { 
     text-align: justify;
 }
 
-img {
-    border: none;
-}
-
 table {
     margin: 2ex auto 2ex auto;
     text-align: center;
+}
+
+div.titleframe table, div.titleframe td, div.titleframe a {
+    text-align: center;
+    vertical-align: center;
+    padding: 0px;
+    border-collapse: collapse;
+    color: black;
+}
+
+div.titleframe h1 { 
+    font-size: 36pt;
 }
 
 div.navigation { 
@@ -58,10 +66,10 @@ div.navigation a, div.subnavigation a
 }
 
 div.navigation a.used { 
-    background-color: #ffcccc;
+    background-color: #ffd030;
 }
 div.subnavigation a.used { 
-    background-color: #ffdddd;
+    background-color: #ffe010;
 }
 
 div.subnavigation a 
@@ -70,7 +78,7 @@ div.subnavigation a
 }
 
 div.footer p {
-    text-align: right; 
+    text-align: right;
     background-color: #999999;
     padding: 3px;
 }

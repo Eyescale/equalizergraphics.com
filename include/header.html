@@ -12,17 +12,31 @@
     <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann"/>
     <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page"/>
     <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
   
-#ifdef PAGE
-    <title>Equalizer: PAGE</title>
+#ifdef SUBPAGE
+    <title>Equalizer: PAGE: SUBPAGE</title>
 #else
+#  ifdef PAGE
+    <title>Equalizer: PAGE</title>
+#  else
     <title>Equalizer</title>
+#  endif
 #endif
   </head>
 
   <body class="index">
-    <h1>Equalizer</h1>
+    <div class="titleframe">
+      <a href="index.html">
+      <table>
+        <tr>
+          <td><img src="images/bg_left.png"/></td>
+          <td background="images/bg_middle.png"><h1>Equalizer</h1></td>
+          <td><img src="images/bg_right.png"/></td>
+        </tr>
+      </table>
+</a>
+    </div>
 
   <!-- Navigation -->
 
@@ -38,6 +52,12 @@
        class="used"
 #endif
     >News</a>
+
+    <a href="contact.html"
+#ifdef S_CONTACT
+       class="used"
+#endif
+    >Contact</a>
   </div>
 
   <!-- About sub-navigation-->
@@ -55,7 +75,18 @@
        class="used"
 #endif
     >Configuration</a>
-    
+
+    <a href="scalability.html"
+#ifdef S_HOME_SCALABILITY
+       class="used"
+#endif
+    >Scalability</a>
+
+    <a href="api.html"
+#ifdef S_HOME_API
+       class="used"
+#endif
+    >API</a>
   </div>
 #endif 
 

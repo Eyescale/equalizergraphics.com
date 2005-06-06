@@ -1,9 +1,9 @@
 
 TOP = ..
 
-TARGET = ~/Desktop
+TARGET = ~/Desktop/ws
 
-PAGES =  configuration.out index.out news.out
+PAGES =  api.out configuration.out contact.out index.out news.out scalability.out
 INCLUDES = include/header.html include/footer.html
 CSS = $(TARGET)/stylesheet.css
 
