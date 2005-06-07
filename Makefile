@@ -1,7 +1,7 @@
 
 TOP = ..
 
-TARGET = ~/Desktop/ws
+TARGET = ~/Sites/www.equalizergraphics.com
 
 PAGES =  api.out configuration.out contact.out index.out news.out scalability.out
 INCLUDES = include/header.html include/footer.html
@@ -12,7 +12,8 @@ all: $(PAGES) $(CSS) $(INCLUDES)
 .SUFFIXES: .html .css
 
 .html.out: $(INCLUDES)
-	gcc -xc -E -Iinclude $*.html | sed 's/^#.*//' > $@ && \
+	gcc -xc -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $*.html | \
+	    sed 's/^#.*//' > $@ && \
 	cp $@ $(TARGET)/$*.html
 
 $(TARGET)/stylesheet.css: stylesheet.css

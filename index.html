@@ -18,21 +18,21 @@ parallel visualization systems.
 Using a client-server model, the Equalizer server automatically configures
 Equalizer applications -the clients- to use the provided visualization
 resources. Traditional OpenGL applications can be transparently executed using
-an Equalizer-ready Chromium version, and thus take advantage of the system's
+an Equalizer-ready Chromium version, and thus take advantage of the system
 resources without any additional configuration.
-<a href="configuration.html">More about configuration...</a>
+<br/><a href="configuration.html">More about configuration...</a>
 </p><p>
 In addition to traditional multi-pipe execution, where one graphics card is
 connected to one display device, Equalizer offers a broad range of decomposition
-modes to accelerate the rendering of a single view by combining the results of
-multipe graphics cards.
-<a href="scalability.html">More about scalability...</a>
+modes to accelerate the rendering of a single view by rendering in parallel on
+multiple graphics cards and combining the individual results.
+<br/><a href="scalability.html">More about scalability...</a>
 </p><p>
 Equalizer provides the natural execution framework for any multi-pipe
 application and does not impose any specific rendering framework, such
 as a scenegraph, to the application. It uses a callback-driven architecture,
 making it easy to port existing applications to Equalizer.
-<a href="api.html">More about the API...</a>
+<br/><a href="api.html">More about the API...</a>
 </p>
 
 #include "footer.html"

@@ -11,7 +11,17 @@
 <h2>Scalability</h2>
 <p>
 Equalizer implements a wide range of decomposition schemes to distribute the
-rendering for a single view across multiple resources.
+rendering for a single view across multiple resources. The following
+decomposition schemes are possible:
+<ul>
+  <li><b>2D</b> decomposes the rendering in screen-space, that is, each
+      contributing rendering unit processes a tile of the final view. Equalizer
+      automatically recomposes the tiles side-by-side on the destination view.
+  </li>
+  <li><b>DB</b> decomposes the rendered database so that all rendering units
+      process the scene in parallel.</li>
+  <li>...</li>
+</ul>
 </p>
 <p>
 More to come...
