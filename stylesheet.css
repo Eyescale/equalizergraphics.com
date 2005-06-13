@@ -23,21 +23,36 @@ h2 {
     padding-bottom: 0.2em;
 }
 
-p
+p, li
 { 
     text-align: justify;
 }
 
-table {
+table 
+{
     margin: 2ex auto 2ex auto;
-    text-align: center;
+    text-align: justify;
 }
 
-div.image table, div.image td, div.image tr, div.image a {
+img
+{ 
+    background-color: #ffffef;
+    margin: 0px 10px 0px 10px;
+    border: 0px;
+}
+
+a
+{ 
+  color: black;
+}
+div.image table, div.image td, div.image tr, div.image a, div.image img {
+    background-color: transparent;
     text-align: center;
     text-decoration: none;
     vertical-align: center;
+    border: 0px;
     padding: 0px;
+    margin: 0px;
     border-collapse: collapse;
     color: black;
 }
@@ -63,10 +78,10 @@ div.navigation a, div.subnavigation a
 }
 
 div.navigation a.used { 
-    background-color: #ffd030;
+    background-color: #ffb030;
 }
 div.subnavigation a.used { 
-    background-color: #ffe010;
+    background-color: #ffc010;
 }
 
 div.subnavigation a 
@@ -74,6 +89,12 @@ div.subnavigation a
     font-size: 10pt;
 }
 
+div.footnote 
+{ 
+    border-top: 1px solid;
+    padding-top: 10px;
+    font-size: small;
+}
 div.footer table {
     text-align: right;
     background-color: #999999;
