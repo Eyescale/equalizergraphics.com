@@ -49,8 +49,8 @@ tasks. The following compounds are available:
     <td><b>DB</b> decomposes the rendered database so that all rendering units
         process a part of the scene in parallel. The depth buffer
         information is used to composite the individual images correctly. Other
-        re-assembly algorithms, for example depth-sorted alpha blending for
-        volume rendering, can be used.
+        re-assembly algorithms, for example depth-sorted alpha blending suitable
+        for volume rendering, can be used.
     </td>
   </tr>
 </table>
@@ -58,7 +58,8 @@ tasks. The following compounds are available:
   <tr>
     <td><b>DPlex</b> time-multiplexes multiple rendering resources to produce a
          steady stream of output images. The rendered images are simply copied
-         to the destination view.
+         to the destination view. An offscreen-rendering buffer can be used on
+         the destination graphics card to utilize all rendering resources.
     </td>
     <td><a href="images/DPlex-big.png">
         <img src="images/DPlex.png" alt="A DPlex compound"/>
@@ -83,13 +84,38 @@ tasks. The following compounds are available:
 
 <a name="advanced"/>
 <h3>Advanced Scalability Features</h3>
-<p>
-The basic decomposition schemes described above can be combined in any possible
-way to address different bottlenecks within the rendering process. For example,
-an Eye compound can be combined with a 2D compound to first decompose the
-rendering for the left and right eye, and then further sub-decompose the
-rendering for each individual eye point.
-</p>
+<table>
+  <tr>
+    <td>
+      <p>
+        The basic decomposition schemes described above can be combined in any
+        possible way to address different bottlenecks within the rendering
+        process. For example, an Eye compound can be combined with a DB compound
+        to first decompose the rendering for the left and right eye, and then
+        further sub-decompose the rendering for each individual eye point.
+      </p>
+    </td>
+    <td>
+      <a href="images/ML-big.png">
+        <img src="images/ML.png" alt="Multi-Level Compounds"/></a>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>
+      <a href="images/LB-big.png">
+        <img src="images/LB.png" alt="Advanced Load-Balancing"/></a>
+    </td><td>
+      <p>
+        The Equalizer server can dynamically adjust the decomposition parameters
+        based on the current workload distribution. Off-screen rendering buffers
+        can be used to optimally use all rendering units on a multi-pipe
+        machine.
+      </p>
+    </td>
+  </tr>
+</table>
 <a href="#top">Back to top</a>
 
 <p>
