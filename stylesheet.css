@@ -91,12 +91,12 @@ div.subnavigation a
 
 div.footnote 
 { 
-    border-top: 1px solid;
+    background-image: url("images/footnote.png");
+    background-repeat: no-repeat;
     padding-top: 10px;
-    font-size: small;
+    font-size: x-small;
 }
 div.footer table {
-    text-align: right;
     background-color: #999999;
     padding: 3px;
 }

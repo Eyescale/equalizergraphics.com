@@ -116,6 +116,26 @@ tasks. The following compounds are available:
     </td>
   </tr>
 </table>
+<table>
+  <tr>
+    <td>
+      <p>
+        Equalizer schedules the rendering resources asynchronously. Resources
+        which are independent from other resources start rendering the next
+        frame immediately after they finish a frame. By hiding the unavoidable
+        imbalances in the task decomposition, this execution mode provides a
+        much better resource utilisation than the traditional, frame-synchronous
+        approach.<br/>
+        The picture shows the tasks executed over time for a synchronous versus
+        an asynchronous execution using a four-way 2D or DB decomposition.
+      </p>
+    </td>
+    <td>
+      <a href="images/Async-big.png">
+        <img src="images/Async.png" alt="Asynchronous Execution"/></a>
+    </td>
+  </tr>
+</table>
 <a href="#top">Back to top</a>
 
 <p>

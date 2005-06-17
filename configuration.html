@@ -4,21 +4,21 @@
 #define PAGE About
 #define SUBPAGE Configuration
  
-#define KEYWORDS "overview configuration Equalizer OpenGL scalable cluster visualization"
+#define KEYWORDS "overview configuration Equalizer Chromium scalable cluster visualization"
 
 #include "header.html"
 
 <h2>Configuration</h2>
 <p>
-Equalizer uses a configuration server to optimally allocate the
-available resources on the visualization system to the running applications. The
-server is configured using a hierarchically structured configuration file to
-describe the available resources and a number of configurations combining the
-resources for rendering. Equalizer applications can also run without a server,
-in which case they will automatically configure themselves for the local
-workstation.
+Equalizer uses a configuration server to optimally allocate the available
+resources on the visualization system to the running applications. The server is
+configured using a hierarchically structured configuration file to describe the
+available resources and a number of configurations combining the resources for
+rendering. Equalizer applications can also run without a server, in which case
+they will automatically configure themselves for the local workstation.
 </p>
-Possible environments for Equalizer applications are:
+<p>
+Possible environments for Equalizer are:
 <ul>
   <li><b>Multi-pipe Visualization Systems</b> with large-screen
       displays and immersive environments are used by workgroups and individual
@@ -39,5 +39,12 @@ Possible environments for Equalizer applications are:
       application can still run on a server-based system without recompilation.
   </li>
 </ul>
+</p>
+<p>
+<a href="http://chromium.sourceforge.net">Chromium</a> will be integrated with
+the Equalizer framework, to enable the usage of legacy applications. The
+Equalizer server drives customized Chromium SPUs according to the selected
+configuration, just as any other Equalizer application.
+</p>
 
 #include "footer.html"

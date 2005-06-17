@@ -11,8 +11,10 @@
 <h2>Programming Interface</h2>
 <p>
 Equalizer uses a callback-driven interface. Applications register their
-rendering callbacks, which are deployed by the Equalizer framework according to
-the current configuration and system load.
+rendering callbacks, which are called by the Equalizer framework according to
+the current configuration and system load. Process and thread creation, task
+synchronization and network connections are externalized from the application
+and handled transparently by the Equalizer framework.
 </p>
 <p>
 More to come...
