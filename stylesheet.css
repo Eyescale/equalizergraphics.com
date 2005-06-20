@@ -100,3 +100,6 @@ div.footer table {
     background-color: #999999;
     padding: 3px;
 }
+div.footer a { 
+    text-decoration: none;
+}

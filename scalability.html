@@ -16,9 +16,10 @@
 <a name="overview"/>
 <h3>Overview</h3>
 <p>
-Equalizer implements a wide range of decomposition schemes to parallelize the
-rendering for a single view across multiple resources. The Equalizer framework
-distributes the rendering task across a number of rendering units
+Equalizer implements a wide range of task decomposition algorithms to
+parallelize the rendering of large data sets. Multiple graphics cards,
+processors and memory can be combined to render one OpenGL scene. The Equalizer
+framework distributes the rendering task across a number of rendering units
 (decomposition), collects the results and recombines them on the final view
 (recomposition). 
 </p>
@@ -27,8 +28,8 @@ distributes the rendering task across a number of rendering units
 <a name="basic"/>
 <h3>Basic Decomposition Modes</h3>
 <p>
-Equalizer uses compounds to configure the parallelization of the rendering
-tasks. The following compounds are available:
+Equalizer uses the concept of compounds to configure the parallelization of the
+rendering tasks. The following compounds are available:
 <table>
   <tr>
     <td><b>2D</b> decomposes the rendering in screen-space, that is, each
@@ -84,6 +85,12 @@ tasks. The following compounds are available:
 
 <a name="advanced"/>
 <h3>Advanced Scalability Features</h3>
+<p>
+Equalizer implements a number of additional features to better utilize the
+rendering resources with the basic decomposition modes mentioned in the previous
+chapter. The following gives a short overview of some of the possible
+optimisations.
+</p>
 <table>
   <tr>
     <td>
@@ -105,13 +112,13 @@ tasks. The following compounds are available:
   <tr>
     <td>
       <a href="images/LB-big.png">
-        <img src="images/LB.png" alt="Advanced Load-Balancing"/></a>
+        <img src="images/LB.png" alt="2D Load-Balancing"/></a>
     </td><td>
       <p>
         The Equalizer server can dynamically adjust the decomposition parameters
-        based on the current workload distribution. Off-screen rendering buffers
-        can be used to optimally use all rendering units on a multi-pipe
-        machine.
+        based on the current workload distribution. This load-balancing can
+        happen automatically (based on time measurements) or programatically
+        (based on application input).
       </p>
     </td>
   </tr>
@@ -120,8 +127,28 @@ tasks. The following compounds are available:
   <tr>
     <td>
       <p>
+        Advanced load-balancing uses off-screen rendering buffers on graphics
+        cards displaying the final result. These buffers contribute to the
+        rendering of other output channels, enabling the optimal usage of all
+        rendering units on a multi-pipe machine.
+      </p>
+    </td>
+    <td>
+      <a href="images/Cross-big.png">
+        <img src="images/Cross.png" alt="Advanced Load-Balancing"/></a>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>
+      <a href="images/Async-big.png">
+        <img src="images/Async.png" alt="Asynchronous Execution"/></a>
+    </td>
+    <td>
+      <p>
         Equalizer schedules the rendering resources asynchronously. Resources
-        which are independent from other resources start rendering the next
+        which are independent from others start rendering the next
         frame immediately after they finish a frame. By hiding the unavoidable
         imbalances in the task decomposition, this execution mode provides a
         much better resource utilisation than the traditional, frame-synchronous
@@ -129,10 +156,6 @@ tasks. The following compounds are available:
         The picture shows the tasks executed over time for a synchronous versus
         an asynchronous execution using a four-way 2D or DB decomposition.
       </p>
-    </td>
-    <td>
-      <a href="images/Async-big.png">
-        <img src="images/Async.png" alt="Asynchronous Execution"/></a>
     </td>
   </tr>
 </table>
