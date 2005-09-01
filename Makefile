@@ -5,6 +5,7 @@ TARGET = ~/Sites/www.equalizergraphics.com
 
 PAGES = \
 	api.html \
+	architecture.html \
 	configuration.html \
 	contact.html \
 	index.html \
