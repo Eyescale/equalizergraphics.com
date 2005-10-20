@@ -20,10 +20,10 @@ TARGETS = $(PAGES:%=$(TARGET)/%)
 
 CSS = $(TARGET)/stylesheet.css
 
-IMG_SRC = $(wildcard images/*png)
-IMG = $(IMG_SRC:%=$(TARGET)/%)
+EXTRA_SRC = $(wildcard images/*png) $(wildcard documents/*)
+EXTRA = $(EXTRA_SRC:%=$(TARGET)/%)
 
-all: $(TARGETS) $(CSS) $(INCLUDES) $(IMG)
+all: $(TARGETS) $(CSS) $(INCLUDES) $(EXTRA)
 
 .SUFFIXES: .html .css
 
@@ -37,6 +37,6 @@ $(TARGET)/%.html : %.html
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
 
-$(TARGET)/images/% : images/%
+$(TARGET)/% : %
 	@mkdir -p $(TARGET)/images
 	cp $< $@
