@@ -8,6 +8,7 @@ PAGES = \
 	architecture.html \
 	configuration.html \
 	contact.html \
+	documentation.html \
 	index.html \
 	news.html \
 	scalability.html

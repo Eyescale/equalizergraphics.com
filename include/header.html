@@ -23,6 +23,12 @@
     <title>Equalizer</title>
 #  endif
 #endif
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    _uacct = "UA-63007-1";
+    urchinTracker();
+    </script>
   </head>
 
   <body class="index">
@@ -48,6 +54,12 @@
        class="used"
 #endif
     >About</a>
+
+    <a href="documentation.html"
+#ifdef S_DOCUMENTATION
+       class="used"
+#endif
+    >Documentation</a>
 
     <a href="news.html"
 #ifdef S_NEWS
