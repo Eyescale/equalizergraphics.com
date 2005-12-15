@@ -9,21 +9,23 @@
 
 <h2>Overview</h2>
 <p>
-  Equalizer is a minimally invasive open source framework for the development of
-  high-performance, scalable visualization software. An Equalizer application
-  can run unmodified on any visualization system, from a single-pipe workstation
-  to large-scale distributed and shared memory parallel visualization
-  systems. Equalizer is build from ground up as a parallel, scalable SDK 
-  solving the common problems for any multi-pipe application. Compared to other
+  Equalizer is a programming interface and resource management system for
+  scalable graphics applications. An Equalizer application can run unmodified on
+  any visualization system, from a single-pipe workstation to large-scale
+  distributed and shared memory parallel visualization systems. Equalizer is
+  build from ground up as a parallel, scalable programming interface solving the
+  common problems for any multi-pipe application. Compared to other
   cluster-rendering software, it does not replace the OpenGL library but
-  parallelizes and distributes the applications rendering loop for optimal
+  parallelizes and distributes the applications rendering code for optimal
   performance.
 </p><p>
-  The Equalizer frameworks consist of a server and a client library. The
-  Equalizer server automatically configures Equalizer applications to optimally
-  use the provided visualization resources. Traditional OpenGL applications can
-  be executed transparently using an Equalizer-ready Chromium version, and thus
-  take advantage of the system resources without any additional configuration.
+  The Equalizer frameworks consist of a server and a client
+  library. Applications are written against the client library which abstracts
+  the interface to the execution environment. The applications are deployed by
+  the server which balances the resource usage across the system. Traditional
+  OpenGL applications can be executed transparently using an Equalizer-ready
+  Chromium version, and thus take advantage of the system resource management
+  without any additional configuration.
   <br/><a href="configuration.html">More about configuration...</a>
 </p><p>
   In addition to traditional multi-pipe execution, where one graphics card is

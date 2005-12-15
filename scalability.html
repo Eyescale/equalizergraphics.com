@@ -18,7 +18,7 @@
 <p>
 Equalizer implements a wide range of task decomposition algorithms to
 parallelize the rendering of large data sets. Multiple graphics cards,
-processors and memory can be combined to render one OpenGL scene. The Equalizer
+processors and memory can be combined to render one OpenGL view. The Equalizer
 framework distributes the rendering task across a number of rendering units
 (decomposition), collects the results and recombines them on the final view
 (recomposition). 
@@ -35,7 +35,9 @@ rendering tasks. The following compounds are available:
     <td><b>2D</b> decomposes the rendering in screen-space, that is, each
         contributing rendering unit processes a tile of the final
         view. Equalizer automatically recomposes the tiles side-by-side on the
-        destination view.
+        destination view. This mode has a low, constant IO overhead for the
+        image transfers and can provide good scalability when combined with view
+        frustum culling.
     </td>
     <td><a href="images/2D-big.png">
         <img src="images/2D.png" alt="A 2D compound"/>
@@ -51,7 +53,8 @@ rendering tasks. The following compounds are available:
         process a part of the scene in parallel. The depth buffer
         information is used to composite the individual images correctly. Other
         re-assembly algorithms, for example depth-sorted alpha blending suitable
-        for volume rendering, can be used.
+        for volume rendering, can be used. This mode provides a very good
+        scalabilty while having linear increasing IO requirements.
     </td>
   </tr>
 </table>
@@ -59,8 +62,9 @@ rendering tasks. The following compounds are available:
   <tr>
     <td><b>DPlex</b> time-multiplexes multiple rendering resources to produce a
          steady stream of output images. The rendered images are simply copied
-         to the destination view. An offscreen-rendering buffer can be used on
-         the destination graphics card to utilize all rendering resources.
+         to the destination view. This mode provides very good scalability but
+         introduces latency into the rendering. Depending on the application,
+         the additional latency is compensated by the higher frame rate.
     </td>
     <td><a href="images/DPlex-big.png">
         <img src="images/DPlex.png" alt="A DPlex compound"/>
@@ -74,9 +78,10 @@ rendering tasks. The following compounds are available:
     </a></td>
     <td><b>Eye</b> compounds are used during stereo rendering. The individual
         views for each eye are assigned to different rendering units and later
-        copied to the appropriate stereo buffer. For other stereo modes, such as
-        red/green stereo or auto-stereo displays, a different re-assembly method
-        can be used.
+        copied to the appropriate stereo buffer. This modes supports a variety
+        of stereo modes, including red/green stereo or auto-stereo displays with
+        multiple eye passes. Due to the frame consistency between the eye views,
+        this modes scales very good up to the number of eye passes.
     </td>
   </tr>
 </table>
@@ -99,7 +104,7 @@ optimisations.
         possible way to address different bottlenecks within the rendering
         process. For example, an Eye compound can be combined with a DB compound
         to first decompose the rendering for the left and right eye, and then
-        further sub-decompose the rendering for each individual eye point.
+        further sub-decompose the rendering for each individual eye pass.
       </p>
     </td>
     <td>
@@ -127,10 +132,10 @@ optimisations.
   <tr>
     <td>
       <p>
-        Advanced load-balancing uses off-screen rendering buffers on graphics
-        cards displaying the final result. These buffers contribute to the
-        rendering of other output channels, enabling the optimal usage of all
-        rendering units on a multi-pipe machine.
+        Advanced load-balancing uses off-screen rendering buffers on the same
+        graphic cards which display the final result. These buffers contribute
+        to the rendering of other output channels, enabling the optimal usage of
+        all rendering units on a multi-pipe machine.
       </p>
     </td>
     <td>
