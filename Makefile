@@ -9,6 +9,7 @@ PAGES = \
 	configuration.html \
 	contact.html \
 	documentation.html \
+	downloads.html \
 	index.html \
 	news.html \
 	scalability.html
