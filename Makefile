@@ -11,6 +11,7 @@ PAGES = \
 	documentation.html \
 	downloads.html \
 	index.html \
+	lists.html \
 	news.html \
 	scalability.html
 
