@@ -10,6 +10,7 @@ PAGES = \
 	contact.html \
 	documentation.html \
 	downloads.html \
+	impressum.html \
 	index.html \
 	lists.html \
 	news.html \
