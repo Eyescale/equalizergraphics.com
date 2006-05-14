@@ -29,6 +29,9 @@ EXTRA = $(EXTRA_SRC:%=$(TARGET)/%)
 
 all: $(TARGETS) $(CSS) $(INCLUDES) $(EXTRA)
 
+install: all
+	rsync -avz -e ssh $(TARGET) eile@in-zueri.ch:var/www/htdocs/
+
 .SUFFIXES: .html .css
 
 $(TARGETS):  $(INCLUDES)

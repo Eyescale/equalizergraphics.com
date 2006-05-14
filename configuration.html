@@ -3,29 +3,29 @@
 #define S_HOME_CONFIG
 #define PAGE About
 #define SUBPAGE Configuration
- 
+
 #define KEYWORDS "overview configuration Equalizer Chromium scalable cluster visualization"
 
 #include "header.html"
 
-<h2>Configuration</h2>
+<h2>Resource Management</h2>
 <p>
-Equalizer uses a configuration server to optimally allocate the available
-resources on the visualization system to the running applications. The server is
-configured using a hierarchically structured configuration file to describe the
-available resources and the configurations combining the resources for
-rendering. Equalizer applications can also run without a server, in which case
-they will automatically configure themselves for the local workstation.
+Equalizer uses a configuration server to optimally allocate and balance the
+available resources on the visualization system. The server is configured using
+a hierarchically structured configuration file to describe the available
+resources, and the combination of the resources for rendering. Equalizer
+applications can also run without a server, in which case they will
+automatically configure themselves for the local workstation.
 </p>
 <p>
 Possible environments for Equalizer are:
 <ul>
   <li><b>Multi-pipe Visualization Systems</b> with large-screen
       displays and immersive environments which are used by workgroups and
-      individual users. The Equalizer server provides the available configurations and
-      configures the applications for the visualization cluster or multi-pipe
-      machine. The same application can run on all configurations without
-      recompilation or reconfiguration.
+      individual users. The Equalizer server manages the available
+      resources and configures the applications for the visualization
+      cluster or multi-pipe machine. The same application can run on all
+      configurations without recompilation or reconfiguration.
   </li>
   <li><b>Visualization Data Centers</b> provide visualization services to
       remote users. A central visualization cluster with attached storage
