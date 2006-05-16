@@ -22,12 +22,11 @@ INCLUDES = \
 
 TARGETS = $(PAGES:%=$(TARGET)/%)
 
-CSS = $(TARGET)/stylesheet.css
-
-EXTRA_SRC = $(wildcard images/*png) $(wildcard documents/*)
+EXTRA_SRC = $(wildcard images/*png) $(wildcard documents/*) \
+            robots.txt stylesheet.css
 EXTRA = $(EXTRA_SRC:%=$(TARGET)/%)
 
-all: $(TARGETS) $(CSS) $(INCLUDES) $(EXTRA)
+all: $(TARGETS) $(INCLUDES) $(EXTRA)
 
 install: all
 	rsync -avz -e ssh $(TARGET) eile@in-zueri.ch:var/www/htdocs/
