@@ -24,7 +24,8 @@ TARGETS = $(PAGES:%=$(TARGET)/%)
 
 EXTRA_SRC = $(wildcard images/*png) $(wildcard documents/*) \
             robots.txt stylesheet.css
-EXTRA = $(EXTRA_SRC:%=$(TARGET)/%)
+EXTRA = $(EXTRA_SRC:%=$(TARGET)/%) \
+	$(TARGET)/documents/An_Analysis_of_Parallel_Rendering_Systems.pdf
 
 all: $(TARGETS) $(INCLUDES) $(EXTRA)
 
@@ -43,6 +44,10 @@ $(TARGET)/%.html : %.html
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
 
+$(TARGET)/documents/An_Analysis_of_Parallel_Rendering_Systems.pdf: ../../doc/WhitePapers/ParallelRenderingSystems/paper.pdf
+	@mkdir -p $(@D)
+	cp $< $@
+
 $(TARGET)/% : %
-	@mkdir -p $(TARGET)/images
+	@mkdir -p $(@D)
 	cp $< $@
