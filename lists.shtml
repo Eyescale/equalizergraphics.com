@@ -2,7 +2,7 @@
 #define S_LISTS
 #define PAGE Mailing Lists
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Mailing Lists</h2>
 
@@ -21,4 +21,4 @@ The following mailing lists are available:
   </li>
 </ul>
 
-#include "footer.html"
+#include "footer.shtml"

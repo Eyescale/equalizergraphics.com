@@ -6,7 +6,7 @@
 
 #define KEYWORDS "overview configuration Equalizer Chromium scalable cluster visualization"
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Resource Management</h2>
 <p>
@@ -42,9 +42,11 @@ Possible environments for Equalizer are:
 </p>
 <p>
 <a href="http://chromium.sourceforge.net">Chromium</a> will be integrated with
-the Equalizer framework, to enable the usage of legacy applications. The
+the Equalizer framework to provide a transparent execution layer. The
 Equalizer server drives customized Chromium SPUs according to the selected
-configuration, just as any other Equalizer application.
+configuration, just as any other Equalizer application. This transparent layer
+enables the execution and load-balancing of legacy and performance-uncritical
+applications alongside with scalable Equalizer applications.
 </p>
 
-#include "footer.html"
+#include "footer.shtml"

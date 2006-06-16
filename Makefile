@@ -5,7 +5,6 @@ TARGET = ~/Sites/www.equalizergraphics.com
 
 PAGES = \
 	api.html \
-	architecture.html \
 	configuration.html \
 	contact.html \
 	documentation.html \
@@ -17,8 +16,8 @@ PAGES = \
 	scalability.html
 
 INCLUDES = \
-	include/header.html \
-	include/footer.html
+	include/header.shtml \
+	include/footer.shtml
 
 TARGETS = $(PAGES:%=$(TARGET)/%)
 
@@ -36,7 +35,7 @@ install: all
 
 $(TARGETS):  $(INCLUDES)
 
-$(TARGET)/%.html : %.html
+$(TARGET)/%.html : %.shtml
 	@mkdir -p $(TARGET)
 	gcc -xc -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $< | \
 		sed 's/^#.*//' > $@

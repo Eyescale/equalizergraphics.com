@@ -6,7 +6,7 @@
  
 #define KEYWORDS "overview API Equalizer OpenGL scalable cluster visualization"
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Programming Interface</h2>
 <p>
@@ -27,4 +27,4 @@ visualization software, e.g. the frame-driven rendering, are exploited for
 better performance and an easier to use programming interface.
 </p>
 
-#include "footer.html"
+#include "footer.shtml"

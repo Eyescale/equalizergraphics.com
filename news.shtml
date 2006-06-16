@@ -2,7 +2,7 @@
 #define S_NEWS
 #define PAGE News
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>News</h2>
 <ul>
@@ -18,4 +18,4 @@
   <li><b>7. June 2005</b> Created first version of this website</li>
 </ul>
 
-#include "footer.html"
+#include "footer.shtml"

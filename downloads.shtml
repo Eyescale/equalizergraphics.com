@@ -2,7 +2,7 @@
 #define S_DOWNLOADS
 #define PAGE Downloads
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Downloads</h2>
 
@@ -22,4 +22,4 @@ OpenGL&reg; is a  trademarks of Silicon Graphics, Inc. All other products named
 are trademarks of their respective owners.
 </div>
 
-#include "footer.html"
+#include "footer.shtml"

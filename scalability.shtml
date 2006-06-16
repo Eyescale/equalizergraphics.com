@@ -6,7 +6,7 @@
  
 #define KEYWORDS "scalability Equalizer OpenGL compound decomposition recomposition 2D DB DPlex"
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Scalability</h2>
 <a href="#overview">Overview</a><br/>
@@ -171,4 +171,4 @@ optimisations.
 <div class="footnote">3D models partly courtesy of 
 <a href="http://www.cyberware.com">Cyberware</a>.</div>
 
-#include "footer.html"
+#include "footer.shtml"

@@ -3,7 +3,7 @@
 #define PAGE Contact
 #define KEYWORDS Resume Consulting
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Contact Information</h2>
 
@@ -25,4 +25,4 @@ Email: <a href="mailto:eile@equalizergraphics.com">
 <a href="https://www.linkedin.com/in/eilemann" ><img src="https://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif" width="80" height="15" border="0" alt="LinkedIn profile"></a>
 </p>
 
-#include "footer.html"
+#include "footer.shtml"

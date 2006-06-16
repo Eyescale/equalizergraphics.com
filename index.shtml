@@ -5,7 +5,7 @@
 #define SUBPAGE Overview
 #define KEYWORDS "overview api high-performance distributed Equalizer OpenGL scalable cluster visualization"
 
-#include "header.html"
+#include "header.shtml"
 
 <h2>Overview</h2>
 <p>
@@ -23,9 +23,9 @@
   library. Applications are written against the client library, which abstracts
   the interface to the execution environment. The applications are deployed by
   the server which balances the resource usage across the system. Traditional
-  OpenGL applications can be executed transparently using an Equalizer-ready
-  Chromium version, and thus take advantage of the system resource management
-  without any additional configuration.
+  OpenGL applications can be executed transparently using a transparent layer,
+  and thus take advantage of the system resource management without any
+  additional configuration.
   <br/><a href="configuration.html">More about resource management...</a>
 </p><p>
   In addition to traditional multi-pipe execution, where one graphics card is
@@ -56,4 +56,4 @@ Graphics, Inc. All other products named are trademarks of their respective
 owners.
 </div>
 
-#include "footer.html"
+#include "footer.shtml"
