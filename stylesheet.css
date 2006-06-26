@@ -4,7 +4,7 @@
 
 body {
     font-family: Georgia, Garamond, Palatino, Times, serif;
-    background-color: #f0f0e0;
+    background-color: #ffffff;
 }
 
 pre, code {
@@ -78,10 +78,10 @@ div.navigation a, div.subnavigation a
 }
 
 div.navigation a.used { 
-    background-color: #ffb030;
+    background-color: #ff9933;
 }
 div.subnavigation a.used { 
-    background-color: #ffc010;
+    background-color: #ffcc66;
 }
 
 div.subnavigation a 

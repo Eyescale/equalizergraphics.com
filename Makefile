@@ -37,7 +37,7 @@ $(TARGETS):  $(INCLUDES)
 
 $(TARGET)/%.html : %.shtml
 	@mkdir -p $(TARGET)
-	gcc -xc -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $< | \
+	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $< | \
 		sed 's/^#.*//' > $@
 
 $(TARGET)/stylesheet.css: stylesheet.css

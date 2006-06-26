@@ -43,12 +43,15 @@
 <p>
   Equalizer development started in 2005. As soon as it reaches an usable
   milestone, source code and binary distributions will be made available on
-  this website. Equalizer is a cross-platform toolkit and will be initially
+  this website. The source code repository is available for interested
+  developers. Equalizer is a cross-platform toolkit and will be initially
   available for Linux and Mac OS X. Feel free to <a href="contact.html">contact
   us</a> if you are interested to learn more about Equalizer, to participate in
   the design and development, or if you have any other questions.
 </p>
-
+<p>
+<a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+</p>
 <div class="footnote">
 Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple
 Computer, Inc. OpenGL&reg; are trademarks of Silicon
