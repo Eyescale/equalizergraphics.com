@@ -1,7 +1,7 @@
 
 TOP = ..
 
-TARGET = ~/Sites/www.equalizergraphics.com
+TARGET = build
 
 PAGES = \
 	api.html \
