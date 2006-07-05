@@ -24,12 +24,13 @@ TARGETS = $(PAGES:%=$(TARGET)/%)
 EXTRA_SRC = $(wildcard images/*png) $(wildcard documents/*) \
             robots.txt stylesheet.css
 EXTRA = $(EXTRA_SRC:%=$(TARGET)/%) \
-	$(TARGET)/documents/An_Analysis_of_Parallel_Rendering_Systems.pdf
+	$(TARGET)/documents/ParallelRenderingSystems.pdf \
+	$(TARGET)/documents/ProjectEqualizer.pdf
 
 all: $(TARGETS) $(INCLUDES) $(EXTRA)
 
 install: all
-	rsync -avz -e ssh $(TARGET) eile@in-zueri.ch:var/www/htdocs/
+	rsync -avz -e ssh $(TARGET)/ eile@in-zueri.ch:var/www/htdocs/www.equalizergraphics.com
 
 .SUFFIXES: .html .css
 
@@ -43,7 +44,7 @@ $(TARGET)/%.html : %.shtml
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
 
-$(TARGET)/documents/An_Analysis_of_Parallel_Rendering_Systems.pdf: ../../doc/WhitePapers/ParallelRenderingSystems/paper.pdf
+$(TARGET)/documents/%.pdf: ../../doc/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 

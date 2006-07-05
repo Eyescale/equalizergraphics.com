@@ -6,12 +6,15 @@
 
 <h2>Presentations</h2>
 <ul>
-  <li><a href="documents/Equalizer.pdf"><b>Overview</b></a> gives a background
-      to high-performance visualization, Equalizer components and features.</li>
-  <li><a href="documents/An_Analysis_of_Parallel_Rendering_Systems.pdf"><b>An
-      Analysis of Parallel Rendering Systems</b></a> reviews, analyzes and
-      classifies approaches to multi-pipe rendering, and outlines our motivation
-      for developing Equalizer.</li>
+  <li><a href="documents/ProjectEqualizer.pdf"><b>Project Equalizer</b></a> is a
+    project description of Equalizer.</li>
+  <li><a href="documents/Equalizer.pdf"><b>Overview</b></a> is a presentation to
+    provide a background to high-performance visualization, Equalizer
+    components and features.</li>
+  <li><a href="documents/ParallelRenderingSystems.pdf"><b>An
+        Analysis of Parallel Rendering Systems</b></a> reviews, analyzes and
+    classifies approaches to multi-pipe rendering, and outlines our motivation
+    for developing Equalizer.</li>
 </ul>
 
 #include "footer.shtml"

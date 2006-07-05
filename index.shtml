@@ -3,7 +3,7 @@
 #define S_HOME_ABOUT
 #define PAGE About
 #define SUBPAGE Overview
-#define KEYWORDS "overview api high-performance distributed Equalizer OpenGL scalable cluster visualization"
+#define KEYWORDS "overview api high-performance distributed Equalizer OpenGL scalable graphics cluster visualization"
 
 #include "header.shtml"
 
@@ -11,46 +11,60 @@
 <p>
   Equalizer is a programming interface and resource management system for
   scalable graphics applications. An Equalizer application can run unmodified on
-  any visualization system, from a single-pipe workstation to large-scale
-  distributed and shared memory visualization systems. Equalizer is
+  any visualization system, from a single pipe workstation to large scale
+  graphics clusters and shared memory visualization systems. Equalizer is
   build from ground up as a parallel, scalable programming interface solving the
-  common problems for any multi-pipe application. Compared to other
+  common problems for any multi-pipe application.
+</p><p>
+  Equalizer development started in 2005. The source code repository is available
+  for interested developers. Equalizer is a cross-platform toolkit and will be
+  initially available for Linux and Mac OS X. Feel free
+  to <a href="contact.html">contact us</a> if you are interested to learn more
+  about Equalizer, to participate in the design and development, or if you have
+  any other questions.
+</p>
+<h3>Resource Management</h3>
+<p>
+  The core of Equalizer is the configuration server. It is configured once for a
+  visualization system, to know the system's resources. It provides system-wide
+  load balancing and resource allocation for all applications.
+  <br/><a href="configuration.html">More about resource management...</a>
+</p>
+<h3>Programming Framework</h3>
+<p>
+  The Equalizer client library is the interface to the Equalizer
+  server. Application developers can directly use this API to write scalable
+  graphics applications. It abstracts the application from the actual
+  configuration of the execution environment. Compared to other
   cluster-rendering software, it does not replace the OpenGL library but
   parallelizes and distributes the application's rendering code for optimal
   performance.
-</p><p>
-  The Equalizer frameworks consist of a server and a client
-  library. Applications are written against the client library, which abstracts
-  the interface to the execution environment. The applications are deployed by
-  the server which balances the resource usage across the system. Traditional
-  OpenGL applications can be executed transparently using a transparent layer,
-  and thus take advantage of the system resource management without any
-  additional configuration.
-  <br/><a href="configuration.html">More about resource management...</a>
-</p><p>
-  In addition to traditional multi-pipe execution, where one graphics card is
-  driving one display device, Equalizer offers a broad range of decomposition
-  modes to accelerate the rendering of large data sets by parallelizing the
-  rendering of a single view across multiple graphics cards and processors.
-  <br/><a href="scalability.html">More about scalability...</a>
 </p><p>
   Equalizer provides the natural execution framework for any multi-pipe
   application and does not impose any specific rendering framework, such
   as a scenegraph, to the application. It uses a callback-driven architecture,
   making it easy to port existing applications to Equalizer.
   <br/><a href="api.html">More about the API...</a>
+</p><p>
+  In addition to traditional multi-pipe execution, where one graphics card is
+  driving one display device, Equalizer will offer a broad range of
+  decomposition modes to accelerate the rendering of large data sets by
+  parallelizing the rendering of a single view across multiple graphics cards
+  and CPU's.
+  <br/><a href="scalability.html">More about scalability...</a>
 </p>
-<p>
-  Equalizer development started in 2005. As soon as it reaches an usable
-  milestone, source code and binary distributions will be made available on
-  this website. The source code repository is available for interested
-  developers. Equalizer is a cross-platform toolkit and will be initially
-  available for Linux and Mac OS X. Feel free to <a href="contact.html">contact
-  us</a> if you are interested to learn more about Equalizer, to participate in
-  the design and development, or if you have any other questions.
+<h3>Transparent OpenGL Layer</h3>
+  The transparent layer will enable the execution of unmodified OpenGL
+  applications. They can take advantage of the system's resource management and
+  load balancing, without any additional configuration. This layer will allow a
+  seamless integration of unmodified and scalable applications on the same
+  system.
 </p>
+<h3>Distributed Scene Graphs</h3>
 <p>
-<a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+  Equalizer will provide sample implementations for popular scene graphs, such
+  as OpenSceneGraph or Ogre3D. Applications using these scene graphs can then
+  easily implement parallel, scalable applications based on Equalizer.
 </p>
 <div class="footnote">
 Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple
