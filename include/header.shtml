@@ -108,5 +108,23 @@
 #endif
     >API</a>
   </div>
-#endif 
+#endif  // S_HOME
+
+  <!-- Documentation sub-navigation-->
+#ifdef S_DOCUMENTATION
+  <div class="subnavigation">
+
+    <a href="documentation.html"
+#ifdef S_DOCUMENTATION_OVERVIEW
+       class="used"
+#endif
+    >Overview</a>
+
+    <a href="doc_developer.html"
+#ifdef S_DOCUMENTATION_DEVELOPER
+       class="used"
+#endif
+    >Developers</a>
+  </div>
+#endif // S_DOCUMENTATION
 

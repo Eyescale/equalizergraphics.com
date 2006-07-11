@@ -1,0 +1,25 @@
+
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developers
+
+#include "header.shtml"
+
+<h2>Design  Documentation</h2>
+<p>
+The design documentation is technical documentation, specifications or other
+information, typically for a specific, isolated feature. It is intended for
+software developers, and generally not understandable without a technical
+background of Equalizer. They are often moving targets, and the actual
+implementation may diverge from the original spec over time.
+</p>
+<ul>
+  <li><a href="documents/design/threads.txt"><b>threads.txt</b></a> is a
+  glossary and description of the individual threads in Equalizer.</li>
+  <li><a href="documents/design/compounds.txt"><b>compounds.txt</b></a> is the
+  initial design documentation on the API and config file interface for the
+  configuration of scalable rendering.</li>
+</ul>
+
+#include "footer.shtml"

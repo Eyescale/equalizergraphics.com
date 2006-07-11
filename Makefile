@@ -3,31 +3,37 @@ TOP = ..
 
 TARGET = build
 
-PAGES = \
+FILES = \
 	api.html \
 	configuration.html \
 	contact.html \
 	documentation.html \
+	doc_developer.html \
 	downloads.html \
 	impressum.html \
 	index.html \
 	lists.html \
 	news.html \
-	scalability.html
+	scalability.html \
+	$(wildcard images/*png) \
+	$(wildcard documents/*) \
+        robots.txt \
+	stylesheet.css \
+	documents/WhitePapers/ParallelRenderingSystems.pdf \
+	documents/WhitePapers/ProjectEqualizer.pdf \
+	documents/design/compounds.txt \
+	documents/design/threads.txt
 
 INCLUDES = \
 	include/header.shtml \
 	include/footer.shtml
 
-TARGETS = $(PAGES:%=$(TARGET)/%)
+TARGETS = $(FILES:%=$(TARGET)/%) 
 
-EXTRA_SRC = $(wildcard images/*png) $(wildcard documents/*) \
-            robots.txt stylesheet.css
-EXTRA = $(EXTRA_SRC:%=$(TARGET)/%) \
-	$(TARGET)/documents/ParallelRenderingSystems.pdf \
-	$(TARGET)/documents/ProjectEqualizer.pdf
+all: $(TARGETS) $(INCLUDES)
 
-all: $(TARGETS) $(INCLUDES) $(EXTRA)
+clean:
+	rm -rf $(TARGETS)
 
 install: all
 	rsync -avz -e ssh $(TARGET)/ eile@in-zueri.ch:var/www/htdocs/www.equalizergraphics.com
@@ -44,7 +50,11 @@ $(TARGET)/%.html : %.shtml
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
 
-$(TARGET)/documents/%.pdf: ../../doc/WhitePapers/%/paper.pdf
+$(TARGET)/documents/WhitePapers/%.pdf: ../doc/WhitePapers/%/paper.pdf
+	@mkdir -p $(@D)
+	cp $< $@
+
+$(TARGET)/documents/%: ../doc/%
 	@mkdir -p $(@D)
 	cp $< $@
 

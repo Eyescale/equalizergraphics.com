@@ -1,20 +1,31 @@
 
 #define S_DOCUMENTATION
+#define S_DOCUMENTATION_OVERVIEW
 #define PAGE Documentation
+#define SUBPAGE Overview
 
 #include "header.shtml"
 
 <h2>Presentations</h2>
 <ul>
-  <li><a href="documents/ProjectEqualizer.pdf"><b>Project Equalizer</b></a> is a
-    project description of Equalizer.</li>
   <li><a href="documents/Equalizer.pdf"><b>Overview</b></a> is a presentation to
     provide a background to high-performance visualization, Equalizer
     components and features.</li>
-  <li><a href="documents/ParallelRenderingSystems.pdf"><b>An
-        Analysis of Parallel Rendering Systems</b></a> reviews, analyzes and
+</ul>
+
+<h2>White Papers</h2>
+<ul>
+  <li><a href="documents/WhitePapers/ProjectEqualizer.pdf"><b>Project Equalizer
+    </b></a> is a project description of Equalizer.</li>
+  <li><a href="documents/WhitePapers/ParallelRenderingSystems.pdf"><b>An
+    Analysis of Parallel Rendering Systems</b></a> reviews, analyzes and
     classifies approaches to multi-pipe rendering, and outlines our motivation
     for developing Equalizer.</li>
+</ul>
+
+<h2>Developer Documentation</h2>
+<ul>
+  <li><a href="doc_developer.html">See separate page</a></li>
 </ul>
 
 #include "footer.shtml"
