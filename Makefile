@@ -40,9 +40,7 @@ install: all
 
 .SUFFIXES: .html .css
 
-$(TARGETS):  $(INCLUDES)
-
-$(TARGET)/%.html : %.shtml
+$(TARGET)/%.html : %.shtml  $(INCLUDES)
 	@mkdir -p $(TARGET)
 	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $< | \
 		sed 's/^#.*//' > $@
