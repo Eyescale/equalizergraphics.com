@@ -21,7 +21,8 @@ FILES = \
 	stylesheet.css \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
-	documents/design/compounds.txt \
+	documents/design/compounds.html \
+	documents/design/frames.png \
 	documents/design/threads.txt
 
 INCLUDES = \
@@ -51,6 +52,11 @@ $(TARGET)/stylesheet.css: stylesheet.css
 $(TARGET)/documents/WhitePapers/%.pdf: ../doc/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
+
+$(TARGET)/documents/design/%.html : ../doc/design/%.shtml $(INCLUDES)
+	@mkdir -p $(TARGET)
+	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -DBASE="../.." -Iinclude $< | \
+		sed 's/^#.*//' > $@
 
 $(TARGET)/documents/%: ../doc/%
 	@mkdir -p $(@D)

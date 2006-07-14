@@ -17,7 +17,7 @@ implementation may diverge from the original spec over time.
 <ul>
   <li><a href="documents/design/threads.txt"><b>threads.txt</b></a> is a
   glossary and description of the individual threads in Equalizer.</li>
-  <li><a href="documents/design/compounds.txt"><b>compounds.txt</b></a> is the
+  <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the
   initial design documentation on the API and config file interface for the
   configuration of scalable rendering.</li>
 </ul>

@@ -5,6 +5,9 @@
 
   <head>
     
+#ifdef BASE
+    <base href=BASE>
+#endif
     <meta name="author" content="Stefan Eilemann"/>
 #ifdef KEYWORDS
     <meta name="keywords" content=KEYWORDS/>
