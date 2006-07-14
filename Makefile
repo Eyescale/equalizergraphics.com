@@ -19,6 +19,7 @@ FILES = \
 	$(wildcard documents/*) \
         robots.txt \
 	stylesheet.css \
+	favicon.ico \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/compounds.html \
