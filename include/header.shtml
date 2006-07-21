@@ -31,17 +31,11 @@
   <body class="index">
     <a name="top">
     <div class="image">
-      <center><table>
-        <tr>
-          <td><img src="images/bg_left.png"/></td>
-          <td background="images/bg_middle.png">
-            <a href="index.html"><h1>Equalizer</h1></a>
-          </td>
-          <td><img src="images/bg_right.png"/></td>
-        </tr>
-      </table></center>
-</a>
+      <center><a href="index.html">
+          <img src="images/Equalizer.png" alt="Equalizer logo"/>
+      </a></center>
     </div>
+    </a>
 
   <!-- Navigation -->
 
