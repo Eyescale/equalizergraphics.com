@@ -55,6 +55,7 @@
   <br/><a href="scalability.html">More about scalability...</a>
 </p>
 <h3>Transparent OpenGL Layer</h3>
+<p>
   The transparent layer will enable the execution of unmodified OpenGL
   applications. They can take advantage of the system's resource management and
   load balancing, without any additional configuration. This layer will allow a

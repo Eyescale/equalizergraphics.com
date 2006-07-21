@@ -45,7 +45,8 @@ a
 { 
   color: black;
 }
-div.image table, div.image td, div.image tr, div.image a, div.image img {
+
+div.image {
     background-color: transparent;
     text-align: center;
     text-decoration: none;
@@ -78,10 +79,10 @@ div.navigation a, div.subnavigation a
 }
 
 div.navigation a.used { 
-    background-color: #ff9933;
+    background-color: #6699cc;
 }
 div.subnavigation a.used { 
-    background-color: #ffcc66;
+    background-color: #99ccff;
 }
 
 div.subnavigation a 

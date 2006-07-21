@@ -44,7 +44,7 @@ install: all
 .SUFFIXES: .html .css
 
 $(TARGET)/%.html : %.shtml  $(INCLUDES)
-	@mkdir -p $(TARGET)
+	@mkdir -p $(@D)
 	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $< | \
 		sed 's/^#.*//' > $@
 
@@ -56,8 +56,8 @@ $(TARGET)/documents/WhitePapers/%.pdf: ../doc/WhitePapers/%/paper.pdf
 	cp $< $@
 
 $(TARGET)/documents/design/%.html : ../doc/design/%.shtml $(INCLUDES)
-	@mkdir -p $(TARGET)
-	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -DBASE="../.." -Iinclude $< | \
+	@mkdir -p $(@D)
+	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -DBASE -Iinclude $< | \
 		sed 's/^#.*//' > $@
 
 $(TARGET)/documents/%: ../doc/%

@@ -222,20 +222,20 @@
 					<key>GradientColor</key>
 					<dict>
 						<key>b</key>
-						<string>0.747814</string>
+						<string>0.8</string>
 						<key>g</key>
-						<string>0.608148</string>
+						<string>0.6</string>
 						<key>r</key>
-						<string>0.378088</string>
+						<string>0.4</string>
 					</dict>
 					<key>MiddleColor</key>
 					<dict>
 						<key>b</key>
-						<string>0.747814</string>
+						<string>0.8</string>
 						<key>g</key>
-						<string>0.608148</string>
+						<string>0.6</string>
 						<key>r</key>
-						<string>0.378088</string>
+						<string>0.4</string>
 					</dict>
 					<key>TrippleBlend</key>
 					<string>YES</string>
@@ -371,7 +371,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2006-07-21 15:12:37 +0200</string>
+	<string>2006-07-21 16:30:52 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>

@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<!-- Copyright (c) 2005 Stefan Eilemann. All rights reserved. -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
   <head>
-    
 #ifdef BASE
-    <base href=BASE>
+    <base href="http://www.equalizergraphics.com" />
 #endif
     <meta name="author" content="Stefan Eilemann"/>
 #ifdef KEYWORDS
@@ -29,13 +25,11 @@
   </head>
 
   <body class="index">
-    <a name="top">
     <div class="image">
-      <center><a href="index.html">
-          <img src="images/Equalizer.png" alt="Equalizer logo"/>
-      </a></center>
+      <a name="top"/><a href="index.html">
+        <img src="images/Equalizer.png" alt="Equalizer logo"/>
+      </a>
     </div>
-    </a>
 
   <!-- Navigation -->
 
