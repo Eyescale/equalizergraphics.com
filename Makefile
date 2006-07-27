@@ -23,6 +23,7 @@ FILES = \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/compounds.html \
+	documents/design/frames.html \
 	documents/design/frames.png \
 	documents/design/nodeFailure.html \
 	documents/design/threads.txt
