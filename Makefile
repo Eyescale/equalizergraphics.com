@@ -40,7 +40,7 @@ clean:
 	rm -rf $(TARGETS)
 
 install: all
-	rsync -avz -e ssh $(TARGET)/ eile@in-zueri.ch:var/www/htdocs/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
 .SUFFIXES: .html .css
 
