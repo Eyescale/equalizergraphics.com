@@ -26,7 +26,32 @@ FILES = \
 	documents/design/frames.html \
 	documents/design/frames.png \
 	documents/design/nodeFailure.html \
-	documents/design/threads.txt
+	documents/design/threads.txt \
+	documents/glAsync/CHANGELOG \
+	documents/glAsync/annotated.html \
+	documents/glAsync/classglAsync_1_1Thread-members.html \
+	documents/glAsync/classglAsync_1_1Thread.html \
+	documents/glAsync/doxygen.css \
+	documents/glAsync/doxygen.png \
+	documents/glAsync/files.html \
+	documents/glAsync/functions.html \
+	documents/glAsync/functions_func.html \
+	documents/glAsync/glAsync_8h-source.html \
+	documents/glAsync/glAsync_8h.html \
+	documents/glAsync/globals.html \
+	documents/glAsync/globals_defs.html \
+	documents/glAsync/globals_func.html \
+	documents/glAsync/hierarchy.html \
+	documents/glAsync/index.html \
+	documents/glAsync/namespaceglAsync.html \
+	documents/glAsync/namespacemembers.html \
+	documents/glAsync/namespacemembers_func.html \
+	documents/glAsync/namespaces.html \
+	documents/glAsync/tab_b.gif \
+	documents/glAsync/tab_l.gif \
+	documents/glAsync/tab_r.gif \
+	documents/glAsync/tabs.css \
+	downloads
 
 INCLUDES = \
 	include/header.shtml \
@@ -67,4 +92,4 @@ $(TARGET)/documents/%: ../doc/%
 
 $(TARGET)/% : %
 	@mkdir -p $(@D)
-	cp $< $@
+	cp -R $< $@

@@ -16,13 +16,13 @@
 
 <h3>GLAsync</h3>
 
-<p>GLAsync is a small, independent library delivering asynchronous OpenGL
+<p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
   downloads in the spirit of the SGIX_async extension.
 </p><p>
   Links: 
   <a href="documents/glAsync/namespaceglAsync.html">Documentation</a>, 
   <a href="documents/glAsync/CHANGELOG">Changelog</a>, 
-  <a href="downloads/glAsync_0.11.tar.gz">Latest Version</a>.
+  <a href="downloads/glAsync_0.12.tar.gz">Latest Version</a>.
 </p>
 
 <div class="footnote">
