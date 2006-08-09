@@ -16,10 +16,12 @@ FILES = \
 	news.html \
 	scalability.html \
 	$(wildcard images/*png) \
-	$(wildcard documents/*) \
         robots.txt \
 	stylesheet.css \
 	favicon.ico \
+	documents/CV_Stefan_Eilemann.pdf \
+	documents/Projects_Stefan_Eilemann.pdf \
+	documents/Equalizer.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/compounds.html \
