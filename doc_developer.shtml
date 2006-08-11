@@ -16,10 +16,13 @@ implementation may diverge from the original spec over time.
 </p>
 <ul>
   <li><a href="documents/design/threads.txt"><b>threads.txt</b></a> is a
-  glossary and description of the individual threads in Equalizer.</li>
+    glossary and description of the individual threads in Equalizer.</li>
   <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the
-  initial design documentation on the API and config file interface for the
-  configuration of scalable rendering.</li>
+    initial design documentation on the API and config file interface for the
+    configuration of scalable rendering.</li>
+  <li><a href="documents/design/packets.html"><b>Packet Handling</b></a>
+    explains the basic concept and mechanism of the Equalizer networking
+    layer.</li>
 </ul>
 
 #include "footer.shtml"

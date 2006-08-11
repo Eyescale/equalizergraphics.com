@@ -23,9 +23,15 @@ h2 {
     padding-bottom: 0.2em;
 }
 
-p, li
+p, li, dd
 { 
     text-align: justify;
+}
+
+dt
+{ 
+  margin-left: 0.5em;
+  font-weight: bold;
 }
 
 table 

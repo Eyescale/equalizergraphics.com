@@ -28,6 +28,8 @@ FILES = \
 	documents/design/frames.html \
 	documents/design/frames.png \
 	documents/design/nodeFailure.html \
+	documents/design/packets.html \
+	documents/design/packets.png \
 	documents/design/threads.txt \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
