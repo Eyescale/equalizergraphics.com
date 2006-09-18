@@ -24,12 +24,12 @@
   about Equalizer, to participate in the design and development, or if you have
   any other questions.
 </p>
-<h3>Resource Management</h3>
+<h3>Resource Management System</h3>
 <p>
   The core of Equalizer is the configuration server. It is configured once for a
   visualization system, to know the system's resources. It provides system-wide
   load balancing and resource allocation for all applications.
-  <br/><a href="configuration.html">More about resource management...</a>
+  <br><a href="configuration.html">More about resource management...</a>
 </p>
 <h3>Programming Framework</h3>
 <p>
@@ -45,14 +45,14 @@
   application and does not impose any specific rendering framework, such
   as a scenegraph, to the application. It uses a callback-driven architecture,
   making it easy to port existing applications to Equalizer.
-  <br/><a href="api.html">More about the API...</a>
+  <br><a href="api.html">More about the API...</a>
 </p><p>
   In addition to traditional multi-pipe execution, where one graphics card is
   driving one display device, Equalizer will offer a broad range of
   decomposition modes to accelerate the rendering of large data sets by
   parallelizing the rendering of a single view across multiple graphics cards
   and CPU's.
-  <br/><a href="scalability.html">More about scalability...</a>
+  <br><a href="scalability.html">More about scalability...</a>
 </p>
 <h3>Transparent OpenGL Layer</h3>
 <p>
@@ -65,8 +65,10 @@
 <h3>Distributed Scene Graphs</h3>
 <p>
   Equalizer will provide sample implementations for popular scene graphs, such
-  as OpenSceneGraph or Ogre3D. Applications using these scene graphs can then
-  easily implement parallel, scalable applications based on Equalizer.
+  as <a href="http://www.openscenegraph.org/">OpenSceneGraph</a>
+  or <a href="http://www.ogre3d.org/">Ogre3D</a>. Applications using these scene
+  graphs can then easily implement parallel, scalable applications based on
+  Equalizer.
 </p>
 <div class="footnote">
 Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple

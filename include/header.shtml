@@ -2,16 +2,16 @@
 <html>
   <head>
 #ifdef BASE
-    <base href="http://www.equalizergraphics.com" />
+    <base href="http://www.equalizergraphics.com">
 #endif
-    <meta name="author" content="Stefan Eilemann"/>
+    <meta name="author" content="Stefan Eilemann">
 #ifdef KEYWORDS
-    <meta name="keywords" content=KEYWORDS/>
+    <meta name="keywords" content=KEYWORDS>
 #endif
-    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann"/>
-    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page"/>
-    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
   
 #ifdef SUBPAGE
     <title>Equalizer: PAGE: SUBPAGE</title>
@@ -26,9 +26,9 @@
 
   <body class="index">
     <div class="image">
-      <a name="top"/><a href="index.html">
-        <img src="images/Equalizer.png" alt="Equalizer logo"/>
-      </a>
+      <a name="top"><a href="index.html">
+        <img src="images/Equalizer.png" alt="Equalizer logo">
+      </a></a>
     </div>
 
   <!-- Navigation -->

@@ -8,16 +8,18 @@
 
 <h3>Equalizer</h3>
 
-<p>No releases of Equalizer are available so far. Interested developers can
-  access the <a href="http://sourceforge.net/projects/equalizer/">project
-  information</a>
+<p>No stable releases of Equalizer are available so far. Interested developers
+  can access the <a href="http://sourceforge.net/projects/equalizer/">project
+    information</a>
   and <a href="http://sourceforge.net/svn/?group_id=170962">source code</a> on
-  the sourceforge project page.
+  the sourceforge project page. If you plan contributions to the Equalizer
+  source code, please get in touch with us.
 
 <h3>GLAsync</h3>
 
 <p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
-  downloads in the spirit of the SGIX_async extension.
+  downloads in the spirit of the 
+  <a href="http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async.txt">SGIX_async</a> extension.
 </p><p>
   Links: 
   <a href="documents/glAsync/namespaceglAsync.html">Documentation</a>, 
