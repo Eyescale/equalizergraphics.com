@@ -24,6 +24,7 @@ FILES = \
 	documents/Equalizer.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
+	documents/design/codingStyle.png \
 	documents/design/compounds.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
