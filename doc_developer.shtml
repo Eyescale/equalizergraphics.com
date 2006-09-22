@@ -16,8 +16,8 @@ implementation may diverge from the original spec over time.
 </p>
 <ul>
   <li><a href="documents/design/codingStyle.png"><b>codingStyle.png</b></a>
-  illustrates the C++ coding style used in Equalizer, to ensure a consistent
-  appearance for better readability.</li>
+    illustrates the C++ coding style used in Equalizer, to ensure a consistent
+    appearance for better readability.</li>
   <li><a href="documents/design/threads.txt"><b>threads.txt</b></a> is a
     glossary and description of the individual threads in Equalizer.</li>
   <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the

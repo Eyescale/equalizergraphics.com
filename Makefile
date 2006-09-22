@@ -15,6 +15,7 @@ FILES = \
 	lists.html \
 	news.html \
 	scalability.html \
+	useCases.html \
 	$(wildcard images/*png) \
         robots.txt \
 	stylesheet.css \

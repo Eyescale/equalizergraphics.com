@@ -1,0 +1,95 @@
+
+#define S_HOME
+#define S_HOME_USECASES
+#define PAGE About
+#define SUBPAGE Use Cases
+ 
+#define KEYWORDS "scalability Equalizer OpenGL compound remote visualization cluster multipipe core"
+
+#include "header.shtml"
+
+<h2>Scalability</h2>
+<a name="overview"/>
+<h3>Overview</h3>
+<p>
+Equalizer abstracts the actual configuration from the application code. This
+allows a single application to be deployed in a wide range of
+configurations. The flexibility of Equalizer enables more use cases than
+described below, often even in unforeseen ways.
+</p>
+<a name="basic"/>
+<h3>Display Walls</h3>
+<table>
+  <tr>
+    <td>Display walls are the biggest use case for visualization clusters
+      today. Equalizer can drive such large scale displays. The typical
+      configuration, as shown on the right, executes one instance of the
+      applications rendering code for each display. The applications will
+      therefore get optimal performance due to the local, parallel OpenGL
+      execution for each display device.
+    </td>
+    <td><a href="images/wall-big.png">
+        <img src="images/wall.png" alt="A display wall configuration"/>
+    </a></td>
+  </tr>
+</table>
+<h3>Multipipe Workstations</h3>
+<table>
+  <tr>
+    <td><a href="images/workstation-big.png">
+        <img src="images/workstation.png" alt="A multipipe workstation"/>
+    </a></td>
+    <td>Multipipe workstations are an affordable way to scale the rendering
+      performance and display size. Equalizer applications can exploit multiple
+      processors or processor cores, as well as multiple graphic cards by
+      running one rendering thread per graphics card. The configuration shown on
+      the left would execute two rendering threads alongside the application
+      threads, thus utilizing up to three CPU cores.
+    </td>
+  </tr>
+</table>
+<h3>Remote Visualization Clusters</h3>
+<table>
+  <tr>
+    <td>Remote visualization clusters are an cost-efficient way of centralizing
+      large scale data. Simulation data reaches multiple terabytes in size,
+      making it time consuming and costly to move the data to the user
+      workstations. Equalizer will provide remote visualization capabilities,
+      allowing all applications to run on a central cluster, close to the
+      data. The Equalizer server can load balance multiple application
+      dynamically, so that the user experience the optimal performance under the
+      given load. Multiple rendering nodes can parallelize the rendering for a
+      single user.
+    </td>
+    <td><a href="images/remote-big.png">
+        <img src="images/remote.png" alt="A Remote Visualization Cluster"/>
+    </a></td>
+  </tr>
+</table>
+<h3>SLI and Crossfire Systems</h3>
+<table>
+  <tr>
+    <td><a href="images/SLI-big.png">
+        <img src="images/SLI.png" alt="A SLI/Crossfire Configuration"/>
+    </a></td>
+    <td><a href="http://www.slizone.com/page/home.html">NVIDIA SLI</a>
+      and <a href="http://www.ati.com/technology/crossfire/index.html">ATI
+        Crossfire</a> systems are currently driven by a single rendering
+      thread, which is multiplexed transparently to each graphic card by the
+      driver. Once the hardware vendors expose an API to program the composition
+      hardware, Equalizer can be easily adapted to make full use of the hardware
+      by running one rendering thread per card, as well as dynamically update
+      the configuration to provide good load balancing across all rendering
+      threads.
+    </td>
+  </tr>
+</table>
+<a href="#top">Back to top</a>
+
+<div class="footnote">3D models partly courtesy of 
+<a href="http://www.cyberware.com">Cyberware</a>. NVIDIA&trade; is a trademark
+of NVIDIA Corporation. ATI Crossfire&trade; is a trademark of ATI Technologies
+Inc. All other products named are trademarks of their respective owners.
+</div>
+
+#include "footer.shtml"

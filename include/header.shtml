@@ -81,6 +81,12 @@
 #endif
     >Overview</a>
 
+    <a href="useCases.html"
+#ifdef S_HOME_USECASES
+       class="used"
+#endif
+    >Use Cases</a>
+
     <a href="configuration.html"
 #ifdef S_HOME_CONFIG
        class="used"
