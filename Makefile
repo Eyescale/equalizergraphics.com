@@ -27,6 +27,7 @@ FILES = \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/codingStyle.png \
 	documents/design/compounds.html \
+	documents/design/fileFormat.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
 	documents/design/nodeFailure.html \
@@ -63,7 +64,8 @@ INCLUDES = \
 	include/header.shtml \
 	include/footer.shtml
 
-TARGETS = $(FILES:%=$(TARGET)/%) 
+TARGETS  = $(FILES:%=$(TARGET)/%) 
+CPP_HTML = gcc -xc -traditional-cpp -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude
 
 all: $(TARGETS) $(INCLUDES)
 
@@ -77,8 +79,7 @@ install: all
 
 $(TARGET)/%.html : %.shtml  $(INCLUDES)
 	@mkdir -p $(@D)
-	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude $< | \
-		sed 's/^#.*//' > $@
+	$(CPP_HTML) $< | sed 's/^#.*//' > $@
 
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
@@ -89,8 +90,7 @@ $(TARGET)/documents/WhitePapers/%.pdf: ../doc/WhitePapers/%/paper.pdf
 
 $(TARGET)/documents/design/%.html : ../doc/design/%.shtml $(INCLUDES)
 	@mkdir -p $(@D)
-	gcc -xc -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -DBASE -Iinclude $< | \
-		sed 's/^#.*//' > $@
+	$(CPP_HTML) -DBASE $< | sed 's/^#.*//' > $@
 
 $(TARGET)/documents/%: ../doc/%
 	@mkdir -p $(@D)
