@@ -9,9 +9,9 @@
 #include "header.shtml"
 
 <h2>Scalability</h2>
-<a href="#overview">Overview</a><br/>
-<a href="#basic">Basic Decomposition Modes</a><br/>
-<a href="#advanced">Advanced Scalability Features</a><br/>
+<a href="#overview">Overview</a><br>
+<a href="#basic">Basic Decomposition Modes</a><br>
+<a href="#advanced">Advanced Scalability Features</a><br>
 
 <a name="overview"/>
 <h3>Overview</h3>
@@ -21,7 +21,8 @@ parallelize the rendering of large data sets. Multiple graphics cards,
 processors and memory can be combined to render one OpenGL view. The Equalizer
 framework distributes the rendering task across a number of rendering units
 (decomposition), collects the results and recombines them on the final view
-(recomposition). 
+(recomposition). The detailed design and configuration of compounds is described
+in a <a href="documents/design/compounds.html">technical specification</a>.
 </p>
 <a href="#top">Back to top</a>
 
@@ -29,11 +30,11 @@ framework distributes the rendering task across a number of rendering units
 <h3>Basic Decomposition Modes</h3>
 <p>
 Equalizer uses the concept of compounds to configure the parallelization of the
-rendering tasks. The following compounds are available:
+rendering tasks. The following task decompostions are possible:
 <table>
   <tr>
-    <td><b>2D</b> decomposes the rendering in screen-space, that is, each
-        contributing rendering unit processes a tile of the final
+    <td><b>2D</b> or sort-first decomposes the rendering in screen-space, that
+        is, each contributing rendering unit processes a tile of the final
         view. Equalizer automatically recomposes the tiles side-by-side on the
         destination view. This mode has a low, constant IO overhead for the
         image transfers and can provide good scalability when combined with view
@@ -49,12 +50,14 @@ rendering tasks. The following compounds are available:
     <td><a href="images/DB-big.png">
         <img src="images/DB.png" alt="A DB compound"/>
     </a></td>
-    <td><b>DB</b> decomposes the rendered database so that all rendering units
-        process a part of the scene in parallel. The depth buffer
-        information is used to composite the individual images correctly. Other
-        re-assembly algorithms, for example depth-sorted alpha blending suitable
-        for volume rendering, can be used. This mode provides a very good
-        scalabilty while having linear increasing IO requirements.
+    <td><b>DB</b> or sort-last decomposes the rendered database so that all
+        rendering units process a part of the scene in parallel. The depth
+        buffer information is used to composite the individual images
+        correctly. Other re-assembly algorithms, for example depth-sorted alpha
+        blending suitable for volume rendering, can be used. This mode provides
+        a very good scalability while having linear increasing IO
+        requirements. Various recomposition algorithms, such as binary swap or
+        direct send, can be configured.
     </td>
   </tr>
 </table>
