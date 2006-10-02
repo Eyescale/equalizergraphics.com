@@ -19,7 +19,10 @@
 
 <p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
   downloads in the spirit of the 
-  <a href="http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async.txt">SGIX_async</a> extension.
+  <a href="http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async.txt">
+    SGIX_async</a> extension. The 
+  <a href="http://www.opengl.org/pipeline/article/vol001_6/">ARB_sync</a> 
+  extension provides now a better way for asynchronous operations.
 </p><p>
   Links: 
   <a href="documents/glAsync/namespaceglAsync.html">Documentation</a>, 
