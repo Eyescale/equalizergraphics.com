@@ -71,9 +71,9 @@
   Equalizer.
 </p>
 <div class="footnote">
-SLI&trade; is a trademark of NVIDIA Corporation. Crossfire&trade; is a trademark
-of ATI Technologies Inc. All other products named are trademarks of their
-respective owners.
+Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple
+Computer, Inc. OpenGL&reg; are trademarks of Silicon Graphics, Inc. All other
+products named are trademarks of their respective owners.
 </div>
 
 #include "footer.shtml"

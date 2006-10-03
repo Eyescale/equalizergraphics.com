@@ -86,10 +86,10 @@ described below, often even in unforeseen ways.
 </table>
 <a href="#top">Back to top</a>
 
-<div class="footnote">3D models partly courtesy of 
-<a href="http://www.cyberware.com">Cyberware</a>. NVIDIA&trade; is a trademark
-of NVIDIA Corporation. ATI Crossfire&trade; is a trademark of ATI Technologies
-Inc. All other products named are trademarks of their respective owners.
+<div class="footnote">
+SLI&trade; is a trademark of NVIDIA Corporation. Crossfire&trade; is a trademark
+of ATI Technologies Inc. All other products named are trademarks of their
+respective owners.
 </div>
 
 #include "footer.shtml"
