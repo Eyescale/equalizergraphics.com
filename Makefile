@@ -23,6 +23,7 @@ FILES = \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Projects_Stefan_Eilemann.pdf \
 	documents/Equalizer.pdf \
+	documents/ParallelGraphicsProgramming.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/codingStyle.png \
