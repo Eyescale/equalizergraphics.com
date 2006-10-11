@@ -24,6 +24,7 @@ FILES = \
 	documents/Projects_Stefan_Eilemann.pdf \
 	documents/Equalizer.pdf \
 	documents/ParallelGraphicsProgramming.pdf \
+	documents/Woking06.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/codingStyle.png \
