@@ -26,9 +26,9 @@
 
   <body class="index">
     <div class="image">
-      <a name="top"><a href="index.html">
+      <a name="top"></a><a href="index.html">
         <img src="images/Equalizer.png" alt="Equalizer logo">
-      </a></a>
+      </a>
     </div>
 
   <!-- Navigation -->

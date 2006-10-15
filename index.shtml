@@ -3,7 +3,7 @@
 #define S_HOME_ABOUT
 #define PAGE About
 #define SUBPAGE Overview
-#define KEYWORDS "overview api high-performance distributed Equalizer OpenGL scalable graphics cluster visualization"
+#define KEYWORDS "parallel rendering api high-performance distributed Equalizer OpenGL scalable graphics cluster visualization"
 
 #include "header.shtml"
 
@@ -34,9 +34,9 @@
 <h3>Programming Framework</h3>
 <p>
   The Equalizer client library is the interface to the Equalizer
-  server. Application developers can directly use this API to write scalable
-  graphics applications. It abstracts the application from the actual
-  configuration of the execution environment. Compared to other
+  server. Application developers directly use this API to write scalable
+  graphics applications using parallel rendering. It abstracts the application
+  from the actual configuration of the execution environment. Compared to other
   cluster-rendering software, it does not replace the OpenGL library but
   parallelizes and distributes the application's rendering code for optimal
   performance.
