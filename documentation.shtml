@@ -11,9 +11,10 @@
   <li><a href="documents/Equalizer.pdf"><b>Overview</b></a> is a presentation to
     provide a background to high-performance visualization, Equalizer
     components and features.</li>
-  <li><a href="documents/Woking06.pdf"><b>VizSIG Meeting 2006</b></a> is a
-    presentation given at the VizSIG Meeting 2006 in Woking, UK. It is based on
-    the overview presentation but features more technical content.</li>
+  <li><a href="documents/EqualizerVizSIG06.pdf"><b>VizSIG Meeting 2006</b></a>
+    is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
+    based on the overview presentation but features more technical content about
+    the programming interface and configuration.</li>
 </ul>
 
 <h2>White Papers</h2>
@@ -35,7 +36,7 @@
 <ul>
   <li><a
   href="http://sourceforge.net/project/screenshots.php?group_id=170962">See
-  separate page on sourceforge.net</a></li>
+  external page on sourceforge.net</a></li>
 </ul>
 
 #include "footer.shtml"
