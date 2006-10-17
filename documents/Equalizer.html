@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Equalizer Get the best performance from your visualization cluster Latest version at http://www.equalizergraphics.com/documents/Equalizer.pdf Outline High-performance visualization Transparent and semi-transparent solutions Programming interfaces Equalizer Components Features What is HPV ? High-Performance Visualization - like HPC but for interactive 3D applications  Address the demand to visualize huge data sets using COTS clusters Issue is to scale rendering performance using multiple GPU’s and CPU’s HPC Analogy HPC	HPV What?	Parallelize computation across multiple CPU’s	Parallelize 3D rendering across multiple GPU’s and CPU’s How?	Mostly non-interactive batch processing	Highly interactive, real-time rendering Hardware	Cluster or Supercomputers typically using fast interconnects	Graphic Cluster, Supercomputers, display hardware, input devices  HPV Today Transparent and semi-transparent solutions Programming interfaces Equalizer HPV Transparent Solutions Chromium, ModViz VGP, OMP Operate on OpenGL command stream (HPC analogy: auto-parallelizing compilers) Provide programming extensions for improved performance and scalability (semi-transparent) HPV Transparent Solutions Transparent Semi-Transparent HPV Programming Interfaces ScaleViz, Vega Prime, VTK Impose overall programming model and data structure (HPC analogy: CFD codes) Best for developing new applications Cavelib, VRJuggler, MPK Limited to HPV-critical areas of the code (HPC analogy: MPI, PVM) Best for porting existing applications Equalizer A Programming Interface and Resource Management System  for Scalable Graphics Applications Equalizer Programming Interface Applications are written against a client library which abstracts the interface to the execution environment  Minimally invasive programming approach Abstracts multi-processing, synchronisation and data transport Supports distributed rendering and performs frame compositing Resource Management System Applications are deployed by a server which balances the resource usage across the system Centralizes the setup for all applications  Configures application and deploys render clients Dynamic load-balancing of the cluster resources  Equalizer Tools Configuration Dynamic reconfiguration of the server Monitoring Resource usage, bandwidth utilization, statistics Profiling Execution flow, data distribution Equalizer Components Equalizer Vision Xdmx: X11 single virtual screen Chromium: OpenGL single virtual screen Equalizer: Scalable rendering engine Selected Use Cases Equalizer Features Runtime configuration Runtime scalability Asynchronous execution Remote visualization Clusters and SSI Open Source Runtime Configuration Hierarchical resource description: Node→Pipe→Window→Channel Node: single system of the cluster Pipe: graphic card Window: drawable and context Channel: view Resource usage: compound tree Runtime Scalability Parallel execution of the application’s rendering code One thread per graphic card Decomposition of rendering for one view Server chooses and adapts configurations based on system resources, topology and load Runtime Scalability Sort-First, Sort-Last, DPlex, Eye Flexible configuration of decomposition and recomposition Automatic loadbalancing Supports compositing hardware Hardware optimizations 2D/Sort-First Scales fillrate Scales geometry when used with view frustum culling Parallel overhead due to primitive overlap limits scalability DB/Sort-Last Scales all aspects of rendering pipeline Application needs to be adapted to render subrange of data Recomposition relatively expensive DPlex/Time-Multiplex Good scalability and loadbalancing Increased latency may be an issue Eye Compound Stereo rendering Excellent loadbalancing Limited by number of eye views Multilevel Compounds Compounds allow any combination of modes Combine different algorithm to address and balance bottlenecks Flexible configuration of recomposition algorithm Asynchronous Execution Source channels start rendering the next frame early Hides imbalance in load distribution Only visible channels belonging to the same view are synchronized Greatly improves scalability on bigger pipe counts Asynchronous Execution Remote Visualization Leverages knowledge of the application Frames are often available in main memory Additional frame-transport optimizations Loadbalancing of multiple applications on one visualization cluster SSI and Clusters Supercomputers are just tightly integrated clusters Equalizer runs on both architectures Overall model is the same SSI allows additional optimisations Open Source LGPL license Open standard for scalable graphics User-driven development Alpha version available on: www.equalizergraphics.com Get in touch"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (29);
+            images[0] = "Equalizer.html_files/Equalizer.001.png";
+            images[1] = "Equalizer.html_files/Equalizer.002.png";
+            images[2] = "Equalizer.html_files/Equalizer.003.png";
+            images[3] = "Equalizer.html_files/Equalizer.004.png";
+            images[4] = "Equalizer.html_files/Equalizer.005.png";
+            images[5] = "Equalizer.html_files/Equalizer.006.png";
+            images[6] = "Equalizer.html_files/Equalizer.007.png";
+            images[7] = "Equalizer.html_files/Equalizer.008.png";
+            images[8] = "Equalizer.html_files/Equalizer.009.png";
+            images[9] = "Equalizer.html_files/Equalizer.010.png";
+            images[10] = "Equalizer.html_files/Equalizer.011.png";
+            images[11] = "Equalizer.html_files/Equalizer.012.png";
+            images[12] = "Equalizer.html_files/Equalizer.013.png";
+            images[13] = "Equalizer.html_files/Equalizer.014.png";
+            images[14] = "Equalizer.html_files/Equalizer.015.png";
+            images[15] = "Equalizer.html_files/Equalizer.016.png";
+            images[16] = "Equalizer.html_files/Equalizer.017.png";
+            images[17] = "Equalizer.html_files/Equalizer.018.png";
+            images[18] = "Equalizer.html_files/Equalizer.019.png";
+            images[19] = "Equalizer.html_files/Equalizer.020.png";
+            images[20] = "Equalizer.html_files/Equalizer.021.png";
+            images[21] = "Equalizer.html_files/Equalizer.022.png";
+            images[22] = "Equalizer.html_files/Equalizer.023.png";
+            images[23] = "Equalizer.html_files/Equalizer.024.png";
+            images[24] = "Equalizer.html_files/Equalizer.025.png";
+            images[25] = "Equalizer.html_files/Equalizer.026.png";
+            images[26] = "Equalizer.html_files/Equalizer.027.png";
+            images[27] = "Equalizer.html_files/Equalizer.028.png";
+            images[28] = "Equalizer.html_files/Equalizer.029.png";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="Equalizer.html_files/Equalizer.001.png" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="Equalizer.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="Equalizer.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="Equalizer.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>
