@@ -20,7 +20,7 @@ automatically configure themselves for the local workstation.
 <p>
 Possible environments for Equalizer are:
 <ul>
-  <li><b>Multi-pipe Visualization Systems</b> with large-screen
+  <li><b>Multipipe Visualization Systems</b> with large-screen
       displays and immersive environments which are used by workgroups and
       individual users. The Equalizer server manages the available
       resources and configures the applications for the visualization
