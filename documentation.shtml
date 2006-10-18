@@ -8,6 +8,10 @@
 
 <h2>Presentations</h2>
 <ul>
+  <li><a href="documents/EqualizerTeaser.html"><b>Teaser</b></a> is a three 
+    slide abstract of Equalizer.
+    <a href="documents/EqualizerTeaser.pdf">[pdf]</a>
+    <a href="documents/EqualizerTeaser.html">[html]</a></li>
   <li><a href="documents/Equalizer.html"><b>Overview</b></a> is a presentation
     to provide a background to high-performance visualization, Equalizer
     components and features. <a href="documents/Equalizer.pdf">[pdf]</a>

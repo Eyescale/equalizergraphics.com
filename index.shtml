@@ -65,10 +65,12 @@
 <h3>Distributed Scene Graphs</h3>
 <p>
   Equalizer will provide sample implementations for popular scene graphs, such
-  as <a href="http://www.openscenegraph.org/">OpenSceneGraph</a>
+  as <a href="http://www.openscenegraph.org/">OpenSceneGraph</a>, 
+  <a href="http://www.coin3d.org/">Coin3D</a>
   or <a href="http://www.ogre3d.org/">Ogre3D</a>. Applications using these scene
-  graphs can then easily implement parallel, scalable applications based on
-  Equalizer.
+  graphs can then easily implement parallel, scalable applications which
+  integrate well with other applications based on Equalizer, and profit from the
+  feature set of Equalizer.
 </p>
 <div class="footnote">
 Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple

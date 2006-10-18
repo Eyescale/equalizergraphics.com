@@ -29,6 +29,9 @@ FILES = \
 	documents/EqualizerVizSIG06.pdf \
 	documents/EqualizerVizSIG06.html \
 	documents/EqualizerVizSIG06.html_files \
+	documents/EqualizerTeaser.pdf \
+	documents/EqualizerTeaser.html \
+	documents/EqualizerTeaser.html_files \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/codingStyle.png \
@@ -104,4 +107,4 @@ $(TARGET)/documents/%: ../doc/%
 
 $(TARGET)/% : %
 	@mkdir -p $(@D)
-	cp -R $< $@
+	cp -r $< $(@D)
