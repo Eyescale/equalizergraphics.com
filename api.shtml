@@ -11,13 +11,13 @@
 <h2>Programming Interface</h2>
 <p>
 Equalizer uses a callback-driven interface. Applications provide their
-rendering callbacks, which are called by the Equalizer framework according to
+rendering methods, which are called by the Equalizer framework according to
 the current configuration and system load. Process and thread creation, task
 synchronization and network connections are externalized from the application
-and handled transparently by the Equalizer framework.
+and handled by the Equalizer framework.
 </p><p>
-The multi-pipe programming interface follows the natural execution model
-of any multi-pipe application. The application needs to separate the rendering
+The multipipe programming interface follows the natural execution model
+of any multipipe application. The application needs to separate the rendering
 routines from the core application to make them distributable. Equalizer
 abstracts common graphic entities into C++ classes, for example:
 </p><ul>
@@ -29,20 +29,20 @@ abstracts common graphic entities into C++ classes, for example:
 The application subclasses these entities, and overrides methods to provide
 the application's rendering code. Each method corresponds to a task, and
 for all of them Equalizer provides a default method which implements the typical
-use case. This allows a quick start for the developer, which can the replace the
+use case. This allows a quick start for the developer, which can replace the
 defaults gradually with his own code. Some of the most important methods are:
 </p><ul>
   <li><b>Channel::draw</b> - render using the provided frustum, viewport and
     range</li>
-  <li><b>Window::init</b> - init OpenGL drawable and state</li>
+  <li><b>Window::init</b> - initialize OpenGL drawable and state</li>
   <li><b>Pipe::startFrame</b> - update frame-specific data</li>
-  <li><b>Node::init</b> - initialise per node application data</li>
+  <li><b>Node::init</b> - initialize per node application data</li>
 </ul><p>
 Equalizer provides an API to build network-distributed applications. In contrast
 to other cluster API's, such as MPI or PVM, this API is designed for the
 development of interactive applications. Certain characteristics of
 visualization software, e.g. the frame-driven rendering, are exploited for
-better performance and an easier to use programming interface.
+better performance and simpler programming interface.
 </p><p>
 API documentation for specific features, and other technical information is
 available under <a href="doc_developer.html">developer documentation</a>.

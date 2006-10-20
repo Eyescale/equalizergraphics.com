@@ -26,6 +26,7 @@ FILES = \
 	documents/Equalizer.html \
 	documents/Equalizer.html_files \
 	documents/Flyer.pdf \
+	documents/FlyerWeb.pdf \
 	documents/ParallelGraphicsProgramming.pdf \
 	documents/EqualizerVizSIG06.pdf \
 	documents/EqualizerVizSIG06.html \

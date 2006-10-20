@@ -9,19 +9,25 @@
 <h2>Presentations</h2>
 <ul>
   <li><a href="documents/EqualizerTeaser.html"><b>Teaser</b></a> is a three 
-    slide abstract of Equalizer.
-    <a href="documents/EqualizerTeaser.pdf">[pdf]</a>
-    <a href="documents/EqualizerTeaser.html">[html]</a></li>
+    slide abstract of Equalizer,
+    <a href="documents/EqualizerTeaser.pdf">pdf</a> or
+    <a href="documents/EqualizerTeaser.html">html</a>.</li>
+  <li><a href="documents/FlyerWeb.pdf"><b>Flyer</b></a> is a folded, two-sided
+    brochure for the Equalizer project. Please print two-sided using short-edged
+    binding layout (print on both sides, flip pages up),
+    <a href="documents/FlyerWeb.pdf">display quality</a> or
+    <a href="documents/Flyer.pdf">print quality</a>.</li>
   <li><a href="documents/Equalizer.html"><b>Overview</b></a> is a presentation
     to provide a background to high-performance visualization, Equalizer
-    components and features. <a href="documents/Equalizer.pdf">[pdf]</a>
-    <a href="documents/Equalizer.html">[html]</a></li>
+    components and features,
+    <a href="documents/Equalizer.pdf">pdf</a> or
+    <a href="documents/Equalizer.html">html</a>.</li>
   <li><a href="documents/EqualizerVizSIG06.html"><b>VizSIG Meeting 2006</b></a>
     is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
     based on the overview presentation but features more technical content about
-    the programming interface and configuration.
-    <a href="documents/EqualizerVizSIG06.pdf">[pdf]</a>
-    <a href="documents/EqualizerVizSIG06.html">[html]</a></li>
+    the programming interface and configuration,
+    <a href="documents/EqualizerVizSIG06.pdf">pdf</a> or
+    <a href="documents/EqualizerVizSIG06.html">html</a>.</li>
 </ul>
 
 <h2>White Papers</h2>
