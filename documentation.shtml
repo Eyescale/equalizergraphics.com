@@ -13,10 +13,10 @@
     <a href="documents/EqualizerTeaser.pdf">pdf</a> or
     <a href="documents/EqualizerTeaser.html">html</a>.</li>
   <li><a href="documents/FlyerWeb.pdf"><b>Flyer</b></a> is a folded, two-sided
-    brochure for the Equalizer project. Please print two-sided using short-edged
-    binding layout (print on both sides, flip pages up),
-    <a href="documents/FlyerWeb.pdf">display quality</a> or
-    <a href="documents/Flyer.pdf">print quality</a>.</li>
+    brochure for the Equalizer project,
+    <a href="documents/FlyerWeb.pdf">display version</a> or
+    <a href="documents/Flyer.pdf">print version</a> (please print two-sided).
+  </li>
   <li><a href="documents/Equalizer.html"><b>Overview</b></a> is a presentation
     to provide a background to high-performance visualization, Equalizer
     components and features,
