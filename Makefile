@@ -38,6 +38,8 @@ FILES = \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/codingStyle.png \
 	documents/design/compounds.html \
+	documents/design/eventHandling.html \
+	documents/design/eventHandling.png \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
