@@ -28,7 +28,7 @@
   <!-- Navigation -->
 
   <div class="navigation">
-    <p><a name="top"></a><p><a href="index.html">
+    <p><a href="index.html">
       <img src="images/Equalizer.png" alt="Equalizer logo">
     </a></p>
 
@@ -124,9 +124,13 @@
     >Contact</a></p>
   <div class="date">
     <font size=-1>UPDATE</font><br>
-    <font size=-1><a href="impressum.html">Impressum</a></font>
+    <font size=-1><a href="impressum.html"
+#ifdef S_IMPRESSUM
+       class="used"
+#endif
+                     >Impressum</a></font>
   </div>
   </div>
 
   <div class="content">
-
+    <a name="top"></a>

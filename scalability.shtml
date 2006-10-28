@@ -13,7 +13,7 @@
 <a href="#basic">Basic Decomposition Modes</a><br>
 <a href="#advanced">Advanced Scalability Features</a><br>
 
-<a name="overview"/>
+<a name="overview"></a>
 <h3>Overview</h3>
 <p>
 Equalizer implements a wide range of task decomposition algorithms to
@@ -26,11 +26,12 @@ in a <a href="documents/design/compounds.html">technical specification</a>.
 </p>
 <a href="#top">Back to top</a>
 
-<a name="basic"/>
+<a name="basic"></a>
 <h3>Basic Decomposition Modes</h3>
 <p>
 Equalizer uses the concept of compounds to configure the parallelization of the
 rendering tasks. The following task decompostions are possible:
+</p>
 <table>
   <tr>
     <td><b>2D</b> or sort-first decomposes the rendering in screen-space, that
@@ -41,14 +42,14 @@ rendering tasks. The following task decompostions are possible:
         frustum culling.
     </td>
     <td><a href="images/2D-big.png">
-        <img src="images/2D.png" alt="A 2D compound"/>
+        <img src="images/2D.png" alt="A 2D compound">
     </a></td>
   </tr>
 </table>
 <table>
   <tr>
     <td><a href="images/DB-big.png">
-        <img src="images/DB.png" alt="A DB compound"/>
+        <img src="images/DB.png" alt="A DB compound">
     </a></td>
     <td><b>DB</b> or sort-last decomposes the rendered database so that all
         rendering units process a part of the scene in parallel. The depth
@@ -72,14 +73,14 @@ rendering tasks. The following task decompostions are possible:
          implements this feature in hardware.
     </td>
     <td><a href="images/DPlex-big.png">
-        <img src="images/DPlex.png" alt="A DPlex compound"/>
+        <img src="images/DPlex.png" alt="A DPlex compound">
     </a></td>
   </tr>
 </table>
 <table>
   <tr>
     <td><a href="images/EYE-big.png">
-        <img src="images/EYE.png" alt="An Eye compound"/>
+        <img src="images/EYE.png" alt="An Eye compound">
     </a></td>
     <td><b>Eye</b> compounds are used during stereo rendering. The individual
         views for each eye are assigned to different rendering units and later
@@ -90,10 +91,9 @@ rendering tasks. The following task decompostions are possible:
     </td>
   </tr>
 </table>
-</p>
 <a href="#top">Back to top</a>
 
-<a name="advanced"/>
+<a name="advanced"></a>
 <h3>Advanced Scalability Features</h3>
 <p>
 Equalizer implements a number of additional features to better utilize the
@@ -114,7 +114,7 @@ optimisations.
     </td>
     <td>
       <a href="images/ML-big.png">
-        <img src="images/ML.png" alt="Multi-Level Compounds"/></a>
+        <img src="images/ML.png" alt="Multi-Level Compounds"></a>
     </td>
   </tr>
 </table>
@@ -122,7 +122,7 @@ optimisations.
   <tr>
     <td>
       <a href="images/LB-big.png">
-        <img src="images/LB.png" alt="2D Load-Balancing"/></a>
+        <img src="images/LB.png" alt="2D Load-Balancing"></a>
     </td><td>
       <p>
         The Equalizer server can dynamically adjust the decomposition parameters
@@ -145,7 +145,7 @@ optimisations.
     </td>
     <td>
       <a href="images/Cross-big.png">
-        <img src="images/Cross.png" alt="Advanced Load-Balancing"/></a>
+        <img src="images/Cross.png" alt="Advanced Load-Balancing"></a>
     </td>
   </tr>
 </table>
@@ -153,7 +153,7 @@ optimisations.
   <tr>
     <td>
       <a href="images/Async-big.png">
-        <img src="images/Async.png" alt="Asynchronous Execution"/></a>
+        <img src="images/Async.png" alt="Asynchronous Execution"></a>
     </td>
     <td>
       <p>
@@ -162,14 +162,13 @@ optimisations.
         frame immediately after they finish a frame. By hiding the unavoidable
         imbalances in the task decomposition, this execution mode provides a
         much better resource utilisation than the traditional, frame-synchronous
-        approach.<br/>
+        approach.<br>
         The picture shows the tasks executed over time for a synchronous versus
         an asynchronous execution using a four-way 2D or DB decomposition.
       </p>
     </td>
   </tr>
 </table>
-<a href="#top">Back to top</a>
 
 <div class="footnote">3D models partly courtesy of 
 <a href="http://www.cyberware.com">Cyberware</a>.</div>

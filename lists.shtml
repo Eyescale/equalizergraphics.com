@@ -10,12 +10,12 @@
 The following mailing lists are available:
 <ul>
   <li><b>eq-dev@equalizergraphics.com</b> is the list for technical discussions
-  and questions for software developers interested in Equalizer. <br/>
+  and questions for software developers interested in Equalizer. <br>
   <a href="pipermail/eq-dev/">List Archive</a>
   <a href="cgi-bin/mailman/listinfo/eq-dev">Subscribe</a>
   </li>
   <li><b>equalizer-commit@lists.sourceforge.net</b> is the list for commit
-  messages from the Equalizer subversion depot.<br/>
+  messages from the Equalizer subversion depot.<br>
   <a href="http://sourceforge.net/mailarchive/forum.php?forum=equalizer-commit">
     List Archive</a>
   <a href="https://lists.sourceforge.net/lists/listinfo/equalizer-commit">

@@ -9,14 +9,14 @@
 #include "header.shtml"
 
 <h2>Use Cases</h2>
-<a name="overview"/>
+<a name="overview"></a>
 <p>
 Equalizer abstracts the actual configuration from the application code. This
 allows a single application to be deployed in a wide range of
 configurations. The flexibility of Equalizer enables more use cases than
 described below, often even in unforeseen ways.
 </p>
-<a name="basic"/>
+<a name="basic"></a>
 <h3>Display Walls</h3>
 <table>
   <tr>
@@ -28,7 +28,7 @@ described below, often even in unforeseen ways.
       execution for each display device.
     </td>
     <td><a href="images/wall-big.png">
-        <img src="images/wall.png" alt="A display wall configuration"/>
+        <img src="images/wall.png" alt="A display wall configuration">
     </a></td>
   </tr>
 </table>
@@ -36,7 +36,7 @@ described below, often even in unforeseen ways.
 <table>
   <tr>
     <td><a href="images/workstation-big.png">
-        <img src="images/workstation.png" alt="A multipipe workstation"/>
+        <img src="images/workstation.png" alt="A multipipe workstation">
     </a></td>
     <td>Multipipe workstations are an affordable way to scale the rendering
       performance and display size. Equalizer applications can exploit multiple
@@ -61,7 +61,7 @@ described below, often even in unforeseen ways.
       single user.
     </td>
     <td><a href="images/remote-big.png">
-        <img src="images/remote.png" alt="A Remote Visualization Cluster"/>
+        <img src="images/remote.png" alt="A Remote Visualization Cluster">
     </a></td>
   </tr>
 </table>
@@ -69,7 +69,7 @@ described below, often even in unforeseen ways.
 <table>
   <tr>
     <td><a href="images/SLI-big.png">
-        <img src="images/SLI.png" alt="A SLI/Crossfire Configuration"/>
+        <img src="images/SLI.png" alt="A SLI/Crossfire Configuration">
     </a></td>
     <td><a href="http://www.slizone.com/page/home.html">NVIDIA SLI</a>
       and <a href="http://www.ati.com/technology/crossfire/index.html">ATI
@@ -83,7 +83,6 @@ described below, often even in unforeseen ways.
     </td>
   </tr>
 </table>
-<a href="#top">Back to top</a>
 
 <div class="footnote">
 SLI&trade; is a trademark of NVIDIA Corporation. Crossfire&trade; is a trademark

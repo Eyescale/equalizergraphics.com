@@ -1,4 +1,5 @@
 
+#define S_IMPRESSUM
 #define PAGE Impressum
 
 #include "header.shtml"
@@ -8,11 +9,11 @@
 <p>
 F&uuml;r Inhalte und Beitr&auml;ge zeichnet sich verantwortlich:
 </p><p>
-Stefan Eilemann<br/>
-Faubourg de H&ocirc;pital 12<br/>
-CH-2000 Neuch&acirc;tel<br/>
+Stefan Eilemann<br>
+Faubourg de H&ocirc;pital 12<br>
+CH-2000 Neuch&acirc;tel<br>
 </p><p>
-Telefon: +41 76 33 77 247<br/>
+Telefon: +41 76 33 77 247<br>
 Email: <a href="mailto:eile@equalizergraphics.com">
     eile@equalizergraphics.com</a>
 </p>
@@ -21,11 +22,11 @@ Email: <a href="mailto:eile@equalizergraphics.com">
 <p>
 Diese Webseite wird technisch unterhalten von:
 </p><p>
-Stefan Eilemann<br/>
-Faubourg de H&ocirc;pital 12<br/>
-CH-2000 Neuch&acirc;tel<br/>
+Stefan Eilemann<br>
+Faubourg de H&ocirc;pital 12<br>
+CH-2000 Neuch&acirc;tel<br>
 </p><p>
-Telefon: +41 76 33 77 247<br/>
+Telefon: +41 76 33 77 247<br>
 Email: <a href="mailto:eile@equalizergraphics.com">
     eile@equalizergraphics.com</a>
 </p>
