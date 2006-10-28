@@ -6,7 +6,8 @@
 
 #include "header.shtml"
 
-<h2>Presentations</h2>
+<h2>Documentation</h2>
+<h3>Presentations</h3>
 <ul>
   <li><a href="documents/EqualizerTeaser.html"><b>Teaser</b></a> is a three 
     slide abstract of Equalizer,
@@ -30,7 +31,7 @@
     <a href="documents/EqualizerVizSIG06.html">html</a>.</li>
 </ul>
 
-<h2>White Papers</h2>
+<h3>White Papers</h3>
 <ul>
   <li><a href="documents/WhitePapers/ProjectEqualizer.pdf"><b>Project Equalizer
     </b></a> is a project description of Equalizer.</li>
@@ -40,12 +41,12 @@
     for developing Equalizer.</li>
 </ul>
 
-<h2>Developer Documentation</h2>
+<h3>Developer Documentation</h3>
 <ul>
   <li><a href="doc_developer.html">See separate page</a></li>
 </ul>
 
-<h2>Screenshots</h2>
+<h3>Screenshots</h3>
 <ul>
   <li><a
   href="http://sourceforge.net/project/screenshots.php?group_id=170962">See

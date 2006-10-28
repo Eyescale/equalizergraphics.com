@@ -6,7 +6,8 @@
 
 #include "header.shtml"
 
-<h2>Design  Documentation</h2>
+<h2>Developer Documentation</h2>
+<h3>Design  Documentation</h3>
 <p>
 The design documentation is technical documentation, specifications or other
 information, typically for a specific, isolated feature. It is intended for

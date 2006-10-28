@@ -24,104 +24,109 @@
 #endif
   </head>
 
-  <body class="index">
-    <div class="image">
-      <a name="top"></a><a href="index.html">
-        <img src="images/Equalizer.png" alt="Equalizer logo">
-      </a>
-    </div>
-
+  <body>
   <!-- Navigation -->
 
   <div class="navigation">
-    <a href="index.html"
+    <p><a name="top"></a><p><a href="index.html">
+      <img src="images/Equalizer.png" alt="Equalizer logo">
+    </a></p>
+
+    <p><a href="index.html"
 #ifdef S_HOME
        class="used"
 #endif
-    >About</a>
-
-    <a href="news.html"
-#ifdef S_NEWS
-       class="used"
-#endif
-    >News</a>
-
-    <a href="documentation.html"
-#ifdef S_DOCUMENTATION
-       class="used"
-#endif
-    >Documentation</a>
-
-    <a href="downloads.html"
-#ifdef S_DOWNLOADS
-       class="used"
-#endif
-    >Downloads</a>
-
-    <a href="lists.html"
-#ifdef S_LISTS
-       class="used"
-#endif
-    >Mailing Lists</a>
-
-    <a href="contact.html"
-#ifdef S_CONTACT
-       class="used"
-#endif
-    >Contact</a>
-  </div>
+    >About</a></p>
 
   <!-- About sub-navigation-->
 #ifdef S_HOME
   <div class="subnavigation">
 
-    <a href="index.html"
+    <p><a href="index.html"
 #ifdef S_HOME_ABOUT
        class="used"
 #endif
-    >Overview</a>
+       >Overview</a></p>
 
-    <a href="useCases.html"
+    <p><a href="useCases.html"
 #ifdef S_HOME_USECASES
        class="used"
 #endif
-    >Use Cases</a>
+       >Use Cases</a></p>
 
-    <a href="configuration.html"
+    <p><a href="configuration.html"
 #ifdef S_HOME_CONFIG
        class="used"
 #endif
-    >Resource Management</a>
+       >Resource Management</a></p>
 
-    <a href="scalability.html"
+    <p><a href="scalability.html"
 #ifdef S_HOME_SCALABILITY
        class="used"
 #endif
-    >Scalability</a>
+       >Scalability</a></p>
 
-    <a href="api.html"
+    <p><a href="api.html"
 #ifdef S_HOME_API
        class="used"
 #endif
-    >API</a>
+       >API</a></p>
   </div>
 #endif  // S_HOME
 
-  <!-- Documentation sub-navigation-->
+    <p><a href="news.html"
+#ifdef S_NEWS
+       class="used"
+#endif
+    >News</a></p>
+
+
+    <p><a href="documentation.html"
 #ifdef S_DOCUMENTATION
-  <div class="subnavigation">
+       class="used"
+#endif
+    >Documentation</a></p>
 
-    <a href="documentation.html"
+    <!-- Documentation sub-navigation-->
+#ifdef S_DOCUMENTATION
+    <div class="subnavigation">
+
+      <p><a href="documentation.html"
 #ifdef S_DOCUMENTATION_OVERVIEW
-       class="used"
+         class="used"
 #endif
-    >Overview</a>
+         >Overview</a></p>
 
-    <a href="doc_developer.html"
+      <p><a href="doc_developer.html"
 #ifdef S_DOCUMENTATION_DEVELOPER
+         class="used"
+#endif
+         >Developers</a></p>
+    </div>
+#endif // S_DOCUMENTATION
+
+    <p><a href="downloads.html"
+#ifdef S_DOWNLOADS
        class="used"
 #endif
-    >Developers</a>
+    >Downloads</a></p>
+
+    <p><a href="lists.html"
+#ifdef S_LISTS
+       class="used"
+#endif
+    >Mailing Lists</a></p>
+
+    <p><a href="contact.html"
+#ifdef S_CONTACT
+       class="used"
+#endif
+    >Contact</a></p>
+  <div class="date">
+    <font size=-1>UPDATE</font><br>
+    <font size=-1><a href="impressum.html">Impressum</a></font>
   </div>
-#endif // S_DOCUMENTATION
+  </div>
+
+  <div class="content">
 

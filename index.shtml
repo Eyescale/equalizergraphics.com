@@ -7,9 +7,10 @@
 
 #include "header.shtml"
 
+<h2>Overview</h2>
 <table>
   <tr>
-    <td><h2>Overview</h2>
+    <td>
       <p>Equalizer is an open source programming interface and resource
         management system for scalable graphics applications. An Equalizer
         application can run unmodified on any visualization system, from a

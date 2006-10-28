@@ -1,14 +1,4 @@
-    <div class="footer">
-        <table class="image" width="100%">
-          <tr>
-            <td align="left"><font size=-1>UPDATE</font></td>
-            <td align="right">
-              <font size=-1><a href="impressum.html">
-                  Impressum</a></font>
-            </td>
-          </tr>
-        </table>
-    </div>
+    </div> <!-- div content -->
   </body>
 
 </html>

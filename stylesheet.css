@@ -65,25 +65,54 @@ div.image {
 }
 
 div.navigation { 
+    position: fixed;
+    left: 0;
+    top: 0;
     background-color: #aaaaaa;
-    padding: 6px 3px 6px 3px;
+    float: left;
+    width: 180px;
+    height: 100%;
+    padding: 4px 2px 4px 2px;
+}
+
+div.date { 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #aaaaaa;
+    width: 180px;
+    padding: 40px 2px 4px 2px;
+    text-align: center;
 }
 
 div.subnavigation { 
     background-color: #bbbbbb;
-    padding: 6px 3px 6px 3px;
+    margin: 4px 2px 4px 2px;
+    padding: 4px 2px 4px 2px;
 }
 
-div.navigation a, div.subnavigation a 
+div.content { 
+    margin-left: 190px;
+    margin-right: 10px;
+}
+
+div.navigation p{
+    margin: 2px 0px 2px 0px;
+}
+div.navigation a, div.subnavigation a div.date a
 { 
     text-decoration: none;
     font-weight: normal;
     font-size: 12pt;
-    padding: 2px;
-    border: 1px solid black;
     color: black;
+    padding: 2px;
 }
 
+div.navigation img
+{ 
+  padding: 0;
+  margin: 10px 0px 20px 0px;
+}
 div.navigation a.used { 
     background-color: #6699cc;
 }
@@ -96,17 +125,15 @@ div.subnavigation a
     font-size: 10pt;
 }
 
+div.content
+{
+    background-color: #ffffff;
+}
+
 div.footnote 
 { 
     background-image: url("images/footnote.png");
     background-repeat: no-repeat;
     padding-top: 10px;
     font-size: x-small;
-}
-div.footer table {
-    background-color: #999999;
-    padding: 3px;
-}
-div.footer a { 
-    text-decoration: none;
 }

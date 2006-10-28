@@ -8,9 +8,8 @@
 
 #include "header.shtml"
 
-<h2>Scalability</h2>
+<h2>Use Cases</h2>
 <a name="overview"/>
-<h3>Overview</h3>
 <p>
 Equalizer abstracts the actual configuration from the application code. This
 allows a single application to be deployed in a wide range of
