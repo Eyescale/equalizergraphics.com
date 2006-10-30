@@ -4,36 +4,37 @@ TOP = ..
 TARGET = build
 
 FILES = \
+	$(wildcard images/*png) \
 	api.html \
 	configuration.html \
 	contact.html \
-	documentation.html \
 	doc_developer.html \
+	documentation.html \
 	downloads.html \
+	favicon.ico \
 	impressum.html \
 	index.html \
 	lists.html \
 	news.html \
 	scalability.html \
-	useCases.html \
-	$(wildcard images/*png) \
-        robots.txt \
 	stylesheet.css \
-	favicon.ico \
+	useCases.html \
+        robots.txt \
 	documents/CV_Stefan_Eilemann.pdf \
-	documents/Projects_Stefan_Eilemann.pdf \
-	documents/Equalizer.pdf \
 	documents/Equalizer.html \
 	documents/Equalizer.html_files \
+	documents/Equalizer.pdf \
+	documents/EqualizerTeaser.html \
+	documents/EqualizerTeaser.html_files \
+	documents/EqualizerTeaser.pdf \
+	documents/EqualizerVizSIG06.html \
+	documents/EqualizerVizSIG06.html_files \
+	documents/EqualizerVizSIG06.pdf \
 	documents/Flyer.pdf \
 	documents/FlyerWeb.pdf \
 	documents/ParallelGraphicsProgramming.pdf \
-	documents/EqualizerVizSIG06.pdf \
-	documents/EqualizerVizSIG06.html \
-	documents/EqualizerVizSIG06.html_files \
-	documents/EqualizerTeaser.pdf \
-	documents/EqualizerTeaser.html \
-	documents/EqualizerTeaser.html_files \
+	documents/Projects_Stefan_Eilemann.pdf \
+	documents/RelNotes/RelNotes_0.1.0.html \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/codingStyle.png \
@@ -101,7 +102,7 @@ $(TARGET)/documents/WhitePapers/%.pdf: ../doc/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/documents/design/%.html : ../doc/design/%.shtml $(INCLUDES)
+$(TARGET)/documents/%.html : ../doc/%.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) -DBASE $< | sed 's/^#.*//' > $@
 
