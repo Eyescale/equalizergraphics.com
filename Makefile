@@ -81,7 +81,8 @@ INCLUDES = \
 	include/footer.shtml
 
 TARGETS  = $(FILES:%=$(TARGET)/%) 
-CPP_HTML = gcc -xc -traditional-cpp -ansi -E -DUPDATE="`date +'%e. %B %Y'`" -Iinclude
+CPP_HTML = gcc -xc -traditional-cpp -ansi -E -Iinclude \
+           -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`"
 
 all: $(TARGETS) $(INCLUDES)
 
