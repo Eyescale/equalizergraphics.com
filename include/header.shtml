@@ -102,6 +102,12 @@
          class="used"
 #endif
          >Developers</a></p>
+
+      <p><a href="relnotes.html"
+#ifdef S_DOCUMENTATION_RELNOTES
+         class="used"
+#endif
+         >Release Notes</a></p>
     </div>
 #endif // S_DOCUMENTATION
 

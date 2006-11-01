@@ -1,0 +1,34 @@
+
+#define S_NEWS
+#define BASE
+#define PAGE News
+#define SUBPAGE Version 0.1 Released
+
+#include "header.shtml"
+
+<h2>Equalizer 0.1 Released</h2>
+<p>
+We are glad to announce the first release of Equalizer, a framework for
+the development and deployment of scalable, multipipe OpenGL applications.
+Equalizer 0.1 is the first official release. It is intended as a
+preview and evaluation snapshot for application developers and early
+adopters. This release supports the following features:
+</p>
+<ul>
+  <li>Support for parallel rendering on distributed and shared memory
+    systems</li>
+  <li>Support for active and passive stereo rendering</li>
+  <li>Support for scalable passive stereo rendering</li>
+  <li>Support for head tracking</li>
+  <li>Software-based swapbarrier support for synchronization of multipipe
+    display systems</li>
+</ul>
+<p>
+More information about this release can be found at:
+<a href="http://www.equalizergraphics.com">www.equalizergraphics.com</a>. The
+full release notes are available on:
+<a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.1.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.1.0.html</a>.
+
+#include "footer.shtml"
+
+

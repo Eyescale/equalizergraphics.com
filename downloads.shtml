@@ -7,15 +7,31 @@
 <h2>Downloads</h2>
 
 <h3>Equalizer</h3>
-
 <p>No stable releases of Equalizer are available so far. Interested developers
   can access the <a href="http://sourceforge.net/projects/equalizer/">project
-    information</a>
-  and <a href="http://sourceforge.net/svn/?group_id=170962">source code</a> on
-  the sourceforge project page, or just check out the code from
-  <code>https://svn.sourceforge.net/svnroot/equalizer/trunk/src</code> using 
-  <a href="http://subversion.tigris.org/">subversion</a>. If you plan
+    information</a> or download one of the versions below. If you plan
   contributions to Equalizer, please get in touch with us.
+</p>
+<h4>Subversion Repository</h4>
+<p>
+  Follow the  <a href="http://sourceforge.net/svn/?group_id=170962">
+    instructions to check out thesource code</a> on the sourceforge project
+  page, or just check out the code from 
+  <code>https://svn.sourceforge.net/svnroot/equalizer/trunk</code> using
+  <a href="http://subversion.tigris.org/">subversion</a>. Please check
+  out <code>trunk</code> only, not the top-level repository as explained on
+  sourceforge, unless you want access to all previous releases.
+</p>
+<h4>Version 0.1</h4>
+<p>
+  Equalizer 0.1 is the first official release. It is intended as a
+  preview and evaluation snapshot for application developers and early
+  adopters. <a href="documents/RelNotes/RelNotes_0.1.0.html">Release Notes</a>
+  can be found in the Documentation section. 
+  The source code is available for download from 
+  <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">
+  sourceforge</a>.
+</p>
 
 <h3>GLAsync</h3>
 

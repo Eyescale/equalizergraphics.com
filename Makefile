@@ -16,6 +16,7 @@ FILES = \
 	index.html \
 	lists.html \
 	news.html \
+	relnotes.html \
 	scalability.html \
 	stylesheet.css \
 	useCases.html \
@@ -72,7 +73,8 @@ FILES = \
 	documents/glAsync/tab_l.gif \
 	documents/glAsync/tab_r.gif \
 	documents/glAsync/tabs.css \
-	downloads
+	downloads \
+	news/Release_0.1.html
 
 INCLUDES = \
 	include/header.shtml \
@@ -91,7 +93,7 @@ install: all
 
 .SUFFIXES: .html .css
 
-$(TARGET)/%.html : %.shtml  $(INCLUDES)
+$(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) $< | sed 's/^#.*//' > $@
 
