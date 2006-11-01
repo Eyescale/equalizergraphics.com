@@ -8,8 +8,8 @@
 
 <h2>Equalizer 0.1 Released</h2>
 <p>
-We are glad to announce the first release of Equalizer, a framework for
-the development and deployment of scalable, multipipe OpenGL applications.
+We are pleased to announce the first release of Equalizer, a framework for
+the development and deployment of scalable multipipe OpenGL applications.
 Equalizer 0.1 is the first official release. It is intended as a
 preview and evaluation snapshot for application developers and early
 adopters. This release supports the following features:

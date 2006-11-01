@@ -16,8 +16,10 @@ a hierarchically structured configuration file to describe the available
 resources, and the combination of the resources for rendering. Equalizer
 applications can also run without a server, in which case they will
 automatically configure themselves for the local workstation.
-</p>
-<p>
+</p><p>
+  <a href="documents/design/fileFormat.html">See the file format 
+    specification</a>
+</p><p>
 Possible environments for Equalizer are:
 <ul>
   <li><b>Multipipe Visualization Systems</b> with large-screen

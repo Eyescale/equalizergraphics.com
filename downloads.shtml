@@ -15,7 +15,7 @@
 <h4>Subversion Repository</h4>
 <p>
   Follow the  <a href="http://sourceforge.net/svn/?group_id=170962">
-    instructions to check out thesource code</a> on the sourceforge project
+    instructions to check out the source code</a> on the sourceforge project
   page, or just check out the code from 
   <code>https://svn.sourceforge.net/svnroot/equalizer/trunk</code> using
   <a href="http://subversion.tigris.org/">subversion</a>. Please check
