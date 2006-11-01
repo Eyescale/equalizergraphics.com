@@ -70,7 +70,7 @@
 #ifdef S_HOME_API
        class="used"
 #endif
-       >API</a></p>
+       >Programming Interface</a></p>
   </div>
 #endif  // S_HOME
 

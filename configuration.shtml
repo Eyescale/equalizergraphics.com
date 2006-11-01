@@ -2,7 +2,7 @@
 #define S_HOME
 #define S_HOME_CONFIG
 #define PAGE About
-#define SUBPAGE Configuration
+#define SUBPAGE Resource Management
 
 #define KEYWORDS "overview configuration Equalizer Chromium scalable cluster visualization"
 
