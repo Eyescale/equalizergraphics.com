@@ -7,6 +7,13 @@
 #include "header.shtml"
 
 <h2>Developer Documentation</h2>
+<h3>Presentations</h3>
+<ul>
+  <li><a href="documents/ParallelGraphicsProgramming.html"><b>Parallel Graphics
+    Programming</b></a> explains the concepts and scope of the Equalizer API,
+    <a href="documents/ParallelGraphicsProgramming.pdf">pdf</a> or
+    <a href="documents/ParallelGraphicsProgramming.html">html</a>.</li>
+</ul>
 <h3>Design  Documentation</h3>
 <p>
 The design documentation is technical documentation, specifications or other

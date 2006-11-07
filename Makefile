@@ -34,6 +34,8 @@ FILES = \
 	documents/Flyer.pdf \
 	documents/FlyerWeb.pdf \
 	documents/ParallelGraphicsProgramming.pdf \
+	documents/ParallelGraphicsProgramming.html \
+	documents/ParallelGraphicsProgramming.html_files \
 	documents/Projects_Stefan_Eilemann.pdf \
 	documents/RelNotes/RelNotes_0.1.0.html \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
