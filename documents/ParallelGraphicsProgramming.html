@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Parallel Graphics Programming with Equalizer Latest version at http://www.equalizergraphics.com/documents/ParallelGraphicsProgramming.pdf Outline Application Environments Scalable Rendering Multipipe Programming with Equalizer Environment Display Walls Virtual Reality Remote Rendering Scalable Rendering Display Walls Group collaboration Better data understanding One to four displays per computer High resolution: 10-100 MPixels Virtual Reality Stereo rendering, head tracking High frame rates Up to two computers per wall with passive stereo Remote Rendering Centralize data, software and hardware Combined with scalable rendering Avoids copying of HPC result data Simplifies administration Scalable Rendering Render massive data sets faster Use multiple graphics cards and processors per display Different algorithms for parallelization Scalable Rendering Single frame decomposition sort-first: screen-space partition sort-middle: only practical on GPU sort-last: database partition Entire frame decomposition DPlex: time-multiplex Eye: stereo passes 2D/Sort-First Scales fillrate/fragment processing Scales vertex processing with view frustum culling Parallel overhead due to primitive overlap limits scalability DB/Sort-Last Scales all aspects of rendering pipeline Application needs to be adapted to render subrange of data Recomposition relatively expensive DPlex/Time-Multiplex Good scalability and loadbalancing Increased latency may be an issue Eye/Stereo Stereo rendering Excellent loadbalancing Limited by number of eye views Conclusion 2D	DB	DPlex	Eye Fillrate	++	++	++	++ Vertex Processing	0	++	++	++ Memory Usage	0	++	0	0 Load Balancing	0	+	++	++ Latency	++	++	-	++ Re-assembly	+	-	+	+ No ‘magic bullet’ 2D is ideal for less than eight pipes Use Eye if running in stereo DB scales best Combine modes Multilevel Combine different algorithms to balance bottlenecks Flexible configuration of recomposition algorithm Sort-Last Compositing Naive approach composites everything on final view O(n) IO requirements ≈ 6MB/node/frame Parallelize compositing Binary Swap Power-of-two nodes Swap half with partner Composite Repeat 1. &amp; 2. until own tile is complete Gather tiles O(1), but logn steps Direct Send Any number of nodes Composite full tile Gather tiles O(1) Multipipe Programming Single pipe application Multipipe porting Equalizer API Porting details Single Pipe Rendering Typical rendering loop Stages may not be well separated Multipipe Rendering Separate rendering and application Instantiate rendering multiple times Synchronize parallel execution Equalizer Programming Applications are written against a client library which abstracts the interface to the execution environment  Minimally invasive programming approach Abstracts multi-processing, synchronization and data transport Supports distributed rendering and performs frame compositing Equalizer Programming C++ classes which correspond to graphic entities Node is a single computer in the cluster Pipe is a graphics card and rendering thread Window is an OpenGL drawable Channel is a viewport within a window Equalizer Programming Application subclasses and overrides “callback” methods, e.g.: Channel::draw to render using the provided frustum, viewport and range Window::init to init OpenGL drawable and state Pipe::startFrame to update frame-specific data Node::init to initialize per node application data Default methods implement typical use case Porting Details Configuration Multithreading Synchronization Rendering decomposition Data distribution for clusters Configuration Display environment Rendering resources Rendering mode (stereo, mono) Equalizer provides: Simple ASCII configuration files Central resource management Multithreading/Synchronization Threading model Display synchronization Data synchronization Equalizer provides: Abstraction of threading library Swapbarrier, lock, sema, barrier, ... Rendering Decomposition Task computation Result recomposition Equalizer provides: Automatic task generation based on config Flexible decomposition and recomposition Task-specific callbacks Data Distribution Who needs which data? Equalizer provides Versioned, distributed objects ‘Userdata’ mechanism, e.g.: Config::beginFrame( id ) is input parameter to Channel::draw( id ) ID identifies object or object version Last Words LGPL license Open standard for scalable graphics User-driven development Alpha version on www.equalizergraphics.com Get in touch!"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (30);
+            images[0] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.001.jpg";
+            images[1] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.002.jpg";
+            images[2] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.003.jpg";
+            images[3] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.004.jpg";
+            images[4] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.005.jpg";
+            images[5] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.006.jpg";
+            images[6] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.007.jpg";
+            images[7] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.008.jpg";
+            images[8] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.009.jpg";
+            images[9] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.010.jpg";
+            images[10] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.011.jpg";
+            images[11] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.012.jpg";
+            images[12] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.013.jpg";
+            images[13] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.014.jpg";
+            images[14] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.015.jpg";
+            images[15] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.016.jpg";
+            images[16] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.017.jpg";
+            images[17] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.018.jpg";
+            images[18] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.019.jpg";
+            images[19] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.020.jpg";
+            images[20] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.021.jpg";
+            images[21] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.022.jpg";
+            images[22] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.023.jpg";
+            images[23] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.024.jpg";
+            images[24] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.025.jpg";
+            images[25] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.026.jpg";
+            images[26] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.027.jpg";
+            images[27] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.028.jpg";
+            images[28] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.029.jpg";
+            images[29] = "ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.030.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="ParallelGraphicsProgramming.html_files/ParallelGraphicsProgramming.001.jpg" onclick="Step(1)"/>
+    </p>
+</body>
+</html>
