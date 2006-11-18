@@ -5,7 +5,7 @@ TARGET = build
 
 FILES = \
 	$(wildcard images/*png) \
-	$(wildcard screenshots/*png) \
+	$(wildcard screenshots/*) \
 	api.html \
 	configuration.html \
 	contact.html \

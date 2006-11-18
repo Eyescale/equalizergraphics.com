@@ -27,11 +27,12 @@
   <body>
   <!-- Navigation -->
 
-  <div class="navigation">
-    <p><a href="index.html">
+  <div class="header">
+    <a href="index.html">
       <img src="images/Equalizer.png" alt="Equalizer logo">
-    </a></p>
-
+    </a>
+  </div>
+  <div class="navigation">
     <p><a href="index.html"
 #ifdef S_HOME
        class="used"
