@@ -11,7 +11,8 @@
                                              in a three-sided CAVE">
 </a>
 <h4>The Equalizer example application in a three-sided CAVE</h4>
-<hr></hr>
+</div>
+<hr>
 <div class="image">
 <a href="screenshots/wall.png">
   <img src="screenshots/wall-small.jpg" alt="A terrain visualization software,
@@ -21,13 +22,14 @@
 </a>
 <h4>A terrain visualization software, eqSmart, on the 24 megapixel display wall
   at the University of Z&uuml;rich (7680x3200)</h4>
-<hr></hr>
+</div>
+<hr>
 <div class="image">
 <a href="screenshots/wall2.png">
   <img src="screenshots/wall2-small.jpg" alt="The Equalizer example application
                                               running on the same display wall">
 </a>
 <h4>The Equalizer example application running on the same display wall</h4>
-<hr></hr>
+<hr>
 </div>
 #include "footer.shtml"
