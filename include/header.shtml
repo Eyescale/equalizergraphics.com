@@ -111,6 +111,12 @@
     </div>
 #endif // S_DOCUMENTATION
 
+    <p><a href="screenshots.html"
+#ifdef S_SCREENSHOTS
+       class="used"
+#endif
+    >Screenshots</a></p>
+
     <p><a href="downloads.html"
 #ifdef S_DOWNLOADS
        class="used"

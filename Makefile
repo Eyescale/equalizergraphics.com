@@ -5,6 +5,7 @@ TARGET = build
 
 FILES = \
 	$(wildcard images/*png) \
+	$(wildcard screenshots/*png) \
 	api.html \
 	configuration.html \
 	contact.html \
@@ -18,6 +19,7 @@ FILES = \
 	news.html \
 	relnotes.html \
 	scalability.html \
+	screenshots.html \
 	stylesheet.css \
 	useCases.html \
         robots.txt \
