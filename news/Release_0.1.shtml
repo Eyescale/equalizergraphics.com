@@ -1,4 +1,3 @@
-
 #define S_NEWS
 #define BASE
 #define PAGE News
@@ -30,5 +29,4 @@ full release notes are available on:
 <a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.1.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.1.0.html</a>.
 
 #include "footer.shtml"
-
-
+<!-- $Id:$ -->

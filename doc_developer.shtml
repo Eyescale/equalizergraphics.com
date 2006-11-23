@@ -1,4 +1,3 @@
-
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_DEVELOPER
 #define PAGE Documentation
@@ -41,3 +40,4 @@ implementation may diverge from the original spec over time.
 </ul>
 
 #include "footer.shtml"
+<!-- $Id:$ -->

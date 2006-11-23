@@ -1,4 +1,3 @@
-
 #define S_HOME
 #define S_HOME_USECASES
 #define PAGE About
@@ -91,3 +90,4 @@ respective owners.
 </div>
 
 #include "footer.shtml"
+<!-- $Id:$ -->

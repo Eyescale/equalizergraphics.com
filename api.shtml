@@ -1,4 +1,3 @@
-
 #define S_HOME
 #define S_HOME_API
 #define PAGE About
@@ -49,3 +48,4 @@ available under <a href="doc_developer.html">developer documentation</a>.
 </p>
 
 #include "footer.shtml"
+<!-- $Id:$ -->

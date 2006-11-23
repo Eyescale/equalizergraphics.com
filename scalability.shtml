@@ -1,4 +1,3 @@
-
 #define S_HOME
 #define S_HOME_SCALABILITY
 #define PAGE About
@@ -174,3 +173,4 @@ optimisations.
 <a href="http://www.cyberware.com">Cyberware</a>.</div>
 
 #include "footer.shtml"
+<!-- $Id:$ -->

@@ -1,4 +1,3 @@
-
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_RELNOTES
 #define PAGE Documentation
@@ -13,3 +12,4 @@
 </ul>
 
 #include "footer.shtml"
+<!-- $Id:$ -->

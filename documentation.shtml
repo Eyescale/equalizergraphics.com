@@ -1,4 +1,3 @@
-
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_OVERVIEW
 #define PAGE Documentation
@@ -47,3 +46,4 @@
 </ul>
 
 #include "footer.shtml"
+<!-- $Id:$ -->

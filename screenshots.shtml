@@ -1,4 +1,3 @@
-
 #define S_SCREENSHOTS
 #define PAGE Screenshots
 
@@ -33,3 +32,4 @@
 <hr>
 </div>
 #include "footer.shtml"
+<!-- $Id:$ -->

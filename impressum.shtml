@@ -1,4 +1,3 @@
-
 #define S_IMPRESSUM
 #define PAGE Impressum
 
@@ -32,3 +31,4 @@ Email: <a href="mailto:eile@equalizergraphics.com">
 </p>
 
 #include "footer.shtml"
+<!-- $Id:$ -->
