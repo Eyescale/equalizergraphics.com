@@ -33,6 +33,18 @@
     </a></td>
   </tr>
 </table>
+<h3>Mission Statement</h3>
+<p>
+  The Equalizer project will provide the standard programming
+  environment for multipipe applications, ranging from workstations to
+  large-scale High-Performance Visualization (HPV) clusters. The goal for
+  Equalizer is to reach a status similar to the MPI library, but for interactive
+  3D graphics applications. To achieve this goal we invite programmers,
+  researchers, independent software vendors and hardware manufacturers to
+  contribute to this effort.
+</p>
+
+<h2>Components</h2>
 <h3>Resource Management System</h3>
 <p>
   The core of Equalizer is the configuration server. It is configured once for a
@@ -89,4 +101,4 @@ of their respective owners.
 </div>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->
