@@ -29,7 +29,23 @@
                                               running on the same display wall">
 </a>
 <h4>The Equalizer example application running on the same display wall</h4>
+</div>
 <hr>
+<div class="image">
+<a href="screenshots/sortFirst.jpg">
+  <img src="screenshots/sortFirst-small.jpg" alt="A sort-first configuration.">
+</a>
+<h4>A six pipe sort-first configuration using colored channels to illustrate
+  the decomposition</h4>
+</div>
+<hr>
+<div class="image">
+<a href="screenshots/directSend.jpg">
+  <img src="screenshots/directSend-small.jpg" alt="A sort-last direct-send
+                                                   configuration">
+</a>
+<h4>A six pipe sort-last, direct-send configuration using colored channels to
+  illustrate the decomposition</h4>
 </div>
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->
