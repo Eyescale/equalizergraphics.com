@@ -8,16 +8,16 @@
 <h3>Equalizer</h3>
 <p>No stable releases of Equalizer are available so far. Interested developers
   can access the <a href="http://sourceforge.net/projects/equalizer/">project
-    information</a> or download one of the versions below. If you plan
-  contributions to Equalizer, please get in touch with us.
+    information</a> or download one of the prerelease versions below. If you
+  plan contributions to Equalizer, please get in touch with us.
 </p>
 <h4>Subversion Repository</h4>
 <p>
   Follow the  <a href="http://sourceforge.net/svn/?group_id=170962">
     instructions to check out the source code</a> on the sourceforge project
   page, or just check out the code from 
-  <code>https://svn.sourceforge.net/svnroot/equalizer/trunk</code> using
-  <a href="http://subversion.tigris.org/">subversion</a>. Please check
+  <code>https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk</code>
+  using <a href="http://subversion.tigris.org/">subversion</a>. Please check
   out <code>trunk</code> only, not the top-level repository as explained on
   sourceforge, unless you want access to all previous releases.
 </p>
@@ -53,4 +53,4 @@ are trademarks of their respective owners.
 </div>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->
