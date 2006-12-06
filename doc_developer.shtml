@@ -34,10 +34,13 @@ implementation may diverge from the original spec over time.
   <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the
     initial design documentation on the API and config file interface for the
     configuration of scalable rendering.</li>
+  <li><a href="documents/design/statistics.html"><b>Statistics</b></a> is the
+    initial design documentation on the API and config file interface for
+    statistics gathering.</li>
   <li><a href="documents/design/packets.html"><b>Packet Handling</b></a>
     explains the basic concept and mechanism of the Equalizer networking
     layer.</li>
 </ul>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

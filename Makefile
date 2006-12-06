@@ -52,6 +52,7 @@ FILES = \
 	documents/design/nodeFailure.html \
 	documents/design/packets.html \
 	documents/design/packets.png \
+	documents/design/statistics.html \
 	documents/design/threads.txt \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
