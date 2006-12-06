@@ -5,8 +5,8 @@
 
 <h2>Contributors</h2>
 <p>
-  The following is a list of the major contributors To Equalizer. Contributing
-  individuals are mentioned on the AUTHORS file distributed with Equalizer.
+  The following is a list of the major contributing institutions. Contributing
+  individuals are mentioned in the AUTHORS file distributed with Equalizer.
 </p>
 
 <table>
@@ -19,9 +19,9 @@
     <td>
       The <a href="http://www.ifi.unizh.ch/vmml/">Visualization and MultiMedia
       Lab</a> at the Department of Informatics, University of Z&uuml;rich
-      generously sponsored the initial development of Equalizer, starting in
+      generously supported the initial development of Equalizer, starting in
       March 2005. It is still actively contributing to Equalizer and remains the
-      biggest contributor.
+      biggest contributor until today.
     </td>
   </tr>
 </table>
