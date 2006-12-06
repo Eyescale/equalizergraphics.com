@@ -9,6 +9,7 @@ FILES = \
 	api.html \
 	configuration.html \
 	contact.html \
+	contributors.html \
 	doc_developer.html \
 	documentation.html \
 	downloads.html \

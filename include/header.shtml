@@ -135,6 +135,12 @@
        class="used"
 #endif
     >Contact</a></p>
+    <p><a href="contributors.html"
+#ifdef S_CONTRIBUTORS
+       class="used"
+#endif
+    >Contributors</a></p>
+
   <div class="date">
     <font size=-1>UPDATE</font><br>
     <font size=-1><a href="impressum.html"

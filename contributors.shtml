@@ -1,0 +1,32 @@
+#define S_CONTRIBUTORS
+#define PAGE Contributors
+
+#include "header.shtml"
+
+<h2>Contributors</h2>
+<p>
+  The following is a list of the major contributors To Equalizer. Contributing
+  individuals are mentioned on the AUTHORS file distributed with Equalizer.
+</p>
+
+<table>
+  <tr>
+    <td><a href="http://www.ifi.unizh.ch/vmml/">
+        <img src="images/VMML_logo_200.png" alt="Link to the Visualization and
+                                                 MultiMedia Lab, University of
+                                                 Z&uuml;rich">
+    </a></td>
+    <td>
+      The <a href="http://www.ifi.unizh.ch/vmml/">Visualization and MultiMedia
+      Lab</a> at the Department of Informatics, University of Z&uuml;rich
+      generously sponsored the initial development of Equalizer, starting in
+      March 2005. It is still actively contributing to Equalizer and remains the
+      biggest contributor.
+    </td>
+  </tr>
+</table>
+<p>
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
