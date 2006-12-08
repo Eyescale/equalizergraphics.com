@@ -77,7 +77,7 @@ div.header {
     padding: 4px 2px 4px 2px;
 }
 
-div.navigation { 
+div.navigationbg { 
     position: fixed;
     left: 0;
     top: 80px;
@@ -86,6 +86,18 @@ div.navigation {
     width: 180px;
     height: 100%;
     padding: 4px 2px 4px 2px;
+    z-index: 1;
+}
+
+div.navigation { 
+    position: fixed;
+    left: 0;
+    top: 80px;
+    background-color: #aaaaaa;
+    float: left;
+    width: 180px;
+    padding: 4px 2px 4px 2px;
+    z-index: 3;
 }
 
 div.date { 
@@ -94,8 +106,9 @@ div.date {
     bottom: 0;
     background-color: #aaaaaa;
     width: 180px;
-    padding: 40px 2px 4px 2px;
+    padding: 4px 2px 4px 2px;
     text-align: center;
+    z-index: 2;
 }
 
 div.subnavigation { 

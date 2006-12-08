@@ -25,13 +25,16 @@
   </head>
 
   <body>
-  <!-- Navigation -->
-
+  
+  <!-- Header Bar -->
   <div class="header">
     <a href="index.html">
       <img src="images/Equalizer.png" alt="Equalizer logo">
     </a>
   </div>
+
+  <!-- Navigation -->
+  <div class="navigationbg"></div>
   <div class="navigation">
     <p><a href="index.html"
 #ifdef S_HOME
@@ -140,15 +143,20 @@
        class="used"
 #endif
     >Contributors</a></p>
+  </div>
 
   <div class="date">
+#if 1
+    <a href="http://www.ifi.unizh.ch/vmml/">
+    <img src="images/VMML_logo_150_grey.png" 
+         alt="Logo of Visualization and MultiMedia Lab, University of Z&uuml;rich"></a>
+#endif
     <font size=-1>UPDATE</font><br>
     <font size=-1><a href="impressum.html"
 #ifdef S_IMPRESSUM
        class="used"
 #endif
                      >Impressum</a></font>
-  </div>
   </div>
 
   <div class="content">

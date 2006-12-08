@@ -12,16 +12,13 @@
 <table>
   <tr>
     <td><a href="http://www.ifi.unizh.ch/vmml/">
-        <img src="images/VMML_logo_200.png" alt="Link to the Visualization and
-                                                 MultiMedia Lab, University of
-                                                 Z&uuml;rich">
+        <img src="images/VMML_logo_200.png" 
+             alt="Link to the Visualization and MultiMedia Lab, University of Z&uuml;rich">
     </a></td>
     <td>
-      The <a href="http://www.ifi.unizh.ch/vmml/">Visualization and MultiMedia
-      Lab</a> at the Department of Informatics, University of Z&uuml;rich
-      generously supported the initial development of Equalizer, starting in
-      March 2005. It is still actively contributing to Equalizer and remains the
-      biggest contributor until today.
+      The Visualization and MultiMedia Lab at the Department of Informatics,
+      University of Zürich has supported Equalizer since March 2005, with Stefan
+      Eilemann leading the project development.
     </td>
   </tr>
 </table>
