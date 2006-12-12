@@ -4,6 +4,8 @@
 #include "header.shtml"
 
 <h2>Screenshots</h2>
+<p>Click on the images to get a high resolution version.</p>
+<hr>
 <div class="image">
 <a href="screenshots/cave.png">
   <img src="screenshots/cave-small.jpg" alt="The Equalizer example application
@@ -44,8 +46,16 @@
   <img src="screenshots/directSend-small.jpg" alt="A sort-last direct-send
                                                    configuration">
 </a>
-<h4>A six pipe sort-last, direct-send configuration using colored channels to
-  illustrate the decomposition</h4>
+<h4>A six pipe sort-last, direct-send configuration using channel colors to
+  illustrate the database decomposition (model patches) and the result
+  composition (background)</h4>
+</div>
+<div class="image">
+<a href="screenshots/directSend-dest.jpg">
+  <img src="screenshots/directSend-dest-small.jpg" alt="A sort-last direct-send
+                                                   configuration">
+</a>
+<h4>Detailed destination channel from the last figure</h4>
 </div>
 #include "footer.shtml"
 <!-- $Id$ -->

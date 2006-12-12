@@ -146,11 +146,9 @@
   </div>
 
   <div class="date">
-#if 1
     <a href="http://www.ifi.unizh.ch/vmml/">
     <img src="images/VMML_logo_150_grey.png" 
          alt="Logo of Visualization and MultiMedia Lab, University of Z&uuml;rich"></a>
-#endif
     <font size=-1>UPDATE</font><br>
     <font size=-1><a href="impressum.html"
 #ifdef S_IMPRESSUM
