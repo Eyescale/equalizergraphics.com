@@ -81,7 +81,8 @@ FILES = \
 	documents/glAsync/tab_r.gif \
 	documents/glAsync/tabs.css \
 	downloads \
-	news/Release_0.1.html
+	news/Release_0.1.html \
+	news/tungsten.html
 
 INCLUDES = \
 	include/header.shtml \

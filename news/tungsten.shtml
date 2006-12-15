@@ -1,0 +1,40 @@
+#define S_NEWS
+#define BASE
+#define PAGE News
+#define SUBPAGE Employment News
+
+#include "header.shtml"
+
+<h2>Employment News</h2>
+<p>
+  We are pleased to announce that, in January 2007, Stefan Eilemann will
+  join Tungsten Graphics (www.tungstengraphics.com) as a Senior Software
+  Engineer for 3D graphics development.
+</p><p>
+  Tungsten Graphic's reputation is built on the expertise and depth of
+  knowledge in high-performance visualization and 3D graphics. It is a
+  natural fit for Tungsten Graphics to add Stefan's experience and acumen
+  in these areas.
+</p><p>
+  Rest assured that Stefan will retain his leadership role on Equalizer
+  (<a href="http://www.equalizergraphics.com">www.equalizergraphics.com<a/>) and
+    that we are committed to the continued development of Equalizer as an open
+  and available platform.
+</p><p>
+For further information or support on Equalizer, please contact Tungsten
+Graphics at: <a href="mailto:info@tungstengraphics.com?subject=Equalizer">info@tungstengraphics.com</a>.
+</p><p>
+<br>Best Regards,
+</p><p>
+Stefan Eilemann<br>
+Senior Engineer, Tungsten Graphics<br>
+<a href="mailto:stefan@tungstengraphics.com">stefan@tungstengraphics.com</a><br>
+</p><p>
+and
+</p><p>
+Jens Owen<br>
+CEO, Tungsten Graphics<br>
+<a href="mailto:jens@tungstengraphics.com">jens@tungstengraphics.com</a><br>
+</p>
+#include "footer.shtml"
+<!-- $Id$ -->
