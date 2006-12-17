@@ -53,11 +53,10 @@ rendering tasks. The following task decompostions are possible:
     <td><b>DB</b> or sort-last decomposes the rendered database so that all
         rendering units process a part of the scene in parallel. The depth
         buffer information is used to composite the individual images
-        correctly. Other re-assembly algorithms, for example depth-sorted alpha
-        blending suitable for volume rendering, can be used. This mode provides
-        a very good scalability while having linear increasing IO
-        requirements. Various recomposition algorithms, such as binary swap or
-        direct send, can be configured.
+        correctly for polygonal data. Volume rendering applications use an
+        ordered alpha-based blending to composite the result image. This mode
+        provides very good scalability while having linear increasing IO
+        requirements.
     </td>
   </tr>
 </table>
@@ -69,7 +68,8 @@ rendering tasks. The following task decompostions are possible:
          introduces latency into the rendering. Depending on the application,
          the additional latency is compensated by the higher frame
          rate. The AFR (Alternate Frame Rendering) mode of multi-GPU systems
-         implements this feature in hardware.
+         implements this feature in hardware. This feature is not yet
+         implemented.
     </td>
     <td><a href="images/DPlex-big.png">
         <img src="images/DPlex.png" alt="A DPlex compound">
@@ -120,40 +120,57 @@ optimisations.
 <table>
   <tr>
     <td>
-      <a href="images/LB-big.png">
-        <img src="images/LB.png" alt="2D Load-Balancing"></a>
+      <a href="images/directSend-big.png">
+        <img src="images/directSend.png" 
+             alt="Direct Send Parallel Compositing"></a>
     </td><td>
       <p>
-        The Equalizer server can dynamically adjust the decomposition parameters
-        based on the current workload distribution. This load-balancing can
-        happen automatically (based on time measurements) or programatically
-        (based on application input).
+        Equalizer supports various parallel compositing algorithms, typically
+        used during DB/sort-last rendering. Due to the linear increase in pixel
+        data, it becomes necessary to parallelize the compositing. The compound
+        implementation of Equalizer supports various parallel sort-last
+        compositing algorithms, including, but not limited to, direct send and
+        binary swap. Such algorithms keep the compositing cost constant due to
+        the parallelization across all rendering units.
       </p>
     </td>
   </tr>
 </table>
 <table>
   <tr>
+    <td>
+      <p>
+        The Equalizer server can dynamically adjust the decomposition parameters
+        based on the current workload distribution. This load-balancing can
+        happen automatically (based on time measurements) or programatically
+        (based on application input). This feature is not yet implemented.
+      </p>
+    </td>
+    <td>
+      <a href="images/LB-big.png">
+        <img src="images/LB.png" alt="2D Load-Balancing"></a>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>
+      <a href="images/Cross-big.png">
+        <img src="images/Cross.png" alt="Advanced Load-Balancing"></a>
+    </td>
     <td>
       <p>
         Advanced load-balancing uses off-screen rendering buffers on the same
         graphic cards which display the final result. These buffers contribute
         to the rendering of other output channels, enabling the optimal usage of
-        all rendering units on a multi-pipe machine.
+        all rendering units on a multipipe machine. This feature is not yet
+        implemented.
       </p>
-    </td>
-    <td>
-      <a href="images/Cross-big.png">
-        <img src="images/Cross.png" alt="Advanced Load-Balancing"></a>
     </td>
   </tr>
 </table>
 <table>
   <tr>
-    <td>
-      <a href="images/Async-big.png">
-        <img src="images/Async.png" alt="Asynchronous Execution"></a>
-    </td>
     <td>
       <p>
         Equalizer schedules the rendering resources asynchronously. Resources
@@ -163,8 +180,12 @@ optimisations.
         much better resource utilisation than the traditional, frame-synchronous
         approach.<br>
         The picture shows the tasks executed over time for a synchronous versus
-        an asynchronous execution using a four-way 2D or DB decomposition.
+        an asynchronous execution using a four-way 2D decomposition.
       </p>
+    </td>
+    <td>
+      <a href="images/Async-big.png">
+        <img src="images/Async.png" alt="Asynchronous Execution"></a>
     </td>
   </tr>
 </table>
@@ -173,4 +194,4 @@ optimisations.
 <a href="http://www.cyberware.com">Cyberware</a>.</div>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->
