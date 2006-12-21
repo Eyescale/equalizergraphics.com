@@ -13,13 +13,17 @@
     <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
   
-#ifdef SUBPAGE
-    <title>Equalizer: PAGE: SUBPAGE</title>
+#ifdef TITLE
+    <title>Equalizer: PAGE: SUBPAGE: TITLE</title>
 #else
-#  ifdef PAGE
-    <title>Equalizer: PAGE</title>
+#  ifdef SUBPAGE
+    <title>Equalizer: PAGE: SUBPAGE</title>
 #  else
-    <title>Equalizer</title>
+#    ifdef PAGE
+    <title>Equalizer: PAGE</title>
+#    else
+#      error No page title defined
+#    endif
 #  endif
 #endif
   </head>
@@ -105,7 +109,7 @@
 #ifdef S_DOCUMENTATION_DEVELOPER
          class="used"
 #endif
-         >Developers</a></p>
+         >Developer</a></p>
 
       <p><a href="relnotes.html"
 #ifdef S_DOCUMENTATION_RELNOTES
@@ -159,3 +163,17 @@
 
   <div class="content">
     <a name="top"></a>
+
+#ifdef TITLE
+    <h2>TITLE</h2>
+#else
+#  ifdef SUBPAGE
+    <h2>SUBPAGE</h2>
+#  else
+#    ifdef PAGE
+    <h2>PAGE</h2>
+#    else
+#      error No page title defined
+#    endif
+# endif
+#endif

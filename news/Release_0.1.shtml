@@ -5,7 +5,6 @@
 
 #include "header.shtml"
 
-<h2>Equalizer 0.1 Released</h2>
 <p>
 We are pleased to announce the first release of Equalizer, a framework for
 the development and deployment of scalable multipipe OpenGL applications.
@@ -29,4 +28,4 @@ full release notes are available on:
 <a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.1.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.1.0.html</a>.
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

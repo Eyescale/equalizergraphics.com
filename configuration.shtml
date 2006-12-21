@@ -7,7 +7,6 @@
 
 #include "header.shtml"
 
-<h2>Resource Management</h2>
 <p>
 Equalizer uses a configuration server to optimally allocate and balance the
 available resources on the visualization system. The server is configured using
@@ -51,4 +50,4 @@ applications alongside with scalable Equalizer applications.
 </p>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

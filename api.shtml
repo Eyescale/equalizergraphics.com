@@ -7,7 +7,6 @@
 
 #include "header.shtml"
 
-<h2>Programming Interface</h2>
 <p>
 Equalizer uses a callback-driven interface. Applications provide their
 rendering methods, which are called by the Equalizer framework according to
@@ -48,4 +47,4 @@ available under <a href="doc_developer.html">developer documentation</a>.
 </p>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

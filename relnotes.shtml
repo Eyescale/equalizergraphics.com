@@ -5,11 +5,10 @@
 
 #include "header.shtml"
 
-<h2>Release Notes</h2>
 <ul>
   <li><a href="documents/RelNotes/RelNotes_0.1.0.html"><b>Version 0.1</b></a>, 
     31. October 2006</li>
 </ul>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

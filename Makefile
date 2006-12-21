@@ -51,6 +51,7 @@ FILES = \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
+	documents/design/loadBalancing.html \
 	documents/design/nodeFailure.html \
 	documents/design/packets.html \
 	documents/design/packets.png \

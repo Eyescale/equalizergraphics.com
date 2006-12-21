@@ -5,7 +5,6 @@
 
 #include "header.shtml"
 
-<h2>Documentation</h2>
 <h3>Presentations</h3>
 <ul>
   <li><a href="documents/EqualizerTeaser.html"><b>Teaser</b></a> is a three 
@@ -46,4 +45,4 @@
 </ul>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

@@ -7,7 +7,6 @@
 
 #include "header.shtml"
 
-<h2>Scalability</h2>
 <a href="#overview">Overview</a><br>
 <a href="#basic">Basic Decomposition Modes</a><br>
 <a href="#advanced">Advanced Scalability Features</a><br>

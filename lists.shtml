@@ -3,8 +3,6 @@
 
 #include "header.shtml"
 
-<h2>Mailing Lists</h2>
-
 <p>
 The following mailing lists are available:
 <ul>
@@ -23,4 +21,4 @@ The following mailing lists are available:
 </ul>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

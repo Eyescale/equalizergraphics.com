@@ -3,7 +3,6 @@
 
 #include "header.shtml"
 
-<h2>Impressum</h2>
 <h3>Inhaltliche und redaktionelle Verantwortung</h3>
 <p>
 F&uuml;r Inhalte und Beitr&auml;ge zeichnet sich verantwortlich:
@@ -31,4 +30,4 @@ Email: <a href="mailto:eile@equalizergraphics.com">
 </p>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

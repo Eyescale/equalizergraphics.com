@@ -3,7 +3,6 @@
 
 #include "header.shtml"
 
-<h2>Screenshots</h2>
 <p>Click on the images to get a high resolution version.</p>
 <hr>
 <div class="image">

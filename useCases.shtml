@@ -7,7 +7,6 @@
 
 #include "header.shtml"
 
-<h2>Use Cases</h2>
 <a name="overview"></a>
 <p>
 Equalizer abstracts the actual configuration from the application code. This
@@ -90,4 +89,4 @@ respective owners.
 </div>
 
 #include "footer.shtml"
-<!-- $Id:$ -->
+<!-- $Id$ -->

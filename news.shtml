@@ -3,7 +3,6 @@
 
 #include "header.shtml"
 
-<h2>News</h2>
 <ul>
   <li><b>15. December 2006</b> <a href="news/tungsten.html">Employment News:</a>
   Stefan Eilemann to work for Tungsten Graphics.</li>

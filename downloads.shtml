@@ -3,8 +3,6 @@
 
 #include "header.shtml"
 
-<h2>Downloads</h2>
-
 <h3>Equalizer</h3>
 <p>No stable releases of Equalizer are available so far. Interested developers
   can access the <a href="http://sourceforge.net/projects/equalizer/">project
