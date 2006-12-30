@@ -19,6 +19,16 @@
   out <code>trunk</code> only, not the top-level repository as explained on
   sourceforge, unless you want access to all previous releases.
 </p>
+<h4>Version 0.2</h4>
+<p>
+  Equalizer 0.2 adds support for scalable rendering, by using multiple CPU's,
+  GPU's and computers to scale the rendering performance of a single view. 
+  <a href="documents/RelNotes/RelNotes_0.2.0.html">Release Notes</a>
+  can be found in the Documentation section. 
+  The source code is available for download from 
+  <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">
+  sourceforge</a>.
+</p>
 <h4>Version 0.1</h4>
 <p>
   Equalizer 0.1 is the first official release. It is intended as a
