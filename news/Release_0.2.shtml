@@ -1,0 +1,36 @@
+#define S_NEWS
+#define BASE
+#define PAGE News
+#define SUBPAGE Version 0.2 Released
+
+#include "header.shtml"
+
+<p>
+We are pleased to announce the release of Equalizer 0.2, a framework for
+the development and deployment of scalable multipipe OpenGL applications.
+Equalizer 0.2 adds support for scalable rendering, by using multiple CPU's,
+GPU's and computers to scale the rendering performance of a single view. It is
+intended as a preview and evaluation snapshot for application developers and
+early adopters. This release supports the following features:
+</p>
+<ul>
+  <li>Sort-first (2D), sort-last (DB) and eye task decomposition.</li>
+  <li>Tile-based reassembly for sort-first and eye recomposition.</li>
+  <li>Flexible recomposition engine for parallel compositing,
+    including, but not limited to, direct send and binary swap sort-last
+    compositing.</li>
+  <li>Fast image compression for network transfers based on a modified RLE
+    algorithm.</li>
+  <li>Z-based sort-last compositing of polygonal data.</li>
+  <li>Support for ordered alpha-based compositing of volumetric data.</li>
+  <li>Support for dynamic near and far planes.</li>
+  <li>Initial implementation of a statistics API.</li>
+</ul>
+<p>
+More information about this release can be found at:
+<a href="http://www.equalizergraphics.com">www.equalizergraphics.com</a>. The
+full release notes are available on:
+<a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.2.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.2.0.html</a>.
+
+#include "footer.shtml"
+<!-- $Id$ -->

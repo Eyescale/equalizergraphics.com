@@ -83,6 +83,7 @@ FILES = \
 	documents/glAsync/tabs.css \
 	downloads \
 	news/Release_0.1.html \
+	news/Release_0.2.html \
 	news/tungsten.html
 
 INCLUDES = \
