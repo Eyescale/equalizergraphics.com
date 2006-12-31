@@ -13,7 +13,7 @@
         management system for scalable graphics applications. An Equalizer
         application can run unmodified on any visualization system, from a
         singlepipe workstation to large scale graphics clusters and shared
-        memory visualization systems. Equalizer is build from ground up as a
+        memory visualization systems. Equalizer is build upon a
         parallel, scalable programming interface solving the problems common to
         any multipipe application.
         <br><a href="useCases.html">More about use cases...</a>
@@ -47,31 +47,32 @@
 <h3>Resource Management System</h3>
 <p>
   The core of Equalizer is the configuration server. It is configured once for a
-  visualization system, and it know the system's resources. It provides
+  visualization system, and it know the system's resources. It will provide
   system-wide load balancing and resource allocation for all applications.
   <br><a href="configuration.html">More about resource management...</a>
 </p>
 <h3>Programming Framework</h3>
 <p>
   Application developers use the Equalizer client library to write scalable
-  graphics applications based on parallel rendering. The Equalizer client
-  library is the interface to the Equalizer server, it abstracts the application
-  from the actual configuration of the execution environment. Compared to other
-  cluster-rendering software, it does not replace the OpenGL library but
-  parallelizes and distributes the application's rendering code for optimal
-  performance.
+  OpenGL applications by using parallel rendering. The Equalizer client
+  library is the interface to the Equalizer server, and it abstracts the 
+  application from the actual configuration of the execution
+  environment. Compared to other cluster-rendering software, it does not replace
+  the OpenGL library but parallelizes and distributes the application's
+  rendering code for optimal performance.
 </p><p>
   Equalizer provides the natural execution framework for any multi-pipe
   application and does not impose any specific rendering framework, such
-  as a scenegraph, to the application. It uses a callback-driven architecture,
+  as a scenegraph, to the application. It uses a minimally invasive approach,
+  providing the functionality common to multipipe applications, thus
   making it easy to port existing applications to Equalizer.
   <br><a href="api.html">More about the programming interface...</a>
 </p><p>
   In addition to traditional multi-pipe execution, where one graphics card is
-  driving one display device, Equalizer will offer a broad range of
+  driving one display device, Equalizer offers a broad range of
   decomposition modes to accelerate the rendering of large data sets by
-  parallelizing the rendering of a single view across multiple graphics cards
-  and CPU's.
+  parallelizing the rendering of a single view across multiple graphics cards,
+  processors and computers.
   <br><a href="scalability.html">More about scalability...</a>
 </p>
 <h3>Transparent OpenGL Layer</h3>
@@ -80,7 +81,7 @@
   applications. They can take advantage of the system's resource management and
   load balancing, without any additional configuration. This layer will allow a
   seamless integration of unmodified and scalable applications on the same
-  system.
+  system, and deliver similar performance as existing solutions.
 </p>
 <h3>Distributed Scene Graphs</h3>
 <p>

@@ -11,11 +11,11 @@
 Equalizer uses a configuration server to optimally allocate and balance the
 available resources on the visualization system. The server is configured using
 a hierarchically structured configuration file to describe the available
-resources, and the combination of the resources for rendering. Equalizer
-applications can also run without a server, in which case they will
+resources, and the combination of the resources for rendering. In the future,
+Equalizer applications can also run without a server, in which case they will
 automatically configure themselves for the local workstation.
 </p><p>
-  <a href="documents/design/fileFormat.html">See the file format 
+  <a href="documents/design/fileFormat.html">See the configuration file format 
     specification</a>
 </p><p>
 Possible environments for Equalizer are:

@@ -18,10 +18,10 @@ described below, often even in unforeseen ways.
 <h3>Display Walls</h3>
 <table>
   <tr>
-    <td>Display walls are the biggest use case for visualization clusters
-      today. Equalizer can drive such large scale displays. The typical
+    <td>Display walls are one of the most important use case for visualization
+      clusters today. Equalizer can drive such large scale displays. The typical
       configuration, as shown on the right, executes one instance of the
-      applications rendering code for each display. The applications will
+      application's rendering code for each display. The applications will
       therefore get optimal performance due to the local, parallel OpenGL
       execution for each display device.
     </td>
@@ -53,10 +53,10 @@ described below, often even in unforeseen ways.
       making it time consuming and costly to move the data to the user
       workstations. Equalizer will provide remote visualization capabilities,
       allowing all applications to run on a central cluster, close to the
-      data. The Equalizer server can load balance multiple application
-      dynamically, so that the user experience the optimal performance under the
-      given load. Multiple rendering nodes can parallelize the rendering for a
-      single user.
+      data. The Equalizer server will be able to load balance multiple
+      application dynamically, so that users experience the optimal performance
+      under the given load. Multiple rendering nodes can parallelize the
+      rendering for a single user.
     </td>
     <td><a href="images/remote-big.png">
         <img src="images/remote.png" alt="A Remote Visualization Cluster">
