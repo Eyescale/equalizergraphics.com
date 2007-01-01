@@ -90,16 +90,19 @@
 <tr><td colspan="2"><hr></td></tr>
 <tr><td colspan="2"><b>Platform Support</b></td></tr>
 <tr>
-  <td>Linux ia32</td>
+  <td>Linux ia32, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>Linux x86_64</td>
+  <td>Linux x86_64, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>Linux i64</td>
+  <td>Linux i64, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>OS X 10.4 Universal (partial)</td>
+  <td>OS X 10.4 Universal, X11/glX</td>
+  <td>0.1</td>
+</tr><tr>
+  <td>OS X 10.4 Universal, CGL (partial)</td>
   <td>0.1</td>
 </tr><tr>
   <td>Windows</td>
