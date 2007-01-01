@@ -96,7 +96,7 @@
   <td>Linux x86_64, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>Linux i64, X11/glX</td>
+  <td>Linux ia64, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
   <td>OS X 10.4 Universal, X11/glX</td>
