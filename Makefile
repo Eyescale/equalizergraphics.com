@@ -14,6 +14,7 @@ FILES = \
 	documentation.html \
 	downloads.html \
 	favicon.ico \
+	features.html \
 	impressum.html \
 	index.html \
 	lists.html \
@@ -47,10 +48,12 @@ FILES = \
 	documents/design/codingStyle.png \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
+	documents/design/dynamicNearFar.html \
 	documents/design/eventHandling.png \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
+	documents/design/imageCompression.html \
 	documents/design/loadBalancing.html \
 	documents/design/nodeFailure.html \
 	documents/design/packets.html \

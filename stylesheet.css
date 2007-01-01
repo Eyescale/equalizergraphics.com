@@ -40,6 +40,10 @@ table
     text-align: justify;
 }
 
+th
+{ 
+    font-size: 14pt;
+}
 img
 { 
     background-color: #e0e0d0;

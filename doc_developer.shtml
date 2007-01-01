@@ -20,9 +20,8 @@ software developers, and generally not understandable without a technical
 background of Equalizer. They are often moving targets, and the actual
 implementation may diverge from the original spec over time.
 </p>
+
 <ul>
-  <li><a href="documents/design/eventHandling.html"><b>Event Handling</b></a>
-    explains the event handling model.</li>
   <li><a href="documents/design/fileFormat.html"><b>File Format</b></a> is the
     documentation for the server configuration files.</li>
   <li><a href="documents/design/codingStyle.png"><b>codingStyle.png</b></a>
@@ -30,12 +29,27 @@ implementation may diverge from the original spec over time.
     appearance for better readability.</li>
   <li><a href="documents/design/threads.txt"><b>threads.txt</b></a> is a
     glossary and description of the individual threads in Equalizer.</li>
+</ul>
+
+<h4>Version 0.2</h4>
+<ul>
   <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the
     initial design documentation on the API and config file interface for the
     configuration of scalable rendering.</li>
+  <li><a href="documents/design/dynamicNearFar.html"><b>Dynamic Near and
+        Far Plane Support</b></a> explains the API for adjusting the near and
+    far plane from the channel's rendering methods.</li>
+  <li><a href="documents/design/imageCompression.html"><b>Image
+        Compression</b></a> is used to compress output frames for network
+    transfers.</li>
   <li><a href="documents/design/statistics.html"><b>Statistics Interface</b></a>
     is the initial design documentation on the API and config file interface for
     statistics gathering.</li>
+</ul>
+<h4>Version 0.1</h4>
+<ul>
+  <li><a href="documents/design/eventHandling.html"><b>Event Handling</b></a>
+    explains the event handling model.</li>
   <li><a href="documents/design/packets.html"><b>Packet Handling</b></a>
     explains the basic concept and mechanism of the Equalizer networking
     layer.</li>
