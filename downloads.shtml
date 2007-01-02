@@ -17,8 +17,16 @@
   <code>https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk</code>
   using <a href="http://subversion.tigris.org/">subversion</a>. Please check
   out <code>trunk</code> only, not the top-level repository as explained on
-  sourceforge, unless you want access to all previous releases.
+  sourceforge, unless you want access to all previous releases. The repository
+  has the following layout and size:
 </p>
+<pre>
+137M trunk/doc
+ 14M trunk/src
+188M trunk/website
+294M tags/release-0.1
+339M tags/release-0.2
+</pre>
 <h4>Version 0.2</h4>
 <p>
   Equalizer 0.2 adds support for scalable rendering, by using multiple CPU's,
