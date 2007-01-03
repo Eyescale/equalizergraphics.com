@@ -5,13 +5,22 @@
 
 #include "header.shtml"
 
+<p>
+<a href="#client">Client Library</a><br>
+<a href="#scalable">Scalable Rendering</a><br>
+<a href="#server">Resource Server</a><br>
+<a href="#extensions">Extensions</a><br>
+<a href="#applications">Applications</a><br>
+<a href="#platforms">Platform Support</a><br>
+</p>
+
 <table>
 <tr>
   <th>Feature</th> <th>Version</th>
 </tr>
 
 <tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><b>Client Library</b></td></tr>
+<tr><td colspan="2"><a name="client"></a><b>Client Library</b></td></tr>
 <tr>
   <td>parallel rendering on distributed memory and shared memory systems</td>
   <td>0.1</td>
@@ -30,8 +39,8 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><b>Scalable Rendering</b></td></tr>
+<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
+<tr><td colspan="2"><a name="scalable"></a><b>Scalable Rendering</b></td></tr>
 <tr>
   <td><a href="documents/design/compounds.html">sort-first (2D) 
       compounds</a></td>
@@ -77,8 +86,8 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><b>Resource Server</b></td></tr>
+<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
+<tr><td colspan="2"><a name="server"><b>Resource Server</b></td></tr>
 <tr>
   <td>multiple applications</td>
   <td>?</td>
@@ -87,8 +96,40 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><b>Platform Support</b></td></tr>
+<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
+<tr><td colspan="2"><a name="extensions"><b>Extensions</b></td></tr>
+<tr>
+  <td>OpenGL Transparent Library (Chromium?)</td>
+  <td>?</td>
+</tr><tr>
+  <td>Distributed Scene Graph: OpenSceneGraph, OpenSG, Coin</td>
+  <td>?</td>
+</tr>
+
+<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
+<tr><td colspan="2"><a name="applications"><b>Applications</b></td></tr>
+<tr>
+  <td>Polygonal Rendering Demo (eqPly)</td>
+  <td>0.1</td>
+</tr><tr>
+  <td>&rarr; Support for sort-last rendering</td>
+  <td>0.2</td>
+</tr><tr>
+  <td>&rarr; Rewrite rendering to use VBO's</td>
+  <td>0.3?</td>
+</tr><tr>
+  <td>&rarr; Better rendering and shading effects</td>
+  <td>0.3?</td>
+</tr><tr>
+  <td>Molecular Viewer (based on flip.pdb MPK demo)</td>
+  <td>?</td>
+</tr><tr>
+  <td>Volume Renderer</td>
+  <td>?</td>
+</tr>
+
+<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
+<tr><td colspan="2"><a name="platforms"><b>Platform Support</b></td></tr>
 <tr>
   <td>Linux ia32, X11/glX</td>
   <td>0.1</td>
