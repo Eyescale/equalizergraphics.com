@@ -33,9 +33,10 @@
   GPU's and computers to scale the rendering performance of a single view. 
   <a href="documents/RelNotes/RelNotes_0.2.0.html">Release Notes</a>
   can be found in the Documentation section. 
-  The source code is available for download from 
+  The source code is available for download
+  <a href="downloads/Equalizer-0.2.tar.gz">locally</a> and from 
   <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">
-  sourceforge</a>.
+  Sourceforge</a>.
 </p>
 <h4>Version 0.1</h4>
 <p>
@@ -43,9 +44,10 @@
   preview and evaluation snapshot for application developers and early
   adopters. <a href="documents/RelNotes/RelNotes_0.1.0.html">Release Notes</a>
   can be found in the Documentation section. 
-  The source code is available for download from 
+  The source code is available for download
+  <a href="downloads/Equalizer-0.1.tar.gz">locally</a> and from 
   <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">
-  sourceforge</a>.
+  Sourceforge</a>.
 </p>
 
 <h3>GLAsync</h3>
