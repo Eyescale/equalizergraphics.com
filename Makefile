@@ -95,7 +95,8 @@ INCLUDES = \
 
 TARGETS  = $(FILES:%=$(TARGET)/%) 
 CPP_HTML = gcc -xc -traditional-cpp -ansi -E -Iinclude \
-           -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`"
+           -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
+           -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\"
 
 all: $(TARGETS) $(INCLUDES)
 
