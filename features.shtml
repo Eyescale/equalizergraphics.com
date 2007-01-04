@@ -94,6 +94,9 @@
 </tr><tr>
   <td>node failure handling</td>
   <td>?</td>
+</tr><tr>
+  <td>server in client library, auto-configured for standalone applications</td>
+  <td>?</td>
 </tr>
 
 <tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
