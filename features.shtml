@@ -37,6 +37,15 @@
 </tr><tr>
   <td>remote visualization</td>
   <td>?</td>
+</tr><tr>
+  <td>FBO support</td>
+  <td>?</td>
+</tr><tr>
+  <td>Asynchronous framebuffer readback</td>
+  <td>?</td>
+</tr><tr>
+  <td>ROI readback interface</td>
+  <td>?</td>
 </tr>
 
 <tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
