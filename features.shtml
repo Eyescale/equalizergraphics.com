@@ -35,16 +35,17 @@
       swapbarrier for synchronization of multipipe display systems</a></td>
   <td>0.1</td>
 </tr><tr>
+  <td><a href="documents/design/dynamicNearFar.html">dynamic near and far plane
+      support</a></td>
+  <td>0.2</td>
+</tr><tr>
+  <td><a href="documents/design/statistics.html">statistics API</a></td>
+  <td>0.2</td>
+</tr><tr>
   <td>remote visualization</td>
   <td>?</td>
 </tr><tr>
   <td>FBO support</td>
-  <td>?</td>
-</tr><tr>
-  <td>Asynchronous framebuffer readback</td>
-  <td>?</td>
-</tr><tr>
-  <td>ROI readback interface</td>
   <td>?</td>
 </tr>
 
@@ -70,13 +71,6 @@
       network transfers</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/dynamicNearFar.html">dynamic near and far plane
-      support</a></td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="documents/design/statistics.html">statistics API</a></td>
-  <td>0.2</td>
-</tr><tr>
   <td>compound load-balancing</td>
   <td>?</td>
 </tr><tr>
@@ -92,6 +86,12 @@
   <td>?</td>
 </tr><tr>
   <td>hardware-based recomposition (Crossfire, SLI)</td>
+  <td>?</td>
+</tr><tr>
+  <td>Asynchronous framebuffer readback</td>
+  <td>?</td>
+</tr><tr>
+  <td>ROI readback interface</td>
   <td>?</td>
 </tr>
 
