@@ -1,4 +1,12 @@
-      <p><a href="#top">Back to top</a></p>
+#define SITE_EMAIL mailto:eile@equalizergraphics.com?subject=Question regarding TITLESTRING
+#define QUOTE( string ) STRINGIFY( string )
+#define STRINGIFY( foo ) #foo
+
+      <p>
+        <a href=QUOTE( SITE_EMAIL )>Ask a Question</a>
+        </p><p>
+        <a href="#top">Back to top</a>
+      </p>
     </div> <!-- div content -->
   </body>
 
