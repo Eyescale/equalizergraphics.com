@@ -25,6 +25,12 @@
         us</a> if you are interested to learn more about Equalizer, to
         participate in the design and development, or if you have any other
         questions.
+      </p><p>
+        The Equalizer framework is licensed under the
+        <a href="http://www.gnu.org/licenses/lgpl.html">LGPL open source
+          license</a>, which allows it to be used in commercial and open source
+          software without licensing costs, with the only restriction that any
+          changes on the framework have to be made open source.
       </p>
     </td>
     <td><a href="images/parallel-big.png">
