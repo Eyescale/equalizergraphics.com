@@ -7,23 +7,41 @@
 
 #include "header.shtml"
 
+<table>
+  <tr>
+    <td>
+      <p>
+        Equalizer uses a callback-driven interface. Applications provide their
+        rendering methods, which are called by the Equalizer framework according
+        to the current configuration and system load. Process and thread
+        creation, task synchronization and network connections are externalized
+        from the application and handled by the Equalizer framework.
+      </p><p>
+        The multipipe programming interface of Equalizer follows the natural
+        execution model of any multipipe application. In order to port an
+        application to run in a  multipipe environment, the rendering routines
+        have to be separated from the core application. The Equalizer framework
+        will then take care of the multiprocessing and synchronization and call
+        the application-provided rendering methods in parallel. The basic
+        execution flow of a singlepipe and a multipipe application is show on
+        the right (click on picture to enlarge).
+      </p>
+    </td>
+    <td><a href="images/executionFlow.png">
+        <img src="images/executionFlow-small.png" 
+             alt="Execution flow of a singlepipe and a multipipe application">
+    </a></td>
+  </tr>
+</table>
 <p>
-Equalizer uses a callback-driven interface. Applications provide their
-rendering methods, which are called by the Equalizer framework according to
-the current configuration and system load. Process and thread creation, task
-synchronization and network connections are externalized from the application
-and handled by the Equalizer framework.
-</p><p>
-The multipipe programming interface follows the natural execution model
-of any multipipe application. The application needs to separate the rendering
-routines from the core application to make them distributable. Equalizer
-abstracts common graphic entities into C++ classes, for example:
-</p><ul>
+Equalizer abstracts common graphic entities into C++ classes, for example:
+<ul>
   <li><b>Node</b> - a single computer in the cluster</li>
   <li><b>Pipe</b> - a graphics card and rendering thread</li>
   <li><b>Window</b> - an OpenGL drawable</li>
   <li><b>Channel</b> - a viewport within a window</li>
-</ul><p>
+</ul>
+</p><p>
 The application subclasses these entities, and overrides methods to provide
 the application's rendering code. Each method corresponds to a task, and
 for all of them Equalizer provides a default method which implements the typical
