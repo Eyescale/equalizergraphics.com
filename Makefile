@@ -23,6 +23,7 @@ FILES = \
 	relnotes.html \
 	scalability.html \
 	screenshots.html \
+	search.html \
 	stylesheet.css \
 	useCases.html \
         robots.txt \

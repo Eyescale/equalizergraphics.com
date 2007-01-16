@@ -35,13 +35,14 @@
 </table>
 <p>
 Equalizer abstracts common graphic entities into C++ classes, for example:
+</p>
 <ul>
   <li><b>Node</b> - a single computer in the cluster</li>
   <li><b>Pipe</b> - a graphics card and rendering thread</li>
   <li><b>Window</b> - an OpenGL drawable</li>
   <li><b>Channel</b> - a viewport within a window</li>
 </ul>
-</p><p>
+<p>
 The application subclasses these entities, and overrides methods to provide
 the application's rendering code. Each method corresponds to a task, and
 for all of them Equalizer provides a default method which implements the typical

@@ -8,38 +8,38 @@
 #include "header.shtml"
 
 <p>
-Equalizer uses a configuration server to optimally allocate and balance the
-available resources on the visualization system. The server is configured using
-a hierarchically structured configuration file to describe the available
-resources, and the combination of the resources for rendering. In the future,
-Equalizer applications can also run without a server, in which case they will
-automatically configure themselves for the local workstation.
+  Equalizer uses a configuration server to optimally allocate and balance the
+  available resources on the visualization system. The server is configured
+  using a hierarchically structured configuration file to describe the available
+  resources, and the combination of the resources for rendering. In the future,
+  Equalizer applications can also run without a server, in which case they will
+  automatically configure themselves for the local workstation.
 </p><p>
   <a href="documents/design/fileFormat.html">See the configuration file format 
     specification</a>
 </p><p>
 Possible environments for Equalizer are:
+</p>
 <ul>
   <li><b>Multipipe Visualization Systems</b> with large-screen
-      displays and immersive environments which are used by workgroups and
-      individual users. The Equalizer server manages the available
-      resources and configures the applications for the visualization
-      cluster or multi-pipe machine. The same application can run on all
-      configurations without recompilation or reconfiguration.
+    displays and immersive environments which are used by workgroups and
+    individual users. The Equalizer server manages the available
+    resources and configures the applications for the visualization
+    cluster or multi-pipe machine. The same application can run on all
+    configurations without recompilation or reconfiguration.
   </li>
   <li><b>Visualization Data Centers</b> provide visualization services to
-      remote users. A central visualization cluster with attached storage
-      uses the rendering resources for visualizing huge data sets by
-      combining multiple graphics cards for a single client. The Equalizer
-      server automatically assigns and balances the available rendering
-      resources depending on the workload and needs of the connected users. 
+    remote users. A central visualization cluster with attached storage
+    uses the rendering resources for visualizing huge data sets by
+    combining multiple graphics cards for a single client. The Equalizer
+    server automatically assigns and balances the available rendering
+    resources depending on the workload and needs of the connected users. 
   </li>
   <li><b>Workstations</b> can run Equalizer applications in a server-less mode,
-      which facilitates the deployment of Equalizer applications. The same
-      application can still run on a server-based system without recompilation.
+    which facilitates the deployment of Equalizer applications. The same
+    application can still run on a server-based system without recompilation.
   </li>
 </ul>
-</p>
 <p>
 <a href="http://chromium.sourceforge.net">Chromium</a> will be integrated with
 the Equalizer framework to provide a transparent execution layer. The

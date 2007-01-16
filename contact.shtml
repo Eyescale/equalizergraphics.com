@@ -1,6 +1,6 @@
 #define S_CONTACT
 #define PAGE Contact Information
-#define KEYWORDS Resume Consulting
+#define KEYWORDS "Resume Consulting"
 
 #include "header.shtml"
 
