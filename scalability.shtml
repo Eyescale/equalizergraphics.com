@@ -11,7 +11,7 @@
 <a href="#basic">Basic Decomposition Modes</a><br>
 <a href="#advanced">Advanced Scalability Features</a><br>
 
-<a name="overview"></a>
+<hr><a name="overview"></a>
 <h3>Overview</h3>
 <p>
 Equalizer implements a wide range of task decomposition algorithms to
@@ -24,7 +24,7 @@ in a <a href="documents/design/compounds.html">technical specification</a>.
 </p>
 <a href="#top">Back to top</a>
 
-<a name="basic"></a>
+<hr><a name="basic"></a>
 <h3>Basic Decomposition Modes</h3>
 <p>
 Equalizer uses the concept of compounds to configure the parallelization of the
@@ -91,7 +91,7 @@ rendering tasks. The following task decompostions are possible:
 </table>
 <a href="#top">Back to top</a>
 
-<a name="advanced"></a>
+<hr><a name="advanced"></a>
 <h3>Advanced Scalability Features</h3>
 <p>
 Equalizer implements a number of additional features to better utilize the

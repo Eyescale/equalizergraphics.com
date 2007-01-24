@@ -22,6 +22,8 @@ implementation may diverge from the original spec over time.
 </p>
 
 <ul>
+  <li><a href="documents/design/taskMethods.html"><b>Task Methods</b></a> lists
+    all task methods ('callbacks') and explains their purpose.</li>
   <li><a href="documents/design/fileFormat.html"><b>File Format</b></a> is the
     documentation for the server configuration files.</li>
   <li><a href="documents/design/codingStyle.png"><b>codingStyle.png</b></a>
