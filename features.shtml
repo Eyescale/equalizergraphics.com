@@ -42,6 +42,10 @@
   <td><a href="documents/design/statistics.html">statistics API</a></td>
   <td>0.2</td>
 </tr><tr>
+  <td><a href="documents/design/anaglyph.html">anaglyphic stereo 
+      rendering</a></td>
+  <td>0.3</td>
+</tr><tr>
   <td>remote visualization</td>
   <td>?</td>
 </tr><tr>
