@@ -168,3 +168,22 @@ div.footnote
     padding-top: 10px;
     font-size: x-small;
 }
+
+.float_right
+{
+    float:right; 
+}
+.float_left
+{
+    float:left; 
+}
+
+.flush_float
+{ 
+    clear: both;
+}
+
+hr
+{ 
+    clear: both;
+}

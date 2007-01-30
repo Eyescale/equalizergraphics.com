@@ -7,33 +7,26 @@
 
 #include "header.shtml"
 
-<table>
-  <tr>
-    <td>
-      <p>
-        Equalizer uses a callback-driven interface. Applications provide their
-        rendering methods, which are called by the Equalizer framework according
-        to the current configuration and system load. Process and thread
-        creation, task synchronization and network connections are externalized
-        from the application and handled by the Equalizer framework.
-      </p><p>
-        The multipipe programming interface of Equalizer follows the natural
-        execution model of any multipipe application. In order to port an
-        application to run in a  multipipe environment, the rendering routines
-        have to be separated from the core application. The Equalizer framework
-        will then take care of the multiprocessing and synchronization and call
-        the application-provided rendering methods in parallel. The basic
-        execution flow of a singlepipe and a multipipe application is show on
-        the right (click on picture to enlarge).
-      </p>
-    </td>
-    <td><a href="images/executionFlow.png">
-        <img src="images/executionFlow-small.png" 
-             alt="Execution flow of a singlepipe and a multipipe application">
-    </a></td>
-  </tr>
-</table>
+<div class="float_right"><a href="images/executionFlow.png">
+    <img src="images/executionFlow-small.png" 
+         alt="Execution flow of a singlepipe and a multipipe application">
+</a></div>
 <p>
+  Equalizer uses a callback-driven interface. Applications provide their
+  rendering methods, which are called by the Equalizer framework according
+  to the current configuration and system load. Process and thread
+  creation, task synchronization and network connections are externalized
+  from the application and handled by the Equalizer framework.
+</p><p>
+  The multipipe programming interface of Equalizer follows the natural
+  execution model of any multipipe application. In order to port an
+  application to run in a  multipipe environment, the rendering routines
+  have to be separated from the core application. The Equalizer framework
+  will then take care of the multiprocessing and synchronization and call
+  the application-provided rendering methods in parallel. The basic
+  execution flow of a singlepipe and a multipipe application is show on
+  the right (click on picture to enlarge).
+</p><p>
 Equalizer abstracts common graphic entities into C++ classes, for example:
 </p>
 <ul>
