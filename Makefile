@@ -47,6 +47,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.2.0.html \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
+	documents/design/anaglyph.html \
 	documents/design/codingStyle.png \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
@@ -96,7 +97,7 @@ INCLUDES = \
 	include/footer.shtml
 
 TARGETS  = $(FILES:%=$(TARGET)/%) 
-CPP_HTML = gcc -xc -ansi -E -Iinclude \
+CPP_HTML = gcc -xc -traditional-cpp -ansi -E -Iinclude \
            -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\"
 
