@@ -97,7 +97,7 @@ INCLUDES = \
 	include/footer.shtml
 
 TARGETS  = $(FILES:%=$(TARGET)/%) 
-CPP_HTML = gcc -xc -traditional-cpp -ansi -E -Iinclude \
+CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\"
 
