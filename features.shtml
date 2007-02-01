@@ -14,6 +14,11 @@
 <a href="#platforms">Platform Support</a><br>
 </p>
 
+<p>
+  Features with version 'svn' are in the subversion development repository and
+  will most likely be released in the next version.
+</p>
+
 <table>
 <tr>
   <th>Feature</th> <th>Version</th>
@@ -44,7 +49,7 @@
 </tr><tr>
   <td><a href="documents/design/anaglyph.html">anaglyphic stereo 
       rendering</a></td>
-  <td>0.3</td>
+  <td>svn</td>
 </tr><tr>
   <td>remote visualization</td>
   <td>?</td>
@@ -166,7 +171,7 @@
   <td>0.1</td>
 </tr><tr>
   <td>Windows</td>
-  <td>0.3?</td>
+  <td>svn</td>
 </tr>
 
 </table>
