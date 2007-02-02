@@ -181,11 +181,11 @@
     <a name="top"></a>
 
 #ifdef TITLE
-    <h2>TITLE</h2>
+    <h1>TITLE</h1>
 #elif defined (SUBPAGE)
-    <h2>SUBPAGE</h2>
+    <h1>SUBPAGE</h1>
 #elif defined (PAGE)
-    <h2>PAGE</h2>
+    <h1>PAGE</h1>
 #else
 #  error No page title defined
 #endif
