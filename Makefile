@@ -59,6 +59,7 @@ FILES = \
 	documents/design/imageCompression.html \
 	documents/design/loadBalancing.html \
 	documents/design/nodeFailure.html \
+	documents/design/objects.html \
 	documents/design/packets.html \
 	documents/design/packets.png \
 	documents/design/statistics.html \
