@@ -30,10 +30,11 @@
   <td>parallel rendering on distributed memory and shared memory systems</td>
   <td>0.1</td>
 </tr><tr>
-  <td>active and passive stereo rendering</td>
+  <td><a href="documents/design/immersive.html">active and passive stereo
+      rendering</a></td>
   <td>0.1</td>
 </tr><tr>
-  <td>head tracking</td>
+  <td><a href="documents/design/immersive.html">head tracking</a></td>
   <td>0.1</td>
 </tr><tr>
   <td><a href="documents/design/compounds.html#swapbarrier">software-based
