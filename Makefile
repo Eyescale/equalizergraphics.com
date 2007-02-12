@@ -52,6 +52,7 @@ FILES = \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
 	documents/design/dynamicNearFar.html \
+	documents/design/environment.html \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
