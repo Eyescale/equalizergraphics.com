@@ -51,6 +51,9 @@
       rendering</a></td>
   <td>svn</td>
 </tr><tr>
+  <td><a href="documents/design/objects.html">distributed object API</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>remote visualization</td>
   <td>?</td>
 </tr><tr>
