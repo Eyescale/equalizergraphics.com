@@ -67,6 +67,7 @@ FILES = \
 	documents/design/taskMethods.html \
 	documents/design/threads.txt \
 	documents/design/images/eventHandling.png \
+	documents/design/images/eventHandling-small.png \
 	documents/design/images/mono.png \
 	documents/design/images/mono-small.png \
 	documents/design/images/packets.png \

@@ -1,4 +1,10 @@
-#define SITE_EMAIL mailto:eile@equalizergraphics.com?subject=Question regarding TITLESTRING
+
+#ifdef S_DOCUMENTATION_DEVELOPER
+#  define SITE_EMAIL mailto:eq-dev@equalizergraphics.com?subject=Question regarding TITLESTRING
+#else
+#  define SITE_EMAIL mailto:eile@equalizergraphics.com?subject=Question regarding TITLESTRING
+#endif
+
 #define QUOTE( string ) STRINGIFY( string )
 #define STRINGIFY( foo ) #foo
 
