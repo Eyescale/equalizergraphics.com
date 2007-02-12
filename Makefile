@@ -52,11 +52,11 @@ FILES = \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
 	documents/design/dynamicNearFar.html \
-	documents/design/eventHandling.png \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
 	documents/design/frames.png \
 	documents/design/imageCompression.html \
+	documents/design/immersive.html \
 	documents/design/loadBalancing.html \
 	documents/design/nodeFailure.html \
 	documents/design/objects.html \
@@ -65,6 +65,14 @@ FILES = \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.txt \
+	documents/design/images/eventHandling.png \
+	documents/design/images/mono.png \
+	documents/design/images/mono-small.png \
+	documents/design/images/packets.png \
+	documents/design/images/immersive.png \
+	documents/design/images/immersive-small.png \
+	documents/design/images/stereo.png \
+	documents/design/images/stereo-small.png \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \

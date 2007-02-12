@@ -41,6 +41,9 @@ implementation may diverge from the original spec over time.
   <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the
     initial design documentation on the API and config file interface for the
     configuration of scalable rendering.</li>
+  <li><a href="documents/design/immersive.html"><b>Stereo and Head
+        Tracking</b></a> gives an overview how stereo rendering, head tracking
+    and eye compounds are implemented.</li>
   <li><a href="documents/design/dynamicNearFar.html"><b>Dynamic Near and
         Far Plane Support</b></a> explains the API for adjusting the near and
     far plane from the channel's rendering methods.</li>

@@ -179,6 +179,12 @@ div.footnote
 {
     float:left; 
 }
+.label
+{  
+    font-size: x-small;
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 .flush_float
 { 
