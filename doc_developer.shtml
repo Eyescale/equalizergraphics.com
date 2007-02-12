@@ -22,6 +22,9 @@ implementation may diverge from the original spec over time.
 </p>
 
 <ul>
+  <li><a href="documents/design/objects.html"><b>Distributed Objects</b></a>
+    provides an overview on how to implement static and versioned objects which
+    can be replicated on multiple nodes.</li>
   <li><a href="documents/design/anaglyph.html"><b>Anaglyphic Stereo</b></a>
     specifies the implementation and changes for anaglyphic stereo 
     rendering.</li>
