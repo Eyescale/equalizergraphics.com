@@ -31,6 +31,9 @@ FILES = \
 	documents/Equalizer.html \
 	documents/Equalizer.html_files \
 	documents/Equalizer.pdf \
+	documents/EqualizerGuide.html \
+	documents/EqualizerGuide.html_files \
+	documents/EqualizerGuide.pdf \
 	documents/EqualizerTeaser.html \
 	documents/EqualizerTeaser.html_files \
 	documents/EqualizerTeaser.pdf \

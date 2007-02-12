@@ -11,16 +11,21 @@
     slide abstract of Equalizer,
     <a href="documents/EqualizerTeaser.pdf">pdf</a> or
     <a href="documents/EqualizerTeaser.html">html</a>.</li>
+  <li><a href="documents/Equalizer.html"><b>Overview</b></a> is a presentation
+    to provide a background to high-performance visualization, Equalizer
+    components and features,
+    <a href="documents/EqualizerGuide.pdf">pdf</a> or
+    <a href="documents/EqualizerGuide.html">html</a>.</li>
+  <li><a href="documents/EqualizerGuide.html"><b>Quickstart and Demo
+        Guide</b></a> guides through running and understanding a few Equalizer
+        configurations,
+    <a href="documents/Equalizer.pdf">pdf</a> or
+    <a href="documents/Equalizer.html">html</a>.</li>
   <li><a href="documents/FlyerWeb.pdf"><b>Flyer</b></a> is a folded, two-sided
     brochure for the Equalizer project,
     <a href="documents/FlyerWeb.pdf">display version</a> or
     <a href="documents/Flyer.pdf">print version</a> (please print two-sided).
   </li>
-  <li><a href="documents/Equalizer.html"><b>Overview</b></a> is a presentation
-    to provide a background to high-performance visualization, Equalizer
-    components and features,
-    <a href="documents/Equalizer.pdf">pdf</a> or
-    <a href="documents/Equalizer.html">html</a>.</li>
   <li><a href="documents/EqualizerVizSIG06.html"><b>VizSIG Meeting 2006</b></a>
     is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
     based on the overview presentation but features more technical content about
