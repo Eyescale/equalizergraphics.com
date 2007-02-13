@@ -32,8 +32,9 @@
   the rendering tasks. The following task decompostions are possible:
 </p>
 <div class="float_right"><a href="images/2D-big.png">
-    <img src="images/2D.png" alt="A 2D compound">
-</a></div>
+    <img src="images/2D.png" alt="A 2D compound"></a>
+  <div class="label">A sort-first compound</div>
+</div>
 <p>
   <b>2D</b> or sort-first decomposes the rendering in screen-space, that is,
   each contributing rendering unit processes a tile of the final view. Equalizer
@@ -43,8 +44,9 @@
 </p><div class="flush_float"></div>
 
 <div class="float_left"><a href="images/DB-big.png">
-  <img src="images/DB.png" alt="A DB compound">
-</a></div>
+  <img src="images/DB.png" alt="A DB compound"></a>
+  <div class="label">A sort-last compound</div>
+</div>
 <p>
   <b>DB</b> or sort-last decomposes the rendered database so that all rendering
   units process a part of the scene in parallel. The depth buffer information is
@@ -55,8 +57,9 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/DPlex-big.png">
-    <img src="images/DPlex.png" alt="A DPlex compound">
-</a></div>
+    <img src="images/DPlex.png" alt="A DPlex compound"></a>
+  <div class="label">A DPlex compound</div>
+</div>
 <p>
   <b>DPlex</b> time-multiplexes multiple rendering resources to produce a steady
   stream of output images. The rendered images are simply copied to the
@@ -68,8 +71,9 @@
 </p><div class="flush_float"></div>
 
 <div class="float_left"><a href="images/EYE-big.png">
-  <img src="images/EYE.png" alt="An Eye compound">
-</a></div>
+  <img src="images/EYE.png" alt="An Eye compound"></a>
+  <div class="label">A stereo compound</div>
+</div>
 <p>
   <b>Eye</b> compounds are used during stereo rendering. The individual views
   for each eye are assigned to different rendering units and later copied to the
@@ -90,19 +94,23 @@
 </p>
 
 <div class="float_right"><a href="images/ML-big.png">
-  <img src="images/ML.png" alt="Multi-Level Compounds">
-</a></div>
+    <img src="images/ML.png" alt="Multi-Level Compounds"></a>
+  <div class="label">A multilevel compound</div>
+</div>
 <p>
   The basic decomposition schemes described above can be combined in any
   possible way to address different bottlenecks within the rendering
-  process. For example, an Eye compound can be combined with a DB compound to
+  process. For example, an Eye compound can be combined with a 2D compound to
   first decompose the rendering for the left and right eye, and then further
-  sub-decompose the rendering for each individual eye pass.
+  sub-decompose the rendering for each individual eye pass. This allows to
+  exploit the excellent scalability of a stereo decomposition with the ability
+  to use four graphic cards to render a single stereo view.
 </p><div class="flush_float"></div>
 
 <div class="float_left"><a href="images/directSend-big.png">
-  <img src="images/directSend.png" alt="Direct Send Parallel Compositing">
-</a></div>
+  <img src="images/directSend.png" alt="Direct Send Parallel Compositing"></a>
+  <div class="label">Data flow for direct send compositing</div>
+</div>
 <p>
   Equalizer supports various parallel compositing algorithms, typically used
   during DB/sort-last rendering. Due to the linear increase in pixel data, it
@@ -114,28 +122,31 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/LB-big.png">
-  <img src="images/LB.png" alt="2D Load-Balancing">
-</a></div>
+  <img src="images/LB.png" alt="2D Load-Balancing"></a>
+  <div class="label">Load balancing a sort-first compound</div>
+</div>
 <p>
   The Equalizer server can dynamically adjust the decomposition parameters based
-  on the current workload distribution. This load-balancing can happen
+  on the current workload distribution. This load balancing can happen
   automatically (based on time measurements) or programatically (based on
   application input). This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
 <div class="float_left"><a href="images/Cross-big.png">
-  <img src="images/Cross.png" alt="Advanced Load-Balancing">
-</a></div>
+  <img src="images/Cross.png" alt="Advanced Load-Balancing"></a>
+  <div class="label">Advanced load balancing</div>
+</div>
 <p>
-  Advanced load-balancing uses off-screen rendering buffers on the same graphic
+  Advanced load balancing uses off-screen rendering buffers on the same graphic
   cards which display the final result. These buffers contribute to the
   rendering of other output channels, enabling the optimal usage of all
   rendering units on a multipipe machine. This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/Async-big.png">
-  <img src="images/Async.png" alt="Asynchronous Execution">
-</a></div>
+  <img src="images/Async.png" alt="Asynchronous Execution"></a>
+  <div class="label">Asynchronous execution</div>
+</div>
 <p>
   Equalizer schedules the rendering resources asynchronously. Resources which
   are independent from others start rendering the next frame immediately after
