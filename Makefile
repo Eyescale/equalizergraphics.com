@@ -65,7 +65,7 @@ FILES = \
 	documents/design/nodeFailure.html \
 	documents/design/objects.html \
 	documents/design/packets.html \
-	documents/design/packets.png \
+	documents/design/roi.html \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.txt \
@@ -74,6 +74,7 @@ FILES = \
 	documents/design/images/mono.png \
 	documents/design/images/mono-small.png \
 	documents/design/images/packets.png \
+	documents/design/images/packets-small.png \
 	documents/design/images/immersive.png \
 	documents/design/images/immersive-small.png \
 	documents/design/images/stereo.png \

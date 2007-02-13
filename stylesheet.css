@@ -13,7 +13,7 @@ pre, code {
 
 h1 { 
     text-align: center;
-    margin-top: 0.7em;
+    margin-top: 0;
     padding-top: 0.7em;
 }
 
@@ -86,7 +86,7 @@ div.header {
 div.navigationbg { 
     position: fixed;
     left: 0;
-    top: 80px;
+    top: 0px;
     background-color: #aaaaaa;
     float: left;
     width: 180px;
@@ -98,7 +98,7 @@ div.navigationbg {
 div.navigation { 
     position: fixed;
     left: 0;
-    top: 80px;
+    top: 0px;
     background-color: #aaaaaa;
     float: left;
     width: 180px;
@@ -124,7 +124,7 @@ div.subnavigation {
 }
 
 div.content { 
-    margin-top: 80px;
+    margin-top: 0px;
     margin-left: 190px;
     margin-right: 10px;
 }

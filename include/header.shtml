@@ -28,15 +28,13 @@
   <body>
   
   <!-- Header Bar -->
-  <div class="header">
-    <a href="index.html">
-      <img src="images/Equalizer.png" alt="Equalizer logo">
-    </a>
-  </div>
 
   <!-- Navigation -->
   <div class="navigationbg"></div>
   <div class="navigation">
+    <a href="index.html">
+      <img src="images/Equalizer.png" alt="Equalizer logo">
+    </a>
     <p><a href="index.html"
 #ifdef S_HOME
        class="used"
