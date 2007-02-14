@@ -31,8 +31,8 @@
   Equalizer uses the concept of compounds to configure the parallelization of
   the rendering tasks. The following task decompostions are possible:
 </p>
-<div class="float_right"><a href="images/2D-big.png">
-    <img src="images/2D.png" alt="A 2D compound"></a>
+<div class="float_right"><a href="images/2D.png">
+    <img src="images/2D-small.png" alt="A 2D compound"></a>
   <div class="label">A sort-first compound</div>
 </div>
 <p>
@@ -43,8 +43,8 @@
   good scalability when combined with view frustum culling.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/DB-big.png">
-  <img src="images/DB.png" alt="A DB compound"></a>
+<div class="float_left"><a href="images/DB.png">
+  <img src="images/DB-small.png" alt="A DB compound"></a>
   <div class="label">A sort-last compound</div>
 </div>
 <p>
@@ -56,8 +56,8 @@
   increasing IO requirements.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/DPlex-big.png">
-    <img src="images/DPlex.png" alt="A DPlex compound"></a>
+<div class="float_right"><a href="images/DPlex.png">
+    <img src="images/DPlex-small.png" alt="A DPlex compound"></a>
   <div class="label">A DPlex compound</div>
 </div>
 <p>
@@ -70,8 +70,8 @@
   feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/EYE-big.png">
-  <img src="images/EYE.png" alt="An Eye compound"></a>
+<div class="float_left"><a href="images/EYE.png">
+  <img src="images/EYE-small.png" alt="An Eye compound"></a>
   <div class="label">A stereo compound</div>
 </div>
 <p>
@@ -93,8 +93,8 @@
   optimisations.
 </p>
 
-<div class="float_right"><a href="images/ML-big.png">
-    <img src="images/ML.png" alt="Multi-Level Compounds"></a>
+<div class="float_right"><a href="images/ML.png">
+    <img src="images/ML-small.png" alt="Multi-Level Compounds"></a>
   <div class="label">A multilevel compound</div>
 </div>
 <p>
@@ -107,8 +107,8 @@
   to use four graphic cards to render a single stereo view.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/directSend-big.png">
-  <img src="images/directSend.png" alt="Direct Send Parallel Compositing"></a>
+<div class="float_left"><a href="images/directSend.png">
+  <img src="images/directSend-small.png" alt="Direct Send Parallel Compositing"></a>
   <div class="label">Data flow for direct send compositing</div>
 </div>
 <p>
@@ -121,8 +121,8 @@
   rendering units.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/LB-big.png">
-  <img src="images/LB.png" alt="2D Load-Balancing"></a>
+<div class="float_right"><a href="images/LB.png">
+  <img src="images/LB-small.png" alt="2D Load-Balancing"></a>
   <div class="label">Load balancing a sort-first compound</div>
 </div>
 <p>
@@ -132,8 +132,8 @@
   application input). This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/Cross-big.png">
-  <img src="images/Cross.png" alt="Advanced Load-Balancing"></a>
+<div class="float_left"><a href="images/Cross.png">
+  <img src="images/Cross-small.png" alt="Advanced Load-Balancing"></a>
   <div class="label">Advanced load balancing</div>
 </div>
 <p>
@@ -143,8 +143,8 @@
   rendering units on a multipipe machine. This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/Async-big.png">
-  <img src="images/Async.png" alt="Asynchronous Execution"></a>
+<div class="float_right"><a href="images/Async.png">
+  <img src="images/Async-small.png" alt="Asynchronous Execution"></a>
   <div class="label">Asynchronous execution</div>
 </div>
 <p>

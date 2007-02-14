@@ -16,8 +16,8 @@ described below, often even in unforeseen ways.
 </p>
 <a name="basic"></a>
 <h3>Display Walls</h3>
-<div class="float_right"><a href="images/wall-big.png">
-        <img src="images/wall.png" alt="A display wall configuration">
+<div class="float_right"><a href="images/wall.png">
+        <img src="images/wall-small.png" alt="A display wall configuration">
 </a></div>
 <p>
   Display walls are one of the most important use case for visualization
@@ -29,8 +29,8 @@ described below, often even in unforeseen ways.
 </p>
 
 <h3>Multipipe Workstations</h3>
-<div class="float_right"><a href="images/workstation-big.png">
-  <img src="images/workstation.png" alt="A multipipe workstation">
+<div class="float_right"><a href="images/workstation.png">
+  <img src="images/workstation-small.png" alt="A multipipe workstation">
 </a></div>
 <p>
   Multipipe workstations are an affordable way to scale the rendering
@@ -42,8 +42,8 @@ described below, often even in unforeseen ways.
 </p>
 
 <h3>Remote Visualization Clusters</h3>
-<div class="float_right"><a href="images/remote-big.png">
-  <img src="images/remote.png" alt="A Remote Visualization Cluster">
+<div class="float_right"><a href="images/remote.png">
+  <img src="images/remote-small.png" alt="A Remote Visualization Cluster">
 </a></div>
 <p>
   Remote visualization clusters are an cost-efficient way of centralizing large
@@ -57,8 +57,8 @@ described below, often even in unforeseen ways.
 </p>
 
 <h3>SLI and Crossfire Systems</h3>
-<div class="float_right"><a href="images/SLI-big.png">
-  <img src="images/SLI.png" alt="A SLI/Crossfire Configuration">
+<div class="float_right"><a href="images/SLI.png">
+  <img src="images/SLI-small.png" alt="A SLI/Crossfire Configuration">
 </a></div>
 <p>
   <a href="http://www.slizone.com/page/home.html">NVIDIA SLI</a> and

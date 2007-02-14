@@ -4,8 +4,6 @@ TOP = ..
 TARGET = build
 
 FILES = \
-	$(wildcard images/*png) \
-	$(wildcard screenshots/*) \
 	$(wildcard downloads/*gz) \
 	api.html \
 	configuration.html \
@@ -51,14 +49,12 @@ FILES = \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \
-	documents/design/codingStyle.png \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
 	documents/design/dynamicNearFar.html \
 	documents/design/environment.html \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
-	documents/design/frames.png \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
 	documents/design/loadBalancing.html \
@@ -69,16 +65,6 @@ FILES = \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.txt \
-	documents/design/images/eventHandling.png \
-	documents/design/images/eventHandling-small.png \
-	documents/design/images/mono.png \
-	documents/design/images/mono-small.png \
-	documents/design/images/packets.png \
-	documents/design/images/packets-small.png \
-	documents/design/images/immersive.png \
-	documents/design/images/immersive-small.png \
-	documents/design/images/stereo.png \
-	documents/design/images/stereo-small.png \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \
@@ -105,13 +91,28 @@ FILES = \
 	documents/glAsync/tabs.css \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
-	news/tungsten.html
+	news/tungsten.html \
+	$(IMAGES)
+
+IMAGES_SRC = \
+	$(wildcard images/*png) \
+	documents/design/codingStyle.png \
+	documents/design/frames.png \
+	documents/design/images/eventHandling.png \
+	documents/design/images/mono.png \
+	documents/design/images/packets.png \
+	documents/design/images/immersive.png \
+	documents/design/images/stereo.png \
+	$(wildcard screenshots/*) \
 
 INCLUDES = \
 	include/header.shtml \
 	include/footer.shtml
 
 TARGETS  = $(FILES:%=$(TARGET)/%) 
+IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.png) \
+	   $(IMAGES_SRC:%.jpg=%-small.jpg)
+
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\"
@@ -141,9 +142,21 @@ $(TARGET)/documents/%.html : ../doc/%.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) -DBASE $< | sed 's/^#.*//' > $@
 
+$(TARGET)/documents/%-small.png: ../doc/%.png
+	@mkdir -p $(@D)
+	convert $< -geometry 300x1000 $@
+
 $(TARGET)/documents/%: ../doc/%
 	@mkdir -p $(@D)
 	cp $< $@
+
+$(TARGET)/%-small.jpg: %.jpg
+	@mkdir -p $(@D)
+	convert $< -geometry 200x1000 $@
+
+$(TARGET)/%-small.png: %.png
+	@mkdir -p $(@D)
+	convert $< -geometry 200x1000 $@
 
 $(TARGET)/% : %
 	@mkdir -p $(@D)
