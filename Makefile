@@ -57,14 +57,14 @@ FILES = \
 	documents/design/frames.html \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
-	documents/design/loadBalancing.html \
+	documents/design/environment.html \
 	documents/design/nodeFailure.html \
 	documents/design/objects.html \
 	documents/design/packets.html \
 	documents/design/roi.html \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \
-	documents/design/threads.txt \
+	documents/design/threads.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \

@@ -58,6 +58,15 @@ img
   border:  0px;
 }
 
+img:hover
+{ 
+  padding: 0;
+  margin: 3px;
+  border:  2px;
+  border-color: blue;
+  border-style: solid;
+}
+
 div.image {
     background-color: transparent;
     text-align: center;
