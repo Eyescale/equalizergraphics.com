@@ -54,18 +54,18 @@
 <h3>Programming Framework</h3>
 <p>
   Application developers use the Equalizer client library to write scalable
-  OpenGL applications by using parallel rendering. The Equalizer client
-  library is the interface to the Equalizer server, and it abstracts the 
-  application from the actual configuration of the execution
-  environment. Compared to other cluster-rendering software, it does not replace
-  the OpenGL library but parallelizes and distributes the application's
-  rendering code for optimal performance.
+  OpenGL applications based on parallel rendering. The Equalizer client library
+  is the interface to the Equalizer server, and it abstracts the application
+  from the actual configuration of the execution environment. Compared to other
+  cluster-rendering software, it does not replace the OpenGL library but
+  parallelizes and distributes the application's rendering code for optimal
+  performance.
 </p><p>
   Equalizer provides the natural execution framework for any multi-pipe
   application and does not impose any specific rendering framework, such
   as a scenegraph, to the application. It uses a minimally invasive approach,
   providing the functionality common to multipipe applications, thus
-  making it easy to port existing applications to Equalizer.
+  making it as easy as possible to port existing applications to Equalizer.
   <br><a href="api.html">More about the programming interface...</a>
 </p><p>
   In addition to traditional multi-pipe execution, where one graphics card is

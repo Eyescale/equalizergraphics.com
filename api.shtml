@@ -12,22 +12,26 @@
          alt="Execution flow of a singlepipe and a multipipe application">
 </a></div>
 <p>
+  The Equalizer programming interface and execution model is, over-simplified, a
+  distributed, scalable, multipipe, multithreaded GLUT implementation.
+</p>
+<p>
   Equalizer uses a callback-driven interface. Applications provide their
-  rendering methods, which are called by the Equalizer framework according
-  to the current configuration and system load. Process and thread
-  creation, task synchronization and network connections are externalized
-  from the application and handled by the Equalizer framework.
+  rendering methods, which are called by the Equalizer framework according to
+  the current configuration and system load. Process and thread creation, task
+  synchronization and network connections are externalized from the application
+  and handled by the Equalizer framework.
+</p>
+<p>
+  The multipipe programming interface of Equalizer follows the natural execution
+  model of any multipipe application. In order to port an application to run in
+  a multipipe environment, the rendering routines have to be separated from the
+  core application. The Equalizer framework will then take care of the
+  multiprocessing and synchronization and call the application-provided
+  rendering methods in parallel. The basic execution flow of a singlepipe and a
+  multipipe application is show on the right (click on picture to enlarge).
 </p><p>
-  The multipipe programming interface of Equalizer follows the natural
-  execution model of any multipipe application. In order to port an
-  application to run in a  multipipe environment, the rendering routines
-  have to be separated from the core application. The Equalizer framework
-  will then take care of the multiprocessing and synchronization and call
-  the application-provided rendering methods in parallel. The basic
-  execution flow of a singlepipe and a multipipe application is show on
-  the right (click on picture to enlarge).
-</p><p>
-Equalizer abstracts common graphic entities into C++ classes, for example:
+  Equalizer abstracts common graphic entities into C++ classes, for example:
 </p>
 <ul>
   <li><b>Node</b> - a single computer in the cluster</li>
@@ -45,14 +49,15 @@ defaults gradually with his own code. The
 is part of the <a href="doc_developer.html">developer documentation</a>.
 Some of the most important methods are:
 </p><ul>
-  <li><a href="documents/design/taskMethods.html#channeldraw"><b>Channel::draw</b></a>
-    - render using the provided frustum, viewport and range</li>
-  <li><a href="documents/design/taskMethods.html#windowinit"><b>Window::init</b></a>
-    - initialize OpenGL drawable and state</li>
-  <li><a href="documents/design/taskMethods.html#pipestartframe"><b>Pipe::startFrame</b></a>
-    - update frame-specific data</li>
-  <li><a href="documents/design/taskMethods.html#nodeinit"><b>Node::init</b></a>
-    - initialize per node application data</li>
+  <li><a href="documents/design/taskMethods.html#channeldraw">
+      <b>Channel::frameDraw</b></a> - render using the provided frustum,
+    viewport and range</li>
+  <li><a href="documents/design/taskMethods.html#windowinit">
+      <b>Window::configInit</b></a> - initialize OpenGL drawable and state</li>
+  <li><a href="documents/design/taskMethods.html#pipestartframe">
+      <b>Pipe::frameStart</b></a> - update frame-specific data</li>
+  <li><a href="documents/design/taskMethods.html#nodeinit">
+      <b>Node::configInit</b></a> - initialize per node application data</li>
 </ul><p>
 Equalizer provides an API to build network-distributed applications. In contrast
 to other cluster API's, such as MPI or PVM, this API is designed for the
