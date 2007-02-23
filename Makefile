@@ -46,6 +46,7 @@ FILES = \
 	documents/Projects_Stefan_Eilemann.pdf \
 	documents/RelNotes/RelNotes_0.1.0.html \
 	documents/RelNotes/RelNotes_0.2.0.html \
+	documents/RelNotes/RelNotes_0.3.0.html \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \
