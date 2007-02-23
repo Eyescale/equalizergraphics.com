@@ -21,11 +21,13 @@
   has the following layout and size:
 </p>
 <!-- /* --><pre>
-137M trunk/doc
- 14M trunk/src
-188M trunk/website
-294M tags/release-0.1
+ 24M trunk/src
+165M trunk/doc
+206M trunk/website
+
+395M tags/alpha-0.3
 339M tags/release-0.2
+294M tags/release-0.1
 </pre><!-- */ -->
 <h4>Version 0.2</h4>
 <p>
