@@ -43,7 +43,7 @@
   good scalability when combined with view frustum culling.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/DB.png">
+<div class="float_right"><a href="images/DB.png">
   <img src="images/DB-small.png" alt="A DB compound"></a>
   <div class="label">A sort-last compound</div>
 </div>
@@ -70,7 +70,7 @@
   feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/EYE.png">
+<div class="float_right"><a href="images/EYE.png">
   <img src="images/EYE-small.png" alt="An Eye compound"></a>
   <div class="label">A stereo compound</div>
 </div>
@@ -107,7 +107,7 @@
   to use four graphic cards to render a single stereo view.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/directSend.png">
+<div class="float_right"><a href="images/directSend.png">
   <img src="images/directSend-small.png" alt="Direct Send Parallel Compositing"></a>
   <div class="label">Data flow for direct send compositing</div>
 </div>
@@ -132,7 +132,7 @@
   application input). This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<div class="float_left"><a href="images/Cross.png">
+<div class="float_right"><a href="images/Cross.png">
   <img src="images/Cross-small.png" alt="Advanced Load-Balancing"></a>
   <div class="label">Advanced load balancing</div>
 </div>

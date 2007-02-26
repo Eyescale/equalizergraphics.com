@@ -39,7 +39,8 @@
 
 <div class="gallery">
   <a href="screenshots/sortFirst.jpg">
-    <img src="screenshots/sortFirst-small.jpg" alt="A sort-first configuration.">
+    <img src="screenshots/sortFirst-small.jpg" 
+         alt="A sort-first configuration.">
   </a>
   A six pipe sort-first configuration using colored channels to illustrate the
   decomposition

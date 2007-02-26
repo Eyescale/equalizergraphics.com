@@ -58,6 +58,7 @@ FILES = \
 	documents/design/frames.html \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
+	documents/design/nonthreaded.html \
 	documents/design/environment.html \
 	documents/design/nodeFailure.html \
 	documents/design/objects.html \
@@ -100,6 +101,7 @@ IMAGES_SRC = \
 	documents/design/codingStyle.png \
 	documents/design/frames.png \
 	documents/design/images/eventHandling.png \
+	documents/design/images/mainloop.png \
 	documents/design/images/mono.png \
 	documents/design/images/packets.png \
 	documents/design/images/immersive.png \

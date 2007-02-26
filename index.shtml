@@ -17,14 +17,18 @@
   build upon a parallel, scalable programming interface solving the problems
   common to any multipipe application.
   <br><a href="useCases.html">More about use cases...</a>
-</p><p>
+</p>
+<h2>Compatibility</h2>
+<p>
   Equalizer development started in 2005. The source code is available for
   interested developers and early adopters. Equalizer is a cross-platform
   toolkit and is initially available for Linux and Mac OS X. A Windows version
   is planned for the next release. Please <a href="contact.html">contact us</a>
   if you are interested to learn more about Equalizer, to participate in the
   design and development, or if you have any other questions.
-</p><p>
+</p>
+<h2>License</h2>
+<p>
   The Equalizer framework is licensed under the
   <a href="http://www.gnu.org/licenses/lgpl.html">LGPL open source license</a>,
   which allows usage in commercial and open source projects without
@@ -32,9 +36,9 @@
   itself have to be contributed back to open source.
 </p>
 
-<h3>Mission Statement</h3>
+<h2>Project Vision</h2>
 <p>
-  The Equalizer project will provide the standard programming
+  The Equalizer project will provide the standard programming and deployment
   environment for multipipe applications, ranging from workstations to
   large-scale High-Performance Visualization (HPV) clusters. The goal for
   Equalizer is to reach a status similar to the MPI library, but for interactive
