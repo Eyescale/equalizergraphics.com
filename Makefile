@@ -22,6 +22,7 @@ FILES = \
 	scalability.html \
 	screenshots.html \
 	search.html \
+	print.css \
 	stylesheet.css \
 	useCases.html \
         robots.txt \
