@@ -84,16 +84,26 @@ div.gallery {
     font-size: 10pt;
     text-align: left;
     text-decoration: none;
-    vertical-align: bottom;
     border: 1px;
     border-color: black;
     border-style: solid;
     border-collapse: collapse;
-    margin: 2px;
+    margin: 1px;
     padding: 5px;
-    width: 210px;
-    color: black;
+    width: 200px;
+    height: 210px;
     float: left;
+}
+
+div.gallery img { 
+    padding: 0px 0px 5px 0px;
+}
+
+div.gallery img:hover
+{ 
+    padding: 0px 0px 5px 0px;
+    margin: 0;
+    border:  0;
 }
 
 div.header { 

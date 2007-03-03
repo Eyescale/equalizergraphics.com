@@ -42,8 +42,8 @@
     <img src="screenshots/sortFirst-small.jpg" 
          alt="A sort-first configuration.">
   </a>
-  A six pipe sort-first configuration using colored channels to illustrate the
-  decomposition
+    A six pipe sort-first configuration using colored channels to illustrate the
+    decomposition
 </div>
 
 <div class="gallery">
@@ -52,7 +52,7 @@
          alt="A sort-last direct-send configuration">
   </a>
   A six pipe sort-last, direct-send configuration using channel colors to
-  illustrate the database decomposition (model patches) and the result
+  illustrate the database decomposition (model patches) and the parallel result
   composition (background)
 </div>
 <div class="gallery">
