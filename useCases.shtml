@@ -15,7 +15,7 @@ configurations. The flexibility of Equalizer enables more use cases than
 described below, often even in unforeseen ways.
 </p>
 <a name="basic"></a>
-<h3>Display Walls</h3>
+<h2>Display Walls</h2>
 <div class="float_right"><a href="images/wall.png">
         <img src="images/wall-small.png" alt="A display wall configuration">
 </a></div>
@@ -26,9 +26,24 @@ described below, often even in unforeseen ways.
   application's rendering code for each display. The applications will therefore
   get optimal performance due to the local, parallel OpenGL execution for each
   display device.
-</p>
+</p><div class="flush_float"></div>
 
-<h3>Multipipe Workstations</h3>
+<h2>Virtual Reality Installations</h2>
+<div class="float_right"><a href="images/vr.png">
+  <img src="images/vr-small.png" alt="Virtual Reality Installations">
+</a></div>
+<p>
+  Virtual Reality installations immerse the viewer into a virtual world, by
+  using stereo rendering on multiple, non-planar walls. Head tracking is used to
+  adapt the rendering to the observer's position to provide the complete
+  illusion of virtual environment. Equalizer provides both active and passive
+  stereo rendering used in such environments, with the possibility to render
+  each stereo view using a separate CPU and graphic card. While support for
+  tracking devices is not in the scope of Equalizer, head tracking is supported
+  through a simple API.
+</p><div class="flush_float"></div>
+
+<h2>Multipipe Workstations</h2>
 <div class="float_right"><a href="images/workstation.png">
   <img src="images/workstation-small.png" alt="A multipipe workstation">
 </a></div>
@@ -36,12 +51,12 @@ described below, often even in unforeseen ways.
   Multipipe workstations are an affordable way to scale the rendering
   performance and display size. Equalizer applications can exploit multiple
   processors or processor cores, as well as multiple graphic cards by running
-  one rendering thread per graphics card. The configuration shown on the left
+  one rendering thread per graphic card. The configuration shown on the left
   would execute two rendering threads alongside the application threads, thus
   utilizing up to three CPU cores.
-</p>
+</p><div class="flush_float"></div>
 
-<h3>Remote Visualization Clusters</h3>
+<h2>Remote Visualization Clusters</h2>
 <div class="float_right"><a href="images/remote.png">
   <img src="images/remote-small.png" alt="A Remote Visualization Cluster">
 </a></div>
@@ -54,9 +69,9 @@ described below, often even in unforeseen ways.
   load balance multiple application dynamically, so that users experience the
   optimal performance under the given load. Multiple rendering nodes can
   parallelize the rendering for a single user.
-</p>
+</p><div class="flush_float"></div>
 
-<h3>SLI and Crossfire Systems</h3>
+<h2>SLI and Crossfire Systems</h2>
 <div class="float_right"><a href="images/SLI.png">
   <img src="images/SLI-small.png" alt="A SLI/Crossfire Configuration">
 </a></div>
@@ -67,7 +82,7 @@ described below, often even in unforeseen ways.
     which is multiplexed transparently to each graphic card by the driver. Once
     the hardware vendors expose an API to program the composition hardware,
     Equalizer can be easily adapted to make full use of the hardware by running
-    one rendering thread per graphics card, as well as to dynamically update the
+    one rendering thread per graphic card, as well as to dynamically update the
     configuration to provide good load balancing across all rendering threads.
 </p><div class="flush_float"></div>
 

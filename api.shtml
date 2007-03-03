@@ -12,8 +12,9 @@
          alt="Execution flow of a singlepipe and a multipipe application">
 </a></div>
 <p>
-  The Equalizer programming interface and execution model is, over-simplified, a
-  distributed, scalable, multipipe, multithreaded GLUT implementation.
+  The Equalizer programming interface and execution model provides,
+  over-simplified, a distributed, scalable, multipipe, multithreaded GLUT
+  implementation.
 </p>
 <p>
   Equalizer uses a callback-driven interface. Applications provide their
