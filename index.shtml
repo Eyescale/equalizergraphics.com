@@ -7,7 +7,7 @@
 #include "header.shtml"
 
 <div class="float_right"><a href="images/parallel.png">
-    <img src="images/parallel-small.png" alt="Parallel Rendering">
+    <img src="images/parallel-small.jpg" alt="Parallel Rendering">
 </a></div>
 <p>
   Equalizer is an open source programming interface and resource management

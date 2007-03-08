@@ -8,7 +8,7 @@
 #include "header.shtml"
 
 <div class="float_right"><a href="images/executionFlow.png">
-    <img src="images/executionFlow-small.png" 
+    <img src="images/executionFlow-small.jpg" 
          alt="Execution flow of a singlepipe and a multipipe application">
 </a></div>
 <p>

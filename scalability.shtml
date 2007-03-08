@@ -32,7 +32,7 @@
   the rendering tasks. The following task decompostions are possible:
 </p>
 <div class="float_right"><a href="images/2D.png">
-    <img src="images/2D-small.png" alt="A 2D compound"></a>
+    <img src="images/2D-small.jpg" alt="A 2D compound"></a>
   <div class="label">A sort-first compound</div>
 </div>
 <p>
@@ -44,7 +44,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/DB.png">
-  <img src="images/DB-small.png" alt="A DB compound"></a>
+  <img src="images/DB-small.jpg" alt="A DB compound"></a>
   <div class="label">A sort-last compound</div>
 </div>
 <p>
@@ -57,7 +57,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/DPlex.png">
-    <img src="images/DPlex-small.png" alt="A DPlex compound"></a>
+    <img src="images/DPlex-small.jpg" alt="A DPlex compound"></a>
   <div class="label">A DPlex compound</div>
 </div>
 <p>
@@ -71,7 +71,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/EYE.png">
-  <img src="images/EYE-small.png" alt="An Eye compound"></a>
+  <img src="images/EYE-small.jpg" alt="An Eye compound"></a>
   <div class="label">A stereo compound</div>
 </div>
 <p>
@@ -94,7 +94,7 @@
 </p>
 
 <div class="float_right"><a href="images/ML.png">
-    <img src="images/ML-small.png" alt="Multi-Level Compounds"></a>
+    <img src="images/ML-small.jpg" alt="Multi-Level Compounds"></a>
   <div class="label">A multilevel compound</div>
 </div>
 <p>
@@ -108,7 +108,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/directSend.png">
-  <img src="images/directSend-small.png" alt="Direct Send Parallel Compositing"></a>
+  <img src="images/directSend-small.jpg" alt="Direct Send Parallel Compositing"></a>
   <div class="label">Data flow for direct send compositing</div>
 </div>
 <p>
@@ -122,7 +122,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/LB.png">
-  <img src="images/LB-small.png" alt="2D Load-Balancing"></a>
+  <img src="images/LB-small.jpg" alt="2D Load-Balancing"></a>
   <div class="label">Load balancing a sort-first compound</div>
 </div>
 <p>
@@ -133,7 +133,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/Cross.png">
-  <img src="images/Cross-small.png" alt="Advanced Load-Balancing"></a>
+  <img src="images/Cross-small.jpg" alt="Advanced Load-Balancing"></a>
   <div class="label">Advanced load balancing</div>
 </div>
 <p>
@@ -144,7 +144,7 @@
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/Async.png">
-  <img src="images/Async-small.png" alt="Asynchronous Execution"></a>
+  <img src="images/Async-small.jpg" alt="Asynchronous Execution"></a>
   <div class="label">Asynchronous execution</div>
 </div>
 <p>

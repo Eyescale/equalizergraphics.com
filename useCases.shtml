@@ -17,7 +17,7 @@ described below, often even in unforeseen ways.
 <a name="basic"></a>
 <h2>Display Walls</h2>
 <div class="float_right"><a href="images/wall.png">
-        <img src="images/wall-small.png" alt="A display wall configuration">
+        <img src="images/wall-small.jpg" alt="A display wall configuration">
 </a></div>
 <p>
   Display walls are one of the most important use case for visualization
@@ -30,7 +30,7 @@ described below, often even in unforeseen ways.
 
 <h2>Virtual Reality Installations</h2>
 <div class="float_right"><a href="images/vr.png">
-  <img src="images/vr-small.png" alt="Virtual Reality Installations">
+  <img src="images/vr-small.jpg" alt="Virtual Reality Installations">
 </a></div>
 <p>
   Virtual Reality installations immerse the viewer into a virtual world, by
@@ -45,7 +45,7 @@ described below, often even in unforeseen ways.
 
 <h2>Multipipe Workstations</h2>
 <div class="float_right"><a href="images/workstation.png">
-  <img src="images/workstation-small.png" alt="A multipipe workstation">
+  <img src="images/workstation-small.jpg" alt="A multipipe workstation">
 </a></div>
 <p>
   Multipipe workstations are an affordable way to scale the rendering
@@ -58,7 +58,7 @@ described below, often even in unforeseen ways.
 
 <h2>Remote Visualization Clusters</h2>
 <div class="float_right"><a href="images/remote.png">
-  <img src="images/remote-small.png" alt="A Remote Visualization Cluster">
+  <img src="images/remote-small.jpg" alt="A Remote Visualization Cluster">
 </a></div>
 <p>
   Remote visualization clusters are an cost-efficient way of centralizing large
@@ -73,7 +73,7 @@ described below, often even in unforeseen ways.
 
 <h2>SLI and Crossfire Systems</h2>
 <div class="float_right"><a href="images/SLI.png">
-  <img src="images/SLI-small.png" alt="A SLI/Crossfire Configuration">
+  <img src="images/SLI-small.jpg" alt="A SLI/Crossfire Configuration">
 </a></div>
 <p>
   <a href="http://www.slizone.com/page/home.html">NVIDIA SLI</a> and

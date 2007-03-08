@@ -6,7 +6,7 @@
 <p>Click on the images to get a high resolution version.</p>
 <div class="gallery">
   <a href="screenshots/cave.png">
-    <img src="screenshots/cave-small.png" 
+    <img src="screenshots/cave-small.jpg" 
          alt="The Equalizer example application in a three-sided CAVE">
   </a>
   The Equalizer example application in a three-sided CAVE
@@ -14,7 +14,7 @@
 
 <div class="gallery">
   <a href="screenshots/wall.png">
-    <img src="screenshots/wall-small.png" 
+    <img src="screenshots/wall-small.jpg" 
          alt="A terrain visualization software, eqSmart, on the 24 megapixel display wall (7680x3200) at the University of Z&uuml;rich">
   </a>
   A terrain visualization software, eqSmart, on the 24 megapixel display wall at
@@ -23,7 +23,7 @@
 
 <div class="gallery">
   <a href="screenshots/wall2.png">
-    <img src="screenshots/wall2-small.png" 
+    <img src="screenshots/wall2-small.jpg" 
          alt="The Equalizer example application running on the same display wall">
   </a>
   The Equalizer example application running on the same display wall
@@ -31,7 +31,7 @@
 
 <div class="gallery">
   <a href="images/anaglyph.png">
-    <img src="images/anaglyph-small.png" 
+    <img src="images/anaglyph-small.jpg" 
          alt="The Equalizer example application rendering an anaglyphic stereo image">
   </a>
   The Equalizer example application rendering an anaglyphic stereo image

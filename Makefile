@@ -115,7 +115,7 @@ INCLUDES = \
 	include/footer.shtml
 
 TARGETS  = $(FILES:%=$(TARGET)/%) 
-IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.png) \
+IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 	   $(IMAGES_SRC:%.jpg=%-small.jpg)
 
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
@@ -147,7 +147,7 @@ $(TARGET)/documents/%.html : ../doc/%.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) -DBASE $< | sed 's/^#.*//' > $@
 
-$(TARGET)/documents/%-small.png: ../doc/%.png
+$(TARGET)/documents/%-small.jpg: ../doc/%.png
 	@mkdir -p $(@D)
 	convert $< -geometry 300x1000 $@
 
@@ -159,7 +159,7 @@ $(TARGET)/%-small.jpg: %.jpg
 	@mkdir -p $(@D)
 	convert $< -geometry 200x1000 $@
 
-$(TARGET)/%-small.png: %.png
+$(TARGET)/%-small.jpg: %.png
 	@mkdir -p $(@D)
 	convert $< -geometry 200x1000 $@
 
