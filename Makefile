@@ -59,6 +59,7 @@ FILES = \
 	documents/design/frames.html \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
+	documents/design/infiniBand.html \
 	documents/design/nonthreaded.html \
 	documents/design/environment.html \
 	documents/design/nodeFailure.html \
