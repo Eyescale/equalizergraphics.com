@@ -28,8 +28,11 @@
 <hr><a name="basic"></a>
 <h3>Basic Decomposition Modes</h3>
 <p>
-  Equalizer uses the concept of compounds to configure the parallelization of
-  the rendering tasks. The following task decompostions are possible:
+  Equalizer uses a compound tree to configure the parallelization of the
+  rendering tasks. The compound tree allows a flexible configuration of the task
+  decomposition. The Equalizer distribution contains numerous configuration
+  files for the implemented feature set. The following parallel rendering
+  algorithms can be configured:
 </p>
 <div class="float_right"><a href="images/2D.png">
     <img src="images/2D-small.jpg" alt="A 2D compound"></a>
@@ -38,9 +41,12 @@
 <p>
   <b>2D</b> or sort-first decomposes the rendering in screen-space, that is,
   each contributing rendering unit processes a tile of the final view. Equalizer
-  automatically recomposes the tiles side-by-side on the destination view. This
+  simply recomposes the tiles side-by-side on the destination view. This
   mode has a low, constant IO overhead for the image transfers and can provide
-  good scalability when combined with view frustum culling.
+  good scalability when combined with view frustum culling. Depending on the
+  application data structure, the overlap of some primitives between individual
+  tiles limits the scalability of this mode, typically to around eight graphic
+  cards.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/DB.png">
@@ -53,7 +59,22 @@
   used to composite the individual images correctly for polygonal data. Volume
   rendering applications use an ordered alpha-based blending to composite the
   result image. This mode provides very good scalability while having linear
-  increasing IO requirements.
+  increasing IO requirements. The increasing recomposition work can be addressed
+  by using parallel compositing, as described below.
+</p><div class="flush_float"></div>
+
+<div class="float_right"><a href="images/EYE.png">
+  <img src="images/EYE-small.jpg" alt="An Eye compound"></a>
+  <div class="label">A stereo compound</div>
+</div>
+<p>
+  <b>Eye</b> decomposition is used during stereo rendering. The individual views
+  for each eye are assigned to different rendering units and later copied to the
+  appropriate stereo buffer. This modes supports a variety of stereo modes,
+  including red/green anaglyphics stereo or auto-stereo displays with multiple
+  eye passes. Due to the frame consistency between the eye views, this modes
+  scales very good up to the number of eye passes. It is often combined with
+  another mode on large-scale visualization clusters.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/DPlex.png">
@@ -68,19 +89,6 @@
   latency is compensated by the higher frame rate. The AFR (Alternate Frame
   Rendering) mode of multi-GPU systems implements this feature in hardware. This
   feature is not yet implemented.
-</p><div class="flush_float"></div>
-
-<div class="float_right"><a href="images/EYE.png">
-  <img src="images/EYE-small.jpg" alt="An Eye compound"></a>
-  <div class="label">A stereo compound</div>
-</div>
-<p>
-  <b>Eye</b> compounds are used during stereo rendering. The individual views
-  for each eye are assigned to different rendering units and later copied to the
-  appropriate stereo buffer. This modes supports a variety of stereo modes,
-  including red/green stereo or auto-stereo displays with multiple eye
-  passes. Due to the frame consistency between the eye views, this modes scales
-  very good up to the number of eye passes.
 </p><div class="flush_float"></div>
 <a href="#top">Back to top</a>
 
@@ -118,7 +126,24 @@
   of Equalizer supports various parallel sort-last compositing algorithms,
   including, but not limited to, direct send and binary swap. Such algorithms
   keep the compositing cost constant due to the parallelization across all
-  rendering units.
+  rendering units. The example shows a three-node direct-send composition. Each
+  rendering unit does a z-based composition of one tile, and sends the
+  composited result to the destination channel.
+</p><div class="flush_float"></div>
+
+<div class="float_right"><a href="images/Async.png">
+  <img src="images/Async-small.jpg" 
+       alt="Synchronous vs. asynchronous execution"></a>
+  <div class="label">Synchronous vs. asynchronous execution</div>
+</div>
+<p>
+  Equalizer schedules the rendering resources asynchronously. Resources which
+  are independent from others start rendering the next frame immediately after
+  they finish a frame. By hiding the unavoidable imbalances in the task
+  decomposition, this execution mode provides a much better resource utilisation
+  than the traditional, frame-synchronous approach. The picture shows the tasks
+  executed over time for a synchronous versus an asynchronous execution using a
+  four-way 2D decomposition.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/LB.png">
@@ -141,20 +166,6 @@
   cards which display the final result. These buffers contribute to the
   rendering of other output channels, enabling the optimal usage of all
   rendering units on a multipipe machine. This feature is not yet implemented.
-</p><div class="flush_float"></div>
-
-<div class="float_right"><a href="images/Async.png">
-  <img src="images/Async-small.jpg" alt="Asynchronous Execution"></a>
-  <div class="label">Asynchronous execution</div>
-</div>
-<p>
-  Equalizer schedules the rendering resources asynchronously. Resources which
-  are independent from others start rendering the next frame immediately after
-  they finish a frame. By hiding the unavoidable imbalances in the task
-  decomposition, this execution mode provides a much better resource utilisation
-  than the traditional, frame-synchronous approach. The picture shows the tasks
-  executed over time for a synchronous versus an asynchronous execution using a
-  four-way 2D decomposition.
 </p><div class="flush_float"></div>
 
 <div class="footnote">

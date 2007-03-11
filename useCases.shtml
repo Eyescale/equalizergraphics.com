@@ -77,13 +77,14 @@ described below, often even in unforeseen ways.
 </a></div>
 <p>
   <a href="http://www.slizone.com/page/home.html">NVIDIA SLI</a> and
-  <a href="http://www.ati.com/technology/crossfire/index.html">ATI 
-    Crossfire</a> systems are currently driven by a single rendering thread,
-    which is multiplexed transparently to each graphic card by the driver. Once
-    the hardware vendors expose an API to program the composition hardware,
-    Equalizer can be easily adapted to make full use of the hardware by running
-    one rendering thread per graphic card, as well as to dynamically update the
-    configuration to provide good load balancing across all rendering threads.
+  <a href="http://www.ati.com/technology/crossfire/index.html">ATI Crossfire</a>
+  systems are currently driven by a single rendering thread, whose OpenGL
+  rendering stream is multiplexed transparently to each graphic card by the
+  driver. Once the hardware vendors expose an API to program the composition
+  hardware, Equalizer can be easily adapted to make full use of the hardware by
+  running one rendering thread per graphic card, as well as to dynamically
+  update the configuration to provide good load balancing across all rendering
+  threads.
 </p><div class="flush_float"></div>
 
 <div class="footnote">
