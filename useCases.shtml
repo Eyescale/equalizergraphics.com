@@ -3,22 +3,34 @@
 #define PAGE About
 #define SUBPAGE Use Cases
  
-#define KEYWORDS "scalability Equalizer OpenGL compound remote visualization cluster multipipe core"
+#define KEYWORDS "scalability Equalizer OpenGL compound cluster multipipe
+multicore core"
 
 #include "header.shtml"
 
+<a href="#overview">Overview</a><br>
+<a href="#wall">Display Walls</a><br>
+<a href="#vr">Virtual Reality</a><br>
+<a href="#multipipe">Multipipe Workstation</a><br>
+<a href="#scalable">Scalable Rendering</a><br>
+<a href="#remote">Remote Visualization Clusters</a><br>
+<a href="#sli">SLI and Crossfire Systems</a><br>
+
 <a name="overview"></a>
+<h2>Overview</h2>
 <p>
 Equalizer abstracts the actual configuration from the application code. This
 allows a single application to be deployed in a wide range of
-configurations. The flexibility of Equalizer enables more use cases than
-described below, often even in unforeseen ways.
+configurations. The flexibility of Equalizer enables mixing the features
+described below or completely different applications, often even in unforeseen
+ways.
 </p>
-<a name="basic"></a>
+<a name="wall"></a>
 <h2>Display Walls</h2>
 <div class="float_right"><a href="images/wall.png">
-        <img src="images/wall-small.jpg" alt="A display wall configuration">
-</a></div>
+        <img src="images/wall-small.jpg" alt="A display wall configuration"></a>
+  <div class="label">A display wall configuration</div>
+</div>
 <p>
   Display walls are one of the most important use case for visualization
   clusters today. Equalizer can drive such large scale displays. The typical
@@ -27,11 +39,15 @@ described below, often even in unforeseen ways.
   get optimal performance due to the local, parallel OpenGL execution for each
   display device.
 </p><div class="flush_float"></div>
+<a href="#top">Back to top</a>
 
-<h2>Virtual Reality Installations</h2>
+<a name="vr"></a>
+<h2>Virtual Reality</h2>
 <div class="float_right"><a href="images/vr.png">
-  <img src="images/vr-small.jpg" alt="Virtual Reality Installations">
-</a></div>
+  <img src="images/vr-small.jpg" 
+       alt="A four-sided Virtual Reality installation"></a>
+  <div class="label">A four-sided Virtual Reality installation</div>
+</div>
 <p>
   Virtual Reality installations immerse the viewer into a virtual world, by
   using stereo rendering on multiple, non-planar walls. Head tracking is used to
@@ -42,24 +58,48 @@ described below, often even in unforeseen ways.
   tracking devices is not in the scope of Equalizer, head tracking is supported
   through a simple API.
 </p><div class="flush_float"></div>
+<a href="#top">Back to top</a>
 
+<a name="multipipe"></a>
 <h2>Multipipe Workstations</h2>
 <div class="float_right"><a href="images/workstation.png">
-  <img src="images/workstation-small.jpg" alt="A multipipe workstation">
-</a></div>
+  <img src="images/workstation-small.jpg" alt="A multipipe workstation"></a>
+  <div class="label">A multipipe workstation</div>
+</div>
 <p>
-  Multipipe workstations are an affordable way to scale the rendering
-  performance and display size. Equalizer applications can exploit multiple
-  processors or processor cores, as well as multiple graphic cards by running
-  one rendering thread per graphic card. The configuration shown on the left
-  would execute two rendering threads alongside the application threads, thus
-  utilizing up to three CPU cores.
+  Multipipe and multicore workstations are an affordable way to scale the
+  rendering performance and display size. Equalizer applications can exploit
+  multiple processors or processor cores, as well as multiple graphic cards by
+  running one rendering thread per graphic card. The configuration shown on the
+  left would execute two rendering threads alongside the application threads,
+  thus utilizing up to three CPU cores. It is also possible to use additional
+  graphic card(s) to contribute to the rendering of one view, as described next.
 </p><div class="flush_float"></div>
+<a href="#top">Back to top</a>
 
+<a name="scalable"></a>
+<h2>Scalable Rendering</h2>
+<div class="float_right"><a href="images/scalable.png">
+  <img src="images/scalable-small.jpg" alt="Sort-last scalable rendering"></A>
+  <div class="label">Sort-last scalable rendering</div>
+</div>
+<p>
+  Scalable rendering combines multiple graphic cards, processors and systems to
+  render a single (or multiple) views. Various algorithms are implemented by
+  Equalizer, as described on the <a href="scalability.html">scalability
+  page</a>, and can be combined in any way for rendering. Examples of this use
+  case are using two graphic cards in one system to render each one eye view in
+  stereo rendering, or using a cluster of machines to divide the database for
+  rendering, as shown on the left.
+</p><div class="flush_float"></div>
+<a href="#top">Back to top</a>
+
+<a name="remote"></a>
 <h2>Remote Visualization Clusters</h2>
 <div class="float_right"><a href="images/remote.png">
-  <img src="images/remote-small.jpg" alt="A Remote Visualization Cluster">
-</a></div>
+  <img src="images/remote-small.jpg" alt="A remote visualization cluster"></a>
+  <div class="label">A remote visualization cluster</div>
+</div>
 <p>
   Remote visualization clusters are an cost-efficient way of centralizing large
   scale data. Simulation data reaches multiple terabytes in size, making it time
@@ -70,11 +110,14 @@ described below, often even in unforeseen ways.
   optimal performance under the given load. Multiple rendering nodes can
   parallelize the rendering for a single user.
 </p><div class="flush_float"></div>
+<a href="#top">Back to top</a>
 
+<a name="sli"></a>
 <h2>SLI and Crossfire Systems</h2>
 <div class="float_right"><a href="images/SLI.png">
-  <img src="images/SLI-small.jpg" alt="A SLI/Crossfire Configuration">
-</a></div>
+  <img src="images/SLI-small.jpg" alt="A SLI/Crossfire configuration"></a>
+  <div class="label">A SLI/Crossfire configuration</div>
+</div>
 <p>
   <a href="http://www.slizone.com/page/home.html">NVIDIA SLI</a> and
   <a href="http://www.ati.com/technology/crossfire/index.html">ATI Crossfire</a>

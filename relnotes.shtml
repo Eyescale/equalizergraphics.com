@@ -6,8 +6,8 @@
 #include "header.shtml"
 
 <ul>
-  <li><a href="documents/RelNotes/RelNotes_0.3.0.html"><b>Version 0.3 alpha</b>
-    </a>, 23. February 2007 (temporary, will be replaced with 0.3 release
+  <li><a href="documents/RelNotes/RelNotes_0.3.0.html"><b>Version 0.3 beta</b>
+    </a>, 13. March 2007 (temporary, will be replaced with 0.3 release
     notes)</li>
   <li><a href="documents/RelNotes/RelNotes_0.2.0.html"><b>Version 0.2</b></a>, 
     30. December 2006</li>

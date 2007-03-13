@@ -12,7 +12,7 @@
 <a href="#advanced">Advanced Scalability Features</a><br>
 
 <hr><a name="overview"></a>
-<h3>Overview</h3>
+<h2>Overview</h2>
 <p>
   Equalizer implements a wide range of task decomposition algorithms to
   parallelize the rendering of large data sets. Multiple graphics cards,
@@ -26,7 +26,7 @@
 <a href="#top">Back to top</a>
 
 <hr><a name="basic"></a>
-<h3>Basic Decomposition Modes</h3>
+<h2>Basic Decomposition Modes</h2>
 <p>
   Equalizer uses a compound tree to configure the parallelization of the
   rendering tasks. The compound tree allows a flexible configuration of the task
@@ -93,7 +93,7 @@
 <a href="#top">Back to top</a>
 
 <hr><a name="advanced"></a>
-<h3>Advanced Scalability Features</h3>
+<h2>Advanced Scalability Features</h2>
 <p>
   Equalizer implements a number of additional features to better utilize the
   rendering resources with the basic decomposition modes mentioned in the
