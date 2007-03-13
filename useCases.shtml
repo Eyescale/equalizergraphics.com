@@ -55,8 +55,8 @@ ways.
   illusion of virtual environment. Equalizer provides both active and passive
   stereo rendering used in such environments, with the possibility to render
   each stereo view using a separate CPU and graphic card. While support for
-  tracking devices is not in the scope of Equalizer, head tracking is supported
-  through a simple API.
+  specific tracking devices is not in the scope of Equalizer, external devices
+  can be integrated through a simple head tracking API.
 </p><div class="flush_float"></div>
 <a href="#top">Back to top</a>
 
