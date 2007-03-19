@@ -36,15 +36,18 @@ dt
   font-weight: bold;
 }
 
-table 
+td
 {
-    margin: 2ex auto 2ex auto;
     text-align: justify;
+    padding: .5ex;
 }
 
 th
 { 
-    font-size: 14pt;
+    text-align: justify;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: .5ex;
 }
 
 a

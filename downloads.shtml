@@ -3,13 +3,13 @@
 
 #include "header.shtml"
 
-<h3>Equalizer</h3>
+<h2>Equalizer</h2>
 <p>No stable releases of Equalizer are available so far. Interested developers
   can access the <a href="http://sourceforge.net/projects/equalizer/">project
     information</a> or download one of the prerelease versions below. If you
   plan contributions to Equalizer, please get in touch with us.
 </p>
-<h4>Subversion Repository</h4>
+<h3>Subversion Repository</h3>
 <p>
   Follow the  <a href="http://sourceforge.net/svn/?group_id=170962">
     instructions to check out the source code</a> on the sourceforge project
@@ -25,34 +25,41 @@
 165M trunk/doc
 206M trunk/website
 
+396M tags/beta-0.3
 395M tags/alpha-0.3
 339M tags/release-0.2
 294M tags/release-0.1
 </pre><!-- */ -->
-<h4>Version 0.2</h4>
-<p>
-  Equalizer 0.2 adds support for scalable rendering, by using multiple CPU's,
-  GPU's and computers to scale the rendering performance of a single view. 
-  <a href="documents/RelNotes/RelNotes_0.2.0.html">Release Notes</a>
-  can be found in the Documentation section. 
-  The source code is available for download
-  <a href="downloads/Equalizer-0.2.tar.gz">locally</a> and from 
-  <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">
-  Sourceforge</a>.
-</p>
-<h4>Version 0.1</h4>
-<p>
-  Equalizer 0.1 is the first official release. It is intended as a
-  preview and evaluation snapshot for application developers and early
-  adopters. <a href="documents/RelNotes/RelNotes_0.1.0.html">Release Notes</a>
-  can be found in the Documentation section. 
-  The source code is available for download
-  <a href="downloads/Equalizer-0.1.tar.gz">locally</a> and from 
-  <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">
-  Sourceforge</a>.
-</p>
+<h3>Releases</h3>
+<table>
+  <tr><th>Version</th><th>Download</th><th>Release Notes</th><th>Major Feature</th></tr>
 
-<h3>GLAsync</h3>
+  <tr>
+    <td>0.3 Beta</td>
+    <td><a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/beta-0.3/">svn</a></td>
+    <td><a href="documents/RelNotes/RelNotes_0.3.0.html">local</a></td>
+    <td>Windows support.</td>
+  </tr>
+
+  <tr>
+    <td>0.2</td>
+    <td><a href="downloads/Equalizer-0.2.tar.gz">local</a><br> 
+      <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">sourceforge</a></td>
+    <td><a href="documents/RelNotes/RelNotes_0.2.0.html">local</a></td>
+    <td>Support for scalable rendering, by using multiple CPU's, GPU's and
+      computers to scale the rendering performance of a single view.</td>
+  </tr>
+
+  <tr>
+    <td>0.1</td>
+    <td><a href="downloads/Equalizer-0.1.tar.gz">local</a><br> 
+      <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">sourceforge</a></td>
+    <td><a href="documents/RelNotes/RelNotes_0.1.0.html">local</a></td>
+    <td>First official release.</td>
+  </tr>
+</table>
+
+<h2>GLAsync</h2>
 
 <p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
   downloads in the spirit of the 
