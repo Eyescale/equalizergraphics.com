@@ -37,24 +37,24 @@
   <tr>
     <td>0.3 Beta</td>
     <td><a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/beta-0.3/">svn</a></td>
-    <td><a href="documents/RelNotes/RelNotes_0.3.0.html">local</a></td>
+    <td><a href="documents/RelNotes/RelNotes_0.3.0.html">local link</a></td>
     <td>Windows support.</td>
   </tr>
 
   <tr>
     <td>0.2</td>
-    <td><a href="downloads/Equalizer-0.2.tar.gz">local</a><br> 
+    <td><a href="downloads/Equalizer-0.2.tar.gz">local copy</a><br> 
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">sourceforge</a></td>
-    <td><a href="documents/RelNotes/RelNotes_0.2.0.html">local</a></td>
+    <td><a href="documents/RelNotes/RelNotes_0.2.0.html">local link</a></td>
     <td>Support for scalable rendering, by using multiple CPU's, GPU's and
       computers to scale the rendering performance of a single view.</td>
   </tr>
 
   <tr>
     <td>0.1</td>
-    <td><a href="downloads/Equalizer-0.1.tar.gz">local</a><br> 
+    <td><a href="downloads/Equalizer-0.1.tar.gz">local copy</a><br> 
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">sourceforge</a></td>
-    <td><a href="documents/RelNotes/RelNotes_0.1.0.html">local</a></td>
+    <td><a href="documents/RelNotes/RelNotes_0.1.0.html">local link</a></td>
     <td>First official release.</td>
   </tr>
 </table>
