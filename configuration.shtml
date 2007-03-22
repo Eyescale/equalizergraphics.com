@@ -11,39 +11,35 @@
   Equalizer uses a configuration server to optimally allocate and balance the
   available resources on the visualization system. The server is configured
   using a hierarchically structured configuration file to describe the available
-  resources, and the combination of the resources for rendering. In the future,
-  Equalizer applications can also run without a server, in which case they will
-  automatically configure themselves for the local workstation.
+  resources, and the combination of these resources for rendering. In the
+  future, Equalizer applications can also run without a server, in which case
+  they will automatically configure themselves for the local workstation.
+</p>
+<div class="float_right"><a href="images/sampleConfig.png">
+    <img src="images/sampleConfig-small.jpg" 
+         alt="An example configuration"></a>
+  <div class="label">An Equalizer example configuration.</div>
+</div>
+<p>
+  The example configuration on the right side shows a four-sided Virtual Reality
+  installation running in stereo. The first part of the configuration declares
+  the resources to be used, in this case two machines (nodes), three graphic
+  cards (pipes), three windows and four channels. The second part, the compound
+  tree, uses the resources for rendering, in this case to render onto the four
+  walls. The root compound declare the usage of the left and right eye for
+  stereo rendering, and the leaf compounds, which execute the rendering, use a
+  swapbarrier to synchronize their output.
+</p>
+<p>
+  <a href="documents/design/useCases.html">See more use case examples</a>
 </p><p>
   <a href="documents/design/fileFormat.html">See the configuration file format 
     specification</a>
-</p><p>
-Possible environments for Equalizer are:
 </p>
-<ul>
-  <li><b>Multipipe Visualization Systems</b> with large-screen
-    displays and immersive environments which are used by workgroups and
-    individual users. The Equalizer server manages the available
-    resources and configures the applications for the visualization
-    cluster or multi-pipe machine. The same application can run on all
-    configurations without recompilation or reconfiguration.
-  </li>
-  <li><b>Visualization Data Centers</b> provide visualization services to
-    remote users. A central visualization cluster with attached storage
-    uses the rendering resources for visualizing huge data sets by
-    combining multiple graphics cards for a single client. The Equalizer
-    server automatically assigns and balances the available rendering
-    resources depending on the workload and needs of the connected users. 
-  </li>
-  <li><b>Workstations</b> can run Equalizer applications in a server-less mode,
-    which facilitates the deployment of Equalizer applications. The same
-    application can still run on a server-based system without recompilation.
-  </li>
-</ul>
 <p>
 <a href="http://chromium.sourceforge.net">Chromium</a> will be integrated with
 the Equalizer framework to provide a transparent execution layer. The
-Equalizer server drives customized Chromium SPUs according to the selected
+Equalizer server will drive customized Chromium SPUs according to the selected
 configuration, just as any other Equalizer application. This transparent layer
 enables the execution and load-balancing of legacy and performance-uncritical
 applications alongside with scalable Equalizer applications.

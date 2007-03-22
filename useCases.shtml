@@ -3,8 +3,7 @@
 #define PAGE About
 #define SUBPAGE Use Cases
  
-#define KEYWORDS "scalability Equalizer OpenGL compound cluster multipipe
-multicore core"
+#define KEYWORDS "scalability Equalizer OpenGL compound cluster multipipe multicore core"
 
 #include "header.shtml"
 
