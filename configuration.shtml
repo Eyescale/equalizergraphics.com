@@ -31,7 +31,7 @@
   swapbarrier to synchronize their output.
 </p>
 <p>
-  <a href="documents/design/useCases.html">See more use case examples</a>
+  <a href="useCases.html">See more use case examples</a>
 </p><p>
   <a href="documents/design/fileFormat.html">See the configuration file format 
     specification</a>
