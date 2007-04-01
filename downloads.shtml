@@ -11,13 +11,15 @@
 </p>
 <h3>Subversion Repository</h3>
 <p>
-  Follow the  <a href="http://sourceforge.net/svn/?group_id=170962">
-    instructions to check out the source code</a> on the sourceforge project
-  page, or just check out the code from 
+  Follow the <a href="http://sourceforge.net/svn/?group_id=170962"> instructions
+    to check out the source code</a> on the sourceforge project page, or just
+  check out the code from
   <code>https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk</code>
   using <a href="http://subversion.tigris.org/">subversion</a>. Please check
   out <code>trunk</code> only, not the top-level repository as explained on
-  sourceforge, unless you want access to all previous releases. The repository
+  sourceforge, unless you want access to all previous releases. A
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
+  read-only copy</a> is available for browsing the source code. The repository
   has the following layout and size:
 </p>
 <!-- /* --><pre>
