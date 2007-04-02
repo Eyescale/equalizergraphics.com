@@ -134,16 +134,17 @@
 <div class="float_right"><a href="images/Async.png">
   <img src="images/Async-small.jpg" 
        alt="Synchronous vs. asynchronous execution"></a>
-  <div class="label">Synchronous vs. asynchronous execution</div>
+  <div class="label">Performance for asynchronous execution</div>
 </div>
 <p>
   Equalizer schedules the rendering resources asynchronously. Resources which
   are independent from others start rendering the next frame immediately after
   they finish a frame. By hiding the unavoidable imbalances in the task
   decomposition, this execution mode provides a much better resource utilisation
-  than the traditional, frame-synchronous approach. The picture shows the tasks
-  executed over time for a synchronous versus an asynchronous execution using a
-  four-way 2D decomposition.
+  than the traditional, frame-synchronous approach. The picture shows the
+  performance for a sort-last direct-send compound on five nodes for a latency
+  from 0 (synchronous execution) to 6. Allowing one or two frames of latency
+  increases the performance by 15 percent in this case.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/LB.png">
