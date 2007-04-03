@@ -1,4 +1,6 @@
 
+.PHONY: update
+
 TOP = ..
 
 TARGET = build
@@ -26,6 +28,7 @@ FILES = \
 	stylesheet.css \
 	useCases.html \
         robots.txt \
+	restricted/index.html \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Equalizer.html \
 	documents/Equalizer.html_files \
@@ -127,8 +130,11 @@ all: $(TARGETS) $(INCLUDES)
 clean:
 	rm -rf $(TARGETS)
 
-install: all
+install: update all
 	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
+
+update:
+	svn update
 
 .SUFFIXES: .html .css
 

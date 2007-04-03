@@ -1,0 +1,19 @@
+#define S_RESTRICTED
+#define BASE
+#define PAGE Restricted Access
+
+#include "header.shtml"
+
+<p>
+  The redistribution of all files in this directory is forbidden without written
+  permission.
+</p>
+<ul>
+  <li><a href="restricted/directSend.pdf">Direct send parallel compositing
+      paper</a> -- Accepted for EGPGV07</li>
+  <li><a href="restricted/systemsPaper.pdf">Equalizer systems paper</a> --
+    submitted to IEEE Visualization 2007</li>
+</ul>
+
+#include "footer.shtml"
+<!-- $Id$ -->
