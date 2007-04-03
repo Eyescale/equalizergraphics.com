@@ -3,7 +3,7 @@
 #define PAGE About
 #define SUBPAGE Resource Management
 
-#define KEYWORDS "overview configuration Equalizer Chromium scalable cluster visualization"
+#define KEYWORDS "Equalizer, Chromium, scalable, cluster, visualization"
 
 #include "header.shtml"
 

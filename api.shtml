@@ -3,7 +3,7 @@
 #define PAGE About
 #define SUBPAGE Programming Interface
  
-#define KEYWORDS "overview API Equalizer OpenGL scalable cluster visualization"
+#define KEYWORDS "API, Equalizer, OpenGL, scalable, cluster, visualization"
 
 #include "header.shtml"
 

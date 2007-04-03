@@ -2,7 +2,7 @@
 #define S_HOME_ABOUT
 #define PAGE About
 #define SUBPAGE Overview
-#define KEYWORDS "parallel rendering framework distributed Equalizer OpenGL scalable graphics cluster visualization"
+#define KEYWORDS "parallel rendering, framework, distributed, Equalizer, OpenGL, scalable graphics, cluster, visualization"
 
 #include "header.shtml"
 
