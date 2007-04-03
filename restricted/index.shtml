@@ -9,10 +9,11 @@
   permission.
 </p>
 <ul>
-  <li><a href="restricted/directSend.pdf">Direct send parallel compositing
-      paper</a> -- Accepted for EGPGV07</li>
-  <li><a href="restricted/systemsPaper.pdf">Equalizer systems paper</a> --
-    submitted to IEEE Visualization 2007</li>
+  <li>Paper: <a href="restricted/directSend.pdf">Direct Send Compositing for
+      Parallel Sort-Last Rendering</a> -- Accepted for EGPGV07</li>
+  <li>Paper: <a href="restricted/systemsPaper.pdf">Equalizer: A Scalable
+      Parallel Rendering Framework</a> -- submitted to IEEE Visualization
+    2007</li>
 </ul>
 
 #include "footer.shtml"

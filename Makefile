@@ -28,7 +28,6 @@ FILES = \
 	stylesheet.css \
 	useCases.html \
         robots.txt \
-	restricted/index.html \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Equalizer.html \
 	documents/Equalizer.html_files \
@@ -99,6 +98,7 @@ FILES = \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
 	news/tungsten.html \
+	restricted/index.html \
 	$(IMAGES)
 
 IMAGES_SRC = \
