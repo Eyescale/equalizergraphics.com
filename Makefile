@@ -7,6 +7,7 @@ TARGET = build
 
 FILES = \
 	$(wildcard downloads/*gz) \
+	$(wildcard downloads/*rpm) \
 	api.html \
 	configuration.html \
 	contact.html \
