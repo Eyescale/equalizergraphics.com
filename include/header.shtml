@@ -5,6 +5,9 @@
     <base href="http://www.equalizergraphics.com">
 #endif
     <meta name="author" content="Stefan Eilemann">
+#ifdef DESCRIPTION
+    <meta name="description" content=DESCRIPTION>
+#endif
 #ifdef KEYWORDS
     <meta name="keywords" content=KEYWORDS>
 #endif

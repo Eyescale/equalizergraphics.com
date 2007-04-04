@@ -68,6 +68,7 @@ FILES = \
 	documents/design/nodeFailure.html \
 	documents/design/objects.html \
 	documents/design/packets.html \
+	documents/design/residentNodes.html \
 	documents/design/roi.html \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \

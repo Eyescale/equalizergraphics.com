@@ -1,7 +1,8 @@
 #define S_HOME
 #define S_HOME_ABOUT
 #define PAGE About
-#define SUBPAGE Overview
+#define SUBPAGE Parallel Rendering
+#define DESCRIPTION "Equalizer is an open source programming interface and resource management system for scalable OpenGL applications"
 #define KEYWORDS "parallel rendering, framework, distributed, Equalizer, OpenGL, scalable graphics, cluster, visualization"
 
 #include "header.shtml"
@@ -22,12 +23,11 @@
 </p>
 <h2>Compatibility</h2>
 <p>
-  Equalizer development started in 2005. The source code is available for
-  interested developers and early adopters. Equalizer is a cross-platform
-  toolkit and is initially available for Linux and Mac OS X. A Windows version
-  is planned for the next release. Please <a href="contact.html">contact us</a>
-  if you are interested to learn more about Equalizer, to participate in the
-  design and development, or if you have any other questions.
+  Equalizer is a cross-platform toolkit and is initially available for Linux and
+  Mac OS X. A Windows version is planned for the next
+  release. Please <a href="contact.html">contact us</a> if you are interested to
+  learn more about Equalizer, to participate in the design and development, or
+  if you have any other questions.
 </p>
 <h2>License</h2>
 <p>
@@ -46,23 +46,24 @@
   Equalizer is to reach a status similar to the MPI library, but for interactive
   3D graphics applications. To achieve this goal we invite programmers,
   researchers, independent software vendors and hardware manufacturers to
-  contribute to this effort.
+  contribute to this project.
 </p>
 
 <h2>Components</h2>
 <h3>Resource Management System</h3>
 <p>
   The core of Equalizer is the configuration server. It is configured once for a
-  visualization system, and it know the system's resources. It will provide
-  system-wide load balancing and resource allocation for all applications.
+  visualization system, and it knows the system's resources and how to use
+  them. It will provide system-wide load balancing and resource allocation for
+  all applications.
   <br><a href="configuration.html">More about resource management...</a>
 </p>
 <h3>Programming Framework</h3>
 <p>
-  Application developers use the Equalizer client library to write scalable
-  OpenGL applications based on parallel rendering. The Equalizer client library
-  is the interface to the Equalizer server, and it abstracts the application
-  from the actual configuration of the execution environment. Compared to other
+  Application developers use the Equalizer client library to write parallel,
+  scalable OpenGL applications. The Equalizer client library is the interface to
+  the Equalizer server, and it abstracts the application from the actual
+  configuration of the execution environment. Compared to other
   cluster-rendering software, it does not replace the OpenGL library but
   parallelizes and distributes the application's rendering code for optimal
   performance.

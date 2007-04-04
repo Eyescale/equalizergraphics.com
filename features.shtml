@@ -61,6 +61,10 @@
   <td><a href="documents/design/infiniBand.html">InfiniBand networking</a></td>
   <td>svn</td>
 </tr><tr>
+  <td><a href="documents/design/residentNodes.html">Resident render
+      clients</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>remote visualization</td>
   <td>?</td>
 </tr><tr>
