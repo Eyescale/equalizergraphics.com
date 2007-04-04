@@ -54,6 +54,7 @@ FILES = \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \
+	documents/design/compositor.html \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
 	documents/design/dynamicNearFar.html \

@@ -31,7 +31,7 @@ ways.
   <div class="label">A display wall configuration</div>
 </div>
 <p>
-  Display walls are one of the most important use case for visualization
+  Display walls are one of the most common use case for visualization
   clusters today. Equalizer can drive such large scale displays. The typical
   configuration, as shown on the right, executes one instance of the
   application's rendering code for each display. The applications will therefore
