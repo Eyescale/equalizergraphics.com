@@ -48,6 +48,15 @@
     for developing Equalizer.</li>
 </ul>
 
+<h3>Academic Papers</h3>
+<ul>
+  <li><a href="restricted/directSend.pdf"><b>Direct Send Compositing for
+      Parallel Sort-Last Rendering</b></a>, 
+    <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
+      Graphics and Visualization 2007</a> (restricted access due to copyright
+      limitations)</li>
+</ul>
+
 <h3>Developer Documentation</h3>
 <ul>
   <li><a href="doc_developer.html">See separate page</a></li>
