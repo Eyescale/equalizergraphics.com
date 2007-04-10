@@ -61,7 +61,7 @@
   <td><a href="documents/design/infiniBand.html">InfiniBand networking</a></td>
   <td>svn</td>
 </tr><tr>
-  <td><a href="documents/design/residentNodes.html">Resident render
+  <td><a href="documents/design/residentNodes.html">resident render
       clients</a></td>
   <td>svn</td>
 </tr><tr>
@@ -74,7 +74,7 @@
   <td>FrameData API</td>
   <td>?</td>
 </tr><tr>
-  <td>Window resize/aspect ratio support</td>
+  <td>window resize/aspect ratio support</td>
   <td>?</td>
 </tr>
 
@@ -117,7 +117,7 @@
   <td>hardware-based recomposition (Crossfire, SLI)</td>
   <td>?</td>
 </tr><tr>
-  <td>Asynchronous framebuffer readback</td>
+  <td>asynchronous framebuffer readback</td> <!--  -->
   <td>?</td>
 </tr><tr>
   <td>ROI readback interface</td>
@@ -143,7 +143,7 @@
   <td>OpenGL Transparent Library (Chromium?)</td>
   <td>?</td>
 </tr><tr>
-  <td>Distributed Scene Graph: OpenSceneGraph, OpenSG, Coin</td>
+  <td>distributed scene graph: OpenSceneGraph, OpenSG, Coin</td>
   <td>?</td>
 </tr>
 
