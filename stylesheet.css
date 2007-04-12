@@ -52,7 +52,13 @@ th
 
 a
 { 
-  color: black;
+  color: #003366;
+  font-weight: bold;
+}
+
+a:visited
+{ 
+  color: #336699;
 }
 
 img
@@ -192,7 +198,7 @@ div.subnavigation a.used {
     background-color: #99ccff;
 }
 
-div.subnavigation a 
+div.subnavigation
 { 
     font-size: 10pt;
 }

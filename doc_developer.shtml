@@ -5,12 +5,30 @@
 
 #include "header.shtml"
 
-<h3>Presentations</h3>
+<h3>Generic Information</h3>
 <ul>
-  <li><a href="documents/ParallelGraphicsProgramming.html"><b>Parallel Graphics
-    Programming</b></a> explains the concepts and scope of the Equalizer API,
+  <li><a href="documents/ParallelGraphicsProgramming.html">Parallel Graphics
+    Programming</a> is a presentation explaining the concepts and scope of
+    the Equalizer API,
     <a href="documents/ParallelGraphicsProgramming.pdf">pdf</a> or
     <a href="documents/ParallelGraphicsProgramming.html">html</a>.</li>
+  <li><a href="documents/Howtos/glutToEqualizer.html">Equalizer for GLUT
+      Developers</a> provides a mapping of commonly used GLUT functions to
+      their Equalizer counterparts</li>
+  <li><a href="documents/design/fileFormat.html">File Format</a> is the
+    documentation for the server configuration files.</li>
+  <li><a href="documents/design/environment.html">Environment
+        Variables</a> lists the variables used by Equalizer.</li>
+  <li><a href="documents/design/taskMethods.html">Task Methods</a> lists
+    all task methods ('callbacks') and explains their purpose.</li>
+  <li><a href="documents/design/objects.html">Distributed Objects</a>
+    provides an overview on how to implement static and versioned objects which
+    can be replicated on multiple nodes.</li>
+  <li><a href="documents/design/codingStyle.png">codingStyle.png</a>
+    illustrates the C++ coding style used in Equalizer, to ensure a consistent
+    appearance for better readability.</li>
+  <li><a href="documents/design/threads.html">Threads</a> is a glossary
+    and description of the individual threads in Equalizer.</li>
 </ul>
 <h3>Design  Documentation</h3>
 <p>
@@ -21,27 +39,6 @@ background of Equalizer. They are often moving targets, and the actual
 implementation will diverge from the version-specific specification over time.
 </p>
 
-<h4>Generic Information</h4>
-<p>
-  We will try to keep this information up-to-date with new developments.
-</p>
-<ul>
-  <li><a href="documents/design/fileFormat.html"><b>File Format</b></a> is the
-    documentation for the server configuration files.</li>
-  <li><a href="documents/design/environment.html"><b>Environment
-        Variables</b></a> lists the variables used by Equalizer.</li>
-  <li><a href="documents/design/taskMethods.html"><b>Task Methods</b></a> lists
-    all task methods ('callbacks') and explains their purpose.</li>
-  <li><a href="documents/design/objects.html"><b>Distributed Objects</b></a>
-    provides an overview on how to implement static and versioned objects which
-    can be replicated on multiple nodes.</li>
-  <li><a href="documents/design/codingStyle.png"><b>codingStyle.png</b></a>
-    illustrates the C++ coding style used in Equalizer, to ensure a consistent
-    appearance for better readability.</li>
-  <li><a href="documents/design/threads.html"><b>Threads</b></a> is a glossary
-    and description of the individual threads in Equalizer.</li>
-</ul>
-
 <h4>SVN 'trunk' version</h4>
 <p>
   This information contains specification for features currently under
@@ -49,42 +46,42 @@ implementation will diverge from the version-specific specification over time.
   features will be release in the next version.
 </p>
 <ul>
-  <li><a href="documents/design/anaglyph.html"><b>Anaglyphic Stereo</b></a>
+  <li><a href="documents/design/anaglyph.html">Anaglyphic Stereo</a>
     specifies the implementation and changes for anaglyphic stereo 
     rendering.</li>
-  <li><a href="documents/design/nonthreaded.html"><b>Nonthreaded
-    Rendering</b></a> allows the update of certain windows from the main
+  <li><a href="documents/design/nonthreaded.html">Nonthreaded
+    Rendering</a> allows the update of certain windows from the main
     application process.</li>
-  <li><a href="documents/design/infiniBand.html"><b>InfiniBand</b></a>
+  <li><a href="documents/design/infiniBand.html">InfiniBand</a>
     describes how to setup and use IB hardware with Equalizer.</li>
-  <li><a href="documents/design/residentNodes.html"><b>Resident Render
-    Clients</b></a> describes how to implement and configure pre-started,
+  <li><a href="documents/design/residentNodes.html">Resident Render
+    Clients</a> describes how to implement and configure pre-started,
     resident render client nodes.</li>
 </ul>
 
 <h4>Version 0.2</h4>
 <ul>
-  <li><a href="documents/design/compounds.html"><b>Compounds</b></a> is the
+  <li><a href="documents/design/compounds.html">Compounds</a> is the
     initial design documentation on the API and config file interface for the
     configuration of scalable rendering.</li>
-  <li><a href="documents/design/immersive.html"><b>Stereo and Head
-        Tracking</b></a> gives an overview how stereo rendering, head tracking
+  <li><a href="documents/design/immersive.html">Stereo and Head
+        Tracking</a> gives an overview how stereo rendering, head tracking
     and eye compounds are implemented.</li>
-  <li><a href="documents/design/dynamicNearFar.html"><b>Dynamic Near and
-        Far Plane Support</b></a> explains the API for adjusting the near and
+  <li><a href="documents/design/dynamicNearFar.html">Dynamic Near and
+        Far Plane Support</a> explains the API for adjusting the near and
     far plane from the channel's rendering methods.</li>
-  <li><a href="documents/design/imageCompression.html"><b>Image
-        Compression</b></a> is used to compress output frames for network
+  <li><a href="documents/design/imageCompression.html">Image
+        Compression</a> is used to compress output frames for network
     transfers.</li>
-  <li><a href="documents/design/statistics.html"><b>Statistics Interface</b></a>
+  <li><a href="documents/design/statistics.html">Statistics Interface</a>
     is the initial design documentation on the API and config file interface for
     statistics gathering.</li>
 </ul>
 <h4>Version 0.1</h4>
 <ul>
-  <li><a href="documents/design/eventHandling.html"><b>Event Handling</b></a>
+  <li><a href="documents/design/eventHandling.html">Event Handling</a>
     explains the event handling model.</li>
-  <li><a href="documents/design/packets.html"><b>Packet Handling</b></a>
+  <li><a href="documents/design/packets.html">Packet Handling</a>
     explains the basic concept and mechanism of the Equalizer networking
     layer.</li>
 </ul>

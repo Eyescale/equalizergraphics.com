@@ -98,6 +98,7 @@ FILES = \
 	documents/glAsync/tab_l.gif \
 	documents/glAsync/tab_r.gif \
 	documents/glAsync/tabs.css \
+	documents/Howtos/glutToEqualizer.html \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
 	news/tungsten.html \
