@@ -145,9 +145,9 @@
   they finish a frame. By hiding the unavoidable imbalances in the task
   decomposition, this execution mode provides a much better resource utilisation
   than the traditional, frame-synchronous approach. The picture shows the
-  performance for a sort-last direct-send compound on five nodes for a latency
-  from 0 (synchronous execution) to 6. Allowing one or two frames of latency
-  increases the performance by 15 percent in this case.
+  performance for a sort-last direct-send compound on five nodes using 1GBit
+  ethernet for a latency from 0 (synchronous execution) to 6. Allowing one or
+  two frames of latency increases the performance by 15 percent in this case.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/LB.png">
