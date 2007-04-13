@@ -38,13 +38,13 @@ dt
 
 td
 {
-    text-align: justify;
+    text-align: left;
     padding: .5ex;
 }
 
 th
 { 
-    text-align: justify;
+    text-align: left;
     font-weight: bold;
     white-space: nowrap;
     padding: .5ex;

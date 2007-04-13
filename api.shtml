@@ -14,7 +14,9 @@
 <p>
   The Equalizer programming interface and execution model provides,
   over-simplified, a distributed, scalable, multipipe, multithreaded GLUT
-  implementation.
+  implementation. The <a href="documents/Howtos/glutToEqualizer.html">Equalizer
+    for GLUT Developers Howto</a> helps to find some pointers for GLUT
+  programmers.
 </p>
 <p>
   Equalizer uses a callback-driven interface. Applications provide their

@@ -7,9 +7,12 @@
 
 #include "header.shtml"
 
-<a href="#overview">Overview</a><br>
-<a href="#basic">Basic Decomposition Modes</a><br>
-<a href="#advanced">Advanced Scalability Features</a><br>
+<h2>Table of Contents</h2>
+<p>
+  <a href="#overview">Overview</a><br>
+  <a href="#basic">Basic Decomposition Modes</a><br>
+  <a href="#advanced">Advanced Scalability Features</a><br>
+</p>
 
 <hr><a name="overview"></a>
 <h2>Overview</h2>

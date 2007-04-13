@@ -7,13 +7,16 @@
 
 #include "header.shtml"
 
-<a href="#overview">Overview</a><br>
-<a href="#wall">Display Walls</a><br>
-<a href="#vr">Virtual Reality</a><br>
-<a href="#multipipe">Multipipe Workstation</a><br>
-<a href="#scalable">Scalable Rendering</a><br>
-<a href="#remote">Remote Visualization Clusters</a><br>
-<a href="#sli">SLI and Crossfire Systems</a><br>
+<h2>Table of Contents</h2>
+<p>
+  <a href="#overview">Overview</a><br>
+  <a href="#wall">Display Walls</a><br>
+  <a href="#vr">Virtual Reality</a><br>
+  <a href="#multipipe">Multipipe Workstation</a><br>
+  <a href="#scalable">Scalable Rendering</a><br>
+  <a href="#remote">Remote Visualization Clusters</a><br>
+  <a href="#sli">SLI and Crossfire Systems</a><br>
+</p>
 
 <a name="overview"></a>
 <h2>Overview</h2>
