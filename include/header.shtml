@@ -14,8 +14,8 @@
     <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
     <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
     <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
   
 #ifdef TITLE
 #  define TITLESTRING Equalizer: PAGE: SUBPAGE: TITLE
