@@ -171,12 +171,6 @@
     <a href="http://www.ifi.unizh.ch/vmml/">
     <img src="images/VMML_logo_150_grey.png" 
          alt="Logo of Visualization and MultiMedia Lab, University of Z&uuml;rich"></a><br>
-    <font size=-1><a href=CHANGEURL>UPDATE</a></font><br>
-    <font size=-1><a href="impressum.html"
-#ifdef S_IMPRESSUM
-       class="used"
-#endif
-                     >Impressum</a></font>
   </div>
 
   <div class="content">

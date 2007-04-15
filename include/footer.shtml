@@ -1,19 +1,20 @@
 
-#ifdef S_DOCUMENTATION_DEVELOPER
-#  define SITE_EMAIL mailto:eq-dev@equalizergraphics.com?subject=Question regarding TITLESTRING
-#else
-#  define SITE_EMAIL mailto:eile@equalizergraphics.com?subject=Question regarding TITLESTRING
-#endif
+#define SITE_EMAIL mailto:eile@equalizergraphics.com?subject=Question regarding TITLESTRING
 
 #define QUOTE( string ) STRINGIFY( string )
 #define STRINGIFY( foo ) #foo
 
-      <p>
-        <a href=QUOTE( SITE_EMAIL )>Ask a Question</a>
-        </p><p>
-        <a href="#top">Back to top</a>
-      </p>
-    </div> <!-- div content -->
-  </body>
+</div> <!-- div content -->
+<div class="footer">
+  <a href="#top">Back to top</a>
+  <a href=QUOTE( SITE_EMAIL )>Ask a Question</a>
+  <a href="impressum.html"
+#ifdef S_IMPRESSUM
+     class="used"
+#endif
+     >Impressum</a>
+  Last changed: <a href=CHANGEURL>UPDATE</a>
+</div>
+</body>
 
 </html>

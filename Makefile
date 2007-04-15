@@ -57,6 +57,7 @@ FILES = \
 	documents/design/compositor.html \
 	documents/design/compounds.html \
 	documents/design/eventHandling.html \
+	documents/design/depthTransferOpt.html \
 	documents/design/dynamicNearFar.html \
 	documents/design/environment.html \
 	documents/design/fileFormat.html \

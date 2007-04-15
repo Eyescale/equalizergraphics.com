@@ -157,7 +157,7 @@ div.date {
     bottom: 0;
     background-color: #aaaaaa;
     width: 180px;
-    padding: 4px 2px 4px 2px;
+    padding: 2px;
     text-align: center;
     z-index: 2;
 }
@@ -172,6 +172,23 @@ div.content {
     margin-top: 0px;
     margin-left: 190px;
     margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+div.footer { 
+    position: fixed;
+    left: 184px;
+    padding: 2px 2px 2px 6px;
+    bottom: 0;
+    border-top: 1px solid black;
+    background-color: white;
+    font-size: small;
+    width: 100%;
+}
+div.footer a { 
+    padding-right: 6px;
+    border-right: 1px solid black;
+    margin-right: 4px;       
 }
 
 div.navigation p{
