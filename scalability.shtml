@@ -26,7 +26,6 @@
   described in a <a href="documents/design/compounds.html">technical
   specification</a>.
 </p>
-<a href="#top">Back to top</a>
 
 <hr><a name="basic"></a>
 <h2>Basic Decomposition Modes</h2>
@@ -93,7 +92,6 @@
   Rendering) mode of multi-GPU systems implements this feature in hardware. This
   feature is not yet implemented.
 </p><div class="flush_float"></div>
-<a href="#top">Back to top</a>
 
 <hr><a name="advanced"></a>
 <h2>Advanced Scalability Features</h2>

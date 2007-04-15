@@ -41,7 +41,6 @@ ways.
   get optimal performance due to the local, parallel OpenGL execution for each
   display device.
 </p><div class="flush_float"></div>
-<a href="#top">Back to top</a>
 
 <a name="vr"></a>
 <h2>Virtual Reality</h2>
@@ -60,7 +59,6 @@ ways.
   specific tracking devices is not in the scope of Equalizer, external devices
   can be integrated through a simple head tracking API.
 </p><div class="flush_float"></div>
-<a href="#top">Back to top</a>
 
 <a name="multipipe"></a>
 <h2>Multipipe Workstations</h2>
@@ -77,7 +75,6 @@ ways.
   thus utilizing up to three CPU cores. It is also possible to use additional
   graphic card(s) to contribute to the rendering of one view, as described next.
 </p><div class="flush_float"></div>
-<a href="#top">Back to top</a>
 
 <a name="scalable"></a>
 <h2>Scalable Rendering</h2>
@@ -94,7 +91,6 @@ ways.
   stereo rendering, or using a cluster of machines to divide the database for
   rendering, as shown on the left.
 </p><div class="flush_float"></div>
-<a href="#top">Back to top</a>
 
 <a name="remote"></a>
 <h2>Remote Visualization Clusters</h2>
@@ -112,7 +108,6 @@ ways.
   optimal performance under the given load. Multiple rendering nodes can
   parallelize the rendering for a single user.
 </p><div class="flush_float"></div>
-<a href="#top">Back to top</a>
 
 <a name="sli"></a>
 <h2>SLI and Crossfire Systems</h2>

@@ -79,7 +79,6 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
 <tr><td colspan="2"><a name="scalable"></a><b>Scalable Rendering</b></td></tr>
 <tr>
   <td><a href="documents/design/compounds.html">sort-first (2D) 
@@ -125,7 +124,6 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
 <tr><td colspan="2"><a name="server"><b>Resource Server</b></td></tr>
 <tr>
   <td>multiple applications</td>
@@ -138,7 +136,6 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
 <tr><td colspan="2"><a name="extensions"><b>Extensions</b></td></tr>
 <tr>
   <td>OpenGL Transparent Library (Chromium?)</td>
@@ -148,7 +145,6 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
 <tr><td colspan="2"><a name="applications"><b>Applications</b></td></tr>
 <tr>
   <td>Polygonal Rendering Demo (eqPly)</td>
@@ -170,7 +166,6 @@
   <td>?</td>
 </tr>
 
-<tr><td colspan="2"><a href="#top">Back to top</a><hr></td></tr>
 <tr><td colspan="2"><a name="platforms"><b>Platform Support</b></td></tr>
 <tr>
   <td>Linux ia32, X11/glX</td>
