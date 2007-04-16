@@ -47,6 +47,14 @@
 </div>
 
 <div class="gallery">
+  <a href="screenshots/sortFirst2.png">
+    <img src="screenshots/sortFirst2-small.jpg" 
+         alt="A sort-first destination view.">
+  </a>
+  The destination channel of another sort-first configuration.
+</div>
+
+<div class="gallery">
   <a href="screenshots/directSend.jpg">
     <img src="screenshots/directSend-small.jpg" 
          alt="A sort-last direct-send configuration">
