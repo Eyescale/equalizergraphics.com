@@ -72,6 +72,7 @@ FILES = \
 	documents/design/packets.html \
 	documents/design/residentNodes.html \
 	documents/design/roi.html \
+	documents/design/standalone.html \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.html \
