@@ -69,6 +69,7 @@ FILES = \
 	documents/design/environment.html \
 	documents/design/nodeFailure.html \
 	documents/design/objects.html \
+	documents/design/objectManager.html \
 	documents/design/packets.html \
 	documents/design/residentNodes.html \
 	documents/design/roi.html \
