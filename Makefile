@@ -109,6 +109,7 @@ FILES = \
 
 IMAGES_SRC = \
 	$(wildcard images/*png) \
+	$(wildcard images/*jpg) \
 	documents/design/codingStyle.png \
 	documents/design/frames.png \
 	documents/design/images/eventHandling.png \
