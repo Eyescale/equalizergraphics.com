@@ -198,7 +198,6 @@ div.navigation a, div.subnavigation a div.date a
 { 
     text-decoration: none;
     font-weight: normal;
-    font-size: 12pt;
     color: black;
     padding: 2px;
 }
@@ -217,7 +216,7 @@ div.subnavigation a.used {
 
 div.subnavigation
 { 
-    font-size: 10pt;
+    font-size: small;
 }
 
 div.content
