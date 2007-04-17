@@ -25,7 +25,7 @@ h2 {
     padding-bottom: 0.2em;
 }
 
-p, li, dd
+p, dd
 { 
     text-align: justify;
 }
@@ -36,20 +36,29 @@ dt
   font-weight: bold;
 }
 
-table 
+td
 {
-    margin: 2ex auto 2ex auto;
-    text-align: justify;
+    text-align: left;
+    padding: .5ex;
 }
 
 th
 { 
-    font-size: 14pt;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: .5ex;
 }
 
 a
 { 
-  color: black;
+  color: #003366;
+  font-weight: bold;
+}
+
+a:visited
+{ 
+  color: #336699;
 }
 
 img
@@ -61,8 +70,8 @@ img
 img:hover
 { 
   padding: 0;
-  margin: 3px;
-  border:  2px;
+  margin: 4px;
+  border: 1px;
   border-color: blue;
   border-style: solid;
 }
@@ -81,19 +90,29 @@ div.image {
 
 div.gallery {
     background-color: transparent;
-    font-size: 10pt;
+    font-size: small;
     text-align: left;
     text-decoration: none;
-    vertical-align: bottom;
     border: 1px;
     border-color: black;
     border-style: solid;
     border-collapse: collapse;
-    margin: 2px;
+    margin: 1px;
     padding: 5px;
-    width: 210px;
-    color: black;
+    width: 200px;
+    height: 210px;
     float: left;
+}
+
+div.gallery img { 
+    padding: 0px 0px 5px 0px;
+}
+
+div.gallery img:hover
+{ 
+    padding: 0px 0px 5px 0px;
+    margin: 0;
+    border:  0;
 }
 
 div.header { 
@@ -142,7 +161,6 @@ div.navigation a, div.subnavigation a div.date a
 { 
     text-decoration: none;
     font-weight: normal;
-    font-size: 12pt;
     color: black;
     padding: 2px;
 }
@@ -159,9 +177,9 @@ div.subnavigation a.used {
     background-color: #99ccff;
 }
 
-div.subnavigation a 
+div.subnavigation
 { 
-    font-size: 10pt;
+    font-size: small;
 }
 
 div.content
