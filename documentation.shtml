@@ -1,11 +1,11 @@
 #define S_DOCUMENTATION
-#define S_DOCUMENTATION_OVERVIEW
+#define S_DOCUMENTATION_ENDUSER
 #define PAGE Documentation
-#define SUBPAGE Overview
+#define SUBPAGE End User
 
 #include "header.shtml"
 
-<h3>Presentations</h3>
+<h2>Presentations</h2>
 <ul>
   <li><a href="documents/EqualizerTeaser.html"><b>Teaser</b></a> is a three 
     slide abstract of Equalizer,
@@ -38,7 +38,7 @@
     <a href="documents/EqualizerVizSIG06.html">html</a>.</li>
 </ul>
 
-<h3>White Papers</h3>
+<h2>White Papers</h2>
 <ul>
   <li><a href="documents/WhitePapers/ProjectEqualizer.pdf"><b>Project Equalizer
     </b></a> is a project description of Equalizer.</li>
@@ -48,18 +48,13 @@
     for developing Equalizer.</li>
 </ul>
 
-<h3>Academic Papers</h3>
+<h2>Academic Papers</h2>
 <ul>
   <li><a href="restricted/directSend.pdf"><b>Direct Send Compositing for
       Parallel Sort-Last Rendering</b></a>, 
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a> (restricted access due to copyright
       limitations)</li>
-</ul>
-
-<h3>Developer Documentation</h3>
-<ul>
-  <li><a href="doc_developer.html">See separate page</a></li>
 </ul>
 
 #include "footer.shtml"

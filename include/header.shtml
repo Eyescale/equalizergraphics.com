@@ -99,10 +99,10 @@
     <div class="subnavigation">
 
       <p><a href="documentation.html"
-#ifdef S_DOCUMENTATION_OVERVIEW
+#ifdef S_DOCUMENTATION_ENDUSER
          class="used"
 #endif
-         >Overview</a></p>
+         >End User</a></p>
 
       <p><a href="features.html"
 #ifdef S_DOCUMENTATION_FEATURES
