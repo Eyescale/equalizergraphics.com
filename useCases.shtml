@@ -3,7 +3,7 @@
 #define PAGE About
 #define SUBPAGE Use Cases
  
-#define KEYWORDS "scalability, Equalizer, OpenGL, compound, cluster, multipipe, multicore"
+#define KEYWORDS "scalability, Equalizer, OpenGL, compound, cluster, multi-GPU, multicore"
 
 #include "header.shtml"
 
@@ -12,7 +12,7 @@
   <a href="#overview">Overview</a><br>
   <a href="#wall">Display Walls</a><br>
   <a href="#vr">Virtual Reality</a><br>
-  <a href="#multipipe">Multipipe Workstation</a><br>
+  <a href="#multipipe">Multi-GPU Workstation</a><br>
   <a href="#scalable">Scalable Rendering</a><br>
   <a href="#remote">Remote Visualization Clusters</a><br>
   <a href="#sli">SLI and Crossfire Systems</a><br>
@@ -61,10 +61,10 @@ ways.
 </p><div class="flush_float"></div>
 
 <a name="multipipe"></a>
-<h2>Multipipe Workstations</h2>
+<h2>Multi-GPU Workstations</h2>
 <div class="float_right"><a href="images/workstation.png">
   <img src="images/workstation-small.jpg" alt="A multipipe workstation"></a>
-  <div class="label">A multipipe workstation</div>
+  <div class="label">A multi-GPU workstation</div>
 </div>
 <p>
   Multipipe and multicore workstations are an affordable way to scale the

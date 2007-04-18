@@ -167,7 +167,7 @@
   Advanced load balancing uses off-screen rendering buffers on the same graphic
   cards which display the final result. These buffers contribute to the
   rendering of other output channels, enabling the optimal usage of all
-  rendering units on a multipipe machine. This feature is not yet implemented.
+  rendering units on a multi-GPU machine. This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
 <div class="footnote">

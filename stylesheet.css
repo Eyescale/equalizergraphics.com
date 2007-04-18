@@ -226,7 +226,7 @@ div.content
 
 div.footnote 
 { 
-    background-image: url("images/footnote.png");
+    background-image: url("/images/footnote.png");
     background-repeat: no-repeat;
     padding-top: 10px;
     font-size: x-small;
