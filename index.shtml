@@ -42,9 +42,9 @@
 
 <h2>Project Vision</h2>
 <p>
-  The progress of High-Performance Visualization (HPV) has been crippled by the
-  lack of an universally accepted programming framework, proprietary software
-  and vendor lock-in. The Equalizer project will provide the standard
+  The progress of High-Performance Visualization (HPV) has been sluggish due to
+  the lack of an universally accepted programming framework, proprietary
+  software and vendor lock-in. The Equalizer project will provide the standard
   programming and deployment environment for multipipe applications, ranging
   from workstations to large-scale HPV clusters. The goal for Equalizer is to
   reach a status similar to the MPI library, but for interactive 3D graphics
