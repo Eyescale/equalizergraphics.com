@@ -62,6 +62,8 @@ implementation will diverge from the version-specific specification over time.
     GL_NV_packed_depth_stencil extension.</li>
   <li><a href="documents/design/standalone.html">Standalone Application 
       Support</a> allows applications to run without a resource server.</li>
+  <li><a href="documents/design/nodeConnect.html">Node Connection Setup</a>
+    explains the initial connection handshake between two nodes.</li>
 </ul>
 
 <h4>Version 0.2</h4>

@@ -65,6 +65,7 @@ FILES = \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
 	documents/design/infiniBand.html \
+	documents/design/nodeConnect.html \
 	documents/design/nonthreaded.html \
 	documents/design/environment.html \
 	documents/design/nodeFailure.html \
@@ -116,6 +117,7 @@ IMAGES_SRC = \
 	documents/design/images/eventHandling.png \
 	documents/design/images/mainloop.png \
 	documents/design/images/mono.png \
+	documents/design/images/nodeConnect.png \
 	documents/design/images/packets.png \
 	documents/design/images/immersive.png \
 	documents/design/images/stereo.png \
