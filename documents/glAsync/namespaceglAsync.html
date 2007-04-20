@@ -24,7 +24,7 @@
 <h1>glAsync Namespace Reference</h1><hr><a name="_details"></a><h2>Detailed Description</h2>
 Provides asynchronous OpenGL functions. 
 <p>
-The <a class="el" href="namespaceglAsync.html">glAsync</a> functions deliver asynchronous OpenGL downloads in the spirit of the SGIX_async extension. The asynchronous execution of certain rendering commands can improve the overall performance of the application.<p>
+The <a class="el" href="namespaceglAsync.html">glAsync</a> functions deliver asynchronous OpenGL downloads in the spirit of the SGIX_async extension. The asynchronous execution of certain rendering commands can improve the overall performance of the application. The <a href="http://www.opengl.org/pipeline/article/vol001_6/">ARB_sync</a> extension provides now a better way for asynchronous operations.<p>
 A second thread uses a shared context to the main context for asynchronous downloads. The application can map more than one context, but only one context can be current at a given time. All commands are executed in the order they are submitted. The asynchronous helper thread is only running when at least one context is mapped.<p>
 The functions are not thread-safe. For thread-safety and performance multi-threaded rendering codes are advised to use one <a class="el" href="classglAsync_1_1Thread.html">glAsync::Thread</a> instance per rendering thread. 
 <p>
@@ -482,7 +482,7 @@ Finish all pending operations.
 
 </div>
 </div><p>
-<hr size="1"><address style="align: right;"><small>Generated on Wed Apr 18 13:53:19 2007 for Asynchronous OpenGL Library by&nbsp;
+<hr size="1"><address style="align: right;"><small>Generated on Thu Apr 19 15:06:47 2007 for Asynchronous OpenGL Library by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.1 </small></address>
 </body>

@@ -3,7 +3,7 @@
 #define PAGE About
 #define SUBPAGE Parallel Rendering
 #define DESCRIPTION "Equalizer is an open source programming interface and resource management system for scalable OpenGL applications"
-#define KEYWORDS "parallel rendering, framework, distributed, Equalizer, OpenGL, scalable graphics, cluster, graphics cluster, visualization, multi-GPU"
+#define KEYWORDS "parallel rendering, framework, distributed, Equalizer, OpenGL, scalable graphics, cluster, graphics clusters, visualization, multi-GPU"
 
 #include "header.shtml"
 
@@ -15,7 +15,7 @@
 <p>
   Equalizer is an open source programming interface and resource management
   system for <em>scalable OpenGL applications</em>. An Equalizer application can
-  run unmodified on any visualization system, from a singlepipe workstation to
+  run unmodified on any visualization system, from a singlepipe workstations to
   large scale <em>graphics clusters</em> and <em>multi-GPU</em>
   workstations. Equalizer is build upon a parallel, scalable programming
   interface solving the problems common to any multipipe application. The API
