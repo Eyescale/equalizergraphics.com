@@ -22,8 +22,8 @@
   <li><a href="documents/design/taskMethods.html">Task Methods</a> lists
     all task methods ('callbacks') and explains their purpose.</li>
   <li><a href="documents/design/objects.html">Distributed Objects</a>
-    provides an overview on how to implement static and versioned objects which
-    can be replicated on multiple nodes.</li>
+    provides an overview on how to implement static and versioned objects, which
+    can be instanciated on multiple nodes.</li>
   <li><a href="documents/design/codingStyle.png">codingStyle.png</a>
     illustrates the C++ coding style used in Equalizer, to ensure a consistent
     appearance for better readability.</li>
