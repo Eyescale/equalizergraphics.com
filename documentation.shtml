@@ -7,30 +7,30 @@
 
 <h2>Presentations</h2>
 <ul>
-  <li><a href="documents/EqualizerTeaser.html"><b>Teaser</b></a> is a three 
+  <li><a href="documents/EqualizerTeaser.html">Teaser</a> is a three 
     slide abstract of Equalizer,
     <a href="documents/EqualizerTeaser.pdf">pdf</a> or
     <a href="documents/EqualizerTeaser.html">html</a>.</li>
 
-  <li><a href="documents/Equalizer.html"><b>Overview</b></a> is a presentation
+  <li><a href="documents/Equalizer.html">Overview</a> is a presentation
     to provide a background to high-performance visualization, Equalizer
     components and features,
     <a href="documents/Equalizer.pdf">pdf</a> or
     <a href="documents/Equalizer.html">html</a>.</li>
 
-  <li><a href="documents/EqualizerGuide.pdf"><b>Quickstart and Demo
-        Guide</b></a> guides through running and understanding a few Equalizer
+  <li><a href="documents/EqualizerGuide.pdf">Quickstart and Demo
+        Guide</a> guides through running and understanding a few Equalizer
     configurations,
     <a href="documents/EqualizerGuide.pdf">pdf</a> or
     <a href="documents/EqualizerGuide.html">html</a>.</li>
 
-  <li><a href="documents/FlyerWeb.pdf"><b>Flyer</b></a> is a folded, two-sided
+  <li><a href="documents/FlyerWeb.pdf">Flyer</a> is a folded, two-sided
     brochure for the Equalizer project,
     <a href="documents/FlyerWeb.pdf">display version</a> or
     <a href="documents/Flyer.pdf">print version</a> (please print two-sided).
   </li>
 
-  <li><a href="documents/EqualizerVizSIG06.html"><b>VizSIG Meeting 2006</b></a>
+  <li><a href="documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
     is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
     based on the overview presentation but features more technical content about
     the programming interface and configuration,
@@ -40,18 +40,18 @@
 
 <h2>White Papers</h2>
 <ul>
-  <li><a href="documents/WhitePapers/ProjectEqualizer.pdf"><b>Project Equalizer
-    </b></a> is a project description of Equalizer.</li>
-  <li><a href="documents/WhitePapers/ParallelRenderingSystems.pdf"><b>An
-    Analysis of Parallel Rendering Systems</b></a> reviews, analyzes and
+  <li><a href="documents/WhitePapers/ProjectEqualizer.pdf">Project Equalizer
+    </a> is a project description of Equalizer.</li>
+  <li><a href="documents/WhitePapers/ParallelRenderingSystems.pdf">An
+    Analysis of Parallel Rendering Systems</a> reviews, analyzes and
     classifies approaches to multi-pipe rendering, and outlines our motivation
     for developing Equalizer.</li>
 </ul>
 
 <h2>Academic Papers</h2>
 <ul>
-  <li><a href="restricted/directSend.pdf"><b>Direct Send Compositing for
-      Parallel Sort-Last Rendering</b></a>, 
+  <li><a href="restricted/directSend.pdf">Direct Send Compositing for
+      Parallel Sort-Last Rendering</a>, 
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a> (restricted access due to copyright
       limitations)</li>
