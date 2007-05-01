@@ -3,7 +3,7 @@
 #define PAGE About
 #define SUBPAGE Scalability
  
-#define KEYWORDS "scalability, Equalizer, OpenGL, compound, decomposition, recomposition, 2D, DB, DPlex, sort-first, sort-last, parallel"
+#define KEYWORDS "scalability, Equalizer, OpenGL, compound, decomposition, recomposition, 2D, DB, DPlex, sort-first, sort-last, parallel, direct send, binary swap"
 
 #include "header.shtml"
 
@@ -26,9 +26,29 @@
   described in a <a href="documents/design/compounds.html">technical
   specification</a>.
 </p>
+<div class="float_right"><a href="images/perf.png">
+    <img src="images/perf-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Performance for a dual-GPU workstation</div>
+</div>
+<p>
+  All scalability features apply to graphic clusters and multi-GPU systems in
+  the same way. Multi-GPU systems have the advantadge of a shared memory, which
+  eliminates the need of transferring pixel data across a network, but the
+  number of GPUs per system is limited. The example on the right shows the
+  performance benefit over the transparent SLI mode typically used. The first
+  configuration measures the baseline performance using only a single GPU. The
+  second one uses the same Equalizer configuration, but transparently
+  distributed across the two GPUs by SLI.  The two remaining configurations are
+  using two rendering threads in DB (sort-last) and 2D (sort-first) mode, to
+  scale the rendering performance of a single view, like in SLI mode. Note that
+  the pixel transfer does not yet use SLI, but is executed through main memory,
+  the slowest possible path. The example used is the stock Equalizer polygon
+  rendering application, using a data set of 12.6 million triangles.
+</p><div class="flush_float"></div>
 
 <hr><a name="basic"></a>
 <h2>Basic Decomposition Modes</h2>
+
 <p>
   Equalizer uses a compound tree to configure the parallelization of the
   rendering tasks. The compound tree allows a flexible configuration of the task
@@ -36,6 +56,7 @@
   files for the implemented feature set. The following parallel rendering
   algorithms can be configured:
 </p>
+
 <div class="float_right"><a href="images/2D.png">
     <img src="images/2D-small.jpg" alt="A 2D compound"></a>
   <div class="label">A sort-first compound</div>
@@ -125,11 +146,11 @@
   during DB/sort-last rendering. Due to the linear increase in pixel data, it
   becomes necessary to parallelize the compositing. The compound implementation
   of Equalizer supports various parallel sort-last compositing algorithms,
-  including, but not limited to, direct send and binary swap. Such algorithms
-  keep the compositing cost constant due to the parallelization across all
-  rendering units. The example shows a three-node direct-send composition. Each
-  rendering unit does a z-based composition of one tile, and sends the
-  composited result to the destination channel.
+  including, but not limited to, <em>direct send</em> and <em>binary
+  swap</em>. Such algorithms keep the compositing cost constant due to the
+  parallelization across all rendering units. The example shows a three-node
+  direct-send composition. Each rendering unit does a z-based composition of one
+  tile, and sends the composited result to the destination channel.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/Async.png">
