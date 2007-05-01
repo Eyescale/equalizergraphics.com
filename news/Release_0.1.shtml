@@ -1,5 +1,4 @@
 #define S_NEWS
-#define BASE
 #define PAGE News
 #define SUBPAGE Version 0.1 Released
 

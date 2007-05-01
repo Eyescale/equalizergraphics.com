@@ -1,5 +1,4 @@
 #define S_RESTRICTED
-#define BASE
 #define PAGE Restricted Access
 
 #include "header.shtml"

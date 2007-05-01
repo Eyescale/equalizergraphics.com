@@ -155,21 +155,13 @@ $(TARGET)/%.html : %.shtml $(INCLUDES)
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
 
-$(TARGET)/documents/WhitePapers/%.pdf: ../doc/WhitePapers/%/paper.pdf
+$(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/documents/%.html : ../doc/%.shtml $(INCLUDES)
-	@mkdir -p $(@D)
-	$(CPP_HTML) -DBASE $< | sed 's/^#.*//' > $@
-
-$(TARGET)/documents/%-small.jpg: ../doc/%.png
+$(TARGET)/documents/%-small.jpg: documents/%.png
 	@mkdir -p $(@D)
 	convert $< -geometry 300x1000 $@
-
-$(TARGET)/documents/%: ../doc/%
-	@mkdir -p $(@D)
-	cp $< $@
 
 $(TARGET)/%-small.jpg: %.jpg
 	@mkdir -p $(@D)

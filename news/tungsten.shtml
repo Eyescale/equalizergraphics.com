@@ -1,5 +1,4 @@
 #define S_NEWS
-#define BASE
 #define PAGE News
 #define SUBPAGE Employment News
 
