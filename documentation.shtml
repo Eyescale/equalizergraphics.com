@@ -57,5 +57,14 @@
       limitations)</li>
 </ul>
 
+<h2>Equalizer Applications</h2>
+<ul>
+  <li><a href="cgi-bin/viewvc.cgi/trunk/src/examples/eqPly/README?view=markup">eqPly</a>
+    is a polygonal rendering application, and the Equalizer example
+    application.</li>
+  <li><a href="documents/user/configTool.html">Configuration Tool</a>
+    automatically generates common configuration files.</li>
+</ul>
+
 #include "footer.shtml"
 <!-- $Id$ -->

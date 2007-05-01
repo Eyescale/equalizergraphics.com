@@ -1,0 +1,65 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_ENDUSER
+#define PAGE Documentation
+#define SUBPAGE End User
+#define TITLE Configuration Tool
+
+#include "header.shtml"
+
+<h2>Overview</h2>
+<p>
+  The configuration tool is useful for automatically creating standard
+  configuration files. It is located in
+  the <a href="/cgi-bin/viewvc.cgi/trunk/src/tools/configTool">tools</a>
+  subdirectory.
+</p>
+<p>
+  One pipe (GPU), window and channel per node is used, and the node hostnames
+  are set to node0...nodeN. All windows, with the exception of the destination
+  window, are full-screen. The resource section can easily be edited for
+  another setup, e.g, to have two pipes per node.
+</p>
+<p>
+  The resource usage in the compound tree currently supports sort-first
+  rendering (2D), sort-last rendering (DB) and sort-last rendering with
+  direct-send parallel compositing (DB_ds) . By default, the destination channel
+  is used for rendering as well as for the final display. It can be used in all
+  modes for the final display only, which might be beneficial in large rendering
+  clusters.
+</p>
+
+<h2>Usage</h2>
+<p>
+  The configuration is printed to stdout, and errors to stderr. The syntax is as
+  follows:
+  <!-- /* --><pre>
+USAGE: 
+
+   ./configTool  [-a] [-n <unsigned>] [-m <2D|DB|DB_ds>] [--] [--version]
+                 [-h]
+
+
+Where: 
+
+   -a,  --assembleOnly
+     Destination channel does not contribute to rendering
+
+   -n <unsigned>,  --numChannels <unsigned>
+     Number of channels (default 4)
+
+   -m <2D|DB|DB_ds>,  --mode <2D|DB|DB_ds>
+     Compound mode (default 2D)
+
+   --,  --ignore_rest
+     Ignores the rest of the labeled arguments following this flag.
+
+   --version
+     Displays version information and exits.
+
+   -h,  --help
+     Displays usage information and exits.
+  </pre><!-- */ -->
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
