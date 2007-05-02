@@ -15,10 +15,10 @@
 <p>
   Equalizer is an open source programming interface and resource management
   system for <em>scalable OpenGL applications</em>. An Equalizer application can
-  run unmodified on any visualization system, from a singlepipe workstations to
+  run unmodified on any visualization system, from a singlepipe workstation to
   large scale <em>graphics clusters</em> and <em>multi-GPU</em>
-  workstations. Equalizer is build upon a parallel, scalable programming
-  interface solving the problems common to any multipipe application. The API
+  workstations. Equalizer is built upon a parallel, scalable programming
+  interface solving  problems that are common to any multipipe application. The API
   is <em>minimally invasive</em>, making application porting as easy as possible
   while delivering maximum performance.
   <br><a href="useCases.html">More about use cases...</a>
@@ -28,7 +28,7 @@
   Equalizer is a cross-platform toolkit and is initially available for Linux and
   Mac OS X. A Windows version is planned for the next
   release. Please <a href="contact.html">contact us</a> if you are interested to
-  learn more about Equalizer, to participate in the design and development, or
+  learn more about Equalizer, to participate in its design and development, or
   if you have any other questions.
 </p>
 <h2>License</h2>
@@ -51,7 +51,7 @@
   applications. Our focus is to provide the best framework to
   develop <em>scalable graphics</em> applications, not to provide another
   (semi-)transparent OpenGL layer. To achieve this goal we adopt an open
-  approach both for the design and development and for the source code, and
+  approach both for the design and development and for the source code itself, and
   therefore invite programmers, researchers, independent software vendors and
   hardware manufacturers to contribute to this project.
 </p>
@@ -86,8 +86,8 @@
   making it as easy as possible to port existing applications to Equalizer.
   <br><a href="api.html">More about the programming interface...</a>
 </p><p>
-  In addition to traditional multi-pipe execution, where one graphics card is
-  driving one display device, Equalizer offers a broad range of
+  In addition to traditional multi-pipe execution, where one graphics card 
+ drives one display device, Equalizer offers a broad range of
   decomposition modes to accelerate the rendering of large data sets by
   parallelizing the rendering of a single view across multiple graphics cards,
   processors and computers.
