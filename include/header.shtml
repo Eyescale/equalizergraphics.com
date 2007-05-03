@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <base href="http://www.equalizergraphics.com">
+
     <meta name="author" content="Stefan Eilemann">
 #ifdef DESCRIPTION
     <meta name="description" content=DESCRIPTION>
@@ -29,10 +29,7 @@
 
   <body>
   
-  <!-- Header Bar -->
-
   <!-- Navigation -->
-  <div class="navigationbg"></div>
   <div class="navigation">
     <a href="index.html">
       <img src="images/Equalizer.png" alt="Equalizer logo">
@@ -163,12 +160,10 @@
 <script type="text/javascript" src="http://google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq"></script>
 <!-- Google CSE Search Box Ends -->
 #endif
-  </div>
 
-  <div class="date">
     <a href="http://www.ifi.unizh.ch/vmml/">
     <img src="images/VMML_logo_150_grey.png" 
-         alt="Logo of Visualization and MultiMedia Lab, University of Z&uuml;rich"></a><br>
+         alt="Logo of Visualization and MultiMedia Lab, University of Z&uuml;rich"></a>
   </div>
 
   <div class="content">
