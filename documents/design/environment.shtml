@@ -28,9 +28,13 @@
   topics. Valid values are a bitmask of the individual topics. Please look up
   individual values in the source code.</p>
 <p><code>EQ_TAINT_CHANNELS</code> Set a channel-specific clear color
-  in <code>Channel::clear</code>. Used for debugging purposes.</p>
+  in <code>Channel::clear</code>. Used for debugging purposes. Only enabled in
+  debug builds.</p>
 <p><code>EQ_DUMP_IMAGES</code> Write all output images to disk. Used for
   debugging purposes.</p>
+<p><code>EQ_ABORT_WAIT</code> causes an assertion to be trapped in an infinite
+  loop, allowing to identify the process, and to attach a debugger to it. Only
+  enabled in debug builds.</p>
 
 
 #include "footer.shtml"
