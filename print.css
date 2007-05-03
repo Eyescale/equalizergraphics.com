@@ -115,23 +115,6 @@ div.gallery img:hover
     border:  0;
 }
 
-div.header { 
-    position: fixed;
-    left: 0;
-    top: 0;
-    text-align: center;
-    vertical-align: center;
-    background-color: #aaaaaa;
-    float: left;
-    width: 0px;
-    height: 0px;
-    padding: 4px 2px 4px 2px;
-}
-
-div.navigationbg {
-    display: none;
-}
-
 div.navigation { 
     display: none;
 }
@@ -165,21 +148,11 @@ div.navigation a, div.subnavigation a div.date a
     padding: 2px;
 }
 
-div.navigation
-{ 
-  padding: 0;
-  margin: 10px 0px 20px 0px;
-}
 div.navigation a.used { 
     background-color: #6699cc;
 }
 div.subnavigation a.used { 
     background-color: #99ccff;
-}
-
-div.subnavigation
-{ 
-    font-size: small;
 }
 
 div.content
