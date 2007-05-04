@@ -1,0 +1,30 @@
+#define S_NEWS
+#define PAGE News
+#define SUBPAGE Version 0.3 Released
+
+#include "header.shtml"
+
+<div class="float_right">
+  <a href="images/parallel.png"><img src="images/release-0.3.png" 
+                                     alt="Scalable Rendering on Windows XP"></a>
+  <div class="label">Using two GPU's in parallel on Windows XP</div>
+</div>
+<p>
+  We are pleased to announce the release of Equalizer 0.3, a framework for the
+  development and deployment of scalable OpenGL applications. Equalizer 0.3 adds
+  support for Windows XP, among with various minor features and stability
+  improvements. The stability and performance of this release has been tested
+  for the first time on a 16-node, 32-GPU cluster.
+</p>
+<p>
+More information about Equalizer can be found at:
+<a href="http://www.equalizergraphics.com">www.equalizergraphics.com</a>. The
+release notes for version 0.3 are available at:
+<a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html</a>.
+
+<div class="footnote">
+Boat model courtesy of 
+<a href="http://www.cyberware.com">Cyberware</a></div>
+
+#include "footer.shtml"
+<!-- $Id$ -->

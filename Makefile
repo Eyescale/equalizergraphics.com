@@ -107,6 +107,7 @@ FILES = \
 	documents/user/eqPly.html \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
+	news/Release_0.3.html \
 	news/tungsten.html \
 	restricted/index.html \
 	$(IMAGES)
@@ -146,7 +147,7 @@ install: update all
 	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
 update:
-	svn update . ../doc
+	svn update
 
 .SUFFIXES: .html .css
 

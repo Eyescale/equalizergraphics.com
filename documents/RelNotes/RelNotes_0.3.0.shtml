@@ -8,7 +8,7 @@
 <p>
   Welcome to Equalizer 0.3, a framework for the development and deployment
   of scalable multipipe applications, based on C++ and OpenGL. The major new
-  feature in Equalizer 0.3 is support for the Windows operating system.
+  feature in Equalizer 0.3 is support for the Windows XP operating system.
 </p>
 <p>
   Equalizer 0.3 is a beta release, and therefore intended as preview and
@@ -18,8 +18,9 @@
 <h3>Features</h3>
 <p>
   Equalizer provides the following major features to facilitate the development
-  and deployment of multipipe applications. A <a href="/features.html">detailed
-  feature list</a> can be found on the Equalizer website.
+  and deployment of scalable OpenGL applications. A 
+  <a href="/features.html">detailed feature list</a> can be found on the
+  Equalizer website.
 </p>
 <ul>
   <li><b>Runtime Configurability:</b> An Equalizer application can run on any
@@ -52,12 +53,11 @@
   <li>Addressing of indidual graphic cards on Windows using
     the <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
     extension</li>
-  <li>Support for explicit SDP connections (Windows only)</li>
-  <li>New tool to create common configuration files</li>
+  <li>Support for explicit SDP connections</li>
+  <li>New tool to create typical configuration files</li>
   <li>New Equalizer-based benchmark tool for pixel readback and draw 
     operations</li>
   <li>New Equalizer-based benchmark tool for network bandwidth</li>
-  <li>Support for multiple listening connections per node</li>
   <li>Support and example code for resident (pre-started) render clients</li>
   <li>Support for application-specific config events</li>
 </ul>
@@ -84,9 +84,9 @@
 
 <h3>Supported Platforms</h3>
 <p>
-  The platforms supported below are the primary development platforms. Equalizer
-  is designed to run on a variety of platforms, including all Unix variants and
-  the Windows operating system. Equalizer 0.3 supports:
+  Equalizer is a cross-platform toolkit, designed to run on any modern operating
+  system, including all Unix variants and the Windows operating system. Version
+  0.3 has been tested on:
 </p>
 <h4>Operating System Support</h4>
 <ul>
