@@ -4,6 +4,8 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>4. May 2007</b> <a href="news/Release_0.3.html">Released Version
+      0.3</a>.</li>
   <li><b>20./21. May 2007</b> Equalizer demonstration (21. at 5pm) and
     presentation of <a href="restricted/directSend.pdf">Direct Send Compositing
     for Parallel Sort-Last Rendering</a> paper at the 

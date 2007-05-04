@@ -45,6 +45,8 @@ implementation will diverge from the version-specific specification over time.
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+
+<h4>Version 0.3</h4>
 <ul>
   <li><a href="documents/design/anaglyph.html">Anaglyphic Stereo</a>
     specifies the implementation and changes for anaglyphic stereo 

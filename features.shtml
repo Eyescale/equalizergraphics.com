@@ -51,20 +51,20 @@
 </tr><tr>
   <td><a href="documents/design/anaglyph.html">anaglyphic stereo 
       rendering</a></td>
-  <td>svn</td>
+  <td>0.3</td>
 </tr><tr>
   <td><a href="documents/design/objects.html">distributed object API</a></td>
-  <td>svn</td>
+  <td>0.3</td>
 </tr><tr>
   <td><a href="documents/design/nonthreaded.html">nonthreaded rendering</a></td>
-  <td>svn</td>
+  <td>0.3</td>
 </tr><tr>
   <td><a href="documents/design/infiniBand.html">InfiniBand networking</a></td>
-  <td>svn</td>
+  <td>0.3</td>
 </tr><tr>
   <td><a href="documents/design/residentNodes.html">resident render
       clients</a></td>
-  <td>svn</td>
+  <td>0.3</td>
 </tr><tr>
   <td>FBO support</td>
   <td>?</td>
@@ -127,7 +127,7 @@
 <tr>
   <td><a href="documents/design/standalone.html">standalone application
       support</a></td>
-  <td>svn</td>
+  <td>0.3</td>
 </tr><tr>
   <td>multiple applications</td>
   <td>?</td>
@@ -159,10 +159,10 @@
   <td>0.2</td>
 </tr><tr>
   <td>&rarr; Rewrite rendering to use VBO's</td>
-  <td>0.3?</td>
+  <td>0.4?</td>
 </tr><tr>
   <td>&rarr; Better rendering and shading effects</td>
-  <td>0.3?</td>
+  <td>0.4?</td>
 </tr><tr>
   <td>Molecular Viewer (based on flip.pdb MPK demo)</td>
   <td>?</td>
@@ -189,8 +189,8 @@
   <td>OS X 10.4 Universal, CGL (partial)</td>
   <td>0.1</td>
 </tr><tr>
-  <td>Windows</td>
-  <td>svn</td>
+  <td>Windows XP</td>
+  <td>0.3</td>
 </tr>
 
 </table>

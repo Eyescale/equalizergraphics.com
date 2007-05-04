@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="images/parallel.png"><img src="images/release-0.3.png" 
+  <a href="images/release-0.3.png"><img src="images/release-0.3-small.jpg" 
                                      alt="Scalable Rendering on Windows XP"></a>
   <div class="label">Using two GPU's in parallel on Windows XP</div>
 </div>
@@ -17,14 +17,13 @@
   for the first time on a 16-node, 32-GPU cluster.
 </p>
 <p>
-More information about Equalizer can be found at:
+More information about Equalizer can be found at
 <a href="http://www.equalizergraphics.com">www.equalizergraphics.com</a>. The
-release notes for version 0.3 are available at:
+release notes for version 0.3 are available at
 <a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html</a>.
 
 <div class="footnote">
-Boat model courtesy of 
-<a href="http://www.cyberware.com">Cyberware</a></div>
+  Hip data set courtesy of <a href="http://www.cyberware.com">Cyberware</a></div>
 
 #include "footer.shtml"
 <!-- $Id$ -->
