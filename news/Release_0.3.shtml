@@ -1,6 +1,6 @@
 #define S_NEWS
 #define PAGE News
-#define SUBPAGE Version 0.3 Released
+#define SUBPAGE Equalizer 0.3 Released
 
 #include "header.shtml"
 
@@ -21,6 +21,15 @@ More information about Equalizer can be found at
 <a href="http://www.equalizergraphics.com">www.equalizergraphics.com</a>. The
 release notes for version 0.3 are available at
 <a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html</a>.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from
+  <a href="http://www.tungstengraphics.com">Tungsten Graphics</a>. Please
+  contact
+  <a href="mailto:sales@tungstengraphics.com?subject=Equalizer%20support">sales@tungstengraphics.com</a>
+  for further information.
+</p>
 
 <div class="footnote">
   Hip data set courtesy of <a href="http://www.cyberware.com">Cyberware</a></div>
