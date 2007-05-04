@@ -7,7 +7,7 @@
 #include "header.shtml"
 
 <p>
-  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
   State: Partly implemented
 </p>
 
@@ -22,7 +22,7 @@
   <li><a href="documents/design/frames.html#FileFormat">File Format</a></li>
 </ul>
 
-<a name="Background"/>
+<a name="Background"></a>
 <h2>Background</h2>
 <p>
   Frames are used by <a href="documents/design/compounds.html">compounds</a>
@@ -30,11 +30,11 @@
   details of this part of the compound spec.
 </p>
 
-<a name="Overview"/>
+<a name="Overview"></a>
 <h2>Overview</h2>
 <p>
   <img src="documents/design/frames.png" 
-       alt="UML diagram of compound frames"/>
+       alt="UML diagram of compound frames">
 </p><p>
   Frames can be input frames or output frames. Output frames produce the data
   consumed by input frames. The common link between the output and input
@@ -53,7 +53,7 @@
 </p>
   
 
-<a name="Requirements"/>
+<a name="Requirements"></a>
 <h2>Requirements</h2>
 <p>
  Frames are used in the following way:
@@ -82,7 +82,7 @@
  </ul>
 </p>
 
-<a name="Implementation"/>
+<a name="Implementation"></a>
 <h2>Implementation</h2>
 <p>
   The implementation should execute as follows:
@@ -230,14 +230,14 @@
   </pre><!-- */ -->
 </p>
 
-<a name="Issues"/>
+<a name="Issues"></a>
 <h2>Open Issues</h2>
 <p>
   Send optimisation for partial input frames, select ready frames from list for
   early assembly,
 </p>
 
-<a name="Restrictions"/>
+<a name="Restrictions"></a>
 <h2>Restrictions</h2>
 <p>
   Only full images are sent to the nodes. If the input frame specifies a
@@ -246,7 +246,7 @@
   attributes (buffers, eye, etc.).
 </p>
 
-<a name="FileFormat"/>
+<a name="FileFormat"></a>
 <h2>File Format</h2>
  <p>
    See <a href="documents/design/compounds.html#FileFormat">compound file format
