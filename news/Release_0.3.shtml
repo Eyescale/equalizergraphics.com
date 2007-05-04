@@ -1,6 +1,6 @@
 #define S_NEWS
 #define PAGE News
-#define SUBPAGE Equalizer 0.3 Released
+#define SUBPAGE Equalizer 0.3 adds Windows XP Support
 
 #include "header.shtml"
 
@@ -11,15 +11,14 @@
 </div>
 <p>
   We are pleased to announce the release of Equalizer 0.3, a framework for the
-  development and deployment of scalable OpenGL applications. Equalizer 0.3 adds
-  support for Windows XP, among with various minor features and stability
-  improvements. The stability and performance of this release has been tested
-  for the first time on a 16-node, 32-GPU cluster.
+  development and deployment of scalable OpenGL applications. Equalizer 0.3 now
+  runs on Windows XP, extending the support to all major operating
+  systems. Various new features and stability improvements make this release the
+  fastest and most mature Equalizer version so far. The stability and
+  performance of this release has been verified on a 16-node, 32-GPU cluster.
 </p>
 <p>
-More information about Equalizer can be found at
-<a href="http://www.equalizergraphics.com">www.equalizergraphics.com</a>. The
-release notes for version 0.3 are available at
+  The full release notes for version 0.3 are available at<br>
 <a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html">www.equalizergraphics.com/documents/RelNotes/RelNotes_0.3.0.html</a>.
 </p>
 <p>
