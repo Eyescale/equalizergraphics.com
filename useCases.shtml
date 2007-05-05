@@ -3,6 +3,7 @@
 #define PAGE About
 #define SUBPAGE Use Cases
  
+#define DESCRIPTION "Equalizer allows a flexible configuration at runtime for various use cases."
 #define KEYWORDS "scalability, Equalizer, OpenGL, compound, cluster, multi-GPU, multicore"
 
 #include "header.shtml"

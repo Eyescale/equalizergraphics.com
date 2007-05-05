@@ -9,6 +9,7 @@
 #ifdef KEYWORDS
     <meta name="keywords" content=KEYWORDS>
 #endif
+    <meta name="robots" content="index,follow">
     <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
     <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
     <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">

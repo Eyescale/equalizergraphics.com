@@ -3,7 +3,7 @@
  */
 
 body {
-    font-family: Georgia, Garamond, Palatino, Times, serif;
+    font-family: Georgia, Garamond, Palatino, Times, Arial;
     background-color: #ffffff;
 }
 
@@ -56,7 +56,12 @@ a
   font-weight: bold;
 }
 
-a:visited
+a:hover
+{ 
+  color: black;
+}
+
+a:visited, a:active
 { 
   color: #336699;
 }

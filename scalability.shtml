@@ -3,6 +3,7 @@
 #define PAGE About
 #define SUBPAGE Scalability
  
+#define DESCRIPTION "Equalizer implements a wide range of task decomposition algorithms to parallelize the rendering of large data sets."
 #define KEYWORDS "scalability, Equalizer, OpenGL, compound, decomposition, recomposition, 2D, DB, DPlex, sort-first, sort-last, parallel, direct send, binary swap"
 
 #include "header.shtml"
