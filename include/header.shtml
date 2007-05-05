@@ -152,11 +152,15 @@
        class="used"
 #endif
     >Contact</a></p>
+
     <p><a href="contributors.html"
 #ifdef S_CONTRIBUTORS
        class="used"
 #endif
     >Contributors</a></p>
+
+    <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
+
 #ifdef S_SEARCH
     <p><a href="Search.html" class="used">Search</a></p>
 #else
