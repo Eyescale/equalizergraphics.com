@@ -1,0 +1,19 @@
+#define S_EVENTS
+#define PAGE Events
+
+#include "header.shtml"
+
+<table>
+  <tr><th>Date</th><th>Event</th><th>Description</th></tr>
+  <tr>
+    <td>20.-21. May 2007</td>
+    <td><a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
+        Graphics and Visualization 2007</a></td>
+    <td>Equalizer demonstration (21., 5pm) and presentation
+      of the <a href="restricted/directSend.pdf">Direct Send Compositing for
+      Parallel Sort-Last Rendering</a> paper</td>
+  </tr>
+</table>
+
+#include "footer.shtml"
+<!-- $Id$ -->

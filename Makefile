@@ -15,6 +15,7 @@ FILES = \
 	doc_developer.html \
 	documentation.html \
 	downloads.html \
+	events.html \
 	favicon.ico \
 	features.html \
 	impressum.html \

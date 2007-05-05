@@ -76,13 +76,6 @@
   </div>
 #endif  // S_HOME
 
-    <p><a href="news.html"
-#ifdef S_NEWS
-       class="used"
-#endif
-    >News</a></p>
-
-
     <p><a href="documentation.html"
 #ifdef S_DOCUMENTATION
        class="used"
@@ -119,11 +112,27 @@
     </div>
 #endif // S_DOCUMENTATION
 
+
     <p><a href="screenshots.html"
 #ifdef S_SCREENSHOTS
        class="used"
 #endif
     >Screenshots</a></p>
+
+
+    <p><a href="news.html"
+#ifdef S_NEWS
+       class="used"
+#endif
+    >News</a></p>
+
+
+    <p><a href="events.html"
+#ifdef S_EVENTS
+       class="used"
+#endif
+    >Events</a></p>
+
 
     <p><a href="downloads.html"
 #ifdef S_DOWNLOADS

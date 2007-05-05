@@ -12,7 +12,7 @@
 <p>
   We are pleased to announce the release of Equalizer 0.3, a framework for the
   development and deployment of scalable OpenGL applications. Equalizer 0.3 now
-  runs on Windows XP, extending the support to all major operating
+  also runs on Windows XP, extending the support to all major operating
   systems. Various new features and stability improvements make this release the
   fastest and most mature Equalizer version so far. The stability and
   performance of this release has been verified on a 16-node, 32-GPU cluster.
