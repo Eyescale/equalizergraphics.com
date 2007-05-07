@@ -23,6 +23,7 @@
   while delivering maximum performance.
   <br><a href="useCases.html">More about use cases...</a>
 </p>
+
 <h2>Compatibility</h2>
 <p>
   Equalizer is a cross-platform toolkit and is initially available for Linux and
@@ -31,6 +32,7 @@
   learn more about Equalizer, to participate in its design and development, or
   if you have any other questions.
 </p>
+
 <h2>License</h2>
 <p>
   The Equalizer framework is licensed under the
@@ -38,6 +40,29 @@
   which allows usage in commercial and open source projects without
   licensing costs, with the only restriction that any changes to the framework
   itself have to be contributed back to open source.
+</p>
+
+<h2>Features</h2>
+<p>
+  Applications written with Equalizer benefit from the following features:
+</p>
+<ul>
+  <li><b>Runtime Configurability:</b> An Equalizer application can run on any
+    configuration, from laptops to large scale visualization clusters, without
+    recompilation. The runtime configuration is externalized from the
+    application to a systemwide resource server, and choosen at runtime.</li>
+  <li><b>Runtime Scalability:</b> An Equalizer application can use multiple
+    CPU's, GPU's and computers to scale the rendering performance of a single
+    view.</li>
+  <li><b>Distributed Execution:</b> Equalizer applications can be written to
+    support cluster-based execution. The task of distributing the application
+    data is facilitated by support for versioned, distributed objects.</li>
+  <li><b>Support for Stereo and Immersive Environments:</b> Equalizer supports
+    both active and passive stereo rendering, as well as the head tracking,
+    which is required for immersive Virtual Reality installations.</li>
+</ul>
+<p>
+  <a href="/features.html">Detailed feature list...</a>
 </p>
 
 <h2>Project Vision</h2>
