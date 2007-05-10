@@ -4,23 +4,31 @@
 
 #include "header.shtml"
 
+<div class="float_right">
+  <a href="http://www.tungstengraphics.com">
+    <img src="images/tg.png" alt="Tungsten Graphics"></a>
+</div>
 <p>
   Commercial support, custom software development and porting services are
   available from
-  <a href="http://www.tungstengraphics.com">Tungsten Graphics</a>. Please
-  contact
+  <a href="http://www.tungstengraphics.com">Tungsten Graphics</a>.<br>
+  Please contact
   <a href="mailto:sales@tungstengraphics.com?subject=Equalizer%20support">sales@tungstengraphics.com</a>
   for further information.
-</p>
+</p><div class="flush_float"></div>
 
+<div class="float_right"><a href="http://www.cs.uzh.ch/vmml/">
+  <img src="images/VMML_logo_200.png" 
+       alt="Visualization and Multimedia Lab, University of Z&uuml;rich"></a>
+</div>
 <p>
   For research collaborations, please contact
   the <a href="http://www.cs.uzh.ch/vmml/">Visualization and MultiMedia Lab</a>
   at the University of Z&uuml;rich.
-</p>
+</p><div class="flush_float"></div>
 
 <p>
-  For any other inquries, please contact:
+  For all other inquries, please contact:
 </p>
 <p>
   Stefan Eilemann<br>

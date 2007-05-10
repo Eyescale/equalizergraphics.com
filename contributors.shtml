@@ -5,7 +5,9 @@
 
 <p>
   The following is a list of the major contributing institutions. Contributing
-  individuals are mentioned in the AUTHORS file distributed with Equalizer.
+  individuals are mentioned in
+  the <a href="/cgi-bin/viewvc.cgi/trunk/src/AUTHORS?view=markup">AUTHORS</a>
+  file distributed with Equalizer.
 </p>
 
 <div class="float_left"><a href="http://www.ifi.unizh.ch/vmml/">
