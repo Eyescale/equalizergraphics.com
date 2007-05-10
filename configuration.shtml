@@ -1,7 +1,7 @@
 #define S_HOME
 #define S_HOME_CONFIG
 #define PAGE About
-#define SUBPAGE Resource Management
+#define SUBPAGE Runtime Configuration
 
 #define DESCRIPTION "The Equalizer configuration server manages the resources of a visualization system"
 #define KEYWORDS "Equalizer, Chromium, scalable, cluster, visualization"
