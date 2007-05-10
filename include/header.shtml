@@ -61,13 +61,13 @@
 #ifdef S_HOME_CONFIG
        class="used"
 #endif
-       >Resource Management</a></p>
+       >Runtime Configuration</a></p>
 
     <p><a href="scalability.html"
 #ifdef S_HOME_SCALABILITY
        class="used"
 #endif
-       >Scalability</a></p>
+       >Runtime Scalability</a></p>
 
     <p><a href="api.html"
 #ifdef S_HOME_API

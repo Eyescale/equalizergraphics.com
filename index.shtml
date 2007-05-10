@@ -26,11 +26,10 @@
 
 <h2>Compatibility</h2>
 <p>
-  Equalizer is a cross-platform toolkit and is initially available for Linux and
-  Mac OS X. A Windows version is planned for the next
-  release. Please <a href="contact.html">contact us</a> if you are interested to
-  learn more about Equalizer, to participate in its design and development, or
-  if you have any other questions.
+  Equalizer is a cross-platform toolkit and is available for Linux, Windows XP
+  and Mac OS X. Please <a href="contact.html">contact us</a> if you are
+  interested to learn more about Equalizer, to participate in its design and
+  development, or if you have any other questions.
 </p>
 
 <h2>License</h2>
@@ -43,17 +42,23 @@
 </p>
 
 <h2>Features</h2>
+<div class="float_right">
+  <a href="http://www.opengl.org"><img src="images/ogl.jpg"
+                                       alt="OpenGL logo"></a>
+</div>
 <p>
-  Applications written with Equalizer benefit from the following features:
+  Applications written using the <a href="api.html">Equalizer programming
+  interface</a> benefit from the following features:
 </p>
 <ul>
-  <li><b>Runtime Configurability:</b> An Equalizer application can run on any
-    configuration, from laptops to large scale visualization clusters, without
-    recompilation. The runtime configuration is externalized from the
-    application to a systemwide resource server, and choosen at runtime.</li>
-  <li><b>Runtime Scalability:</b> An Equalizer application can use multiple
-    CPU's, GPU's and computers to scale the rendering performance of a single
-    view.</li>
+  <li><a href="configuration.html">Runtime Configurability</a>: An Equalizer
+    application can run on any configuration, from laptops to large scale
+    visualization clusters, without recompilation. The runtime configuration is
+    externalized from the application to a systemwide resource server, and
+    choosen at runtime.</li>
+  <li><a href="scalability.html">Runtime Scalability</a>: An Equalizer
+    application can use multiple CPU's, GPU's and computers to scale the
+    rendering performance of a single OpenGL view.</li>
   <li><b>Distributed Execution:</b> Equalizer applications can be written to
     support cluster-based execution. The task of distributing the application
     data is facilitated by support for versioned, distributed objects.</li>
@@ -81,61 +86,6 @@
   hardware manufacturers to contribute to this project.
 </p>
 
-<h2>Components</h2>
-<h3>Resource Management System</h3>
-<p>
-  The core of Equalizer is the configuration server. It is configured once for a
-  visualization system, and it knows the system's resources and how to use
-  them. It will provide system-wide load balancing and resource allocation for
-  all applications.
-  <br><a href="configuration.html">More about resource management...</a>
-</p>
-<h3>Programming Framework</h3>
-<div class="float_right">
-  <a href="http://www.opengl.org"><img src="images/ogl.jpg"
-                                       alt="OpenGL logo"></a>
-</div>
-<p>
-  Application developers use the Equalizer client library to write parallel,
-  scalable OpenGL applications. The Equalizer client library is the interface to
-  the Equalizer server, and it abstracts the application from the actual
-  configuration of the execution environment. Compared to other
-  cluster-rendering software, it does not replace the OpenGL library but
-  parallelizes and distributes the application's rendering code for optimal
-  performance.
-</p><p>
-  Equalizer provides the natural execution framework for any multi-pipe
-  application and does not impose any specific rendering framework, such
-  as a scenegraph, to the application. It uses a minimally invasive approach,
-  providing the functionality common to multipipe applications, thus
-  making it as easy as possible to port existing applications to Equalizer.
-  <br><a href="api.html">More about the programming interface...</a>
-</p><p>
-  In addition to traditional multi-pipe execution, where one graphics card 
- drives one display device, Equalizer offers a broad range of
-  decomposition modes to accelerate the rendering of large data sets by
-  parallelizing the rendering of a single view across multiple graphics cards,
-  processors and computers.
-  <br><a href="scalability.html">More about scalability...</a>
-</p>
-<h3>Transparent OpenGL Layer</h3>
-<p>
-  The transparent layer will enable the execution of unmodified OpenGL
-  applications. They can take advantage of the system's resource management and
-  load balancing, without any additional configuration. This layer will allow a
-  seamless integration of unmodified and scalable applications on the same
-  system, and deliver similar performance as existing solutions.
-</p>
-<h3>Distributed Scene Graphs</h3>
-<p>
-  Equalizer will provide sample implementations for popular scene graphs, such
-  as <a href="http://www.openscenegraph.org/">OpenSceneGraph</a>, 
-  <a href="http://www.coin3d.org/">Coin3D</a>
-  or <a href="http://www.ogre3d.org/">Ogre3D</a>. Applications using these scene
-  graphs can then easily implement parallel, scalable applications which
-  integrate well with other applications based on Equalizer, and profit from the
-  feature set of Equalizer.
-</p>
 <div class="footnote">
 Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple
 Computer, Inc. OpenGL&reg; are trademarks of Silicon Graphics, Inc. Windows&reg;

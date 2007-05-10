@@ -15,8 +15,16 @@
   <a href="#advanced">Advanced Scalability Features</a><br>
 </p>
 
+
 <hr><a name="overview"></a>
 <h2>Overview</h2>
+<p>
+  In addition to the traditional multi-pipe execution, where one graphics card
+  drives one or more display devices, Equalizer offers a broad range of
+  decomposition modes to accelerate the rendering of large data sets by
+  parallelizing the rendering of a single view across multiple graphics cards,
+  processors and computers.
+</p>
 <p>
   Equalizer implements a wide range of task decomposition algorithms to
   parallelize the rendering of large data sets. Multiple graphics cards,
@@ -27,24 +35,27 @@
   described in a <a href="documents/design/compounds.html">technical
   specification</a>.
 </p>
+<p>
+  All scalability features apply to graphic clusters and multi-GPU systems in
+  the same way. Multi-GPU systems have the advantadge of a shared memory, which
+  eliminates the need of transferring pixel data across a network, but on the
+  other hand the number of GPUs per system is limited.
+</p>
 <div class="float_right"><a href="images/perf.png">
     <img src="images/perf-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU workstation</div>
 </div>
 <p>
-  All scalability features apply to graphic clusters and multi-GPU systems in
-  the same way. Multi-GPU systems have the advantadge of a shared memory, which
-  eliminates the need of transferring pixel data across a network, but the
-  number of GPUs per system is limited. The example on the right shows the
-  performance benefit over the transparent SLI mode typically used. The first
-  configuration measures the baseline performance using only a single GPU. The
-  second one uses the same Equalizer configuration, but transparently
-  distributed across the two GPUs by SLI.  The two remaining configurations are
-  using two rendering threads in DB (sort-last) and 2D (sort-first) mode, to
-  scale the rendering performance of a single view, like in SLI mode. Note that
-  the pixel transfer does not yet use SLI, but is executed through main memory,
-  the slowest possible path. The example used is the stock Equalizer polygon
-  rendering application, using a data set of 12.6 million triangles.
+  The example on the right shows the performance benefit over the typically used
+  transparent SLI mode. The first configuration measures the baseline
+  performance using only a single GPU. The second one uses the same Equalizer
+  configuration, but transparently distributed across the two GPUs by SLI.  The
+  two remaining configurations are using two rendering threads in DB (sort-last)
+  and 2D (sort-first) mode, to scale the rendering performance of a single view,
+  like in SLI mode. Note that the pixel transfer does not yet use SLI, but is
+  executed through main memory, the slowest possible path. The example used is
+  the stock Equalizer polygon rendering application, using a data set of 12.6
+  million triangles.
 </p><div class="flush_float"></div>
 
 <hr><a name="basic"></a>

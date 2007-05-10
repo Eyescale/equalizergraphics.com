@@ -1,16 +1,12 @@
 #define S_HOME
 #define S_HOME_API
 #define PAGE About
-#define SUBPAGE Programming Interface
+#define SUBPAGE Parallel Programming Interface
  
-#define KEYWORDS "API, Equalizer, OpenGL, scalable, cluster, visualization"
+#define KEYWORDS "Parallel Programming Interface, multithreaded GLUT, parallel OpenGL"
 
 #include "header.shtml"
 
-<div class="float_right"><a href="images/executionFlow.png">
-    <img src="images/executionFlow-small.jpg" 
-         alt="Execution flow of a singlepipe and a multipipe application">
-</a></div>
 <p>
   The Equalizer programming interface and execution model provides,
   over-simplified, a distributed, scalable, multipipe, multithreaded GLUT
@@ -19,20 +15,43 @@
   programmers.
 </p>
 <p>
+  Application developers use the Equalizer client library to write parallel,
+  scalable OpenGL applications. The Equalizer client library is the interface to
+  the Equalizer server, and it abstracts the application from the actual
+  configuration of the execution environment. Compared to other
+  cluster-rendering software, it does not replace the OpenGL library but
+  parallelizes and distributes the application's rendering code for optimal
+  performance.
+</p>
+<p>
+  The API is <em>minimally invasive</em> and allows to retain almost all of the
+  application's OpenGL rendering code. Equalizer provides the natural execution
+  framework for any multi-pipe application and does not impose any specific
+  rendering framework, such as a scenegraph, to the application. It follows the
+  natural execution model of any multipipe application, and provided the
+  functionality common to multipipe applications, thus making it as easy as
+  possible to port existing applications to Equalizer.
+</p>
+<p>
   Equalizer uses a callback-driven interface. Applications provide their
   rendering methods, which are called by the Equalizer framework according to
   the current configuration and system load. Process and thread creation, task
   synchronization and network connections are externalized from the application
   and handled by the Equalizer framework.
 </p>
+
+<div class="float_right"><a href="images/executionFlow.png">
+    <img src="images/executionFlow-small.jpg" 
+         alt="Execution flow of a singlepipe and a multipipe application">
+</a></div>
+
 <p>
-  The multipipe programming interface of Equalizer follows the natural execution
-  model of any multipipe application. In order to port an application to run in
-  a multipipe environment, the rendering routines have to be separated from the
-  core application. The Equalizer framework will then take care of the
-  multiprocessing and synchronization and call the application-provided
-  rendering methods in parallel. The basic execution flow of a singlepipe and a
-  multipipe application is show on the right (click on picture to enlarge).
+  In order to port an application to run in a multipipe environment, the
+  rendering routines have to be separated from the core application. The
+  Equalizer framework will then take care of the multiprocessing and
+  synchronization and call the application-provided rendering methods in
+  parallel. The basic execution flow of a singlepipe and a multipipe application
+  is show on the right (click on picture to enlarge).
 </p><p>
   Equalizer abstracts common graphic entities into C++ classes, for example:
 </p>
@@ -43,25 +62,29 @@
   <li><b>Channel</b> - a viewport within a window</li>
 </ul>
 <p>
-The application subclasses these entities, and overrides methods to provide
-the application's rendering code. Each method corresponds to a task, and
-for all of them Equalizer provides a default method which implements the typical
-use case. This allows a quick start for the developer, which can replace the
-defaults gradually with his own code. The 
-<a href="documents/design/taskMethods.html">full list of task methods</a>
-is part of the <a href="doc_developer.html">developer documentation</a>.
-Some of the most important methods are:
-</p><ul>
-  <li><a href="documents/design/taskMethods.html#channeldraw">
-      <b>Channel::frameDraw</b></a> - render using the provided frustum,
-    viewport and range</li>
-  <li><a href="documents/design/taskMethods.html#windowinit">
-      <b>Window::configInit</b></a> - initialize OpenGL drawable and state</li>
-  <li><a href="documents/design/taskMethods.html#pipestartframe">
-      <b>Pipe::frameStart</b></a> - update frame-specific data</li>
-  <li><a href="documents/design/taskMethods.html#nodeinit">
-      <b>Node::configInit</b></a> - initialize per node application data</li>
-</ul><p>
+  The application subclasses these entities, and
+  overrides <a href="documents/design/taskMethods.html">task methods</a> to
+  provide the application's rendering code. Each method corresponds to a task,
+  and for all of them Equalizer provides a default method which implements the
+  typical use case. This allows a quick start for the developer, which can
+  replace the defaults gradually with his own
+  code. The <a href="documents/design/taskMethods.html">full list of task
+  methods</a> is part of the <a href="doc_developer.html">developer
+  documentation</a>.  Some of the most important methods are:
+  <ul>
+    <li><a href="documents/design/taskMethods.html#channeldraw">
+        <b>Channel::frameDraw</b></a> - render using the provided frustum,
+      viewport and range</li>
+    <li><a href="documents/design/taskMethods.html#windowinit">
+        <b>Window::configInit</b></a> - initialize OpenGL drawable and
+      state</li>
+    <li><a href="documents/design/taskMethods.html#pipestartframe">
+        <b>Pipe::frameStart</b></a> - update frame-specific data</li>
+    <li><a href="documents/design/taskMethods.html#nodeinit">
+        <b>Node::configInit</b></a> - initialize per node application data</li>
+  </ul>
+</p>
+<p>
 Equalizer provides an API to build network-distributed applications. In contrast
 to other cluster API's, such as MPI or PVM, this API is designed for the
 development of interactive applications. Certain characteristics of
