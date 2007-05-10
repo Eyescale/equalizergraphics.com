@@ -4,23 +4,36 @@
 
 #include "header.shtml"
 
-For Equalizer consulting, as well as visualization software development, porting
-and tuning, please contact:
+<p>
+  Commercial support, custom software development and porting services are
+  available from
+  <a href="http://www.tungstengraphics.com">Tungsten Graphics</a>. Please
+  contact
+  <a href="mailto:sales@tungstengraphics.com?subject=Equalizer%20support">sales@tungstengraphics.com</a>
+  for further information.
+</p>
 
 <p>
-Stefan Eilemann<br>
-Faubourg de H&ocirc;pital 12<br>
-CH-2000 Neuch&acirc;tel<br>
+  For research collaborations, please contact
+  the <a href="http://www.cs.uzh.ch/vmml/">Visualization and MultiMedia Lab</a>
+  at the University of Z&uuml;rich.
+</p>
+
+<p>
+  For any other inquries, please contact:
 </p>
 <p>
-Resume: <a href="documents/CV_Stefan_Eilemann.pdf">PDF</a><br>
-List of Projects: <a href="documents/Projects_Stefan_Eilemann.pdf">PDF</a><br>
-Telefon: +41 76 33 77 247<br>
-Email: <a href="mailto:eile@equalizergraphics.com?subject=Equalizer">
+  Stefan Eilemann<br>
+  Faubourg de H&ocirc;pital 12<br>
+  CH-2000 Neuch&acirc;tel<br>
+</p>
+<p>
+  Resume: <a href="documents/CV_Stefan_Eilemann.pdf">PDF</a><br>
+  List of Projects: <a href="documents/Projects_Stefan_Eilemann.pdf">PDF</a><br>
+  Telefon: +41 76 33 77 247<br>
+  Email: <a href="mailto:eile@equalizergraphics.com?subject=Equalizer">
     eile@equalizergraphics.com</a><br>
-</p>
-<p>
-<a href="https://www.linkedin.com/in/eilemann" ><img src="https://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif" width="80" height="15" border="0" alt="LinkedIn profile"></a>
+  <a href="https://www.linkedin.com/in/eilemann" ><img src="https://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif" width="80" height="15" border="0" alt="LinkedIn profile"></a>
 </p>
 
 #include "footer.shtml"
