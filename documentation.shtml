@@ -32,6 +32,12 @@
     print two-sided).
   </li>
 
+  <li><a href="documents/EGPGV07.html">Direct Send Compositing
+      for Parallel Sort-Last Rendering</a> is the paper presentation for the
+    Equalizer paper with the same name at EGPGV07,
+    <a href="documents/EGPGV07.pdf">pdf</a> or
+    <a href="documents/EGPGV07.html">html</a>.</li>
+
   <li><a href="documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
     is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
     based on the overview presentation but features more technical content about

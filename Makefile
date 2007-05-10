@@ -31,6 +31,9 @@ FILES = \
 	useCases.html \
         robots.txt \
 	documents/CV_Stefan_Eilemann.pdf \
+	documents/EGPGV07.html \
+	documents/EGPGV07.html_files \
+	documents/EGPGV07.pdf \
 	documents/Equalizer.html \
 	documents/Equalizer.html_files \
 	documents/Equalizer.pdf \
