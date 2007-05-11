@@ -4,6 +4,11 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>11. May 2007</b> A three-year research grant titled
+    <a href="http://www.projectdb.snf.ch/webforms/ProjectDetail.aspx?ID=9ae807a8-906b-4f4c-8fe4-a4d7d9b14a0e">VISS:
+      Visualization Infrastructures for Scalable Scientific Computing</a> for
+    further research around Equalizer has been granted by the Swiss National
+    Science Foundation.</li>
   <li><b>4. May 2007</b> <a href="news/Release_0.3.html">Released Version
       0.3</a>.</li>
   <li><b>20./21. May 2007</b> Equalizer demonstration (21. at 5pm) and
