@@ -93,7 +93,8 @@
   and explicitly configure SDP socket connections:
   <ul>
     <li>Unset SdpApplications.</li>
-    <li>Set the global connection type to SDP.</li>
+    <li>Set the global connection type to SDP (EQ_CONNECTION_IATTR_TYPE SDP in
+      config file globals).</li>
     <li>Start the server as usual, i.e., without the <code>--eq-listen</code>
       parameter. The server will create one default connection (SDP), unless
       connections are specified explicetely in the configuration file.</li>
@@ -159,7 +160,10 @@
 
 <h2>Linux</h2>
 <p>
-  Not yet tested.
+  The Linux usage of SDP is very similar to the Windows usage described
+  above. For the implicit, transparent mode just LD_PRELOAD the SDP library
+  (typically libsdp.so) instead of setting SdpApplications. For explicit
+  support, follow the same configuration as for Windows.
 </p>
 
 #include "footer.shtml"
