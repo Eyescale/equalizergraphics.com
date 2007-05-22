@@ -6,6 +6,12 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td>11.-15. June 2007</td>
+    <td><a href="http://developer.apple.com/wwdc/">WWDC07</a></td>
+    <td>TG Chromium and Equalizer demonstrations on an Apple display wall made
+    of 3x5 30-inch Cinema Displays</td>
+  </tr>
+  <tr>
     <td>20.-21. May 2007</td>
     <td><a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
         Graphics and Visualization 2007</a></td>
