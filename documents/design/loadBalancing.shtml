@@ -11,7 +11,15 @@
   State: Design Brainstorming
 </p>
 
+<h2>Overview</h2>
 <p>
+  Compound load balancing tries to optimally use all child resources assigned
+  to a compound. Higher-level load balancing will dynamically change the
+  resource assigned to a compound, based on the overall system load.
+</p>
+<p>
+  Compound load balancing either adapts the viewport or the range of the
+  children to make sure all resource are busy all the time.
 </p>
 
 <h2>Specification</h2>

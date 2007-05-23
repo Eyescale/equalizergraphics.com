@@ -58,5 +58,12 @@
   </tr>
 </table>
 
+<p>
+  It is also possible to write parallel, scalable applications with Chromium,
+  but doing so is at least the same effort as porting to Equalizer, and the end
+  result is a less flexible application, since certain functionality is
+  typically hardcoded, e.g., the task decomposition.
+</p>
+
 #include "footer.shtml"
 <!-- $Id$ -->
