@@ -6,8 +6,18 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td>18.-22. June 2007</td>
+    <td><a href="http://ecole-ete.bruyeres.cea.fr/">Ecoles d'Ete
+        CEA-EDF-INRIA</a> (in french)</td>
+    <td>The french atomic energy commissariat
+      (<a href="http://www.cea.fr/">CEA</a>), 
+      <a href="http://www.edf.fr/">EDF</a> and 
+      <a href="http://www.inria.fr/">INRIA</a> are holding a Equalizer lab
+      session as part of their summer school on scientific visualization.</td>
+  </tr>
+  <tr>
     <td>11.-15. June 2007</td>
-    <td><a href="http://developer.apple.com/wwdc/">WWDC07</a></td>
+    <td><a href="http://developer.apple.com/wwdc/">Apple WWDC07</a></td>
     <td>TG Chromium and Equalizer demonstrations on an Apple display wall made
     of 3x5 30-inch Cinema Displays</td>
   </tr>
