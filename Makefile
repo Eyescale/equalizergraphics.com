@@ -109,6 +109,7 @@ FILES = \
 	documents/glAsync/tabs.css \
 	documents/Howtos/glutToEqualizer.html \
 	documents/user/configTool.html \
+	documents/user/crComparison.html \
 	documents/user/eqPly.html \
 	news/Release_0.1.html \
 	news/Release_0.2.html \

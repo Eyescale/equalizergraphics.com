@@ -1,0 +1,62 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_ENDUSER
+#define PAGE Documentation
+#define SUBPAGE End User
+#define TITLE Chromium vs Equalizer Comparison
+
+#include "header.shtml"
+
+<p>
+  <a href="http://chromium.sourceforge.net">Chromium</a> and Equalizer solve a
+  similar problem by enabling applications to use multiple GPU's, but have quite
+  disjunct use cases and characteristics.
+</p>
+<p>
+  In one sentence: You want to use Chromium if you want to run an unmodified
+  application on a display wall or similar setup, and you want to use Equalizer
+  if you want scalability, flexibility and compatibility.
+</p>
+<p>
+  Please note that most other multipipe rendering software toolkits fall into
+  the same category as Chromium, by distributing the OpenGL command stream. The
+  <a href="documents/WhitePapers/ParallelRenderingSystems.pdf">Analysis of
+    Parallel Rendering Systems</a> white paper gives more background on the
+  subject.
+</p>
+<p>
+  The following table outlines the differences between the two solutions in a
+  simplified way:
+</p>
+
+<table>
+  <tr><th>Chromium</th><th>Equalizer</th></tr>
+  <tr>
+    <td>runs unmodified applications</td>
+    <td>minimally invasive API: application has to be adapted</td>
+  </tr>
+  <tr>
+    <td>focus on transparency for applications</td>
+    <td>focus on parallel rendering performance and scalability</td>
+  </tr>
+  <tr>
+    <td>distributes OpenGL command stream</td>
+    <td>parallelizes application</td>
+  </tr>
+  <tr>
+    <td>single application rendering thread</td>
+    <td>multithreaded and potentially distributed application</td>
+  </tr>
+  <tr>
+    <td>mostly for rendering to multiple, planar displays</td>
+    <td>Multi-display and immersive installations, many-to-one scalable
+      rendering</td>
+  </tr>
+  <tr>
+    <td>limited OpenGL extension support and compatiblity</td>
+    <td>full OpenGL compatiblity: does not interfere with OpenGL rendering
+      code</td>
+  </tr>
+</table>
+
+#include "footer.shtml"
+<!-- $Id$ -->

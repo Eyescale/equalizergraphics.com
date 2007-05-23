@@ -27,9 +27,10 @@
 <h2>Compatibility</h2>
 <p>
   Equalizer is a cross-platform toolkit and is available for Linux, Windows XP
-  and Mac OS X. Please <a href="contact.html">contact us</a> if you are
-  interested to learn more about Equalizer, to participate in its design and
-  development, or if you have any other questions.
+  and Mac OS X and supports both 32-bit and 64-bit
+  execution. Please <a href="contact.html">contact us</a> if you are interested
+  to learn more about Equalizer, to participate in its design and development,
+  or if you have any other questions.
 </p>
 
 <h2>License</h2>
@@ -62,11 +63,13 @@
   <li><b>Distributed Execution:</b> Equalizer applications can be written to
     support cluster-based execution. The task of distributing the application
     data is facilitated by support for versioned, distributed objects.</li>
-  <li><b>Support for Stereo and Immersive Environments:</b> Equalizer supports
-    both active and passive stereo rendering, as well as the head tracking,
-    which is required for immersive Virtual Reality installations.</li>
+  <li><a href="documents/design/immersive.html">Support for Stereo and Immersive
+      Environments:</a> Equalizer supports both active and passive stereo
+    rendering, as well as the head tracking, which is required for immersive
+    Virtual Reality installations.</li>
 </ul>
 <p>
+  <a href="/documents/user/crComparison.html">Difference to Chromium...</a><br>
   <a href="/features.html">Detailed feature list...</a>
 </p>
 
