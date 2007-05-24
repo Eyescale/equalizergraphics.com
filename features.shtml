@@ -66,6 +66,10 @@
       clients</a></td>
   <td>0.3</td>
 </tr><tr>
+  <td><a href="documents/design/objectManager.html">OpenGL object
+      manager</a></td>
+  <td>0.3</td>
+</tr><tr>
   <td>FBO support</td>
   <td>?</td>
 </tr><tr>

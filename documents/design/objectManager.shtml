@@ -8,7 +8,10 @@
 
 <p>
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-State: Design Brainstorming
+State:
+<ul>
+  <li>Base class and display lists implemented in 0.3</li>
+</ul>
 </p>
 
 <h2>Overview</h2>
@@ -22,7 +25,9 @@ State: Design Brainstorming
 <h2>Objects</h2>
 <p>
   The API will be created as needed. Possible object types are: display lists,
-  textures, GLSL shaders, VBO's, ...
+  textures, GLSL shaders, VBO's, etc. See the 
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/client/objectManager.h?view=markup">header file</a>
+ (src/lib/client/objectManager.h) for the currently implemented types.
 </p>
 
 <h2>API</h2>
