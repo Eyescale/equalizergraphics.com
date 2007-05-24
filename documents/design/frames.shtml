@@ -33,7 +33,7 @@
 <a name="Overview"></a>
 <h2>Overview</h2>
 <p>
-  <img src="documents/design/frames.png" 
+  <img src="documents/design/images/frames.png" 
        alt="UML diagram of compound frames">
 </p><p>
   Frames can be input frames or output frames. Output frames produce the data

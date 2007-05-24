@@ -70,6 +70,7 @@ FILES = \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
 	documents/design/infiniBand.html \
+	documents/design/loadBalancing.html \
 	documents/design/nodeConnect.html \
 	documents/design/nonthreaded.html \
 	documents/design/environment.html \
@@ -121,15 +122,7 @@ FILES = \
 IMAGES_SRC = \
 	$(wildcard images/*png) \
 	$(wildcard images/*jpg) \
-	documents/design/codingStyle.png \
-	documents/design/frames.png \
-	documents/design/images/eventHandling.png \
-	documents/design/images/mainloop.png \
-	documents/design/images/mono.png \
-	documents/design/images/nodeConnect.png \
-	documents/design/images/packets.png \
-	documents/design/images/immersive.png \
-	documents/design/images/stereo.png \
+	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \
 
 INCLUDES = \

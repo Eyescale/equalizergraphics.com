@@ -19,14 +19,14 @@
   matches this document at the time of writing (UPDATE), but may diverge over
   time.
 </p>
+
+<h2>Packets</h2>
 <div class="float_right">
   <a href="documents/design/images/packets.png">
     <img src="documents/design/images/packets-small.jpg" 
          alt="Flow chart of the eqNet packet handling"/></a>
   <div class="label">Equalizer Packet Handling</div>
 </div>
-
-<h2>Packets</h2>
 <p>
   <code>Packet</code>s are the base piece of information exchanged
   between <code>Node</code>s. A packet has a data type to identify the object it

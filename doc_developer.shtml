@@ -24,7 +24,7 @@
   <li><a href="documents/design/objects.html">Distributed Objects</a>
     provides an overview on how to implement static and versioned objects, which
     can be instanciated on multiple nodes.</li>
-  <li><a href="documents/design/codingStyle.png">codingStyle.png</a>
+  <li><a href="documents/design/images/codingStyle.png">codingStyle.png</a>
     illustrates the C++ coding style used in Equalizer, to ensure a consistent
     appearance for better readability.</li>
   <li><a href="documents/design/threads.html">Threads</a> is a glossary
