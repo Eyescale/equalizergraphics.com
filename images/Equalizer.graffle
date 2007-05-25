@@ -103,6 +103,11 @@
 					<key>Draws</key>
 					<string>NO</string>
 				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>Width</key>
@@ -124,6 +129,11 @@
 			<key>Style</key>
 			<dict>
 				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
 				<dict>
 					<key>Draws</key>
 					<string>NO</string>
@@ -153,6 +163,11 @@
 					<key>Draws</key>
 					<string>NO</string>
 				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>Width</key>
@@ -172,6 +187,11 @@
 			<key>Style</key>
 			<dict>
 				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
 				<dict>
 					<key>Draws</key>
 					<string>NO</string>
@@ -376,7 +396,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2006-10-28 15:16:22 +0200</string>
+	<string>2007-05-24 18:47:36 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
@@ -443,25 +463,17 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<string>0</string>
-		<key>DrawerOpen</key>
-		<false/>
+		<integer>0</integer>
 		<key>DrawerTab</key>
 		<string>Outline</string>
 		<key>DrawerWidth</key>
 		<real>209</real>
-		<key>FitInWindow</key>
-		<true/>
 		<key>Frame</key>
 		<string>{{279, 205}, {841, 673}}</string>
-		<key>ShowRuler</key>
-		<false/>
-		<key>ShowStatusBar</key>
-		<true/>
 		<key>VisibleRegion</key>
 		<string>{{-1, 0}, {821.69, 572}}</string>
 		<key>Zoom</key>
-		<string>1.005245</string>
+		<real>1.0052447319030762</real>
 	</dict>
 </dict>
 </plist>
