@@ -9,6 +9,7 @@ FILES = \
 	$(wildcard downloads/*gz) \
 	$(wildcard downloads/*rpm) \
 	api.html \
+	compatibility.html \
 	configuration.html \
 	contact.html \
 	contributors.html \

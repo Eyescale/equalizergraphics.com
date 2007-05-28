@@ -99,6 +99,12 @@
 #endif
          >Feature List</a></p>
 
+      <p><a href="compatibility.html"
+#ifdef S_DOCUMENTATION_COMPATIBILITY
+         class="used"
+#endif
+         >Compatibility Matrix</a></p>
+
       <p><a href="doc_developer.html"
 #ifdef S_DOCUMENTATION_DEVELOPER
          class="used"

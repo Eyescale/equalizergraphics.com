@@ -20,8 +20,8 @@
   workstations. Equalizer is built upon a parallel, scalable programming
   interface solving problems that are common to any multipipe application. The
   API is <em>minimally invasive</em>, making application porting as easy as
-  possible while delivering maximum performance.
-  <br><a href="useCases.html">More about use cases...</a>
+  possible while delivering maximum performance.<br>
+  <a href="useCases.html">Equalizer use cases...</a>
 </p>
 
 <h2>Compatibility</h2>
@@ -30,7 +30,8 @@
   and Mac OS X and supports both 32-bit and 64-bit
   execution. Please <a href="contact.html">contact us</a> if you are interested
   to learn more about Equalizer, to participate in its design and development,
-  or if you have any other questions.
+  or if you have any other questions.<br>
+  <a href="compatibility.html">Full compatibility matrix...</a>
 </p>
 
 <h2>License</h2>

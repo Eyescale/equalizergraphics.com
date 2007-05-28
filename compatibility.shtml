@@ -1,0 +1,66 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_COMPATIBILITY
+#define PAGE Documentation
+#define SUBPAGE Compatibility Matrix
+
+#include "header.shtml"
+
+<p>
+  Please 
+  <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20platform%20support">get in
+    contact</a> with us if you need or anticipate additional platform support.
+</p>
+
+<table>
+<tr>
+  <th width="25%"></th>
+  <th width="25%">WGL</th>
+  <th width="25%">GLX</th>
+  <th width="25%">CGL</th>
+</tr>
+<tr>
+  <th>Windows XP<sup>1</sup></th>
+  <td bgcolor="#ccffcc">window uses handle (HWND) and WGL context (HGLRC)</td>
+  <td bgcolor="#ffcccc">not yet implemented</td>
+  <td bgcolor="#ffcccc">API does not exist</td>
+</tr>
+
+<tr>
+  <th>Linux<sup>2</sup></th>
+  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#ccffcc">pipe uses X11 display connection (Display*), window uses
+    X11 drawable (XID) and glX context (GLXContext) </td>
+  <td bgcolor="#ffcccc">API does not exist</td>
+</tr>
+
+<tr>
+  <th>Mac OS X 10.4<sup>3</sup></th>
+  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#ccffcc">same as Linux</td>
+  <td bgcolor="#ffffcc">fullscreen only, event handling not yet implemented</td>
+</tr>
+
+<tr>
+  <th>Other Unix-like<sup>4</sup></th><td bgcolor="#ffcccc">API does not
+  exist</td>
+  <td bgcolor="#ffffcc">same as Linux, minimal porting needed</td>
+  <td bgcolor="#ffcccc">API does not exist</td>
+</tr>
+</table>
+
+<table>
+  <tr><th>1</th><td>Visual Studio 2005 project files, tested both in 32 bit and
+      64 bit.</td></tr>
+  <tr><th>2</th><td>tested both in 32 bit and 64 bit i386, as well as
+      ia64. Regular testing on Ubuntu 6.10 and RHEL4.</td></tr>
+  <tr><th>3</th><td>32 bit only, OpenGL and X11 libraries do not exist in 64 bit
+      variants. Tested on i386 and ppc. Universal libraries and binary
+      support. Makefile-based build environment, no XCode or framework support
+      yet.</td></tr>
+  <tr><th>4</th><td>Version 0.1 was tested on SGI IRIX. Porting to other
+      Unix-like operating system requires minimal porting effort, mostly for
+      compiler differences.</td></tr>
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
