@@ -131,6 +131,11 @@ div.navigation {
     border: 2px;
 }
 
+div.navigation iframe { 
+    border: 0;
+    padding: 0;
+}
+
 div.subnavigation { 
     background-color: #bbbbbb;
     padding: 2px;

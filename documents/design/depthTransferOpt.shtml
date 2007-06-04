@@ -54,11 +54,15 @@ State: Not usable (see Implementation)
   <!--
       Check for OpenGL 2.0 availability
       Create resource manager class (texture id's, shader obj's, etc.)
-      Allocate, bind and download depth and color texture
-      Allocate and bind assemble fragment shader (sets frag color and depth from
-      textures)
+      Allocate, bind and download depth texture
+      Allocate and bind assemble fragment shader 
+          set frag.depth = depth_texture( frag.pos )
+          frag.color doesn't matter:
+              if behind, depth test fails and old color stays in place
+              else will be overwritten by color drawpixels later
       Draw textured quad
       Restore state
+      draw color pixels w/ stencil test
     -->
 </p>
 

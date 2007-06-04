@@ -91,7 +91,7 @@
 loadbalancer
 {
     name          string
-    mode          [ 2D | DB ]
+    split         [ 2D | DB ]
 }
 
 compound
