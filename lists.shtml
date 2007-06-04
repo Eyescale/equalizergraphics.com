@@ -9,7 +9,7 @@
   <tr>
     <td nowrap>eq-interest</td>
     <td>Low-volume list which receives release announcements and other
-      news around Equalizer.</td>
+      news items about Equalizer.</td>
     <td nowrap>
       <a href="pipermail/eq-interest/">List Archive</a><br>
       <a href="cgi-bin/mailman/listinfo/eq-interest">Subscribe</a>
