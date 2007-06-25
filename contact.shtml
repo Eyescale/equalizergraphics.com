@@ -5,15 +5,15 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="http://www.tungstengraphics.com">
-    <img src="images/tg.png" alt="Tungsten Graphics"></a>
+  <a href="http://www.eyescale.ch">
+    <img src="images/eyescale.png" alt="Eyescale Software"></a>
 </div>
 <p>
   Commercial support, custom software development and porting services are
   available from
-  <a href="http://www.tungstengraphics.com">Tungsten Graphics</a>.<br>
+  <a href="http://www.eyescale.ch">EyeScale</a>.<br>
   Please contact
-  <a href="mailto:sales@tungstengraphics.com?subject=Equalizer%20support">sales@tungstengraphics.com</a>
+  <a href="mailto:info@eyescale.ch?subject=Equalizer%20support">info@eyescale.ch</a>
   for further information.
 </p><div class="flush_float"></div>
 
