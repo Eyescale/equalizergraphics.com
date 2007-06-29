@@ -48,7 +48,6 @@ FILES = \
 	documents/EqualizerVizSIG06.html_files \
 	documents/EqualizerVizSIG06.pdf \
 	documents/Flyer.pdf \
-	documents/FlyerLetter.pdf \
 	documents/FlyerWeb.pdf \
 	documents/ParallelGraphicsProgramming.pdf \
 	documents/ParallelGraphicsProgramming.html \

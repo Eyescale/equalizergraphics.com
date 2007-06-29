@@ -190,8 +190,11 @@
   <td>OS X 10.4 Universal, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
+  <td>OS X 10.4 Universal, AGL (partial)</td>
+  <td>svn</td>
+</tr><tr>
   <td>OS X 10.4 Universal, CGL (partial)</td>
-  <td>0.1</td>
+  <td>0.1-0.3</td>
 </tr><tr>
   <td>Windows XP</td>
   <td>0.3</td>
