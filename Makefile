@@ -112,6 +112,7 @@ FILES = \
 	documents/user/configTool.html \
 	documents/user/crComparison.html \
 	documents/user/eqPly.html \
+	news/EqualizerNewsJuly07.html \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
 	news/Release_0.3.html \
@@ -122,6 +123,8 @@ FILES = \
 IMAGES_SRC = \
 	$(wildcard images/*png) \
 	$(wildcard images/*jpg) \
+	$(wildcard images/NewsJune07/*gif) \
+	$(wildcard images/NewsJune07/*jpg) \
 	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \
 
