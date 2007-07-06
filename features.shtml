@@ -81,6 +81,15 @@
 </tr><tr>
   <td><a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">software edge blending</a></td>
   <td>?</td>
+</tr><tr>
+  <td>application-specified frustra for destination views</td>
+  <td>?</td>
+</tr><tr>
+  <td>mono/stereo switching</td>
+  <td>?</td>
+</tr><tr>
+  <td>orthographic frustum support</td>
+  <td>?</td>
 </tr>
 
 <tr><td colspan="2"><hr></td></tr>

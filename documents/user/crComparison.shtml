@@ -47,7 +47,8 @@
     <td>multithreaded and potentially distributed application</td>
   </tr>
   <tr>
-    <td>mostly for rendering to multiple, planar displays</td>
+    <td>mostly for rendering to multiple, planar displays, can provide
+      auto-stereo for unmodified applications.</td>
     <td>Multi-display and immersive installations, many-to-one scalable
       rendering</td>
   </tr>
@@ -59,10 +60,11 @@
 </table>
 
 <p>
-  It is also possible to write parallel, scalable applications with Chromium,
-  but doing so is at least the same effort as porting to Equalizer, and the end
-  result is a less flexible application, since certain functionality is
-  typically hardcoded, e.g., the task decomposition.
+  It is also possible to write parallel, scalable applications with
+  Chromium. Parallel Chromium applications can have the same functionality as
+  Equalizer applications. Writing a parallel Chromium is at least the same
+  effort as writing an Equalizer application, since Chromium provides less help
+  and is less structured than Equalizer for writing parallel applications.
 </p>
 
 #include "footer.shtml"
