@@ -8,7 +8,7 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-  State: Implemented in 0.2 (X11) and 0.3 alpha (WGL)
+  State: Implemented in 0.2 (X11) and 0.3 (WGL)
 </p>
 
 <h2>X11/glX Implementation</h2>
@@ -50,13 +50,33 @@
   the new initialisation of a pipe.
 </p>
 
-<h2>Win32 Implementation</h2>
+<h2>WGL (Win32) Implementation</h2>
 <p>
   The Windows implementation of event handling differs from the X11 version in
   that no separate event thread is used. Instead, Windows messages are received
   by the pipe thread responsible for the window, and passed through the same
   processing chain as X11 events. The application event processing code is
   system-agnostic.
+</p>
+<p>
+  The event dispatch is implemented by subclassing
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eqNet::CommandQueue</a> 
+  into a 
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eq::CommandQueue</a>
+  which 'pumps' events on every pop operation. The CommandQueue is used between
+  the receiver and the rendering threads to dispatch the received
+  commands. Consequently, events are only processed in between task
+  commands. The WGL implementation pumps events in each node and pipe thread.
+</p>
+
+<h2>AGL (OS X Carbon) Implementation</h2>
+<p>
+  The AGL implementation is similar to the WGL implementation. It also does not
+  use a separate event thread, but uses the eq::CommandQueue in the node thread
+  to dispatch the events from the <em>main</em> application thread only, since
+  Carbon events are send to this thread. The events are received in
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/client/aglEventHandler.cpp?view=markup">AGLEventHandler</a>,
+  but further event procession is not yet implemented.
 </p>
 
 <h2>API</h2>
@@ -75,7 +95,7 @@
 
 <h2>Open Issues</h2>
 <p>
-  Implement and document CGL event handling
+  Finish and document AGL event handling.
 </p>
 
 #include "footer.shtml"
