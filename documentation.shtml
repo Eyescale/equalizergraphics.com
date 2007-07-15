@@ -59,6 +59,8 @@
 
 <h2>Academic Papers</h2>
 <ul>
+  <li><a href="documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
+      Framework</a>, technical report 2007/06.</li>
   <li><a href="restricted/directSend.pdf">Direct Send Compositing for
       Parallel Sort-Last Rendering</a>, 
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel

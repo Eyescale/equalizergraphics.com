@@ -44,6 +44,7 @@ FILES = \
 	documents/EqualizerTeaser.html \
 	documents/EqualizerTeaser.html_files \
 	documents/EqualizerTeaser.pdf \
+	documents/EqualizerTR.pdf \
 	documents/EqualizerVizSIG06.html \
 	documents/EqualizerVizSIG06.html_files \
 	documents/EqualizerVizSIG06.pdf \
