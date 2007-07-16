@@ -31,7 +31,7 @@
 <table>
   <tr><th>Chromium</th><th>Equalizer</th></tr>
   <tr>
-    <td>runs unmodified applications</td>
+    <td>runs unmodified applications, additional parallel API</td>
     <td>minimally invasive API: application has to be adapted</td>
   </tr>
   <tr>
@@ -39,17 +39,19 @@
     <td>focus on parallel rendering performance and scalability</td>
   </tr>
   <tr>
-    <td>distributes OpenGL command stream</td>
+    <td>operates on OpenGL command stream</td>
     <td>parallelizes application</td>
   </tr>
   <tr>
-    <td>single application rendering thread</td>
+    <td>single application rendering thread, parallel applications require code
+      changes</td>
     <td>multithreaded and potentially distributed application</td>
   </tr>
   <tr>
-    <td>mostly for rendering to multiple, planar displays, can provide
-      auto-stereo for unmodified applications.</td>
-    <td>Multi-display and immersive installations, many-to-one scalable
+    <td>mostly used for rendering to multiple, planar displays, immersive
+      installations and many-to-one scalable rendering require application
+      changes</td>
+    <td>multi-display and immersive installations, many-to-one scalable
       rendering</td>
   </tr>
   <tr>
