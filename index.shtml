@@ -3,7 +3,7 @@
 #define PAGE About
 #define SUBPAGE Parallel Rendering
 #define DESCRIPTION "Equalizer is an open source programming interface and resource management system for scalable OpenGL applications"
-#define KEYWORDS "parallel rendering, Equalizer, OpenGL, scalable graphics, cluster, graphics clusters, visualization, multi-GPU"
+#define KEYWORDS "parallel rendering, parallel OpenGL, Equalizer, OpenGL, scalable graphics, cluster, graphics clusters, visualization, multi-GPU"
 
 #include "header.shtml"
 
@@ -17,10 +17,10 @@
   system for <em>scalable OpenGL applications</em>. An Equalizer application can
   run unmodified on any visualization system, from a singlepipe workstation to
   large scale <em>graphics clusters</em> and <em>multi-GPU</em>
-  workstations. Equalizer is built upon a parallel, scalable programming
-  interface solving problems that are common to any multipipe application. The
-  API is <em>minimally invasive</em>, making application porting as easy as
-  possible while delivering maximum performance.<br>
+  workstations. Equalizer is built upon a <em>parallel OpenGL</em>-based
+  programming interface solving problems that are common to any multipipe
+  application. The API is <em>minimally invasive</em>, making application
+  porting as easy as possible while delivering maximum performance.<br>
   <a href="useCases.html">Equalizer use cases...</a>
 </p>
 
@@ -58,9 +58,10 @@
     visualization clusters, without recompilation. The runtime configuration is
     externalized from the application to a systemwide resource server, and
     choosen at runtime.</li>
-  <li><a href="scalability.html">Runtime Scalability</a>: An Equalizer
-    application can use multiple CPU's, GPU's and computers to scale the
-    rendering performance of a single OpenGL view.</li>
+  <li><a href="scalability.html">Runtime Scalability</a>: Applications written
+    using Equalizer take advantage of multiple graphics cards, processors and
+    computers to scale the display size and the rendering performance
+    using <em>scalable graphics</em> algorithms.</li>
   <li><b>Distributed Execution:</b> Equalizer applications can be written to
     support cluster-based execution. The task of distributing the application
     data is facilitated by support for versioned, distributed objects.</li>
