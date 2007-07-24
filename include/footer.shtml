@@ -13,7 +13,10 @@
      class="used"
 #endif
      >Impressum</a>
+#ifndef S_CHANGES
   Last changed: <a href=CHANGEURL>UPDATE</a>
+  <a href="changes.html">What's new?</a>
+#endif
 </div>
 </body>
 
