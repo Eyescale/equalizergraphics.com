@@ -85,6 +85,7 @@ FILES = \
 	documents/design/statistics.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.html \
+	documents/design/transparency.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \

@@ -41,8 +41,13 @@
   affected. Future implementations will have to retain the near and far values
   set for the following operations, e.g., from <code>Channel::cull</code>
   to <code>Channel::draw</code>.
-</p><p>
+</p>
+<p>
   Potential rounding problems due to use of float values.
+</p>
+<p>
+  The application has to set the same near/far on all channels, otherwise
+  z-based DB composition does not work.
 </p>
 
 #include "footer.shtml"

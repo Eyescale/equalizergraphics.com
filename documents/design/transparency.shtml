@@ -1,0 +1,112 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Transparency and sort-last (DB) compounds
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  Transparency needs special attention when using a sort-last (DB)
+  compound. Typically, all transparent objects have to be rendered
+  back-to-front <strong>on top</strong> of the <strong>assembled</strong> opaque
+  objects. This document explores what can and should be implemented in
+  Equalizer to facilitate sort-last compounds with transparency.
+</p>
+
+<h2>Design</h2>
+<h3>Serial Transparency Rendering</h3>
+<p>
+  The simplest approach is to have one rendering pass for all transparent
+  objects on the destination channel, after the assembly has happened. The order
+  of operations would be:
+  <pre>
+    render opaque geometry in parallel
+    assemble opaque geometry (in parallel)
+    (gather assembled tiles)
+    render transparent geometry on destination channel
+  </pre>
+  This approach fits for most applications, which have to render small amounts
+  of transparent geometry. The destination channel can be relieved of some
+  rendering workload by using a smaller range, or load-balancing (once
+  implemented). It does not work for applications where rendering the
+  transparent object take a lot of time, for example volume rendering mixed with
+  geometry.
+</p>
+
+<h3>Parallel Transparency Rendering</h3>
+<p>
+  For applications rendering lots of transparent data, decomposing the
+  transparent rendering is desirable. The order of operations could be:
+  <pre>
+    render opaque geometry in parallel
+    assemble opaque geometry (in parallel)
+    render transparent geometry (in parallel, 2D 'compound' on tile)
+    (gather assembled tiles)
+  </pre>
+  <strong>OR</strong>:
+  <pre>
+    render opaque geometry in parallel
+    assemble opaque geometry (in parallel)
+    save framebuffer [assembled result]
+    clear framebuffer
+    render transparent geometry in parallel
+    save framebuffer [transparent geometry]
+    restore framebuffer [assembled result]
+    assemble transparent data w/ saved framebuffer [transparent geometry]
+    (gather assembled tiles)
+  </pre>
+  <strong>OR</strong>:
+  <pre>
+    render opaque and transparent geometry in parallel on different channels
+    assemble (in parallel):
+        z-assemble all opaque frames
+        sorted-blend assemble all transparent frames
+    (gather assembled tiles)
+  </pre>
+  The last approach seems to be the best. The serial transparency rendering is a
+  special case of this algorithm, where all transparent data is rendered on one
+  channel only. This algorithm has the following preconditions:
+  <ul>
+    <li>If the destination channel is also source, it has to render opaque
+      geometry, or it has to readback its content for sorted assembly.</li>
+    <li>Channels have to exclusively render opaque or transparent geometry. The
+      application has to map the DB-range to that concrete boundary, or the
+      server has to obey the boundary. Both approaches may need some changes in
+      Equalizer to be implementable.</li>
+    <li>A specialized <code>eq::Channel::frameAssemble</code> implementation
+      using two steps to assemble, as outlined above. This could be implemented
+      in Equalizer, and is useful for pure volume rendering as well.</li>
+  </ul>
+  The first approach is also nice, but uses for the transparent geometry an
+  implicit 2D decomposition (parallel composition) or no decomposition (serial
+  composition).
+</p>
+
+<h2>Implementation</h2>
+<p>
+  TBD
+</p>
+
+<h2>API</h2>
+<p>
+  TBD
+</p>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  TBD
+</pre><!-- */ -->
+
+<h2>Open Issues</h2>
+<p>
+</p>
+
+#include "footer.shtml"
+<!-- $Id: nonthreaded.shtml 1059 2007-04-20 12:22:06Z eile $ -->
