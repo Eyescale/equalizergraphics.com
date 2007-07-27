@@ -82,6 +82,10 @@
 
 <h2>Implementation</h2>
 <p>
+  The header file is in 
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/object.h?view=markup">src/lib/net/object.h</a>.
+</p>
+<p>
   Each object has a change manager, which depends on the type of the object and
   its master/slave status. Equalizer implements a change manager for static
   objects, versioned objects with delta data and versioned objects with only

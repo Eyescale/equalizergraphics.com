@@ -6,6 +6,7 @@
 
 #include "header.shtml"
 
+<h2>Introduction</h2>
 <p>
   <a href="http://chromium.sourceforge.net">Chromium</a> and Equalizer solve a
   similar problem by enabling applications to use multiple GPU's, but have quite
@@ -16,22 +17,23 @@
   application on a display wall or similar setup, and you want to use Equalizer
   if you want scalability, flexibility and compatibility.
 </p>
+
+<h2>Typical Use Case</h2>
 <p>
-  Please note that most other multipipe rendering software toolkits fall into
-  the same category as Chromium, by distributing the OpenGL command stream. The
-  <a href="documents/WhitePapers/ParallelRenderingSystems.pdf">Analysis of
-    Parallel Rendering Systems</a> white paper gives more background on the
-  subject.
-</p>
-<p>
-  The following table outlines the differences between the two solutions in a
-  simplified way:
+  Chromium can be used as a transparent solution as well as a tool to develop
+  parallel OpenGL applications. Most often it is used and perceived as a
+  transparent solution to run unmodified applications. Equalizer's focus on the
+  other hand is to create parallel applications. The following table outlines
+  the differences between the two scenarios:
 </p>
 
 <table>
-  <tr><th>Chromium</th><th>Equalizer</th></tr>
   <tr>
-    <td>runs unmodified applications, additional parallel API</td>
+    <th width="50%">Transparent Layer: Chromium</th>
+    <th width="50%">Parallel API: Equalizer</th>
+  </tr>
+  <tr>
+    <td>runs unmodified applications</td>
     <td>minimally invasive API: application has to be adapted</td>
   </tr>
   <tr>
@@ -43,14 +45,12 @@
     <td>parallelizes application</td>
   </tr>
   <tr>
-    <td>single application rendering thread, parallel applications require code
-      changes</td>
+    <td>single application rendering thread</td>
     <td>multithreaded and potentially distributed application</td>
   </tr>
   <tr>
     <td>mostly used for rendering to multiple, planar displays, immersive
-      installations and many-to-one scalable rendering require application
-      changes</td>
+      installations may require application changes</td>
     <td>multi-display and immersive installations, many-to-one scalable
       rendering</td>
   </tr>
@@ -61,12 +61,54 @@
   </tr>
 </table>
 
+<h2>Parallel Programming Interface</h2>
 <p>
   It is also possible to write parallel, scalable applications with
-  Chromium. Parallel Chromium applications can have the same functionality as
-  Equalizer applications. Writing a parallel Chromium is at least the same
-  effort as writing an Equalizer application, since Chromium provides less help
-  and is less structured than Equalizer for writing parallel applications.
+  Chromium. Parallel Chromium applications can have similar functionality as
+  Equalizer applications, but usually at a higher implementation overhead.
+</p>
+<table>
+  <tr>
+    <th width="50%">Chromium</th>
+    <th width="50%">Equalizer</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://chromium.sourceforge.net/doc/crexten.html#GL_CR_synchronization">parallel
+        OpenGL extension</a>, used by application for synchronization</td>
+    <td><a href="api.html">parallel GLUT-like execution framework</a>, inherent
+      synchronization</td>
+  </tr>
+  <tr>
+    <td>sort-last compositing SPU</td>
+    <td><a href="scalability.html">generic compositing engine</a> allowing
+      sort-first, parallel sort-last and stereo compositing</td>
+  </tr>
+  <tr>
+    <td>Python configuration scripts, not transparent for parallel
+      applications</td>
+    <td>Externalized configuration: flexible text files</td>
+  </tr>
+  <tr>
+    <td>?</td>
+    <td>distributed, versioned objects, message passing</td>
+  </tr>
+</table>
+<p>
+See also 
+<a href="http://chromium.sourceforge.net/doc/LLNLcopy.html#mozTocId965075">Comparison
+  matrix to competing approaches</a> on the Chromium website.
+</p>
+
+<h2>Closing Remarks</h2>
+<p>
+  Please note that most other multipipe rendering software toolkits fall into
+  the same category as Chromium, by distributing the OpenGL command stream. The
+  <a href="documents/WhitePapers/ParallelRenderingSystems.pdf">Analysis of
+    Parallel Rendering Systems</a> white paper gives more background on the
+  subject. The 
+  <a href="http://en.wikipedia.org/wiki/Chromium_(software)">wikipedia
+    article</a> on Chromium gives a good overview as well.
 </p>
 
 #include "footer.shtml"

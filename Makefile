@@ -153,7 +153,7 @@ install: update all
 
 update:
 	svn update
-	./changes.pl > changes_log.html
+	rm changes_log.html
 
 .SUFFIXES: .html .css
 
@@ -185,3 +185,6 @@ $(TARGET)/% : %
 	cp -r $< $(@D)
 
 $(TARGET)/changes.html: changes.shtml changes_log.html
+
+changes_log.html:
+	./changes.pl > $@
