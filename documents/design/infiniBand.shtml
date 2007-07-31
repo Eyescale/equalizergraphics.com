@@ -81,7 +81,7 @@
   <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1001">1001</a> to 
   <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1010">1010</a> implement
   support for multiple node connections, which means that if a node (or the
-  server) have multiple connections specified in the configuration file, they
+  server) has multiple connections specified in the configuration file, they
   now listen to <em>all</em> of them, allowing to use mixed connection
   types. When a node connects to another node, the connections are tried in the
   order they are specified. Therefore connections should be configured in the
