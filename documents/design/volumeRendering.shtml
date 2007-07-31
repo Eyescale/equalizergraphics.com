@@ -21,98 +21,91 @@
 </div>
 
 <p>
-  Volume rendering equalizer's application is in development stage for 
-  now, 3D texture based approach was chosen for implementation. Due to 
-  render large volumes the volume decomposition (DB decomposition) is 
-  required. In order to use the equalizer scalability the task of 
-  semi-transparent planes back-to front compositing has to be solved. 
-  Splitting of volume to slices performed only in one axes direction 
-  for simplicity. The number of planes to compose equals to data slices 
-  number, the data slices are in strong correspondence to each others 
-  and we can ignore depth values on the final compositing stage in 
-  order to save network bandwidth, in this case correct sequences of 
-  compositing is fixed, but current implementation of compositing 
-  stage assumes that planes could be composed in arbitrary way. Our 
-  task is to implement user defined sequence of planes compositing. 
-  This technic could be used in future for arbitrary semitransparent 
-  objects compositing.
+  This document gathers some design issues around Equalizer's volume rendering
+  application. A 3D texture based approach was chosen for the
+  implementation. The focus is to render large volumes the volume decomposition
+  using DB (sort-last) compounds.  The volume is split into bricks along one
+  axis for simplicity. The recomposition of the partial, semi-transparent volume
+  bricks is done using back-to front compositing.  The number of frames to
+  composit equals the data bricks number, the data bricks are in strong
+  correspondence to each other. We only need to transfer RGBA information, and
+  we can ignore depth values on the final compositing stage, which savea network
+  bandwidth.  The correct sequences of the RGBA frames for compositing is fixed,
+  but Equalizer's current compositing implementation assumes that frames can be
+  composed in arbitrary way. For the volume render, we will implement a user
+  defined sequence of frame compositing.  This technique could be used in future
+  for arbitrary semitransparent objects compositing.
 </p>
 
 <h2>Design</h2>
 
 <div class="float_right">
   <img src="images/currentBackFront.png" alt="back to front compositing"></a>
-  <div class="label">Back to front compositing for current image plane</div>
+  <div class="label">Back to front compositing for current image</div>
 </div>
 
-<h3>Semi-transparent planes compositing</h3>
+<h3>Semi-transparent frame compositing</h3>
 <p>
-  Current implementation of compositing assumes that currently 
-  rendered plane is in the frame buffer already and we don't need to 
-  read it back for compositing, but this plane could be the front one. 
-  There are two ways to solve the problem:
+  Since the current compositing implementation assumes no order, the currently
+  rendered plane in the frame buffer already and we don't need to read it back
+  for compositing. For volume rendering, this plane is often not the last one in
+  the compositing order. There are two ways to solve the problem:
 </p>
 
-<p>
-  1) Client that perform compositing should wait for all back planes 
-  that should be assembled before, then perform assembling of this 
-  planes, then render his own data over already assembled planes, 
-  and finally assemble all planes which should be drawn over it. This 
-  process could be schematically described as following:
+<ul>
+  <li>
+    The channel that performs the compositing should wait for all frames that
+    should be assembled before him, perform the compositing of this planes, then
+    render his own data over already assembled planes, and finally assemble all
+    frame which should be drawn in front of his. This process could be
+    schematically described as following:
+    <pre>
+      clear
+      assemble "pre"
+      render
+      assemble "post"
+    </pre>
 
-  <pre>
-    clear
-    assemble "pre"
-    render
-    assemble "post"
-  </pre>
+    It introduces 1 frame latency which is not a problem. However this approach
+    has the following problems: only one client can perform compositing (serial
+    assembly) and parallel compositing algorithms, such as direct send, couldn't
+    be used. This approach could be possibly used only when semitransparent
+    objects covers small area of a frame.
+  </li>
+  <li>
+    The second approach uses a read-back of assembling area so theoretically it
+    should be slower but it doesn't introduce latency and could be done in
+    parallel so it will work much faster, plus it will take less effort to
+    implement. Its order of operations is:
+    <pre>
+      clear
+      render
+      read-back
+      assemble
+    </pre>
 	
-  It introduces 1 frame latency which is not a problem while 
-  rendering performed on realtime speed. However this approach has 
-  following problems: only one client performs compositing and Direct 
-  Send technic couldn't be used (otherwise it will introduce the 
-  latency of [Number_of_data_slices-1] frames) besides it will increase 
-  client's complexity which is not acceptable. This approach could be 
-  possibly used only when semitransparent objects covers small area of 
-  a frame.
-</p>
+    Please note that read-back should be used only for compositing area and only
+    when the current brick is not the farthest one.
+  </li>
+</ul>
 
 <p>
-  2) Second approach used read-back of assembling area so theoretically 
-  it should be slower but it doesn't introduce latency and could be 
-  done in parallel so it will work much faster, plus it will take less 
-  effort to implement due to less invade to the current rendering 
-  process (it requires only current assembly step modification). It 
-  could be described as:
-
-  <pre>
-    clear
-    render
-    read-back
-    assemble
-  </pre>
-	
-  Please note that read-back should be used only for compositing area 
-  and only is case when current plane is not the farthest one. 
-</p>
-
-<p>
-  More detailed sequence of tasks that have to be done listed bellow:
+  A more detailed sequence for the second algorithm is:
 
   <pre>
     override Channel::frameAssembly()<br>
-    - compute union of frames -> PVP (Pixel View Port);<br>
-    * read image of uPVP (united PVP)<br>
-    * clean uPVP <br>
-    - push state, enable blend<br>
+    - compute union of frames -> uPVP (unionn pixel viewport);<br>
+    * read image of uPVP<br>
+    * glClear( uPVP )<br>
+    - push GL state, set up blending<br>
     - draw all frames ordered (range and current transformation matrix
       should be used to obtain correct assembling sequence)<br>
-    - pop state<br>
-    * free image
+    - restore GL state<br>
+    * free/recycle image
   </pre>
 
-  Stages marked with (*) should be performed only in case when current 
-  plane is not the farthest one. The assembly stage should be omitted 
+  Stages marked with (*) should be performed only when the current 
+  brick is not the farthest one. The assembly stage should be omitted 
   in case of 2D (Sort First) composition. 
 </p>
 
