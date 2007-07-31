@@ -169,7 +169,7 @@
 
     <p>
 #ifdef S_SEARCH
-<a href="Search.html" class="used">Search</a>
+<a href="search.html" class="used">Search</a>
 #else
 <!-- Google CSE Search Box Begins -->
 <form id="searchbox_003884678311182543665:v1o4knw6fuq" action="http://www.equalizergraphics.com/search.html">
