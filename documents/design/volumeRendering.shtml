@@ -15,8 +15,9 @@
 <h2>Overview</h2>
 
 <div class="float_right">
-  <a href="images/volumeDB.png"><img src="images/volumeDB-small.png"
-                                     alt="Volume DB decomposition"></a>
+  <a href="documents/design/images/volumeDB.png">
+    <img src="documents/design/images/volumeDB-small.jpg"
+         alt="Volume DB decomposition"></a>
   <div class="label">Volume DB decomposition example</div>
 </div>
 
@@ -35,12 +36,15 @@
   composed in arbitrary way. For the volume render, we will implement a user
   defined sequence of frame compositing.  This technique could be used in future
   for arbitrary semitransparent objects compositing.
-</p>
+</p><div class="flush_float"></div>
+
 
 <h2>Design</h2>
 
 <div class="float_right">
-  <img src="images/currentBackFront.png" alt="back to front compositing"></a>
+  <a href="documents/design/images/currentBackFront.png">
+    <img src="documents/design/images/currentBackFront-small.jpg"
+         alt="back to front compositing"></a>
   <div class="label">Back to front compositing for current image</div>
 </div>
 
