@@ -21,6 +21,9 @@
         Variables</a> lists the variables used by Equalizer.</li>
   <li><a href="documents/design/taskMethods.html">Task Methods</a> lists
     all task methods ('callbacks') and explains their purpose.</li>
+  <li><a href="documents/design/configInit.html">Config Initialization
+      Sequence</a> shows the order in which the init and exit task methods are
+      executed during initialization and exit.</li>
   <li><a href="documents/design/objects.html">Distributed Objects</a>
     provides an overview on how to implement static and versioned objects, which
     can be instanciated on multiple nodes.</li>

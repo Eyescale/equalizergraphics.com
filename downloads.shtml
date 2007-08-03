@@ -28,6 +28,12 @@
   read-only copy</a> is available for browsing the source code. The repository
   has the following layout and size:
 </p>
+<div class="float_right">
+  <a href="http://sourceforge.net">
+    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
+         width="125" height="37" border="0" alt="SourceForge.net Logo" />
+  </a>
+</div>
 <!-- /* --><pre>
  26M trunk/src
 143M trunk/doc
