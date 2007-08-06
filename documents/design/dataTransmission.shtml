@@ -1,0 +1,115 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Application Data Transmission
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State: Design
+</p>
+
+<h2>Requirements</h2>
+<p>
+  Provide an API to send unstructured data from the application to all running
+  nodes. The main purpose is to efficiently transmit the model database during
+  initialization.
+</p>
+
+<h2>Design</h2>
+<p>
+  The API has to provide an efficient way to send data. The data is not
+  frame-synchronized, that is, latency is not accounted for. For frame-specific
+  data the usage of versioned <code>eqNet::Object</code>s is recommended. Frame
+  synchronization can also be implemented by the application, based on the
+  current frame number.
+</p>
+<p>
+  One approach is not to provide a new API, but to use the command packet
+  API. This requires getting a list of nodes from the 'client' API in order to
+  know where to send it to. The proposed API is easier to use and can implement
+  optimizations later on.
+</p>
+<p>
+  The received data is notified and received in the receiver thread. The
+  application has to enqueue the data if needed. Providing the queue within
+  Equalizer would mean forcing a data copy into a separate queue. The existing
+  recv-node command queue can not be used, since then new data could not be
+  received from a node task method such as <code>Node::configInit</code>.
+</p>
+<p>
+  The local (app) node also receives the broadcasted data. This allows for
+  the same code to be deployed on the app node. Furthermore, when initializing
+  the model, the application node might want to initialize a copy of the model
+  as well. If not, it can always discard the received data.
+</p>
+<p>
+  Queueing without data copies can be implemented if a separate CommandQueue is
+  used. For the data access a wrapper around the CommandQueue is provided. In
+  this case, no notification mechanism is provided. Handling in the receiver
+  thread without queueing can be implemented by overwriting the command handler.
+</p>
+<p>
+  Potential overlap with the to-be-defined frame data API (a.k.a. cull queues)
+  exists. The frame data API will most likely require objects to provide
+  additional information for frustum and range culling. It also requires frame
+  synchronization and therefore queueing.
+</p>
+
+<h2>Implementation</h2>
+<ul>
+  <li>Sender Implementation
+    <ul>
+      <li>config init reply returns list of node IDs</li>
+      <li>broadcast connects all nodes and caches list of nodes</li>
+      <li>broadcast sends ConfigDataPacket to all connected nodes</li>
+    </ul>
+  </li>
+  <li>Receiver Implementation
+    <ul>
+      <li>subclass CommandQueue into DataQueue</li>
+      <li>push Commands into DataQueue from receiver thread</li>
+      <li>return pointer and size of current Command from DataQueue</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  void eq::Config::broadcastData( void* data, size_t size );
+  [void eq::Node::sendData( void* data, size_t size );]
+  virtual void eq::Node::receivedData( void* data, size_t size ) {}
+
+  OR
+
+  eqNet::CommandResult eq::Node::_cmdData( eqNet::Command& command )
+  {
+      _dataQueue.push( command );
+      return eqNet::COMMAND_HANDLED;
+  }
+
+  eq::DataQueue& eq::Config::getDataQueue();
+  class DataQueue : public CommandQueue
+  {
+      void* getData( size_t* size );
+      void* tryGetData( size_t* size );
+      bool  empty() const;
+  }
+</pre><!-- */ -->
+
+<h2>Restrictions</h2>
+<p>
+  Sending data is only supported from the application node. If a reasonable use
+  case for sending data from a render node is presented, this can be relaxed.
+</p>
+
+<h2>Open Issues</h2>
+<p>
+  Late inits will require resent of the data.
+</p>
+
+
+#include "footer.shtml"
+<!-- $Id$ -->
