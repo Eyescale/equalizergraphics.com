@@ -19,7 +19,7 @@
   <th width="25%">AGL</th>
 </tr>
 <tr>
-  <th>Windows XP<sup>1</sup></th>
+  <th>Windows XP<sup>1,5</sup></th>
   <td bgcolor="#ccffcc">window uses handle (HWND) and WGL context (HGLRC)</td>
   <td bgcolor="#ffcccc">not yet implemented</td>
   <td bgcolor="#ffcccc">API does not exist</td>
@@ -60,6 +60,7 @@
   <tr><th>4</th><td>Version 0.1 was tested on SGI IRIX. Porting to other
       Unix-like operating system requires minimal porting effort, mostly for
       compiler differences.</td></tr>
+  <tr><th>5</th><td>SVN version has experimental support for Cygwin.</td></tr>
 </p>
 
 #include "footer.shtml"
