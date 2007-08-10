@@ -8,7 +8,12 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-  State: Implemented in 0.2 (X11) and 0.3 (WGL)
+  State: 
+  <ul>
+    <li>GLX implemented in 0.2</li>
+    <li>WGL implemented in 0.3</li>
+    <li>AGL in progress in svn</li>
+    <li>Message pump configuration in svn</li>
 </p>
 
 <h2>X11/glX Implementation</h2>
@@ -79,6 +84,25 @@
   but further event procession is not yet implemented.
 </p>
 
+<h2>External Message Pump (WGL/AGL)</h2>
+<p>
+  Equalizer dispatches the window system events automatically between the
+  execution of two task methods. External toolkits, e.g., QT, might implement a
+  message pump themselves. It is therefore desirable to disable the message pump
+  for application and/or pipe threads to avoid side effect of event dispatch at
+  an unexpected time for the external toolkit.
+</p>
+<p>
+  The virtual method useMessagePump is called by Equalizer during application
+  and pipe thread initialization (before configInit!) to determine if the
+  application or pipe thread shall automatically dispatch OS events. For
+  non-threaded pipes, the method is not called. On WGL, messages are dispatch in
+  the application and each pipe thread. On AGL, events are dispatched only on
+  the application thread, i.e., Pipe::useMessagePump is never called. On GLX, a
+  message pump is not needed. If useMessagePump returns false, the application
+  has to dispatch events.
+</p>
+
 <h2>API</h2>
 <!-- /* --><pre>
   virtual bool Window::processEvent( const WindowEvent& event );
@@ -91,6 +115,9 @@
 
   class WindowEvent;
   struct ConfigEvent;
+
+  virtual bool Client::useMessagePump() { return true; }
+  virtual bool Pipe::useMessagePump()   { return true; }
 </pre><!-- */ -->
 
 <h2>Open Issues</h2>
