@@ -207,7 +207,7 @@
   <td>OS X 10.4 Universal, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>OS X 10.4 Universal, AGL (partial)</td>
+  <td>OS X 10.4 Universal, Carbon/AGL</td>
   <td>svn</td>
 </tr><tr>
   <td>OS X 10.4 Universal, CGL (partial)</td>

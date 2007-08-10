@@ -15,12 +15,13 @@
 <tr>
   <th width="25%"></th>
   <th width="25%">WGL</th>
-  <th width="25%">GLX</th>
-  <th width="25%">AGL</th>
+  <th width="25%">GLX (X11)</th>
+  <th width="25%">AGL (Carbon)</th>
 </tr>
 <tr>
   <th>Windows XP<sup>1,5</sup></th>
-  <td bgcolor="#ccffcc">window uses handle (HWND) and WGL context (HGLRC)</td>
+  <td bgcolor="#ccffcc">pipe creates affinity context<sup>6</sup>, window uses
+    handle (HWND) and WGL context (HGLRC)</td>
   <td bgcolor="#ffcccc">not yet implemented</td>
   <td bgcolor="#ffcccc">API does not exist</td>
 </tr>
@@ -29,7 +30,7 @@
   <th>Linux<sup>2</sup></th>
   <td bgcolor="#ffcccc">API does not exist</td>
   <td bgcolor="#ccffcc">pipe uses X11 display connection (Display*), window uses
-    X11 drawable (XID) and glX context (GLXContext) </td>
+    X11 drawable (XID) and glX context (GLXContext)</td>
   <td bgcolor="#ffcccc">API does not exist</td>
 </tr>
 
@@ -37,7 +38,7 @@
   <th>Mac OS X<sup>3</sup></th>
   <td bgcolor="#ffcccc">API does not exist</td>
   <td bgcolor="#ccffcc">same as Linux</td>
-  <td bgcolor="#ffffcc">event handling not yet implemented</td>
+  <td bgcolor="#ccffcc">window uses Carbon WindowRef and AGLContext</td>
 </tr>
 
 <tr>
@@ -50,7 +51,7 @@
 
 <table>
   <tr><th>1</th><td>Visual Studio 2005 project files, tested both in 32 bit and
-      64 bit.</td></tr>
+      64 bit Windows XP.</td></tr>
   <tr><th>2</th><td>tested both in 32 bit and 64 bit i386, as well as
       ia64. Regular testing on Ubuntu 6.10 and RHEL4.</td></tr>
   <tr><th>3</th><td>32 bit only, OpenGL and X11 libraries do not exist in 64 bit
@@ -61,6 +62,8 @@
       Unix-like operating system requires minimal porting effort, mostly for
       compiler differences.</td></tr>
   <tr><th>5</th><td>SVN version has experimental support for Cygwin.</td></tr>
+  <tr><th>6</th><td>requires WGL_NV_gpu_affinity extension available on nVidia
+      Quadro fx with selected drivers.</td></tr>
 </p>
 
 #include "footer.shtml"
