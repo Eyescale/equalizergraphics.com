@@ -20,10 +20,10 @@ State: Implemented
 </p>
 <p>
   The file format is not described in detail here. Please refer to
-  the <a href="#changes">changes</a> section below for individual feature
-  specifications. The actual implementation may differ slightly from this
-  specification, but we try to keep it up to date. The loader implementation is
-  the reference for the file format, look at
+  the <a href="documents/design/fileFormat.html#changes">changes</a> section
+  below for individual feature specifications. The actual implementation may
+  differ slightly from this specification, but we try to keep it up to date. The
+  loader implementation is the reference for the file format, look at
   <a href="/cgi-bin/viewvc.cgi/trunk/src/server/loader.y?view=markup">src/server/loader.y</a>,
   if you understand lex/yacc code.
 </p>
