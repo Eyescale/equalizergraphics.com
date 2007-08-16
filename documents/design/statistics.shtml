@@ -41,16 +41,13 @@
 <!-- /* --><pre>
   global
   {
-      EQ_CHANNEL_IATTR_HINTS_STATISTICS    off | fastest [on] | nicest
+      EQ_CHANNEL_IATTR_HINT_STATISTICS    off | fastest [on] | nicest
   }
   channel
   {
       attributes
       {
-          hints
-          {
-              statistics     off | fastest [on] | nicest
-          }
+          hint_statistics     off | fastest [on] | nicest
       }
   }
 </pre><!-- */ -->

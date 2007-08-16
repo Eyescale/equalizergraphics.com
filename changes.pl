@@ -32,7 +32,7 @@ foreach ( @changes )
         s/Website://;
         s/^\s*//;
         my $excerpt = $_;
-        print "    <li>$date: $excerpt (<a href=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev\">more</a>)</li>\n";
+        print "    <li>$date: $excerpt... (<a href=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev\">more</a>)</li>\n";
         
         $rev  = "";
         $date = "";

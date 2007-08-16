@@ -58,7 +58,6 @@ State: Implemented in 0.3.0 alpha
 
     compound
     {
-        ...
         attributes
         {
             stereo_mode                  QUAD | ANAGLYPH    // default quad
@@ -66,7 +65,6 @@ State: Implemented in 0.3.0 alpha
             stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default RED
             stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // dflt GREEN BLUE
         }
-        ...
     }
 </pre><!-- */ -->
 

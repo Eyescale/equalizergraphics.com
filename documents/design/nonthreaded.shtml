@@ -79,12 +79,10 @@ No changes.
 
   pipe
   {
-      ...
       attributes
       {
           hint_thread   off | on
       }
-      ...
   }
 </pre><!-- */ -->
 

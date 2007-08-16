@@ -19,20 +19,22 @@ State: Implemented
   automatically creates some standard configuration files.
 </p>
 <p>
-  The file format is not described in detail here, please refer to the
-  individual feature specifications for additions and changes to the file
-  format. The actual implementation may differ slightly from this specification,
-  but we try to keep it up to date. The loader implementation is the reference
-  for the file format, look at
+  The file format is not described in detail here. Please refer to
+  the <a href="#changes">changes</a> section below for individual feature
+  specifications. The actual implementation may differ slightly from this
+  specification, but we try to keep it up to date. The loader implementation is
+  the reference for the file format, look at
   <a href="/cgi-bin/viewvc.cgi/trunk/src/server/loader.y?view=markup">src/server/loader.y</a>,
   if you understand lex/yacc code.
-</p><p>
+</p>
+<p>
   Note that this format is the representation for the server's low-level
   scalable rendering engine. Eventually this file format will be replaced by a
   higher-level format or API, and may even be partially hidden from the
   user. Automatic configuration and load balancing are not yet implemented,
   hence the need to have these low-level configuration files.
-</p><p>
+</p>
+<p>
   All Equalizer units are in meters. This applies currently to the wall
   coordinates and the eye base, as well as the head matrix supplied
   programmatically.
@@ -181,6 +183,103 @@ server
     }
 }
 </pre><!-- */ -->
+
+<a name="changes"></a>
+<h2>Changes</h2>
+<ul>
+  <li><a href="documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+    added:
+    <pre>
+      global
+      {
+          EQ_PIPE_IATTR_HINT_THREAD   off | on
+      }
+    
+      pipe
+      {
+          attributes
+          {
+              hint_thread   off | on
+          }
+      }
+    </pre>
+  </li>  
+  <li><a href="documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
+    <pre>
+      global
+      {
+          EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
+          EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
+          EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
+      }
+      compound // 1-n times
+      {
+          attributes
+          {
+              stereo_mode                  QUAD | ANAGLYPH    // default QUAD
+              // enable visible color components
+              stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default red
+              stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
+          }
+      }
+    </pre>
+  </li>
+  <li><a href="documents/design/immersive.html">Stereo and Head Tracking</a>
+    added:
+    <pre>
+      global
+      {
+          EQ_CONFIG_FATTR_EYE_BASE            float
+          EQ_WINDOW_IATTR_HINT_STEREO         OFF | ON | AUTO
+      }
+      config // 1-n times, currently only the first one is used by the server
+      {
+          attributes
+          {
+               eye_base float // distance between left and right eye
+          }
+      }
+      window
+      {
+          attributes
+          {
+              hint_stereo         off | on | auto
+          }
+      }
+      compound
+      {
+          eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
+      }
+    </pre>
+  </li>  
+  <li><a href="documents/design/statistics.html">Statistics Interface</a> added:
+    <pre>
+      global
+      {
+          EQ_CHANNEL_IATTR_HINT_STATISTICS    off | fastest [on] | nicest
+      }
+      channel
+      {
+          attributes
+          {
+              hint_statistics     off | fastest [on] | nicest
+          }
+      }
+    </pre>
+  </li>
+  <li><a href="documents/design/compounds.html">Compounds</a> added:
+    <pre>
+      global
+      {
+          EQ_COMPOUND_*
+      }
+      compound // 1-n times
+      {
+          ...
+      }
+    </pre>
+  </li>  
+</ul>
 
 #include "footer.shtml"
 <!-- $Id$ -->

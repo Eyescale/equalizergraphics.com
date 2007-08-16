@@ -97,32 +97,25 @@
     global
     {
         EQ_CONFIG_FATTR_EYE_BASE            float
+        EQ_WINDOW_IATTR_HINT_STEREO         OFF | ON | AUTO
     }
-
     config // 1-n times, currently only the first one is used by the server
     {
-        ...
         attributes
         {
              eye_base float // distance between left and right eye
         }
-        ...
-                window
-                {
-                    ...
-                    attributes
-                    {
-                        hint_stereo         off | on | auto
-                    }
-                    ...
-                }
-        ...
-        compound
+    }
+    window
+    {
+        attributes
         {
-            ...
-            eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
-            ...
+            hint_stereo         off | on | auto
         }
+    }
+    compound
+    {
+        eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
     }
 </pre><!-- */ -->
 

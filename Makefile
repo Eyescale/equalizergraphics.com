@@ -61,6 +61,7 @@ FILES = \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \
+	documents/design/aspectRatio.html \
 	documents/design/configInit.html \
 	documents/design/compositor.html \
 	documents/design/compounds.html \
