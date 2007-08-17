@@ -1,0 +1,127 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_RELNOTES
+#define PAGE Release Notes
+#define SUBPAGE Release Notes for Equalizer 0.4
+
+#include "header.shtml"
+
+<p>
+  Welcome to Equalizer 0.4, a framework for the development and deployment
+  of scalable multipipe applications, based on C++ and OpenGL. The major new
+  feature in Equalizer 0.4 is TBD.
+</p>
+<p>
+  Equalizer 0.4 is a beta release, and therefore intended as preview and
+  evaluation snapshot for application developers and early adopters.
+</p>
+
+<h3>Features</h3>
+<p>
+  Equalizer provides the following major features to facilitate the development
+  and deployment of scalable OpenGL applications. A 
+  <a href="features.html">detailed feature list</a> can be found on the
+  Equalizer website.
+</p>
+<ul>
+  <li><b>Runtime Configurability:</b> An Equalizer application can run on any
+    configuration, from laptops to large scale visualization clusters, without
+    recompilation. The runtime configuration is externalized from the
+    application to a systemwide resource server.</li>
+  <li><b>Runtime Scalability:</b> An Equalizer application can use multiple
+    CPU's, GPU's and computers to scale the rendering performance of a single
+    view.</li>
+  <li><b>Distributed Execution:</b> Equalizer applications can be written to
+    support cluster-based execution. The task of distributing the application
+    data is facilitated by support for versioned, distributed objects.</li>
+  <li><b>Support for Stereo and Immersive Environments:</b> Equalizer supports
+    both active and passive stereo rendering, as well as the head tracking,
+    which is required for immersive Virtual Reality installations.</li>
+</ul>
+
+<h3>New in this release</h3>
+<p>
+  The following features, bug fixes and documentation changes where introduced
+  in this release:
+</p>
+<h4>New Features</h4>
+<ul>
+  <li>Support for AGL and Carbon on Mac OS X</li>
+  <li>Support for Cygwin on Windows XP</li>
+  <li>Fixed aspect ratio support</li>
+  <li>View configuration using projector layout</li>
+  <li>Support for volume-rendering applications (TBD)</li>
+  <li>Infiniband and Myrinet(TBD) support for Linux</li>
+  <li>New volume rendering example (TBD)</li>
+  <li>Improved event handling support (TBD)</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<p>
+  Equalizer 0.4 includes various bugfixes over the previous release.
+</p>
+
+<h4>New Documentation</h4>
+<ul>
+  <li><a href="documents/design/transparency.html">Transparency and sort-last
+      (DB) compounds</a></li>
+  <li><a href="documents/design/volumeRendering.html">Volume Rendering
+      Example</a>
+    </li>
+  <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a></li>
+</ul>
+
+<h3>Removed Features</h3>
+<p>
+  The incomplete support for CGL has been replaced by support for AGL and Carbon
+  on Mac OS X. CGL proved not to be useful in conjunction with windowing and
+  event handling.
+</p>
+
+<h4></h4>
+
+<h3>Supported Platforms</h3>
+<p>
+  Equalizer is a cross-platform toolkit, designed to run on any modern operating
+  system, including all Unix variants and the Windows operating system.  A 
+  <a href="compatibility.html">compatibility matrix</a> can be found on the
+  Equalizer website. Version 0.4 has been tested on:
+</p>
+<h4>Operating System Support</h4>
+<ul>
+  <li><b>Linux:</b> Ubuntu 6.10 (x64, i386)</li>
+  <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
+    Cygwin(i386)</li>
+  <li><b>Mac OS X:</b> 10.4 (PowerPC, i386)</li>
+</ul>
+<h4>Window System Support</h4>
+<ul>
+  <li><b>X11:</b> Full support for all documented features.</li>
+  <li><b>WGL:</b> Full support for all documented features.</li>
+  <li><b>AGL:</b> Full support for all documented features.</li>
+</ul>
+
+<h3>Documentation</h3>
+<p>
+  Equalizer does not yet have a formal Users or Programmers Guide. The shipped
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.4/src/examples/eqPly/">eqPly example</a> provides a reference for developing or porting
+  applications. The <a href="doc_developer.html">Developer Documentation</a>
+  on the website provides further design documents for specific features. The
+  source code is a last resort for information.
+</p>
+<h3>Support</h3>
+<p>
+  Technical questions can be posted to the 
+  <a href="http://www.equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">
+    Developer Mailing List</a>, or directly to
+  <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">
+    info@equalizergraphics.com</a>.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from <a href="http://www.eyescale.ch">EyeScale</a>. Please contact
+  <a href="mailto:info@eyescale.ch?subject=Equalizer%20support">info@eyescale.ch</a>
+  for further information.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
