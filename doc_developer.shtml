@@ -53,9 +53,11 @@ implementation will diverge from the version-specific specification over time.
     explains the event handling model and implementation.</li>
   <li><a href="documents/design/transparency.html">Transparency and sort-last
       (DB) compounds</a> explores the options for better transparent geometry
-      support.</li>
-  <li><a href="documents/design/volumeRendering.html">Volume rendering</a> 
-	  application overview.</li>
+    support.</li>
+  <li><a href="documents/design/volumeRendering.html">Volume Rendering</a> 
+    application overview.</li>
+  <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a> 
+    adds support for keeping the aspect ratio during channel resizing.</li>
 </ul>
 
 <h4>Version 0.3</h4>

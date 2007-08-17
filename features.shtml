@@ -70,13 +70,13 @@
       manager</a></td>
   <td>0.3</td>
 </tr><tr>
+  <td><a href="documents/design/aspectRatio.html">aspect ratio support</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>FBO support</td>
   <td>?</td>
 </tr><tr>
   <td>FrameData API</td>
-  <td>?</td>
-</tr><tr>
-  <td>window resize/aspect ratio support</td>
   <td>?</td>
 </tr><tr>
   <td><a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">software edge blending</a></td>
