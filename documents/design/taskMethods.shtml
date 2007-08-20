@@ -214,6 +214,23 @@
   calls <code>Pipe::releaseFrame</code>.
 </p>
 
+<h3>Pipe::initEventHandling</h3>
+<p>
+  This method is called after a successful <code>Pipe::configInit</code> to
+  initialize the event handling for this pipe. It can be overriden to
+  instantiate a custom or no event handler. The event handling is window
+  system-specific and should work together with the child window event
+  handlers. Using no event handler disables event processing. In this case, the
+  window's event handling and potentially the pipe's message pump should also be
+  disabled.
+</p>
+
+<h3>Pipe::exitEventHandling</h3>
+<p>
+  This method is called before <code>Pipe::configExit</code> to de-initialize
+  the event handling for this pipe.
+</p>
+
 <hr><a name="window"></a>
 <h2>Window</h2>
 <p>
@@ -284,6 +301,22 @@
   ensure that the rendering has been finished, for example to ensure a
   simultaneous buffer swap of multiple windows. The default implementation
   calls a <code>glFinish</code>.
+</p>
+
+<h3>Window::initEventHandling</h3>
+<p>
+  This method is called after a successful <code>Window::configInit</code> to
+  initialize the event handling for this window. It can be overriden to
+  instantiate a custom or no event handler. The event handling is window
+  system-specific and should work together with the parent pipe event
+  handler. Using no event handler disables event processing. In this case, the
+  pipe's event handling should also be disabled.
+</p>
+
+<h3>Window::exitEventHandling</h3>
+<p>
+  This method is called before <code>Window::configExit</code> to de-initialize
+  the event handling for this window.
 </p>
 
 <a name="windowprocessevent"></a>
