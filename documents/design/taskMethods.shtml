@@ -214,7 +214,7 @@
   calls <code>Pipe::releaseFrame</code>.
 </p>
 
-<h3>Pipe::initEventHandling</h3>
+<h3>Pipe::configInitEventHandler</h3>
 <p>
   This method is called after a successful <code>Pipe::configInit</code> to
   initialize the event handling for this pipe. It can be overriden to
@@ -225,7 +225,7 @@
   disabled.
 </p>
 
-<h3>Pipe::exitEventHandling</h3>
+<h3>Pipe::configExitEventHandler</h3>
 <p>
   This method is called before <code>Pipe::configExit</code> to de-initialize
   the event handling for this pipe.
@@ -303,7 +303,7 @@
   calls a <code>glFinish</code>.
 </p>
 
-<h3>Window::initEventHandling</h3>
+<h3>Window::configInitEventHandler</h3>
 <p>
   This method is called after a successful <code>Window::configInit</code> to
   initialize the event handling for this window. It can be overriden to
@@ -313,7 +313,7 @@
   pipe's event handling should also be disabled.
 </p>
 
-<h3>Window::exitEventHandling</h3>
+<h3>Window::configExitEventHandler</h3>
 <p>
   This method is called before <code>Window::configExit</code> to de-initialize
   the event handling for this window.
