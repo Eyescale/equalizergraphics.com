@@ -11,20 +11,21 @@
   State: Design
 </p>
 
-<h2>Requirements</h2>
+<h2>Overview</h2>
 <p>
-  Provide an API to send unstructured data from the application to all running
-  nodes. The main purpose is to efficiently transmit the model database during
-  initialization.
+  The data transmission API is a simple interface to send data from the
+  application to the render clients. It sends unstructured data directly to
+  running nodes. The main purpose is to efficiently transmit the model database
+  during initialization.
 </p>
 
 <h2>Design</h2>
 <p>
   The API has to provide an efficient way to send data. The data is not
   frame-synchronized, that is, latency is not accounted for. For frame-specific
-  data the usage of versioned <code>eqNet::Object</code>s is recommended. Frame
-  synchronization can also be implemented by the application, based on the
-  current frame number.
+  data the usage of versioned <code>eqNet::Object</code>s is highly
+  recommended. Synchronization of data to config frames can also be implemented
+  by the application, using the current frame number.
 </p>
 <p>
   One approach is not to provide a new API, but to use the command packet
@@ -33,23 +34,17 @@
   optimizations later on.
 </p>
 <p>
-  The received data is notified and received in the receiver thread. The
-  application has to enqueue the data if needed. Providing the queue within
-  Equalizer would mean forcing a data copy into a separate queue. The existing
-  recv-node command queue can not be used, since then new data could not be
-  received from a node task method such as <code>Node::configInit</code>.
-</p>
-<p>
   The local (app) node also receives the broadcasted data. This allows for
   the same code to be deployed on the app node. Furthermore, when initializing
   the model, the application node might want to initialize a copy of the model
   as well. If not, it can always discard the received data.
 </p>
 <p>
-  Queueing without data copies can be implemented if a separate CommandQueue is
-  used. For the data access a wrapper around the CommandQueue is provided. In
-  this case, no notification mechanism is provided. Handling in the receiver
-  thread without queueing can be implemented by overwriting the command handler.
+  The received data is enqueued by the receiver thread in a separate
+  CommandQueue. The CommandQueue transfers the received packet, thus avoiding a
+  data copy. To access the data from the enqueued Commands, a wrapper API around
+  the CommandQueue is provided. Handling in the receiver thread without queueing
+  can be implemented by overwriting the command handler (advanced usage).
 </p>
 <p>
   Potential overlap with the to-be-defined frame data API (a.k.a. cull queues)
@@ -80,23 +75,9 @@
 <!-- /* --><pre>
   void eq::Config::broadcastData( void* data, size_t size );
   [void eq::Node::sendData( void* data, size_t size );]
-  virtual void eq::Node::receivedData( void* data, size_t size ) {}
-
-  OR
-
-  eqNet::CommandResult eq::Node::_cmdData( eqNet::Command& command )
-  {
-      _dataQueue.push( command );
-      return eqNet::COMMAND_HANDLED;
-  }
-
-  eq::DataQueue& eq::Config::getDataQueue();
-  class DataQueue : public CommandQueue
-  {
-      void* getData( size_t* size );
-      void* tryGetData( size_t* size );
-      bool  empty() const;
-  }
+  void* eq::Node::receiveData( size_t* size );
+  void* eq::Node::tryReceiveData( size_t* size );
+  bool  eq::Node::hasData() const;
 </pre><!-- */ -->
 
 <h2>Restrictions</h2>
@@ -107,7 +88,7 @@
 
 <h2>Open Issues</h2>
 <p>
-  Late inits will require resent of the data.
+  Late inits will require resend of the data.
 </p>
 
 
