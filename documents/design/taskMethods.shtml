@@ -214,9 +214,9 @@
   calls <code>Pipe::releaseFrame</code>.
 </p>
 
-<h3>Pipe::configInitEventHandler</h3>
+<h3>Pipe::initEventHandler</h3>
 <p>
-  This method is called after a successful <code>Pipe::configInit</code> to
+  This method is called when a new window system-specific pipe handle was set to
   initialize the event handling for this pipe. It can be overriden to
   instantiate a custom or no event handler. The event handling is window
   system-specific and should work together with the child window event
@@ -225,10 +225,10 @@
   disabled.
 </p>
 
-<h3>Pipe::configExitEventHandler</h3>
+<h3>Pipe::exitEventHandler</h3>
 <p>
-  This method is called before <code>Pipe::configExit</code> to de-initialize
-  the event handling for this pipe.
+  This method is called before a new window system-specific pipe handle is set
+  to de-initialize the event handling for this pipe.
 </p>
 
 <hr><a name="window"></a>
@@ -303,10 +303,10 @@
   calls a <code>glFinish</code>.
 </p>
 
-<h3>Window::configInitEventHandler</h3>
+<h3>Window::initEventHandler</h3>
 <p>
-  This method is called after a successful <code>Window::configInit</code> to
-  initialize the event handling for this window. It can be overriden to
+  This method is called after a new window system-specific window handle was set
+  to initialize the event handling for this window. It can be overriden to
   instantiate a custom or no event handler. The event handling is window
   system-specific and should work together with the parent pipe event
   handler. Using no event handler disables event processing. In this case, the
@@ -315,8 +315,8 @@
 
 <h3>Window::configExitEventHandler</h3>
 <p>
-  This method is called before <code>Window::configExit</code> to de-initialize
-  the event handling for this window.
+  This method is called before a new window system-specific window handle is
+  set to de-initialize the event handling for this window.
 </p>
 
 <a name="windowprocessevent"></a>
