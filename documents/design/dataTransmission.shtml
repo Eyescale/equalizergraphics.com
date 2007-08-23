@@ -73,10 +73,10 @@
 
 <h2>API</h2>
 <!-- /* --><pre>
-  void eq::Config::broadcastData( void* data, size_t size );
-  [void eq::Node::sendData( void* data, size_t size );]
-  void* eq::Node::receiveData( size_t* size );
-  void* eq::Node::tryReceiveData( size_t* size );
+  void eq::Config::broadcastData( const void* data, uint64_t size );
+  [void eq::Node::sendData( const void* data, uint64_t size );]
+  const void* eq::Node::receiveData( uint64_t* size );
+  const void* eq::Node::tryReceiveData( uint64_t* size );
   bool  eq::Node::hasData() const;
 </pre><!-- */ -->
 
