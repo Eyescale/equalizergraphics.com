@@ -1,8 +1,15 @@
+#define QUOTE( string ) STRINGIFY( string )
+#define STRINGIFY( foo ) #foo
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <base href="http://www.equalizergraphics.com/">
+#ifdef AUTHOR
+    <meta name="author" content=QUOTE(AUTHOR)>
+#else
     <meta name="author" content="Stefan Eilemann">
+#endif
 #ifdef DESCRIPTION
     <meta name="description" content=DESCRIPTION>
 #endif
@@ -30,170 +37,6 @@
 
   <body>
   
-  <!-- Navigation -->
-  <div class="navigation">
-    <a href="index.html">
-      <img src="images/Equalizer.png" alt="Equalizer logo">
-    </a>
-    <p><a href="index.html"
-#ifdef S_HOME
-       class="used"
-#endif
-    >About</a></p>
-
-  <!-- About sub-navigation-->
-#ifdef S_HOME
-  <div class="subnavigation">
-
-    <p><a href="index.html"
-#ifdef S_HOME_ABOUT
-       class="used"
-#endif
-       >Overview</a></p>
-
-    <p><a href="useCases.html"
-#ifdef S_HOME_USECASES
-       class="used"
-#endif
-       >Use Cases</a></p>
-
-    <p><a href="configuration.html"
-#ifdef S_HOME_CONFIG
-       class="used"
-#endif
-       >Runtime Configuration</a></p>
-
-    <p><a href="scalability.html"
-#ifdef S_HOME_SCALABILITY
-       class="used"
-#endif
-       >Runtime Scalability</a></p>
-
-    <p><a href="api.html"
-#ifdef S_HOME_API
-       class="used"
-#endif
-       >Programming Interface</a></p>
-  </div>
-#endif  // S_HOME
-
-    <p><a href="documentation.html"
-#ifdef S_DOCUMENTATION
-       class="used"
-#endif
-    >Documentation</a></p>
-
-    <!-- Documentation sub-navigation-->
-#ifdef S_DOCUMENTATION
-    <div class="subnavigation">
-
-      <p><a href="documentation.html"
-#ifdef S_DOCUMENTATION_ENDUSER
-         class="used"
-#endif
-         >End User</a></p>
-
-      <p><a href="features.html"
-#ifdef S_DOCUMENTATION_FEATURES
-         class="used"
-#endif
-         >Feature List</a></p>
-
-      <p><a href="compatibility.html"
-#ifdef S_DOCUMENTATION_COMPATIBILITY
-         class="used"
-#endif
-         >Compatibility Matrix</a></p>
-
-      <p><a href="doc_developer.html"
-#ifdef S_DOCUMENTATION_DEVELOPER
-         class="used"
-#endif
-         >Developer</a></p>
-
-      <p><a href="relnotes.html"
-#ifdef S_DOCUMENTATION_RELNOTES
-         class="used"
-#endif
-         >Release Notes</a></p>
-    </div>
-#endif // S_DOCUMENTATION
-
-
-    <p><a href="screenshots.html"
-#ifdef S_SCREENSHOTS
-       class="used"
-#endif
-    >Screenshots</a></p>
-
-
-    <p><a href="news.html"
-#ifdef S_NEWS
-       class="used"
-#endif
-    >News</a></p>
-
-
-    <p><a href="events.html"
-#ifdef S_EVENTS
-       class="used"
-#endif
-    >Events</a></p>
-
-
-    <p><a href="downloads.html"
-#ifdef S_DOWNLOADS
-       class="used"
-#endif
-    >Downloads</a></p>
-
-    <p><a href="lists.html"
-#ifdef S_LISTS
-       class="used"
-#endif
-    >Mailing Lists</a></p>
-
-    <p><a href="contact.html"
-#ifdef S_CONTACT
-       class="used"
-#endif
-    >Contact</a></p>
-
-    <p><a href="contributors.html"
-#ifdef S_CONTRIBUTORS
-       class="used"
-#endif
-    >Contributors</a></p>
-
-    <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
-
-#ifdef S_SEARCH
-    <p>
-      <a href="search.html" class="used">Search</a>
-    </p>
-#else
-<!-- Google CSE Search Box Begins -->
-<form id="searchbox_003884678311182543665:v1o4knw6fuq" action="http://www.equalizergraphics.com/search.html">
-  <input type="hidden" name="cx" value="003884678311182543665:v1o4knw6fuq" />
-  <input name="q" type="text" size="20" />
-  <input type="submit" name="sa" value="Equalizer Search" />
-  <input type="hidden" name="cof" value="FORID:9" />
-</form>
-<script type="text/javascript" src="http://google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq"></script>
-<!-- Google CSE Search Box Ends -->
-#endif
-
-    <p>
-      <iframe src="http://polls.blogflux.com/poll.php?poll=12544&width=173&fontsize=11&height=200&fontface=Verdana&padding=2&textcolor=%23000000&bgcolor=%23aaaaaa&doublespace=0&borderwidth=1&linkmap=0&bordercolor=%23bbbbbb" width="179" height="226" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-12544.html">Take the poll</a><br /><br /><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
-    </p>
-    <p>
-      <a href="http://www.ifi.unizh.ch/vmml/">
-        <img src="images/VMML_logo_150_grey.png" 
-             alt="Visualization and MultiMedia Lab, University of Z&uuml;rich">
-      </a>
-    </p>
-  </div>
-
   <div class="content">
     <a name="top"></a>
 

@@ -4,11 +4,11 @@
 #define PAGE Documentation
 #define SUBPAGE Developer
 #define TITLE Volume Rendering
-
+#define AUTHOR Makhinya Maxim
 #include "header.shtml"
  
 <p>
-  Author: Makhinya Maxim<br>
+  Author: AUTHOR<br>
   State: Design
 </p>
   

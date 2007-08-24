@@ -73,6 +73,10 @@
   <td><a href="documents/design/aspectRatio.html">aspect ratio support</a></td>
   <td>svn</td>
 </tr><tr>
+  <td><a href="documents/design/dataTransmission.html">data
+      transmission</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>FBO support</td>
   <td>?</td>
 </tr><tr>
