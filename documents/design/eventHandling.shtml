@@ -14,6 +14,7 @@
     <li>WGL implemented in 0.3</li>
     <li>AGL in progress in svn</li>
     <li>Message pump configuration in svn</li>
+  </ul>
 </p>
 
 <h2>X11/glX Implementation</h2>
