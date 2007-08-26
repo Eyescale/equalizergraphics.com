@@ -8,7 +8,12 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
-  State: Implemented in 0.3
+  State:
+  <ul>
+    <li>Implemented in 0.3</li>
+    <li>Improved in svn to use existing --eq-client and --eq-listen
+      parameters</li>
+  </ul>
 </p>
 
 <h2>Overview</h2>
@@ -16,24 +21,44 @@
   Resident render clients are used to minimize the time for initializing a
   configuration. They are pre-launched by an external mechanism, and connected
   by the server during config initialization. They allow pre-loading of
-  application data, and the same process is for multiple configuration 'runs'.
+  application data and using the same process for multiple configuration 'runs'.
 </p>
 
 <h2>Render Client</h2>
 <p>
-  The render client has to be started on a known address. The <code>eqPly</code>
-  example can be started with the <code>-c portNumber</code> option, and it will
-  create a listening socked using the specified TCP/IP port, and then wait for
-  connections from the server.
+  The render client has to be started on a known address. Any Equalizer
+  application, including <code>eqPly</code>, can be started with
+  the <code>--eq-listen [description]</code> option, and it will create a
+  listening socked using the specified TCP/IP address and port. In addition, the
+  <code>--eq-client</code> parameter puts the application into client mode, that
+  is, <code>eq::Client::initLocal</code> never returns. Provided with these two
+  parameters, <code>eqPly</code> acts as a render client executing one
+  configuration run. The <code>eqPly</code> example provides in addition
+  the <code>-r</code> option, which overrides the client loop to keep it
+  running for multiple configuration runs.
 </p>
+<h3>Example Options</h3>
 <p>
-  The relevant code is in 
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/eqPly/eqPly.cpp?view=markup">src/examples/eqPly.cpp</a>.
-  During inialization in <code>initLocal</code>, a listening connection using
-  the given port is created, and the receiver thread is started using this
-  connection. The eqPly run loop executes <code>runClient</code>, which
-  continuously executes a render client loop.
+  Pre-start client for one run, with default Equalizer listening port (conflicts
+  with server on the same machine):
 </p>
+<pre>
+  ./eqPly -- --eq-client
+</pre>
+
+<p>
+  Pre-start client for one run on the address 10.1.1.1, port 4243::
+</p>
+<pre>
+  ./eqPly -- --eq-client --eq-listen 10.1.1.1:4243
+</pre>
+
+<p>
+  Pre-start client to run 'forever' on the address node1, port 4243::
+</p>
+<pre>
+  ./eqPly -r -- --eq-client --eq-listen node1:4243
+</pre>
 
 <h2>Configuration</h2>
 <p>
