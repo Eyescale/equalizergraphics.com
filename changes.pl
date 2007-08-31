@@ -31,6 +31,7 @@ foreach ( @changes )
         chomp();
         s/Website://;
         s/^\s*//;
+        s/[\<\>]//g;
         my $excerpt = $_;
         print "    <li>$date: $excerpt... (<a href=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev\">more</a>)</li>\n";
         
