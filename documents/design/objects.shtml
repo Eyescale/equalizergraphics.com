@@ -80,6 +80,43 @@
   for each new version, and do not have to implement pack and unpack.
 </p>
 
+<h2>Object Typing</h2>
+<p>Design only:</p>
+<pre>
+  Provide type with objects: 
+      virtual uint32_t Object::getTypeID() const { return EQ_ID_INVALID; }
+  map type id to creation function
+      ObjectFactory Session::getObjectFactory( const uint32_t typeID )
+      Session has hash<uint32_t, ObjectFactory>
+
+  Session::instantiateObject( const uint32_t objectID ):
+      if( !get object type id from master )
+          return 0
+      create object
+      map object to objectID
+      return object
+</pre>
+
+<h2>Multi-Buffered Objects</h2>
+<p>Design only!</p>
+<h3>Requirements</h3>
+<pre>
+  - each thread has its own version.
+  - only one write thread per object across all nodes
+  - sync and getVersion are thread-specific, that is, sync synchronizes this
+    object to the given version for this thread only, and getVersion return the
+    current version for this thread.
+</pre>
+<h3>API</h3>
+<pre>
+  class ???
+  {
+      ObjectHandle getObject( const uint32_t id, const uint32_t version );
+      
+  };
+  // ObjectHandle releases object/version for reuse when it goes out of scope
+</pre>
+
 <h2>Implementation</h2>
 <p>
   The header file is in 

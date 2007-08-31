@@ -159,7 +159,7 @@ install: update all
 	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
 update:
-	svn update
+	svn update . ../doc/Developer/ProgrammingGuide
 	rm changes_log.html
 
 .SUFFIXES: .html .css
