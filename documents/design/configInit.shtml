@@ -10,7 +10,6 @@
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
   State:
   <ul>
-    <li>startInit/finishInit separation implemented in svn</li>
     <li>Implemented in 0.3</li>
   </ul>
 </p>
@@ -32,19 +31,17 @@
 <table>
   <tr><th>App thread</th> <th>Node thread(s)</th> <th>Pipe thread(s)</th></tr>
   <tr><td colspan="3"><hr></td></tr>
-  <tr><td>Config::startInit</td> <td></td> <td></td></tr>
-  <tr>
-    <td>Config::startInit returns when</td> <td>Config::Config</td> <td></td>
-  </tr>
-  <tr><td>render clients are connected</td> <td>Node::Node</td> <td></td></tr>
-  <tr><td>...</td> <td>Node::configInit</td> <td></td></tr>
-  <tr><td>Config::finishInit</td> <td>Pipe::Pipe</td> <td></td></tr>
+  <tr><td>Config::init</td> <td></td> <td></td></tr>
+  <tr><td></td> <td>Config::Config</td> <td></td></tr>
+  <tr><td></td> <td>Node::Node</td> <td></td></tr>
+  <tr><td></td> <td>Node::configInit</td> <td></td></tr>
+  <tr><td></td> <td>Pipe::Pipe</td> <td></td></tr>
   <tr><td></td> <td></td> <td>Pipe::configInit</td></tr>
   <tr><td></td> <td></td> <td>Window::Window</td></tr>
   <tr><td></td> <td></td> <td>Window::configInit</td></tr>
   <tr><td></td> <td></td> <td>Channel::Channel</td></tr>
   <tr><td></td> <td></td> <td>Channel::configInit</td></tr>
-  <tr><td>Config::finishInit returns</td> <td></td> <td></td></tr>
+  <tr><td>Config::init returns</td> <td></td> <td></td></tr>
   <tr><td colspan="3"><hr></td></tr>
   <tr><td>Config::exit</td> <td></td> <td></td></tr>
   <tr><td></td> <td></td> <td>Channel::configExit</td></tr>
