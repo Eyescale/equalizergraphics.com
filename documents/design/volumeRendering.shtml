@@ -28,9 +28,9 @@
   using DB (sort-last) compounds.  The volume is split into bricks along one
   axis for simplicity. The recomposition of the partial, semi-transparent volume
   bricks is done using back-to front compositing.  The number of frames to
-  composit equals the data bricks number, the data bricks are in strong
+  composite equals the data bricks number, the data bricks are in strong
   correspondence to each other. We only need to transfer RGBA information, and
-  we can ignore depth values on the final compositing stage, which savea network
+  we can ignore depth values on the final compositing stage, which save a network
   bandwidth.  The correct sequences of the RGBA frames for compositing is fixed,
   but Equalizer's current compositing implementation assumes that frames can be
   composed in arbitrary way. For the volume render, we will implement a user
@@ -47,6 +47,103 @@
          alt="back to front compositing"></a>
   <div class="label">Back to front compositing for current image</div>
 </div>
+
+<h3>3D Texture-Based approach in volume rendering</h3>
+
+Main idea of 3D texture-based approach is that volume stored as a 3D texture on
+GPU, and intersected then with viewport aligned slices in back-to-front order. 
+It allows to achieve good performance, because GPU will do all the work on texture 
+interpolation, better quality can be achieved using pre-integrated transfer 
+function [1] p.61,92.
+
+Following pictures illustrates few slices which intersects the volume, after 
+blending from back to front, the resulted images will contain complete views of 
+the model. 
+
+<div class="gallery">
+  <a href="documents/design/images/vol_texMap3D.png">
+    <img src="documents/design/images/vol_texMap3D-small.png"
+         alt="Rendering slices with model 'fuel'.">
+  </a>
+  Rendering slices with model 'fuel'.
+</div>
+<div class="gallery">
+  <a href="documents/design/images/vol_texMap3Drot.png">
+    <img src="documents/design/images/vol_texMap3Drot-small.png"
+         alt="Rendering slices with rotated model 'fuel'.">
+  </a>
+  Rendering slices with rotated model 'fuel'.
+</div>
+<div class="flush_float"></div>
+
+<p>
+  In our eVolve example we are dealing with cubic models (parallelepiped models are 
+  treated in the same way, assuming that they are cubic and than scaled to they real
+  shape, it allows using of uniform algorithms for model manipulation). Intersection 
+  of Viewport-aligned slices with a model is a polygon with 3..6 vertices, there is 
+  no need to render the rest of a slice, the only intersection is important in order 
+  to save computational power. We use algorithm to determine that intersection from 
+  [1] p. 73.
+</p>
+
+<h3>DB decomposition in eVolve example and Texture Memory Allocation</h3>
+
+<div class="float_right">
+  <a href="documents/design/images/vol_mem_allocation.png.png">
+    <img src="documents/design/images/vol_mem_allocation-small.jpg"
+         alt="Volume's memory allocation"></a>
+  <div class="label">Volume's memory allocation</div>
+</div>
+<p>
+  In the eVolve example volume is divided along Z axis, that is made because of 
+  simplicity reasons and because of only 1-dimensional range for DB decomposition 
+  assignment in equalizer at the moment. In future it is possible to extend that 
+  to decomposition in arbitrary parallelepipeds.
+</p>
+
+<p>
+  Logically volume represented as a cube with all edges' lengths equal to 1, which 
+  is correspond to the texture coordinates in GPU. The DB decomposition range is 
+  a pair of values which belongs to interval [0..1], so we can divide volume using 
+  directly values of DB range. The actual 3D texture dimensions should be equal to
+  power of 2 from hardware limitations, but in the real world models can have 
+  different dimensions and scaling of final 3D texture coordinates is required in 
+  that case. The scaling of coordinates also should be used to utilize 3D texture 
+  memory in a rational way, there is no need to have free space in 3D texture which
+  correspond to object slices which are rendered by other clients.
+</p>
+
+<p>
+  Picture in the right illustrates memory allocation and scaling of 3D texture 
+  coordinates processes. Each channel renders parallelepiped of a model which has 
+  texture coordinates: [0,0,Ds]..[1,1,De], this peace of model has dimensions of 
+  [ Wd x Hd x Dd ] voxels, the 3D texture has dimensions of [ Wt x Ht x Dt ]
+  pixels. Peace of a model stored not tightly to the 3D texture edge along Z axis 
+  but with small threshold because pre-integration technic requires some space in the 
+  edge for correct compositing, this shift equals to DBt pixels. The texture 
+  coordinates Wd-1, Hd-1, Dd-1 are correspond to 1 in 3D texture coordinates' space,
+  hence the coordinates transformation will look like:
+<p>
+    
+<p>
+    <pre>
+        Xn = X * W
+        Yn = Y * H
+        Zn = Db + ( Z - Ds ) * D
+    </pre>
+    where:
+    <pre>
+        W  =   Wd  / Wh
+        H  =   Hd  / Hh
+        Db =   DBT / Dh
+        D  = ( Dd  / Dh ) / ( De - Ds )
+        
+        X, Y, Z    - original texture coordinates
+        Xn, Yn, Zn - new 3D texture coordinates
+    </pre>
+</p>
+
+</p><div class="flush_float"></div>
 
 <h3>Semi-transparent frame compositing</h3>
 <p>
@@ -113,6 +210,50 @@
   in case of 2D (Sort First) composition. 
 </p>
 
+<h3>Correct Frames Compositing Order Computation</h3>
+
+<p>
+ In order to perform back to front compositing, we need a right order of 
+ DB slices, there are who different cases implemented in eVolve: for 
+ perspective and parallel projection accordingly.
+<p>
+    
+<p>
+  As it is described above, volume model is divided along Z axis, and we use 
+  that property. Compositing order defined according to the angle between view 
+  vector and vector which parallel to Z axis in model-space (vector [0,0,1]).
+  The compositing order should be switched if that angle is more than 90
+  degree, as shown in the first picture bellow. In fact we only need to check
+  a sign of one element of the rotation matrix which corresponds to
+  cos(Ax)*cos(Ay), where Ax and Ay are angles or rotation around X and Y 
+  axes.
+</p>
+<div class="gallery">
+  <a href="documents/design/images/vol_slice_compositing_1.png">
+    <img src="documents/design/images/vol_slice_compositing_1-small.png"
+         alt="Compositing in case of parallel projection.">
+  </a>
+  Compositing in case of parallel projection.
+</div>
+<div class="gallery">
+  <a href="documents/design/images/vol_slice_compositing_2.png">
+    <img src="documents/design/images/vol_slice_compositing_2-small.png"
+         alt="Compositing in case of perspective projection.">
+  </a>
+  Compositing in case of perspective projection.
+</div>
+<div class="flush_float"></div>
+
+<p>
+  The perspective projection case is more complicated as you can see from the 
+  second picture above. In that picture the right compositing order would be: 
+  slices 1,2,5,4,3 or 5,4,1,2,3 (and other variants with slices 2 and 4 after 
+  slices 1 and 5, with slice 3 on top) because of the perspective distortion. 
+  To calculate the right order we have to check several angles now, two angles
+  per slice. Our algorithm finds the first slice where the change of sign of 
+  cos of angle happens, and changes order of the rest slices.
+</p>
+
 <h2>Implementation</h2>
 <p>
   TBD
@@ -131,6 +272,11 @@
 <h2>Open Issues</h2>
 <p>
 </p>
-   
+
+<h2>References</h2>
+<p>
+    [1] Klaus Engel, Markus Hadwiger, Joe M.Kniss, Christof Rezk-Salama, Daniel Wieskopf. "Real-Time Volume Graphics." A K Peters, Ltd, 2006.  
+</p>
+ 
 #include "footer.shtml"
 <!-- $Id$ -->
