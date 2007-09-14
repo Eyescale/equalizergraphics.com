@@ -41,38 +41,41 @@
 
 <h2>Design</h2>
 
+<h3>3D Texture-Based approach in volume rendering</h3>
+
 <div class="float_right">
   <a href="documents/design/images/currentBackFront.png">
     <img src="documents/design/images/currentBackFront-small.jpg"
          alt="back to front compositing"></a>
   <div class="label">Back to front compositing for current image</div>
 </div>
+<p>
+  The main idea of the 3D texture-based approach is that the volume is stored as
+  a 3D texture on the GPU, and then intersected with viewport-aligned slices
+  rendered in back-to-front order. This algorithm allows to achieve good
+  performance, because GPU will do all the work on texture interpolation. The
+  quality can be improved by using a pre-integrated transfer function [1]
+  p.61,92.
+</p>
+<p>
+  The following pictures illustrate a few slices which intersect the
+  volume. After rendering the slices with blending from back to front, the
+  result image will contain a complete view of the model.
+</p>
 
-<h3>3D Texture-Based approach in volume rendering</h3>
-
-The main idea of the 3D texture-based approach is that the volume is stored as a
-3D texture on the GPU, and then intersected with viewport-aligned slices
-rendered in back-to-front order. This algorithm allows to achieve good
-performance, because GPU will do all the work on texture interpolation. The
-quality can be improved by using a pre-integrated transfer function [1] p.61,92.
-
-The following pictures illustrate a few slices which intersect the volume. After
-rendering the slices with blending from back to front, the result image will
-contain a complete view of the model.
-
-<div class="gallery">
+<div class="float_left">
   <a href="documents/design/images/vol_texMap3D.png">
     <Img src="documents/design/images/vol_texMap3D-small.jpg"
          alt="Rendering slices with model 'fuel'.">
   </a>
-  Rendering slices with model 'fuel'.
+  <div class="label">Rendering slices with model 'fuel'</div>
 </div>
-<div class="gallery">
+<div class="flush_right">
   <a href="documents/design/images/vol_texMap3Drot.png">
     <Img src="documents/design/images/vol_texMap3Drot-small.jpg"
          alt="Rendering slices with rotated model 'fuel'.">
   </a>
-  Rendering slices with rotated model 'fuel'.
+  <div class="label">Rendering slices with rotated model 'fuel'</div>
 </div>
 <div class="flush_float"></div>
 
@@ -85,11 +88,13 @@ contain a complete view of the model.
   intersection is important in order to save computational power. We use
   algorithm to determine that intersection from [1] p. 73.
 </p>
+<div class="flush_float"></div>
+
 
 <h3>DB decomposition in eVolve example and Texture Memory Allocation</h3>
 
 <div class="float_right">
-  <a href="documents/design/images/vol_mem_allocation.png.png">
+  <a href="documents/design/images/vol_mem_allocation.png">
     <img src="documents/design/images/vol_mem_allocation-small.jpg"
          alt="Volume's memory allocation"></a>
   <div class="label">Volume's memory allocation</div>
@@ -219,6 +224,13 @@ contain a complete view of the model.
  perspective and parallel projection.
 <p>
     
+<div class="float_right">
+  <a href="documents/design/images/vol_slice_compositing_1.png">
+    <img src="documents/design/images/vol_slice_compositing_1-small.jpg"
+         alt="Compositing in case of parallel projection.">
+  </a>
+  <div class="label">Compositing for parallel projection</div>
+</div>
 <p>
   As it is described above, volume model is divided along Z axis. The
   compositing order is defined according to the angle between view vector and
@@ -228,30 +240,23 @@ contain a complete view of the model.
   element of the rotation matrix which corresponds to cos(Ax)*cos(Ay), where Ax
   and Ay are angles or rotation around X and Y axes.
 </p>
-<div class="gallery">
-  <a href="documents/design/images/vol_slice_compositing_1.png">
-    <img src="documents/design/images/vol_slice_compositing_1-small.jpg"
-         alt="Compositing in case of parallel projection.">
-  </a>
-  Compositing in case of parallel projection.
-</div>
-<div class="gallery">
+
+<div class="flush_float"></div>
+<div class="float_right">
   <a href="documents/design/images/vol_slice_compositing_2.png">
     <img src="documents/design/images/vol_slice_compositing_2-small.jpg"
          alt="Compositing in case of perspective projection.">
   </a>
-  Compositing in case of perspective projection.
+  <div class="label">Compositing for perspective projection</div>
 </div>
-<div class="flush_float"></div>
-
 <p>
-  The perspective projection case is more complicated as you can see from the 
-  second picture above. In that picture the right compositing order would be: 
-  slices 1,2,5,4,3 or 5,4,1,2,3 (and other variants with slices 2 and 4 after 
-  slices 1 and 5, with slice 3 on top) because of the perspective distortion. 
+  The perspective projection case is more complicated as you can see from the
+  picture on the right. In that picture the right compositing order would be:
+  slices 1,2,5,4,3 or 5,4,1,2,3 (and other variants with slices 2 and 4 after
+  slices 1 and 5, with slice 3 on top) because of the perspective distortion.
   To calculate the right order we have to check several angles now, two angles
-  per slice. Our algorithm finds the first slice where the change of sign of 
-  cos of angle happens, and changes order of the rest slices.
+  per slice. Our algorithm finds the first slice where the change of sign of cos
+  of angle happens, and changes order of the rest slices.
 </p>
 
 <h2>Implementation</h2>
