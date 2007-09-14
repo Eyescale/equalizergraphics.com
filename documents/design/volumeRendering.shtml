@@ -62,14 +62,14 @@ contain a complete view of the model.
 
 <div class="gallery">
   <a href="documents/design/images/vol_texMap3D.png">
-    <img src="documents/design/images/vol_texMap3D-small.png"
+    <Img src="documents/design/images/vol_texMap3D-small.jpg"
          alt="Rendering slices with model 'fuel'.">
   </a>
   Rendering slices with model 'fuel'.
 </div>
 <div class="gallery">
   <a href="documents/design/images/vol_texMap3Drot.png">
-    <img src="documents/design/images/vol_texMap3Drot-small.png"
+    <Img src="documents/design/images/vol_texMap3Drot-small.jpg"
          alt="Rendering slices with rotated model 'fuel'.">
   </a>
   Rendering slices with rotated model 'fuel'.
@@ -221,23 +221,23 @@ contain a complete view of the model.
     
 <p>
   As it is described above, volume model is divided along Z axis. The
-  compositing order defined according to the angle between view vector and
-  vector which parallel to Z axis in model-space (vector [0,0,1]).  The
-  compositing order should be switched if that angle is more than 90 degree, as
-  shown in the first picture bellow. In fact we only need to check a sign of one
+  compositing order is defined according to the angle between view vector and
+  vector which is parallel to the Z axis in model-space (vector [0,0,1]).  The
+  compositing order should be switched if that angle is more than 90 degrees, as
+  shown in the first picture below. In fact we only need to check a sign of one
   element of the rotation matrix which corresponds to cos(Ax)*cos(Ay), where Ax
   and Ay are angles or rotation around X and Y axes.
 </p>
 <div class="gallery">
   <a href="documents/design/images/vol_slice_compositing_1.png">
-    <img src="documents/design/images/vol_slice_compositing_1-small.png"
+    <img src="documents/design/images/vol_slice_compositing_1-small.jpg"
          alt="Compositing in case of parallel projection.">
   </a>
   Compositing in case of parallel projection.
 </div>
 <div class="gallery">
   <a href="documents/design/images/vol_slice_compositing_2.png">
-    <img src="documents/design/images/vol_slice_compositing_2-small.png"
+    <img src="documents/design/images/vol_slice_compositing_2-small.jpg"
          alt="Compositing in case of perspective projection.">
   </a>
   Compositing in case of perspective projection.
@@ -275,13 +275,8 @@ contain a complete view of the model.
 
 <h2>References</h2>
 <p>
-    [1] Klaus Engel, Markus Hadwiger, Joe M.Kniss, Christof Rezk-Salama, 
-    Daniel Wieskopf. "Real-Time Volume Graphics." A K Peters, Ltd, 2006.  
+    [1] Klaus Engel, Markus Hadwiger, Joe M.Kniss, Christof Rezk-Salama, Daniel Wieskopf. "Real-Time Volume Graphics." A K Peters, Ltd, 2006.  
 </p>
-
-<div class="footnote">
-Volume data sets courtesy of: Computer Graphics Group, University of 
-Erlangen, Germany; SFB-382 of the German Research Council (DFG); AVS, USA</div>
-
+ 
 #include "footer.shtml"
 <!-- $Id$ -->
