@@ -1,5 +1,5 @@
 
-.PHONY: update
+.PHONY: update sitemap
 
 TOP = ..
 
@@ -141,7 +141,7 @@ INCLUDES = \
 	include/header.shtml \
 	include/footer.shtml
 
-TARGETS  = $(FILES:%=$(TARGET)/%) 
+TARGETS  = $(FILES:%=$(TARGET)/%)
 IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 	   $(IMAGES_SRC:%.jpg=%-small.jpg)
 
@@ -155,7 +155,7 @@ all: $(TARGETS) $(INCLUDES)
 clean:
 	rm -rf $(TARGETS)
 
-install: update all
+install: update all sitemap
 	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
 update:
@@ -167,6 +167,9 @@ update:
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) $< | sed 's/^#.*//' > $@
+
+sitemap:
+	sitemap_gen --config=sitemap_config.xml || true
 
 $(TARGET)/stylesheet.css: stylesheet.css
 	cp stylesheet.css $@
