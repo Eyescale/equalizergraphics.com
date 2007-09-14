@@ -275,8 +275,13 @@ the model.
 
 <h2>References</h2>
 <p>
-    [1] Klaus Engel, Markus Hadwiger, Joe M.Kniss, Christof Rezk-Salama, Daniel Wieskopf. "Real-Time Volume Graphics." A K Peters, Ltd, 2006.  
+    [1] Klaus Engel, Markus Hadwiger, Joe M.Kniss, Christof Rezk-Salama, 
+    Daniel Wieskopf. "Real-Time Volume Graphics." A K Peters, Ltd, 2006.  
 </p>
- 
+
+<div class="footnote">
+Volume data sets courtesy of: Computer Graphics Group, University of 
+Erlangen, Germany; SFB-382 of the German Research Council (DFG); AVS, USA</div>
+
 #include "footer.shtml"
 <!-- $Id$ -->
