@@ -9,27 +9,36 @@
 #include "header.shtml"
 
 <h2>Table of Contents</h2>
+<ul class ="toc1">
+  <li><a href="#display">Display Environments</a></li>
+  <ul class ="toc2">
+    <li><a href="#wall">Display Walls</a></li>
+    <li><a href="#vr">Virtual Reality</a></li>
+    <li><a href="#multipipe">Multi-GPU Workstation</a></li>
+    <li><a href="#scalable">Scalable Rendering</a></li>
+    <li><a href="#remote">Remote Visualization Clusters</a></li>
+    <li><a href="#sli">SLI and Crossfire Systems</a></li>
+  </ul>
+  <li><a href="#applications">Applications</a></li>
+  <ul class ="toc2">
+    <li><a href="#sciviz">Scientific Visualization</a></li>
+    <li><a href="#medical">Medical Imaging</a></li>
+    <li><a href="#oilgas">Oil and Gas</a></li>
+  </ul>
+</ul>
+
+<a name="display"></a>
+<h2>Display Environments</h2>
 <p>
-  <a href="#overview">Overview</a><br>
-  <a href="#wall">Display Walls</a><br>
-  <a href="#vr">Virtual Reality</a><br>
-  <a href="#multipipe">Multi-GPU Workstation</a><br>
-  <a href="#scalable">Scalable Rendering</a><br>
-  <a href="#remote">Remote Visualization Clusters</a><br>
-  <a href="#sli">SLI and Crossfire Systems</a><br>
+  Equalizer abstracts the actual configuration from the application code. This
+  allows a single application to be deployed in a wide range of
+  configurations. The flexibility of Equalizer enables mixing the features
+  described below or completely different applications, often even in unforeseen
+  ways.
 </p>
 
-<a name="overview"></a>
-<h2>Overview</h2>
-<p>
-Equalizer abstracts the actual configuration from the application code. This
-allows a single application to be deployed in a wide range of
-configurations. The flexibility of Equalizer enables mixing the features
-described below or completely different applications, often even in unforeseen
-ways.
-</p>
 <a name="wall"></a>
-<h2>Display Walls</h2>
+<h3>Display Walls</h3>
 <div class="float_right"><a href="images/wall.png">
         <img src="images/wall-small.jpg" alt="A display wall configuration"></a>
   <div class="label">A display wall configuration</div>
@@ -44,7 +53,7 @@ ways.
 </p><div class="flush_float"></div>
 
 <a name="vr"></a>
-<h2>Virtual Reality</h2>
+<h3>Virtual Reality</h3>
 <div class="float_right"><a href="images/vr.png">
   <img src="images/vr-small.jpg" 
        alt="A four-sided Virtual Reality installation"></a>
@@ -62,7 +71,7 @@ ways.
 </p><div class="flush_float"></div>
 
 <a name="multipipe"></a>
-<h2>Multi-GPU Workstations</h2>
+<h3>Multi-GPU Workstations</h3>
 <div class="float_right"><a href="images/workstation.png">
   <img src="images/workstation-small.jpg" alt="A multipipe workstation"></a>
   <div class="label">A multi-GPU workstation</div>
@@ -78,7 +87,7 @@ ways.
 </p><div class="flush_float"></div>
 
 <a name="scalable"></a>
-<h2>Scalable Rendering</h2>
+<h3>Scalable Rendering</h3>
 <div class="float_right"><a href="images/scalable.png">
   <img src="images/scalable-small.jpg" alt="Sort-last scalable rendering"></A>
   <div class="label">Sort-last scalable rendering</div>
@@ -94,7 +103,7 @@ ways.
 </p><div class="flush_float"></div>
 
 <a name="remote"></a>
-<h2>Remote Visualization Clusters</h2>
+<h3>Remote Visualization Clusters</h3>
 <div class="float_right"><a href="images/remote.png">
   <img src="images/remote-small.jpg" alt="A remote visualization cluster"></a>
   <div class="label">A remote visualization cluster</div>
@@ -111,7 +120,7 @@ ways.
 </p><div class="flush_float"></div>
 
 <a name="sli"></a>
-<h2>SLI and Crossfire Systems</h2>
+<h3>SLI and Crossfire Systems</h3>
 <div class="float_right"><a href="images/SLI.png">
   <img src="images/SLI-small.jpg" alt="A SLI/Crossfire configuration"></a>
   <div class="label">A SLI/Crossfire configuration</div>
@@ -127,6 +136,47 @@ ways.
   update the configuration to provide good load balancing across all rendering
   threads.
 </p><div class="flush_float"></div>
+
+
+<a name="applications"></a>
+<h2>Applications</h2>
+<p>
+  Equalizer does not interfere with the application's rendering code. It can be
+  used for parallelizing any visualization application based on OpenGL, which
+  allows it to be used in all markets which can benefit of parallel rendering. A
+  fex examples are given below.
+</p>
+
+
+<a name="sciviz"></a>
+<h3>Scientific Visualization</h3>
+<p>
+  Scientific Visualization analyzes huge amounts of data generated from
+  numerical simulations. This data has to be processed and analyzed to generate
+  understanding of the results. Equalizer can help this process by breaking the
+  limitations of a single machine, allowing more data to be visualized.
+</p>
+
+<a name="medical"></a>
+<h3>Medical Imaging</h3>
+<p>
+  Medical Imaging produces volume data sets from various sources, for example
+  MRI scanners. Visualizing this data is challenging, since it quickly outgrows
+  the memory and fill rate capacity of a single graphics card. On the other
+  hand, volume rendering is one of the best candidates for parallel
+  rendering. Equalizer contains a volume rendering example to illustrate the
+  benefit of scalable rendering and as a guideline for custom developments.
+</p>
+
+<a name="oilgas"></a>
+<h3>Oil and Gas</h3>
+<p>
+  From a parallelization standpoint, the Oil and Gas industry has similar
+  visualization requirements as the medical imaging sector. Huge volume data
+  sets of reservoir simulations have to be visualized, often in collaborative or
+  immersive environments. The flexibility of Equalizer allows to use scalable
+  rendering also in immersive installations.
+</p>
 
 <div class="footnote">
 SLI&trade; is a trademark of NVIDIA Corporation. Crossfire&trade; is a trademark

@@ -196,6 +196,17 @@ div.footnote
     font-size: x-small;
 }
 
+ul.toc1
+{ 
+    list-style-type: none;
+}
+
+ul.toc2
+{ 
+    list-style-type: none;
+    font-size:       small;
+}
+
 .float_right
 {
     float:right; 
