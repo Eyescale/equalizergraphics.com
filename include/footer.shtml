@@ -66,6 +66,12 @@
 #endif
           >End User</a></p>
 
+    <p><a href="doc_developer.html"
+#ifdef S_DOCUMENTATION_DEVELOPER
+          class="used"
+#endif
+          >Developer</a></p>
+
     <p><a href="features.html"
 #ifdef S_DOCUMENTATION_FEATURES
           class="used"
@@ -77,12 +83,6 @@
           class="used"
 #endif
           >Compatibility Matrix</a></p>
-
-    <p><a href="doc_developer.html"
-#ifdef S_DOCUMENTATION_DEVELOPER
-          class="used"
-#endif
-          >Developer</a></p>
 
     <p><a href="relnotes.html"
 #ifdef S_DOCUMENTATION_RELNOTES

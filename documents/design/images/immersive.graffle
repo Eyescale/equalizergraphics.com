@@ -4,6 +4,11 @@
 <dict>
 	<key>ActiveLayerIndex</key>
 	<integer>0</integer>
+	<key>ApplicationVersion</key>
+	<array>
+		<string>com.omnigroup.OmniGrafflePro</string>
+		<string>129.15</string>
+	</array>
 	<key>AutoAdjust</key>
 	<true/>
 	<key>CanvasColor</key>
@@ -422,7 +427,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{509.323, 566.215}, {16, 14}}</string>
+			<string>{{509.323, 566.216}, {16, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -446,7 +451,7 @@
 				<key>ID</key>
 				<integer>47</integer>
 				<key>Offset</key>
-				<real>-7.8873229026794434</real>
+				<real>7.8873229026794434</real>
 				<key>Position</key>
 				<real>0.75</real>
 				<key>RotationType</key>
@@ -578,7 +583,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{721.921, 268.577}, {16, 14}}</string>
+			<string>{{721.921, 268.578}, {16, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -602,7 +607,7 @@
 				<key>ID</key>
 				<integer>34</integer>
 				<key>Offset</key>
-				<real>-7.8873229026794434</real>
+				<real>7.8873229026794434</real>
 				<key>Position</key>
 				<real>0.75</real>
 				<key>RotationType</key>
@@ -734,7 +739,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{225.858, 268.577}, {16, 14}}</string>
+			<string>{{225.858, 268.578}, {16, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -758,7 +763,7 @@
 				<key>ID</key>
 				<integer>15</integer>
 				<key>Offset</key>
-				<real>-7.8873229026794434</real>
+				<real>7.8873229026794434</real>
 				<key>Position</key>
 				<real>0.75</real>
 				<key>RotationType</key>
@@ -867,12 +872,12 @@
 				<array>
 					<string>{-0.5, -0.5}</string>
 					<string>{-0.5, -0.5}</string>
-					<string>{-0.166667, 0.463811}</string>
-					<string>{-0.166667, 0.463811}</string>
-					<string>{-0.166667, 0.463811}</string>
-					<string>{0.0547395, 0.500001}</string>
-					<string>{0.0547395, 0.5}</string>
-					<string>{0.0547395, 0.5}</string>
+					<string>{-0.166668, 0.463811}</string>
+					<string>{-0.166668, 0.463811}</string>
+					<string>{-0.166668, 0.463811}</string>
+					<string>{0.0547404, 0.500001}</string>
+					<string>{0.0547392, 0.5}</string>
+					<string>{0.0547404, 0.499999}</string>
 					<string>{0.5, -0.362313}</string>
 					<string>{0.5, -0.362313}</string>
 					<string>{0.499997, -0.362313}</string>
@@ -888,11 +893,11 @@
 						<key>a</key>
 						<string>0.5</string>
 						<key>b</key>
-						<string>0.509696</string>
+						<string>0.184314</string>
 						<key>g</key>
-						<string>0.809783</string>
+						<string>0.576471</string>
 						<key>r</key>
-						<string>0.669288</string>
+						<string>0.752941</string>
 					</dict>
 				</dict>
 				<key>shadow</key>
@@ -904,7 +909,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{552.756, 28.3464}, {297.638, 207.117}}</string>
+			<string>{{552.756, 28.3465}, {297.638, 207.117}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -918,8 +923,8 @@
 					<string>{-0.5, -0.363139}</string>
 					<string>{-0.5, -0.363138}</string>
 					<string>{-0.0547402, 0.5}</string>
-					<string>{-0.0547402, 0.5}</string>
 					<string>{-0.05474, 0.5}</string>
+					<string>{-0.0547404, 0.5}</string>
 					<string>{0.166666, 0.458033}</string>
 					<string>{0.166666, 0.458032}</string>
 					<string>{0.166666, 0.458032}</string>
@@ -938,11 +943,11 @@
 						<key>a</key>
 						<string>0.5</string>
 						<key>b</key>
-						<string>0.509696</string>
+						<string>0.184314</string>
 						<key>g</key>
-						<string>0.809783</string>
+						<string>0.576471</string>
 						<key>r</key>
-						<string>0.669288</string>
+						<string>0.752941</string>
 					</dict>
 				</dict>
 				<key>shadow</key>
@@ -990,11 +995,11 @@
 						<key>a</key>
 						<string>0.5</string>
 						<key>b</key>
-						<string>0.509696</string>
+						<string>0.184314</string>
 						<key>g</key>
-						<string>0.809783</string>
+						<string>0.576471</string>
 						<key>r</key>
-						<string>0.669288</string>
+						<string>0.752941</string>
 					</dict>
 				</dict>
 				<key>shadow</key>
@@ -1040,11 +1045,11 @@
 						<key>a</key>
 						<string>0.5</string>
 						<key>b</key>
-						<string>0.509696</string>
+						<string>0.184314</string>
 						<key>g</key>
-						<string>0.809783</string>
+						<string>0.576471</string>
 						<key>r</key>
-						<string>0.669288</string>
+						<string>0.752941</string>
 					</dict>
 				</dict>
 				<key>shadow</key>
@@ -1090,11 +1095,11 @@
 						<key>a</key>
 						<string>0.5</string>
 						<key>b</key>
-						<string>0.509696</string>
+						<string>0.184314</string>
 						<key>g</key>
-						<string>0.809783</string>
+						<string>0.576471</string>
 						<key>r</key>
-						<string>0.669288</string>
+						<string>0.752941</string>
 					</dict>
 				</dict>
 				<key>shadow</key>
@@ -1286,7 +1291,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2007-02-12 10:58:00 +0100</string>
+	<string>2007-09-27 21:53:07 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
@@ -1353,9 +1358,7 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<string>0</string>
-		<key>DrawerOpen</key>
-		<false/>
+		<integer>0</integer>
 		<key>DrawerTab</key>
 		<string>Outline</string>
 		<key>DrawerWidth</key>
@@ -1363,15 +1366,11 @@
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{267, 261}, {841, 673}}</string>
-		<key>ShowRuler</key>
-		<false/>
-		<key>ShowStatusBar</key>
-		<true/>
+		<string>{{290, 124}, {929, 754}}</string>
 		<key>VisibleRegion</key>
-		<string>{{-1, 0}, {1025.68, 714}}</string>
+		<string>{{0, -9.00003}, {1022, 733.514}}</string>
 		<key>Zoom</key>
-		<string>1.006653</string>
+		<real>1.1179059743881226</real>
 	</dict>
 </dict>
 </plist>

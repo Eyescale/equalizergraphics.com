@@ -1,8 +1,6 @@
 
 .PHONY: update sitemap
 
-TOP = ..
-
 TARGET = build
 
 FILES = \
