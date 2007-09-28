@@ -32,6 +32,7 @@ FILES = \
         robots.txt \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Developer/ProgrammingGuide.pdf \
+	documents/Developer/eqPly.pdf \
 	documents/EGPGV07.html \
 	documents/EGPGV07.html_files \
 	documents/EGPGV07.pdf \
@@ -177,6 +178,10 @@ $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	cp $< $@
 
 $(TARGET)/documents/Developer/%.pdf: ../doc/Developer/%/paper.pdf
+	@mkdir -p $(@D)
+	cp $< $@
+
+$(TARGET)/documents/Developer/eqPly.pdf: ../doc/Developer/eqPly/Semesterarbeit.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 

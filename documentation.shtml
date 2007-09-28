@@ -66,6 +66,9 @@
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a> (restricted access due to copyright
       limitations)</li>
+  <li><a href="documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+      OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
+    implemented for v0.4, 2007/09.</li>
 </ul>
 
 <h2>Equalizer Applications</h2>
