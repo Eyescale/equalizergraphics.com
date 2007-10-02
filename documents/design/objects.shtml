@@ -8,7 +8,11 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-  State: Implemented in 0.3 alpha
+  State:
+  <ul>
+    <li>Implemented in 0.3 alpha</li>
+    <li>Serialization using streams implemented in svn</li>
+  </ul>
 </p>
 
 <p>
@@ -78,6 +82,18 @@
 </p><p>
   Objects with the same instance and delta data only distribute instance data
   for each new version, and do not have to implement pack and unpack.
+</p>
+
+<h2>Serialization</h2>
+<p>
+  The object serialization and deserialization methods use
+  an <code>DataOStream</code> and <code>DataIStream</code>, respectively. These
+  streams behave like iostreams, but transfer the data in a binary format. They
+  do no type-checking on the data, that is, it is the application's
+  responsibility to <strong>match the order and variables during serialization
+  and deserialization exactly</strong>. Currently they implement streaming
+  operators for basic data types (int, float, etc.), std::strings and
+  std::vectors of basic data types.
 </p>
 
 <h2>Object Typing</h2>
