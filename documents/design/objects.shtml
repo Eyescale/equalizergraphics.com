@@ -101,16 +101,12 @@
 <pre>
   Provide type with objects: 
       virtual uint32_t Object::getTypeID() const { return EQ_ID_INVALID; }
-  map type id to creation function
-      ObjectFactory Session::getObjectFactory( const uint32_t typeID )
-      Session has hash<uint32_t, ObjectFactory>
-
   Session::instantiateObject( const uint32_t objectID ):
       if( !get object type id from master )
           return 0
-      create object
-      map object to objectID
-      return object
+     Session::createObject( type );
+     map object to objectID
+     return object
 </pre>
 
 <h2>Multi-Buffered Objects</h2>
