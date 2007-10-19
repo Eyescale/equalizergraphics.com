@@ -80,7 +80,7 @@
 <p>
   The first one ensures that the application (node) thread is done modifiying
   the data. The pipe threads call <code>Node::waitFrameStarted</code> which
-  block until the node calls <code>startFrame</code>, which happens
+  blocks until the node calls <code>startFrame</code>
   in <code>Node::frameStart</code>.
 </p>
 <p>
