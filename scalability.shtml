@@ -165,6 +165,7 @@
   tile, and sends the composited result to the destination channel.
 </p><div class="flush_float"></div>
 
+<a name="async"></a>
 <div class="float_right"><a href="images/Async.png">
   <img src="images/Async-small.jpg" 
        alt="Synchronous vs. asynchronous execution"></a>
@@ -204,9 +205,11 @@
 </p><div class="flush_float"></div>
 
 <div class="footnote">
-3D models partly courtesy of <a href="http://www.cyberware.com">Cyberware</a>
-and <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
-Computer Graphics Laboratory</a>.
+<p>
+  3D models courtesy of <a href="http://www.cyberware.com">Cyberware</a>
+  , <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
+  Computer Graphics Laboratory</a> and AVS, USA.
+</p>
 </div>
 
 #include "footer.shtml"
