@@ -8,7 +8,12 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
-  State: Implementated in 0.3 beta
+  State:
+  <ul>
+    <li>Implemented in 0.3 beta</li>
+    <li>Adapted in svn to reflect changes from per-node thread
+      synchronization</li>
+  </ul>
 </p>
 
 <h2>Overview</h2>
@@ -40,20 +45,29 @@
   functions, which are called by the application thread.
 </p>
 <p>
-  <code>Config::endFrame</code> will execute all rendering task for the frame
-  about to be finished, that is, for frame <code>current-latency</code>.
+  <code>Config::finishFrame</code> will execute all rendering tasks until the
+  local synchronization is released and the frame <code>current-latency</code>
+  is finished.
 </p>
 
 <h3>Reasoning</h3>
 <p>
   The main decision is where and when (latency-wise) the rendering commands are
   executed. The (not yet implemented) cull queue/frame data API will send the
-  data between startFrame and endFrame. Therefore, the draw tasks have to be
-  executed from endFrame, otherwise they would deadlock on data when executed
-  from startFrame. Assembly tasks block on the availability of frames. It makes
-  therefore sense to execute them late, i.e., endFrame executes the rendering
-  tasks for the frame about to finish, to avoid blocking of the application
-  thread.
+  data between startFrame and finishFrame. Therefore, the draw tasks have to be
+  executed from finishFrame, otherwise they would deadlock on data when executed
+  from startFrame.
+</p>
+<p>
+  The tasks are executed in the same order as on threaded pipes to keep the
+  order of execution consistent. This means that input frames on non-threaded
+  channels block the application thread, which typically inhibits a latency
+  greater then one, since no new startFrame can be issued.
+</p>
+<p>
+  Non-threaded execution is less important than in Equalizer v0.3, since a new
+  <a href="documents/design/threads.html#sync">per-node frame
+  synchronization</a> has been introduced.
 </p>
 
 <h3>Implications</h3>

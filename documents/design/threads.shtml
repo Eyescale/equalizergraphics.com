@@ -8,10 +8,16 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-  State: Implemented in 0.3 beta
+  <ul>
+    <li>Implemented in 0.3 beta</li>
+    <li>svn: Added thread synchronization to reflect changes from per-node
+      thread synchronization</li>
+  </ul>
 </p>
 
-<h2>Application (app) Main Thread</h2>
+<h2>Threads</h2>
+
+<h3>Application (app/node) Main Thread</h3>
 <p>
   The app thread is the main execution thread of an Equalizer application,
   typically the one running main(). It drives the application's rendering and
@@ -20,7 +26,7 @@
   tasks.
 </p>
 
-<h2>Render Client Main Thread</h2>
+<h3>Render Client (node) Main Thread</h3>
 <p>
   The render client main thread is very similar to the application thread, in
   that it executes <a href="documents/design/taskMethods.html#node">node
@@ -31,7 +37,7 @@
 </p>
 
 
-<h2>Receiver (recv) Thread</h2>
+<h3>Receiver (recv) Thread</h3>
 <p>
   Each Equalizer network node has a recv thread, created during
   Node::initLocal(). It listens on all connections and reads the data into
@@ -40,7 +46,7 @@
   receiver thread should never block to avoid deadlocks.
 </p>
 
-<h2>Pipe Thread(s)</h2>
+<h3>Pipe Thread(s)</h3>
 <p>
   All commands for a pipe and its siblings (windows, channels) are executed in a
   separate thread for optimal performance. The commands are dispatched from the
@@ -48,6 +54,56 @@
   may block its execution. An exception are nonthreaded pipes, which are
   executed from the main thread.
 </p>
+
+<a name="sync"></a>
+<h2>Thread Synchronization</h2>
+<div class="float_right">
+  <a href="documents/design/images/mainloop.png">
+    <img src="documents/design/images/mainloop-small.jpg" 
+         alt="Application and render client main loops"/></a>
+  <div class="label">Application and render client main loops</div>
+</div>
+<p>
+  The default thread synchronization synchronizes
+  all <code>Channel::frameDraw</code> operations on a single node with the
+  node's main thread. This facilitates porting, since the scene database does
+  not have to be multi-buffered. Advanced applications can remove per-node frame
+  synchronization.
+</p>
+<p>
+  The per-node frame synchronization is achieved through
+  the <code>startFrame, waitFrameStarted</code>
+  and <code>releaseFrameLocal, waitFrameLocal</code> synchronization
+  points. Note that this synchronization is only per-node, different nodes in
+  the cluster still run asynchronously.
+</p>
+<p>
+  The first one ensures that the application (node) thread is done modifiying
+  the data. The pipe threads call <code>Node::waitFrameStarted</code> which
+  block until the node calls <code>startFrame</code>, which happens
+  in <code>Node::frameStart</code>.
+</p>
+<p>
+  The second pair ensures that after <code>Config::finishFrame</code> all pipe
+  threads are done rendering the current frame. The
+  node's <code>frameDrawFinish</code> waits for all local pipes to release the
+  synchronization by calling <code>Pipe::releaseFrameLocal</code>, which happens
+  by default
+  in <code>Pipe::frameDrawFinish</code>. The <code>frameDrawFinish</code>
+  methods are called after all <code>Channel::frameDraw</code> of the
+  corresponding thread have been executed.
+</p>
+<p>
+  Applications which multi-buffer all dynamic data can completely remove frame
+  synchronization by:
+</p>
+<ul>
+  <li>releasing the local synchronization in <code>Node::frameStart</code></li>
+  <li>not calling <code>Node::waitFrameStarted</code>
+    in <code>Pipe::frameStart</code></li>
+  <li>not waiting for the pipe synchronization
+    in <code>Node::frameDrawFinish</code></li>
+</ul>
 
 #include "footer.shtml"
 <!-- $Id$ -->

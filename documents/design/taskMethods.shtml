@@ -154,14 +154,25 @@
   default implementation calls <code>Node::startFrame</code>.
 </p>
 
+<h3>Node::frameDrawFinish</h3>
+<p>
+  Called after the last <code>Channel::frameDraw</code> call of the node
+  thread. The default implementation waits for all pipes to release the local
+  synchronization, and then releases the node's local synchronization by
+  calling <code>releaseFrameLocal</code>. The application might
+  call <code>releaseFrameLocal</code> earlier or later during task execution,
+  when other task methods need synchronization with the node thread. To
+  completely disable per-node frame synchronization,
+  call <code>Node::releaseFrameLocal</code> from <code>Node::frameStart</code>.
+</p>
+
 <h3>Node::frameFinish</h3>
 <p>
   This method is the last method called for a given frame in the node
   thread. Its purpose is to update frame-specific data after a frame has been
   finished rendering, and to unlock the parent by
-  calling <code>Node::releaseFrame</code>. The frame finishing can be older than the
-  last frame started, depending on the config's latency. The default
-  implementation calls <code>Node::releaseFrame</code>.
+  calling <code>Node::releaseFrame</code>. The default implementation
+  calls <code>Node::releaseFrame</code>.
 </p>
 
 <hr><a name="pipe"></a>
@@ -199,10 +210,13 @@
 <h3>Pipe::frameStart</h3>
 <p>
   This method is the first method called for a given frame in the pipe
-  thread. Its purpose is to update all frame-specific data to the version
-  corresponding to the started frame, and to unlock all resources underneath the
-  pipe by calling <code>Pipe::startFrame</code>. The default implementation
-  calls <code>Pipe::startFrame</code>.
+  thread. Its purpose is to wait for the local frame start synchronization, to
+  update all frame-specific data to the version corresponding to the started
+  frame, and to unlock all resources underneath the pipe by
+  calling <code>Pipe::startFrame</code>. The default implementation
+  calls <code>Node::waitFrameStarted</code>
+  and <code>Pipe::startFrame</code>. To disable per-node frame synchronization,
+  do not call <code>Node::waitFrameStarted</code>.
 </p>
 
 <h3>Pipe::frameFinish</h3>
@@ -212,6 +226,16 @@
   finished rendering, and to unlock the parent by
   calling <code>Pipe::releaseFrame</code>. The default implementation
   calls <code>Pipe::releaseFrame</code>.
+</p>
+
+<h3>Pipe::frameDrawFinish</h3>
+<p>
+  Called directly after the last <code>Channel::frameDraw</code> call of the
+  pipe. Normally this releases the parent's process-local synchronization by
+  calling <code>releaseFrameLocal</code>. The application might
+  call <code>releaseFrameLocal</code> earlier or later during task execution, in
+  case other task methods need synchronization with the node thread. See
+  also <a href="nodeframedrawfinish">Node::frameDrawFinish</a>.
 </p>
 
 <h3>Pipe::initEventHandler</h3>
@@ -293,6 +317,15 @@
   Swap the back and front rendering buffer. The default implementation
   calls a window-specific method to swap the buffers, e.g.,
   <code>glXSwapBuffers</code>.
+</p>
+
+<h3>Window::frameDrawFinish</h3>
+<p>
+  Called directly after the last <code>Channel::frameDraw</code> call of the
+  window. Normally this releases the parent's process-local synchronization by
+  calling <code>releaseFrameLocal</code>. Note that there is currently no local
+  synchronization with the pipe, since the window and pipe tasks are executed
+  from the same thread.
 </p>
 
 <h3>Window::finish</h3>
@@ -391,6 +424,15 @@
   (see <code>getHeadTransform</code>) and range for sort-last rendering
   (see <code>getRange</code>). The default implementation applies the buffer,
   viewport, frustum and head transform and draw a quad.
+</p>
+
+<h3>Channel::frameDrawFinish</h3>
+<p>
+  Called directly after the last <code>frameDraw</code> call of the
+  channel. Normally this releases the parent's process-local synchronization by
+  calling <code>releaseFrameLocal</code>. Note that there is currently no local
+  synchronization with the window, since the channel and window tasks are
+  executed from the same thread.
 </p>
 
 <h3>Channel::frameAssemble</h3>
