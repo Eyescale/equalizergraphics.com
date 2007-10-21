@@ -8,7 +8,7 @@
 <h3>Generic Information</h3>
 <ul>
   <li><a href="documents/Developer/ProgrammingGuide.pdf">Programming Guide</a>
-      (incomplete) is the recommended reading for new developers.
+      (draft) is the recommended reading for new developers.
   <li><a href="documents/ParallelGraphicsProgramming.html">Parallel Graphics
     Programming</a> is a presentation explaining the concepts and scope of
     the Equalizer API,
