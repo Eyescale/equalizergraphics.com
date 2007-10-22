@@ -159,7 +159,7 @@ install: update all sitemap
 
 update:
 	svn update . ../doc/Developer/ProgrammingGuide
-	rm changes_log.html
+	rm -f changes_log.html
 
 .SUFFIXES: .html .css
 

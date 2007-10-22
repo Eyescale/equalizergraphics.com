@@ -54,8 +54,9 @@
       64 bit Windows XP.</td></tr>
   <tr><th>2</th><td>tested both in 32 bit and 64 bit i386, as well as
       ia64. Regular testing on Ubuntu 6.10 and RHEL4.</td></tr>
-  <tr><th>3</th><td>32 bit only, OpenGL and X11 libraries do not exist in 64 bit
-      variants. Tested on i386 and ppc using 10.4 Tiger. Universal libraries and
+  <tr><th>3</th><td>AGL or Tiger only support 32 bit, 64 bit possible with GLX
+      on Mac OS X 10.5 Leopard. Tested on i386 and ppc using 10.4 Tiger and on
+      i386 and x86_64 using 10.5 Leopard. Universal libraries and universal
       binary support. Makefile-based build environment, no XCode or framework
       support yet.</td></tr>
   <tr><th>4</th><td>Version 0.1 was tested on SGI IRIX. Porting to other
