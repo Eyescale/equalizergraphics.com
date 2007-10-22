@@ -48,13 +48,14 @@
   <li>Programming Guide</li>
   <li>Fixed aspect ratio support</li>
   <li>View configuration using projector layout</li>
+  <li>Much improved polygonal rendering example performance</li>
+  <li>New volume rendering example (beta preview)</li>
   <li>Support for volume-rendering applications</li>
   <li>Support for per-node frame synchronization</li>
   <li>Support for AGL and Carbon on Mac OS X</li>
-  <li>Support for Cygwin on Windows XP</li>
   <li>Support for Mac OS X 10.5 Leopard</li>
+  <li>Support for Cygwin on Windows XP</li>
   <li>Infiniband support for Linux</li>
-  <li>New volume rendering example (beta preview)</li>
   <li>Improved event handling support</li>
 </ul>
 
@@ -66,11 +67,17 @@
 <h4>New Documentation</h4>
 <ul>
   <li><a href="documents/Developer/ProgrammingGuide">Programming Guide</a></li>
-  <li><a href="documents/design/transparency.html">Transparency and sort-last
-      (DB) compounds</a></li>
+  <li><a href="documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
+      Framework</a>, technical report</li>
+  <li><a href="documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+      OpenGL Polygon-Renderers</a>, semester thesis in German about the new
+      eqPly example</li>
+  <li><a href="documents/EGPGV07.html">Direct Send Compositing
+      for Parallel Sort-Last Rendering</a> presentation</li>
+  <li><a href="documents/design/transparency.html">Transparency
+      and sort-last (DB) compounds</a></li>
   <li><a href="documents/design/volumeRendering.html">Volume Rendering
-      Example</a>
-    </li>
+      Example</a></li>
   <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a></li>
 </ul>
 
