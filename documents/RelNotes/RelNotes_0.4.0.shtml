@@ -6,9 +6,9 @@
 #include "header.shtml"
 
 <p>
-  Welcome to Equalizer 0.4, a framework for the development and deployment
-  of scalable multipipe applications, based on C++ and OpenGL. The major new
-  feature in Equalizer 0.4 is TBD.
+  Welcome to Equalizer 0.4, a framework for the development and deployment of
+  scalable OpenGL applications. The major new feature in Equalizer 0.4 is the
+  Programming Guide.
 </p>
 <p>
   Equalizer 0.4 is a beta release, and therefore intended as preview and
@@ -18,7 +18,7 @@
 <h3>Features</h3>
 <p>
   Equalizer provides the following major features to facilitate the development
-  and deployment of scalable OpenGL applications. A 
+  and deployment of scalable OpenGL applications. A
   <a href="features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
@@ -45,14 +45,17 @@
 </p>
 <h4>New Features</h4>
 <ul>
-  <li>Support for AGL and Carbon on Mac OS X</li>
-  <li>Support for Cygwin on Windows XP</li>
+  <li>Programming Guide</li>
   <li>Fixed aspect ratio support</li>
   <li>View configuration using projector layout</li>
-  <li>Support for volume-rendering applications (TBD)</li>
-  <li>Infiniband and Myrinet(TBD) support for Linux</li>
-  <li>New volume rendering example (TBD)</li>
-  <li>Improved event handling support (TBD)</li>
+  <li>Support for volume-rendering applications</li>
+  <li>Support for per-node frame synchronization</li>
+  <li>Support for AGL and Carbon on Mac OS X</li>
+  <li>Support for Cygwin on Windows XP</li>
+  <li>Support for Mac OS X 10.5 Leopard</li>
+  <li>Infiniband support for Linux</li>
+  <li>New volume rendering example (beta preview)</li>
+  <li>Improved event handling support</li>
 </ul>
 
 <h4>Bug Fixes</h4>
@@ -62,6 +65,7 @@
 
 <h4>New Documentation</h4>
 <ul>
+  <li><a href="documents/Developer/ProgrammingGuide">Programming Guide</a></li>
   <li><a href="documents/design/transparency.html">Transparency and sort-last
       (DB) compounds</a></li>
   <li><a href="documents/design/volumeRendering.html">Volume Rendering
@@ -91,7 +95,7 @@
   <li><b>Linux:</b> Ubuntu 6.10 (x64, i386)</li>
   <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
     Cygwin(i386)</li>
-  <li><b>Mac OS X:</b> 10.4 (PowerPC, i386)</li>
+  <li><b>Mac OS X:</b> 10.4 (PowerPC, i386) and 10.5 (i386)</li>
 </ul>
 <h4>Window System Support</h4>
 <ul>
@@ -102,8 +106,11 @@
 
 <h3>Documentation</h3>
 <p>
-  Equalizer does not yet have a formal Users or Programmers Guide. The shipped
-  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.4/src/examples/eqPly/">eqPly example</a> provides a reference for developing or porting
+  The <a href="">Programming Guide</a> is part of the Equalizer distribution and
+  can be found in <code>doc/Developer/ProgrammingGuide/paper.pdf</code>.
+  Equalizer does not yet have an Users Guide. The shipped
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.4/src/examples/eqPly/">eqPly
+    example</a> provides a reference for developing or porting
   applications. The <a href="doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
   source code is a last resort for information.
