@@ -17,12 +17,12 @@
   Equalizer applications. Order your hardcopy today through lulu.com!
 </p>
 <p>
-  Many additions to the programming interface facilitate the porting of
-  existing, single-threaded OpenGL applications to Equalizer. The support for
-  volume rendering opens the power of scalable rendering to new markets, for
-  example medical imaging and Oil and Gas exploration. Porting of
-  existing rendering codes has been simplified substantially by the optional
-  per-node frame synchronization.
+  Many additions to the programming interface facilitate the conversion of
+  existing, single-threaded OpenGL applications to parallel Equalizer-based
+  programs. The support for volume rendering opens the power of scalable
+  rendering to new markets, for example medical imaging and Oil and Gas
+  exploration. Furthermore, porting of existing rendering codes has been
+  simplified substantially by the optional, per-node frame synchronization.
 </p>
 <p>
   The full release notes for version 0.4 are available at<br>

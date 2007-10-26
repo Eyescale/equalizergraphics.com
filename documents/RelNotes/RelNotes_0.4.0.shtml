@@ -7,8 +7,8 @@
 
 <p>
   Welcome to Equalizer 0.4, a framework for the development and deployment of
-  scalable OpenGL applications. The major new feature in Equalizer 0.4 is the
-  Programming Guide.
+  scalable OpenGL applications. Equalizer 0.4 simplifies the development of
+  parallel OpenGL programs substantially over the previous version.
 </p>
 <p>
   Equalizer 0.4 is a beta release, and therefore intended as preview and
@@ -45,8 +45,8 @@
 </p>
 <h4>New Features</h4>
 <ul>
-  <li>Programming Guide</li>
-  <li>Fixed aspect ratio support</li>
+  <li>Programming Guide in pdf and paper versions</li>
+  <li>Fixed frustum aspect ratio support</li>
   <li>View configuration using projector layout</li>
   <li>Much improved polygonal rendering example performance</li>
   <li>New volume rendering example (beta technology preview)</li>
@@ -84,11 +84,9 @@
 <h3>Removed Features</h3>
 <p>
   The incomplete support for CGL has been replaced by support for AGL and Carbon
-  on Mac OS X. CGL proved not to be useful in conjunction with windowing and
+  on Mac OS X. CGL has proven not to be useful in conjunction with windowing and
   event handling.
 </p>
-
-<h4></h4>
 
 <h3>Supported Platforms</h3>
 <p>
@@ -99,9 +97,9 @@
 </p>
 <h4>Operating System Support</h4>
 <ul>
-  <li><b>Linux:</b> Ubuntu 6.10 (x64, i386)</li>
+  <li><b>Linux:</b> Ubuntu 6.10 (x64, i386), RHEL4 (x64, i386)</li>
   <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
-    Cygwin(i386)</li>
+    Cygwin (i386)</li>
   <li><b>Mac OS X:</b> 10.4 (PowerPC, i386) and 10.5 (i386)</li>
 </ul>
 <h4>Window System Support</h4>
@@ -114,7 +112,8 @@
 <h3>Documentation</h3>
 <p>
   The <a href="">Programming Guide</a> is part of the Equalizer distribution and
-  can be found in <code>doc/Developer/ProgrammingGuide/paper.pdf</code>.
+  can be found in <code>doc/Developer/ProgrammingGuide/paper.pdf</code> or
+  ordered online at lulu.com.
   Equalizer does not yet have an Users Guide. The shipped
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.4/src/examples/eqPly/">eqPly
     example</a> provides a reference for developing or porting
