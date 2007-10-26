@@ -124,6 +124,7 @@ FILES = \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
 	news/Release_0.3.html \
+	news/Release_0.4.html \
 	news/tungsten.html \
 	restricted/index.html \
 	$(IMAGES)

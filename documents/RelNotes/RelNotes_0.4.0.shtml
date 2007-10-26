@@ -49,7 +49,7 @@
   <li>Fixed aspect ratio support</li>
   <li>View configuration using projector layout</li>
   <li>Much improved polygonal rendering example performance</li>
-  <li>New volume rendering example (beta preview)</li>
+  <li>New volume rendering example (beta technology preview)</li>
   <li>Support for volume-rendering applications</li>
   <li>Support for per-node frame synchronization</li>
   <li>Support for AGL and Carbon on Mac OS X</li>
