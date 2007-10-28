@@ -12,7 +12,7 @@
   <ul>
     <li>GLX implemented in 0.2</li>
     <li>WGL implemented in 0.3</li>
-    <li>AGL in progress in svn</li>
+    <li>AGL implemented in 0.4</li>
     <li>Message pump configuration in svn</li>
   </ul>
 </p>
@@ -81,8 +81,7 @@
   use a separate event thread, but uses the eq::CommandQueue in the node thread
   to dispatch the events from the <em>main</em> application thread only, since
   Carbon events are send to this thread. The events are received in
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/client/aglEventHandler.cpp?view=markup">AGLEventHandler</a>,
-  but further event procession is not yet implemented.
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/client/aglEventHandler.cpp?view=markup">AGLEventHandler</a>.
 </p>
 
 <h2>External Message Pump (WGL/AGL)</h2>
