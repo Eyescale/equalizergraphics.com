@@ -20,7 +20,7 @@
   Many additions to the programming interface facilitate the conversion of
   existing, single-threaded OpenGL applications to parallel Equalizer-based
   programs. The support for volume rendering opens the power of scalable
-  rendering to new markets, for example medical imaging and Oil and Gas
+  rendering to new markets, for example in medical imaging and Oil and Gas
   exploration. Furthermore, porting of existing rendering codes has been
   simplified substantially by the optional, per-node frame synchronization.
 </p>

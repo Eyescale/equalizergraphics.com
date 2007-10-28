@@ -71,7 +71,7 @@
   <td>0.3</td>
 </tr><tr>
   <td><a href="documents/design/aspectRatio.html">aspect ratio support</a></td>
-  <td>svn</td>
+  <td>0.4</td>
 </tr><tr>
   <td><a href="documents/design/dataTransmission.html">data
       transmission</a></td>
@@ -184,13 +184,13 @@
   <td>0.2</td>
 </tr><tr>
   <td>&rarr; Rendering using VBO's and kd-tree</td>
-  <td>svn</td>
+  <td>0.4</td>
 </tr><tr>
   <td>&rarr; Better rendering and shading effects</td>
   <td>0.4?</td>
 </tr><tr>
   <td><a href="documents/design/volumeRendering.html">Volume Renderer</a></td>
-  <td>svn</td>
+  <td>0.4</td>
 </tr><tr>
   <td>Molecular Viewer (based on flip.pdb MPK demo ?)</td>
   <td>?</td>
@@ -208,11 +208,11 @@
   <td>Linux ia64, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>OS X 10.4 Universal, X11/glX</td>
+  <td>OS X 10.4, 10.5 Universal, X11/glX</td>
   <td>0.1</td>
 </tr><tr>
-  <td>OS X 10.4 Universal, Carbon/AGL</td>
-  <td>svn</td>
+  <td>OS X 10.4, 10.5 Universal, Carbon/AGL</td>
+  <td>0.4</td>
 </tr><tr>
   <td>OS X 10.4 Universal, CGL (partial)</td>
   <td>0.1-0.3</td>
