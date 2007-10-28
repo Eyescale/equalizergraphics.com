@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="images/release-0.4.png"><img src="../images/release-0.4-small.jpg" 
+  <a href="images/release-0.4.png"><img src="images/release-0.4-small.jpg" 
                                      alt="Volume Rendering"></a>
   <div class="label">Scalable Volume Rendering</div>
 </div>
@@ -14,7 +14,8 @@
   development and deployment of scalable OpenGL applications. Equalizer 0.4
   makes the programming of parallel OpenGL applications easier than before. Most
   notably, the new Programming Guide condenses all the information to write
-  Equalizer applications. Order your hardcopy today through lulu.com!
+  Equalizer applications. Order your hardcopy today
+  through <a href="http://www.lulu.com/content/1359268">lulu.com</a>!
 </p>
 <p>
   Many additions to the programming interface facilitate the conversion of

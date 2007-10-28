@@ -1,0 +1,50 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Pixel Compounds
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  This features adds support for a new type of decomposition and recomposition,
+  whereby each contributing channel renders each n'th pixel of the destination
+  channel.
+</p>
+<p>
+  The frustum for the source channels gets distorted so that the channel only
+  renders 1/nth of the pixels in one dimension. Afterwards the frustum is moved
+  slightly to select the 'starting' point of the channel.
+</p>
+
+<a name="Implementation"></a>
+<h2>Implementation</h2>
+<p>
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+    compound
+    {
+        grid    [ int_step int_size ]
+    }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+<p>
+  None
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

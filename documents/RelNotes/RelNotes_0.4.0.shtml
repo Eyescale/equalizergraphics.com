@@ -66,7 +66,8 @@
 
 <h4>New Documentation</h4>
 <ul>
-  <li><a href="documents/Developer/ProgrammingGuide">Programming Guide</a></li>
+  <li><a href="documents/Developer/ProgrammingGuide.pdf">Programming
+      Guide</a></li>
   <li><a href="documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report</li>
   <li><a href="documents/Developer/eqPly.pdf">Entwicklung eines parallelen
@@ -111,10 +112,10 @@
 
 <h3>Documentation</h3>
 <p>
-  The <a href="">Programming Guide</a> is part of the Equalizer distribution and
-  can be found in <code>doc/Developer/ProgrammingGuide/paper.pdf</code> or
-  ordered online at lulu.com.
-  Equalizer does not yet have an Users Guide. The shipped
+  The <a href="http://www.lulu.com/content/1359268">Programming Guide</a> is
+ part of the Equalizer distribution and can be found
+ in <code>doc/Developer/ProgrammingGuide/paper.pdf</code>. Equalizer does not
+  yet have an Users Guide. The shipped
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.4/src/examples/eqPly/">eqPly
     example</a> provides a reference for developing or porting
   applications. The <a href="doc_developer.html">Developer Documentation</a>
