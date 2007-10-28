@@ -1,6 +1,6 @@
 #define S_NEWS
 #define PAGE News
-#define SUBPAGE Equalizer 0.4 simplifies the development of parallel OpenGL programs
+#define SUBPAGE Equalizer 0.4 adds support for scalable volume rendering
 
 #include "header.shtml"
 
@@ -13,8 +13,8 @@
   We are pleased to announce the release of Equalizer 0.4, a framework for the
   development and deployment of scalable OpenGL applications. Equalizer 0.4
   makes the programming of parallel OpenGL applications easier than before. Most
-  notably, the new Programming Guide condenses all the information to write
-  Equalizer applications. Order your hardcopy today
+  notably, the new Programming Guide gathers all the information to write
+  scalable Equalizer applications. Order your hardcopy today
   through <a href="http://www.lulu.com/content/1359268">lulu.com</a>!
 </p>
 <p>
