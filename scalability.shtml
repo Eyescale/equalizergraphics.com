@@ -41,22 +41,127 @@
   eliminates the need of transferring pixel data across a network, but on the
   other hand the number of GPUs per system is limited.
 </p>
+<p>
+  The achievable performance depends on a number of factors. The I/O
+  bandwidth of the graphics cards, the cluster interconnect and the used
+  decomposition mode define the upper limit of the achievable frame rate. The
+  application characteristics and some application-specific optimizations
+  determine how close to this limit the performance can be pushed.
+</p>
+
+<hr>
+<h2>Multi-GPU Systems</h2>
+<p>
+  Multi-GPU systems, such as dual-SLI or quad-SLI workstations or the Apple Mac
+  Pro are becoming more commonplace. Equalizer provides the natural framework to
+  fully exploit the parallelism of such hardware. Equalizer applications are
+  capable of optimally using the graphics cards as well as multiple CPU cores
+  typically present in multi-GPU workstations. Application-transparent solutions
+  such as SLI or Crossfire provide less scalability, since the application's
+  rendering is still single-threaded and not optimized for the individual cards.
+</p>
+
+<h3>Example 1: HP xw9300 workstation</h3>
 <div class="float_right"><a href="images/perf.png">
     <img src="images/perf-small.jpg" alt="Performance comparison"></a>
-  <div class="label">Performance for a dual-GPU workstation</div>
+  <div class="label">Performance for a dual-GPU HP workstation</div>
 </div>
 <p>
-  The example on the right shows the performance benefit over the typically used
-  transparent SLI mode. The first configuration measures the baseline
-  performance using only a single GPU. The second one uses the same Equalizer
-  configuration, but transparently distributed across the two GPUs by SLI.  The
-  two remaining configurations are using two rendering threads in DB (sort-last)
-  and 2D (sort-first) mode, to scale the rendering performance of a single view,
-  like in SLI mode. Note that the pixel transfer does not yet use SLI, but is
-  executed through main memory, the slowest possible path. The example used is
-  the stock Equalizer polygon rendering application, using a data set of 12.6
-  million triangles.
-</p><div class="flush_float"></div>
+  The example on the right shows the performance benefit of Equalizer compared
+  to the default application-transparent SLI mode. The first configuration
+  measures the baseline performance using only a single GPU. The second one uses
+  the same Equalizer configuration, but transparently distributed across the two
+  GPUs by SLI.  The two remaining configurations are using two rendering threads
+  with a database (sort-last) decomposition and a screen-space (sort-first)
+  decomposition. These decompositions scale the rendering performance of a
+  single view, similar to SLI mode but using two processor cores for rendering
+  to optimize the data sent to each GPU. The pixel transfer does not use the SLI
+  hardware, but is executed through main memory, the slowest possible path. The
+  example used is the stock Equalizer polygon rendering application, using a
+  data set of 12.6 million triangles.
+</p>
+
+<h3>Example 2: Apple Mac Pro</h3>
+<div class="float_right"><a href="images/perfMac.png">
+    <img src="images/perfMac-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Performance for a dual-GPU Mac Pro</div>
+</div>
+<p>
+  The performance speedup of a dual-GPU Mac Pro is similar to the HP
+  workstation. The benchmarks shows in addition to a medium-sized model also a
+  small model, which naturally does not scale. The test machine is a quad-core
+  Mac Pro with 12 GB memory and two ATI x1900 graphics cards.
+</p>
+<div class="flush_float"></div>
+
+<hr>
+<h2>Graphics Clusters</h2>
+<p>
+  Graphic clusters are virtually unlimited in the number of possible processors
+  and graphics cards. The software scalability on such cluster is a relatively
+  new field, compared to compute clusters. Equalizer is pushing the boundaries
+  on what is possible by bringing more applications to this environment.
+</p>
+
+<h3>Example 1: Volume Rendering</h3>
+<p>
+  Volume rendering is a prime candidate for scalable rendering. A database
+  decomposition is easily done by bricking the volume, and the recomposition
+  uses less pixel data, since even for a database recomposition only RGBA data
+  is needed. Furthermore, the decomposition is easy to load-balance and scales
+  nicely all aspects of the rendering pipeline.
+</p>
+
+<div class="float_right"><a href="images/perf512.png">
+    <img src="images/perf512-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Scalability of a 512<sup>3</sup> volume data set.</div>
+</div>
+<p>
+  Database (sort-last) volume rendering allows to visualize data sets which do
+  not fit on a single GPU, since the individual graphics cards only need to
+  render a sub-volume of the whole data set. The benchmark on the right shows
+  this effect clearly. Up to four rendering nodes the volume brick does not fit
+  on the the GPU. Afterwards, it gets small enough that it can be completely
+  cached on  the GPU, and performance immediately jumps by an order of
+  magnitude. The screen-space decomposition always has to hold the full volume
+  texture and can therefore only scale sub-linearly.
+</p>
+
+<div class="float_right"><a href="images/perf256.png">
+    <img src="images/perf256-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Scalability of a 256<sup>3</sup> volume data set.</div>
+</div>
+<p>
+  The same data set at a lower resolution always fits into GPU memory. The
+  benchmark on the right shows nicely the scalability limits of the used
+  graphics cluster. The readback, transfer and compositing pipeline limits the
+  performance to 25 fps at a resolution of 1280x1024. When using a database
+  decomposition, twice the amount of data has to be handled by each node, thus
+  limiting the performance to 12.5 fps. 
+</p>
+<p>
+  This performance limitation is a mostly hardware bottleneck, mostly caused by
+  the slow interconnect on the cluster. Framerates of up to 60 Hertz are
+  possible with a properly tuned system.
+</p>
+
+
+<h3>Example 2: Polygonal Rendering</h3>
+<div class="float_right"><a href="images/perfPoly.png">
+    <img src="images/perfPoly-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Scalability of a polygonal data set.</div>
+</div>
+<p>
+  Polygonal data sets have the disadvantage that the database recomposition is
+  twice as expensive, since both color and depth information is
+  processed. Furthermore, load balancing is harder compared to volume rendering
+  since the data is less uniform. The benchmark results therefore show that the
+  hardware limits the rendering to 7.25 fps, half of the volume rendering
+  performance. Screen-space decomposition again suffers performance due to the
+  fact that the whole model has to be loaded on each node. This polygonal
+  rendering benchmark is much less fill-bound than the volume rendering
+  benchmark.
+</p>
 
 <hr><a name="basic"></a>
 <h2>Basic Decomposition Modes</h2>

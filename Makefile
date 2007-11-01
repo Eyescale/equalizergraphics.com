@@ -158,6 +158,9 @@ clean:
 install: update all sitemap
 	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
+auxinst: all
+	rsync -avz --exclude=".svn" --exclude "*.html" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
+
 update:
 	svn update . ../doc/Developer/ProgrammingGuide
 	rm -f changes_log.html
