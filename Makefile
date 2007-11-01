@@ -4,8 +4,7 @@
 TARGET = build
 
 FILES = \
-	$(wildcard downloads/*gz) \
-	$(wildcard downloads/*rpm) \
+	$(wildcard downloads/*) \
 	api.html \
 	changes.html \
 	compatibility.html \
