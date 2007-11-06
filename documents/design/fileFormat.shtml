@@ -169,15 +169,15 @@ server
             
             child-compounds
 
-            swapBarrier  // compounds with the same barriername sync swap
+            swapbarrier  // compounds with the same barriername sync swap
             {
                 name string
             }
-            outputFrame
+            outputframe
             {
                 name string
             }
-            inputFrame
+            inputframe
             {
                 name string // corresponding output frame
             }

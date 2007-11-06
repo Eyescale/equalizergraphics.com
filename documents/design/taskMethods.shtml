@@ -235,7 +235,7 @@
   calling <code>releaseFrameLocal</code>. The application might
   call <code>releaseFrameLocal</code> earlier or later during task execution, in
   case other task methods need synchronization with the node thread. See
-  also <a href="nodeframedrawfinish">Node::frameDrawFinish</a>.
+  also <a href="#nodeframedrawfinish">Node::frameDrawFinish</a>.
 </p>
 
 <h3>Pipe::initEventHandler</h3>

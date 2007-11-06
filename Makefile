@@ -41,6 +41,7 @@ FILES = \
 	documents/EqualizerGuide.html \
 	documents/EqualizerGuide.html_files \
 	documents/EqualizerGuide.pdf \
+	documents/EqualizerGuide-0.4.pdf \
 	documents/EqualizerTeaser.html \
 	documents/EqualizerTeaser.html_files \
 	documents/EqualizerTeaser.pdf \
@@ -83,6 +84,7 @@ FILES = \
 	documents/design/objects.html \
 	documents/design/objectManager.html \
 	documents/design/packets.html \
+	documents/design/pixelCompound.html \
 	documents/design/residentNodes.html \
 	documents/design/roi.html \
 	documents/design/standalone.html \
