@@ -1,6 +1,6 @@
 #define S_APPLICATIONS
 #define S_APPLICATIONS_EQHELLO
-#define PAGE eqHello: Hello, World!
+#define PAGE eqHello: Hello World!
 
 #include "header.shtml"
 
