@@ -1,0 +1,32 @@
+#define S_APPLICATIONS
+#define S_APPLICATIONS_THIRDPARTY
+#define PAGE Third Party Applications
+
+#include "header.shtml"
+
+<p>
+  If you are working on an application based on Equalizer,
+  please
+  <a href="mailto:eile@equalizergraphics.com?subject=New Equalizer Application">drop us an email</a> 
+  and we will add your program to the list.
+</p>
+
+<h2>eqSmart: Terrain rendering</h2>
+<div class="float_right">
+  <a href="/screenshots/wall.png">
+    <img src="/screenshots/wall-small.jpg" 
+         alt="eqSmart"></a>
+  <div class="label">eqSmart</div>
+</div>
+<p>
+  eqSmart is a port of the Smart terrain rendering software. Smart is based upon
+  the <a href="http://www.ogre3d.org/">Ogre3D graphics engine</a>. Support for
+  database decomposition was not implemented. eqSmart will be superseded by
+  eqRaster, an OpenGL-based terrain visualization engine.
+</p>
+<p>
+  eqSmart is not publically available due to licensing issues.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

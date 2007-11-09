@@ -1,84 +1,79 @@
 #define S_DOCUMENTATION
-#define S_DOCUMENTATION_ENDUSER
 #define PAGE Documentation
-#define SUBPAGE End User
 
 #include "header.shtml"
 
 <h2>Presentations</h2>
 <ul>
-  <li><a href="documents/EqualizerTeaser.html">Teaser</a> is a three 
+  <li><a href="/documents/EqualizerTeaser.html">Teaser</a> is a three 
     slide abstract of Equalizer,
-    <a href="documents/EqualizerTeaser.pdf">pdf</a> or
-    <a href="documents/EqualizerTeaser.html">html</a>.</li>
+    <a href="/documents/EqualizerTeaser.pdf">pdf</a> or
+    <a href="/documents/EqualizerTeaser.html">html</a>.</li>
 
-  <li><a href="documents/Equalizer.html">Overview</a> is a presentation
+  <li><a href="/documents/Equalizer.html">Overview</a> is a presentation
     to provide a background to high-performance visualization, Equalizer
     components and features,
-    <a href="documents/Equalizer.pdf">pdf</a> or
-    <a href="documents/Equalizer.html">html</a>.</li>
+    <a href="/documents/Equalizer.pdf">pdf</a> or
+    <a href="/documents/Equalizer.html">html</a>.</li>
 
-  <li><a href="documents/EqualizerGuide.pdf">Quickstart and Demo
+  <li><a href="/documents/EqualizerGuide.pdf">Quickstart and Demo
         Guide</a> guides through running and understanding a few Equalizer
     configurations,
-    <a href="documents/EqualizerGuide.pdf">pdf</a> or
-    <a href="documents/EqualizerGuide.html">html</a>,  
-    <a href="documents/EqualizerGuide-0.4.pdf">Guide for 0.4 and
+    <a href="/documents/EqualizerGuide.pdf">pdf</a> or
+    <a href="/documents/EqualizerGuide.html">html</a>,  
+    <a href="/documents/EqualizerGuide-0.4.pdf">Guide for 0.4 and
       earlier</a>.</li>
 
-  <li><a href="documents/FlyerWeb.pdf">Flyer</a> is a folded, two-sided
+  <li><a href="/documents/FlyerWeb.pdf">Flyer</a> is a folded, two-sided
     brochure for the Equalizer project,
-    <a href="documents/FlyerWeb.pdf">1 MB display version</a>,
-    <a href="documents/Flyer.pdf">9 MB print version</a> (please print
+    <a href="/documents/FlyerWeb.pdf">1 MB display version</a>,
+    <a href="/documents/Flyer.pdf">9 MB print version</a> (please print
     two-sided).
   </li>
 
-  <li><a href="documents/EGPGV07.html">Direct Send Compositing
+  <li><a href="/documents/EGPGV07.html">Direct Send Compositing
       for Parallel Sort-Last Rendering</a> is the paper presentation for the
     Equalizer paper with the same name at EGPGV07,
-    <a href="documents/EGPGV07.pdf">pdf</a> or
-    <a href="documents/EGPGV07.html">html</a>.</li>
+    <a href="/documents/EGPGV07.pdf">pdf</a> or
+    <a href="/documents/EGPGV07.html">html</a>.</li>
 
-  <li><a href="documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
+  <li><a href="/documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
     is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
     based on the overview presentation but features more technical content about
     the programming interface and configuration,
-    <a href="documents/EqualizerVizSIG06.pdf">pdf</a> or
-    <a href="documents/EqualizerVizSIG06.html">html</a>.</li>
+    <a href="/documents/EqualizerVizSIG06.pdf">pdf</a> or
+    <a href="/documents/EqualizerVizSIG06.html">html</a>.</li>
 </ul>
 
 <h2>White Papers</h2>
 <ul>
-  <li><a href="documents/WhitePapers/ProjectEqualizer.pdf">Project Equalizer
+  <li><a href="/documents/WhitePapers/ProjectEqualizer.pdf">Project Equalizer
     </a> is a project description of Equalizer.</li>
-  <li><a href="documents/WhitePapers/ParallelRenderingSystems.pdf">An
+  <li><a href="/documents/WhitePapers/ParallelRenderingSystems.pdf">An
     Analysis of Parallel Rendering Systems</a> reviews, analyzes and
     classifies approaches to multi-pipe rendering, and outlines our motivation
     for developing Equalizer.</li>
-  <li><a href="documents/user/crComparison.html">Chromium vs Equalizer
+  <li><a href="/documents/user/crComparison.html">Chromium vs Equalizer
       Comparison</a></li>
 </ul>
 
 <h2>Academic Papers</h2>
 <ul>
-  <li><a href="documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
+  <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report 2007/06.</li>
-  <li><a href="restricted/directSend.pdf">Direct Send Compositing for
+  <li><a href="/restricted/directSend.pdf">Direct Send Compositing for
       Parallel Sort-Last Rendering</a>, 
-    <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
+    <a href="/http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a> (restricted access due to copyright
       limitations)</li>
-  <li><a href="documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+  <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
       OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
     implemented for v0.4, 2007/09.</li>
 </ul>
 
-<h2>Equalizer Applications</h2>
+<h2>Tools</h2>
 <ul>
-  <li><a href="documents/user/eqPly.html">eqPly</a>
-    is a polygonal rendering application, and the Equalizer example
-    application.</li>
-  <li><a href="documents/user/configTool.html">Configuration Tool</a>
+  <li><a href="/documents/user/configTool.html">Configuration Tool</a>
     automatically generates common configuration files.</li>
 </ul>
 

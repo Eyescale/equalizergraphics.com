@@ -6,6 +6,7 @@ TARGET = build
 FILES = \
 	$(wildcard downloads/*) \
 	api.html \
+	applications.html \
 	changes.html \
 	compatibility.html \
 	configuration.html \
@@ -29,6 +30,10 @@ FILES = \
 	stylesheet.css \
 	useCases.html \
         robots.txt \
+	applications/eqHello.html \
+	applications/eqPly.html \
+	applications/eVolve.html \
+	applications/thirdParty.html \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Developer/ProgrammingGuide.pdf \
 	documents/Developer/eqPly.pdf \
@@ -120,7 +125,6 @@ FILES = \
 	documents/Howtos/glutToEqualizer.html \
 	documents/user/configTool.html \
 	documents/user/crComparison.html \
-	documents/user/eqPly.html \
 	news/EqualizerNewsJuly07.html \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
@@ -135,6 +139,7 @@ IMAGES_SRC = \
 	$(wildcard images/*jpg) \
 	$(wildcard images/NewsJune07/*gif) \
 	$(wildcard images/NewsJune07/*jpg) \
+	$(wildcard applications/images/*png) \
 	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \
 
@@ -193,6 +198,10 @@ $(TARGET)/documents/Developer/eqPly.pdf: ../doc/Developer/eqPly/Semesterarbeit.p
 $(TARGET)/documents/%-small.jpg: documents/%.png
 	@mkdir -p $(@D)
 	convert $< -geometry 300x1000 $@
+
+$(TARGET)/applications/%-small.jpg: applications/%.png
+	@mkdir -p $(@D)
+	convert $< -geometry 150x1000 $@
 
 $(TARGET)/%-small.jpg: %.jpg
 	@mkdir -p $(@D)

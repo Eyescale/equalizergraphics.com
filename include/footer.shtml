@@ -5,10 +5,10 @@
 
 <!-- Navigation -->
 <div class="navigation">
-  <a href="index.html">
-    <img src="images/Equalizer.png" alt="Equalizer logo">
+  <a href="/index.html">
+    <img src="/images/Equalizer.png" alt="Equalizer logo">
   </a>
-  <p><a href="index.html"
+  <p><a href="/index.html"
 #ifdef S_HOME
         class="used"
 #endif
@@ -18,31 +18,25 @@
 #ifdef S_HOME
   <div class="subnavigation">
 
-    <p><a href="index.html"
-#ifdef S_HOME_ABOUT
-          class="used"
-#endif
-          >Overview</a></p>
-
-    <p><a href="useCases.html"
+    <p><a href="/useCases.html"
 #ifdef S_HOME_USECASES
           class="used"
 #endif
           >Use Cases</a></p>
 
-    <p><a href="configuration.html"
+    <p><a href="/configuration.html"
 #ifdef S_HOME_CONFIG
           class="used"
 #endif
           >Runtime Configuration</a></p>
 
-    <p><a href="scalability.html"
+    <p><a href="/scalability.html"
 #ifdef S_HOME_SCALABILITY
           class="used"
 #endif
           >Runtime Scalability</a></p>
 
-    <p><a href="api.html"
+    <p><a href="/api.html"
 #ifdef S_HOME_API
           class="used"
 #endif
@@ -50,7 +44,46 @@
   </div>
 #endif  // S_HOME
 
-  <p><a href="documentation.html"
+
+  <p><a href="/applications.html"
+#ifdef S_APPLICATIONS
+        class="used"
+#endif
+        >Applications</a></p>
+
+  <!-- Applications sub-navigation-->
+#ifdef S_APPLICATIONS
+  <div class="subnavigation">
+
+    <p><a href="/applications/eqHello.html"
+#ifdef S_APPLICATIONS_EQHELLO
+          class="used"
+#endif
+          >eqHello</a></p>
+
+    <p><a href="/applications/eqPly.html"
+#ifdef S_APPLICATIONS_EQPLY
+          class="used"
+#endif
+          >eqPly</a></p>
+
+    <p><a href="/applications/eVolve.html"
+#ifdef S_APPLICATIONS_EVOLVE
+          class="used"
+#endif
+          >eVolve</a></p>
+
+    <p><a href="/applications/thirdParty.html"
+#ifdef S_APPLICATIONS_THIRDPARTY
+          class="used"
+#endif
+          >Third Party</a></p>
+
+    </div>
+#endif // S_APPLICATIONS
+
+
+  <p><a href="/documentation.html"
 #ifdef S_DOCUMENTATION
         class="used"
 #endif
@@ -60,31 +93,25 @@
 #ifdef S_DOCUMENTATION
   <div class="subnavigation">
 
-    <p><a href="documentation.html"
-#ifdef S_DOCUMENTATION_ENDUSER
-          class="used"
-#endif
-          >End User</a></p>
-
-    <p><a href="doc_developer.html"
+    <p><a href="/doc_developer.html"
 #ifdef S_DOCUMENTATION_DEVELOPER
           class="used"
 #endif
           >Developer</a></p>
 
-    <p><a href="features.html"
+    <p><a href="/features.html"
 #ifdef S_DOCUMENTATION_FEATURES
           class="used"
 #endif
           >Feature List</a></p>
 
-    <p><a href="compatibility.html"
+    <p><a href="/compatibility.html"
 #ifdef S_DOCUMENTATION_COMPATIBILITY
           class="used"
 #endif
           >Compatibility Matrix</a></p>
 
-    <p><a href="relnotes.html"
+    <p><a href="/relnotes.html"
 #ifdef S_DOCUMENTATION_RELNOTES
           class="used"
 #endif
@@ -93,56 +120,56 @@
 #endif // S_DOCUMENTATION
 
 
-  <p><a href="screenshots.html"
+  <p><a href="/screenshots.html"
 #ifdef S_SCREENSHOTS
         class="used"
 #endif
         >Screenshots</a></p>
 
 
-  <p><a href="news.html"
+  <p><a href="/news.html"
 #ifdef S_NEWS
         class="used"
 #endif
         >News</a></p>
 
 
-  <p><a href="events.html"
+  <p><a href="/events.html"
 #ifdef S_EVENTS
         class="used"
 #endif
         >Events</a></p>
 
 
-  <p><a href="downloads.html"
+  <p><a href="/downloads.html"
 #ifdef S_DOWNLOADS
         class="used"
 #endif
         >Downloads</a></p>
 
-  <p><a href="lists.html"
+  <p><a href="/lists.html"
 #ifdef S_LISTS
         class="used"
 #endif
         >Mailing Lists</a></p>
 
-  <p><a href="contact.html"
+  <p><a href="/contact.html"
 #ifdef S_CONTACT
         class="used"
 #endif
         >Contact</a></p>
 
-  <p><a href="contributors.html"
+  <p><a href="/contributors.html"
 #ifdef S_CONTRIBUTORS
         class="used"
 #endif
         >Contributors</a></p>
 
-  <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
+  <p><a href="/http://pogl.wordpress.com/">Blog (off-site)</a></p>
 
 #ifdef S_SEARCH
   <p>
-    <a href="search.html" class="used">Search</a>
+    <a href="/search.html" class="used">Search</a>
   </p>
 #else
   <!-- Google CSE Search Box Begins -->
@@ -161,7 +188,7 @@
   </p>
   <p>
     <a href="http://www.ifi.unizh.ch/vmml/">
-      <img src="images/VMML_logo_150_grey.png" 
+      <img src="/images/VMML_logo_150_grey.png" 
            alt="Visualization and MultiMedia Lab, University of Z&uuml;rich">
     </a>
   </p>
@@ -170,14 +197,14 @@
 <div class="footer">
   <a href=QUOTE( PAGEURL#top )>Back to top</a>
   <a href=QUOTE( SITE_EMAIL )>Ask a Question</a>
-  <a href="impressum.html"
+  <a href="/impressum.html"
 #ifdef S_IMPRESSUM
      class="used"
 #endif
      >Impressum</a>
 #ifndef S_CHANGES
   Last changed: <a href=CHANGEURL>UPDATE</a>
-  <a href="changes.html">What's new?</a>
+  <a href="/changes.html">What's new?</a>
 #endif
 </div>
 </body>

@@ -1,0 +1,81 @@
+#define S_APPLICATIONS
+#define PAGE Parallel Rendering Applications
+
+#include "header.shtml"
+
+<h2>Equalizer Example Applications</h2>
+<p>
+  The Equalizer distribution contains several example applications to
+  demonstrate the capabilities of Equalizer and to provide a reference for
+  application developers.
+</p>
+
+<h3>eqHello - Hello, World!</h3>
+<p>
+  <a href="applications/eqHello.html">eqHello</a> is the most simple Equalizer
+  application. It illustrates the basic principle of any Equalizer application,
+  namely the implementation of the rendering in <code>Channel::frameDraw</code>,
+  similar to the <code>glutDisplayFunc</code> used in GLUT applications.
+</p>
+
+<h3>eqPly - Polygonal Renderer</h3>
+<div class="float_right">
+  <a href="applications/images/eqPly.png">
+    <img src="applications/images/eqPly-small.jpg" 
+         alt="eqPly polygonal renderer"></a>
+  <div class="label">eqPly</div>
+</div>
+<p>
+  <a href="applications/eqPly.html">eqPly</a> is a parallel polygonal
+  renderer. It can
+  read <a href="http://www.cc.gatech.edu/projects/large_models/ply.html">ply
+  files</a>, which are automatically converted into
+  an <a href="http://en.wikipedia.org/wiki/Kd-tree">3-dimensional kd-tree</a>
+  for efficient rendering.
+</p>
+<p>
+ The example supports all scalable rendering features
+  of Equalizer, and demonstrates several other features, such as head tracking
+  and resident node support. It is also the reference for large parts of the
+  <a href="documentation/Developer/ProgrammingGuide"</a>Programming Guide</a>.
+</p>
+
+<h3>eVolve - Volume Renderer</h3>
+<div class="float_right">
+  <a href="applications/images/eVolve.png">
+    <img src="applications/images/eVolve-small.jpg" 
+         alt="eVolve volume renderer"></a>
+  <div class="label">eVolve</div>
+</div>
+<p>
+  <a href="applications/eVolve.html">eVolve</a> is a parallel volume
+  renderer. It is currently under development and not yet fully debugged and
+  refactored.
+</p>
+<p>
+  The example renders pre-integrated raw volumes. The volume information and
+  lookup table is read from a separate header file. Equalizer ships with a
+  converter which can
+  read <a href="http://www9.informatik.uni-erlangen.de/External/vollib/">pvm
+  files</a> and various transfer functions.
+</p>
+<p>
+  eVolve does support all Equalizer scalable rendering features. The current
+  technology preview does not yet work on Windows XP.
+</p>
+
+<h2>Third Party Applications</h2>
+<p>
+  Various <a href="applications/thirdParty.html">other commercial and open
+  source applications</a> use Equalizer as the foundation for parallel
+  rendering
+</p>
+<p>
+  If you are working on an application based on Equalizer,
+  please
+  <a href="mailto:eile@equalizergraphics.com?subject=New Equalizer Application">drop us an email</a> 
+  and we will add your program to the list.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

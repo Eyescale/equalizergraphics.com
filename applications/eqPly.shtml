@@ -1,12 +1,17 @@
-#define S_DOCUMENTATION
-#define S_DOCUMENTATION_ENDUSER
-#define PAGE Documentation
-#define SUBPAGE End User
-#define TITLE Parallel Polygonal Renderer
+#define S_APPLICATIONS
+#define S_APPLICATIONS_EQPLY
+#define PAGE Applications
+#define TITLE eqPly: Parallel Polygonal Renderer
 
 #include "header.shtml"
 
 <h2>Overview</h2>
+<div class="float_right">
+  <a href="/applications/images/eqPly.png">
+    <img src="/applications/images/eqPly-small.jpg" 
+         alt="eqPly polygonal renderer"></a>
+  <div class="label">eqPly</div>
+</div>
 <p>
   The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/eqPly">eqPly example</a>
   is the reference implementation of an Equalizer application. It does render
@@ -16,8 +21,11 @@
   different color to illustrate the database decomposition.
 </p>
 <p>
-  The <a href="documents/Developer/ProgrammingGuide.pdf">Programming Guide</a>
-  covers the application structure of eqPly extensively.
+  The <a href="/documents/Developer/ProgrammingGuide.pdf">Programming Guide</a>
+  covers the application structure of eqPly extensively. A semester thesis in
+  German (<a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+  OpenGL Polygon-Renderers</a>) covers the kd-tree implementation for Equalizer
+  0.4.
 </p>
 
 <h2>Application Structure</h2>
@@ -25,7 +33,7 @@
   As with any Equalizer application, eqPly consists of the main application and
   the rendering clients. In this simple example, they are both contained in the
   same executable. The executable can also be run as
-  a <a href="documents/design/residentNodes.html">resident render client</a>,
+  a <a href="/documents/design/residentNodes.html">resident render client</a>,
   which is used to pre-launch rendering clients manually.
 </p>
 
@@ -50,7 +58,7 @@
   init method receives the identifier of the InitData object, as defined by the
   application. It instanciates the object and loads the polygonal model named by
   the InitData. A seperate document describes
-  all <a href="documents/design/taskMethods.html">task methods</a>.
+  all <a href="/documents/design/taskMethods.html">task methods</a>.
 </p>
 
 <h3>Event Processing</h3>
@@ -59,7 +67,7 @@
   application thread, where they are processed at the end of the frame by
   Config::handleEvent. This example implements a trackball, move and zoom mouse
   interaction, as well as some keystroke commands. A separate document describes
-  the <a href="documents/design/eventHandling.html">event handling</a>.
+  the <a href="/documents/design/eventHandling.html">event handling</a>.
 </p>
 
 

@@ -19,7 +19,7 @@
   <th width="25%">AGL (Carbon)</th>
 </tr>
 <tr>
-  <th>Windows XP<sup>1,5</sup></th>
+  <th>Windows XP<sup>1,5,7</sup></th>
   <td bgcolor="#ccffcc">pipe creates affinity context<sup>6</sup>, window uses
     handle (HWND) and WGL context (HGLRC)</td>
   <td bgcolor="#ffcccc">not yet implemented</td>
@@ -62,10 +62,11 @@
   <tr><th>4</th><td>Version 0.1 was tested on SGI IRIX. Porting to other
       Unix-like operating system requires minimal porting effort, mostly for
       compiler differences.</td></tr>
-  <tr><th>5</th><td>Version 0.4 version has experimental support for
+  <tr><th>5</th><td>Version 0.4 and later has experimental support for
       Cygwin.</td></tr>
   <tr><th>6</th><td>requires WGL_NV_gpu_affinity extension available on nVidia
       Quadro fx with selected drivers.</td></tr>
+  <tr><th>7</th><td>svn tree has experimental support for MinGW/MSys.</td></tr>
 </p>
 
 #include "footer.shtml"

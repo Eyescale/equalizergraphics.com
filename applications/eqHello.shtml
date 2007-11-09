@@ -1,0 +1,30 @@
+#define S_APPLICATIONS
+#define S_APPLICATIONS_EQHELLO
+#define PAGE eqHello: Hello, World!
+
+#include "header.shtml"
+
+<div class="float_right">
+  <a href="/applications/images/eqHello.png">
+    <img src="/applications/images/eqHello-small.jpg" 
+         alt="Hello, World!"></a>
+  <div class="label">Hello, World!</div>
+</div>
+<p>
+  The eqHello example is a minimal application to illustrate the basic principle
+  of an Equalizer application: The application developer has to implement the
+  rendering method <code>Channel::frameDraw</code>, similar to
+  the <code>glutDisplayFunc</code> in GLUT applications. It can be run as a
+  stand-alone application from the command line.
+</p>
+<p>
+  The eqHello redraw function renders six rotating, colored quads around the
+  origin. The <code>frameDraw</code> method provided by
+  the <code>eq::Channel</code> can be used as a convience function to setup the
+  frustum and other OpenGL state. After setting up some additional lighting
+  parameter, eqHello rotates the scene and render the quads using immediate mode
+  rendering.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
