@@ -165,7 +165,7 @@
 #endif
         >Contributors</a></p>
 
-  <p><a href="/http://pogl.wordpress.com/">Blog (off-site)</a></p>
+  <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
 
 #ifdef S_SEARCH
   <p>
