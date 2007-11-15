@@ -1,0 +1,182 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_FAQ
+#define PAGE Documentation
+#define SUBPAGE Parallel OpenGL FAQ
+
+#define KEYWORDS "parallel OpenGL, Equalizer, OpenGL, multi-GPU, multicore, parallel"
+
+#include "header.shtml"
+
+<p>
+  If this FAQ does not answer your question, please
+  <a href="mailto:info@equalizergraphics.com?subject=Parallel OpenGL Question">send it to us</a>.
+</p>
+
+<h2>Table of Contents</h2>
+<p>
+  <a href="/documentation/parallelOpenGLFAQ.html#one">Using one Context from
+    Multiple Threads</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multicore">Using Multiple Cores
+    with OpenGL</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multicontext">Using Multiple
+    OpenGL contexts with one Graphics Card</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multigpu">Using Multiple
+    Graphics Cards with OpenGL</a><br>
+</p>
+
+<a name="one"></a>
+<h2>1. Using one Context from Multiple Threads</h2>
+<ul>
+  <li><b>Q: </b>Why does my OpenGL application crash/not work when I am
+    rendering from another thread?</li>
+  <li><b>A: </b>The OpenGL context is thread-specific. You have to make it
+    current in the thread using glXMakeCurrent, wglMakeCurrent or
+    aglSetCurrentContext, depending on your operating system.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does it not work if I make my context current in another
+    thread?</li>
+  <li><b>A: </b>One OpenGL context can only be current in one thread. You have
+    to release the context in the the other thread first, by making another or
+    no context current.</li>
+</ul><ul>
+  <li><b>Q: </b>So how can I then make use of multiple processors with
+    OpenGL?</li>
+  <li><b>A: </b>See 
+    <a href="/documentation/parallelOpenGLFAQ.html#multicore">Section
+      2</a>.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does my X11 application still crash, even though I am
+    handling the context correctly?</li>
+  <li><b>A: </b>X11 is also not thread safe by default. You either have to call
+    XInitThreads during initialization, or to use one Display connection per
+    thread. In the second case you can't use the glXContext from one Display
+    connection with another connection.
+</ul>
+
+<a name="multicore"></a>
+<h2>2. Using Multiple Cores with OpenGL</h2>
+<ul>
+  <li><b>Q: </b>How can I use multiple threads with one OpenGL context?</li>
+  <li><b>A: </b>The preferred way is to dedicate one thread to dispatch the
+    OpenGL commands, and offload the CPU-intensive operations to worker
+    threads.</li>
+</ul><ul>
+  <li><b>Q: </b>What operations can I perform in parallel to an OpenGL dispatch
+    thread?</li>
+  <li><b>A: </b>A typical approach is to decouple the application thread from
+    the draw thread. The application thread implements the application logic and
+    event processing, while the draw thread renders the database. The database
+    has not to be modified during rendering, either by multibuffering data or
+    deferring the data update. An extension of this model is to have a separate
+    culling thread pipelined between the application and dispatch thread
+    ('app-cull-draw').</li>
+</ul><ul>
+  <li><b>Q: </b>How does the multithreaded OpenGL in OS X work?</li>
+  <li><b>A: </b>It offloads CPU-intensive operations, for example pixel format
+    conversions, to a second thread. A lot of OpenGL commands do not benefit
+    from it, since they are passed mostly unmodified to the graphics
+    card. Multithreaded OpenGL is not enabled by default.</li>
+</ul><ul>
+  <li><b>Q: </b>Can I use multithreaded OpenGL on Window or Linux?</li>
+  <li><b>A: </b>We are not aware of other drivers implementing this feature. It
+    can be emulated by performing the CPU-intensive operations from a second
+    thread with a second, shared context.</li>
+</ul>
+
+<a name="multicontext"></a>
+<h2>3. Using Multiple OpenGL contexts with one Graphics Card</h2>
+<ul>
+  <li><b>Q: </b>How should I update multiple windows on one graphics card?</li>
+  <li><b>A: </b>It is advisable to minimize switching between different
+    contexts. If the draw operation is not CPU-bound, the windows should be
+    updated sequentially. If the draw operation is CPU-bound, the CPU-intensive
+    part should be pipelined with the draw thread
+    (see <a href="/documentation/parallelOpenGLFAQ.html#multicore">Section
+    2</a>) while still updating the windows sequentially from the draw
+    thread. If that is not feasible, updating the windows from multiple threads
+    might be faster on a multicore machine.</li>
+</ul><ul>
+  <li><b>Q: </b>Why is my application so slow when rendering from multiple
+    threads?</li>
+  <li><b>A: </b>The OpenGL driver has to schedule the threads on a single
+    hardware resource. This causes a lot of context switching, which is
+    particularly slow when each context uses a lot of GPU memory. Try updating
+    your windows sequentially.</li>
+</ul><ul>
+  <li><b>Q: </b>How can I minimize the memory used by multiple OpenGL
+    contexts?</li>
+  <li><b>A: </b>Share the context by using the appropriate option to
+    glXCreateContext, aglCreateContext or wglShareLists. Create your OpenGL
+    objects (textures, VBO's, etc.) in one context and then use them in all the
+    other contexts.</li>
+</ul>
+
+<a name="multigpu"></a>
+<h2>4. Using Multiple Graphics Cards with OpenGL</h2>
+<ul>
+  <li><b>Q: </b>How to I address a specific graphics card on Linux (X11)?</li>
+  <li><b>A: </b>The graphics card is selected using XOpenDisplay. Typically one
+    X server is used for all cards, and the card is addressed using the screen
+    number, i.e. the number after the dot in the display name
+    (":0.[screen]"). Sometimes one X server is used for each card, in which case
+    the GPU's can be addresses using the server number in the display name
+    (":[server].0").</li>
+</ul><ul>
+  <li><b>Q: </b>How to I address a specific graphics card on Windows
+    2000/XP?</li>
+  <li><b>A: </b>The operating system dispatches the OpenGL commands to all
+    cards, making it possible to move the window across monitors. The
+    WGL_NV_gpu_affinity, available on nVidia Quadro cards, can be used to
+    restrict the OpenGL calls to certain cards for optimal performance.</li>
+</ul><ul>
+  <li><b>Q: </b>How to I address a specific graphics card on Mac OS X
+    (AGL)?</li>
+  <li><b>A: </b>OS X 10.4 and earlier: Use the handle obtained by
+    DMGetGDeviceByDisplayID for aglChoosePixelFormat.</li>
+  <li><b>A: </b>OS X 10.5: Use the display mask returned by
+    CGDisplayIDToOpenGLDisplayMask as the value for the AGL_DISPLAY_MASK pixel
+    format attribute.</li>
+</ul><ul>
+  <li><b>Q: </b>Why can my application only address one of my graphics
+  cards?</li>
+  <li><b>A: </b>Disable SLI or Crossfire. When it is enabled, the driver
+    virtualizes the GPUs and presents them as one GPU to the applicatoin.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does my SLI/Crossfire setup only use one CPU?</li>
+  <li><b>A: </b>Applications using SLI or Crossfire use one OpenGL rendering
+    thread, the same way as any other OpenGL application. The driver sends the
+    OpenGL commands to the underlying graphics cards. This whole process is
+    single-threaded, the parallel processing happens only later on the
+    individual graphics cards.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does my application not work when I am sharing the context
+    between the pipes?</li>
+  <li><b>A: </b>Context sharing is only supported on a single pipe. The OpenGL
+    objects are created only on one card and are therefore not usable on any
+    other.</li>
+</ul><ul>
+  <li><b>Q: </b>What other problems might arise when using multiple graphics
+    cards?</li>
+  <li><b>A: </b>When using different cards the OpenGL implementation might be
+    different, and the available OpenGL extension and entry points might
+    differ. It is also not possible to share the contexts between graphics
+    cards (see above).</li>
+</ul><ul>
+  <li><b>Q: </b>How do I synchronize the output of multiple monitors?</li>
+  <li><b>A: </b>If the synchronization has to be perfect, a hardware solution
+    like nVidia GSync has to be used to synchronize the video signal and buffer
+    swap. When using monitors for display, a software synchronization is often
+    good enough.</li>
+</ul><ul>
+  <li><b>Q: </b>Why do I still have a significant delay between the buffer swap
+    of multiple displays, even when using a software barrier before my swap
+    buffers call?</li>
+  <li><b>A: </b>OpenGL commands are buffered before execution. When using a
+    software swap synchronization, call glFinish before entering the swap
+    barrier to complete all outstanding OpenGL commands. Note that glFinish is
+    bad for the performance, consider using a hardware synchronization
+    mechanism if this is an issue.</li>
+</ul>
+
+#include "footer.shtml"
+<!-- $Id$ -->

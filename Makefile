@@ -34,6 +34,7 @@ FILES = \
 	applications/eqPly.html \
 	applications/eVolve.html \
 	applications/thirdParty.html \
+	documentation/parallelOpenGLFAQ.html \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Developer/ProgrammingGuide.pdf \
 	documents/Developer/eqPly.pdf \

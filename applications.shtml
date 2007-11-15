@@ -28,7 +28,7 @@
 <p>
   <a href="/applications/eqPly.html">eqPly</a> is a parallel polygonal
   renderer. It can
-  read <a href="/http://www.cc.gatech.edu/projects/large_models/ply.html">ply
+  read <a href="http://www.cc.gatech.edu/projects/large_models/ply.html">ply
   files</a>, which are automatically converted into
   an <a href="http://en.wikipedia.org/wiki/Kd-tree">3-dimensional kd-tree</a>
   for efficient rendering.

@@ -1,5 +1,5 @@
 
-#define SITE_EMAIL mailto:eile@equalizergraphics.com?subject=Question regarding TITLESTRING
+#define SITE_EMAIL mailto:info@equalizergraphics.com?subject=Question regarding TITLESTRING
 
 </div> <!-- div content -->
 
@@ -99,6 +99,12 @@
 #endif
           >Developer</a></p>
 
+    <p><a href="/documentation/parallelOpenGLFAQ.html"
+#ifdef S_DOCUMENTATION_FAQ
+          class="used"
+#endif
+          >Parallel GL FAQ</a></p>
+
     <p><a href="/features.html"
 #ifdef S_DOCUMENTATION_FEATURES
           class="used"
@@ -196,7 +202,7 @@
 
 <div class="footer">
   <a href=QUOTE( PAGEURL#top )>Back to top</a>
-  <a href=QUOTE( SITE_EMAIL )>Ask a Question</a>
+  <a href=QUOTE( SITE_EMAIL )>Questions?</a>
   <a href="/impressum.html"
 #ifdef S_IMPRESSUM
      class="used"
