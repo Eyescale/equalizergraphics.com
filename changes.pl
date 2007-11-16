@@ -29,12 +29,11 @@ foreach ( @changes )
     }
     elsif( $state eq "files" )
     {
-        chomp();
         if( /^$/ )
         {
             $state = "excerpt";
         }
-        elsif( / +([A-Z]) +.*website(\/.*html|png|jpg|pdf)$/ )
+        elsif( / +([A-Z]) \/trunk\/website(\/[\w\/\._\-]+html|shtml|png|jpg|pdf)([ \n])/ )
         {
             my $op   = $1;
             my $file = $2;
