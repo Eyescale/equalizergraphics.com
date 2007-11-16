@@ -1,4 +1,5 @@
 #define S_APPLICATIONS
+#define S_APPLICATIONS_MAIN
 #define PAGE Parallel Rendering Applications
 
 #include "header.shtml"

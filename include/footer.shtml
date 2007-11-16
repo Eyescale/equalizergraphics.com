@@ -9,7 +9,7 @@
     <img src="/images/Equalizer.png" alt="Equalizer logo">
   </a>
   <p><a href="/index.html"
-#ifdef S_HOME
+#ifdef S_HOME_MAIN
         class="used"
 #endif
         >About</a></p>
@@ -46,7 +46,7 @@
 
 
   <p><a href="/applications.html"
-#ifdef S_APPLICATIONS
+#ifdef S_APPLICATIONS_MAIN
         class="used"
 #endif
         >Applications</a></p>
@@ -84,7 +84,7 @@
 
 
   <p><a href="/documentation.html"
-#ifdef S_DOCUMENTATION
+#ifdef S_DOCUMENTATION_MAIN
         class="used"
 #endif
         >Documentation</a></p>

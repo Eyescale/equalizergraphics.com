@@ -1,4 +1,5 @@
 #define S_HOME
+#define S_HOME_MAIN
 #define PAGE Parallel Rendering
 #define DESCRIPTION "Equalizer is an open source programming interface and resource management system for scalable OpenGL applications"
 #define KEYWORDS "parallel rendering, parallel OpenGL, Equalizer, OpenGL, scalable graphics, graphics cluster, graphics clusters, visualization, multi-GPU"
