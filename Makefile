@@ -65,6 +65,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.2.0.html \
 	documents/RelNotes/RelNotes_0.3.0.html \
 	documents/RelNotes/RelNotes_0.4.0.html \
+	documents/RelNotes/RelNotes_0.4.1.html \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \
