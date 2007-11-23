@@ -1,0 +1,86 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE OpenGL Extension Handling
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Implemented in svn
+</p>
+
+<h2>Overview</h2>
+<p>
+  Equalizer uses <a href="http://glew.sourceforge.net">GLEW</a> for OpenGL
+  extension handling, particularly
+  the <a href="http://glew.sourceforge.net/advanced.html">GLEW MX</a>
+  implementation for multiple context support.
+</p>
+
+<h2>Implementation</h2>
+<p>
+  Each <code>eq::Window</code> has a <code>GLEWContext</code>. This context can
+  be obtained by using <code>glewGetContext</code> on the window or
+  channel. GLEW MX uses this function to dispatch the functions to the correct
+  context. Equalizer (re-)initializes the GLEW context whenever a new OpenGL
+  context is set on the window.
+</p>
+
+<h2>Usage</h2>
+<p>
+  Extended OpenGL functions called from a window or channel instance can be
+  called directly. GLEW will call the object's <code>glewGetContext</code> to
+  obtain the correct context.
+</p>
+<p>
+  Extended OpenGL functions called from another place need to have the macro or
+  function <code>glewGetContext</code> that returns the pointer to the
+  GLEWContext of the appropriate window.
+</p>
+
+<h2>Examples</h2>
+<!-- /* --><pre>
+void eqPly::Channel::_drawModel( const Model* model )
+{
+    ...
+    glUseProgram( program );
+    ...
+}
+
+
+
+// state has GLEWContext* from window
+define glewGetContext state.glewGetContext
+
+/*  Set up rendering of the leaf nodes.  */
+void VertexBufferLeaf::setupRendering( VertexBufferState& state,
+                                       GLuint* data ) const
+{
+    ...
+    glBindBuffer( GL_ARRAY_BUFFER, data[VERTEX_OBJECT] );
+    glBufferData( GL_ARRAY_BUFFER, _vertexLength * sizeof( Normal ),
+                    &_globalData.normals[_vertexStart], GL_STATIC_DRAW );
+    ...
+}
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+    GLEWContext* eq::Window::glewGetContext();
+    GLEWContext* eq::Channel::glewGetContext();
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<p>
+  No Changes.
+</p>
+
+<h2>Open Issues</h2>
+<p>
+  None known
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

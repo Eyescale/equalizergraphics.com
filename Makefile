@@ -30,6 +30,7 @@ FILES = \
 	stylesheet.css \
 	useCases.html \
         robots.txt \
+	applications/index.html \
 	applications/eqHello.html \
 	applications/eqPly.html \
 	applications/eVolve.html \
@@ -80,6 +81,7 @@ FILES = \
 	documents/design/environment.html \
 	documents/design/fileFormat.html \
 	documents/design/frames.html \
+	documents/design/glExtensions.html \
 	documents/design/imageCompression.html \
 	documents/design/immersive.html \
 	documents/design/infiniBand.html \
