@@ -58,6 +58,7 @@
       <a href="documents/RelNotes/RelNotes_0.4.1.html">Release 
         Notes</a><br>
       <a href="downloads/Equalizer-0.4.1.tar.gz">Source tar.gz</a><br> 
+      <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
     <td>Fixes a bug in the build system for Mac OS X 10.5.1 and later.</td>
   </tr>
@@ -70,7 +71,6 @@
       <a href="downloads/ProgrammingGuide-1.0.pdf">Programming Guide</a><br>
       <a href="downloads/Equalizer-0.4.0.tar.gz">Source tar.gz</a><br> 
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
-      <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=505909">SourceForge</a><br>
     </td>
     <td>Volume rendering support, simplification of application porting.</td>
   </tr>
