@@ -133,6 +133,13 @@
         >Screenshots</a></p>
 
 
+  <p><a href="/downloads.html"
+#ifdef S_DOWNLOADS
+        class="used"
+#endif
+        >Downloads</a></p>
+
+
   <p><a href="/news.html"
 #ifdef S_NEWS
         class="used"
@@ -146,12 +153,6 @@
 #endif
         >Events</a></p>
 
-
-  <p><a href="/downloads.html"
-#ifdef S_DOWNLOADS
-        class="used"
-#endif
-        >Downloads</a></p>
 
   <p><a href="/lists.html"
 #ifdef S_LISTS
