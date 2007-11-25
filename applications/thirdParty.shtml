@@ -28,7 +28,7 @@
   eqSmart is not publically available due to licensing issues.
 </p>
 
-<h2>eqSmart: Terrain rendering</h2>
+<h2>eqOgre: Ogre/Equalizer integration</h2>
 <div class="float_right">
   <a href="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s1600-h/1-window.jpg">
     <img src="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s400/1-window.jpg" 
@@ -36,7 +36,7 @@
   <div class="label">eqOgre</div>
 </div>
 <p>
-  <a href="http://rickarkin.blogspot.com/2007/11/eqogre-ogre-integrating-with-equalizer.html">eqOgre</a> is an integration of the <a href="http://www.ogre3d.org/">Ogre3D
+  <a href="http://rickarkin.blogspot.com/">eqOgre</a> is an integration of the <a href="http://www.ogre3d.org/">Ogre3D
   graphics engine</a> with Equalizer. It is a first version of such an
   integration, and does not yet support database decomposition or data updates.
 </p>
