@@ -13,30 +13,30 @@
     <li>GLX implemented in 0.2</li>
     <li>WGL implemented in 0.3</li>
     <li>AGL implemented in 0.4</li>
-    <li>Message pump configuration in svn</li>
+    <li>Message pump configuration and removal of (glX) event thread in svn</li>
   </ul>
 </p>
 
-<h2>X11/glX Implementation</h2>
-<div class="float_right">
-  <a href="documents/design/images/eventHandling.png">
-    <img src="documents/design/images/eventHandling-small.jpg" 
-         alt="Event Handling Sequence Diagram"/></a>
-  <div class="label">Event Handling Call Flow</div>
-</div>
 <p>
   Equalizer implements a basic event handling mechanism, simplifying the
   development of small-sized to medium-sized applications. Complex applications
-  will implement their own event handling, and disable the event handling in
-  Equalizer.
-</p><p>
-  Equalizer uses a single, separate event thread for all pipes and windows on
-  a given node. The event thread registers for events of all windows, and
-  asynchronously processes events to allow both event-driven and
-  continous-update execution.
-</p><p>
-</p><p> When the event thread receives an event from the window system, it finds
-  the associated <code>eq::Window</code> and creates a
+  are expected to implement their own event handling, and disable the event
+  handling in Equalizer.
+</p>
+<p>
+  Equalizer normally receives and processes the events from the pipe thread the
+  window belongs to. The exception is the AGL window system, which dispatches
+  all events from the main thread.
+</p>
+<div class="float_right">
+  <a href="documents/design/images/eventFilter.png">
+    <img src="documents/design/images/eventFilter-small.jpg" 
+         alt="Event Handling Data Flow"/></a>
+  <div class="label">Event Handling Data Flow</div>
+</div>
+<p>
+  When the event handler receives an event from the window system, it finds the
+  associated <code>eq::Window</code> and creates a
   generic <code>WindowEvent</code> from the system-specific event. The generic
   event contains the system-specific event, i.e., the X11 Event, and is passed
   to <code>Window::processEvent</code>. The default implementation
@@ -49,20 +49,6 @@
   calls <code>Config::processEvent</code> on each queued event. The default
   implementation is empty, the <code>eqPly</code> example implements some basic
   mouse and keyboard interaction.
-</p><p>
-  The exit phase is not shown in the above sequence diagram for simplicity. The
-  windows and pipes are removed in the reverse order. When no entities are left
-  to be handled, the event thread automatically terminates. It will restart upon
-  the new initialisation of a pipe.
-</p>
-
-<h2>WGL (Win32) Implementation</h2>
-<p>
-  The Windows implementation of event handling differs from the X11 version in
-  that no separate event thread is used. Instead, Windows messages are received
-  by the pipe thread responsible for the window, and passed through the same
-  processing chain as X11 events. The application event processing code is
-  system-agnostic.
 </p>
 <p>
   The event dispatch is implemented by subclassing
@@ -75,14 +61,6 @@
   commands. The WGL implementation pumps events in each node and pipe thread.
 </p>
 
-<h2>AGL (OS X Carbon) Implementation</h2>
-<p>
-  The AGL implementation is similar to the WGL implementation. It also does not
-  use a separate event thread, but uses the eq::CommandQueue in the node thread
-  to dispatch the events from the <em>main</em> application thread only, since
-  Carbon events are send to this thread. The events are received in
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/client/aglEventHandler.cpp?view=markup">AGLEventHandler</a>.
-</p>
 
 <h2>External Message Pump (WGL/AGL)</h2>
 <p>
@@ -93,14 +71,14 @@
   an unexpected time for the external toolkit.
 </p>
 <p>
-  The virtual method <code>useMessagePump</code> is called by Equalizer
-  during application and pipe thread initialization (before configInit!) to
-  determine if the application or pipe thread shall automatically dispatch OS
-  events. For non-threaded pipes, the method is not called. On WGL, messages are
-  dispatch in the application and each pipe thread. On AGL, events are
+  The virtual method <code>useMessagePump</code> is called by Equalizer during
+  application and pipe thread initialization (before configInit!) to determine
+  if the application or pipe thread shall automatically dispatch OS events. For
+  non-threaded pipes, the method is not called. On WGL and GLX, messages are
+  dispatched in the application and each pipe thread. On AGL, events are
   dispatched only on the application thread, i.e., Pipe::useMessagePump is never
-  called. On GLX, a message pump is not needed. If useMessagePump returns false,
-  the application has to dispatch events.
+  called. If useMessagePump returns false, the application has to dispatch
+  events.
 </p>
 
 <h2>Costumized Event Handling</h2>
@@ -136,7 +114,7 @@
 
 <h2>Open Issues</h2>
 <p>
-  Finish and document AGL event handling.
+  None
 </p>
 
 #include "footer.shtml"

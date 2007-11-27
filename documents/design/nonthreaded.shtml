@@ -102,6 +102,10 @@ No changes.
 
 <h2>Open Issues</h2>
 <p>
+  Multiple nonthreaded pipes with different window systems on the same node are
+  not supported.
+</p>
+<p>
   Revisit introduction of window threads.
 </p>
 

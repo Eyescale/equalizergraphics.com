@@ -39,11 +39,16 @@
 </ul>
 <h3>Design  Documentation</h3>
 <p>
-The design documentation is technical documentation, specifications or other
-information, typically for a specific, isolated feature. It is intended for
-software developers, and generally not understandable without a technical
-background of Equalizer. They are often moving targets, and the actual
-implementation will diverge from the version-specific specification over time.
+  The design documentation is technical documentation, specifications or other
+  information, typically for a specific, isolated feature. It is intended for
+  software developers, and generally not understandable without a technical
+  background of Equalizer. They are often moving targets, and the actual
+  implementation will diverge from the version-specific specification over time.
+</p>
+<p>
+  The documents are listed in the version they were last updated. For the
+  version they were first implemented please refer to
+  the <a href="/features.html">Feature List</a>.
 </p>
 
 <h4>SVN 'trunk' version</h4>
@@ -55,19 +60,16 @@ implementation will diverge from the version-specific specification over time.
 <ul>
   <li><a href="documents/design/glExtensions.html">OpenGL Extension Handling</a>
     explains how GLEW is used for OpenGL extensions.</li>
+  <li><a href="documents/design/eventHandling.html">Event Handling</a>
+    explains the event handling model and implementation.</li>
 </ul>
 
 <h4>Version 0.4</h4>
 <ul>
-  <li><a href="documents/design/eventHandling.html">Event Handling</a>
-    explains the event handling model and implementation.</li>
   <li><a href="documents/design/volumeRendering.html">Volume Rendering</a> 
     application overview.</li>
   <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a> 
     adds support for keeping the aspect ratio during channel resizing.</li>
-  <li><a href="documents/design/nonthreaded.html">Nonthreaded
-    Rendering</a> allows the update of certain windows from the main
-    application process.</li>
   <li><a href="documents/design/dataTransmission.html">Data Transmission</a>
     provides a simple way to send data to all render client nodes.</li>
   <li><a href="documents/design/transparency.html">Transparency and sort-last
