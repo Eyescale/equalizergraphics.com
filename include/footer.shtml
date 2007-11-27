@@ -160,11 +160,11 @@
 #endif
         >Mailing Lists</a></p>
 
-  <p><a href="/contact.html"
-#ifdef S_CONTACT
+  <p><a href="/support.html"
+#ifdef S_SUPPORT
         class="used"
 #endif
-        >Contact</a></p>
+        >Support</a></p>
 
   <p><a href="/contributors.html"
 #ifdef S_CONTRIBUTORS

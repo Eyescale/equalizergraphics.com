@@ -11,8 +11,8 @@
     <td>Low-volume list which receives release announcements and other
       news items about Equalizer.</td>
     <td nowrap>
-      <a href="pipermail/eq-interest/">List Archive</a><br>
-      <a href="cgi-bin/mailman/listinfo/eq-interest">Subscribe</a>
+      <a href="/pipermail/eq-interest/">List Archive</a><br>
+      <a href="/cgi-bin/mailman/listinfo/eq-interest">Subscribe</a>
     </td>
   </tr>
 
@@ -20,8 +20,8 @@
     <td nowrap>eq-dev</td> 
     <td>Technical discussions and questions for software developers.</td>
     <td nowrap>
-      <a href="pipermail/eq-dev/">List Archive</a><br>
-      <a href="cgi-bin/mailman/listinfo/eq-dev">Subscribe</a>
+      <a href="/pipermail/eq-dev/">List Archive</a><br>
+      <a href="/cgi-bin/mailman/listinfo/eq-dev">Subscribe</a>
     </td>
   </tr>
 

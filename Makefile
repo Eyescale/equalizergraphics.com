@@ -10,7 +10,6 @@ FILES = \
 	changes.html \
 	compatibility.html \
 	configuration.html \
-	contact.html \
 	contributors.html \
 	doc_developer.html \
 	documentation.html \
@@ -26,6 +25,7 @@ FILES = \
 	scalability.html \
 	screenshots.html \
 	search.html \
+	support.html \
 	print.css \
 	stylesheet.css \
 	useCases.html \
