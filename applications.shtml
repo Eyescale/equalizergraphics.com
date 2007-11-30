@@ -38,7 +38,7 @@
   The example supports all scalable rendering features of Equalizer, and
   demonstrates several other features, such as head tracking and resident node
   support. It is also the reference for large parts of the
-  <a href="/documentation/Developer/ProgrammingGuide.pdf"</a>Programming
+  <a href="/documents/Developer/ProgrammingGuide.pdf">Programming
      Guide</a>.
 </p>
 
