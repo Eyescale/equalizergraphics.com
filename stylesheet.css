@@ -150,8 +150,9 @@ div.content {
 }
 
 div.footer { 
+    text-align: center;
     position: fixed;
-    left: 180px;
+    left: 0;
     padding: 2px 2px 2px 6px;
     bottom: 0;
     border-top: 1px solid black;
@@ -159,10 +160,20 @@ div.footer {
     font-size: small;
     width: 100%;
 }
-div.footer a { 
+div.footer a.rule { 
     padding-right: 6px;
     border-right: 1px solid black;
     margin-right: 4px;       
+}
+
+div.footer img { 
+    padding: 0px 2px 0px 0px;
+}
+
+div.footer img:hover { 
+    padding: 0px 2px 0px 0px;
+    margin: 0;
+    border:  0;
 }
 
 div.navigation p{

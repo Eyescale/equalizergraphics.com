@@ -202,17 +202,20 @@
 </div>
 
 <div class="footer">
-  <a href=QUOTE( PAGEURL#top )>Back to top</a>
-  <a href=QUOTE( SITE_EMAIL )>Questions?</a>
-  <a href="/impressum.html"
-#ifdef S_IMPRESSUM
-     class="used"
-#endif
-     >Impressum</a>
+  <a href=QUOTE( PAGEURL#top ) class="rule">Back to top</a>
+  <a href=QUOTE( SITE_EMAIL ) class="rule">Questions?</a>
+  <a href="/impressum.html" class="rule">Impressum</a>
 #ifndef S_CHANGES
-  Last changed: <a href=CHANGEURL>UPDATE</a>
-  <a href="/changes.html">What's new?</a>
+  Last changed: <a href=CHANGEURL class="rule">UPDATE</a>
+  <a href="/changes.html" class="rule">What's new?</a>
 #endif
+  <!-- social bookmark sites -->
+  Add to:
+  <img src="http://images.del.icio.us/static/img/delicious.small.gif"><a href=QUOTE( http://del.icio.us/post?url=FULLURL&title=TITLESTRING ) title="Add to del.icio.us">Delicious</a>
+  <img src="http://digg.com/img/badges/10x10-digg-thumb.gif" width="10" height="10" alt="Digg It!" /><a href=QUOTE( http://digg.com/remote-submit?phase=2&url=FULLURL&title=TITLESTRING )  title="Digg It!">Digg</a>
+  <img src="http://sp.reddit.com/reddithead4.gif" width="12" height="12"><a href=QUOTE( http://reddit.com/submit?url=FULLURL&title=TITLESTRING ) title="Add to reddit">reddit</a>
+  <img src="http://www.stumbleupon.com/images/stumbleit.gif" width="12" height="12"><a href=QUOTE( http://www.stumbleupon.com/submit?url=FULLURL&title=TITLESTRING ) title="Add to StumbleUpon">StumbleUpon</a> 
+  <img src="http://static.ak.facebook.com/images/share/facebook_share_icon.gif" width="12" height="12"><a href=QUOTE( http://www.facebook.com/sharer.php?u=FULLURL ) title="Add to Facebook">Facebook</a>
 </div>
 </body>
 
