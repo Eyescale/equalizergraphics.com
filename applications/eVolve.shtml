@@ -2,7 +2,7 @@
 #define S_APPLICATIONS
 #define S_APPLICATIONS_EVOLVE
 #define PAGE Applications
-#define TITLE eVolve: Parallel Volume Rendering
+#define SUBPAGE eVolve: Parallel Volume Rendering
 
 #include "header.shtml"
  

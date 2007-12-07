@@ -1,7 +1,7 @@
 #define S_APPLICATIONS
 #define S_APPLICATIONS_EQPLY
 #define PAGE Applications
-#define TITLE eqPly: Parallel Polygonal Renderer
+#define SUBPAGE eqPly: Parallel Polygonal Renderer
 
 #include "header.shtml"
 
