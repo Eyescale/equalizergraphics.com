@@ -158,7 +158,7 @@ IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\" \
-           -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%)
+           -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%) \
            -DPAGEURL=$(@:$(TARGET)%=%)
 
 all: $(TARGETS) $(INCLUDES)
