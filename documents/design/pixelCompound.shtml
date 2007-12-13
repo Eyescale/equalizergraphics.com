@@ -8,10 +8,16 @@
 
 <p>
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-State: Design
+State: Implemented in svn
 </p>
 
 <h2>Overview</h2>
+<div class="float_right">
+  <a href="/documents/design/images/PixelDetail.png">
+    <img src="/documents/design/images/PixelDetail-small.jpg" 
+         alt="Pixel Compound"/></a>
+  <div class="label">Detailed View of a Pixel Compound</div>
+</div>
 <p>
   This features adds support for a new type of decomposition and recomposition,
   whereby each contributing channel renders each n'th pixel of the destination
@@ -23,27 +29,48 @@ State: Design
   slightly to select the 'starting' point of the channel.
 </p>
 
-<a name="Implementation"></a>
-<h2>Implementation</h2>
+<h2>Application</h2>
 <p>
+  Pixel compounds are ideal for purely fill-limited applications such as volume
+  rendering and raytracing. The load is always almost equally distributed, thus
+  allowing to scale the fill-rate nearly linearly.
+</p>
+<p>
+  Pixel compounds do not reduce the amount of data per frame, since the view
+  frustum on the source channels is almost the same as the destination's channel
+  frustum.
 </p>
 
 <h2>API</h2>
 <!-- /* --><pre>
+    class Pixel 
+    {
+    public:
+        [...]
+        uint32_t index;
+        uint32_t size;
+    };
+
+    const Pixel& Channel::getPixel() const;
 </pre><!-- */ -->
 
 <h2>File Format</h2>
 <!-- /* --><pre>
     compound
     {
-        grid    [ int_step int_size ]
+        pixel    [ int int ]             // pixel decomposition (index size)
     }
 </pre><!-- */ -->
 
 <a name="Issues"></a>
 <h2>Open Issues</h2>
 <p>
-  None
+  OpenGL functionality which is influenced by the raster position will not work
+  correctly with pixel compounds, or needs at least special attention. Among
+  them are: lines, points, glRasterPos, glPolygonStipple.
+</p>
+<p>
+  Multi-level database/pixel compounds do not work correctly.
 </p>
 
 #include "footer.shtml"

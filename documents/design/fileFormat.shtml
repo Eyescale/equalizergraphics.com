@@ -152,6 +152,7 @@ server
             buffer   [ COLOR DEPTH ]         // default COLOR
             viewport [ viewport ]            // wrt parent compound, sort-first
             range    [ float float ]         // DB-range for sort-last
+            pixel    [ int int ]             // pixel decomposition (step size)
             eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
             attributes
             {
@@ -191,6 +192,15 @@ server
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="documents/design/pixelCompound.html">Pixel Decompositions</a>
+    added:
+    <pre>
+      compound
+      {
+          pixel    [ int int ]             // pixel decomposition (step size)
+      }
+    </pre>
+  </li>  
   <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
     added:
     <pre>

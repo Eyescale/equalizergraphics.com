@@ -31,49 +31,49 @@
   <td>parallel rendering on distributed memory and shared memory systems</td>
   <td>0.1</td>
 </tr><tr>
-  <td><a href="documents/design/immersive.html">active and passive stereo
+  <td><a href="/documents/design/immersive.html">active and passive stereo
       rendering</a></td>
   <td>0.1</td>
 </tr><tr>
-  <td><a href="documents/design/immersive.html">head tracking</a></td>
+  <td><a href="/documents/design/immersive.html">head tracking</a></td>
   <td>0.1</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html#swapbarrier">software-based
+  <td><a href="/documents/design/compounds.html#swapbarrier">software-based
       swapbarrier for synchronization of multipipe display systems</a></td>
   <td>0.1</td>
 </tr><tr>
-  <td><a href="documents/design/dynamicNearFar.html">dynamic near and far plane
+  <td><a href="/documents/design/dynamicNearFar.html">dynamic near and far plane
       support</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/statistics.html">statistics API</a></td>
+  <td><a href="/documents/design/statistics.html">statistics API</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/anaglyph.html">anaglyphic stereo 
+  <td><a href="/documents/design/anaglyph.html">anaglyphic stereo 
       rendering</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="documents/design/objects.html">distributed object API</a></td>
+  <td><a href="/documents/design/objects.html">distributed object API</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="documents/design/nonthreaded.html">nonthreaded rendering</a></td>
+  <td><a href="/documents/design/nonthreaded.html">nonthreaded rendering</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="documents/design/infiniBand.html">InfiniBand networking</a></td>
+  <td><a href="/documents/design/infiniBand.html">InfiniBand networking</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="documents/design/residentNodes.html">resident render
+  <td><a href="/documents/design/residentNodes.html">resident render
       clients</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="documents/design/objectManager.html">OpenGL object
+  <td><a href="/documents/design/objectManager.html">OpenGL object
       manager</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="documents/design/aspectRatio.html">aspect ratio support</a></td>
+  <td><a href="/documents/design/aspectRatio.html">aspect ratio support</a></td>
   <td>0.4</td>
 </tr><tr>
-  <td><a href="documents/design/dataTransmission.html">data
+  <td><a href="/documents/design/dataTransmission.html">data
       transmission</a></td>
   <td>svn</td>
 </tr><tr>
@@ -96,7 +96,7 @@
   <td>?</td>
 </tr><tr>
   <td>better support for
-    <a href="documents/design/transparency.html">transparency and sort-last (DB)
+    <a href="/documents/design/transparency.html">transparency and sort-last (DB)
       compounds</a></td>
   <td>?</td>
 </tr>
@@ -104,36 +104,39 @@
 <tr><td colspan="2"><hr></td></tr>
 <tr><td colspan="2"><a name="scalable"></a><b>Scalable Rendering</b></td></tr>
 <tr>
-  <td><a href="documents/design/compounds.html">sort-first (2D) 
+  <td><a href="/documents/design/compounds.html">sort-first (2D) 
       compounds</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html">sort-last (DB) 
+  <td><a href="/documents/design/compounds.html">sort-last (DB) 
       compounds</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html">eye (stereo) compounds</a></td>
+  <td><a href="/documents/design/compounds.html">eye (stereo) compounds</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html">flexible recomposition engine
+  <td><a href="/documents/design/compounds.html">flexible recomposition engine
       for parallel compositing</td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="documents/design/imageCompression.html">image compression for
+  <td><a href="/documents/design/imageCompression.html">image compression for
       network transfers</a></td>
   <td>0.2</td>
+</tr><tr>
+  <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
+  <td>svn</td>
 </tr><tr>
   <td>compound load-balancing</td>
   <td>?</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html">cull compounds</a></td>
+  <td><a href="/documents/design/compounds.html">cull compounds</a></td>
   <td>?</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html">DPlex (time-multiplex)
+  <td><a href="/documents/design/compounds.html">DPlex (time-multiplex)
       compounds</a></td>
   <td>?</td>
 </tr><tr>
-  <td><a href="documents/design/compounds.html">subpixel (FSAA, DOF)
+  <td><a href="/documents/design/compounds.html">subpixel (FSAA, DOF)
       compounds</a></td>
   <td>?</td>
 </tr><tr>
@@ -150,7 +153,7 @@
 <tr><td colspan="2"><hr></td></tr>
 <tr><td colspan="2"><a name="server"></a><b>Resource Server</b></td></tr>
 <tr>
-  <td><a href="documents/design/standalone.html">standalone application
+  <td><a href="/documents/design/standalone.html">standalone application
       support</a></td>
   <td>0.3</td>
 </tr><tr>
@@ -189,7 +192,7 @@
   <td>&rarr; Better rendering and shading effects</td>
   <td>0.4?</td>
 </tr><tr>
-  <td><a href="documents/design/volumeRendering.html">Volume Renderer</a></td>
+  <td><a href="/documents/design/volumeRendering.html">Volume Renderer</a></td>
   <td>0.4</td>
 </tr><tr>
   <td>Molecular Viewer (based on flip.pdb MPK demo ?)</td>

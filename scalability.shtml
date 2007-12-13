@@ -127,6 +127,7 @@
   texture and can therefore only scale sub-linearly.
 </p>
 
+<div class="flush_float"></div>
 <div class="float_right"><a href="images/perf256.png">
     <img src="images/perf256-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 256<sup>3</sup> volume data set.</div>
@@ -144,6 +145,7 @@
   the slow interconnect on the cluster. Framerates of up to 60 Hertz are
   possible with a properly tuned system.
 </p>
+<div class="flush_float"></div>
 
 
 <h3>Example 2: Polygonal Rendering</h3>
@@ -215,6 +217,19 @@
   eye passes. Due to the frame consistency between the eye views, this modes
   scales very good up to the number of eye passes. It is often combined with
   another mode on large-scale visualization clusters.
+</p><div class="flush_float"></div>
+
+<div class="float_right"><a href="images/Pixel.png">
+    <img src="images/Pixel-small.jpg" alt="A Pixel compound"></a>
+  <div class="label">A pixel compound</div>
+</div>
+<p>
+  <b>Pixel</b> compounds are a special case of 2D compounds, where the frustra
+  of the source rendering units are modified so that each unit renders an evenly
+  distributed subset of pixels. Pixel compounds are ideal for purely
+  fill-limited applications such as volume rendering and raytracing. The load is
+  always almost equally distributed, thus allowing to scale the fill-rate nearly
+  linearly.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/DPlex.png">
