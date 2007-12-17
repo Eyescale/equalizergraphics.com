@@ -32,8 +32,8 @@ State: Implemented in svn
 <h2>Application</h2>
 <p>
   Pixel compounds are ideal for purely fill-limited applications such as volume
-  rendering and raytracing. The load is always almost equally distributed, thus
-  allowing to scale the fill-rate nearly linearly.
+  rendering and raytracing. The load is equally distributed, thus allowing to
+  scale the fill-rate linearly.
 </p>
 <p>
   Pixel compounds do not reduce the amount of data per frame, since the view
@@ -67,7 +67,7 @@ State: Implemented in svn
 <p>
   OpenGL functionality which is influenced by the raster position will not work
   correctly with pixel compounds, or needs at least special attention. Among
-  them are: lines, points, glRasterPos, glPolygonStipple.
+  them are: lines, points, sprites, glDrawPixels, glBitmap, glPolygonStipple.
 </p>
 <p>
   Multi-level database/pixel compounds do not work correctly.
