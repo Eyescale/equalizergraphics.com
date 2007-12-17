@@ -213,10 +213,10 @@
   <b>Eye</b> decomposition is used during stereo rendering. The individual views
   for each eye are assigned to different rendering units and later copied to the
   appropriate stereo buffer. This modes supports a variety of stereo modes,
-  including red/green anaglyphics stereo or auto-stereo displays with multiple
-  eye passes. Due to the frame consistency between the eye views, this modes
-  scales very good up to the number of eye passes. It is often combined with
-  another mode on large-scale visualization clusters.
+  including active (quad-buffered) stereo, anaglyphic stereo or auto-stereo
+  displays with multiple eye passes. Due to the frame consistency between the
+  eye views, this modes scales very good up to the number of eye passes. It is
+  often combined with another mode on large-scale visualization clusters.
 </p><div class="flush_float"></div>
 
 <div class="float_right"><a href="images/Pixel.png">
@@ -224,7 +224,7 @@
   <div class="label">A pixel compound</div>
 </div>
 <p>
-  <b>Pixel</b> compounds are a special case of 2D compounds, where the frustra
+  <b>Pixel</b> compounds are similar to 2D compounds, but the frustra
   of the source rendering units are modified so that each unit renders an evenly
   distributed subset of pixels. Pixel compounds are ideal for purely
   fill-limited applications such as volume rendering and raytracing. The load is
@@ -328,7 +328,8 @@
 <p>
   3D models courtesy of <a href="http://www.cyberware.com">Cyberware</a>
   , <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
-  Computer Graphics Laboratory</a> and AVS, USA.
+  Computer Graphics Laboratory</a>, Stereolithography Archive at Clemson
+  University and AVS, USA.
 </p>
 </div>
 
