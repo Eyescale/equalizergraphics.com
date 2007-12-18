@@ -1,5 +1,5 @@
 #define S_DOCUMENTATION
-#define S_DOCUMENTATION_ENDUSER
+#define S_DOCUMENTATION_MAIN
 #define PAGE Documentation
 #define SUBPAGE End User
 #define TITLE Chromium vs Equalizer Comparison
