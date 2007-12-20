@@ -10,6 +10,7 @@
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
 State:
 <ul>
+  <li>Default window object manager in svn</li>
   <li>Textures, buffers and minor improvements implemented in 0.4</li>
   <li>Base class and display lists implemented in 0.3</li>
 </ul>
@@ -29,6 +30,16 @@ State:
   textures, GLSL shaders, VBO's, etc. See the 
   <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/client/objectManager.h?view=markup">header file</a>
  (src/lib/client/objectManager.h) for the currently implemented types.
+</p>
+
+<h2>eq::Window Object Manager</h2>
+<p>
+  Each window has an object manager with the key type <code>const void*</code>
+  for as long as it has an OpenGL context. The OM is shared between all windows
+  of a pipe, if the windows are created using the
+  default <code>configInit</code> functions. If the window is created by the
+  application, the OM is not shared since no assumption can be made about OpenGL
+  context sharing.
 </p>
 
 <h2>API</h2>
@@ -70,16 +81,6 @@ State:
 
   typedef ObjectManager< const char* > ObjectManagerS;
   ObjectManagerS& eq::Window::getObjectManager();
-  </pre>
-</p>
-<p>
-  The application can allocate it's own object manager with a different key
-  type, if desired. For the Equalizer object manager, keys starting with 'Eq_'
-  are reserved. Introduce new window drawable config flag sharedContext (default
-  true) to control creation scope (thread/window) of the window's object manager:
-  <pre>
-    void eq::Window::setSharedContext( const bool shared );
-    bool eq::Window::getSharedContext() const;
   </pre>
 </p>
 
