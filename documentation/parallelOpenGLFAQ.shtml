@@ -114,6 +114,13 @@
 <a name="multigpu"></a>
 <h2>4. Using Multiple Graphics Cards with OpenGL</h2>
 <ul>
+  <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
+    Linux (X11)?</li>
+  <li><b>A: </b>Normally, the OpenGL commands are only send to the card
+      belonging to the screen used to open the display connection to the X
+      server. That means that when Xinerama is used to virtualize the graphics
+      cards, the window will only display OpenGL content on one card.</b></li>
+</ul><ul>
   <li><b>Q: </b>How to I address a specific graphics card on Linux (X11)?</li>
   <li><b>A: </b>The graphics card is selected using XOpenDisplay. Typically one
     X server is used for all cards, and the card is addressed using the screen
@@ -122,12 +129,23 @@
     the GPU's can be addresses using the server number in the display name
     (":[server].0").</li>
 </ul><ul>
+  <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
+    Windows 2000/XP?</li>
+  <li><b>A: </b>The operating system dispatches the OpenGL commands to all
+    cards. This allows to move the window across cards, but incurs a small
+    performance overhead.</li>
+</ul><ul>
   <li><b>Q: </b>How to I address a specific graphics card on Windows
     2000/XP?</li>
-  <li><b>A: </b>The operating system dispatches the OpenGL commands to all
-    cards, making it possible to move the window across monitors. The
-    WGL_NV_gpu_affinity, available on nVidia Quadro cards, can be used to
-    restrict the OpenGL calls to certain cards for optimal performance.</li>
+  <li><b>A: </b>The WGL_NV_gpu_affinity extension, available on nVidia Quadro
+    cards, can be used to restrict the OpenGL calls to certain cards for optimal
+    performance.</li>
+</ul><ul>
+  <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
+    Mac OS X?</li>
+  <li><b>A: </b>The OpenGL rendering happens on the card where most of the
+    pixels of the window are located. Areas of the window located on other
+    graphics cards are copied from the main renderer.</li>
 </ul><ul>
   <li><b>Q: </b>How to I address a specific graphics card on Mac OS X
     (AGL)?</li>
