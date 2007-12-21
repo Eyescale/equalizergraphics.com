@@ -69,7 +69,9 @@
       limitations)</li>
   <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
       OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
-    implemented for v0.4, 2007/09.</li>
+      implemented for
+      v0.4, <a href="/documents/Developer/eqPlyPresentation.pdf">Slides in
+      English</a>, 2007/09.</li>
 </ul>
 
 <h2>Tools</h2>

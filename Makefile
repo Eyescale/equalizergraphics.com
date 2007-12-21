@@ -39,6 +39,7 @@ FILES = \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/Developer/ProgrammingGuide.pdf \
 	documents/Developer/eqPly.pdf \
+	documents/Developer/eqPlyPresentation.pdf \
 	documents/EGPGV07.html \
 	documents/EGPGV07.html_files \
 	documents/EGPGV07.pdf \
@@ -194,6 +195,10 @@ $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	cp $< $@
 
 $(TARGET)/documents/Developer/%.pdf: ../doc/Developer/%/paper.pdf
+	@mkdir -p $(@D)
+	cp $< $@
+
+$(TARGET)/documents/Developer/eqPlyPresentation.pdf: ../doc/Developer/eqPly/presentation/eqPly.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
