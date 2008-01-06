@@ -3,13 +3,14 @@
 
 </div> <!-- div content -->
 
+<!-- Footer line -->
 <div class="footer">
   <a href=QUOTE( PAGEURL#top ) class="rule">Back to top</a>
   <a href=QUOTE( SITE_EMAIL ) class="rule">Questions?</a>
   <a href="/impressum.html" class="rule">Impressum</a>
 #ifndef S_CHANGES
-  Last changed: <a href=CHANGEURL class="rule">UPDATE</a>
-  <a href="/changes.html" class="rule">What's new?</a>
+  <a href=CHANGEURL class="rule">Changed UPDATE</a>
+  <a href="/changes.html">What's new?</a>
 #endif
 </div>
 <!-- Navigation -->
