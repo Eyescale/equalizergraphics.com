@@ -1,10 +1,11 @@
 /*
- * Copyright (c) 2005-2007 Stefan Eilemann. All rights reserved.
+ * Copyright (c) 2005-2008 Stefan Eilemann. All rights reserved.
  */
 
 body {
-    font-family: Georgia, Garamond, Palatino, Times, serif;
-    background-color: #ffffff;
+    font-family: Georgia, Garamond, Palatino, Times, Arial;
+    background-color: white;
+    margin: 0;
 }
 
 pre, code {
@@ -18,8 +19,8 @@ h1 {
 }
 
 h2 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 0.5em;
     padding-top: 0.5em;
     padding-bottom: 0.2em;
@@ -56,7 +57,12 @@ a
   font-weight: bold;
 }
 
-a:visited
+a:hover
+{ 
+  color: black;
+}
+
+a:visited, a:active
 { 
   color: #336699;
 }
@@ -67,7 +73,7 @@ img
   border:  0px;
 }
 
-img:hover
+a img:hover
 { 
   padding: 0;
   margin: 4px;
@@ -81,9 +87,9 @@ div.image {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
+    border: 0;
+    padding: 0;
+    margin: 0;
     border-collapse: collapse;
     color: black;
 }
@@ -115,6 +121,32 @@ div.gallery img:hover
     border:  0;
 }
 
+div.header
+{ 
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #aaaaaa;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+div.header img
+{ 
+    display: none;
+}
+
+div.header h1
+{ 
+    padding: 0;
+    margin: 0;
+}
+
+div.poll { 
+    display: none;
+}
+
 div.navigation { 
     display: none;
 }
@@ -140,7 +172,7 @@ div.footer {
 div.navigation p{
     margin: 2px 0px 2px 0px;
 }
-div.navigation a, div.subnavigation a div.date a
+div.navigation a, div.subnavigation a
 { 
     text-decoration: none;
     font-weight: normal;
@@ -193,7 +225,6 @@ ul.toc2
     text-align: center;
     padding-bottom: 10px;
 }
-
 .flush_float
 { 
     clear: both;

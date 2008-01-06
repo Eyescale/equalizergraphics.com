@@ -1,10 +1,11 @@
 /*
- * Copyright (c) 2005-2007 Stefan Eilemann. All rights reserved.
+ * Copyright (c) 2005-2008 Stefan Eilemann. All rights reserved.
  */
 
 body {
     font-family: Georgia, Garamond, Palatino, Times, Arial;
-    background-color: #ffffff;
+    background-color: white;
+    margin: 0;
 }
 
 pre, code {
@@ -18,8 +19,8 @@ h1 {
 }
 
 h2 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 0.5em;
     padding-top: 0.5em;
     padding-bottom: 0.2em;
@@ -72,7 +73,7 @@ img
   border:  0px;
 }
 
-img:hover
+a img:hover
 { 
   padding: 0;
   margin: 4px;
@@ -86,9 +87,9 @@ div.image {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
+    border: 0;
+    padding: 0;
+    margin: 0;
     border-collapse: collapse;
     color: black;
 }
@@ -120,20 +121,60 @@ div.gallery img:hover
     border:  0;
 }
 
+div.header
+{ 
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #aaaaaa;
+    border: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 10em;
+    margin-right: 0;
+    margin-bottom: 0;
+    min-height: 78px;
+}
+
+div.header img
+{ 
+    vertical-align: middle;
+    padding: 0;
+    padding-left: 2em;
+    margin: 2px;
+}
+
+div.header h1
+{ 
+    padding: 0;
+    margin: 0;
+}
+
+div.poll { 
+    float:right;
+    text-align: center;
+    background-color: #bbbbbb;
+    border: 2px; 
+    padding: 2px; 
+    margin-left: 5px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
 div.navigation { 
     position: fixed;
     left: 0;
     top: 0;
     background-color: #aaaaaa;
     float: left;
-    width: 180px;
+    width: 10em;
     height: 100%;
-    border: 2px;
+    padding: 3px;
 }
 
-div.navigation iframe { 
-    border: 0;
-    padding: 0;
+div.navigation a:hover { 
+    background-color: #6699cc;
 }
 
 div.subnavigation { 
@@ -142,38 +183,54 @@ div.subnavigation {
     font-size: small;
 }
 
+div.subnavigation a:hover { 
+    background-color: #99ccff;
+}
+
+div.social { 
+    background-color: #bbbbbb;
+    padding: 2px;
+    margin-top: 1em;
+}
+
+div.social a:hover { 
+    background-color: #99ccff;
+}
+
+div.social p { 
+    font-size: small;
+}
+
+div.social img { 
+    padding: 0 0 0 3px;
+    width: 12px;
+    height: 12px;
+}
+
 div.content { 
     margin-top: 0px;
-    margin-left: 180px;
+    margin-left: 10em;
     margin-right: 10px;
     margin-bottom: 50px;
+    padding-left: 10px;
 }
 
 div.footer { 
-    text-align: center;
+    text-align: left;
     position: fixed;
     left: 0;
-    padding: 2px 2px 2px 6px;
+    padding: 2px 2px 2px 16px;
+    margin-left: 10em;
     bottom: 0;
     border-top: 1px solid black;
     background-color: white;
-    font-size: small;
     width: 100%;
 }
+
 div.footer a.rule { 
     padding-right: 6px;
     border-right: 1px solid black;
     margin-right: 4px;       
-}
-
-div.footer img { 
-    padding: 0px 2px 0px 0px;
-}
-
-div.footer img:hover { 
-    padding: 0px 2px 0px 0px;
-    margin: 0;
-    border:  0;
 }
 
 div.navigation p{
