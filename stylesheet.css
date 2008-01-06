@@ -124,11 +124,11 @@ div.gallery img:hover
 div.header
 { 
     text-align: center;
-    white-space: nowrap;
     vertical-align: middle;
     background-color: #aaaaaa;
     border: 0;
     padding: 0;
+    padding-left: 10px;
     margin-top: 0;
     margin-left: 10em;
     margin-right: 0;
