@@ -52,27 +52,28 @@ State: Implemented
 <!-- /* --><pre>
 global
 {
-     EQ_CONNECTION_SATTR_HOSTNAME        string
-     EQ_CONNECTION_SATTR_LAUNCH_COMMAND  string
-     EQ_CONNECTION_IATTR_TYPE            TCPIP | SDP
-     EQ_CONNECTION_IATTR_TCPIP_PORT      unsigned
-     EQ_CONNECTION_IATTR_LAUNCH_TIMEOUT  unsigned
-     EQ_CONFIG_FATTR_EYE_BASE            float
-     EQ_PIPE_IATTR_HINT_THREAD           OFF | ON
-     EQ_WINDOW_IATTR_HINT_STEREO         OFF | ON | AUTO
-     EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER   OFF | ON | AUTO
-     EQ_WINDOW_IATTR_HINT_DECORATION     OFF | ON
-     EQ_WINDOW_IATTR_HINT_FULLSCREEN     OFF | ON
-     EQ_WINDOW_IATTR_HINT_SWAPSYNC       OFF | ON   // AGL only
-     EQ_WINDOW_IATTR_PLANES_COLOR        unsigned
-     EQ_WINDOW_IATTR_PLANES_ALPHA        unsigned
-     EQ_WINDOW_IATTR_PLANES_DEPTH        unsigned
-     EQ_WINDOW_IATTR_PLANES_STENCIL      unsigned
-     EQ_CHANNEL_IATTR_HINT_STATISTICS    OFF | FASTEST [ ON ] | NICEST
+     EQ_CONNECTION_SATTR_HOSTNAME             string
+     EQ_CONNECTION_SATTR_LAUNCH_COMMAND       string
+     EQ_CONNECTION_SATTR_LAUNCH_COMMAND_QUOTE 'character'
+     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP
+     EQ_CONNECTION_IATTR_TCPIP_PORT           unsigned
+     EQ_CONNECTION_IATTR_LAUNCH_TIMEOUT       unsigned
+     EQ_CONFIG_FATTR_EYE_BASE                 float
+     EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
+     EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
+     EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
+     EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
+     EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
+     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   // AGL only
+     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned
+     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
+     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
+     EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
+     EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
      EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
      EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
      EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
-     EQ_COMPOUND_IATTR_UPDATE_FOV        HORIZONTAL [ON] | VERTICAL | OFF
+     EQ_COMPOUND_IATTR_UPDATE_FOV             HORIZONTAL [ON] | VERTICAL | OFF
 }
 server
 {
@@ -97,11 +98,12 @@ server
             name     string
             connection // 0-n times, possible connections to this node
             {
-                type       TCPIP | SDP
-                TCPIP_port unsigned
-                hostname   string
-                command    string   // launch command for the render client
-                timeout    unsigned // timeout in milliseconds for launch
+                type          TCPIP | SDP
+                TCPIP_port    unsigned
+                hostname      string
+                command       string      // render client launch command
+                command_quote 'character' // launch command argument quote char
+                timeout       unsigned    // timeout in milliseconds for launch
             }
             pipe // 1-n times
             {
@@ -192,6 +194,26 @@ server
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Configurable launch command argument quotes were added after v0.4.1:
+    <pre>
+      global
+      {
+           EQ_CONNECTION_SATTR_LAUNCH_COMMAND_QUOTE 'character'
+      }
+
+      node
+      {
+          connection // 0-n times, possible connections to this node
+          {
+              type          TCPIP | SDP
+              TCPIP_port    unsigned
+              hostname      string
+              command       string      // render client launch command
+              command_quote 'character' // launch command argument quote char
+              timeout       unsigned    // timeout in milliseconds for launch
+          }
+      }
+    </pre>
   <li><a href="documents/design/pixelCompound.html">Pixel Decompositions</a>
     added:
     <pre>
