@@ -19,7 +19,7 @@
 	<key>CanvasOrigin</key>
 	<string>{0, 0}</string>
 	<key>CanvasScale</key>
-	<real>2</real>
+	<real>1.2349849939346313</real>
 	<key>ColumnAlign</key>
 	<integer>1</integer>
 	<key>ColumnSpacing</key>
@@ -34,6 +34,192 @@
 	<integer>5</integer>
 	<key>GraphicsList</key>
 	<array>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>1011</integer>
+			</dict>
+			<key>ID</key>
+			<integer>1016</integer>
+			<key>OrthogonalBarAutomatic</key>
+			<true/>
+			<key>OrthogonalBarPosition</key>
+			<real>-1</real>
+			<key>Points</key>
+			<array>
+				<string>{297.638, 141.732}</string>
+				<string>{368.504, 141.732}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>Cap</key>
+					<integer>0</integer>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>LineType</key>
+					<integer>2</integer>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>5</real>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{368.504, 14.1733}, {283.465, 14.1732}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>1015</integer>
+			<key>ImageID</key>
+			<integer>3</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>AllowLabelDrop</key>
+			<false/>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>1014</integer>
+			<key>Points</key>
+			<array>
+				<string>{538.583, 99.2126}</string>
+				<string>{538.583, 255.118}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>AllowLabelDrop</key>
+			<false/>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>1013</integer>
+			<key>Points</key>
+			<array>
+				<string>{368.504, 99.2123}</string>
+				<string>{651.968, 99.2126}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>AllowLabelDrop</key>
+			<false/>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>1012</integer>
+			<key>Points</key>
+			<array>
+				<string>{496.062, 28.3465}</string>
+				<string>{496.062, 99.2123}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{368.504, 28.3465}, {283.465, 226.772}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>1011</integer>
+			<key>ImageID</key>
+			<integer>1</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.2</string>
+						<key>g</key>
+						<string>0.2</string>
+						<key>r</key>
+						<string>0.2</string>
+					</dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
 		<dict>
 			<key>Bounds</key>
 			<string>{{14.1732, 14.1733}, {283.465, 14.1732}}</string>
@@ -73,8 +259,8 @@
 			<integer>4</integer>
 			<key>Points</key>
 			<array>
-				<string>{184.252, 99.2126}</string>
-				<string>{184.252, 240.945}</string>
+				<string>{155.906, 28.3465}</string>
+				<string>{155.906, 255.118}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -100,35 +286,8 @@
 			<integer>3</integer>
 			<key>Points</key>
 			<array>
-				<string>{14.1732, 99.2123}</string>
-				<string>{297.638, 99.2126}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>0</string>
-					<key>Pattern</key>
-					<integer>24</integer>
-					<key>TailArrow</key>
-					<string>0</string>
-					<key>Width</key>
-					<real>2</real>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>AllowLabelDrop</key>
-			<false/>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>ID</key>
-			<integer>2</integer>
-			<key>Points</key>
-			<array>
-				<string>{141.732, 28.3465}</string>
-				<string>{141.732, 99.2123}</string>
+				<string>{14.1732, 141.732}</string>
+				<string>{297.638, 141.732}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -147,7 +306,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{14.1732, 28.3465}, {283.465, 212.598}}</string>
+			<string>{{14.1732, 28.3465}, {283.465, 226.772}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -198,14 +357,16 @@
 	<key>HPages</key>
 	<integer>1</integer>
 	<key>ImageCounter</key>
-	<integer>3</integer>
+	<integer>4</integer>
 	<key>ImageLinkBack</key>
 	<array>
+		<dict/>
 		<dict/>
 		<dict/>
 	</array>
 	<key>ImageList</key>
 	<array>
+		<string>image3.png</string>
 		<string>image2.png</string>
 		<string>image1.png</string>
 	</array>
@@ -311,7 +472,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2007-11-23 10:23:28 +0100</string>
+	<string>2008-01-09 12:00:03 +0100</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
@@ -404,11 +565,11 @@
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{539, 119}, {873, 712}}</string>
+		<string>{{271, 532}, {873, 712}}</string>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {392, 280.065}}</string>
+		<string>{{0, -4.99999}, {661.229, 473.739}}</string>
 		<key>Zoom</key>
-		<real>1.0943877696990967</real>
+		<real>1.0494641065597534</real>
 	</dict>
 </dict>
 </plist>
