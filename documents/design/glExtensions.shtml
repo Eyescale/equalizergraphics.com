@@ -27,6 +27,13 @@ State: Implemented in svn
   context. Equalizer (re-)initializes the GLEW context whenever a new OpenGL
   context is set on the window.
 </p>
+<p>
+  Each <code>eq::Pipe</code> has a <code>WGLEWContext</code>. This context
+  is intended to be used for generic functions needed during window creation,
+  e.g., for the <code>WGL_NV_gpu_affinity</code> extension used to create
+  a GPU-specific rendering context. Note that this is an abstraction for WGL,
+  not OpenGL functions.
+</p>
 
 <h2>Usage</h2>
 <p>
@@ -68,6 +75,7 @@ void VertexBufferLeaf::setupRendering( VertexBufferState& state,
 
 <h2>API</h2>
 <!-- /* --><pre>
+    GLEWContext* eq::Pipe::glewGetContext();
     GLEWContext* eq::Window::glewGetContext();
     GLEWContext* eq::Channel::glewGetContext();
 </pre><!-- */ -->
