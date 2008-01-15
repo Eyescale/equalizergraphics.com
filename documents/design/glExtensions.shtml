@@ -75,7 +75,7 @@ void VertexBufferLeaf::setupRendering( VertexBufferState& state,
 
 <h2>API</h2>
 <!-- /* --><pre>
-    GLEWContext* eq::Pipe::glewGetContext();
+    WGLEWContext* eq::Pipe::wglewGetContext();
     GLEWContext* eq::Window::glewGetContext();
     GLEWContext* eq::Channel::glewGetContext();
 </pre><!-- */ -->
