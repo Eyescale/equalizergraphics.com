@@ -50,7 +50,7 @@
 #endif
       <img src="images/Equalizer.png" alt="Equalizer logo"></h1>
     </div>
-#ifndef S_SEARCH
+#if !defined(S_SEARCH) && !defined(S_SURVEY)
     <div class="poll">
       <div class="subnavigation"><center>
         <a href="http://www.eyescale.ch/jobs.pdf">We are hiring!</a>

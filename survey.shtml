@@ -1,4 +1,4 @@
-#define S_SEARCH
+#define S_SURVEY
 #define PAGE Equalizer Survey
 
 #include "header.shtml"
