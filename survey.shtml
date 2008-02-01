@@ -1,0 +1,14 @@
+#define S_SEARCH
+#define PAGE Equalizer Survey
+
+#include "header.shtml"
+
+<p></p>
+<center><iframe 
+   src="http://www.surveymonkey.com/s.aspx?sm=x9uyjfqIS8bq4ls8_2fucTZQ_3d_3d"
+   width="100%" height="1500px"
+>
+</iframe></center>
+
+#include "footer.shtml"
+<!-- $Id$ -->

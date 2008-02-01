@@ -26,6 +26,7 @@ FILES = \
 	screenshots.html \
 	search.html \
 	support.html \
+	survey.html \
 	print.css \
 	stylesheet.css \
 	useCases.html \
@@ -37,7 +38,7 @@ FILES = \
 	applications/thirdParty.html \
 	documentation/parallelOpenGLFAQ.html \
 	documents/CV_Stefan_Eilemann.pdf \
-	documents/Developer/ProgrammingGuide.pdf \
+	downloads/DBCAAF49A0C0/ProgrammingGuide.pdf \
 	documents/Developer/eqPly.pdf \
 	documents/Developer/eqPlyPresentation.pdf \
 	documents/EGPGV07.html \
@@ -204,6 +205,10 @@ $(TARGET)/documents/Developer/eqPlyPresentation.pdf: ../doc/Developer/eqPly/pres
 	cp $< $@
 
 $(TARGET)/documents/Developer/eqPly.pdf: ../doc/Developer/eqPly/Semesterarbeit.pdf
+	@mkdir -p $(@D)
+	cp $< $@
+
+$(TARGET)/downloads/DBCAAF49A0C0/ProgrammingGuide.pdf: ../doc/Developer/ProgrammingGuide/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
