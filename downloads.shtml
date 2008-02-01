@@ -7,12 +7,15 @@
 <p>
   Equalizer is currently in beta state. We try to keep the svn tree stable and
   encourage developers to use the svn tree. The project is hosted on 
-  <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If you
-  are using or Equalizer, we would appreciate 
-  <a href="mailto:info@equalizergraphics.com?subject=Equalizer project">an
-  email</a> describing your project and possible requirements. We will keep
-  this information confidential. It will help us to better understand
-  developer needs, and to prioritize further development.
+  <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If
+  you are using or Equalizer, please fill out
+  our <a href="/survey.html">survey</a> and receive a free download of the
+  latest Equalizer programming guide, also available as
+  a <a href="http://www.lulu.com/content/1359268">book</a>!
+</p>
+<p>
+  The impatient can download the latest
+  version <a href="/downloads/Equalizer-0.4.1.tar.gz">here</a>.
 </p>
 <h3>Subversion Repository</h3>
 <p>
@@ -55,9 +58,9 @@
   <tr>
     <td>0.4.1</td>
     <td nowrap>
-      <a href="documents/RelNotes/RelNotes_0.4.1.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.4.1.html">Release 
         Notes</a><br>
-      <a href="downloads/Equalizer-0.4.1.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.4.1.tar.gz">Source tar.gz</a><br> 
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
     <td>Fixes a bug in the build system for Mac OS X 10.5.1 and later.</td>
@@ -66,10 +69,10 @@
   <tr>
     <td>0.4</td>
     <td nowrap>
-      <a href="documents/RelNotes/RelNotes_0.4.0.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.4.0.html">Release 
         Notes</a><br>
-      <a href="downloads/ProgrammingGuide-1.0.pdf">Programming Guide</a><br>
-      <a href="downloads/Equalizer-0.4.0.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/ProgrammingGuide-1.0.pdf">Programming Guide</a><br>
+      <a href="/downloads/Equalizer-0.4.0.tar.gz">Source tar.gz</a><br> 
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
     <td>Volume rendering support, simplification of application porting.</td>
@@ -78,11 +81,11 @@
   <tr>
     <td>0.3</td>
     <td nowrap>
-      <a href="documents/RelNotes/RelNotes_0.3.0.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.3.0.html">Release 
         Notes</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=505909">SourceForge</a><br>
-      <a href="downloads/Equalizer-0.3.0.tar.gz">Source tar.gz</a><br> 
-      <a href="downloads/Equalizer-0.3.0-0.x86_64.rpm">RHEL4 x64 rpm</a><br>
+      <a href="/downloads/Equalizer-0.3.0.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.3.0-0.x86_64.rpm">RHEL4 x64 rpm</a><br>
     </td>
     <td>Windows XP support.</td>
   </tr>
@@ -90,8 +93,8 @@
   <tr>
     <td>0.2</td>
     <td nowrap>
-      <a href="documents/RelNotes/RelNotes_0.2.0.html">Release Notes</a><br>
-      <a href="downloads/Equalizer-0.2.tar.gz">Local source tarball</a><br> 
+      <a href="/documents/RelNotes/RelNotes_0.2.0.html">Release Notes</a><br>
+      <a href="/downloads/Equalizer-0.2.tar.gz">Local source tarball</a><br> 
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">SourceForge mirror</a>
     </td>
     <td>Support for scalable rendering, by using multiple CPU's, GPU's and
@@ -101,8 +104,8 @@
   <tr>
     <td>0.1</td>
     <td nowrap>
-      <a href="documents/RelNotes/RelNotes_0.1.0.html">Release Notes</a><br>
-      <a href="downloads/Equalizer-0.1.tar.gz">Local source tarball</a><br> 
+      <a href="/documents/RelNotes/RelNotes_0.1.0.html">Release Notes</a><br>
+      <a href="/downloads/Equalizer-0.1.tar.gz">Local source tarball</a><br> 
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">SourceForge mirror</a><br>
     </td>
     <td>First official release.</td>
@@ -124,9 +127,9 @@
 </p>
 <p>
   Links: 
-  <a href="documents/glAsync/namespaceglAsync.html">Documentation</a>, 
-  <a href="documents/glAsync/CHANGELOG">Changelog</a>, 
-  <a href="downloads/glAsync_0.12.tar.gz">Latest Version</a>.
+  <a href="/documents/glAsync/namespaceglAsync.html">Documentation</a>, 
+  <a href="/documents/glAsync/CHANGELOG">Changelog</a>, 
+  <a href="/downloads/glAsync_0.12.tar.gz">Latest Version</a>.
 </p>
 
 <div class="footnote">
