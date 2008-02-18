@@ -112,7 +112,7 @@
   </tr>
 </table>
 
-<h2>GLAsync</h2>
+<h2><a name="glasync"></a>GLAsync</h2>
 
 <p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
   downloads in the spirit of the 
