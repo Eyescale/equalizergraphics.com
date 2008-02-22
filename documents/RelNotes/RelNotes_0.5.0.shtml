@@ -46,10 +46,10 @@
 <ul>
   <li>Pixel compounds to accelerate GPU-based raytracing</li>
   <li>Much increased DB (sort-last) assembly performance</li>
-  <li>GLEW integration for simplified multi-context OpenGL extension
-    handling</li>
+  <li>GLEW integration for simplified OpenGL extension handling in a
+    multi-context environment</li>
   <li>Improved eVolve volume rendering example</li>
-  <li>Accelerated image compression for network transfer through OpenMP</li>
+  <li>Parallel image compression for scalable rendering through OpenMP</li>
   <li>Pluggable window initialization</li>
   <li>TBD PBuffers</li>
   <li>TBD alpha compositor</li>

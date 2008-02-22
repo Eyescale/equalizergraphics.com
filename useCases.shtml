@@ -10,20 +10,20 @@
 
 <h2>Table of Contents</h2>
 <ul class ="toc1">
-  <li><a href="#display">Display Environments</a></li>
+  <li><a href="/useCases.html#display">Display Environments</a></li>
   <ul class ="toc2">
-    <li><a href="#wall">Display Walls</a></li>
-    <li><a href="#vr">Virtual Reality</a></li>
-    <li><a href="#multipipe">Multi-GPU Workstation</a></li>
-    <li><a href="#scalable">Scalable Rendering</a></li>
-    <li><a href="#remote">Remote Visualization Clusters</a></li>
-    <li><a href="#sli">SLI and Crossfire Systems</a></li>
+    <li><a href="/useCases.html#wall">Display Walls</a></li>
+    <li><a href="/useCases.html#vr">Virtual Reality</a></li>
+    <li><a href="/useCases.html#multipipe">Multi-GPU Workstation</a></li>
+    <li><a href="/useCases.html#scalable">Scalable Rendering</a></li>
+    <li><a href="/useCases.html#remote">Remote Visualization Clusters</a></li>
+    <li><a href="/useCases.html#sli">SLI and Crossfire Systems</a></li>
   </ul>
-  <li><a href="#applications">Applications</a></li>
+  <li><a href="/useCases.html#applications">Applications</a></li>
   <ul class ="toc2">
-    <li><a href="#sciviz">Scientific Visualization</a></li>
-    <li><a href="#medical">Medical Imaging</a></li>
-    <li><a href="#oilgas">Oil and Gas</a></li>
+    <li><a href="/useCases.html#sciviz">Scientific Visualization</a></li>
+    <li><a href="/useCases.html#medical">Medical Imaging</a></li>
+    <li><a href="/useCases.html#oilgas">Oil and Gas</a></li>
   </ul>
 </ul>
 
@@ -39,8 +39,9 @@
 
 <a name="wall"></a>
 <h3>Display Walls</h3>
-<div class="float_right"><a href="images/wall.png">
-        <img src="images/wall-small.jpg" alt="A display wall configuration"></a>
+<div class="float_right"><a href="/images/wall.png">
+        <img src="/images/wall-small.jpg" 
+             alt="A display wall configuration"></a>
   <div class="label">A display wall configuration</div>
 </div>
 <p>
@@ -54,8 +55,8 @@
 
 <a name="vr"></a>
 <h3>Virtual Reality</h3>
-<div class="float_right"><a href="images/vr.png">
-  <img src="images/vr-small.jpg" 
+<div class="float_right"><a href="/images/vr.png">
+  <img src="/images/vr-small.jpg" 
        alt="A four-sided Virtual Reality installation"></a>
   <div class="label">A four-sided Virtual Reality installation</div>
 </div>
@@ -72,8 +73,8 @@
 
 <a name="multipipe"></a>
 <h3>Multi-GPU Workstations</h3>
-<div class="float_right"><a href="images/workstation.png">
-  <img src="images/workstation-small.jpg" alt="A multipipe workstation"></a>
+<div class="float_right"><a href="/images/workstation.png">
+  <img src="/images/workstation-small.jpg" alt="A multipipe workstation"></a>
   <div class="label">A multi-GPU workstation</div>
 </div>
 <p>
@@ -88,14 +89,14 @@
 
 <a name="scalable"></a>
 <h3>Scalable Rendering</h3>
-<div class="float_right"><a href="images/scalable.png">
-  <img src="images/scalable-small.jpg" alt="Sort-last scalable rendering"></A>
+<div class="float_right"><a href="/images/scalable.png">
+  <img src="/images/scalable-small.jpg" alt="Sort-last scalable rendering"></A>
   <div class="label">Sort-last scalable rendering</div>
 </div>
 <p>
   Scalable rendering combines multiple graphic cards, processors and systems to
   render a single (or multiple) views. Various algorithms are implemented by
-  Equalizer, as described on the <a href="scalability.html">scalability
+  Equalizer, as described on the <a href="/scalability.html">scalability
   page</a>, and can be combined in any way for rendering. Examples of this use
   case are using two graphic cards in one system to render each one eye view in
   stereo rendering, or using a cluster of machines to divide the database for
@@ -104,8 +105,8 @@
 
 <a name="remote"></a>
 <h3>Remote Visualization Clusters</h3>
-<div class="float_right"><a href="images/remote.png">
-  <img src="images/remote-small.jpg" alt="A remote visualization cluster"></a>
+<div class="float_right"><a href="/images/remote.png">
+  <img src="/images/remote-small.jpg" alt="A remote visualization cluster"></a>
   <div class="label">A remote visualization cluster</div>
 </div>
 <p>
@@ -121,8 +122,8 @@
 
 <a name="sli"></a>
 <h3>SLI and Crossfire Systems</h3>
-<div class="float_right"><a href="images/SLI.png">
-  <img src="images/SLI-small.jpg" alt="A SLI/Crossfire configuration"></a>
+<div class="float_right"><a href="/images/SLI.png">
+  <img src="/images/SLI-small.jpg" alt="A SLI/Crossfire configuration"></a>
   <div class="label">A SLI/Crossfire configuration</div>
 </div>
 <p>
