@@ -48,7 +48,7 @@
 #else
 #  error No page title defined
 #endif
-        <a href="http://pogl.wordpress.com/">
+        <a href="http://pogl.wordpress.com/2008/03/01/happy-birthday-equalizer/">
           <img src="/images/Equalizer3.png" alt="Equalizer logo">
         </a>
       </h1>
