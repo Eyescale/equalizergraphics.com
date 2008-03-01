@@ -136,9 +136,10 @@ div.header
     min-height: 78px;
 }
 
-div.header img
+div.header img, div.header a img:hover
 { 
     vertical-align: middle;
+    border: 0;
     padding: 0;
     padding-left: 2em;
     margin: 2px;

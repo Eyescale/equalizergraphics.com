@@ -17,6 +17,7 @@ FILES = \
 	events.html \
 	favicon.ico \
 	features.html \
+	forum.html \
 	impressum.html \
 	index.html \
 	lists.html \

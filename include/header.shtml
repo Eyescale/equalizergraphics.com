@@ -48,9 +48,12 @@
 #else
 #  error No page title defined
 #endif
-      <img src="images/Equalizer.png" alt="Equalizer logo"></h1>
+        <a href="http://pogl.wordpress.com/">
+          <img src="/images/Equalizer3.png" alt="Equalizer logo">
+        </a>
+      </h1>
     </div>
-#if !defined(S_SEARCH) && !defined(S_SURVEY)
+#if !defined(S_SEARCH) && !defined(S_SURVEY) && !defined(S_FORUM)
     <div class="poll">
       <div class="subnavigation"><center>
         <a href="http://www.eyescale.ch/jobs.pdf">We are hiring!</a>
