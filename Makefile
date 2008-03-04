@@ -71,6 +71,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.4.0.html \
 	documents/RelNotes/RelNotes_0.4.1.html \
 	documents/RelNotes/RelNotes_0.5.0.html \
+	documents/WhitePapers/MultiGPU.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \

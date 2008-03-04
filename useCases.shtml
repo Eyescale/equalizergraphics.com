@@ -84,7 +84,10 @@
   running one rendering thread per graphic card. The configuration shown on the
   left would execute two rendering threads alongside the application threads,
   thus utilizing up to three CPU cores. It is also possible to use additional
-  graphic card(s) to contribute to the rendering of one view, as described next.
+  graphic card(s) to contribute to the rendering of one view, as described
+  next.<br>
+  Get the <a href="/documents/WhitePapers/MultiGPU.pdf">OpenGL Scalability for
+  Multi-GPU Systems</a> White Paper.
 </p><div class="flush_float"></div>
 
 <a name="scalable"></a>

@@ -48,8 +48,11 @@
 
 <h2>White Papers</h2>
 <ul>
-  <li><a href="/documents/WhitePapers/ProjectEqualizer.pdf">Project Equalizer
-    </a> is a project description of Equalizer.</li>
+  <li><a href="/documents/WhitePapers/MultiGPU.pdf">OpenGL Scalability for
+      Multi-GPU Systems</a> shows one use of Equalizer on workstations with
+      multiple graphics cards.</li>
+  <li><a href="/documents/WhitePapers/ProjectEqualizer.pdf">Project 
+      Equalizer</a> is a project description of Equalizer.</li>
   <li><a href="/documents/WhitePapers/ParallelRenderingSystems.pdf">An
     Analysis of Parallel Rendering Systems</a> reviews, analyzes and
     classifies approaches to multi-pipe rendering, and outlines our motivation

@@ -29,7 +29,7 @@
   accurate approach.
 </p>
 
-<h2>Implemenation</h2>
+<h2>Implementation</h2>
 <p>
   The <a href="documents/design/statistics.html">statistics interface</a> does
   provide us with the timing values from the last finished frame. This timing
