@@ -15,7 +15,7 @@ my @files;
 # RSS setup
 my $rss = new XML::RSS( version => '1.0' );
 $rss->channel(
-    title        => "Equalizer: Parallel Rendering",
+    title        => "Latest Changes on Equalizer: Parallel Rendering",
     link         => "http://www.equalizergraphics.com",
     description  => "Parallel Rendering Software for OpenGL",
     dc => {
