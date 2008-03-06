@@ -68,12 +68,13 @@ foreach ( @changes )
             my $file = $2;
             my $type = $3;
 
-            if( !($file =~ /include/) && $op ne "D" )
+            $file =~ s/\.shtml/.html/;
+
+            if( !($file =~ /include/) && $op ne "D" && -e "build/$file" )
             {
-                $file =~ s/\.shtml/.html/;
                 push( @files, $file );
 
-                if( $type =~ /(png|jpg)/ && -e "build/$file" )
+                if( $type =~ /(png|jpg)/ )
                 {
                     $image = $file;
                 }
