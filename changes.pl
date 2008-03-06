@@ -10,6 +10,7 @@ my @changes = `svn log --limit 15 -v`;
 my $state   = "initial";
 my $rev;
 my $date;
+my $time;
 my @files;
 
 # RSS setup
@@ -46,6 +47,7 @@ foreach ( @changes )
         my @words = split /\s+/;
         $rev  = $words[0];
         $date = $words[4];
+        $time = $words[5];
         $rev =~ s/r(\d+)\s*/$1/;
         $state = "paths";
     }
@@ -97,10 +99,14 @@ foreach ( @changes )
             title       => "$excerpt",
             link        => "http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev",
             description => $description,
+            dc          => {
+                date        => $date . "T" . $time,
+            }
             );
 
         $rev  = "";
         $date = "";
+        $time = "";
         $state = "initial";
         @files = ();
     }
