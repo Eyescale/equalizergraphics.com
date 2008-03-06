@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://www.equalizergraphics.com">
+<title>Equalizer: Parallel Rendering</title>
+<link>http://www.equalizergraphics.com</link>
+<description>Parallel Rendering Software for OpenGL</description>
+<dc:language>en-us</dc:language>
+<dc:rights>Copyright 2008, Stefan Eilemann</dc:rights>
+<dc:date>2008-03-06T09:11
+</dc:date>
+<dc:publisher>webmaster@equalizergraphics</dc:publisher>
+<dc:creator>eile@equalizergraphics.com</dc:creator>
+<dc:subject>Parallel Rendering</dc:subject>
+<syn:updatePeriod>daily</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>1901-01-01T00:00+00:00</syn:updateBase>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1748" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1747" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1738" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1737" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1734" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1733" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1722" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1721" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1701" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1692" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1691" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1690" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1686" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1685" />
+  <rdf:li rdf:resource="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1680" />
+ </rdf:Seq>
+</items>
+</channel>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1748">
+<title>update events</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1748</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/events.html&#x22;&#x3E;/events.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1747">
+<title>add Multi-GPU white paper</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1747</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/documentation.html&#x22;&#x3E;/documentation.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/documents/design/loadBalancing.html&#x22;&#x3E;/documents/design/loadBalancing.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/useCases.html&#x22;&#x3E;/useCases.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1738">
+<title>update 0.5 release notes</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1738</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/documents/RelNotes/RelNotes_0.5.0.html&#x22;&#x3E;/documents/RelNotes/RelNotes_0.5.0.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/features.html&#x22;&#x3E;/features.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1737">
+<title>Disallow viewvc for robots</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1737</link>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1734">
+<title>Change logo for Equalizer birthday</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1734</link>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1733">
+<title>Change logo for Equalizer birthday</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1733</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/forum.html&#x22;&#x3E;/forum.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1722">
+<title>fix spelling</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1722</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/index.html&#x22;&#x3E;/index.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1721">
+<title>fix broken links</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1721</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/documents/RelNotes/RelNotes_0.5.0.html&#x22;&#x3E;/documents/RelNotes/RelNotes_0.5.0.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/useCases.html&#x22;&#x3E;/useCases.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1701">
+<title>minor fix</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1701</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/downloads.html&#x22;&#x3E;/downloads.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1692">
+<title>update download page</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1692</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/downloads.html&#x22;&#x3E;/downloads.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1691">
+<title>update sitemap generation</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1691</link>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1690">
+<title>link doxygen docs</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1690</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/doc_developer.html&#x22;&#x3E;/doc_developer.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1686">
+<title>Minor survey fix</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1686</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/survey.html&#x22;&#x3E;/survey.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1685">
+<title>Couple Programming Guide download to survey.</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1685</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/doc_developer.html&#x22;&#x3E;/doc_developer.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/survey.html&#x22;&#x3E;/survey.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+<item rdf:about="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1680">
+<title>Fix typo in file format doc</title>
+<link>http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&#x26;revision=1680</link>
+<description>    &#x3C;ul&#x3E;&#x3C;font size=&#x22;-1&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;/documents/design/fileFormat.html&#x22;&#x3E;/documents/design/fileFormat.html&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/font&#x3E;&#x3C;/ul&#x3E;
+</description>
+</item>
+
+</rdf:RDF>

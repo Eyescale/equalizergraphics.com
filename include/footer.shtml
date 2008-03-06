@@ -167,6 +167,12 @@
 #endif
         >Mailing Lists</a></p>
 
+  <p><a href="/forum.html"
+#ifdef S_FORUM
+        class="used"
+#endif
+        >Forum</a></p>
+
   <p><a href="/support.html"
 #ifdef S_SUPPORT
         class="used"

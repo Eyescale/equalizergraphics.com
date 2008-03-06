@@ -22,6 +22,9 @@
     <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
     <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS" 
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
   
 #ifdef TITLE
 #  define TITLESTRING Equalizer: PAGE: SUBPAGE: TITLE

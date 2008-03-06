@@ -15,6 +15,7 @@ FILES = \
 	documentation.html \
 	downloads.html \
 	events.html \
+	equalizer.rdf \
 	favicon.ico \
 	features.html \
 	forum.html \
