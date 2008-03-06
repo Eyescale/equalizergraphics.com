@@ -11,6 +11,7 @@ my $state   = "initial";
 my $rev;
 my $date;
 my $time;
+my $image;
 my @files;
 
 # RSS setup
@@ -61,15 +62,21 @@ foreach ( @changes )
         {
             $state = "excerpt";
         }
-        elsif( / +([A-Z]) \/trunk\/website(\/[\w\/\._\-]+html|shtml|png|jpg|pdf)([ \n])/ )
+        elsif( / +([A-Z]) \/trunk\/website(\/[\w\/\._\-]+(html|shtml|png|jpg|pdf))([ \n])/ )
         {
             my $op   = $1;
             my $file = $2;
-            
+            my $type = $3;
+
             if( !($file =~ /include/) && $op ne "D" )
             {
                 $file =~ s/\.shtml/.html/;
                 push( @files, $file );
+
+                if( $type =~ /(png|jpg)/ && -e "build/$file" )
+                {
+                    $image = $file;
+                }
             }
         }
     }
@@ -86,7 +93,14 @@ foreach ( @changes )
 
         if( @files )
         {
-            $description = "    <ul><font size=\"-1\">\n";
+            if( $image ne "" )
+            {
+                $description .= "    <div class=\"float_right\">\n";
+                $description .= "        <img src=\"$image\">\n";
+                $description .= "    </div>\n";
+            }
+
+            $description .= "    <ul><font size=\"-1\">\n";
             foreach my $file ( @files )
             {
                 $description .="        <li><a href=\"$file\">$file</a></li>\n";
@@ -107,6 +121,7 @@ foreach ( @changes )
         $rev  = "";
         $date = "";
         $time = "";
+        $image = "";
         $state = "initial";
         @files = ();
     }
