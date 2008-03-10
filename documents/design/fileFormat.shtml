@@ -163,6 +163,7 @@ server
                 stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default red
                 stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
                 update_FOV                   HORIZONTAL [ON] | VERTICAL | OFF
+                assemble                     GPU | CPU          // default GPU
             }
 
             wall                             // frustum description

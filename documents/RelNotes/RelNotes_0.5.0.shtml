@@ -1,7 +1,7 @@
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_RELNOTES
 #define PAGE Release Notes
-#define SUBPAGE Release Notes for Equalizer 0.5.0
+#define SUBPAGE Release Notes for Equalizer 0.5
 
 #include "header.shtml"
 
