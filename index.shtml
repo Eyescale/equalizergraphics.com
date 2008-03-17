@@ -42,11 +42,28 @@
   itself have to be contributed back to open source.
 </p>
 
-<h2>Features</h2>
+<h2>Benefits</h2>
 <div class="float_right">
   <a href="http://www.opengl.org"><img src="images/ogl.jpg"
                                        alt="OpenGL logo"></a>
 </div>
+<p>
+  Equalizer-based application can be used to:
+</p>
+<ul>
+  <li><b>Visualize more:</b> Scalable rendering is often used to visualize
+    larger data sets at a higher visual quality. Surprisingly, the focus is not
+    always achieving higher framerates for existing data sets.</li>
+  <li><b>Visualize anywhere:</b> The same application can be used for all kind
+    of installations without any changes, which is achieved by modularizing the
+    rendering from the application logics.</li>
+  <li><b>Visualize in parallel:</b> Parallel rendering optimally exploits
+    multicore architectures. One or more rendering threads execute in parallel
+    to the application thread, providing the optimal performance for
+    OpenGL-based rendering.</li>
+</ul>
+
+<h2>Features</h2>
 <p>
   Applications written using the <a href="api.html">Equalizer programming
   interface</a> benefit from the following features:
@@ -74,21 +91,21 @@
   <a href="/features.html">Detailed feature list...</a>
 </p>
 
-<h2>Project Vision</h2>
+<h2>Project Mission</h2>
 <p>
-  The progress of High-Performance Visualization (HPV) has been sluggish due to
-  the lack of an universally accepted programming framework, proprietary
-  software and vendor lock-in. The Equalizer project will provide the standard
-  programming and deployment environment for parallel OpenGL applications,
-  ranging from workstations to large-scale HPV clusters. The goal for Equalizer
-  is to reach a status similar to the MPI library, but for interactive 3D
-  graphics applications. Our focus is to provide the best framework to
-  develop <em>scalable graphics</em> applications, not to provide another
-  transparent OpenGL layer. To achieve this goal we adopt an open approach both
-  for the design and development and for the source code itself, and therefore
-  invite programmers, researchers, independent software vendors and hardware
-  manufacturers to contribute to this project.
+  Equalizer is an open platform for high-performance visualization:
 </p>
+<ul>
+  <li><b>Vendor Independence:</b> The development is not governed by a single
+    company. We work with several industry-leading hardware and software vendors
+    as well as research institutions on improving Equalizer.</li>
+  <li><b>Open Source:</b> Equalizer uses a liberal license which allows usage in
+    both open source and commercial products. The license ensures progress on
+    the core framework and protects the ISV's investment in the future.</li>
+  <li><b>Open Community:</b> We encourage the usage in custom projects and
+    welcome contributions to Equalizer by the community. We contribute our
+    experience in parallel rendering back to the OpenGL community.</li>
+</ul>
 
 <div class="footnote">
 Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple
