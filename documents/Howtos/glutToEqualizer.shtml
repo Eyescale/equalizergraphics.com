@@ -21,7 +21,7 @@
     <td>glutInitDisplayString, glutGameModeString, glutFullScreen,
       glutEnterGameMode, glutInitDisplayMode</td>
     <td>Window attributes from 
-      <a href="documents/design/fileFormat.html">config file</a<</td>
+      <a href="documents/design/fileFormat.html">config file</a></td>
   </tr>
   <tr>
     <td>glutInitWindowSize</td>
