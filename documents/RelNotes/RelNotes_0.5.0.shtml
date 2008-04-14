@@ -7,9 +7,10 @@
 
 <p>
   Welcome to Equalizer 0.5, a framework for the development and deployment of
-  scalable OpenGL applications. Equalizer 0.5 adds a new 'pixel' task
-  decomposition mode for raytracing and volume rendering, and speeds up database
-  (sort-last) decompositions.
+  parallel, scalable OpenGL applications. Equalizer 0.5 adds a new 'pixel' task
+  decomposition mode for fill-rate bound applications such as raytracing and
+  volume rendering, and speeds up database (sort-last) decompositions
+  significantly.
 </p>
 <p>
   Equalizer 0.5 is a beta release, and therefore targeted towards application
@@ -47,12 +48,12 @@
 
 <h4>New Features</h4>
 <ul>
-  <li>Pixel compounds to accelerate GPU-based raytracing</li>
+  <li>Pixel compounds to accelerate fill-bound applications</li>
   <li>GLEW integration for simplified OpenGL extension handling in a
     multi-context environment</li>
   <li>Improved eVolve volume rendering example</li>
   <li>Pluggable window initialization</li>
-  <li>TBD PBuffers</li>
+  <li>Off-screen rendering support using PBuffers</li>
 </ul>
 
 <h4>Performance Improvements</h4>
@@ -62,7 +63,6 @@
   <li>Improved network pixel transfer using parallel image compression through
     OpenMP</li>
   <li>Pluggable window initialization</li>
-  <li>TBD alpha compositor?</li>
 </ul>
 
 <h4>Bug Fixes</h4>
@@ -76,9 +76,17 @@
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1842242&group_id=170962&atid=856209">1842242</a>: Bug with exiting examples on linux</li>
 </ul>
 
-<h4>New Documentation</h4>
+<h4>Documentation</h4>
+<p>
+  The <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">Programming Guide</a> has
+  been extended to 43 pages. The following documentation has been added:
+</p>
 <ul>
-  <li><a href="documents/"></a></li>
+  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a></li>
+  <li><a href="/documents/design/glExtensions.html">OpenGL Extension
+      Handling</a></li>
+  <li><a href="/documents/design/pixelCompound.html">Pixel Compounds</a></li>
+  <li><a href="/documents/design/eventHandling.html">Event Handling</a></li>
 </ul>
 
 <h3>Removed Features</h3>
@@ -98,7 +106,7 @@
   <li><b>Linux:</b> Ubuntu 6.10 (x64, i386), RHEL4 (x64, i386)</li>
   <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
     Cygwin (i386)</li>
-  <li><b>Mac OS X:</b> 10.4 (PowerPC, i386) and 10.5 (i386)</li>
+  <li><b>Mac OS X:</b> 10.5 (PowerPC, i386)</li>
 </ul>
 <h4>Window System Support</h4>
 <ul>
@@ -109,7 +117,7 @@
 
 <h3>Documentation</h3>
 <p>
-  The <a href="http://www.lulu.com/content/1359268">Programming Guide</a> is
+  The <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">Programming Guide</a> is
  part of the Equalizer and can be found 
   <a href="http://www.equalizergraphics.com/survey.html">online</a>. Equalizer
  does not yet have an Users Guide. The shipped

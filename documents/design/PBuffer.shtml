@@ -80,7 +80,8 @@ State: Implemented in svn
 <a name="Issues"></a>
 <h2>Open Issues</h2>
 <p>
-  None known.
+  The current X11 version of Mac OS X uses GLX 1.2, and therefore does not
+  support GLX PBuffers.
 </p>
 
 #include "footer.shtml"
