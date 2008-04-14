@@ -11,7 +11,7 @@ my $state   = "initial";
 my $rev;
 my $date;
 my $time;
-my $image;
+my $image = "";
 my @files;
 
 # RSS setup
