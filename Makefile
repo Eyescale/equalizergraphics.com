@@ -99,6 +99,7 @@ FILES = \
 	documents/design/objects.html \
 	documents/design/objectManager.html \
 	documents/design/packets.html \
+	documents/design/PBuffer.html \
 	documents/design/pixelCompound.html \
 	documents/design/residentNodes.html \
 	documents/design/roi.html \

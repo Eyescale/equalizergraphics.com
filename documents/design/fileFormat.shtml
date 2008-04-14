@@ -15,12 +15,12 @@ State: Implemented
   The configuration file format for the Equalizer server is described below. The
   <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/">examples directory</a> does
   contain some example configuration
-  files. The <a href="documents/user/configTool.html">configuration tool</a>
+  files. The <a href="/documents/user/configTool.html">configuration tool</a>
   automatically creates some standard configuration files.
 </p>
 <p>
   The file format is not described in detail here. Please refer to
-  the <a href="documents/design/fileFormat.html#changes">changes</a> section
+  the <a href="/documents/design/fileFormat.html#changes">changes</a> section
   below for individual feature specifications. The actual implementation may
   differ slightly from this specification, but we try to keep it up to date. The
   loader implementation is the reference for the file format, look at
@@ -65,6 +65,7 @@ global
      EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
      EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
      EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   // AGL only
+     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer
      EQ_WINDOW_IATTR_PLANES_COLOR             unsigned
      EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
      EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
@@ -128,6 +129,7 @@ server
                         hint_decoration     OFF | ON
                         hint_fullscreen     OFF | ON
                         hint_swapsync       OFF | ON         // AGL only
+                        hint_drawable       window | pbuffer
                         planes_color        unsigned
                         planes_alpha        unsigned
                         planes_depth        unsigned
@@ -195,8 +197,25 @@ server
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer
+      }
+
+      window
+      {
+          attributes
+          {
+              hint_drawable    window | pbuffer
+          }
+      }
+    </pre><!-- */ -->
+  </li>  
+
   <li>Configurable launch command argument quotes were added after v0.4.1:
-    <pre>
+    <!-- /* --><pre>
       global
       {
            EQ_CONNECTION_CATTR_LAUNCH_COMMAND_QUOTE 'character'
@@ -214,19 +233,22 @@ server
               timeout       unsigned    // timeout in milliseconds for launch
           }
       }
-    </pre>
-  <li><a href="documents/design/pixelCompound.html">Pixel Decompositions</a>
+    </pre><!-- */ -->
+  </li>  
+
+  <li><a href="/documents/design/pixelCompound.html">Pixel Decompositions</a>
     added:
-    <pre>
+    <!-- /* --><pre>
       compound
       {
           pixel    [ int int ]             // pixel decomposition (step size)
       }
-    </pre>
+    </pre><!-- */ -->
   </li>  
-  <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
+
+  <li><a href="/documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
     added:
-    <pre>
+    <!-- /* --><pre>
       global
       {
           EQ_COMPOUND_IATTR_UPDATE_FOV     HORIZONTAL [ON] | VERTICAL | OFF
@@ -239,11 +261,12 @@ server
               update_FOV                   HORIZONTAL [ON] | VERTICAL | OFF
           }
       }
-    </pre>
+    </pre><!-- */ -->
   </li>  
-  <li><a href="documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+
+  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
     added:
-    <pre>
+    <!-- /* --><pre>
       global
       {
           EQ_PIPE_IATTR_HINT_THREAD   off | on
@@ -256,10 +279,11 @@ server
               hint_thread   off | on
           }
       }
-    </pre>
+    </pre><!-- */ -->
   </li>  
-  <li><a href="documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
-    <pre>
+
+  <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
+    <!-- /* --><pre>
       global
       {
           EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
@@ -276,11 +300,12 @@ server
               stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
           }
       }
-    </pre>
+    </pre><!-- */ -->
   </li>
-  <li><a href="documents/design/immersive.html">Stereo and Head Tracking</a>
+
+  <li><a href="/documents/design/immersive.html">Stereo and Head Tracking</a>
     added:
-    <pre>
+    <!-- /* --><pre>
       global
       {
           EQ_CONFIG_FATTR_EYE_BASE            float
@@ -304,10 +329,12 @@ server
       {
           eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
       }
-    </pre>
+    </pre><!-- */ -->
   </li>  
-  <li><a href="documents/design/statistics.html">Statistics Interface</a> added:
-    <pre>
+
+  <li><a href="/documents/design/statistics.html">Statistics Interface</a>
+    added:
+    <!-- /* --><pre>
       global
       {
           EQ_CHANNEL_IATTR_HINT_STATISTICS    off | fastest [on] | nicest
@@ -319,10 +346,11 @@ server
               hint_statistics     off | fastest [on] | nicest
           }
       }
-    </pre>
+    </pre><!-- */ -->
   </li>
-  <li><a href="documents/design/compounds.html">Compounds</a> added:
-    <pre>
+
+  <li><a href="/documents/design/compounds.html">Compounds</a> added:
+    <!-- /* --><pre>
       global
       {
           EQ_COMPOUND_*
@@ -331,7 +359,7 @@ server
       {
           ...
       }
-    </pre>
+    </pre><!-- */ -->
   </li>  
 </ul>
 

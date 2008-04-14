@@ -1,0 +1,87 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE PBuffer Integration
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Implemented in svn
+</p>
+
+<h2>Overview</h2>
+<div class="float_right">
+  <a href="/documents/WhitePapers/MultiGPU.pdf">
+    <img src="/documents/design/images/Multi-GPU-small.jpg" 
+         alt="Using PBuffers for parallel Multi-GPU rendering"/></a>
+  <div class="label">Using PBuffers for parallel Multi-GPU rendering</div>
+</div>
+<p>
+  PBuffers are off-screen rendering buffers. They are used to render using a GPU
+  without displaying the rendering on a display, typically for source channels
+  during decomposition.
+</p>
+<p>
+  The PBuffer support adds the possibility to configure the window's drawable
+  type in the configuration file. The default is 'window', 'pbuffer' is used to
+  configure a PBuffer. Later 'fbo' will be added for Frame-Buffer Objects.
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+    class Window
+    {
+        AGLPbuffer getAGLPBuffer() const;
+        HPBUFFERARB getWGLPBufferHandle() const;
+
+        virtual void setAGLPBuffer( AGLPbuffer pbuffer );
+        virtual void setWGLPBufferHandle( HPBUFFERARB handle );
+
+        virtual bool configInitGLXPBuffer( XVisualInfo* visualInfo );
+        virtual bool configInitAGLPBuffer();
+        virtual bool configInitWGLPBuffer( HDC dc, int pixelFormat );
+        ...
+
+        enum IAttribute
+        {
+            ...
+            IATTR_HINT_DRAWABLE,
+            ...
+        };
+    };
+
+    enum IAttrValue
+    {
+        ...
+        PBUFFER    = -7,
+        WINDOW     = -6,
+        ...
+    };
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+    global
+    {
+        EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer
+    }
+
+    window
+    {
+        attributes
+        {
+            hint_drawable    window | pbuffer
+        }
+    }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+<p>
+  None known.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

@@ -56,7 +56,8 @@
   <td><a href="/documents/design/objects.html">distributed object API</a></td>
   <td>0.3</td>
 </tr><tr>
-  <td><a href="/documents/design/nonthreaded.html">nonthreaded rendering</a></td>
+  <td><a href="/documents/design/nonthreaded.html">nonthreaded
+      rendering</a></td>
   <td>0.3</td>
 </tr><tr>
   <td><a href="/documents/design/infiniBand.html">InfiniBand networking</a></td>
@@ -76,6 +77,9 @@
   <td><a href="/documents/design/dataTransmission.html">data
       transmission</a></td>
   <td>disabled</td>
+</tr><tr>
+  <td><a href="/documents/design/PBuffer.html">PBuffer support</a></td>
+  <td>svn</td>
 </tr><tr>
   <td>FBO support</td>
   <td>?</td>

@@ -61,8 +61,10 @@
   features will be release in the next version.
 </p>
 <ul>
-  <li><a href="/documents/design/glExtensions.html">OpenGL Extension Handling</a>
-    explains how GLEW is used for OpenGL extensions.</li>
+  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> adds the
+    capability for off-screen rendering buffers.</li>
+  <li><a href="/documents/design/glExtensions.html">OpenGL Extension
+      Handling</a> explains how GLEW is used for OpenGL extensions.</li>
   <li><a href="/documents/design/pixelCompound.html">Pixel Compounds</a>
     divide the screen-space column-wise to all sources, and therefore have a
     near-perfect load-balancing for fill-rate-bound applications.</li>
