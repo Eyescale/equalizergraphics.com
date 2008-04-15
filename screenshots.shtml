@@ -9,7 +9,17 @@
     <img src="screenshots/cave-small.jpg" 
          alt="The Equalizer example application in a three-sided CAVE">
   </a>
+  <div>
   The Equalizer example application in a three-sided CAVE
+  </div>
+</div>
+
+<div class="gallery">
+  <a href="screenshots/8_wnd_DB_vol_head.png">
+    <img src="screenshots/8_wnd_DB_vol_head-small.jpg"
+         alt="DB decomposition in volume rendering">
+  </a>
+  8-to-1 sort-last decomposition using the eVolve volume rendering demo.
 </div>
 
 <div class="gallery">
@@ -22,19 +32,20 @@
 </div>
 
 <div class="gallery">
-  <a href="screenshots/8_wnd_DB_vol_head.png">
-    <img src="screenshots/8_wnd_DB_vol_head-small.jpg"
-         alt="DB decomposition in volume rendering">
-  </a>
-  8-to-1 sort-last decomposition using the eVolve volume rendering demo.
-</div>
-
-<div class="gallery">
   <a href="screenshots/wall2.png">
     <img src="screenshots/wall2-small.jpg" 
          alt="The Equalizer example application running on the same display wall">
   </a>
   The Equalizer example application running on the same display wall
+</div>
+
+<div class="gallery">
+  <a href="screenshots/Mac_Windows.jpg">
+    <img src="screenshots/Mac_Windows-small.jpg" 
+         alt="Mac OS X, Windows interoperability">
+  </a>
+  eqPly running on a MacBook Pro using a Windows XP machine as a rendering
+  client in a sort-last configuration.
 </div>
 
 <div class="gallery">

@@ -103,20 +103,18 @@ div.gallery {
     border-color: black;
     border-style: solid;
     border-collapse: collapse;
-    margin: 1px;
-    padding: 5px;
-    width: 200px;
-    height: 210px;
-    float: left;
+    padding: 5px 0 5px 0;
+    clear: left;
 }
 
 div.gallery img { 
-    padding: 0px 0px 5px 0px;
+    padding: 0 5px 5px 5px;
+    float:   left;
 }
 
 div.gallery img:hover
 { 
-    padding: 0px 0px 5px 0px;
+    padding: 0 5px 5px 5px;
     margin: 0;
     border:  0;
 }
