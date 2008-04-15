@@ -296,6 +296,10 @@ ul.toc2
 { 
     clear: both;
 }
+.flush_left
+{ 
+    clear: left;
+}
 
 hr
 { 

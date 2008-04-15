@@ -1,8 +1,9 @@
-#define S_CONTRIBUTORS
-#define PAGE Contributors
+#define S_CONTRIBUTIONS
+#define PAGE Contributions
 
 #include "header.shtml"
 
+<h2>Contributors</h2>
 <p>
   The following is a list of the major contributing institutions. Contributing
   individuals are mentioned in
@@ -18,7 +19,54 @@
   The Visualization and MultiMedia Lab at the Department of Informatics,
   University of Z&uuml;rich has supported Equalizer since March 2005, with
   Stefan Eilemann leading the project development.
-</p><div class="flush_float"></div>
+</p><div class="flush_left"></div>
+
+<h2>Contribute to Equalizer!</h2>
+<p>
+  Equalizer is an open source project, and therefore the open source community
+  is important to us. Whether you are representing an institution or if you are
+  an individual contributor, we welcome your contributions. We think Equalizer
+  is a cool project, and you can learn a lot about hot topics such as 3D
+  visualization, parallel programming and distributed systems. Drop us an
+  <a href="mailto:info@equalizergraphics.com?subject=Question regarding
+  Equalizer: Contributions" class="rule">email</a> or ask on the mailing
+  list if you have any open questions. If you are not sure were to start,
+  below are a few hot topics we would like to be addressed, in no particular
+  order:
+</p>
+<ul>
+  <li><b>Binary Packages:</b> Create binary packages of Equalizer releases for
+    your favorite platform and operating system (RPM, Windows Installer,
+    etc.). One hot candidate is the integration into
+    the <a href="http://www.rocksclusters.org/">Rocks Viz Roll</a>. We are happy
+    to add your packages to the SourceForge download page.</li>
+  <li><b>Documentation:</b> Good documentation is important for Equalizer. While
+    we try our best, we have limited time and sometimes we are just to immersed
+    in the details. We are looking for a User Guide, contributions to the
+    Programming Guide and stand-alone HowTos for whatever you feel needs
+    documentation. You can also start adding articles to
+    the <a href="http://equalizer.wiki.sourceforge.net/">Wiki</a>.</li>
+  <li><b>Support and Promotion:</b> Subscribe yourself to the 
+    <a href="http://www.equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">mailing
+      list</a> and support people where you can. Link to this website and let
+    people now what Equalizer is capable of.</li>
+  <li><b>Applications:</b> Start porting your own OpenGL-based application, or
+    pick an existing one. A few suggestions from our side are:</li>
+  <ul>
+    <li><a href="http://www.openscenegraph.org">OpenSceneGraph</a> is regularly
+      requested. You would make a lot of friend if you come up with a killer
+      demo based on OSG.</li>
+    <li><a href="http://public.kitware.com/VTK/">VTK</a> is second on the list
+      of requests.</li>
+    <li><a href="http://bzflag.org/">BZFlag</a> Wouldn't it be fun to play
+      BZFlag in an immersive environment?</li>
+  </ul>
+  <li><b>New Features:</b> Head over to the <a href="/features.html">Feature
+      List</a> or suggest your own feature which is missing from Equalizer. We
+    are happy to give you guidance on the design and implementation, if
+    needed.</li>
+</ul>
+
 
 #include "footer.shtml"
 <!-- $Id$ -->

@@ -148,7 +148,7 @@
   Equalizer does not interfere with the application's rendering code. It can be
   used for parallelizing any visualization application based on OpenGL, which
   allows it to be used in all markets which can benefit of parallel rendering. A
-  fex examples are given below.
+  few examples are given below.
 </p>
 
 

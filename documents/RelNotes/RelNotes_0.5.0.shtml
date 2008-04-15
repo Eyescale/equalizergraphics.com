@@ -54,6 +54,8 @@
   <li>Improved eVolve volume rendering example</li>
   <li>Pluggable window initialization</li>
   <li>Off-screen rendering support using PBuffers</li>
+  <li>Interoperability between Mac OS X and Windows XP (same endianess, Linux is
+    untested)</li>
 </ul>
 
 <h4>Performance Improvements</h4>

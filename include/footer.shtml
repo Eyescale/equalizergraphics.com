@@ -180,10 +180,10 @@
         >Support</a></p>
 
   <p><a href="/contributors.html"
-#ifdef S_CONTRIBUTORS
+#ifdef S_CONTRIBUTIONS
         class="used"
 #endif
-        >Contributors</a></p>
+        >Contributions</a></p>
 
   <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
 
