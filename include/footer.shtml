@@ -179,7 +179,7 @@
 #endif
         >Support</a></p>
 
-  <p><a href="/contributors.html"
+  <p><a href="/contributions.html"
 #ifdef S_CONTRIBUTIONS
         class="used"
 #endif

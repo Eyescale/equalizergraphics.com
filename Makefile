@@ -10,7 +10,7 @@ FILES = \
 	changes.html \
 	compatibility.html \
 	configuration.html \
-	contributors.html \
+	contributions.html \
 	doc_developer.html \
 	documentation.html \
 	downloads.html \
