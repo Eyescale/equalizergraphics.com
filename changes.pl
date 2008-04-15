@@ -109,7 +109,10 @@ foreach ( @changes )
             $description .= "    </font></ul>\n";
         }
         print $description;
-        print "<div class=\"flush_float\"></div>\n";
+        if( $image ne "" )
+        {
+            print "<div class=\"flush_float\"></div>\n";
+        }
 
         $rss->add_item(
             title       => "$excerpt",
