@@ -89,7 +89,7 @@ foreach ( @changes )
         s/[\<\>]//g;
 
         my $excerpt = $_;
-        print "    <li>$date: <a href=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev\">$excerpt</a></li>\n";
+        print "    <li><a name=\"$rev\"></a>$date: <a href=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev\">$excerpt</a></li>\n";
         my $description = "";
 
         if( @files )
@@ -97,7 +97,7 @@ foreach ( @changes )
             if( $image ne "" )
             {
                 $description .= "    <div class=\"float_right\">\n";
-                $description .= "        <img src=\"$image\">\n";
+                $description .= "        <img src=\"$image\" width=\"200\">\n";
                 $description .= "    </div>\n";
             }
 
@@ -109,10 +109,11 @@ foreach ( @changes )
             $description .= "    </font></ul>\n";
         }
         print $description;
+        print "<div class=\"flush_float\"></div>\n";
 
         $rss->add_item(
             title       => "$excerpt",
-            link        => "http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=$rev",
+            link        => "http://www.equalizergraphics.com/changes.html#$rev",
             description => $description,
             dc          => {
                 date        => $date . "T" . $time,
