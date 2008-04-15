@@ -127,6 +127,9 @@
       network transfers</a></td>
   <td>0.2</td>
 </tr><tr>
+  <td>GPU-based image compression</td>
+  <td>?</td>
+</tr><tr>
   <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
   <td>svn</td>
 </tr><tr>
@@ -161,6 +164,9 @@
       support</a></td>
   <td>0.3</td>
 </tr><tr>
+  <td>auto-configuration for standalone applications</td>
+  <td>?</td>
+</tr><tr>
   <td>multiple applications</td>
   <td>?</td>
 </tr><tr>
@@ -171,10 +177,10 @@
 <tr><td colspan="2"><hr></td></tr>
 <tr><td colspan="2"><a name="extensions"></a><b>Extensions</b></td></tr>
 <tr>
-  <td>OpenGL Transparent Library (Chromium?)</td>
+  <td>transparent OpenGL library (Chromium?)</td>
   <td>?</td>
 </tr><tr>
-  <td>remote visualization</td>
+  <td>remote visualization (VNC integration?)</td>
   <td>?</td>
 </tr><tr>
   <td>distributed scene graph: OpenSceneGraph, OpenSG, Coin</td>
@@ -184,26 +190,26 @@
 <tr><td colspan="2"><hr></td></tr>
 <tr><td colspan="2"><a name="applications"></a><b>Applications</b></td></tr>
 <tr>
-  <td>Polygonal Rendering Demo (eqPly)</td>
+  <td>polygonal rendering demo (eqPly)</td>
   <td>0.1</td>
 </tr><tr>
-  <td>&rarr; Support for sort-last rendering</td>
+  <td>&rarr; support for sort-last rendering</td>
   <td>0.2</td>
 </tr><tr>
-  <td>&rarr; Rendering using VBO's and kd-tree</td>
+  <td>&rarr; rendering using VBO's and kd-tree</td>
   <td>0.4</td>
 </tr><tr>
-  <td>&rarr; Better rendering and shading effects</td>
+  <td>&rarr; better rendering and shading effects</td>
   <td>0.4?</td>
 </tr><tr>
-  <td><a href="/documents/design/volumeRendering.html">Volume Renderer</a></td>
+  <td><a href="/documents/design/volumeRendering.html">volume renderer</a></td>
   <td>0.4</td>
 </tr><tr>
-  <td>Molecular Viewer (<a href="http://www.cscs.ch/molekel/">Molekel</a>,
+  <td>molecular viewer (<a href="http://www.cscs.ch/molekel/">Molekel</a>,
     <a href="http://www.ks.uiuc.edu/Research/vmd/">VMD</a>?)</td>
   <td>?</td>
 </tr><tr>
-  <td>Medical Viewer (<a href="http://www.osirix-viewer.com/">Osirix</a>?)</td>
+  <td>medical viewer (<a href="http://www.osirix-viewer.com/">Osirix</a>?)</td>
   <td>?</td>
 </tr>
 
