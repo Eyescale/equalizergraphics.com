@@ -25,14 +25,19 @@
 <p>
   Equalizer is an open source project, and therefore the open source community
   is important to us. Whether you are representing an institution or if you are
-  an individual contributor, we welcome your contributions. We think Equalizer
-  is a cool project, and you can learn a lot about hot topics such as 3D
-  visualization, parallel programming and distributed systems. Drop us an
-  <a href="mailto:info@equalizergraphics.com?subject=Question regarding
-  Equalizer: Contributions" class="rule">email</a> or ask on the mailing
-  list if you have any open questions. If you are not sure were to start,
-  below are a few hot topics we would like to be addressed, in no particular
-  order:
+  an individual contributor, we welcome your contributions. 
+</p>
+<p>
+  We think Equalizer is a cool project, where you can learn a lot about hot
+  topics such as 3D visualization, parallel programming and distributed
+  systems. The <a href="http://www.ifi.unizh.ch/vmml/">VMML</a> is accepting
+  diploma thesis and similar student works around Equalizer.
+</p>
+<p>
+  Drop us an
+  <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Contributions" class="rule">email</a> or ask on the mailing list if
+  you have any open questions. If you are not sure were to start, below are a
+  few ideas we think are important, in no particular order:
 </p>
 <ul>
   <li><b>Binary Packages:</b> Create binary packages of Equalizer releases for

@@ -1,0 +1,48 @@
+#define S_NEWS
+#define PAGE News
+#define SUBPAGE Equalizer 0.5 increases scalability with Pixel compounds and faster sort-last compositing
+
+#include "header.shtml"
+
+<div class="float_right">
+  <a href="/images/release-0.5.png"><img src="/images/release-0.5-small.jpg" 
+                                     alt="A Pixel Compound"></a>
+  <div class="label">A Three-to-One Pixel Decomposition</div>
+</div>
+<p>
+  We are pleased to announce the release of Equalizer 0.5, a framework for the
+  development and deployment of parallel OpenGL applications. Equalizer 0.5 adds
+  a number of features to increase the scalability, most notably Pixel compounds
+  for fill-rate-bound applications and a 2-4x performance increase during
+  sort-last compositing. The Programming Guide has been extended to 43 pages and
+  covers various new topics. Preview the content and order your hardcopy today
+  at <a
+  href="http://www.lulu.com/browse/book_view.php?fCID=2184039">lulu.com</a>!
+</p>
+<p>
+  Equalizer 0.5 now uses <a href="http://glew.sourceforge.net/">GLEW</a> to
+  provide easy-to-use OpenGL extension handling in parallel OpenGL
+  applications. The new support for off-screen PBuffers on all platforms opens
+  new use cases for Equalizer-based applications, for example seamless
+  integration for scalability on multi-GPU workstations. Where available, image
+  compression during network transfer has been accelerated
+  using <a href="http://www.openmp.org/">OpenMP</a>.
+</p>
+<p>
+  The full release notes for version 0.5 are available at<br>
+<a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.5.0.html">http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.5.0.html</a>.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from
+  <a href="http://www.eyescale.ch">Eyescale Software GmbH</a>. Please
+  contact
+  <a href="mailto:info@eyescale.ch?subject=Equalizer">info@eyescale.ch</a>
+  for further information.
+</p>
+
+<div class="footnote">
+ Bucky Ball data set courtesy of AVS, USA</div>
+
+#include "footer.shtml"
+<!-- $Id$ -->
