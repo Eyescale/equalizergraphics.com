@@ -1,6 +1,6 @@
 #define S_NEWS
 #define PAGE News
-#define SUBPAGE Equalizer 0.5 increases scalability with pixel compounds and faster sort-last compositing
+#define SUBPAGE Equalizer 0.5 improves scalability with pixel compounds and faster sort-last compositing
 
 #include "header.shtml"
 
