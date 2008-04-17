@@ -11,11 +11,11 @@
 </div>
 <p>
   We are pleased to announce the release of Equalizer 0.5, a framework for the
-  development and deployment of parallel OpenGL applications. Equalizer 0.5 adds
-  a number of features to increase the scalability, most notably pixel compounds
-  for fill-rate-bound applications and a 2-4x performance increase during
-  sort-last compositing. The Programming Guide has been extended to 43 pages and
-  covers various new topics. Preview the content and order your hardcopy today
+  development and deployment of parallel OpenGL applications. Equalizer 0.5
+  focuses on scalability, most notably by adding pixel compounds for
+  fill-rate-bound applications and a 2-4x performance increase during sort-last
+  compositing. The Programming Guide has been extended to 43 pages and covers
+  various new topics. Preview the content and order your hardcopy today
   at <a
   href="http://www.lulu.com/browse/book_view.php?fCID=2184039">lulu.com</a>!
 </p>
