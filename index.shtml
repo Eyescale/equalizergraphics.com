@@ -7,9 +7,9 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="images/parallel.png"><img src="images/parallel-small.jpg" 
+  <a href="images/release-0.4.png"><img src="images/release-0.4-small.jpg" 
                                      alt="Scalable Rendering"></a>
-  <div class="label">Eight-to-One Scalable Rendering</div>
+  <div class="label">Four-to-One Scalable Volume Rendering</div>
 </div>
 <p>
   Equalizer is an open source framework for the development and deployment

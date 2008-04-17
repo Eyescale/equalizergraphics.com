@@ -38,10 +38,11 @@
   </a>
 </div>
 <!-- /* --><pre>
- 42M trunk/src
-158M trunk/doc
-231M trunk/website
+ 45M trunk/src
+202M trunk/doc
+503M trunk/website
 
+750M tags/release-0.5
 432M tags/release-0.4
 364M tags/release-0.3
 396M tags/beta-0.3
@@ -54,6 +55,16 @@
 <h3>Releases</h3>
 <table>
   <tr><th>Version</th><th>Links</th><th>Major Feature(s)</th></tr>
+
+  <tr>
+    <td>0.5</td>
+    <td nowrap>
+      <a href="/documents/RelNotes/RelNotes_0.5.0.html">Release 
+        Notes</a><br>
+      <a href="/downloads/Equalizer-0.5.0.tar.gz">Source tar.gz</a><br> 
+    </td>
+    <td>Pixel compounds, fast sort-last compositing.</td>
+  </tr>
 
   <tr>
     <td>0.4.1</td>

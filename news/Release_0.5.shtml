@@ -1,6 +1,6 @@
 #define S_NEWS
 #define PAGE News
-#define SUBPAGE Equalizer 0.5 increases scalability with Pixel compounds and faster sort-last compositing
+#define SUBPAGE Equalizer 0.5 increases scalability with pixel compounds and faster sort-last compositing
 
 #include "header.shtml"
 
@@ -12,7 +12,7 @@
 <p>
   We are pleased to announce the release of Equalizer 0.5, a framework for the
   development and deployment of parallel OpenGL applications. Equalizer 0.5 adds
-  a number of features to increase the scalability, most notably Pixel compounds
+  a number of features to increase the scalability, most notably pixel compounds
   for fill-rate-bound applications and a 2-4x performance increase during
   sort-last compositing. The Programming Guide has been extended to 43 pages and
   covers various new topics. Preview the content and order your hardcopy today
