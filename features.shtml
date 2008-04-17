@@ -79,7 +79,7 @@
   <td>disabled</td>
 </tr><tr>
   <td><a href="/documents/design/PBuffer.html">PBuffer support</a></td>
-  <td>svn</td>
+  <td>0.5</td>
 </tr><tr>
   <td>FBO support</td>
   <td>?</td>
@@ -131,7 +131,7 @@
   <td>?</td>
 </tr><tr>
   <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
-  <td>svn</td>
+  <td>0.5</td>
 </tr><tr>
   <td>compound load-balancing</td>
   <td>?</td>

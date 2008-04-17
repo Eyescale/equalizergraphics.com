@@ -60,6 +60,8 @@
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+
+<h4>Version 0.5</h4>
 <ul>
   <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> adds the
     capability for off-screen rendering buffers.</li>
