@@ -15,7 +15,7 @@
 </p>
 <p>
   The impatient can download the latest
-  version <a href="/downloads/Equalizer-0.4.1.tar.gz">here</a>.
+  version <a href="/downloads/Equalizer-0.5.0.tar.gz">here</a>.
 </p>
 <h3>Subversion Repository</h3>
 <p>
@@ -62,6 +62,7 @@
       <a href="/documents/RelNotes/RelNotes_0.5.0.html">Release 
         Notes</a><br>
       <a href="/downloads/Equalizer-0.5.0.tar.gz">Source tar.gz</a><br> 
+      <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=592910">SourceForge</a><br>
     </td>
     <td>Pixel compounds, fast sort-last compositing.</td>
   </tr>
