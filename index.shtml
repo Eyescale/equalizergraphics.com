@@ -7,53 +7,39 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="images/release-0.4.png"><img src="images/release-0.4-small.jpg" 
-                                     alt="Scalable Rendering"></a>
+  <a href="/images/release-0.4.png"><img src="/images/release-0.4-small.jpg" 
+                                         alt="Scalable Rendering"></a>
   <div class="label">Four-to-One Scalable Volume Rendering</div>
 </div>
 <p>
-  Equalizer is an open source framework for the development and deployment
-  of <em>parallel OpenGL applications</em>. An Equalizer application can run
-  unmodified on any visualization system, from a singlepipe workstation to large
-  scale <em>graphics clusters</em> and <em>multi-GPU</em>
-  workstations. Equalizer is built upon a <em>scalable OpenGL</em>-based
-  programming interface solving problems that are common to any multipipe
-  application. The API is <em>minimally invasive</em>, making application
-  porting as easy as possible while delivering maximum performance.<br>
-  <a href="useCases.html">Equalizer use cases...</a>
+  Equalizer is an open source project providing a minimally invasive programming
+  interface and resource management system for parallel, scalable OpenGL
+  applications. It allows an application to run unmodified on any visualization
+  system, from a simple workstation to large scale graphics clusters and
+  multi-GPU workstations.
 </p>
 
-<h2>Compatibility</h2>
+<h2>Applications</h2>
 <p>
-  Equalizer is a cross-platform toolkit and is available for Linux, Windows XP
-  and Mac OS X and supports both 32-bit and 64-bit
-  execution. Please <a href="contact.html">contact us</a> if you are interested
-  to learn more about Equalizer, to participate in its design and development,
-  or if you have any other questions.<br>
-  <a href="compatibility.html">Compatibility matrix...</a>
+  Equalizer is the industry-leading toolkit for parallel rendering, and is used
+  by numerous commercial and research applications. Since it can be combined
+  with any OpenGL-based rendering, Equalizer is used in a variety of vertical
+  markets, for example content creation or scientific visualization.
 </p>
-
-<h2>License</h2>
 <p>
-  The Equalizer framework is licensed under the
-  <a href="http://www.gnu.org/licenses/lgpl.html">LGPL open source license</a>,
-  which allows usage in commercial and open source projects without
-  licensing costs, with the only restriction that any changes to the framework
-  itself have to be contributed back to open source.
+  <a href="/applications/thirdParty.html">Applications...</a><br>
+  <a href="/useCases.html">Use Cases...</a>
 </p>
 
 <h2>Benefits</h2>
-<div class="float_right">
-  <a href="http://www.opengl.org"><img src="images/ogl.jpg"
-                                       alt="OpenGL logo"></a>
-</div>
 <p>
-  Equalizer-based application can be used to:
+  Equalizer-based applications can be used to:
 </p>
 <ul>
   <li><b>Visualize more:</b> Scalable rendering is often used to visualize
-    larger data sets at a higher visual quality. Surprisingly, the focus is not
-    always achieving higher framerates for existing data sets.</li>
+    larger data sets at a higher visual quality. The focus is not always
+    achieving higher framerates for existing data sets, but to visualize more
+    data at a higher quality.</li>
   <li><b>Visualize anywhere:</b> The same application can be used for all kind
     of installations without any changes, which is achieved by modularizing the
     rendering from the application logics.</li>
@@ -63,32 +49,62 @@
     OpenGL-based rendering.</li>
 </ul>
 
+<h2>Compatibility</h2>
+<div class="float_right">
+  <a href="http://www.opengl.org"><img src="images/ogl.jpg"
+                                       alt="OpenGL logo"></a>
+</div>
+<p>
+  Equalizer is a cross-platform toolkit, available for Linux, Windows XP and Mac
+  OS X and supports both 32-bit and 64-bit execution.
+</p>
+<p>
+  Equalizer does not interfere with the application's OpenGL rendering
+  code. Equalizer requires at a minimum OpenGL 1.1 in order to run, but uses
+  later OpenGL features and extensions where available.
+</p>
+<p>
+  <a href="/compatibility.html">Compatibility matrix...</a>
+</p>
+
+<h2>License</h2>
+<p>
+  The Equalizer framework is licensed under the
+  <a href="http://www.gnu.org/licenses/lgpl.html">LGPL open source license</a>,
+  which allows free usage in commercial and open source projects. Any changes to
+  the framework itself have to be contributed back to open source.
+</p>
+<p>
+ Consulting, software development service and support are available
+ from <a href="http://www.eyescale.ch">Eyescale Software GmbH</a>.
+</p>
+
 <h2>Features</h2>
 <p>
-  Applications written using the <a href="api.html">Equalizer programming
+  Applications written using the <a href="/api.html">Equalizer programming
   interface</a> benefit from the following features:
 </p>
 <ul>
-  <li><a href="configuration.html">Runtime Configurability</a>: An Equalizer
+  <li><a href="/configuration.html">Runtime Configurability</a>: An Equalizer
     application can run on any configuration, from laptops to large scale
     visualization clusters, without recompilation. The runtime configuration is
     externalized from the application to a systemwide resource server, and
     choosen at runtime.</li>
-  <li><a href="scalability.html">Runtime Scalability</a>: Applications written
+  <li><a href="/scalability.html">Runtime Scalability</a>: Applications written
     using Equalizer take advantage of multiple graphics cards, processors and
     computers to scale the display size and the rendering performance
     using <em>scalable graphics</em> algorithms.</li>
   <li><b>Distributed Execution:</b> Equalizer applications can be written to
     support cluster-based execution. The task of distributing the application
     data is facilitated by support for versioned, distributed objects.</li>
-  <li><a href="documents/design/immersive.html">Support for Stereo and Immersive
-      Environments:</a> Equalizer supports both active and passive stereo
-    rendering, as well as the head tracking, which is required for immersive
-    Virtual Reality installations.</li>
+  <li><a href="/documents/design/immersive.html">Support for Stereo and
+      Immersive Environments:</a> Equalizer supports both active and passive
+    stereo rendering, as well as the head tracking, which is required for
+    immersive Virtual Reality installations.</li>
 </ul>
 <p>
   <a href="/documents/user/crComparison.html">Difference to Chromium...</a><br>
-  <a href="/features.html">Detailed feature list...</a>
+  <a href="/features.html">Feature List...</a>
 </p>
 
 <h2>Project Mission</h2>
