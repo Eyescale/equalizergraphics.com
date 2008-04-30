@@ -10,7 +10,7 @@
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
 State:
 <ul>
-  <li>Default window object manager in svn</li>
+  <li>Default window object manager in 0.5</li>
   <li>Textures, buffers and minor improvements implemented in 0.4</li>
   <li>Base class and display lists implemented in 0.3</li>
 </ul>

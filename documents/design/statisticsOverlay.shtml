@@ -1,0 +1,96 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Statistics Overlay
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Implemented in svn
+</p>
+
+<h2>Overview</h2>
+<div class="float_right">
+  <a href="/documents/design/images/statistics.png">
+    <img src="/documents/design/images/statistics-small.jpg" 
+         alt="Statistics Overlay"/></a>
+  <div class="label">Statistics Overlay</div>
+</div>
+<p>
+  Statistics are send as events to the application thread. The application
+  thread sorts the events per frame and per originator (channel, window,
+  config). At the end of each frame, the statistics for the frame are given to
+  the (app-)node.
+</p>
+<p>
+  The node keeps events for up to five frames. In a debug build, each window
+  draws all events just before swapping buffers.
+</p>
+
+<h2>Details</h2>
+
+<div class="float_left">
+  <img src="/documents/design/images/statisticsDetail.png" 
+       alt="Statistics Overlay"/>
+  <div class="label">Statistics Overlay with Explanations</div>
+</div><div class="flush_float"></div>
+<ul>
+  <li>The statistics are for a static 2D compound using two nodes.</li>
+  <li>The remote machine is a Mac Mini, the local a MacBook Pro. The draw times
+    are very unbalanced due to the speed difference of the machines, and the
+    transmit time is relatively long since 100 MBit Ethernet is used.</li>
+  <li>The X axis is the time. One pixel on the screen corresponds to one
+    millisecond. The right-most pixel is the most current time.</li>
+  <li>On the Y axis are the rendering entities: channels, windows and
+  config.</li>
+  <li>Frames overlap due to asynchronous execution, in the example above for
+    one frame.</li>
+  <li>Frames alternate in brightness to allow easier identification of tasks to
+    frames.</li>
+  <li>Frame borders are identified by horizontal lines, green is the start of a
+    frame, gray the finish.</li>
+  <li>The swap buffer task includes the time to wait for the vertical retrace
+    (vsync is on).</li>
+  <li>The waiting for images task is a subset of the assemble task.</li>
+</ul>
+
+<h2>API</h2>
+<!-- /* --><pre>
+    virtual void Channel::drawStatistics();
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<p>
+  Additional statistics file format:
+</p>
+<!-- /* --><pre>
+  global
+  {
+      EQ_WINDOW_IATTR_HINT_STATISTICS    off | fastest [on] | nicest
+  }
+  window
+  {
+      attributes
+      {
+          hint_statistics     off | fastest [on] | nicest
+      }
+  }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+<p>
+  None
+</p>
+<div class="footnote">
+<p>
+  3D model courtesy
+  of <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
+  Computer Graphics Laboratory</a>.
+</p>
+</div>
+
+#include "footer.shtml"
+<!-- $Id$ -->

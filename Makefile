@@ -105,6 +105,7 @@ FILES = \
 	documents/design/roi.html \
 	documents/design/standalone.html \
 	documents/design/statistics.html \
+	documents/design/statisticsOverlay.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.html \
 	documents/design/transparency.html \

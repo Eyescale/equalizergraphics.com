@@ -39,7 +39,7 @@
   <li><b>Visualize more:</b> Scalable rendering is often used to visualize
     larger data sets at a higher visual quality. The focus is not always
     achieving higher framerates for existing data sets, but to visualize more
-    data at a higher quality.</li>
+    data at a higher quality and increased resolution.</li>
   <li><b>Visualize anywhere:</b> The same application can be used for all kind
     of installations without any changes, which is achieved by modularizing the
     rendering from the application logics.</li>

@@ -12,7 +12,7 @@
   <ul>
     <li>Implemented in 0.3 alpha</li>
     <li>Serialization using streams implemented in 0.4</li>
-    <li>getChangeType introduced in svn</li>
+    <li>getChangeType introduced in 0.5</li>
   </ul>
 </p>
 

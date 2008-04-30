@@ -60,6 +60,10 @@
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+<ul>
+  <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a>
+    explains the statistics overlay rendered in debug builds.</li>
+</ul>
 
 <h4>Version 0.5</h4>
 <ul>
