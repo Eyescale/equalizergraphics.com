@@ -433,7 +433,7 @@
 			<integer>25</integer>
 			<key>Points</key>
 			<array>
-				<string>{656.518, 382.185}</string>
+				<string>{656.518, 382.184}</string>
 				<string>{642.278, 299.879}</string>
 			</array>
 			<key>Style</key>
@@ -603,7 +603,7 @@ incl. compression}</string>
 			<integer>22</integer>
 			<key>Points</key>
 			<array>
-				<string>{688.181, 170.447}</string>
+				<string>{688.182, 170.447}</string>
 				<string>{627.357, 236.484}</string>
 			</array>
 			<key>Style</key>
@@ -725,7 +725,7 @@ waiting for images (red)}</string>
 			<key>Points</key>
 			<array>
 				<string>{616.721, 128.059}</string>
-				<string>{618.222, 246.9}</string>
+				<string>{618.221, 246.9}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -838,7 +838,7 @@ waiting for images (red)}</string>
 			<integer>18</integer>
 			<key>Points</key>
 			<array>
-				<string>{749.934, 424.762}</string>
+				<string>{749.933, 424.763}</string>
 				<string>{661.659, 270.039}</string>
 			</array>
 			<key>Style</key>
@@ -1180,7 +1180,7 @@ incl. wait for vsync}</string>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf270
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \f0\fs24 \cf0 window (local)\
 \
@@ -1245,6 +1245,11 @@ config}</string>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>Draws</key>
@@ -1378,7 +1383,7 @@ config}</string>
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2008-04-30 18:19:25 +0200</string>
+	<string>2008-05-02 18:19:53 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>

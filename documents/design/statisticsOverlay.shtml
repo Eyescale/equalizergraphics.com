@@ -38,18 +38,18 @@ State: Implemented in svn
 </div><div class="flush_float"></div>
 <ul>
   <li>The statistics are for a static 2D compound using two nodes.</li>
-  <li>The remote machine is a Mac Mini, the local a MacBook Pro. The draw times
-    are very unbalanced due to the speed difference of the machines, and the
-    transmit time is relatively long since 100 MBit Ethernet is used.</li>
   <li>The X axis is the time. One pixel on the screen corresponds to one
     millisecond. The right-most pixel is the most current time.</li>
   <li>On the Y axis are the rendering entities: channels, windows and
-  config.</li>
+    the config.</li>
+  <li>The remote machine is a Mac Mini, the local a MacBook Pro. The draw times
+    are unbalanced due to the speed difference of the machines, and the
+    transmit time is relatively long since 100 MBit Ethernet is used.</li>
   <li>Frames overlap due to asynchronous execution, in the example above for
     one frame.</li>
   <li>Frames alternate in brightness to allow easier identification of tasks to
     frames.</li>
-  <li>Frame borders are identified by horizontal lines, green is the start of a
+  <li>Frame borders are identified by vertical lines, green is the start of a
     frame, gray the finish.</li>
   <li>The swap buffer task includes the time to wait for the vertical retrace
     (vsync is on).</li>

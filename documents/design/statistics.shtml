@@ -24,22 +24,26 @@
 
 <h2>Specification</h2>
 <p>
-  Statistics are measured per frame, in milliseconds since the frame started. A
-  new statistics clock is started with the receiption of the pipe update packet
-  by the receiver thread, so that all node clocks start at approximately the
-  same time. At this time the pipe thread may be rendering another frame, hence
-  one clock per frame is used.
+  Statistics are measured in milliseconds since the configuration was
+  initialized. On each node, the global configuration clock is reset at the same
+  time by the server during <code>Config::init</code>. Each statistic event
+  records the originator's (channel, window or config) unique identifier.
 </p>
 <p>
   Statistics are enabled per entity using an attribute hint. The hint determines
   how precise the gathered statistics are. When set to fastest, the per-frame
-  clock is sampled at the appropriate times. When set to nicest, all OpenGL
-  commands will be finished before sampling certain events, which incurs a
-  performance penalty. The default setting is fastest. The gathered events are
-  pushed to the pipe's event queue. The pipe sends all gathered
-  events to the server as part of the frame sync reply packet, clears the events
-  and recycles the clock. At the time of writing, only channel events are
-  implemented.
+  clock is sampled directly when the event occurs. When set to nicest, all
+  OpenGL commands will be finished before sampling certain events, which incurs
+  a performance penalty. The default setting is fastest in release builds, and
+  nicest in debug builds.
+</p>
+<p>
+  The events are processed by the channel's and
+  window's <code>processEvent</code>. The default implementation sends these
+  events to the config. The default implementation
+  of <code>Config::handleEvent</code> sorts the received events per frame and
+  per originator. When a frame has been finished, the events are pushed to the
+  local (app-)node for visualization.
 </p>
 
 <h2>File Format</h2>
