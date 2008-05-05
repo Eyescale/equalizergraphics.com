@@ -544,67 +544,11 @@ incl. compression}</string>
 			<key>Class</key>
 			<string>LineGraphic</string>
 			<key>ID</key>
-			<integer>23</integer>
-			<key>OrthogonalBarAutomatic</key>
-			<true/>
-			<key>OrthogonalBarPosition</key>
-			<real>-1</real>
-			<key>Points</key>
-			<array>
-				<string>{557.985, 246.9}</string>
-				<string>{677.305, 246.9}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>Color</key>
-					<dict>
-						<key>archive</key>
-						<data>
-						YnBsaXN0MDDUAQIDBAUGCQpYJHZl
-						cnNpb25UJHRvcFkkYXJjaGl2ZXJY
-						JG9iamVjdHMSAAGGoNEHCFRyb290
-						gAFfEA9OU0tleWVkQXJjaGl2ZXKl
-						CwwVGR5VJG51bGzUDQ4PEBESExRW
-						JGNsYXNzXE5TQ29sb3JTcGFjZV8Q
-						Ek5TQ3VzdG9tQ29sb3JTcGFjZVdO
-						U1doaXRlgAQQA4ACRDAuNQDSDRYX
-						GFROU0lEgAMQAtIaGxwOWCRjbGFz
-						c2VzWiRjbGFzc25hbWWiDh1YTlNP
-						YmplY3TSGhsfIKIgHVdOU0NvbG9y
-						CBEaHykyNzo/QVNZX2hvfJGZm52f
-						pKmusLK3wMvO19zfAAAAAAAAAQEA
-						AAAAAAAAIQAAAAAAAAAAAAAAAAAA
-						AOc=
-						</data>
-						<key>b</key>
-						<string>0.500023</string>
-						<key>g</key>
-						<string>0.500023</string>
-						<key>r</key>
-						<string>0.500023</string>
-					</dict>
-					<key>HeadArrow</key>
-					<string>0</string>
-					<key>LineType</key>
-					<integer>2</integer>
-					<key>TailArrow</key>
-					<string>0</string>
-					<key>Width</key>
-					<real>6</real>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>ID</key>
 			<integer>22</integer>
 			<key>Points</key>
 			<array>
-				<string>{688.182, 170.447}</string>
-				<string>{627.357, 236.484}</string>
+				<string>{687.547, 170.439}</string>
+				<string>{619.49, 240.945}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -713,19 +657,12 @@ waiting for images (red)}</string>
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
-			<key>Head</key>
-			<dict>
-				<key>ID</key>
-				<integer>23</integer>
-				<key>Position</key>
-				<real>0.50482815504074097</real>
-			</dict>
 			<key>ID</key>
-			<integer>20</integer>
+			<integer>35</integer>
 			<key>Points</key>
 			<array>
-				<string>{616.721, 128.059}</string>
-				<string>{618.221, 246.9}</string>
+				<string>{615.659, 128.058}</string>
+				<string>{609.449, 231.989}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -759,7 +696,7 @@ waiting for images (red)}</string>
 						<string>0.500023</string>
 					</dict>
 					<key>HeadArrow</key>
-					<string>0</string>
+					<string>FilledCenterBall</string>
 					<key>TailArrow</key>
 					<string>0</string>
 				</dict>
@@ -1234,7 +1171,7 @@ config}</string>
 			<key>ID</key>
 			<integer>2</integer>
 			<key>ImageID</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>ManualSizeImage</key>
 			<string>YES</string>
 			<key>Offset</key>
@@ -1276,14 +1213,14 @@ config}</string>
 	<key>HPages</key>
 	<integer>1</integer>
 	<key>ImageCounter</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>ImageLinkBack</key>
 	<array>
 		<dict/>
 	</array>
 	<key>ImageList</key>
 	<array>
-		<string>image1.png</string>
+		<string>image2.png</string>
 	</array>
 	<key>IsPalette</key>
 	<string>NO</string>
@@ -1383,7 +1320,7 @@ config}</string>
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2008-05-02 18:19:53 +0200</string>
+	<string>2008-05-05 13:57:39 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
@@ -1458,11 +1395,11 @@ config}</string>
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{82, 169}, {1376, 948}}</string>
+		<string>{{44, 0}, {1137, 878}}</string>
 		<key>VisibleRegion</key>
-		<string>{{-53, 0}, {1016.75, 635}}</string>
+		<string>{{-2, 0}, {913.423, 635}}</string>
 		<key>Zoom</key>
-		<real>1.4873141050338745</real>
+		<real>1.364829421043396</real>
 	</dict>
 </dict>
 </plist>
