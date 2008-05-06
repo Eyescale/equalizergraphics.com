@@ -1,30 +1,16 @@
 #define S_SUPPORT
+#define S_SUPPORT_MAIN
+
 #define PAGE Support Information
 #define KEYWORDS "Resume, Consulting"
 
 #include "header.shtml"
 
-<h2>Bug Reports and Feature Requests</h2>
-<div class="float_right">
-  <a href="http://sourceforge.net">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
-         width="125" height="37" border="0" alt="SourceForge.net Logo" />
-  </a>
-</div>
-<p>
-  Please use the following links to sourceforge.net to submit bugs and request
-  new features:
-</p>
-<ul>
-  <li><a href="http://sourceforge.net/tracker/?atid=856209&group_id=170962&func=browse">Bug Reports</a></li>
-  <li><a href="http://sourceforge.net/tracker/?atid=856212&group_id=170962&func=browse">Feature Requests</a></li>
-</ul>
-
-<h2>Commercial Support</h2>
 <div class="float_right">
   <a href="http://www.eyescale.ch">
     <img src="images/eyescale.png" alt="Eyescale Software"></a>
 </div>
+<h2>Commercial Support</h2>
 <p>
   Commercial support, custom software development and porting services are
   available from
@@ -32,25 +18,46 @@
   Please contact
   <a href="mailto:info@eyescale.ch?subject=Equalizer%20support">info@eyescale.ch</a>
   for further information.
-</p><div class="flush_float"></div>
+</p>
 
-<h2>Research Collaborations</h2>
+<h2>Open Source Support</h2>
+<h3>Bug Reports and Feature Requests</h3>
+<p>
+  Please use the following links to sourceforge.net to submit bugs and request
+  new features:
+</p>
+<div class="float_right">
+  <a href="http://sourceforge.net">
+    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
+         width="125" height="37" border="0" alt="SourceForge.net Logo" />
+  </a>
+</div>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/?atid=856209&group_id=170962&func=browse">Bug Reports</a></li>
+  <li><a href="http://sourceforge.net/tracker/?atid=856212&group_id=170962&func=browse">Feature Requests</a></li>
+</ul>
+
+<h3>Developer Discussion</h3>
+<p>
+  Please use the <a href="mailto:eq-dev@equalizergraphics.com">eq-dev</a>
+  mailing list (<a href="/cgi-bin/mailman/listinfo/eq-dev">subscribe first</a>)
+  or the <a href="/forum.html">online forum</a> to ask your questions.
+</p>
+
+</p>
+
 <div class="float_right"><a href="http://www.cs.uzh.ch/vmml/">
   <img src="images/VMML_logo_200.png" 
        alt="Visualization and Multimedia Lab, University of Z&uuml;rich"></a>
 </div>
+<h2>Research Collaborations</h2>
 <p>
   For research collaborations, please contact
   the <a href="http://www.cs.uzh.ch/vmml/">Visualization and MultiMedia Lab</a>
   at the University of Z&uuml;rich.
-</p><div class="flush_float"></div>
+</p>
 
 <h2>Other Support</h2>
-<p>
-  For non-commercial support please use
-  the <a href="mailto:eq-dev@equalizergraphics.com">eq-dev</a> mailing list
-  (<a href="/cgi-bin/mailman/listinfo/eq-dev">subscribe here first</a>).
-</p>
 <p>
   For all other inquiries, please contact (in german, english or french):
 </p>

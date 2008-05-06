@@ -1,4 +1,5 @@
-#define S_LISTS
+#define S_SUPPORT
+#define S_SUPPORT_LISTS
 #define PAGE Mailing Lists
 
 #include "header.shtml"

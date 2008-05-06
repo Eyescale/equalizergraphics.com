@@ -54,7 +54,7 @@
         <img src="/images/Equalizer.png" alt="Equalizer logo">
       </h1>
     </div>
-#if !defined(S_SEARCH) && !defined(S_SURVEY) && !defined(S_FORUM)
+#if !defined(S_SEARCH) && !defined(S_SURVEY) && !defined(S_SUPPORT_FORUM)
     <div class="poll">
       <div class="subnavigation"><center>
         <a href="http://www.eyescale.ch/jobs.pdf">We are hiring!</a>

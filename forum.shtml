@@ -1,4 +1,5 @@
-#define S_FORUM
+#define S_SUPPORT
+#define S_SUPPORT_FORUM
 #define PAGE Developer Forum
 
 #include "header.shtml"

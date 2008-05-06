@@ -132,6 +132,29 @@
     </div>
 #endif // S_DOCUMENTATION
 
+  <p><a href="/support.html"
+#ifdef S_SUPPORT_MAIN
+        class="used"
+#endif
+        >Support</a></p>
+
+  <!-- Support sub-navigation-->
+#ifdef S_SUPPORT
+  <div class="subnavigation">
+
+  <p><a href="/lists.html"
+#ifdef S_SUPPORT_LISTS
+        class="used"
+#endif
+        >Mailing Lists</a></p>
+
+  <p><a href="/forum.html"
+#ifdef S_SUPPORT_FORUM
+        class="used"
+#endif
+        >Forum</a></p>
+    </div>
+#endif // S_SUPPORT
 
   <p><a href="/screenshots.html"
 #ifdef S_SCREENSHOTS
@@ -160,24 +183,6 @@
 #endif
         >Events</a></p>
 
-
-  <p><a href="/lists.html"
-#ifdef S_LISTS
-        class="used"
-#endif
-        >Mailing Lists</a></p>
-
-  <p><a href="/forum.html"
-#ifdef S_FORUM
-        class="used"
-#endif
-        >Forum</a></p>
-
-  <p><a href="/support.html"
-#ifdef S_SUPPORT
-        class="used"
-#endif
-        >Support</a></p>
 
   <p><a href="/contributions.html"
 #ifdef S_CONTRIBUTIONS
