@@ -63,7 +63,7 @@
   tracking to the user interface.
 </p>
 <p>
-  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/03_Flow">flow-vis</a>
+  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/04_Flow">flow-vis</a>
   module visualizes a typhoon simulated by
   the <a href="http://www.dkrz.de/dkrz/intro_s">DKRZ Hamburg</a>. Direct
   visualization techniques can help climate researchers to explore flow
@@ -77,7 +77,7 @@
   <div class="label">Surface Evolution</div>
 </div>
 <p>
-  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/05_PLS">surface
+  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/02_PLS">surface
     evolution</a> module features arbitrary deformations preserving volume and
     allowing topological changes. This can be used for interactive object
     modelling in our VR application.
