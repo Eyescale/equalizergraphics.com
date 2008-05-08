@@ -89,6 +89,8 @@
   <li><a href="/documents/design/transparency.html">Transparency and sort-last
       (DB) compounds</a> explores the options for better transparent geometry
     support.</li>
+  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+    allows an easier porting path for existing, non-threadsafe software.</li>
 </ul>
 
 <h4>Version 0.3</h4>
