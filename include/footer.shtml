@@ -195,12 +195,12 @@
   <!-- social bookmark sites -->
   <div class="social">
     <p>Add this page to:</p>
-    <p><img src="http://images.del.icio.us/static/img/delicious.small.gif"><a href=QUOTE( http://del.icio.us/post?url=FULLURL&title=TITLESTRING ) title="Add to del.icio.us">Delicious</a></p>
-    <p><img src="http://digg.com/img/badges/10x10-digg-thumb.gif" alt="Digg It!" /><a href=QUOTE( http://digg.com/remote-submit?phase=2&url=FULLURL&title=TITLESTRING )  title="Digg It!">Digg</a></p>
+    <p><img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="del.icio.us"><a href=QUOTE( http://del.icio.us/post?url=FULLURL&amp;title=TITLESTRING ) title="Add to del.icio.us">Delicious</a></p>
+    <p><img src="http://digg.com/img/badges/10x10-digg-thumb.gif" alt="Digg It!"><a href=QUOTE( http://digg.com/remote-submit?phase=2&amp;url=FULLURL&amp;title=TITLESTRING )  title="Digg It!">Digg</a></p>
     <!--  <a href="http://www.ohloh.net/projects/7807">ohloh</a> -->
-    <p><img src="http://sp.reddit.com/reddithead4.gif"><a href=QUOTE( http://reddit.com/submit?url=FULLURL&title=TITLESTRING ) title="Add to reddit">reddit</a></p>
-    <p><img src="http://www.stumbleupon.com/images/stumbleit.gif"><a href=QUOTE( http://www.stumbleupon.com/submit?url=FULLURL&title=TITLESTRING ) title="Add to StumbleUpon">StumbleUpon</a></p>
-    <p><img src="http://static.ak.facebook.com/images/share/facebook_share_icon.gif"><a href=QUOTE( http://www.facebook.com/sharer.php?u=FULLURL ) title="Add to Facebook">Facebook</a></p>
+    <p><img src="http://sp.reddit.com/reddithead4.gif" alt="reddit"><a href=QUOTE( http://reddit.com/submit?url=FULLURL&amp;title=TITLESTRING ) title="Add to reddit">reddit</a></p>
+    <p><img src="http://www.stumbleupon.com/images/stumbleit.gif" alt="stumbleupon"><a href=QUOTE( http://www.stumbleupon.com/submit?url=FULLURL&amp;title=TITLESTRING ) title="Add to StumbleUpon">StumbleUpon</a></p>
+    <p><img src="http://static.ak.facebook.com/images/share/facebook_share_icon.gif" alt="facebook"><a href=QUOTE( http://www.facebook.com/sharer.php?u=FULLURL ) title="Add to Facebook">Facebook</a></p>
   </div>
 </div>
 

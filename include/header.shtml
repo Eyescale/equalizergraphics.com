@@ -63,15 +63,15 @@
       <form action="http://www.equalizergraphics.com/search.html"
             id="searchbox_003884678311182543665:v1o4knw6fuq">
         <input type="hidden" name="cx" 
-               value="003884678311182543665:v1o4knw6fuq" />
-        <input type="hidden" name="cof" value="FORID:11" />
-        <input type="text" name="q" size="20" />
-        <input type="submit" name="sa" value="Search" />
+               value="003884678311182543665:v1o4knw6fuq" >
+        <input type="hidden" name="cof" value="FORID:11" >
+        <input type="text" name="q" size="20" >
+        <input type="submit" name="sa" value="Search" >
       </form>
       <script type="text/javascript"
-              src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&lang=en"></script>
+              src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
       <!-- Poll  -->
-      <iframe src="http://polls.blogflux.com/poll.php?poll=22540&width=200&fontsize=11&height=250&fontface=Verdana&padding=2&textcolor=%23000000&bgcolor=%23bbbbbb&doublespace=0&borderwidth=1&linkmap=1&bordercolor=%23aaaaaa" width="200" height="272" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-22540.html">Take the poll</a><br /><br /><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
+      <iframe src="http://polls.blogflux.com/poll.php?poll=22540&amp;width=200&amp;fontsize=11&amp;height=250&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="272" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-22540.html">Take the poll</a><br><br><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
     </div>
 #endif
 
