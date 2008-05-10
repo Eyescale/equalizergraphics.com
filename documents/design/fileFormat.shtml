@@ -13,13 +13,14 @@ State: Implemented
 
 <p>
   The configuration file format for the Equalizer server is described below. The
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/">examples directory</a> does
-  contain some example configuration
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/configs/">examples
+  directory</a> does contain some example configuration
   files. The <a href="/documents/user/configTool.html">configuration tool</a>
   automatically creates some standard configuration files.
 </p>
 <p>
   The file format is not described in detail here. Please refer to
+  the <a href="/survey.html">Programming Guide</a> in general, and to
   the <a href="/documents/design/fileFormat.html#changes">changes</a> section
   below for individual feature specifications. The actual implementation may
   differ slightly from this specification, but we try to keep it up to date. The
@@ -88,7 +89,7 @@ server
 
     config // 1-n times, currently only the first one is used by the server
     {
-        latency int    // # of frames nodes may fall behind application
+        latency int    // # of frames pipes may fall behind application
         attributes
         {
              eye_base float // distance between left and right eye
@@ -118,7 +119,7 @@ server
                     hint_thread   OFF | ON   // default ON
                 }
 
-                window
+                window // 1-n times
                 {
                     name     string
                     viewport [ viewport ] // wrt pipe, default full screen

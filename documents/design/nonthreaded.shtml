@@ -33,16 +33,16 @@
   as this does not create any dependency for other channels.
 </p><p>
   Nonthreaded execution on render client processes happens in the main thread,
-  similarly to the execution on the application process.
+  similar to the execution on the application process.
 </p>
 
 <h2>Implementation</h2>
 <p>
   The server will send the rendering commands for nonthreaded pipes exactly as
   it does send them to threaded pipes. The receiver thread will queue them on
-  the pipe's command queue, exactly the same way as for threaded pipe commands.
-  The queued commands will be checked and executed from the config frame
-  functions, which are called by the application thread.
+  the node's command queue, exactly in the same way as for threaded pipe
+  commands.  The queued commands will be checked and executed from the config
+  frame functions, which are called by the application thread.
 </p>
 <p>
   <code>Config::finishFrame</code> will execute all rendering tasks until the
@@ -62,7 +62,7 @@
   The tasks are executed in the same order as on threaded pipes to keep the
   order of execution consistent. This means that input frames on non-threaded
   channels block the application thread, which typically inhibits a latency
-  greater then one, since no new startFrame can be issued.
+  greater than one, since no new startFrame can be issued.
 </p>
 <p>
   Non-threaded execution is less important than in Equalizer v0.3, since a new
