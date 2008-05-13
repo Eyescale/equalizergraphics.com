@@ -194,13 +194,17 @@
 
   <!-- social bookmark sites -->
   <div class="social">
-    <p>Add this page to:</p>
-    <p><img src="http://images.del.icio.us/static/img/delicious.small.gif" alt="del.icio.us"><a href=QUOTE( http://del.icio.us/post?url=FULLURL&amp;title=TITLESTRING ) title="Add to del.icio.us">Delicious</a></p>
-    <p><img src="http://digg.com/img/badges/10x10-digg-thumb.gif" alt="Digg It!"><a href=QUOTE( http://digg.com/remote-submit?phase=2&amp;url=FULLURL&amp;title=TITLESTRING )  title="Digg It!">Digg</a></p>
-    <!--  <a href="http://www.ohloh.net/projects/7807">ohloh</a> -->
-    <p><img src="http://sp.reddit.com/reddithead4.gif" alt="reddit"><a href=QUOTE( http://reddit.com/submit?url=FULLURL&amp;title=TITLESTRING ) title="Add to reddit">reddit</a></p>
-    <p><img src="http://www.stumbleupon.com/images/stumbleit.gif" alt="stumbleupon"><a href=QUOTE( http://www.stumbleupon.com/submit?url=FULLURL&amp;title=TITLESTRING ) title="Add to StumbleUpon">StumbleUpon</a></p>
-    <p><img src="http://static.ak.facebook.com/images/share/facebook_share_icon.gif" alt="facebook"><a href=QUOTE( http://www.facebook.com/sharer.php?u=FULLURL ) title="Add to Facebook">Facebook</a></p>
+    <script type="text/javascript">addthis_pub  = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php" 
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" 
+       onmouseout="addthis_close()" 
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
   </div>
 </div>
 
