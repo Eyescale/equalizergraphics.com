@@ -21,7 +21,7 @@ $rss->channel(
     link         => "http://www.equalizergraphics.com",
     description  => "Parallel Rendering Software for OpenGL",
     dc => {
-        date       => `date +%Y-%m-%dT%H:%M`,
+        date       => `date +%Y-%m-%dT%H:%M+01:00`,
         subject    => "Parallel Rendering",
         creator    => 'eile@equalizergraphics.com',
         publisher  => 'webmaster@equalizergraphics',
@@ -31,7 +31,7 @@ $rss->channel(
     syn => {
         updatePeriod     => "daily",
         updateFrequency  => "1",
-        updateBase       => "1901-01-01T00:00+00:00",
+        updateBase       => "2000-01-01T10:00+00:00",
     }
 );
 
@@ -119,7 +119,7 @@ foreach ( @changes )
             link        => "http://www.equalizergraphics.com/changes.html#$rev",
             description => $description,
             dc          => {
-                date        => $date . "T" . $time,
+                date        => $date . "T" . $time . "+01:00",
             }
             );
 
