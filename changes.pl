@@ -97,14 +97,14 @@ foreach ( @changes )
             if( $image ne "" )
             {
                 $description .= "    <div class=\"float_right\">\n";
-                $description .= "        <img src=\"$image\" width=\"200\">\n";
+                $description .= "        <img src=\"http://www.equalizergraphics.com$image\" width=\"200\">\n";
                 $description .= "    </div>\n";
             }
 
             $description .= "    <ul><font size=\"-1\">\n";
             foreach my $file ( @files )
             {
-                $description .="        <li><a href=\"$file\">$file</a></li>\n";
+                $description .="        <li><a href=\"http://www.equalizergraphics.com$file\">$file</a></li>\n";
             }
             $description .= "    </font></ul>\n";
         }
