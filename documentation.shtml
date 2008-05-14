@@ -65,11 +65,10 @@
 <ul>
   <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report 2007/06.</li>
-  <li><a href="/restricted/directSend.pdf">Direct Send Compositing for
+  <li><a href="/documents/directSend.pdf">Direct Send Compositing for
       Parallel Sort-Last Rendering</a>, 
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
-      Graphics and Visualization 2007</a> (restricted access due to copyright
-      limitations)</li>
+      Graphics and Visualization 2007</a>.</li>
   <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
       OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
       implemented for

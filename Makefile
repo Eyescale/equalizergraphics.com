@@ -40,6 +40,7 @@ FILES = \
 	applications/thirdParty.html \
 	documentation/parallelOpenGLFAQ.html \
 	documents/CV_Stefan_Eilemann.pdf \
+	documents/directSend.pdf \
 	downloads/DBCAAF49A0C0/ProgrammingGuide.pdf \
 	documents/Developer/eqPly.pdf \
 	documents/Developer/eqPlyPresentation.pdf \
