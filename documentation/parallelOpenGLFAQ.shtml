@@ -22,6 +22,8 @@
     OpenGL contexts with one Graphics Card</a><br>
   <a href="/documentation/parallelOpenGLFAQ.html#multigpu">Using Multiple
     Graphics Cards with OpenGL</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#links">Further
+    Information</a><br>
 </p>
 
 <a name="one"></a>
@@ -196,5 +198,10 @@
     mechanism if this is an issue.</li>
 </ul>
 
+<a name="links"></a>
+<h2>Appendix: Further Information</h2>
+<ul>
+  <li><a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_threading/chapter_12_section_1.html">OpenGL Programming Guide for Mac OS X, Multithreading and OpenGL</a></li>
+</ul>
 #include "footer.shtml"
 <!-- $Id$ -->
