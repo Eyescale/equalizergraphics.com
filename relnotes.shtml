@@ -5,6 +5,7 @@
 
 #include "header.shtml"
 
+<h2>Major Releases</h2>
 <ul>
   <li><a href="documents/RelNotes/RelNotes_0.5.0.html"><b>Version 0.5</b></a>,
     17. April 2008</li>
@@ -19,6 +20,26 @@
   <li><a href="documents/RelNotes/RelNotes_0.1.0.html"><b>Version 0.1</b></a>, 
     31. October 2006</li>
 </ul>
+
+<h2>Developer Releases</h2>
+<p>
+  Developer releases are regular, minor versions in-between major
+  releases. Typically we tag a developer release after a feature has been
+  implemented and tested. This ensures a reasonable stability, while providing
+  early access to new features.
+</p>
+<p>
+  We do not provide packages of developer releases. Developer releases are
+  snapshots of the source code, not the full trunk as for major releases. They
+  can be checked out from the
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/">subversion
+    repository</a> using:<br>
+    <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
+</p>
+<p>
+  <li><a href="documents/RelNotes/RelNotes_0.5.1.html"><b>Version 0.5.1</b></a>,
+    16. May 2008</li>
+</p>
 
 #include "footer.shtml"
 <!-- $Id$ -->
