@@ -75,4 +75,210 @@
     </div>
 #endif
 
+    <!-- Footer line -->
+    <div class="footer">
+      <a href=QUOTE( PAGEURL#top ) class="rule">Back to top</a>
+      <a href=QUOTE( SITE_EMAIL ) class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+#ifndef S_CHANGES
+      <a href=CHANGEURL class="rule">Changed UPDATE</a>
+      <a href="/changes.html">What's new?</a>
+#endif
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <p><a href="/index.html"
+            #ifdef S_HOME_MAIN
+            class="used"
+#endif
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+#ifdef S_HOME
+      <div class="subnavigation">
+
+        <p><a href="/useCases.html"
+#ifdef S_HOME_USECASES
+              class="used"
+#endif
+              >Use Cases</a></p>
+
+        <p><a href="/configuration.html"
+#ifdef S_HOME_CONFIG
+              class="used"
+#endif
+              >Runtime Configuration</a></p>
+
+        <p><a href="/scalability.html"
+#ifdef S_HOME_SCALABILITY
+              class="used"
+#endif
+              >Runtime Scalability</a></p>
+
+        <p><a href="/api.html"
+#ifdef S_HOME_API
+              class="used"
+#endif
+              >Programming Interface</a></p>
+      </div>
+#endif  // S_HOME
+
+
+      <p><a href="/applications.html"
+#ifdef S_APPLICATIONS_MAIN
+            class="used"
+#endif
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+#ifdef S_APPLICATIONS
+      <div class="subnavigation">
+
+        <p><a href="/applications/eqHello.html"
+#ifdef S_APPLICATIONS_EQHELLO
+              class="used"
+#endif
+              >eqHello</a></p>
+
+        <p><a href="/applications/eqPly.html"
+#ifdef S_APPLICATIONS_EQPLY
+              class="used"
+#endif
+              >eqPly</a></p>
+
+        <p><a href="/applications/eVolve.html"
+#ifdef S_APPLICATIONS_EVOLVE
+              class="used"
+#endif
+              >eVolve</a></p>
+
+        <p><a href="/applications/thirdParty.html"
+#ifdef S_APPLICATIONS_THIRDPARTY
+              class="used"
+#endif
+              >Third Party</a></p>
+
+      </div>
+#endif // S_APPLICATIONS
+
+
+      <p><a href="/documentation.html"
+#ifdef S_DOCUMENTATION_MAIN
+            class="used"
+#endif
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+#ifdef S_DOCUMENTATION
+      <div class="subnavigation">
+
+        <p><a href="/doc_developer.html"
+#ifdef S_DOCUMENTATION_DEVELOPER
+              class="used"
+#endif
+              >Developer</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+#ifdef S_DOCUMENTATION_FAQ
+              class="used"
+#endif
+              >Parallel GL FAQ</a></p>
+
+        <p><a href="/features.html"
+#ifdef S_DOCUMENTATION_FEATURES
+              class="used"
+#endif
+              >Feature List</a></p>
+
+        <p><a href="/compatibility.html"
+#ifdef S_DOCUMENTATION_COMPATIBILITY
+              class="used"
+#endif
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/relnotes.html"
+#ifdef S_DOCUMENTATION_RELNOTES
+              class="used"
+#endif
+              >Release Notes</a></p>
+      </div>
+#endif // S_DOCUMENTATION
+
+      <p><a href="/support.html"
+#ifdef S_SUPPORT_MAIN
+            class="used"
+#endif
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+#ifdef S_SUPPORT
+      <div class="subnavigation">
+
+        <p><a href="/lists.html"
+#ifdef S_SUPPORT_LISTS
+              class="used"
+#endif
+              >Mailing Lists</a></p>
+
+        <p><a href="/forum.html"
+#ifdef S_SUPPORT_FORUM
+              class="used"
+#endif
+              >Forum</a></p>
+      </div>
+#endif // S_SUPPORT
+
+      <p><a href="/screenshots.html"
+#ifdef S_SCREENSHOTS
+            class="used"
+#endif
+            >Screenshots</a></p>
+
+
+      <p><a href="/downloads.html"
+#ifdef S_DOWNLOADS
+            class="used"
+#endif
+            >Downloads</a></p>
+
+
+      <p><a href="/news.html"
+#ifdef S_NEWS
+            class="used"
+#endif
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+#ifdef S_EVENTS
+            class="used"
+#endif
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+#ifdef S_CONTRIBUTIONS
+            class="used"
+#endif
+            >Contributions</a></p>
+
+      <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
+
+      <!-- social bookmark sites -->
+      <div class="social">
+        <script type="text/javascript">addthis_pub  = 'eile';</script>
+        <a href="http://www.addthis.com/bookmark.php" 
+           onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" 
+           onmouseout="addthis_close()" 
+           onclick="return addthis_sendto()">
+          <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+               border="0" alt="" />
+        </a>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/152/addthis_widget.js">
+        </script>
+      </div>
+    </div>
+
     <div class="content">
