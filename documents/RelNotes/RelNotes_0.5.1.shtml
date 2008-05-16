@@ -7,7 +7,8 @@
 
 <p>
   Welcome to Equalizer 0.5.1, a framework for the development and deployment of
-  parallel, scalable OpenGL applications. Equalizer 0.5.1 ...
+  parallel, scalable OpenGL applications. Equalizer 0.5.1 adds a statistics
+  overlay and support for the Paracomp compositing library.
 </p>
 <p>
   Equalizer 0.5.1 is a developer release, representing a stable snapshot of the
