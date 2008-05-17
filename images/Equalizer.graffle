@@ -180,7 +180,7 @@
 					<key>Points</key>
 					<array>
 						<string>{215.331, 213.623}</string>
-						<string>{214.964, 216.518}</string>
+						<string>{214.965, 216.518}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -351,7 +351,7 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{202.124, 213.623}</string>
+						<string>{202.123, 213.623}</string>
 						<string>{201.757, 216.518}</string>
 					</array>
 					<key>Style</key>
@@ -523,7 +523,7 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{188.916, 213.623}</string>
+						<string>{188.915, 213.623}</string>
 						<string>{188.549, 216.519}</string>
 					</array>
 					<key>Style</key>
@@ -1057,6 +1057,41 @@
 				</dict>
 			</dict>
 		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{0.000457764, 0}, {340.157, 141.732}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>39</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.933333</string>
+						<key>g</key>
+						<string>0.933333</string>
+						<key>r</key>
+						<string>0.933333</string>
+					</dict>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>GridInfo</key>
 	<dict>
@@ -1175,7 +1210,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2008-03-01 11:46:33 +0100</string>
+	<string>2008-05-17 12:55:25 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
