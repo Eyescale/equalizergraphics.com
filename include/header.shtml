@@ -1,5 +1,6 @@
 #define QUOTE( string ) STRINGIFY( string )
 #define STRINGIFY( foo ) #foo
+#define SITE_EMAIL mailto:info@equalizergraphics.com?subject=Question regarding TITLESTRING
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
