@@ -51,6 +51,9 @@
     Programming Guide and stand-alone HowTos for whatever you feel needs
     documentation. You can also start adding articles to
     the <a href="http://equalizer.wiki.sourceforge.net/">Wiki</a>.</li>
+  <li><b>Better Mac OS X Integration:</b> An XCode project, creation of proper
+    frameworks and application packages will help Apple developers. We are also
+    looking for a Cocoa port to support 64 bit natively, not just via X11.</li>
   <li><b>Support and Promotion:</b> Subscribe yourself to the 
     <a href="http://www.equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">mailing
       list</a> and support people where you can. Link to this website and let
