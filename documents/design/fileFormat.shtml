@@ -164,18 +164,23 @@ server
             attributes
             {
                 stereo_mode                  QUAD | ANAGLYPH    // default QUAD
-                // enable visible color components
                 stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default red
                 stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
                 update_FOV                   HORIZONTAL [ON] | VERTICAL | OFF
-                assemble                     GPU | CPU          // default GPU
             }
 
-            wall                             // frustum description
+            wall       // frustum description
             {
                 bottom_left  [ float float float ]
                 bottom_right [ float float float ]
                 top_left     [ float float float ]
+            }
+            projection // alternate frustum description, last one wins
+            {
+                origin       [ float float float ]
+                distance     float
+                fov          [ float float ]
+                hpr          [ float float float ]
             }
             
             child-compounds
@@ -186,7 +191,8 @@ server
             }
             outputframe
             {
-                name string
+                name   string
+                buffer [ COLOR DEPTH ]
             }
             inputframe
             {
