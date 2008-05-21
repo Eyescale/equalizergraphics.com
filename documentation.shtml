@@ -48,6 +48,9 @@
 
 <h2>White Papers</h2>
 <ul>
+  <li><a href="/documents/WhitePapers/OpenMP_ICC.pdf">Performance of ICC, GCC
+      and OpenMP</a> benchmarks OpenMP and different compilers on Mac OS X to
+    optimize scalable rendering.</li>
   <li><a href="/documents/WhitePapers/MultiGPU.pdf">OpenGL Scalability for
       Multi-GPU Systems</a> shows one use of Equalizer on workstations with
       multiple graphics cards.</li>
