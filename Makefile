@@ -75,6 +75,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.5.0.html \
 	documents/RelNotes/RelNotes_0.5.1.html \
 	documents/WhitePapers/MultiGPU.pdf \
+	documents/WhitePapers/OpenMP_ICC.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/design/anaglyph.html \
