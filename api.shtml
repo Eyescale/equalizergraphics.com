@@ -10,9 +10,10 @@
 <p>
   The Equalizer programming interface and execution model provides,
   over-simplified, a distributed, scalable, multipipe, multithreaded GLUT
-  implementation. The <a href="documents/Howtos/glutToEqualizer.html">Equalizer
+  implementation. The <a href="/documents/Howtos/glutToEqualizer.html">Equalizer
     for GLUT Developers Howto</a> helps to find some pointers for GLUT
-  programmers.
+  programmers. The <a href="/documents/Developer/doxies/index.html">doxygen
+    documentation</a> is an incomplete API reference.
 </p>
 <p>
   Application developers use the Equalizer client library to write parallel,
@@ -40,7 +41,7 @@
   and handled by the Equalizer framework.
 </p>
 
-<div class="float_right"><a href="images/executionFlow.png">
+<div class="float_right"><a href="/images/executionFlow.png">
     <img src="images/executionFlow-small.jpg" 
          alt="Execution flow of a singlepipe and a multipipe application">
 </a></div>
@@ -63,24 +64,24 @@
 </ul>
 <p>
   The application subclasses these entities, and
-  overrides <a href="documents/design/taskMethods.html">task methods</a> to
+  overrides <a href="/documents/design/taskMethods.html">task methods</a> to
   provide the application's rendering code. Each method corresponds to a task,
   and for all of them Equalizer provides a default method which implements the
   typical use case. This allows a quick start for the developer, which can
   replace the defaults gradually with his own
-  code. The <a href="documents/design/taskMethods.html">full list of task
-  methods</a> is part of the <a href="doc_developer.html">developer
+  code. The <a href="/documents/design/taskMethods.html">full list of task
+  methods</a> is part of the <a href="/doc_developer.html">developer
   documentation</a>.  Some of the most important methods are:
   <ul>
-    <li><a href="documents/design/taskMethods.html#channeldraw">
+    <li><a href="/documents/design/taskMethods.html#channeldraw">
         <b>Channel::frameDraw</b></a> - render using the provided frustum,
       viewport and range</li>
-    <li><a href="documents/design/taskMethods.html#windowinit">
+    <li><a href="/documents/design/taskMethods.html#windowinit">
         <b>Window::configInit</b></a> - initialize OpenGL drawable and
       state</li>
-    <li><a href="documents/design/taskMethods.html#pipestartframe">
+    <li><a href="/documents/design/taskMethods.html#pipestartframe">
         <b>Pipe::frameStart</b></a> - update frame-specific data</li>
-    <li><a href="documents/design/taskMethods.html#nodeinit">
+    <li><a href="/documents/design/taskMethods.html#nodeinit">
         <b>Node::configInit</b></a> - initialize per node application data</li>
   </ul>
 </p>
@@ -92,7 +93,7 @@ visualization software, e.g. the frame-driven rendering, are exploited for
 better performance and simpler programming interface.
 </p><p>
 API documentation for specific features, and other technical information is
-available under <a href="doc_developer.html">developer documentation</a>.
+available under <a href="/doc_developer.html">developer documentation</a>.
 </p>
 
 #include "footer.shtml"
