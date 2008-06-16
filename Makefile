@@ -74,6 +74,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.4.1.html \
 	documents/RelNotes/RelNotes_0.5.0.html \
 	documents/RelNotes/RelNotes_0.5.1.html \
+	documents/RelNotes/RelNotes_0.5.2.html \
 	documents/WhitePapers/MultiGPU.pdf \
 	documents/WhitePapers/OpenMP_ICC.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
