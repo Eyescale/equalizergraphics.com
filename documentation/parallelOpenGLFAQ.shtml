@@ -32,8 +32,11 @@
   <li><b>Q: </b>Why does my OpenGL application crash/not work when I am
     rendering from another thread?</li>
   <li><b>A: </b>The OpenGL context is thread-specific. You have to make it
-    current in the thread using glXMakeCurrent, wglMakeCurrent or
-    aglSetCurrentContext, depending on your operating system.</li>
+    current in the thread using
+    <a href="http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/glx/xmakecurrent.html">glXMakeCurrent</a>,
+    <a href="http://msdn.microsoft.com/en-us/library/ms537558(VS.85).aspx">wglMakeCurrent</a> or
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/AGL_OpenGL/Reference/reference.html#//apple_ref/c/func/aglSetCurrentContext">aglSetCurrentContext</a>,
+ depending on your operating system.</li>
 </ul><ul>
   <li><b>Q: </b>Why does it not work if I make my context current in another
     thread?</li>
@@ -50,9 +53,10 @@
   <li><b>Q: </b>Why does my X11 application still crash, even though I am
     handling the context correctly?</li>
   <li><b>A: </b>X11 is also not thread safe by default. You either have to call
-    XInitThreads during initialization, or to use one Display connection per
-    thread. In the second case you can't use the glXContext from one Display
-    connection with another connection.
+    <a href="http://www.x.org/archive/X11R6.8.2/doc/XInitThreads.3.html">XInitThreads</a>
+    during initialization, or to use one Display connection per thread. In the
+    second case you can't use the glXContext from one Display connection with
+    another connection.
 </ul>
 
 <a name="multicore"></a>
@@ -108,9 +112,11 @@
   <li><b>Q: </b>How can I minimize the memory used by multiple OpenGL
     contexts?</li>
   <li><b>A: </b>Share the context by using the appropriate option to
-    glXCreateContext, aglCreateContext or wglShareLists. Create your OpenGL
-    objects (textures, VBO's, etc.) in one context and then use them in all the
-    other contexts.</li>
+    <a href="http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/glx/xcreatecontext.html">glXCreateContext</a>,
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/AGL_OpenGL/Reference/reference.html#//apple_ref/c/func/aglCreateContext">aglCreateContext</a> or
+    <a href="http://msdn.microsoft.com/en-us/library/ms537565(VS.85).aspx">wglShareLists</a>.  
+    Create your OpenGL objects (textures, VBO's, etc.) in one context and then
+    use them in all the other contexts.</li>
 </ul>
 
 <a name="multigpu"></a>
@@ -124,7 +130,9 @@
       cards, the window will only display OpenGL content on one card.</b></li>
 </ul><ul>
   <li><b>Q: </b>How to I address a specific graphics card on Linux (X11)?</li>
-  <li><b>A: </b>The graphics card is selected using XOpenDisplay. Typically one
+  <li><b>A: </b>The graphics card is selected using 
+    <a href="http://www.x.org/archive/X11R6.8.2/doc/XOpenDisplay.3.html">XOpenDisplay</a>.
+      Typically one
     X server is used for all cards, and the card is addressed using the screen
     number, i.e. the number after the dot in the display name
     (":0.[screen]"). Sometimes one X server is used for each card, in which case
@@ -139,9 +147,10 @@
 </ul><ul>
   <li><b>Q: </b>How to I address a specific graphics card on Windows
     2000/XP?</li>
-  <li><b>A: </b>The WGL_NV_gpu_affinity extension, available on nVidia Quadro
-    cards, can be used to restrict the OpenGL calls to certain cards for optimal
-    performance.</li>
+  <li><b>A: </b>The 
+    <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
+    extension, available on nVidia Quadro cards, can be used to restrict the
+    OpenGL calls to certain cards for optimal performance.</li>
 </ul><ul>
   <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
     Mac OS X?</li>
@@ -152,9 +161,11 @@
   <li><b>Q: </b>How to I address a specific graphics card on Mac OS X
     (AGL)?</li>
   <li><b>A: </b>OS X 10.4 and earlier: Use the handle obtained by
-    DMGetGDeviceByDisplayID for aglChoosePixelFormat.</li>
+    DMGetGDeviceByDisplayID for 
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/AGL_OpenGL/Reference/reference.html#//apple_ref/c/func/aglChoosePixelFormat"aglChoosePixelFormat</a>.</li>
   <li><b>A: </b>OS X 10.5: Use the display mask returned by
-    CGDisplayIDToOpenGLDisplayMask as the value for the AGL_DISPLAY_MASK pixel
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/Quartz_Services_Ref/Reference/reference.html#//apple_ref/c/func/CGDisplayIDToOpenGLDisplayMask">CGDisplayIDToOpenGLDisplayMask</a>
+    as the value for the AGL_DISPLAY_MASK pixel
     format attribute.</li>
 </ul><ul>
   <li><b>Q: </b>Why can my application only address one of my graphics
@@ -202,6 +213,8 @@
 <h2>Appendix: Further Information</h2>
 <ul>
   <li><a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_threading/chapter_12_section_1.html">OpenGL Programming Guide for Mac OS X, Multithreading and OpenGL</a></li>
+  <li><a href="http://developer.apple.com/qa/qa2001/qa1248.html">Apple Technical
+      Q&amp;A QA1248: Context Sharing Tips</a>
 </ul>
 #include "footer.shtml"
 <!-- $Id$ -->
