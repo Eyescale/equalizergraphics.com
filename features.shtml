@@ -81,6 +81,9 @@
   <td><a href="/documents/design/PBuffer.html">PBuffer support</a></td>
   <td>0.5</td>
 </tr><tr>
+  <td>orthographic frustum support</td>
+  <td>svn</td>
+</tr><tr>
   <td>FBO support</td>
   <td>?</td>
 </tr><tr>
@@ -96,12 +99,9 @@
   <td>mono/stereo switching</td>
   <td>?</td>
 </tr><tr>
-  <td>orthographic frustum support</td>
-  <td>?</td>
-</tr><tr>
   <td>better support for
-    <a href="/documents/design/transparency.html">transparency and sort-last (DB)
-      compounds</a></td>
+    <a href="/documents/design/transparency.html">transparency and sort-last
+      (DB) compounds</a></td>
   <td>?</td>
 </tr>
 
@@ -126,6 +126,9 @@
   <td><a href="/documents/design/imageCompression.html">image compression for
       network transfers</a></td>
   <td>0.2</td>
+</tr><tr>
+  <td><a href="http://paracomp.sf.net">Paracomp compositing backend</td>
+  <td>0.5.1, 0.5.2</td>
 </tr><tr>
   <td>GPU-based image compression</td>
   <td>?</td>
