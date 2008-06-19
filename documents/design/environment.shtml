@@ -22,7 +22,7 @@
 <p><code>EQ_SERVER</code> The default location of the Equalizer server,
   overridden by the command-line argument <code>--eq-server</code>.
 <p><code>EQ_LOG_LEVEL</code> Determines the verbosity of debugging
-  messages. Valid values are ERROR, WARN, INFO, VERBATIM. Default is WARN for
+  messages. Valid values are ERROR, WARN, INFO, VERB, ALL. Default is WARN for
   the release version and INFO for the debug version.</p>
 <p><code>EQ_LOG_TOPICS</code> Enables verbose logging to debug specific
   topics. Valid values are a bitmask of the individual topics. Please look up
