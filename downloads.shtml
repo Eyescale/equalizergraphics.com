@@ -21,6 +21,12 @@
   End users or programs not in active development should use the
   latest <a href="/downloads.html#releases">major release</a>.
 </p>
+<div class="float_right">
+  <a href="http://sourceforge.net">
+    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
+         width="125" height="37" border="0" alt="SourceForge.net Logo" />
+  </a>
+</div>
 <p>
   The project is hosted on 
   <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If
@@ -119,7 +125,8 @@
     <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
 </p>
 <p>
-  The following developer releases after the last major release are available:
+  The following developer releases based on the last major release are
+  available:
 </p>
 <ul>
   <li><a href="documents/RelNotes/RelNotes_0.5.2.html"><b>Version 0.5.2</b></a>,
@@ -149,12 +156,6 @@
     read-only copy</a> is available for browsing the source code. The repository
   has the following layout and size:
 </p>
-<div class="float_right">
-  <a href="http://sourceforge.net">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
-         width="125" height="37" border="0" alt="SourceForge.net Logo" />
-  </a>
-</div>
 <!-- /* --><pre>
  45M trunk/src
 202M trunk/doc
