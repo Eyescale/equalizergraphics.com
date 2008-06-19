@@ -36,14 +36,14 @@
     repository</a> using:<br>
     <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
 </p>
-<p>
+<ul>
   <li><a href="documents/RelNotes/RelNotes_0.5.3.html"><b>Version 0.5.3</b></a>,
     in progress</li>
   <li><a href="documents/RelNotes/RelNotes_0.5.2.html"><b>Version 0.5.2</b></a>,
     16. June 2008</li>
   <li><a href="documents/RelNotes/RelNotes_0.5.1.html"><b>Version 0.5.1</b></a>,
     16. May 2008</li>
-</p>
+</ul>
 
 #include "footer.shtml"
 <!-- $Id$ -->
