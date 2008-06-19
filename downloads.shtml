@@ -3,56 +3,34 @@
 
 #include "header.shtml"
 
-<h2>Equalizer</h2>
-<p>
-  Equalizer is currently in beta state. We try to keep the svn tree stable and
-  encourage developers to use the svn tree. The project is hosted on 
-  <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If
-  you are using or Equalizer, please fill out
-  our <a href="/survey.html">survey</a> and receive a free download of the
-  latest Equalizer programming guide, also available as
-  a <a href="http://www.lulu.com/content/1359268">book</a>!
-</p>
-<p>
-  The impatient can download the latest
-  version <a href="/downloads/Equalizer-0.5.0.tar.gz">here</a>.
-</p>
-<h3>Subversion Repository</h3>
-<p>
-  Follow the <a href="http://sourceforge.net/svn/?group_id=170962"> instructions
-    to check out the source code</a> on the sourceforge project page, or just
-  use <a href="http://subversion.tigris.org/">subversion</a>:<br>
-  <code>svn co
-    https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk/src</code>.
-  Make sure you check out <code>trunk/src</code> only, not the top-level
-  repository as explained on sourceforge. Otherwise you will get all previous
-  releases, well over one gigabyte of data. A
-  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
-  read-only copy</a> is available for browsing the source code. The repository
-  has the following layout and size:
-</p>
-<div class="float_right">
-  <a href="http://sourceforge.net">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
-         width="125" height="37" border="0" alt="SourceForge.net Logo" />
-  </a>
-</div>
-<!-- /* --><pre>
- 45M trunk/src
-202M trunk/doc
-298M trunk/website
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="/downloads.html#releases">Major Releases</a></li>
+  <li><a href="/downloads.html#devrel">Developer Releases</a></li>
+  <li><a href="/downloads.html#svn">Subversion</a></li>
+  <li><a href="/downloads.html#analysis">Source Code Analysis</a></li>
+  <li><a href="/downloads.html#glasync">GLAsync</a></li>
+</ul>
 
-544M tags/release-0.5
-432M tags/release-0.4
-364M tags/release-0.3
-396M tags/beta-0.3
-395M tags/alpha-0.3
-339M tags/release-0.2
-294M tags/release-0.1
-</pre><!-- */ -->
+<p>
+  Developers actively developing Equalizer-based applications should either use
+  the <a href="/downloads.html#svn">subversion</a> tree or the
+  latest <a href="/downloads.html#devrel">developer release</a>.
+</p>
+<p>
+  End users or programs not in active development should use the
+  latest <a href="/downloads.html#releases">major release</a>.
+</p>
+<p>
+  The project is hosted on 
+  <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If
+  you are using Equalizer, please fill out our <a href="/survey.html">survey</a>
+  and receive a free download of the latest Equalizer programming guide, also
+  available as a <a href="http://www.lulu.com/content/1359268">book</a>!
+</p>
 
 <a name="releases"></a>
-<h3>Releases</h3>
+<h2>Major Releases</h2>
 <table>
   <tr><th>Version</th><th>Links</th><th>Major Feature(s)</th></tr>
 
@@ -124,7 +102,80 @@
   </tr>
 </table>
 
+<a name="devrel"></a>
+<h2>Developer Releases</h2>
+<p>
+  Developer releases are regular, minor versions in-between major
+  releases. Typically we tag a developer release after a feature has been
+  implemented and tested. This ensures a reasonable stability, while providing
+  early access to new features.
+</p>
+<p>
+  We do not provide packages of developer releases. Developer releases are
+  snapshots of the source code, not the full trunk as for major releases. They
+  can be checked out from the
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/">subversion
+    repository</a> using:<br>
+    <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
+</p>
+<p>
+  The following developer releases after the last major release are available:
+</p>
+<ul>
+  <li><a href="documents/RelNotes/RelNotes_0.5.2.html"><b>Version 0.5.2</b></a>,
+    16. June 2008</li>
+  <li><a href="documents/RelNotes/RelNotes_0.5.1.html"><b>Version 0.5.1</b></a>,
+    16. May 2008</li>
+</ul>
+
+<a name="svn"></a>
+<h2>Subversion Repository</h2>
+<p>
+  The subversion repository gives access to the latest source code, and should
+  be used by developers modifying the Equalizer source code or interested in the
+  latest features. The tree can be checked out
+  using <a href="http://subversion.tigris.org/">subversion</a>:<br>
+  <code>svn co
+    https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk/src</code>. We
+  try to keep the svn tree stable and encourage developers to use the svn
+  tree.
+</p>
+<p>
+  Make sure you check out <code>trunk/src</code> only, not the top-level
+  repository as explained on sourceforge. Otherwise you will get all previous
+  releases, well over one gigabyte of data.
+<p>
+  A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
+    read-only copy</a> is available for browsing the source code. The repository
+  has the following layout and size:
+</p>
+<div class="float_right">
+  <a href="http://sourceforge.net">
+    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
+         width="125" height="37" border="0" alt="SourceForge.net Logo" />
+  </a>
+</div>
+<!-- /* --><pre>
+ 45M trunk/src
+202M trunk/doc
+298M trunk/website
+
+544M tags/release-0.5
+432M tags/release-0.4
+364M tags/release-0.3
+396M tags/beta-0.3
+395M tags/alpha-0.3
+339M tags/release-0.2
+294M tags/release-0.1
+</pre><!-- */ -->
+
+<a name="analysis"></a>
 <h2>Source Code Analysis</h2>
+
+<p>
+  The source code analysis, courtesy of ohloh.net, provides some up-to-date
+  statistics of Equalizer:
+</p>
 
 <div class="float_left">
   <script type="text/javascript"
