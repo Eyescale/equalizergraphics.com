@@ -4,8 +4,8 @@
 
 #include "header.shtml"
 
-<a id="nabblelink" href="http://www.nabble.com/Equalizer---Development-f22535.html">Equalizer - Development</a>
-<script src="http://www.nabble.com/embed/f22535"></script>
+<a id="nabblelink" href="http://n2.nabble.com/Equalizer---Parallel-Rendering-f7405.html">Equalizer - Parallel Rendering</a>
+<script src="http://n2.nabble.com/embed/f7405"></script>
 
 #include "footer.shtml"
 <!-- $Id$ -->
