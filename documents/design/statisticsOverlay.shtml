@@ -19,14 +19,15 @@ State: Implemented in svn
   <div class="label">Statistics Overlay</div>
 </div>
 <p>
-  Statistics are send as events to the application thread. The application
-  thread sorts the events per frame and per originator (channel, window,
-  config). At the end of each frame, the statistics for the frame are given to
-  the (app-)node.
+  Statistics are send as events to the application thread. On the application
+  thread, <code>Config::handleEvent</code> sorts the events per frame and per
+  originator (channel, window, config). Events for up to <code>latency +
+  1 </code> frames are kept by the application node config.
 </p>
 <p>
-  The node keeps events for up to five frames. In a debug build, each window
-  draws all events just before swapping buffers.
+  Statistics can be visualized by calling <code>Channel::drawStatistics</code>.
+  The Equalizer examples use the key 's' to toggle statistics drawing on and
+  off.
 </p>
 
 <h2>Details</h2>
@@ -47,13 +48,15 @@ State: Implemented in svn
     transmit time is relatively long since 100 MBit Ethernet is used.</li>
   <li>Frames overlap due to asynchronous execution, in the example above for
     one frame.</li>
-  <li>Frames alternate in brightness to allow easier identification of tasks to
-    frames.</li>
+  <li>Older frames are gradually attenuated for easier identification of tasks
+    to frames.</li>
   <li>Frame borders are identified by vertical lines, green is the start of a
     frame, gray the finish.</li>
   <li>The swap buffer task includes the time to wait for the vertical retrace
     (vsync is on).</li>
   <li>The waiting for images task is a subset of the assemble task.</li>
+  <li>Swap barriers (not used in the example) are sold red tasks directly before
+    the white swap buffer task.</li>
 </ul>
 
 <h2>API</h2>
