@@ -68,6 +68,11 @@
 </ul>
 
 <h4>Performance Improvements</h4>
+<p>0.5.3:</p>
+<ul>
+  <li>Improved overall performance by using atomic operations for reference
+    counted objects.</li>
+</ul>
 <p>0.5.1:</p>
 <ul>
   <li>Alpha-blending support in the CPU-based compositor</li>
@@ -81,6 +86,8 @@
 </p>
 <p>0.5.3:</p>
 <ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997751&group_id=170962&atid=856209">1997751</a>:
+    defines for EQ_BIT17 - EQ_BIT20 are wrong</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1996988&group_id=170962&atid=856209">1996988</a>:
     AGL reports key press twice</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997579&group_id=170962&atid=856209">1997579</a>:
