@@ -1,11 +1,13 @@
 #define S_DOWNLOADS
+#define S_DOWNLOADS_DEVELOPER
 #define PAGE Downloads
+#define SUBPAGE Developer Releases
 
 #include "header.shtml"
 
 <p>
   Developers actively developing Equalizer-based applications should either use
-  the <a href="/downloads/source.html">subversion</a> source code tree or the
+  the <a href="/downloads/source.html">subversion</a> tree or the
   latest <a href="/downloads/developer.html">developer release</a>.
 </p>
 <p>

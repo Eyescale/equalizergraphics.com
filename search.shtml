@@ -1,6 +1,6 @@
 #define S_SEARCH
 #define PAGE Equalizer Search
-
+#define NO_POLL
 #include "header.shtml"
 
 <!-- Google CSE Search Box Begins -->

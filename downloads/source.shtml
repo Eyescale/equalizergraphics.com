@@ -1,0 +1,70 @@
+#define S_DOWNLOADS
+#define S_DOWNLOADS_SOURCE
+#define PAGE Downloads
+#define SUBPAGE Source Code
+
+#include "header.shtml"
+
+<div class="float_right">
+  <a href="http://sourceforge.net">
+    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
+         width="125" height="37" border="0" alt="SourceForge.net Logo" />
+  </a>
+</div>
+<p>
+  The subversion repository gives access to the latest source code, and should
+  be used by developers modifying the Equalizer source code or interested in the
+  latest features. The tree can be checked out
+  using <a href="http://subversion.tigris.org/">subversion</a>:<br>
+  <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk/src
+    Equalizer</code>. We try to keep the svn tree stable and encourage
+  developers to use the svn tree.
+</p>
+<p>
+  Make sure you check out <code>trunk/src</code> only, not the top-level
+  repository as explained on sourceforge. Otherwise you will get all previous
+  releases, well over one gigabyte of data.
+<p>
+  A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
+    read-only copy</a> is available for browsing the source code. The repository
+  has the following layout and size:
+</p>
+<!-- /* --><pre>
+ 45M trunk/src
+202M trunk/doc
+298M trunk/website
+
+544M tags/release-0.5
+432M tags/release-0.4
+364M tags/release-0.3
+396M tags/beta-0.3
+395M tags/alpha-0.3
+339M tags/release-0.2
+294M tags/release-0.1
+</pre><!-- */ -->
+
+<p>
+  The source code analysis, courtesy of ohloh.net, provides some up-to-date
+  statistics of Equalizer:
+</p>
+
+<div class="float_left">
+  <script type="text/javascript"
+          src="http://www.ohloh.net/projects/7807/widgets/project_languages">
+  </script>
+</div>
+<div class="float_left">
+  <script type="text/javascript"
+          src="http://www.ohloh.net/projects/7807/widgets/project_cocomo">
+  </script>
+</div>
+<div class="float_left">
+  <script type="text/javascript"
+          src="http://www.ohloh.net/projects/7807/widgets/project_factoids">
+  </script>
+</div>
+<div class="flush_float"></div>
+
+
+#include "footer.shtml"
+<!-- $Id$ -->

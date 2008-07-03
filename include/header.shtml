@@ -55,7 +55,7 @@
         <img src="/images/Equalizer.png" alt="Equalizer logo">
       </h1>
     </div>
-#if !defined(S_SEARCH) && !defined(S_SURVEY) && !defined(S_SUPPORT_FORUM)
+#ifndef NO_POLL
     <div class="poll">
       <div class="subnavigation"><center>
         <a href="http://www.eyescale.ch/jobs.pdf">We are hiring!</a>
@@ -242,6 +242,36 @@
             class="used"
 #endif
             >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+#ifdef S_DOWNLOADS
+      <div class="subnavigation">
+
+        <p><a href="/downloads/major.html"
+#ifdef S_DOWNLOADS_MAJOR
+              class="used"
+#endif
+              >Major Releases</a></p>
+
+        <p><a href="/downloads/developer.html"
+#ifdef S_DOWNLOADS_DEVELOPER
+              class="used"
+#endif
+              >Developer Releases</a></p>
+
+        <p><a href="/downloads/source.html"
+#ifdef S_DOWNLOADS_SOURCE
+              class="used"
+#endif
+              >Source Code</a></p>
+
+        <p><a href="/downloads/glAsync.html"
+#ifdef S_DOWNLOADS_GLASYNC
+              class="used"
+#endif
+              >GLAsync</a></p>
+      </div>
+#endif // S_DOWNLOADS
 
 
       <p><a href="/news.html"

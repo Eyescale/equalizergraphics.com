@@ -1,7 +1,7 @@
 #define S_SUPPORT
 #define S_SUPPORT_FORUM
 #define PAGE Developer Forum
-
+#define NO_POLL
 #include "header.shtml"
 
 <a id="nabblelink" href="http://n2.nabble.com/Equalizer---Parallel-Rendering-f7405.html">Equalizer - Parallel Rendering</a>

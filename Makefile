@@ -4,7 +4,7 @@
 TARGET = build
 
 FILES = \
-	$(wildcard downloads/*) \
+	$(wildcard downloads/*.gz) \
 	api.html \
 	applications.html \
 	changes.html \
@@ -41,7 +41,6 @@ FILES = \
 	documentation/parallelOpenGLFAQ.html \
 	documents/CV_Stefan_Eilemann.pdf \
 	documents/directSend.pdf \
-	downloads/DBCAAF49A0C0/ProgrammingGuide.pdf \
 	documents/Developer/eqPly.pdf \
 	documents/Developer/eqPlyPresentation.pdf \
 	documents/EGPGV07.html \
@@ -142,6 +141,11 @@ FILES = \
 	documents/Howtos/glutToEqualizer.html \
 	documents/user/configTool.html \
 	documents/user/crComparison.html \
+	downloads/DBCAAF49A0C0/ProgrammingGuide.pdf \
+	downloads/developer.html \
+	downloads/major.html \
+	downloads/glAsync.html \
+	downloads/source.html \
 	news/EqualizerNewsJuly07.html \
 	news/EqualizerNewsDecember07.html \
 	news/Release_0.1.html \
