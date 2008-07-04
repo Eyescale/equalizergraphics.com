@@ -7,7 +7,8 @@
 
 <p>
   Welcome to Equalizer 0.5.3, a framework for the development and deployment of
-  parallel, scalable OpenGL applications. Equalizer 0.5.3 ???
+  parallel, scalable OpenGL applications. Equalizer 0.5.3 adds support for
+  orthographic projections.
 </p>
 <p>
   Equalizer 0.5.3 is a developer release, representing a stable snapshot of the
@@ -71,7 +72,8 @@
 <p>0.5.3:</p>
 <ul>
   <li>Improved overall performance by using atomic operations for reference
-    counted objects.</li>
+    counted objects</li>
+  <li>Improved performance when using non-threaded pipes</li>
 </ul>
 <p>0.5.1:</p>
 <ul>
@@ -128,6 +130,10 @@
 
 <h3>Known Bugs</h3>
 <ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003195&group_id=170962&atid=856209">2003195</a>:
+    Ortho frustra ignores eye offset</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003132&group_id=170962&atid=856209">2003132</a>:
+    3-wnd.DB.ds is broken on some ppc machines for eqPly</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997583&group_id=170962&atid=856209">1997583</a>:
     eqPly: ortho frustum culling broken</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1959418&group_id=170962&atid=856209">1959418</a>:
