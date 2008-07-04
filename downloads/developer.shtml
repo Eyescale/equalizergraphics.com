@@ -6,27 +6,31 @@
 #include "header.shtml"
 
 <p>
-  Developers actively developing Equalizer-based applications should either use
-  the <a href="/downloads/source.html">subversion</a> tree or the
-  latest <a href="/downloads/developer.html">developer release</a>.
+  Developer releases are regular, minor versions in-between major
+  releases. Typically we tag a developer release after a feature has been
+  implemented and tested. This ensures a reasonable stability, while providing
+  early access to new features.
 </p>
 <p>
-  End users or programs not in active development should use the
-  latest <a href="/downloads/major.html">major release</a>.
+  We do not provide packages of developer releases. Developer releases are
+  snapshots of the source code, not the full trunk as for major releases. They
+  can be checked out from the
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/">subversion
+    repository</a> using:<br>
+    <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
 </p>
-<div class="float_right">
-  <a href="http://sourceforge.net">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
-         width="125" height="37" border="0" alt="SourceForge.net Logo" />
-  </a>
-</div>
 <p>
-  The project is hosted on 
-  <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If
-  you are using Equalizer, please fill out our <a href="/survey.html">survey</a>
-  and receive a free download of the latest Equalizer programming guide, also
-  available as a <a href="http://www.lulu.com/content/1359268">book</a>!
+  The following developer releases based on the last major release are
+  available:
 </p>
+<ul>
+  <li><a href="documents/RelNotes/RelNotes_0.5.3.html"><b>Version 0.5.3</b></a>,
+    04. July 2008</li>
+  <li><a href="documents/RelNotes/RelNotes_0.5.2.html"><b>Version 0.5.2</b></a>,
+    16. June 2008</li>
+  <li><a href="documents/RelNotes/RelNotes_0.5.1.html"><b>Version 0.5.1</b></a>,
+    16. May 2008</li>
+</ul>
 
 #include "footer.shtml"
 <!-- $Id$ -->
