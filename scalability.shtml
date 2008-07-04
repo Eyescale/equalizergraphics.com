@@ -10,13 +10,13 @@
 
 <h2>Table of Contents</h2>
 <p>
-  <a href="#overview">Overview</a><br>
-  <a href="#basic">Basic Decomposition Modes</a><br>
-  <a href="#advanced">Advanced Scalability Features</a><br>
+  <a href="/scalability.html#overview">Overview</a><br>
+  <a href="/scalability.html#basic">Basic Decomposition Modes</a><br>
+  <a href="/scalability.html#advanced">Advanced Scalability Features</a><br>
 </p>
 
 
-<hr><a name="overview"></a>
+<a name="overview"></a>
 <h2>Overview</h2>
 <p>
   In addition to the traditional multi-pipe execution, where one graphics card
@@ -32,7 +32,7 @@
   framework distributes the rendering task across a number of rendering units
   (decomposition), collects the results and recombines them on the final view
   (recomposition). The detailed design and configuration of compounds is
-  described in a <a href="documents/design/compounds.html">technical
+  described in a <a href="/documents/design/compounds.html">technical
   specification</a>.
 </p>
 <p>
@@ -49,7 +49,6 @@
   determine how close to this limit the performance can be pushed.
 </p>
 
-<hr>
 <h2>Multi-GPU Systems</h2>
 <p>
   Multi-GPU systems, such as dual-SLI or quad-SLI workstations or the Apple Mac
@@ -62,8 +61,8 @@
 </p>
 
 <h3>Example 1: HP xw9300 workstation</h3>
-<div class="float_right"><a href="images/perf.png">
-    <img src="images/perf-small.jpg" alt="Performance comparison"></a>
+<div class="float_right"><a href="/images/perf.png">
+    <img src="/images/perf-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU HP workstation</div>
 </div>
 <p>
@@ -82,8 +81,8 @@
 </p>
 
 <h3>Example 2: Apple Mac Pro</h3>
-<div class="float_right"><a href="images/perfMac.png">
-    <img src="images/perfMac-small.jpg" alt="Performance comparison"></a>
+<div class="float_right"><a href="/images/perfMac.png">
+    <img src="/images/perfMac-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU Mac Pro</div>
 </div>
 <p>
@@ -94,7 +93,6 @@
 </p>
 <div class="flush_float"></div>
 
-<hr>
 <h2>Graphics Clusters</h2>
 <p>
   Graphic clusters are virtually unlimited in the number of possible processors
@@ -112,8 +110,8 @@
   nicely all aspects of the rendering pipeline.
 </p>
 
-<div class="float_right"><a href="images/perf512.png">
-    <img src="images/perf512-small.jpg" alt="Performance comparison"></a>
+<div class="float_right"><a href="/images/perf512.png">
+    <img src="/images/perf512-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 512<sup>3</sup> volume data set.</div>
 </div>
 <p>
@@ -128,8 +126,8 @@
 </p>
 
 <div class="flush_float"></div>
-<div class="float_right"><a href="images/perf256.png">
-    <img src="images/perf256-small.jpg" alt="Performance comparison"></a>
+<div class="float_right"><a href="/images/perf256.png">
+    <img src="/images/perf256-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 256<sup>3</sup> volume data set.</div>
 </div>
 <p>
@@ -149,8 +147,8 @@
 
 
 <h3>Example 2: Polygonal Rendering</h3>
-<div class="float_right"><a href="images/perfPoly.png">
-    <img src="images/perfPoly-small.jpg" alt="Performance comparison"></a>
+<div class="float_right"><a href="/images/perfPoly.png">
+    <img src="/images/perfPoly-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a polygonal data set.</div>
 </div>
 <p>
@@ -165,7 +163,7 @@
   benchmark.
 </p>
 
-<hr><a name="basic"></a>
+<a name="basic"></a>
 <h2>Basic Decomposition Modes</h2>
 
 <p>
@@ -176,8 +174,8 @@
   algorithms can be configured:
 </p>
 
-<div class="float_right"><a href="images/2D.png">
-    <img src="images/2D-small.jpg" alt="A 2D compound"></a>
+<div class="float_right"><a href="/images/2D.png">
+    <img src="/images/2D-small.jpg" alt="A 2D compound"></a>
   <div class="label">A sort-first compound</div>
 </div>
 <p>
@@ -191,8 +189,8 @@
   cards.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/DB.png">
-  <img src="images/DB-small.jpg" alt="A DB compound"></a>
+<div class="float_right"><a href="/images/DB.png">
+  <img src="/images/DB-small.jpg" alt="A DB compound"></a>
   <div class="label">A sort-last compound</div>
 </div>
 <p>
@@ -205,8 +203,8 @@
   by using parallel compositing, as described below.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/EYE.png">
-  <img src="images/EYE-small.jpg" alt="An Eye compound"></a>
+<div class="float_right"><a href="/images/EYE.png">
+  <img src="/images/EYE-small.jpg" alt="An Eye compound"></a>
   <div class="label">A stereo compound</div>
 </div>
 <p>
@@ -219,8 +217,8 @@
   often combined with another mode on large-scale visualization clusters.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/Pixel.png">
-    <img src="images/Pixel-small.jpg" alt="A Pixel compound"></a>
+<div class="float_right"><a href="/images/Pixel.png">
+    <img src="/images/Pixel-small.jpg" alt="A Pixel compound"></a>
   <div class="label">A pixel compound</div>
 </div>
 <p>
@@ -232,8 +230,8 @@
   linearly.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/DPlex.png">
-    <img src="images/DPlex-small.jpg" alt="A DPlex compound"></a>
+<div class="float_right"><a href="/images/DPlex.png">
+    <img src="/images/DPlex-small.jpg" alt="A DPlex compound"></a>
   <div class="label">A DPlex compound</div>
 </div>
 <p>
@@ -246,7 +244,7 @@
   feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<hr><a name="advanced"></a>
+<a name="advanced"></a>
 <h2>Advanced Scalability Features</h2>
 <p>
   Equalizer implements a number of additional features to better utilize the
@@ -255,8 +253,9 @@
   optimisations.
 </p>
 
-<div class="float_right"><a href="images/ML.png">
-    <img src="images/ML-small.jpg" alt="Multi-Level Compounds"></a>
+<h3>Multilevel Task Decompositions</h3>
+<div class="float_right"><a href="/images/ML.png">
+    <img src="/images/ML-small.jpg" alt="Multi-Level Compounds"></a>
   <div class="label">A multilevel compound</div>
 </div>
 <p>
@@ -269,8 +268,9 @@
   to use four graphic cards to render a single stereo view.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/directSend.png">
-  <img src="images/directSend-small.jpg" alt="Direct Send Parallel Compositing"></a>
+<h3>Parallel Compositing</h3>
+<div class="float_right"><a href="/images/directSend.png">
+  <img src="/images/directSend-small.jpg" alt="Direct Send Parallel Compositing"></a>
   <div class="label">Data flow for direct send compositing</div>
 </div>
 <p>
@@ -285,25 +285,34 @@
   tile, and sends the composited result to the destination channel.
 </p><div class="flush_float"></div>
 
+<h3>Asynchronous Execution</h3>
 <a name="async"></a>
-<div class="float_right"><a href="images/Async.png">
-  <img src="images/Async-small.jpg" 
+<div class="float_right"><a href="/images/syncAsync.png">
+  <img src="/images/syncAsync-small.jpg" 
        alt="Synchronous vs. asynchronous execution"></a>
-  <div class="label">Performance for asynchronous execution</div>
+  <div class="label">Synchronous vs. asynchronous execution</div>
 </div>
 <p>
-  Equalizer schedules the rendering resources asynchronously. Resources which
-  are independent from others start rendering the next frame immediately after
-  they finish a frame. By hiding the unavoidable imbalances in the task
-  decomposition, this execution mode provides a much better resource utilisation
-  than the traditional, frame-synchronous approach. The picture shows the
-  performance for a sort-last direct-send compound on five nodes using 1GBit
-  ethernet for a latency from 0 (synchronous execution) to 6. Allowing one or
-  two frames of latency increases the performance by 15 percent in this case.
+  Equalizer schedules the rendering resources asynchronously. Rendering threads
+  which are independent from others start rendering the next frame immediately
+  after they finish a frame.
+</p>
+<p>
+  The asynchronous execution pipelines certain rendering tasks and hides
+  imbalances in the task decomposition. Typically a latency of one frame
+  increases the framerate between 10 and 15 percent, if scalable rendering is
+  used.
+</p>
+<p>
+  The picture on the right shows the actual statistics from the same
+  configuration with one frame latency (asynchronous) and no latency
+  (synchronous). Notice the longer time and the idle periods of one rendering
+  thread during synchronous execution.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/LB.png">
-  <img src="images/LB-small.jpg" alt="2D Load-Balancing"></a>
+<h3>Load Balancing</h3>
+<div class="float_right"><a href="/images/LB.png">
+  <img src="/images/LB-small.jpg" alt="2D Load-Balancing"></a>
   <div class="label">Load balancing a sort-first compound</div>
 </div>
 <p>
@@ -313,8 +322,8 @@
   application input). This feature is not yet implemented.
 </p><div class="flush_float"></div>
 
-<div class="float_right"><a href="images/Cross.png">
-  <img src="images/Cross-small.jpg" alt="Advanced Load-Balancing"></a>
+<div class="float_right"><a href="/images/Cross.png">
+  <img src="/images/Cross-small.jpg" alt="Advanced Load-Balancing"></a>
   <div class="label">Advanced load balancing</div>
 </div>
 <p>
