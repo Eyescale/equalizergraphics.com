@@ -48,6 +48,9 @@
 
 <h2>White Papers</h2>
 <ul>
+  <li><a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two Methods for
+      driving OpenGL Display Walls</a> compares and benchmarks Chromium and
+    Equalizer on a 12-node display wall.</li>
   <li><a href="/documents/WhitePapers/OpenMP_ICC.pdf">Performance of ICC, GCC
       and OpenMP</a> benchmarks OpenMP and different compilers on Mac OS X to
     optimize scalable rendering.</li>
