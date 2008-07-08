@@ -27,7 +27,7 @@
 <p>
   The API has to provide an efficient way to send data. The data is not
   frame-synchronized, that is, latency is not accounted for. For frame-specific
-  data the usage of versioned <code>eqNet::Object</code>s is highly
+  data the usage of versioned <code>eq::net::Object</code>s is highly
   recommended. Synchronization of data to config frames can also be implemented
   by the application, using the current frame number.
 </p>

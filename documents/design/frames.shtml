@@ -212,8 +212,8 @@
         void addImage( Image::Type type, Image* image );
         // corresponding getters
 
-        uint32_t        _versionImages;
-        eqBase::Monitor _versionReady;
+        uint32_t          _versionImages;
+        eq::base::Monitor _versionReady;
     };
 
     class Image

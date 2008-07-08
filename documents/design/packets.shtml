@@ -15,7 +15,7 @@
 <p>
   The packet handling code in Equalizer is the core piece of the networking
   layer. This document describes the packet dispatch mechanism used by the
-  Equalizer network layer (<code>namespace eqNet</code>). The implementation
+  Equalizer network layer (<code>namespace eq::net</code>). The implementation
   matches this document at the time of writing (UPDATE), but may diverge over
   time.
 </p>
@@ -24,7 +24,7 @@
 <div class="float_right">
   <a href="documents/design/images/packets.png">
     <img src="documents/design/images/packets-small.jpg" 
-         alt="Flow chart of the eqNet packet handling"/></a>
+         alt="Flow chart of the eq::net packet handling"/></a>
   <div class="label">Equalizer Packet Handling</div>
 </div>
 <p>
@@ -59,9 +59,9 @@
   copies when the command will be handled later.
 </p>
 
-<h2>The eqNet Base Class</h2>
+<h2>The eq::net Base Class</h2>
 <p>
-  <code>eqNet::Base</code> provides packet dispatching using a command handler
+  <code>eq::net::Base</code> provides packet dispatching using a command handler
   table. During construction, sub classes provide command handlers for each
   command using <code>registerCommand</code>. The method
   <code>invokeCommand</code> calls the registered command handler for the
@@ -103,7 +103,7 @@
 <h2>Session Packet Dispatch</h2>
 <p>
   The <code>Session</code> inherits, like the node, from 
-  <code>eqNet::Base</code>. The session dispatch works similar to the node
+  <code>eq::net::Base</code>. The session dispatch works similar to the node
   dispatch. For session packets, <code>invokeCommand</code> is called, and the
   result is returned to the node, which handles it accordingly. For object
   packets, <code>Object::invokeCommand</code> is called and the result is

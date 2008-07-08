@@ -67,7 +67,7 @@ State:
   Example API for display list management:
   <pre>
   template< typename T >
-  class ObjectManager : public eqBase::NonCopyable
+  class ObjectManager : public eq::base::NonCopyable
   {
   public:
       GLuint getList( const T& key );

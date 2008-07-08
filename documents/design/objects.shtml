@@ -18,7 +18,7 @@
 
 <p>
   Equalizer provides facilities to ease the data distribution of an
-  application. The central piece is the <code>eqNet::Object</code> base class,
+  application. The central piece is the <code>eq::net::Object</code> base class,
   from which distributed objects are derived. Objects become accessable by
   making them known to a session. The example code shipped with Equalizer
   contains examples of distributed objects.

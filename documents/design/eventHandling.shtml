@@ -52,7 +52,7 @@
 </p>
 <p>
   The event dispatch is implemented by subclassing
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eqNet::CommandQueue</a> 
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eq::net::CommandQueue</a> 
   into a 
   <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eq::CommandQueue</a>
   which 'pumps' events on every pop operation. The CommandQueue is used between
