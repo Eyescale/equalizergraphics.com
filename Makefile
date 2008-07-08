@@ -1,5 +1,5 @@
 
-.PHONY: update sitemap
+.PHONY: update sitemap doxygen
 
 TARGET = build
 
@@ -186,14 +186,14 @@ all: $(TARGETS) $(INCLUDES)
 clean:
 	rm -rf $(TARGETS)
 
-install: update all sitemap
+install: update all doxygen sitemap
 	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
 auxinst: all
 	rsync -avz --exclude=".svn" --exclude "*.html" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
 
 update:
-	svn update . ../doc/Developer/ProgrammingGuide
+	svn update ..
 	rm -f changes_log.html
 
 .SUFFIXES: .html .css
@@ -201,6 +201,9 @@ update:
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) $< | sed 's/^#.*//' > $@
+
+doxygen:
+	cd ../src; doxygen Doxyfile
 
 sitemap:
 	sitemap_gen --config=sitemap_config.xml || true
