@@ -91,7 +91,7 @@
 loadbalancer
 {
     name          string
-    split         [ 2D | DB ]
+    split         [ 2D | VERTICAL | HORIZONTAL | DB ]
 }
 
 compound

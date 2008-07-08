@@ -155,12 +155,20 @@ server
         {
             name     string
             channel  string   // where the compound's tasks are executed
+
             task     [ CLEAR DRAW READBACK ASSEMBLE ] // CULL later
             buffer   [ COLOR DEPTH ]         // default COLOR
+
             viewport [ viewport ]            // wrt parent compound, sort-first
             range    [ float float ]         // DB-range for sort-last
             pixel    [ int int ]             // pixel decomposition (step size)
             eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
+
+            loadBalancer 
+            {
+                mode [ 2D | DB | VERTICAL | HORIZONTAL ]
+            }
+
             attributes
             {
                 stereo_mode                  QUAD | ANAGLYPH    // default QUAD
@@ -206,6 +214,17 @@ server
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Load-Balancing added:
+    <!-- /* --><pre>
+      compound
+      {
+          loadBalancer 
+          {
+               mode [ 2D | DB | VERTICAL | HORIZONTAL ]
+          }
+      }
+    </pre><!-- */ -->
+  </li>  
   <li>Added during implementation of
     the <a href="/documents/design/statisticsOverlay.html">Statistics
       Overlay</a>:
