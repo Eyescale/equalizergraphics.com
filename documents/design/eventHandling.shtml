@@ -81,11 +81,11 @@
   events.
 </p>
 
-<h2>Costumized Event Handling</h2>
+<h2>Customized Event Handling</h2>
 <p>
   The application can provide its own event handler implementation
-  in <code>Pipe::configInitEventHandler</code>
-  and <code>Window::configInitEventHandler</code>. Typically these methods are
+  in <code>Pipe::initEventHandler</code>
+  and <code>Window::initEventHandler</code>. Typically these methods are
   overwritten to disable Equalizer's event handling by providing an empty
   implementation.
 </p>
@@ -106,10 +106,10 @@
   virtual bool Client::useMessagePump() { return true; }
   virtual bool Pipe::useMessagePump()   { return true; }
 
-  virtual void Pipe::configInitEventHandler();
-  virtual void Pipe::configExitEventHandler();
-  virtual void Window::configInitEventHandler();
-  virtual void Window::configExitEventHandler();
+  virtual void Pipe::initEventHandler();
+  virtual void Pipe::exitEventHandler();
+  virtual void Window::initEventHandler();
+  virtual void Window::exitEventHandler();
 </pre><!-- */ -->
 
 <h2>Open Issues</h2>
