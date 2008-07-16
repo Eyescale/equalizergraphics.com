@@ -54,11 +54,12 @@
     using the environment
     variable <code>SdpApplications</code>. For <code>eqPly</code> it has to be
     set to <code>eqServer.exe;eqPly.exe</code>.</li>
-  <li>Optional: Verify network performance using <code>netperf</code>. Set
-    SdpApplications to netperf.exe, run one server (<code>netperf.exe</code>) on
-    one machine a client (<code>netperf.exe 10.1.1.x</code>) on another
-    machine. On SDR IB hardware, the performance is around 700-800 MB/s using
-    SDP, as compared to 100-200 MB/s using IPoIB.</li>
+  <li>Optional: Verify network performance using <code>netPerf</code>. Set
+    SdpApplications to netPerf.exe, run one server (<code>netPerf.exe -s
+    IB_ADDR</code>) on one machine a client (<code>netPerf.exe -c
+      SERVER_IB_ADDR</code>) on another machine. On SDR IB hardware, the
+    performance is around 700-800 MB/s using SDP, as compared to 100-200 MB/s
+    using IPoIB.</li>
   <li>Use the IP addresses, as configured above, as the hostname for the node
     connection settings in the configuration files.</li>
   <li>Start the server using the SDP server address, for
