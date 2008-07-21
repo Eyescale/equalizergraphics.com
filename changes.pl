@@ -70,11 +70,11 @@ foreach ( @changes )
 
             $file =~ s/\.shtml/.html/;
 
-            if( !($file =~ /include/) && $op ne "D" && -e "build/$file" )
+            if( !($file =~ /include/) && $op ne "D" )
             {
                 push( @files, $file );
 
-                if( $type =~ /(png|jpg)/ )
+                if( $type =~ /(png|jpg)/ && -e "build/$file" )
                 {
                     $image = $file;
                 }
@@ -104,7 +104,14 @@ foreach ( @changes )
             $description .= "    <ul><font size=\"-1\">\n";
             foreach my $file ( @files )
             {
-                $description .="        <li><a href=\"http://www.equalizergraphics.com$file\">$file</a></li>\n";
+                if(  -e "build/$file" )
+                {
+                    $description .="        <li><a href=\"http://www.equalizergraphics.com$file\">$file</a></li>\n";
+                }
+                else
+                {
+                    $description .="        <li>$file</li>\n";
+                }
             }
             $description .= "    </font></ul>\n";
         }

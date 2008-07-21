@@ -49,6 +49,7 @@
 <h4>New Features</h4>
 <p>0.5.4:</p>
 <ul>
+  <li>Automatic 2D load-balancing</li>
   <li>Automatic image compression for 'slow' (< 2GBit) connections</li>
 </ul>
 <p>0.5.3:</p>

@@ -72,6 +72,9 @@ global
      EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
      EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
      EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
+     EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
+     EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
+     EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
      EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
      EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
      EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
@@ -137,6 +140,9 @@ server
                         planes_alpha        unsigned
                         planes_depth        unsigned
                         planes_stencil      unsigned
+                        planes_accum        unsigned
+                        planes_accum_alpha  unsigned
+                        planes_samples      unsigned
                     }
                     channel // 1-n times
                     {
@@ -214,6 +220,25 @@ server
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Support for accumulation buffer and multisampling added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
+          EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
+          EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
+      }
+      window
+      {
+          attributes
+          {
+              planes_accum        unsigned
+              planes_accum_alpha  unsigned
+              planes_samples      unsigned
+          }
+      }
+    </pre><!-- */ -->
+  </li>  
   <li>Load-Balancing added:
     <!-- /* --><pre>
       compound
