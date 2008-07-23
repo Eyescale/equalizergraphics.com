@@ -4,7 +4,7 @@
 #include "header.shtml"
 
 <p></p>
-<iframe src="http://app.sgizmo.com/s/survey.php?id=4R3NDK0K14PHXOOXACM6EAVXH7RRTG-57576" frameborder="0" width="100%" height="100%" style="overflow: hidden" ></iframe>
+<iframe src="http://app.sgizmo.com/s/survey.php?id=4R3NDK0K14PHXOOXACM6EAVXH7RRTG-57576" frameborder="0" width="600" height="1200" style="overflow: hidden" ></iframe>
 
 #include "footer.shtml"
 <!-- $Id$ -->
