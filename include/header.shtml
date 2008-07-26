@@ -230,11 +230,11 @@
       </div>
 #endif // S_SUPPORT
 
-      <p><a href="/screenshots.html"
-#ifdef S_SCREENSHOTS
+      <p><a href="/gallery.html"
+#ifdef S_GALLERY
             class="used"
 #endif
-            >Screenshots</a></p>
+            >Gallery</a></p>
 
 
       <p><a href="/downloads.html"

@@ -1,9 +1,52 @@
-#define S_SCREENSHOTS
-#define PAGE Screenshots
+#define S_GALLERY
+#define PAGE Gallery
 #define NO_POLL
 
 #include "header.shtml"
 
+<h2>Videos</h2>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/io1XruBW6I8&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/io1XruBW6I8&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    2D (or sort-first) parallel rendering. All rendering tasks execute on a
+    single machine for demonstration purposes. A deployment configuration would
+    use one GPU per window to parallelize the rendering.
+  </div>
+</div>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/h5ryk4QP_ac&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/h5ryk4QP_ac&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    Volume rendering using three GPUs and dynamic 2D load-balancing. The tiling
+    is adapted each frame automatically and transparently to the application by
+    Equalizer. The data set has 256^3 voxels, and is rendered using 2560 slices
+    using the eVolve scalable volume renderer.
+  </div>
+</div>
+
+<div class="flush_float"></div>
+<h2>Screenshots</h2>
 <p>Click on the images to get a high resolution version.</p>
 <div class="gallery">
   <a href="screenshots/cave.png">

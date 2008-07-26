@@ -25,7 +25,7 @@ FILES = \
 	news.html \
 	relnotes.html \
 	scalability.html \
-	screenshots.html \
+	gallery.html \
 	search.html \
 	support.html \
 	survey.html \

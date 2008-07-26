@@ -115,7 +115,7 @@ div.gallery {
     clear: left;
 }
 
-div.gallery img { 
+div.gallery img, div.gallery object { 
     padding: 0 5px 5px 5px;
     float:   left;
 }
