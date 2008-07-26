@@ -1,5 +1,6 @@
 #define S_SCREENSHOTS
 #define PAGE Screenshots
+#define NO_POLL
 
 #include "header.shtml"
 
