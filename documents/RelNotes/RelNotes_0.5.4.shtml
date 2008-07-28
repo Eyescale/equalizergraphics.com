@@ -51,7 +51,7 @@
 <ul>
   <li>Added image compression and per-node transmit statistics overlay</li>
   <li>Added window attributes for accumulation buffer and AA samples</li>
-  <li>Automatic 2D load-balancing</li>
+  <li>Automatic 2D and DB load-balancing</li>
   <li>Automatic image compression for 'slow' (< 2GBit) connections</li>
 </ul>
 <p>0.5.3:</p>
@@ -93,6 +93,11 @@
   Equalizer 0.5.4 includes various bugfixes over the 0.5 release, including the
   following:
 </p>
+<p>0.5.4:</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2026837&group_id=170962&atid=856209">2026837</a>:
+    swapbarrier calls increase with single-buffered windows</a></li>
+</ul>
 <p>0.5.3:</p>
 <ul>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997751&group_id=170962&atid=856209">1997751</a>:
