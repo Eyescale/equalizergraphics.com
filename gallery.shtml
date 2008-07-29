@@ -8,8 +8,8 @@
 <ul>
   <li><a href="/gallery.html#videos">Videos</a></li>
   <ul>
-    <li><a href="/gallery.html#2D">2D (sort-first)</a></li>
-    <li><a href="/gallery.html#DB">DB (sort-last)</a></li>
+    <li><a href="/gallery.html#videos2D">2D (sort-first)</a></li>
+    <li><a href="/gallery.html#videosDB">DB (sort-last)</a></li>
   </ul>
   <li><a href="/gallery.html#screenshots">Screenshot</a></li>
 </ul>
