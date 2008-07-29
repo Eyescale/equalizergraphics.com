@@ -76,12 +76,12 @@
     <td>
       <a href="http://chromium.sourceforge.net/doc/crexten.html#GL_CR_synchronization">parallel
         OpenGL extension</a>, used by application for synchronization</td>
-    <td><a href="api.html">parallel GLUT-like execution framework</a>, inherent
+    <td><a href="/api.html">parallel GLUT-like execution framework</a>, inherent
       synchronization</td>
   </tr>
   <tr>
     <td>sort-last compositing SPU</td>
-    <td><a href="scalability.html">generic compositing engine</a> allowing
+    <td><a href="/scalability.html">generic compositing engine</a> allowing
       sort-first, parallel sort-last and stereo compositing</td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ See also
 <p>
   Please note that most other multipipe rendering software toolkits fall into
   the same category as Chromium, by distributing the OpenGL command stream. The
-  <a href="documents/WhitePapers/ParallelRenderingSystems.pdf">Analysis of
+  <a href="/documents/WhitePapers/ParallelRenderingSystems.pdf">Analysis of
     Parallel Rendering Systems</a> white paper gives more background on the
   subject. The 
   <a href="http://en.wikipedia.org/wiki/Chromium_(software)">wikipedia

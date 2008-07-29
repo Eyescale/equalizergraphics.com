@@ -11,25 +11,25 @@
   State: Implemented in 0.3 beta
 </p>
 
-<a href="#overview">Overview</a><br>
-<a href="#nodefactory">NodeFactory</a><br>
-<a href="#config">Config</a><br>
-<a href="#node">Node</a><br>
-<a href="#pipe">Pipe</a><br>
-<a href="#window">Window</a><br>
-<a href="#channel">Channel</a><br>
+<a href="/documents/design/taskMethods.html#overview">Overview</a><br>
+<a href="/documents/design/taskMethods.html#nodefactory">NodeFactory</a><br>
+<a href="/documents/design/taskMethods.html#config">Config</a><br>
+<a href="/documents/design/taskMethods.html#node">Node</a><br>
+<a href="/documents/design/taskMethods.html#pipe">Pipe</a><br>
+<a href="/documents/design/taskMethods.html#window">Window</a><br>
+<a href="/documents/design/taskMethods.html#channel">Channel</a><br>
 
 <hr><a name="overview"></a>
 <h2>Overview</h2>
 <div class="float_right">
-  <a href="documents/design/images/mainloop.png">
-    <img src="documents/design/images/mainloop-small.jpg" 
+  <a href="/documents/design/images/mainloop.png">
+    <img src="/documents/design/images/mainloop-small.jpg" 
          alt="Application and render client main loops"/></a>
   <div class="label">Application and render client main loops</div>
 </div>
 <p>
   The application developer overrides methods on Equalizer classes to plug in
-  the application's rendering code. The <a href="api.html">programming interface
+  the application's rendering code. The <a href="/api.html">programming interface
   overview</a> describes the concept on a high level. This document lists all
   currently implemented task methods, their typical use case and default
   implementation. Some methods related to the task methods are described as
@@ -111,7 +111,7 @@
   purpose is to implement custom event handling, for example event-driven
   execution. The default implementation does not block and calls
   <code>Config::handleEvent</code> for each queued event. See also 
-  <a href="documents/design/eventHandling.html">Event Handling</a>.
+  <a href="/documents/design/eventHandling.html">Event Handling</a>.
 </p>
 
 <a name="confighandleevent"></a>
@@ -235,7 +235,7 @@
   calling <code>releaseFrameLocal</code>. The application might
   call <code>releaseFrameLocal</code> earlier or later during task execution, in
   case other task methods need synchronization with the node thread. See
-  also <a href="#nodeframedrawfinish">Node::frameDrawFinish</a>.
+  also <a href="/documents/design/taskMethods.html#nodeframedrawfinish">Node::frameDrawFinish</a>.
 </p>
 
 <h3>Pipe::initEventHandler</h3>

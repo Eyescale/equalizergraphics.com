@@ -31,15 +31,15 @@
 
 <h2>Implementation</h2>
 <p>
-  The <a href="documents/design/statistics.html">statistics interface</a> does
+  The <a href="/documents/design/statistics.html">statistics interface</a> does
   provide us with the timing values from the last finished frame. This timing
   values, together with the 2D viewport or DB range give us a load
   distribution. The ROI readback interface will be used to refine the load
   distribution.
 </p>
 <div class="float_right">
-  <a href="documents/design/images/loadBalancing.png">
-    <img src="documents/design/images/loadBalancing-small.jpg" 
+  <a href="/documents/design/images/loadBalancing.png">
+    <img src="/documents/design/images/loadBalancing-small.jpg" 
          alt="Simulated Load Balancing Run"/></a>
   <div class="label">Simulated Load Balancing on Four Channels</div>
 </div>

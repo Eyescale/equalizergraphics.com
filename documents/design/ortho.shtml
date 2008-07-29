@@ -16,8 +16,8 @@
 </p>
   
 <h2>Head Tracking</h2>
-<div class="float_right"><a href="documents/design/images/mono.png">
-    <img src="documents/design/images/mono-small.jpg" 
+<div class="float_right"><a href="/documents/design/images/mono.png">
+    <img src="/documents/design/images/mono-small.jpg" 
          alt="View frustum for monoscopic rendering"></a>
   <div class="label">Monoscopic View Frustum</div>
 </div>

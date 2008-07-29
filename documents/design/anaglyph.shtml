@@ -12,8 +12,8 @@ State: Implemented in 0.3.0 alpha
 </p>
 
 <h2>Overview</h2>
-<div class="float_right"><a href="images/anaglyph.png">
-    <img src="images/anaglyph-small.jpg" 
+<div class="float_right"><a href="/images/anaglyph.png">
+    <img src="/images/anaglyph-small.jpg" 
          alt="An anaglyphic stereo rendering"></a>
   <div class="label">An anaglyphic stereo rendering</div>
 </div>

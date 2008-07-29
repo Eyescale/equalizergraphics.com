@@ -16,7 +16,7 @@
   for debugging purposes are only available in the debug version of the library.
 </p>
 <p><code>Configuration file globals</code> All variables from
-  the <a href="documents/design/fileFormat.html#global">config file global
+  the <a href="/documents/design/fileFormat.html#global">config file global
   section</a> can be set as environment variables. Globals specified in the
   config file take precedence over environment variables.</p>
 <p><code>EQ_SERVER</code> The default location of the Equalizer server,

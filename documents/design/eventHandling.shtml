@@ -29,8 +29,8 @@
   all events from the main thread.
 </p>
 <div class="float_right">
-  <a href="documents/design/images/eventFilter.png">
-    <img src="documents/design/images/eventFilter-small.jpg" 
+  <a href="/documents/design/images/eventFilter.png">
+    <img src="/documents/design/images/eventFilter-small.jpg" 
          alt="Event Handling Data Flow"/></a>
   <div class="label">Event Handling Data Flow</div>
 </div>
