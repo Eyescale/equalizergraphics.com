@@ -4,7 +4,20 @@
 
 #include "header.shtml"
 
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="/gallery.html#videos">Videos</a></li>
+  <ul>
+    <li><a href="/gallery.html#2D">2D (sort-first)</a></li>
+    <li><a href="/gallery.html#DB">DB (sort-last)</a></li>
+  </ul>
+  <li><a href="/gallery.html#screenshots">Screenshot</a></li>
+</ul>
+
+<a name="videos"></a>
 <h2>Videos</h2>
+<a name="videos2D"></a>
+<h3>2D (sort-first)</h3>
 <div class="gallery">
   <object width="425" height="344">
     <param name="movie"
@@ -22,24 +35,6 @@
     2D (or sort-first) parallel rendering. All rendering tasks execute on a
     single machine for demonstration purposes. A deployment configuration would
     use one GPU per window to parallelize the rendering.
-  </div>
-</div>
-<div class="gallery">
-  <object width="425" height="344">
-    <param name="movie"
-           value="http://www.youtube.com/v/1V69jqCcdpQ&ap=%2526fmt%3D18">
-    </param>
-    <param name="wmode" value="transparent"></param>
-    <embed src="http://www.youtube.com/v/1V69jqCcdpQ&ap=%2526fmt%3D18" 
-           type="application/x-shockwave-flash"
-           wmode="transparent"
-           width="425"
-           height="344">
-    </embed>
-  </object>
-  <div>
-    Parallel Volume Rendering using DB (sort-last) task decomposition with
-    eVolve.
   </div>
 </div>
 <div class="gallery">
@@ -64,6 +59,50 @@
 </div>
 
 <div class="flush_float"></div>
+<a name="videosDB"></a>
+<h3>DB (sort-last)</h3>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/1V69jqCcdpQ&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/1V69jqCcdpQ&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    Parallel Volume Rendering using DB (sort-last) task decomposition with
+    eVolve.
+  </div>
+</div>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/re7GJ0VMLqc&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/re7GJ0VMLqc&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    Polygonal rendering using two GPUs and dynamic DB (sort-last)
+    load-balancing. The tiling is adapted each frame automatically and
+    transparently to the application by Equalizer. The data set has 7.2M
+    triangles, and is colored differently on each GPU to illustrate the task
+    decomposition.
+  </div>
+</div>
+
+<div class="flush_float"></div>
+<a name="screenshots"></a>
 <h2>Screenshots</h2>
 <p>Click on the images to get a high resolution version.</p>
 <div class="gallery">
@@ -154,10 +193,11 @@
 <div class="flush_float"></div>
 
 <div class="footnote">
-  Volume data set courtesy of Computer Graphics Group, University of Erlangen,
-  Germany. 3D models courtesy
+  Volume data sets courtesy of Computer Graphics Group, University of Erlangen,
+  Germany, Computer Science Institute, University of Freiburg, Germany and
+  General Electric, USA. 3D models courtesy
   of <a href="http://www.cyberware.com">Cyberware</a>, Stereolithography Archive
-  at Clemson University
+  at Clemson University, <a href="http://www.xyzrgb.com/">XYZ RGB, Inc.</a>
   and <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
   Computer Graphics Laboratory</a>.
 
