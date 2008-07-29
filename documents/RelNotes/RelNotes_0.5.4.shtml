@@ -51,8 +51,10 @@
 <ul>
   <li>Added image compression and per-node transmit statistics overlay</li>
   <li>Added window attributes for accumulation buffer and AA samples</li>
-  <li>Automatic 2D and DB load-balancing</li>
+  <li>Automatic 2D and DB load-balancing (initial support)</li>
   <li>Automatic image compression for 'slow' (< 2GBit) connections</li>
+  <li>Improved statistics overlay appearance (auto-scaling, compression
+    time)</li>
 </ul>
 <p>0.5.3:</p>
 <ul>
@@ -111,7 +113,7 @@
 <ul>
   <li>Fixed a big memory leak in the packet handling code, as well as numerous
     small bug fixes and code cleanups</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1994798&group_id=170962&atid=856209"></a>1994798:
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1994798&group_id=170962&atid=856209">1994798</a>:
     Compound::getNode null pointer read</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1981854&group_id=170962&atid=856209">1981854</a>:
     AGL: PBuffer with Fullscreen broken</li>
@@ -134,6 +136,16 @@
   <li><a href="/documents/design/statisticsOverlay.html">Statistics
       Overlay</a></li>
 </ul>
+
+<h3>API Changes</h3>
+<p>0.5.4:</p>
+<p>
+  The <code>eqBase</code>, <code>eqNet</code> and <code>eqServer</code>
+  namespaces have been renamed to <code>eq::base</code>, <code>eq::net</code>
+  and <code>eq::server</code>, respectively. Application developers are
+  encouraged to make the necessary changes, but can
+  define <code>EQ_USE_DEPRECATED</code> if these changes are not feasible.
+</p>
 
 <h3>Removed Features</h3>
 <p>

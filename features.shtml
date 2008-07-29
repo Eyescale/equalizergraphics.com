@@ -137,7 +137,7 @@
   <td>0.5</td>
 </tr><tr>
   <td>compound load-balancing</td>
-  <td>?</td>
+  <td>svn</td>
 </tr><tr>
   <td><a href="/documents/design/compounds.html">cull compounds</a></td>
   <td>?</td>
