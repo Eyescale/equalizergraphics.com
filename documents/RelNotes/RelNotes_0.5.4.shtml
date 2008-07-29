@@ -49,7 +49,6 @@
 <h4>New Features</h4>
 <p>0.5.4:</p>
 <ul>
-  <li>Added image compression and per-node transmit statistics overlay</li>
   <li>Added window attributes for accumulation buffer and AA samples</li>
   <li>Automatic 2D and DB load-balancing (initial support)</li>
   <li>Automatic image compression for 'slow' (< 2GBit) connections</li>
