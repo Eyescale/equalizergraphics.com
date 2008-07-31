@@ -10,6 +10,7 @@
   <ul>
     <li><a href="/gallery.html#videos2D">2D (sort-first)</a></li>
     <li><a href="/gallery.html#videosDB">DB (sort-last)</a></li>
+    <li><a href="/gallery.html#videosOther">Other</a></li>
   </ul>
   <li><a href="/gallery.html#screenshots">Screenshot</a></li>
 </ul>
@@ -98,6 +99,48 @@
     transparently to the application by Equalizer. The data set has 7.2M
     triangles, and is colored differently on each GPU to illustrate the task
     decomposition.
+  </div>
+</div>
+
+<div class="flush_float"></div>
+<a name="videosOther"></a>
+<h3>Other</h3>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/FLvAUWAKJtI&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/FLvAUWAKJtI&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    EYE (or stereo) parallel rendering task decomposition. All rendering tasks
+    execute on a single machine for demonstration purposes. A deployment
+    configuration would use one GPU per window to parallelize the rendering.
+  </div>
+</div>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/rW7Z8Tuxjs0&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/rW7Z8Tuxjs0&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    Pixel-based parallel rendering task decomposition. All rendering tasks
+    execute on a single GPU for demonstration purposes. A deployment
+    configuration would use one GPU per window to parallelize the rendering.
   </div>
 </div>
 
@@ -194,10 +237,11 @@
 
 <div class="footnote">
   Volume data sets courtesy of Computer Graphics Group, University of Erlangen,
-  Germany, Computer Science Institute, University of Freiburg, Germany and
-  General Electric, USA. 3D models courtesy
-  of <a href="http://www.cyberware.com">Cyberware</a>, Stereolithography Archive
-  at Clemson University, <a href="http://www.xyzrgb.com/">XYZ RGB, Inc.</a>
+  Germany, Computer Science Institute, University of Freiburg, Germany, SFB 382
+  of the German Research Council (DFG) and General Electric, USA. 3D models
+  courtesy of <a href="http://www.cyberware.com">Cyberware</a>,
+  Stereolithography Archive at Clemson
+  University, <a href="http://www.xyzrgb.com/">XYZ RGB, Inc.</a>
   and <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
   Computer Graphics Laboratory</a>.
 

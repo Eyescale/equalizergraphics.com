@@ -215,6 +215,10 @@
 <div class="float_right"><a href="/images/EYE.png">
   <img src="/images/EYE-small.jpg" alt="An Eye compound"></a>
   <div class="label">A stereo compound</div>
+  <div class="label">
+    <a href="http://www.youtube.com/watch?v=FLvAUWAKJtI&fmt=18">Watch a
+    video</a>
+  </div>
 </div>
 <p>
   <b>Eye</b> decomposition is used during stereo rendering. The individual views
@@ -229,6 +233,10 @@
 <div class="float_right"><a href="/images/Pixel.png">
     <img src="/images/Pixel-small.jpg" alt="A Pixel compound"></a>
   <div class="label">A pixel compound</div>
+  <div class="label">
+    <a href="http://www.youtube.com/watch?v=rW7Z8Tuxjs0&fmt=18">Watch a
+    video</a>
+  </div>
 </div>
 <p>
   <b>Pixel</b> compounds are similar to 2D compounds, but the frustra
