@@ -58,7 +58,11 @@
 #ifndef NO_POLL
     <div class="poll">
       <div class="subnavigation"><center>
-        <a href="http://www.eyescale.ch/jobs.pdf">We are hiring!</a>
+          Open Equalizer Jobs:<br>
+          <a href="http://www.eyescale.ch/jobs.pdf">C++ Engineers,
+            Eyescale</a><br>
+          <a href="http://www.telejob.ch/telejob/offer.xml?offer=7877">PhD 
+            Position, Uni Z&uuml;rich</a>
       </center></div><p></p>
       <!-- Search Box  -->
       <form action="http://www.equalizergraphics.com/search.html"
