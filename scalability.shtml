@@ -287,8 +287,13 @@
 
 <h3>Parallel Compositing</h3>
 <div class="float_right"><a href="/images/directSend.png">
-  <img src="/images/directSend-small.jpg" alt="Direct Send Parallel Compositing"></a>
+  <img src="/images/directSend-small.jpg" 
+       alt="Direct Send Parallel Compositing"></a>
   <div class="label">Data flow for direct send compositing</div>
+  <div class="label">
+    <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">Watch a
+      video</a>
+  </div>
 </div>
 <p>
   Equalizer supports various parallel compositing algorithms, typically used
