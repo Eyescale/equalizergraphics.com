@@ -10,14 +10,14 @@
   <li><a href="/survey.html">Programming Guide</a>
     is the recommended reading for developers new to Equalizer
     (<a href="http://www.lulu.com/content/1359268">order a hardcopy</a>).</li>
+  <li><a href="/documents/Developer/doxies/index.html">API Documentation</a>,
+      automatically generated from the source code usyng doxygen. Covers only
+      partially the API.</li>
   <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
     Programming</a> is a presentation explaining the concepts and scope of
     the Equalizer API,
     <a href="/documents/ParallelGraphicsProgramming.pdf">pdf</a> or
     <a href="/documents/ParallelGraphicsProgramming.html">html</a>.</li>
-  <li><a href="/documents/Developer/doxies/index.html">Doxygen
-      documentation</a>, automatically generated from the source code. Covers
-      only partially the API.</li>
   <li><a href="/documents/Howtos/glutToEqualizer.html">Equalizer for GLUT
       Developers</a> provides a mapping of commonly used GLUT functions to
       their Equalizer counterparts</li>
