@@ -12,8 +12,8 @@
   over-simplified, a distributed, scalable, multipipe, multithreaded GLUT
   implementation. The <a href="/documents/Howtos/glutToEqualizer.html">Equalizer
     for GLUT Developers Howto</a> helps to find some pointers for GLUT
-  programmers. The <a href="/documents/Developer/doxies/index.html">doxygen
-    documentation</a> is an incomplete API reference.
+  programmers. The <a href="/documents/Developer/doxies/index.html">API 
+    reference</a> documents the most important classes and methods.
 </p>
 <p>
   Application developers use the Equalizer client library to write parallel,
