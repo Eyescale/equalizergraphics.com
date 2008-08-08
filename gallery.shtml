@@ -179,6 +179,24 @@
     configuration would use one GPU per window to parallelize the rendering.
   </div>
 </div>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
+           value="http://www.youtube.com/v/08R2QyfByTc&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/08R2QyfByTc&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    Multi-level task decomposition using sort-last and sort-first compounds with
+    2D load-balancing.
+  </div>
+</div>
 
 <div class="flush_float"></div>
 <a name="screenshots"></a>
