@@ -63,8 +63,8 @@
 </p>
 <p>
   Equalizer does not interfere with the application's OpenGL rendering
-  code. Equalizer requires at a minimum OpenGL 1.1 in order to run, but uses
-  later OpenGL features and extensions where available.
+  code. Equalizer requires at a minimum OpenGL version 1.1 in order to run, but
+  uses later OpenGL features and extensions where available.
 </p>
 <p>
   <a href="/compatibility.html">Compatibility matrix...</a>
