@@ -82,7 +82,7 @@
   <td>0.5</td>
 </tr><tr>
   <td>orthographic frustum support</td>
-  <td>svn</td>
+  <td>0.5.3</td>
 </tr><tr>
   <td>FBO support</td>
   <td>?</td>
@@ -137,7 +137,7 @@
   <td>0.5</td>
 </tr><tr>
   <td>compound load-balancing</td>
-  <td>svn</td>
+  <td>0.5.4, 0.5.5</td>
 </tr><tr>
   <td><a href="/documents/design/compounds.html">cull compounds</a></td>
   <td>?</td>

@@ -1,20 +1,28 @@
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_RELNOTES
 #define PAGE Release Notes
-#define SUBPAGE Release Notes for Equalizer 0.5.4
+#define SUBPAGE Release Notes for Equalizer 0.5.5
 
 #include "header.shtml"
 
+<!-- Release Checklist:
+     [ ] src/lib/client/version.h
+     [ ] src/Makefile, src/RELNOTES
+     [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
+         relnotes.shtml
+     [ ] doc/Developer/ProgrammingGuide
+  -->
+
 <p>
-  Welcome to Equalizer 0.5.4, a framework for the development and deployment of
-  parallel, scalable OpenGL applications. Equalizer 0.5.4 adds support for
-  automatic load-balancing.
+  Welcome to Equalizer 0.5.5, a framework for the development and deployment of
+  parallel, scalable OpenGL applications. Equalizer 0.5.5 facilitates window
+  system integration.
 </p>
 <p>
-  Equalizer 0.5.4 is a developer release, representing a stable snapshot of the
-  development tree after the 0.5 release. Equalizer 0.5.4 can be retrieved
-  using:<br>
-  <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-0.5.4</code>
+  Equalizer 0.5.5 is a developer release, representing a stable snapshot of the
+  development tree after the 0.5 release. Equalizer 0.5.5 can be retrieved
+  by updating the subversion trunk to revision 2??? or by using:<br>
+  <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-0.5.5</code>
 </p>
 
 <h3>Features</h3>
@@ -47,6 +55,12 @@
 </p>
 
 <h4>New Features</h4>
+<p>0.5.5:</p>
+<ul>
+  <li>New OSWindow interface to simplify window system integration</li>
+  <li>Add <code>eq::util::BitmapFont</code> as a simple helper to draw 2D bitmap
+    fonts</li>
+</ul>
 <p>0.5.4:</p>
 <ul>
   <li>Added window attributes for accumulation buffer and AA samples</li>
@@ -77,6 +91,11 @@
 </ul>
 
 <h4>Performance Improvements</h4>
+<p>0.5.5:</p>
+<ul>
+  <li>Assertions are disabled in release builds</li>
+  <li>Switch to CriticalSection for Win32 locks</li>
+</ul>
 <p>0.5.3:</p>
 <ul>
   <li>Improved overall performance by using atomic operations for reference
@@ -91,9 +110,20 @@
 
 <h4>Bug Fixes</h4>
 <p>
-  Equalizer 0.5.4 includes various bugfixes over the 0.5 release, including the
+  Equalizer 0.5.5 includes various bugfixes over the 0.5 release, including the
   following:
 </p>
+<p>0.5.5:</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2032631&group_id=170962&atid=856209">2032631</a>:
+    Nullpointer exception and crash</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2032643&group_id=170962&atid=856209">2032643</a>:
+    process-local server object gets not deleted</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2033860&group_id=170962&atid=856209">2033860</a>:
+    frameDrawFinish called too early and too often</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2149563&group_id=170962&atid=856209">2149563</a>:
+    WGL: Update region is reset by event handler</li>
+</ul>
 <p>0.5.4:</p>
 <ul>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2026837&group_id=170962&atid=856209">2026837</a>:
@@ -127,7 +157,7 @@
 
 <h4>Documentation</h4>
 <p>
-  The <a href="/survey.html">Programming Guide</a> has been extended to 57
+  The <a href="/survey.html">Programming Guide</a> has been extended to 58
     pages. In addition, the following documentation has been added:
 </p>
 <p>0.5.1:</p>
@@ -137,6 +167,22 @@
 </ul>
 
 <h3>API Changes</h3>
+<p>0.5.5:</p>
+<p>
+  The new <code>OSWindow</code> interface moved window system depend
+  functionality from the <code>eq::Window</code> to different subclasses
+  of <code>OSWindow</code>. Applications integrating with their own windowing
+  code have to implement an <code>OSWindow</code> containing all the window
+  system code, and instantiate this <code>OSWindow</code>
+  in <code>Window::configInitOSWindow</code>. Please refer to the Programming
+  Guide for a detailed description of the Window System Interface.
+</p>
+<p>
+  The <code>OSWindow</code> interface also caused some cleanups in the event
+  handling. Most notably, the classes <code>ChannelEvent</code>
+  and <code>WindowEvent</code> are now unneeded and have been removed.
+</p>
+
 <p>0.5.4:</p>
 <p>
   The <code>eqBase</code>, <code>eqNet</code> and <code>eqServer</code>
@@ -192,12 +238,11 @@
 
 <h3>Documentation</h3>
 <p>
-  The
-  <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">Programming
-    Guide</a> is part of the Equalizer and can be found
-  <a href="/survey.html">online</a>. Equalizer
+  The Programming Guide is available as a 
+  <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">hard-copy</a>
+  and <a href="/survey.html">online</a>. Equalizer
   does not yet have an Users Guide. The shipped
-  <a href="/cgi-bin/viewvc.cgi/tags/release-0.5.4/examples/">examples</a> provides a reference for developing or porting
+  <a href="/cgi-bin/viewvc.cgi/tags/release-0.5.5/examples/">examples</a> provides a reference for developing or porting
   applications. The <a href="/doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
   source code is a last resort for information.
@@ -218,4 +263,4 @@
 </p>
 
 #include "footer.shtml"
-<!-- $Id: RelNotes_0.5.4.shtml 1538 2007-11-19 13:10:33Z eile $ -->
+<!-- $Id: RelNotes_0.5.5.shtml 1538 2007-11-19 13:10:33Z eile $ -->
