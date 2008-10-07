@@ -167,7 +167,7 @@ server
 
             viewport [ viewport ]            // wrt parent compound, sort-first
             range    [ float float ]         // DB-range for sort-last
-            pixel    [ int int ]             // pixel decomposition (step size)
+            pixel    [ int int int int ]     // pixel decomposition (x y w h)
             eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
 
             loadBalancer 
@@ -311,7 +311,7 @@ server
     <!-- /* --><pre>
       compound
       {
-          pixel    [ int int ]             // pixel decomposition (step size)
+          pixel    [ int int int int ]     // pixel decomposition (x y w h)
       }
     </pre><!-- */ -->
   </li>  

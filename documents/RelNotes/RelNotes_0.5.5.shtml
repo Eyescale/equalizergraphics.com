@@ -15,8 +15,8 @@
 
 <p>
   Welcome to Equalizer 0.5.5, a framework for the development and deployment of
-  parallel, scalable OpenGL applications. Equalizer 0.5.5 facilitates window
-  system integration.
+  parallel, scalable OpenGL applications. Equalizer 0.5.5 introduces 2D pixel
+  compounds and facilitates window system integration.
 </p>
 <p>
   Equalizer 0.5.5 is a developer release, representing a stable snapshot of the
@@ -57,6 +57,7 @@
 <h4>New Features</h4>
 <p>0.5.5:</p>
 <ul>
+  <li>Initial support for 2D pixel compound kernels</li>
   <li>New OSWindow interface to simplify window system integration</li>
   <li>Add <code>eq::util::BitmapFont</code> as a simple helper to draw 2D bitmap
     fonts</li>
@@ -157,7 +158,7 @@
 
 <h4>Documentation</h4>
 <p>
-  The <a href="/survey.html">Programming Guide</a> has been extended to 58
+  The <a href="/survey.html">Programming Guide</a> has been extended to 59
     pages. In addition, the following documentation has been added:
 </p>
 <p>0.5.1:</p>
@@ -199,6 +200,8 @@
 
 <h3>Known Bugs</h3>
 <ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2151376&group_id=170962&atid=856209">2151376</a>:
+    Irregular Pixel kernels do not work</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003195&group_id=170962&atid=856209">2003195</a>:
     Ortho frustra ignores eye offset</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003132&group_id=170962&atid=856209">2003132</a>:

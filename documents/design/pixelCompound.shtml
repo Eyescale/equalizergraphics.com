@@ -47,8 +47,10 @@ State: Implemented in 0.5
     {
     public:
         [...]
-        uint32_t index;
-        uint32_t size;
+        uint32_t x;
+        uint32_t y;
+        uint32_t w;
+        uint32_t h;
     };
 
     const Pixel& Channel::getPixel() const;
@@ -58,7 +60,7 @@ State: Implemented in 0.5
 <!-- /* --><pre>
     compound
     {
-        pixel    [ int int ]             // pixel decomposition (index size)
+        pixel    [ int int int int ]  // pixel decomposition (x y width height)
     }
 </pre><!-- */ -->
 
@@ -70,7 +72,7 @@ State: Implemented in 0.5
   them are: lines, points, sprites, glDrawPixels, glBitmap, glPolygonStipple.
 </p>
 <p>
-  Multi-level database/pixel compounds do not work correctly.
+  <a href="https://sourceforge.net/tracker/index.php?func=detail&aid=2151376&group_id=170962&atid=856209">2151376</a>: Irregular Pixel kernels do not work
 </p>
 
 #include "footer.shtml"

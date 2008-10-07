@@ -200,7 +200,7 @@
 
   <pre>
     override Channel::frameAssembly()<br>
-    - compute union of frames -> uPVP (unionn pixel viewport);<br>
+    - compute union of frames -> uPVP (union pixel viewport);<br>
     * read image of uPVP<br>
     * glClear( uPVP )<br>
     - push GL state, set up blending<br>
