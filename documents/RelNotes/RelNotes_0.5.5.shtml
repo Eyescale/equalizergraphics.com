@@ -15,14 +15,14 @@
 
 <p>
   Welcome to Equalizer 0.5.5, a framework for the development and deployment of
-  parallel, scalable OpenGL applications. Equalizer 0.5.5 introduces 2D pixel
-  compounds and facilitates window system integration.
+  parallel, scalable OpenGL applications. Equalizer 0.5.5 introduces pixel
+  compounds using 2D kernels and facilitates window system integration.
 </p>
 <p>
   Equalizer 0.5.5 is a developer release, representing a stable snapshot of the
   development tree after the 0.5 release. Equalizer 0.5.5 can be retrieved by
-  updating the subversion trunk to revision 2??? (<code>svn up -r 2</code>) or
-  by using:<br>
+  updating the subversion trunk to revision 2214 (<code>svn up -r 2214</code>)
+  or by using:<br>
   <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-0.5.5</code>
 </p>
 
@@ -182,7 +182,8 @@
 <p>
   The <code>OSWindow</code> interface also caused some cleanups in the event
   handling. Most notably, the classes <code>ChannelEvent</code>
-  and <code>WindowEvent</code> are now unneeded and have been removed.
+  and <code>WindowEvent</code> are now unneeded and have been removed. The
+  former base class <code>Event</code> is now used in the appropriate places.
 </p>
 
 <p>0.5.4:</p>
@@ -222,9 +223,14 @@
 <h3>Supported Platforms</h3>
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
-  system, including all Unix variants and the Windows operating system.  A 
+  system, including all Unix variants and the Windows operating system. A 
   <a href="/compatibility.html">compatibility matrix</a> can be found on the
-  Equalizer website. Version 0.5 has been tested on:
+  Equalizer website.
+</p>
+<p>
+  Equalizer requires at least <a href="http://www.opengl.org">OpenGL 1.1</a>,
+  but uses newer OpenGL features when available. Version 0.5.0 has been tested
+  on:
 </p>
 <h4>Operating System Support</h4>
 <ul>
@@ -261,7 +267,7 @@
 </p>
 <p>
   Commercial support, custom software development and porting services are
-  available from <a href="http://www.eyescale.ch">EyeScale</a>. Please contact
+  available from <a href="http://www.eyescale.ch">Eyescale</a>. Please contact
   <a href="mailto:info@eyescale.ch?subject=Equalizer%20support">info@eyescale.ch</a>
   for further information.
 </p>
