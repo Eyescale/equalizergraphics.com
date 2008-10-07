@@ -6,11 +6,11 @@
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [ ] src/lib/client/version.h
+     [x] src/lib/client/version.h
      [ ] src/Makefile, src/RELNOTES
      [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
          relnotes.shtml
-     [ ] doc/Developer/ProgrammingGuide
+     [x] doc/Developer/ProgrammingGuide
   -->
 
 <p>
@@ -20,8 +20,9 @@
 </p>
 <p>
   Equalizer 0.5.5 is a developer release, representing a stable snapshot of the
-  development tree after the 0.5 release. Equalizer 0.5.5 can be retrieved
-  by updating the subversion trunk to revision 2??? or by using:<br>
+  development tree after the 0.5 release. Equalizer 0.5.5 can be retrieved by
+  updating the subversion trunk to revision 2??? (<code>svn up -r 2</code>) or
+  by using:<br>
   <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-0.5.5</code>
 </p>
 
@@ -243,8 +244,8 @@
 <p>
   The Programming Guide is available as a 
   <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">hard-copy</a>
-  and <a href="/survey.html">online</a>. Equalizer
-  does not yet have an Users Guide. The shipped
+  (0.5.0 only) and <a href="/survey.html">online</a>. Equalizer does not yet
+  have an Users Guide. The shipped
   <a href="/cgi-bin/viewvc.cgi/tags/release-0.5.5/examples/">examples</a> provides a reference for developing or porting
   applications. The <a href="/doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
