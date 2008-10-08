@@ -28,13 +28,13 @@ State: Design
 
 <h2>Implementation</h2>
 <p>
-  Loader creates view for each wall or projection for backward
+  The loader creates view for each wall or projection for backward
   compatibility. Views are registered by the application node, since it is the
   node modifying the data at run-time. Views track their dirty status and are
   commited at the beginning of each frame.
 </p>
 <p>
-  Per-view head matrix? How to group views 
+  Per-view head matrix? How to group views with a single head matrix?
 </p>
 
 <h2>API</h2>

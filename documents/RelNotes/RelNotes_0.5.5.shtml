@@ -6,9 +6,8 @@
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [x] src/lib/client/version.h
-     [ ] src/Makefile, src/RELNOTES
-     [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
+     [x] src/lib/client/version.h, src/Makefile, src/RELNOTES, src/Doxyfile
+     [x] downloads/developers.shtml, downloads/source.shtml, features.shtml,
          relnotes.shtml
      [x] doc/Developer/ProgrammingGuide
   -->
