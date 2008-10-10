@@ -15,44 +15,83 @@ State: Design
 <p>
   The purpose of this API is to give read and write access to the views of a
   configuration. A view is one coherent image seen by the user of an Equalizer
-  application.
+  application. Most commonly changed views are windowed views, i.e., views not
+  belonging to a projection system.
 </p>
 <p>
   A configuration has one or more views. A view is determined by the frustum
-  (wall or projection description), stereo mode and eye separation.
+  (wall or projection description), eye separation and stereo mode (on/off). A
+  view is uniquely assigned to one compound and possibly one destination
+  channel.
 </p>
 <p>
-  The list of views is immutable. Each parameter of a view is writable, and
-  takes effect for the next frame.
+  The config's view vector is immutable. Each view is mutable, and changes take
+  effect for the next frame. Changing a view makes only sense for views which
+  are not linked to a physical projection system, typically views of appNode
+  channels.
 </p>
 
 <h2>Implementation</h2>
+
 <p>
-  The loader creates view for each wall or projection for backward
-  compatibility. Views are registered by the application node, since it is the
-  node modifying the data at run-time. Views track their dirty status and are
-  commited at the beginning of each frame.
+  Create new eq::View class. Use this in compound for the wall, projection
+  and eye base. Move eye computations to view. View is only valid if
+  either wall or projection was set. The eye base is inherited from parents or
+  config, and set in valid views during Compound::init.
 </p>
 <p>
-  Per-view head matrix? How to group views with a single head matrix?
+  The eye positions are updated when the head matrix changes or the view is
+  sync'ed to a new version.
+</p>
+<p>
+  A view is a distributed object registered by the application node, which will
+  modify the data at run-time. Views track their dirty status and are committed
+  at the beginning of each frame. The view data has to be send to the appNode
+  during config creation by the server.
+</p>
+
+
+<h3>Field-of-View Updates</h3>
+<p>
+  Currently, the wall or projection is updated by the server when a destination
+  channel is resized. This update should be done by the application, since it is
+  owning the view now.
+</p>
+<!-- /* --><pre>
+  Window::processEvent receives WINDOW_RESIZE event
+  window PVP is set
+  channel PVP's are updated, channel RESIZE event is send
+
+  Channel::processEvent receives CHANNEL_RESIZE event
+  channel sends event to config with channel view id
+
+  Config::processEvent receives CHANNEL_RESIZE event
+  if base view is unknown
+      create and save new base view (using view and channel pvp)
+  else
+      update view using base view and new channel pvp
+</pre><!-- */ -->
+<p>
+  Compound FOV update hint does no longer exist.
 </p>
 
 <h2>API</h2>
 <!-- /* --><pre>
   const ViewVector& Config::getViews();
+  const View*       Channel::getView() const;
   
   class View : public net::Object
   {
   public:
+      void setName( const std::string& name );
+      const std:string& getName() const;
+
       void setWall( const Wall& wall );
       const Wall& getWall() const;
       // same for Projection
 
       void setEyeBase( const float eyeBase );
       float getEyeBase() const;
-
-      void setStereoMode( const [Compound::]StereoMode mode );
-      StereoMode getStereoMode() const;
   };
 </pre><!-- */ -->
 
@@ -64,17 +103,12 @@ State: Design
   config
   {
       node {...}
-      view
-      {
-          name "string"
-          wall {...}
-          projection {...}
-          eye_base  float
-      }
       compound
       {
-          channel "channel-name"
-          view    "view-name"
+          channel    "channel-name"
+          wall       {...}
+          projection {...}
+          eye_base   float  // inherit from config
           ...
       }
   }
@@ -83,7 +117,22 @@ State: Design
 <a name="Issues"></a>
 <h2>Open Issues</h2>
 <p>
-  TBD
+  Stereo mode not implemented. Might not belong to view, but to config or
+  compound.
+</p>
+<p>
+  Identification of views, i.e., which view do I want to modify and which not?
+</p>
+<p>
+  Per-view head matrix? How to group multiple views with a single head matrix
+  (i.e. Cave)?
+</p>
+<p>
+  Camera assignment? App wants to use multiple cameras. Each camera is
+  'attached' to one or more views. Solution could be to allow sub-classing of
+  eq::View, which is problematic since the server has a non-subclassed slave
+  instance. Another solution is to have an ObjectVersion (aka userdata) per
+  view. Problem of view identication (which camera for which view) remains.
 </p>
 
 #include "footer.shtml"
