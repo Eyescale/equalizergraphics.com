@@ -1,10 +1,18 @@
 #define S_EVENTS
 #define PAGE Events
 
+#define NOPOLL
 #include "header.shtml"
 
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
+  <tr>
+    <td nowrap>10. December 2008</td>
+    <td><a href="http://www.siggraph.org/asia2008/">SIGGRAPH Asia 2008</a>,
+      Singapore</td>
+    <td>Equalizer introduction and presentation during the Interactive Massive
+      Model Rendering Course</td>
+  </tr>
   <tr>
     <td nowrap>19.-24. October 2008</td>
     <td><a href="http://vis.computer.org/VisWeek2008/vis/index.html">IEEE
