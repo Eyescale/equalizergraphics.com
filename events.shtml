@@ -6,6 +6,12 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td nowrap>19.-24. October 2008</td>
+    <td><a href="http://vis.computer.org/VisWeek2008/vis/index.html">IEEE
+        Visualization 2008</a>, Columbus, Ohio</td>
+    <td>Equalizer presentation at the Interactive Demo Lab</td>
+  </tr>
+  <tr>
     <td nowrap>7.-9. April 2008</td>
     <td>4th NVidia Round Table Meeting</td>
     <td>The NV RTM is a Bi-Directional Technology Meeting held this year in
