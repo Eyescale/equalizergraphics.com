@@ -1,7 +1,7 @@
 #define S_EVENTS
 #define PAGE Events
 
-#define NOPOLL
+#define NO_POLL
 #include "header.shtml"
 
 <table>
