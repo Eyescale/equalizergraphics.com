@@ -63,11 +63,12 @@ State: Design
   channel PVP's are updated, channel RESIZE event is send
 
   Channel::processEvent receives CHANNEL_RESIZE event
-  channel sends event to config with channel view id
+  transforms event into VIEW_RESIZE event, containing view id
+  sends event to config
 
-  Config::processEvent receives CHANNEL_RESIZE event
+  Config::processEvent receives VIEW_RESIZE event
   if base view is unknown
-      create and save new base view (using view and channel pvp)
+      create and save new base view (using view data and size)
   else
       update view using base view and new channel pvp
 </pre><!-- */ -->

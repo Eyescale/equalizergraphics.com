@@ -90,6 +90,14 @@ a img:hover
   border-style: solid;
 }
 
+img.inline, img.inline:hover, a img.inline, a img.inline:hover
+{ 
+  padding: 0;
+  border: 0;
+  margin: 0;
+  text-align: center;
+}
+
 div.image {
     background-color: transparent;
     text-align: center;
