@@ -84,6 +84,9 @@
   <td>orthographic frustum support</td>
   <td>0.5.3</td>
 </tr><tr>
+  <td><a href="/documents/design/view.html">View API</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>FBO support</td>
   <td>?</td>
 </tr><tr>

@@ -2,7 +2,7 @@
 #define S_DOCUMENTATION_DEVELOPER
 #define PAGE Documentation
 #define SUBPAGE Developer
-#define TITLE View/Camera API
+#define TITLE View API
 
 #include "header.shtml"
 
@@ -84,9 +84,6 @@ State: Design
   class View : public net::Object
   {
   public:
-      void setName( const std::string& name );
-      const std:string& getName() const;
-
       void setWall( const Wall& wall );
       const Wall& getWall() const;
       // same for Projection
@@ -101,18 +98,12 @@ State: Design
   Additional file format:
 </p>
 <!-- /* --><pre>
-  config
-  {
-      node {...}
       compound
       {
-          channel    "channel-name"
-          wall       {...}
-          projection {...}
+          ...
           eye_base   float  // inherit from config
           ...
       }
-  }
 </pre><!-- */ -->
 
 <a name="Issues"></a>

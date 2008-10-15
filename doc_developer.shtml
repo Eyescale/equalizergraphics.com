@@ -61,8 +61,10 @@
   features will be release in the next version.
 </p>
 <ul>
+  <li><a href="/documents/design/view.html">View API</a>
+    provides read and write access to the views of a configuration.</li>
   <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a>
-    explains the statistics overlay rendered in debug builds.</li>
+    explains the statistics overlay.</li>
 </ul>
 
 <h4>Version 0.5</h4>
