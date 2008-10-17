@@ -73,12 +73,11 @@
 <p>
   The virtual method <code>useMessagePump</code> is called by Equalizer during
   application and pipe thread initialization (before configInit!) to determine
-  if the application or pipe thread shall automatically dispatch OS events. For
-  non-threaded pipes, the method is not called. On WGL and GLX, messages are
-  dispatched in the application and each pipe thread. On AGL, events are
-  dispatched only on the application thread, i.e., Pipe::useMessagePump is never
-  called. If useMessagePump returns false, the application has to dispatch
-  events.
+  if the pipe thread shall automatically dispatch OS events. For non-threaded
+  and AGL pipes, the method affects the node thread. On WGL and GLX, messages
+  are dispatched in the application and each pipe thread. On AGL, events are
+  dispatched only on the application thread. If useMessagePump returns false,
+  the application has to dispatch events.
 </p>
 
 <h2>Customized Event Handling</h2>
@@ -103,7 +102,6 @@
   class WindowEvent;
   struct ConfigEvent;
 
-  virtual bool Client::useMessagePump() { return true; }
   virtual bool Pipe::useMessagePump()   { return true; }
 
   virtual void Pipe::initEventHandler();
