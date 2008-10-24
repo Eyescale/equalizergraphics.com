@@ -57,11 +57,6 @@
     </div>
 #ifndef NO_POLL
     <div class="poll">
-      <div class="subnavigation"><center>
-          Open Equalizer Jobs:<br>
-          <a href="http://www.telejob.ch/telejob/offer.xml?offer=7877">PhD 
-            Position, Uni Z&uuml;rich</a>
-      </center></div><p></p>
       <!-- Search Box  -->
       <form action="http://www.equalizergraphics.com/search.html"
             id="searchbox_003884678311182543665:v1o4knw6fuq">
@@ -73,8 +68,23 @@
       </form>
       <script type="text/javascript"
               src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
+      <!-- Jobs -->
+      <div class="subnavigation"><center>
+          <b>Open Equalizer Jobs</b><br>
+          <a href="http://www.telejob.ch/telejob/offer.xml?offer=7877">PhD 
+            Position, Uni Z&uuml;rich</a>
+      </center></div>
+      <div class="subnavigation"><center>
+          <b>What's new?</b><br>
+          <a href="/changes.html">Latest Website Changes</a><br>
+          <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/?view=log">Latest
+            Source Code Changes</a>
+      </center></div>
       <!-- Poll  -->
-      <iframe src="http://polls.blogflux.com/poll.php?poll=28115&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-28115.html">Take the poll</a><br><br><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
+      <div class="subnavigation">
+        <b>Poll</b><br>
+        <iframe src="http://polls.blogflux.com/poll.php?poll=28115&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-28115.html">Take the poll</a><br><br><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
+      </div>
     </div>
 #endif
 
@@ -84,8 +94,7 @@
       <a href=QUOTE( SITE_EMAIL ) class="rule">Questions?</a>
       <a href="/impressum.html" class="rule">Impressum</a>
 #ifndef S_CHANGES
-      <a href=CHANGEURL class="rule">Changed UPDATE</a>
-      <a href="/changes.html">What's new?</a>
+      <a href=CHANGEURL>Changed UPDATE</a>
 #endif
     </div>
 

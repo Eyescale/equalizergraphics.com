@@ -9,32 +9,52 @@
   Developer releases are regular, minor versions in-between major
   releases. Typically we tag a developer release after a feature has been
   implemented and tested. This ensures a reasonable stability, while providing
-  early access to new features.
+  early access to new features. 
 </p>
 <p>
-  We do not provide packages of developer releases. Developer releases are
-  snapshots of the source code, not the full trunk as for major releases. They
-  can be checked out from the
-  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/">subversion
-    repository</a> using:<br>
-    <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
+  Developer releases can be checked out from the
+  <a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags">subversion
+    repository</a> or by downloading the source code below. The following
+  developer releases, based on the last major release, are available:
 </p>
-<p>
-  The following developer releases based on the last major release are
-  available:
-</p>
-<ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.5.5.html"><b>Version 
-        0.5.5</b></a>, 07. October 2008</li>
-  <li><a href="/documents/RelNotes/RelNotes_0.5.4.html"><b>Version 
-        0.5.4</b></a>, 29. July 2008</li>
-  <li><a href="/documents/RelNotes/RelNotes_0.5.3.html"><b>Version 
-        0.5.3</b></a>, 04. July 2008</li>
-  <li><a href="/documents/RelNotes/RelNotes_0.5.2.html"><b>Version
-        0.5.2</b></a>, 16. June 2008</li>
-  <li><a href="/documents/RelNotes/RelNotes_0.5.1.html"><b>Version
-        0.5.1</b></a>, 16. May 2008</li>
-</ul>
+<table>
+  <tr><th>Version</th><th>Release Notes and Date</th><th>Source Code</th></tr>
+  <tr>
+    <td>0.5.5</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.5.5.html">07. October 
+        2008</a></td>
+    <td>
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/tags/release-0.5.5.tar.gz?view=tar">release-0.5.5.tar.gz</a>
+  </tr>
+
+  <tr>
+    <td>0.5.4</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.5.4.html">29. July 2008</a></td>
+    <td>
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/tags/release-0.5.4.tar.gz?view=tar">release-0.5.4.tar.gz</a>
+  </tr>
+
+  <tr>
+    <td>0.5.3</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.5.5.html">04. July 2008</a></td>
+    <td>
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/tags/release-0.5.3.tar.gz?view=tar">release-0.5.3.tar.gz</a>
+  </tr>
+
+  <tr>
+    <td>0.5.2</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.5.2.html">16. June 2008</a></td>
+    <td>
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/tags/release-0.5.2.tar.gz?view=tar">release-0.5.2.tar.gz</a>
+  </tr>
+
+  <tr>
+    <td>0.5.1</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.5.1.html">16. Mai 2008</a></td>
+    <td>
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/tags/release-0.5.1.tar.gz?view=tar">release-0.5.1.tar.gz</a>
+  </tr>
+</table>
 
 #include "footer.shtml"
 <!-- $Id$ -->

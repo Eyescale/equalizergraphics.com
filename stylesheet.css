@@ -196,6 +196,7 @@ div.subnavigation {
     background-color: #bbbbbb;
     padding: 2px;
     font-size: small;
+    border: 1px solid #cccccc;
 }
 
 div.subnavigation a:hover { 
