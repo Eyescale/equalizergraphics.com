@@ -307,6 +307,12 @@
 #endif
             >Contributions</a></p>
 
+      <p><a href="/survey.html"
+#ifdef S_SURVEY
+            class="used"
+#endif
+            >Survey</a></p>
+
       <!-- social bookmark sites -->
       <div class="social">
         <script type="text/javascript">addthis_pub  = 'eile';</script>
