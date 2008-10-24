@@ -74,11 +74,13 @@
           <a href="http://www.telejob.ch/telejob/offer.xml?offer=7877">PhD 
             Position, Uni Z&uuml;rich</a>
       </center></div>
+      <!-- What's new? -->
       <div class="subnavigation"><center>
-          <b>What's new?</b><br>
+          <b>What's New?</b><br>
           <a href="/changes.html">Latest Website Changes</a><br>
           <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/?view=log">Latest
-            Source Code Changes</a>
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer's Blog</a>
       </center></div>
       <!-- Poll  -->
       <div class="subnavigation">
@@ -304,8 +306,6 @@
             class="used"
 #endif
             >Contributions</a></p>
-
-      <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
 
       <!-- social bookmark sites -->
       <div class="social">
