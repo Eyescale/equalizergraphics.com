@@ -14,11 +14,10 @@
 <p>
   The subversion repository gives access to the latest source code, and should
   be used by developers modifying the Equalizer source code or interested in the
-  latest features. The tree can be checked out
-  using <a href="http://subversion.tigris.org/">subversion</a>:<br>
-  <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk/src
-    Equalizer</code>. We try to keep the svn tree stable and encourage
-  developers to use the svn tree.
+  latest features. The tree can be checked out using
+  <a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk/src">subversion</a>.
+  We try to keep the svn tree stable and encourage developers to use the svn
+  tree, or at least a developer version.
 </p>
 <p>
   Make sure you check out <code>trunk/src</code> only, not the top-level

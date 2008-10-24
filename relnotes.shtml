@@ -28,14 +28,6 @@
   implemented and tested. This ensures a reasonable stability, while providing
   early access to new features.
 </p>
-<p>
-  We do not provide packages of developer releases. Developer releases are
-  snapshots of the source code, not the full trunk as for major releases. They
-  can be checked out from the
-  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/">subversion
-    repository</a> using:<br>
-    <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-X.Y.Z</code>
-</p>
 <ul>
   <li><a href="documents/RelNotes/RelNotes_0.5.5.html"><b>Version 0.5.5</b></a>,
     07. October 2008</li>

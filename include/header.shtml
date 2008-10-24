@@ -40,23 +40,8 @@
   </head>
 
   <body>
-    <div class="header">
-      <a name="top"></a>
-      <h1>
-#ifdef TITLE
-      TITLE
-#elif defined (SUBPAGE)
-      SUBPAGE
-#elif defined (PAGE)
-      PAGE
-#else
-#  error No page title defined
-#endif
-        <img src="/images/Equalizer.png" alt="Equalizer logo">
-      </h1>
-    </div>
-#ifndef NO_POLL
     <div class="poll">
+        <img src="/images/Equalizer.png" alt="Equalizer logo">
       <!-- Search Box  -->
       <form action="http://www.equalizergraphics.com/search.html"
             id="searchbox_003884678311182543665:v1o4knw6fuq">
@@ -68,6 +53,7 @@
       </form>
       <script type="text/javascript"
               src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
+#ifndef NO_POLL
       <!-- Jobs -->
       <div class="subnavigation"><center>
           <b>Open Equalizer Jobs</b><br>
@@ -87,8 +73,22 @@
         <b>Poll</b><br>
         <iframe src="http://polls.blogflux.com/poll.php?poll=28115&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-28115.html">Take the poll</a><br><br><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
       </div>
-    </div>
 #endif
+    </div>
+    <div class="header">
+      <a name="top"></a>
+      <h1>
+#ifdef TITLE
+      TITLE
+#elif defined (SUBPAGE)
+      SUBPAGE
+#elif defined (PAGE)
+      PAGE
+#else
+#  error No page title defined
+#endif
+      </h1>
+    </div>
 
     <!-- Footer line -->
     <div class="footer">

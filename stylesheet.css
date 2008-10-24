@@ -141,13 +141,12 @@ div.header
     vertical-align: middle;
     background-color: #aaaaaa;
     border: 0;
-    padding: 0;
+    padding: .5em;
     padding-left: 10px;
     margin-top: 0;
     margin-left: 10em;
     margin-right: 0;
     margin-bottom: 0;
-    min-height: 78px;
 }
 
 div.header img, div.header a img:hover
