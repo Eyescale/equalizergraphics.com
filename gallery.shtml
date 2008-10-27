@@ -163,6 +163,26 @@
 <div class="gallery">
   <object width="425" height="344">
     <param name="movie"
+           value="http://www.youtube.com/v/ag3DAN7nqG8&ap=%2526fmt%3D18">
+    </param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/ag3DAN7nqG8&ap=%2526fmt%3D18" 
+           type="application/x-shockwave-flash"
+           wmode="transparent"
+           width="425"
+           height="344">
+    </embed>
+  </object>
+  <div>
+    DPlex (time-multiplex, AFR) parallel rendering task decomposition. All
+    rendering tasks execute on a single machine for demonstration purposes. A
+    deployment configuration would use one GPU per window to parallelize the
+    rendering.
+  </div>
+</div>
+<div class="gallery">
+  <object width="425" height="344">
+    <param name="movie"
            value="http://www.youtube.com/v/rW7Z8Tuxjs0&ap=%2526fmt%3D18">
     </param>
     <param name="wmode" value="transparent"></param>

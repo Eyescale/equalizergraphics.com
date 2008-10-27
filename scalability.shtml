@@ -250,15 +250,19 @@
 <div class="float_right"><a href="/images/DPlex.png">
     <img src="/images/DPlex-small.jpg" alt="A DPlex compound"></a>
   <div class="label">A DPlex compound</div>
+  <div class="label">
+    <a href="http://www.youtube.com/watch?v=ag3DAN7nqG8&fmt=18">Watch a
+    video</a>
+  </div>
 </div>
 <p>
   <b>DPlex</b> time-multiplexes multiple rendering resources to produce a steady
-  stream of output images. The rendered images are simply copied to the
-  destination view. This mode provides very good scalability but introduces
+  stream of output images. The rendered images are copied to the destination
+  view, and the destination window is load-balanced by Equalizer to provide a
+  smooth framerate. This mode provides very good scalability but introduces
   latency into the rendering. Depending on the application, the additional
   latency is compensated by the higher frame rate. The AFR (Alternate Frame
-  Rendering) mode of multi-GPU systems implements this feature in hardware. This
-  feature is not yet implemented.
+  Rendering) mode of multi-GPU systems implements this feature in hardware.
 </p><div class="flush_float"></div>
 
 <a name="advanced"></a>
