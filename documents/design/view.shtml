@@ -8,7 +8,7 @@
 
 <p>
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-State: Design
+State: Implemented in svn
 </p>
 
 <h2>Overview</h2>
@@ -76,6 +76,46 @@ State: Design
   Compound FOV update hint does no longer exist.
 </p>
 
+<h3>Origin for 2D Operations</h3>
+<p>
+  Often 3D applications perform additional 2D drawing, for example a HUD,
+  statistics or a GUI. These operations are to be performed not per view, but on
+  the logical view, i.e., the whole projection area. Often even non-planar
+  projection systems, e.g., a curved screen, are considered as one 'flat' 2D
+  view in this context.
+</p>
+<p>
+  The origin is an arbitrary (for 3D rendering) offset of the channel with
+  respect to the virtual 2D origin. Multiple channels may 'overlap' one another,
+  e.g., they might have the same origin in the case of a configuration with two
+  powerwalls. Each channel can query the absolute origin in pixels.
+</p>
+<p>
+  The total size of the virtual 2D space is needed for some 2D operations. One
+  configuration might have multiple 2D areas (screens), e.g., a display wall
+  driven from a master (application) node. The size of a screen is automatically
+  determined by Equalizer.
+</p>
+<p>
+  The origin is configured using the origin parameter of a compound. The origin
+  is the absolute position with respect to the 2D origin.
+</p>
+<p>
+  A planar wall can be configured by using a wall description for the entire
+  wall and viewports for each destination channel (segment). In this case, the
+  origin can be computed automatically from the channel's pixel viewport and the
+  compound's inherit viewport. A configuration might overwrite this value using
+  the origin parameter, if the 2D coordinate system is not consistent with the
+  planar wall coordinates.
+</p>
+<p>
+  Although the origin is a view parameter, stored in 
+  <code>eq::server::View</code>, it is not yet part of the 
+  <code>eq::View</code>. The main reason is that there is currently no use case
+  for setting or getting the view's origin, thus it is left out until a use case
+  is presented.
+</p>
+
 <h2>API</h2>
 <!-- /* --><pre>
   const ViewVector& Config::getViews();
@@ -91,6 +131,10 @@ State: Design
       void setEyeBase( const float eyeBase );
       float getEyeBase() const;
   };
+
+  const vmml::Vector2i& Channel::getScreenOrigin() const;
+  vmml::Vector2i        Channel::getScreenSize() const;
+  void                  Channel::applyScreenFrustum() const;
 </pre><!-- */ -->
 
 <h2>File Format</h2>
@@ -101,7 +145,8 @@ State: Design
       compound
       {
           ...
-          eye_base   float  // inherit from config
+          eye_base   float   // inherit from config
+          screen     [ ID xOffset yOffset ] // absolute, default 1 AUTO AUTO
           ...
       }
 </pre><!-- */ -->
