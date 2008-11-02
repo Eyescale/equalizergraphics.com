@@ -14,7 +14,7 @@
   <ul class ="toc2">
     <li><a href="/useCases.html#wall">Display Walls</a></li>
     <li><a href="/useCases.html#vr">Virtual Reality</a></li>
-    <li><a href="/useCases.html#multipipe">Multi-GPU Workstation</a></li>
+    <li><a href="/useCases.html#multipipe">Multi-GPU Workstations</a></li>
     <li><a href="/useCases.html#scalable">Scalable Rendering</a></li>
     <li><a href="/useCases.html#remote">Remote Visualization Clusters</a></li>
     <li><a href="/useCases.html#sli">SLI and Crossfire Systems</a></li>
@@ -35,6 +35,13 @@
   configurations. The flexibility of Equalizer enables mixing the features
   described below or completely different applications, often even in unforeseen
   ways.
+</p>
+<p>
+  Equalizer helps application developers to parallelize their applications,
+  which is different from most other solutions, which operate on the OpenGL
+  level. A detailed comparison
+  of <a href="documents/user/crComparison.html">Chromium and Equalizer</a> can
+  be found in the documentation section. 
 </p>
 
 <a name="wall"></a>
