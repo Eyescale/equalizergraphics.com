@@ -122,19 +122,19 @@
 #ifdef S_HOME_CONFIG
               class="used"
 #endif
-              >Runtime Configuration</a></p>
+              >Flexibility</a></p>
 
         <p><a href="/scalability.html"
 #ifdef S_HOME_SCALABILITY
               class="used"
 #endif
-              >Runtime Scalability</a></p>
+              >Scalability</a></p>
 
         <p><a href="/api.html"
 #ifdef S_HOME_API
               class="used"
 #endif
-              >Programming Interface</a></p>
+              >Framework</a></p>
       </div>
 #endif  // S_HOME
 
@@ -186,18 +186,17 @@
       <!-- Documentation sub-navigation-->
 #ifdef S_DOCUMENTATION
       <div class="subnavigation">
+        <p><a href="/documentation/performance.html"
+#ifdef S_DOCUMENTATION_PERFORMANCE
+              class="used"
+#endif
+              >Performance Studies</a></p>
 
         <p><a href="/doc_developer.html"
 #ifdef S_DOCUMENTATION_DEVELOPER
               class="used"
 #endif
               >Developer</a></p>
-
-        <p><a href="/documentation/parallelOpenGLFAQ.html"
-#ifdef S_DOCUMENTATION_FAQ
-              class="used"
-#endif
-              >Parallel GL FAQ</a></p>
 
         <p><a href="/features.html"
 #ifdef S_DOCUMENTATION_FEATURES
@@ -216,6 +215,12 @@
               class="used"
 #endif
               >Release Notes</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+#ifdef S_DOCUMENTATION_FAQ
+              class="used"
+#endif
+              >Parallel GL FAQ</a></p>
       </div>
 #endif // S_DOCUMENTATION
 
