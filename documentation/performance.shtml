@@ -11,6 +11,8 @@
 <p>
   <a href="/documentation/performance.html#overview">Overview</a><br>
   <a href="/documentation/performance.html#mgpu">Multi-GPU Workstations</a><br>
+  <a href="/documentation/performance.html#powerwall">Powerwalls and Display
+    Walls</a><br>
   <a href="/documentation/performance.html#cluster">Visualization
     Clusters</a><br>
 </p>
@@ -66,6 +68,35 @@
   workstation. The benchmarks shows in addition to a medium-sized model also a
   small model, which naturally does not scale. The test machine is a quad-core
   Mac Pro with 12 GB memory and two ATI x1900 graphics cards.
+</p>
+<div class="flush_float"></div>
+
+<a name="powerwall"></a>
+<h2>Powerwalls and Display Walls</h2>
+<div class="float_right"><a href="/images/Chromium_Equalizer.png">
+    <img src="/images/Chromium_Equalizer-small.jpg"
+         alt="Display wall performance"></a>
+  <div class="label">Performance for a Display Wall</div>
+</div>
+<p>
+  Large-scale display systems, such as display walls and multi-projector
+  systems, are often driven by a number of rendering nodes. A planar display
+  wall can be driven by using an OpenGL interceptor, for example Chromium. Since
+  these solutions are transparent to the application, they provide a
+  cost-effective solution.
+</p>
+<p>
+  Transparency comes however at a price, even for a simple setup such as a
+  planar projection. Using a parallel Equalizer application, much better
+  performance and scalability can be achieved. Furthermore, an Equalizer-based
+  application does not have any compatibility issues for certain OpenGL features
+  or extensions, since the rendering code directly accesses the GPU on each
+  backend node.
+</p>
+<p>
+  The white paper <a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two
+    Methods for driving OpenGL Display Walls</a> describes this performance
+  study.
 </p>
 <div class="flush_float"></div>
 
