@@ -9,9 +9,10 @@
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
   <ul>
-    <li>Implemented in 0.3 beta</li>
+    <li>Implemented in 0.3</li>
     <li>0.4: Added thread synchronization to reflect changes from per-node
       thread synchronization</li>
+    <li>svn: Added easier threading model selection</li>
   </ul>
 </p>
 
@@ -36,14 +37,20 @@
   library.
 </p>
 
-
 <h3>Receiver (recv) Thread</h3>
 <p>
-  Each Equalizer network node has a recv thread, created during
+  Each Equalizer network node has a receiver thread, created during
   Node::initLocal(). It listens on all connections and reads the data into
-  packets. The packets are <a href="/documents/design/packets.html">dispatched to
-  the command handler functions</a>. The command handler functions in the
+  packets. The packets are <a href="/documents/design/packets.html">dispatched
+    to the command handler functions</a>. The command handler functions in the
   receiver thread should never block to avoid deadlocks.
+</p>
+
+<h3>Command (cmd) Thread</h3>
+<p>
+  Each Equalizer network node has a command thread, created during
+  Node::initLocal(). It executes internal Equalizer commands, for example to
+  execute <code>eq::net::Object</code> mapping requests by a slave node.
 </p>
 
 <h3>Pipe Thread(s)</h3>
@@ -57,6 +64,34 @@
 
 <a name="sync"></a>
 <h2>Thread Synchronization</h2>
+
+<h3>Threading Models</h3>
+<p>
+  Equalizer provides simplified threading models to configure common thread
+  synchronization strategies. The threading model is a node attribute
+  (<code>thread_model</code>) and can have the following values:
+</p>
+<ul>
+  <li><code>async</code>: No synchronization between render threads. Only the
+    finishing of frame <code>n-latency</code> is synchronized. Most Equalizer
+    examples use this threading model.
+  <li><code>draw_sync</code>: In addition to async, all local render threads are
+    synchronized, so that the draw operations happen synchronously with the
+    node main loop. This is the default threading model.
+  <li><code>local_sync</code>: In addition to draw_sync, all local frame
+    operations, including readback, assemble and swap buffer are synchronized
+    with the node main loop.
+  <li><code>sync</code>: The execution across all nodes is synchronous. Not yet
+    implemented.
+</ul>
+<p>
+  The threading model can be configured using the file format, or
+  programmatically. Applications typically hard-code their threading model. The
+  file format is commonly used to change the threading model for benchmarking
+  and experimentation.
+</p>
+
+<h3>Implementation</h3>
 <div class="float_right">
   <a href="/documents/design/images/mainloop.png">
     <img src="/documents/design/images/mainloop-small.jpg" 
