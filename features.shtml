@@ -38,8 +38,8 @@
   <td><a href="/documents/design/immersive.html">head tracking</a></td>
   <td>0.1</td>
 </tr><tr>
-  <td><a href="/documents/design/compounds.html#swapbarrier">software-based
-      swapbarrier for synchronization of multipipe display systems</a></td>
+  <td><a href="/documents/design/compounds.html#swapbarrier">software
+      swapbarrier</a> for synchronization of multipipe displays</td>
   <td>0.1</td>
 </tr><tr>
   <td><a href="/documents/design/dynamicNearFar.html">dynamic near and far plane
@@ -63,6 +63,9 @@
   <td><a href="/documents/design/infiniBand.html">InfiniBand networking</a></td>
   <td>0.3</td>
 </tr><tr>
+  <td>&rarr; Native RDMA connection</td>
+  <td>?</td>
+</tr><tr>
   <td><a href="/documents/design/residentNodes.html">resident render
       clients</a></td>
   <td>0.3</td>
@@ -85,7 +88,7 @@
   <td>0.5.3</td>
 </tr><tr>
   <td><a href="/documents/design/view.html">View API</a></td>
-  <td>svn</td>
+  <td>0.6</td>
 </tr><tr>
   <td>FBO support</td>
   <td>?</td>
@@ -122,19 +125,25 @@
   <td><a href="/documents/design/compounds.html">eye (stereo) compounds</a></td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="/documents/design/compounds.html">flexible recomposition engine
-      for parallel compositing</td>
+  <td><a href="/documents/design/compounds.html">flexible recomposition
+      engine</a> for parallel compositing</td>
   <td>0.2</td>
 </tr><tr>
-  <td><a href="/documents/design/imageCompression.html">image compression for
-      network transfers</a></td>
+  <td><a href="/documents/design/imageCompression.html">image compression</a>
+    for network transfers</td>
   <td>0.2</td>
+</tr><tr>
+  <td>&rarr; Compression plug-in API</td>
+  <td>?</td>
+</tr><tr>
+  <td>&rarr; Automatic selection of compression plug-in</td>
+  <td>?</td>
+</tr><tr>
+  <td>&rarr; GPU-based image compression</td>
+  <td>?</td>
 </tr><tr>
   <td><a href="http://paracomp.sf.net">Paracomp compositing backend</td>
   <td>0.5.1, 0.5.2</td>
-</tr><tr>
-  <td>GPU-based image compression</td>
-  <td>?</td>
 </tr><tr>
   <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
   <td>0.5</td>
@@ -144,7 +153,7 @@
 </tr><tr>
   <td><a href="/documents/design/compounds.html">DPlex (time-multiplex)
       compounds</a></td>
-  <td>svn</td>
+  <td>0.6</td>
 </tr><tr>
   <td><a href="/documents/design/compounds.html">cull compounds</a></td>
   <td>?</td>
