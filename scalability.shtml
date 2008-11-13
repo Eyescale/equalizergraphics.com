@@ -121,6 +121,7 @@
   often combined with another mode on large-scale visualization clusters.
 </p><div class="flush_float"></div>
 
+<a name="DPlex"></a>
 <div class="float_right"><a href="/images/DPlex.png">
     <img src="/images/DPlex-small.jpg" alt="A DPlex compound"></a>
   <div class="label">A DPlex compound</div>
@@ -240,6 +241,7 @@
   thread during synchronous execution.
 </p><div class="flush_float"></div>
 
+<a name="lb"></a>
 <h3>Load Balancing</h3>
 <div class="float_right"><a href="/images/LB.png">
   <img src="/images/LB-small.jpg" alt="2D Load-Balancing"></a>
