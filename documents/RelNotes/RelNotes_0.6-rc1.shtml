@@ -13,6 +13,48 @@
      [ ] src/RELNOTES, src/lib/eq.h
   -->
 
+<ul>
+  <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#introduction">1.
+      Introduction</a></li>
+  <ul>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#features">1.1.
+        Features</a></li>
+  </ul>
+  <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#new">2. New in this
+      release</a></li>
+  <ul>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#newFeatures">2.1. New
+        Features</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#enhancements">2.2.
+        Enhancements</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#optimizations">2.3.
+        Optimizations</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#examples">2.4.
+        Examples</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#changes">2.5. API
+        Changes</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#documentation">2.6.
+        Documentation</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#bugfixes">2.7. Bug
+        Fixes</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#knownbugs">2.8. Known
+        Bugs</a></li>
+  </ul>
+  <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#about">3. About</a></li>
+  <ul>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#os">3.1. Operating
+        System Support</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#ws">3.2. Window
+        System Support</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#documentation">3.3.
+        Documentation</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#support">3.4.
+        Support</a></li>
+  </ul>
+</ul>
+
+<a name="introduction"></a>
+<h2>1. Introduction</h2>
 <p>
   Welcome to Equalizer, a framework for the development and deployment of
   parallel, scalable OpenGL applications. Equalizer 0.6 will contain major new
@@ -28,46 +70,9 @@
   <code>svn co https://equalizer.svn.sf.net/svnroot/equalizer/tags/release-0.6-rc1</code>.
 </p>
 
-<h2>Table of Contents</h2>
-<ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#features">1.
-      Features</li>
-  <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#new">2. New in this
-      release</li>
-  <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#newFeatures">2.1. New
-        Features</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#improvements">2.2.
-        Improvements</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#optimizations">2.3.
-        Optimizations</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#examples">2.4.
-        Examples</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#documentation">2.5.
-        Documentation</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#bugfixes">2.6. Bug
-        Fixes</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#knownbugs">2.7. Known
-        Bugs</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#changes">2.8. API
-        Changes</li>
-  </ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#about">3. About</li>
-  <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#os">3.1. Operating
-        System Support</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#ws">3.2. Window
-        System Support</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#documentation">3.3.
-        Documentation</li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6-rc1.html#support">3.4.
-        Support</li>
-  </ul>
-</ul>
-
 
 <a name="features"></a>
-<h2>1. Features</h2>
+<h3>1.1. Features</h3>
 <p>
   Equalizer provides the following major features to facilitate the development
   and deployment of scalable OpenGL applications. A
@@ -93,7 +98,7 @@
 <a name="new"></a>
 <h2>2. New in this release</h2>
 <p>
-  Equalizer 0.6 will contain the following features, improvements, bug fixes and
+  Equalizer 0.6 will contain the following features, enhancements, bug fixes and
   documentation changes:
 </p>
 
@@ -121,8 +126,8 @@
       backend</a></li>
 </ul>
 
-<a name="improvements"></a>
-<h3>2.2. Improvements</h3>
+<a name="enhancements"></a>
+<h3>2.2. Enhancements</h3>
 <ul>
   <li>Upgraded <a href="http://glew.sourceforge.net">GLEW</a> to version
     1.5.1</li>
@@ -153,8 +158,35 @@
   <li>eqPly: implemented event-driven execution</li>
 </ul>
 
+<a name="changes"></a>
+<h3>2.5. API Changes</h3>
+<ul>
+  <li>The compound attribute <code>UPDATE_FOV</code> has been removed, since
+    view updates are handled by the application, using the new View API.</li>
+  <li><code>Event::RESIZE</code> has been deprecated. Use
+    <code>Event::WINDOW_RESIZE</code> instead.</li>
+  <li>The new <code>OSWindow</code> interface moved all window system
+    functionality from the <code>eq::Window</code> to different subclasses
+    of <code>OSWindow</code>. Applications integrating with their own windowing
+    code have to implement an <code>OSWindow</code> containing all the window
+    system code, and instantiate this <code>OSWindow</code>
+    in <code>Window::configInitOSWindow</code>. Please refer to the Programming
+    Guide for a detailed description of the Window System Interface.</li>
+  <li>The <code>OSWindow</code> interface also caused some cleanups in the event
+    handling. Most notably, the classes <code>ChannelEvent</code>
+    and <code>WindowEvent</code> are now unneeded and have been removed. The
+    former base class <code>Event</code> is now used in the appropriate
+    places.</li>
+  <li>The <code>eqBase</code>, <code>eqNet</code> and <code>eqServer</code>
+    namespaces have been renamed to <code>eq::base</code>, <code>eq::net</code>
+    and <code>eq::server</code>, respectively. Application developers are
+    encouraged to make the necessary changes, but can
+    define <code>EQ_USE_DEPRECATED</code> if these changes are not
+    feasible.</li>
+</ul>
+
 <a name="documentation"></a>
-<h3>2.5. Documentation</h3>
+<h3>2.6. Documentation</h3>
 <ul>
   <li>The <a href="/survey.html">Programming Guide</a> has been extended to 62
     pages and 37 figures.</li>
@@ -164,7 +196,7 @@
 </ul>
 
 <a name="bugfixes"></a>
-<h3>2.6. Bug Fixes</h3>
+<h3>2.7. Bug Fixes</h3>
 <p>
   Equalizer 0.6 includes various bugfixes over the 0.5 release, including
   the following:
@@ -211,7 +243,7 @@
 </ul>
 
 <a name="knownbugs"></a>
-<h3>2.7. Known Bugs</h3>
+<h3>2.8. Known Bugs</h3>
 <ul>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2268547&group_id=170962&atid=856209">2268547</a>:
     fullscreen windows not always active on Win32</li>
@@ -233,32 +265,6 @@
     eVolve: binary swap configs don't work</li>
 </ul>
 
-<a name="changes"></a>
-<h3>2.8. API Changes</h3>
-<ul>
-  <li>The compound attribute <code>UPDATE_FOV</code> has been removed, since
-    view updates are handled by the application, using the new View API.</li>
-  <li><code>Event::RESIZE</code> has been deprecated. Use
-    <code>Event::WINDOW_RESIZE</code> instead.</li>
-  <li>The new <code>OSWindow</code> interface moved window system depend
-    functionality from the <code>eq::Window</code> to different subclasses
-    of <code>OSWindow</code>. Applications integrating with their own windowing
-    code have to implement an <code>OSWindow</code> containing all the window
-    system code, and instantiate this <code>OSWindow</code>
-    in <code>Window::configInitOSWindow</code>. Please refer to the Programming
-    Guide for a detailed description of the Window System Interface.</li>
-  <li>The <code>OSWindow</code> interface also caused some cleanups in the event
-    handling. Most notably, the classes <code>ChannelEvent</code>
-    and <code>WindowEvent</code> are now unneeded and have been removed. The
-    former base class <code>Event</code> is now used in the appropriate
-    places.</li>
-  <li>The <code>eqBase</code>, <code>eqNet</code> and <code>eqServer</code>
-    namespaces have been renamed to <code>eq::base</code>, <code>eq::net</code>
-    and <code>eq::server</code>, respectively. Application developers are
-    encouraged to make the necessary changes, but can
-    define <code>EQ_USE_DEPRECATED</code> if these changes are not
-    feasible.</li>
-</ul>
 
 <a name="about"></a>
 <h2>3. About</h2>
