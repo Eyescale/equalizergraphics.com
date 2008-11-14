@@ -10,7 +10,7 @@
      [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
          relnotes.shtml
      [x] doc/Developer/ProgrammingGuide
-     [ ] src/RELNOTES, src/lib/eq.h
+     [x] src/RELNOTES, src/lib/eq.h
   -->
 
 <ul>
@@ -65,8 +65,8 @@
   Equalizer 0.6-RC1 is the release candidate for Equalizer 0.6. Equalizer
   0.6-RC1 can be retrieved by downloading the
   <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/tags/release-0.6-rc1.tar.gz?view=tar">source
-    code</a>, updating the subversion trunk to revision ????
-  (<code>svn up -r ???? </code>) or by using<br>
+    code</a>, updating the subversion trunk to revision 2341
+  (<code>svn up -r 2341 </code>) or by using<br>
   <code>svn co https://equalizer.svn.sf.net/svnroot/equalizer/tags/release-0.6-rc1</code>.
 </p>
 

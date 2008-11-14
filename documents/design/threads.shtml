@@ -12,7 +12,7 @@
     <li>Implemented in 0.3</li>
     <li>0.4: Added thread synchronization to reflect changes from per-node
       thread synchronization</li>
-    <li>svn: Added easier threading model selection</li>
+    <li>0.6-rc1: Added easier threading model selection</li>
   </ul>
 </p>
 
