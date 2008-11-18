@@ -192,10 +192,10 @@ clean:
 	rm -rf $(TARGETS)
 
 install: update all doxygen sitemap
-	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 auxinst: all
-	rsync -avz --exclude=".svn" --exclude "*.html" -e ssh $(TARGET)/ eile@equalizergraphics.com:var/www/htdocs/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 update:
 	svn update ..
