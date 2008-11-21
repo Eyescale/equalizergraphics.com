@@ -40,14 +40,14 @@
 </p>
 <div class="float_left"><a href="/documents/design/images/stereo.png">
     <img src="/documents/design/images/stereo-small.jpg" 
-         alt="View frustra for stereo rendering"></a>
-  <div class="label">Stereoscopic View Frustra</div>
+         alt="View frusta for stereo rendering"></a>
+  <div class="label">Stereoscopic View Frusta</div>
 </div>
 <p> 
   To use active stereo, the window has to have a stereo visual and the
   compound has to specify the left and right eye using 
   <code>eye [ LEFT RIGHT ]</code>. Equalizer then executes two rendering passes,
-  and uses the eye base to adjust the view frustra as shown on the left.
+  and uses the eye base to adjust the view frusta as shown on the left.
 </p><p> 
   For passive stereo, two output channels are used and projected onto the same
   surface. Typically two compounds would be used, one rendering the left eye
@@ -62,11 +62,11 @@
 <h2>Immersive Visualization</h2>
 <div class="float_right"><a href="/documents/design/images/immersive.png">
     <img src="/documents/design/images/immersive-small.jpg" 
-         alt="Head Tracking with stereo frustra"></a>
-  <div class="label">Stereo Frustra with Head Tracking</div>
+         alt="Head Tracking with stereo frusta"></a>
+  <div class="label">Stereo Frusta with Head Tracking</div>
 </div>
 <p>
-  For immersive installations, the head position is tracked and view frustra are
+  For immersive installations, the head position is tracked and view frusta are
   adapted to the viewers position and orientation, as shown on the right. The
   head position is reported by the application
   using <code>Config::setHeadMatrix</code>, which is used by the server to
@@ -74,7 +74,7 @@
   with the wall description, are used to compute an OpenGL frustum and the head
   transformation to position the frustum. The default head matrix is an identity
   matrix, thus the default eye positions are <code>( +-eye_base/2, 0, 0
-  )</code>, as show above in the stereoscopic view frustra.
+  )</code>, as show above in the stereoscopic view frusta.
 </p>
 <h2>Eye compounds</h2>
 <p>

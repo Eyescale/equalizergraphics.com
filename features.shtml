@@ -99,7 +99,7 @@
   <td><a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">software edge blending</a></td>
   <td>?</td>
 </tr><tr>
-  <td>application-specified frustra for destination views</td>
+  <td>application-specified frusta for destination views</td>
   <td>?</td>
 </tr><tr>
   <td>mono/stereo switching</td>

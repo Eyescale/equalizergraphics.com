@@ -150,7 +150,7 @@
   </div>
 </div>
 <p>
-  <b>Pixel</b> compounds are similar to 2D compounds, but the frustra
+  <b>Pixel</b> compounds are similar to 2D compounds, but the frusta
   of the source rendering units are modified so that each unit renders an evenly
   distributed subset of pixels. Pixel compounds are ideal for purely
   fill-limited applications such as volume rendering and raytracing. The load is

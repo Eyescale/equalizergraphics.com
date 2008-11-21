@@ -41,7 +41,7 @@
   handle the compositing hardware and threading for the application, so that
   each GPU is driven by a separate thread. This has the benefit that the
   application can restrict the data send to the card based on the GPU's
-  sub-frustrum, and utilize multiple CPU cores.
+  sub-frustum, and utilize multiple CPU cores.
 </p>
 
 <h3>ATI Crossfire</h3>
