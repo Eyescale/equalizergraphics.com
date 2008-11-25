@@ -11,37 +11,6 @@
   and we will add your program to the list.
 </p>
 
-<h2>eqSmart: Terrain rendering</h2>
-<div class="float_right">
-  <a href="/screenshots/wall.png">
-    <img src="/screenshots/wall-small.jpg" 
-         alt="eqSmart"></a>
-  <div class="label">eqSmart</div>
-</div>
-<p>
-  eqSmart is a port of the Smart terrain rendering software. Smart is based upon
-  the <a href="http://www.ogre3d.org/">Ogre3D graphics engine</a>. Support for
-  database decomposition was not implemented. eqSmart will be superseded by
-  eqRaster, an OpenGL-based terrain visualization engine.
-</p>
-<p>
-  eqSmart is not publically available due to licensing issues.
-</p>
-
-<h2>eqOgre: Ogre/Equalizer integration</h2>
-<div class="float_right">
-  <a href="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s1600-h/1-window.jpg">
-    <img src="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s400/1-window.jpg" 
-         alt="eqOgre" width="200"></a>
-  <div class="label">eqOgre</div>
-</div>
-<p>
-  <a href="http://rickarkin.blogspot.com/">eqOgre</a> is an integration of the <a href="http://www.ogre3d.org/">Ogre3D
-  graphics engine</a> with Equalizer. It is a first version of such an
-  integration, and does not yet support database decomposition or data updates.
-</p><div class="flush_float"></div>
-
-
 <h2>Computer Graphics and Multimedia Systems, University of Siegen</h2>
 
 <h3>Hase3d: Hardware accelerated flow visualization</h3>
@@ -94,6 +63,44 @@
   related to threading and parallelism, which is a problem that cannot
   completely be delegated to a library."
 </p>
+
+<h2>eqSmart: Terrain rendering</h2>
+<div class="float_right">
+  <a href="/screenshots/wall.png">
+    <img src="/screenshots/wall-small.jpg" 
+         alt="eqSmart"></a>
+  <div class="label">eqSmart</div>
+</div>
+<p>
+  eqSmart is a port of the Smart terrain rendering software. Smart is based upon
+  the <a href="http://www.ogre3d.org/">Ogre3D graphics engine</a>. Support for
+  database decomposition was not implemented. eqSmart will be superseded by
+  eqRaster, an OpenGL-based terrain visualization engine.
+</p>
+<p>
+  eqSmart is not publically available due to licensing issues.
+</p>
+
+<h2>eqOgre: Ogre/Equalizer integration</h2>
+<div class="float_right">
+  <a href="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s1600-h/1-window.jpg">
+    <img src="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s400/1-window.jpg" 
+         alt="eqOgre" width="200"></a>
+  <div class="label">eqOgre</div>
+</div>
+<p>
+  <a href="http://rickarkin.blogspot.com/">eqOgre</a> is an integration of the <a href="http://www.ogre3d.org/">Ogre3D
+  graphics engine</a> with Equalizer. It is a first version of such an
+  integration, and does not yet support database decomposition or data updates.
+</p>
+<p>
+  eqOgre is no longer maintained. The last version can be found
+  at <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/">http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/</a>. If
+  you are willing to maintain this example, please 
+  <a href="mailto:info@equalizergraphics.com?subject=eqOgre">drop us an
+  email</a>.
+</p>
+<div class="flush_float"></div>
 
 #include "footer.shtml"
 <!-- $Id$ -->
