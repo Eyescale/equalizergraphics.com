@@ -77,15 +77,15 @@ a:visited, a:active
 
 img
 { 
-  padding: 5px;
+  padding: 10px;
   border:  0px;
 }
 
 a img:hover
 { 
-  padding: 0;
+  padding: 4px;
   margin: 4px;
-  border: 1px;
+  border: 2px;
   border-color: blue;
   border-style: solid;
 }
