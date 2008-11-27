@@ -4,10 +4,13 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>21. November 2007</b> The research project 'Efficient load balancing
+    for cluster-based parallel real-time rendering' starts at
+    the <a href="http://www.ifi.uzh.ch/vmml/">VMML</a></li>
   <li><b>17. April 2008</b> <a href="/news/Release_0.5.html">Released Version
       0.5</a>.</li>
-  <li><b>18. December 2007</b> <a href="/news/EqualizerNewsDecember07.html">Newsletter
-      December'07</a></li>
+  <li><b>18. December 2007</b> 
+    <a href="/news/EqualizerNewsDecember07.html">Newsletter December'07</a></li>
   <li><b>28. October 2007</b> <a href="/news/Release_0.4.html">Released Version
       0.4</a>.</li>
   <li><b>3. July 2007</b> <a href="/news/EqualizerNewsJuly07.html">Newsletter
