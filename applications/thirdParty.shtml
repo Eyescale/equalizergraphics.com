@@ -94,9 +94,9 @@
   integration, and does not yet support database decomposition or data updates.
 </p>
 <p>
-  eqOgre is no longer maintained. The last version can be found
-  at <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/">http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/</a>. If
-  you are willing to maintain this example, please 
+  eqOgre is looking for a new maintainer! The latest version can be found at
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/">here</a>.
+  If you are willing to maintain this example, please 
   <a href="mailto:info@equalizergraphics.com?subject=eqOgre">drop us an
   email</a>.
 </p>
