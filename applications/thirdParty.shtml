@@ -26,19 +26,17 @@
   and visualization of various flow primitives, i.e. particles, lines and
   surfaces/volumes. Using the Equalizer framework, the application has been
   extended to multi-node rendering in order to immerse the user into the virtual
-  reality cave at the University of Siegen. The cave consists of a cylindrical
-  projection area composed of six (stereo) projectors (four front, two
-  floor). An enhanced interactivity is achieved by introducing head and object
-  tracking to the user interface.
+  reality cave at the University of Siegen.
 </p>
 <p>
-  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/04_Flow">flow-vis</a>
-  module visualizes a typhoon simulated by
-  the <a href="http://www.dkrz.de/dkrz/intro_s">DKRZ Hamburg</a>. Direct
-  visualization techniques can help climate researchers to explore flow
-  characteristics by controlling the visual output.
+  "Equalizer bundles multi-node rendering and synchronization tools into an
+  easy-to-use and well-structured object-oriented framework", says Nicolas
+  Cuntz, researcher at the University of Siegen. "Porting to Equalizer can be
+  achieved without completely restructuring the application.  However, one has
+  to deal with data synchronization and possible problems related to threading
+  and parallelism, which is a problem that cannot completely be delegated to a
+  library."
 </p>
-
 <div class="float_right">
   <a href="/applications/images/clay_bunny.png">
     <img src="/applications/images/clay_bunny-small.jpg" 
@@ -46,22 +44,24 @@
   <div class="label">Surface Evolution</div>
 </div>
 <p>
-  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/02_PLS">surface
-    evolution</a> module features arbitrary deformations preserving volume and
-    allowing topological changes. This can be used for interactive object
-    modelling in our VR application.
+  The cave consists of a cylindrical projection area composed of six (stereo)
+  projectors (four front, two floor). An enhanced interactivity is achieved by
+  introducing head and object tracking to the user interface.
 </p>
 <p>
-  Nicolas Cuntz, researcher at the University of Siegen, comments on the porting
-  process:
+  The 
+  <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/04_Flow">flow-vis</a>
+  module visualizes a typhoon simulated by
+  the <a href="http://www.dkrz.de/dkrz/intro_s">DKRZ Hamburg</a>. Direct
+  visualization techniques help climate researchers to explore flow
+  characteristics by controlling the visual output.
 </p>
-<p class="quote">
-  "Equalizer bundles multi-node rendering and synchronization tools into an
-  easy-to-use and well-structured object-oriented framework. Porting to
-  Equalizer can be achieved without completely restructuring the application.
-  However, one has to deal with data synchronization and possible problems
-  related to threading and parallelism, which is a problem that cannot
-  completely be delegated to a library."
+
+<p>
+  The <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/02_PLS">surface
+    evolution</a> module features arbitrary deformations preserving volume and
+    allowing topological changes. This is used for interactive object
+    modelling in the VR application.
 </p>
 
 <h2>eqSmart: Terrain rendering</h2>
@@ -94,7 +94,7 @@
   integration, and does not yet support database decomposition or data updates.
 </p>
 <p>
-  eqOgre is looking for a new maintainer! The latest version can be found at
+  eqOgre is looking for a new owner! The latest version can be found at
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/">here</a>.
   If you are willing to maintain this example, please 
   <a href="mailto:info@equalizergraphics.com?subject=eqOgre">drop us an
