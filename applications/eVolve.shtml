@@ -98,7 +98,7 @@
 </div>
 <p>
   In the eVolve example the volume is divided along Z axis for simplicity
-  reasons. In fture it is possible to extend that to decomposition in arbitrary
+  reasons. It is possible to extend that to decomposition in arbitrary
   parallelepipeds.
 </p>
 
