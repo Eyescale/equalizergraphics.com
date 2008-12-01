@@ -1,0 +1,67 @@
+#define S_NEWS
+#define PAGE News
+#define SUBPAGE Equalizer 0.6 brings scalability to RTT
+
+#include "header.shtml"
+
+<div class="float_right">
+  <a href="/images/release-0.6.png"><img src="/images/release-0.6-small.jpg" 
+                                     alt="Scalable Display System"></a>
+  <div class="label">Scalability for large-scale displays</div>
+</div>
+<p>
+  We are pleased to announce the release of Equalizer 0.6, a major advance in
+  parallel OpenGL rendering, supporting:
+  <ul>
+    <li>Automatic 2D and DB load-balancing</li>
+    <li>DPlex (time-multiplex) compounds</li>
+    <li><a href="http://paracomp.sourceforge.net/">Paracomp</a> compositing
+      backend</li>
+  </ul>
+</p>
+<p>
+  Please check the
+  <a
+    href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html">release
+    notes</a> on the Equalizer website for a comprehensive list of new features,
+    enhancements, optimizations and bug fixes. The Programming Guide can be
+    ordered at
+  <a href="http://www.lulu.com/browse/book_view.php?fCID=5006510">lulu.com</a>.
+</p>
+<p>
+  We would like to thank all individuals and parties who have contributed to the
+  development of Equalizer 0.6.
+</p>
+
+<h2>About RTT Scale</h2>
+<p>
+  RTT Scale is the new scalability module for RTT's leading high-end
+  visualisation software suite RTT DeltaGen. The module is to be integrated into
+  the forthcoming Version 8.5. RTT Scale uses Equalizer 0.6 to boost OpenGL and
+  ray-tracing performance on highly realistic, complex scenes. Please
+  visit <a href="http://www.rtt.ag">http://www.rtt.ag</a> for more information.
+</p>
+
+<h2>About Equalizer</h2>
+<p>
+  Equalizer is the standard middleware to create parallel OpenGL-based
+  applications. It enables applications to benefit from multiple graphics cards,
+  processors and computers to scale rendering performance, visual quality and
+  display size. Please visit
+  <a href="http://www.equalizergraphics.com">http://www.equalizergraphics.com</a> for more information.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from
+  <a href="http://www.eyescale.ch">Eyescale Software GmbH</a>. Please
+  contact
+  <a href="mailto:info@eyescale.ch?subject=Equalizer">info@eyescale.ch</a>
+  for further information.
+</p>
+
+<div class="footnote">
+ Image copyright Realtime Technology AG, 2008.
+</div>
+
+#include "footer.shtml"
+<!-- $Id$ -->

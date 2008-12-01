@@ -11,6 +11,22 @@
   and we will add your program to the list.
 </p>
 
+<h2>RTT Scale</h2>
+
+<div class="float_right">
+  <a href="/applications/images/RTTScale.png">
+    <img src="/applications/images/RTTScale-small.jpg" 
+         alt="RTT Scale"></a>
+  <div class="label">RTT Scale</div>
+</div>
+<p>
+  RTT Scale is the scalability module for RTT DeltaGen and RTT DeltaView
+  plus. RTT Scale uses Equalizer to boost OpenGL and ray-tracing performance on
+  highly realistic, complex scenes. Please
+  visit <a href="http://www.rtt.ag">http://www.rtt.ag</a> for more
+  information. Image copyright Realtime Technology AG, 2008.
+</p>
+
 <h2>Computer Graphics and Multimedia Systems, University of Siegen</h2>
 
 <h3>Hase3d: Hardware accelerated flow visualization</h3>

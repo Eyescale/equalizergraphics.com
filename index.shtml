@@ -7,15 +7,15 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.4.png"><img src="/images/release-0.4-small.jpg" 
+  <a href="/images/release-0.6.png"><img src="/images/release-0.6-small.jpg" 
                                          alt="Scalable Rendering"></a>
-  <div class="label">Four-to-One Scalable Volume Rendering</div>
+  <div class="label">Scalability for large-scale displays</div>
 </div>
 <p>
   Equalizer is the standard middleware to create parallel OpenGL-based
   applications. It enables applications to benefit from multiple graphics cards,
-  processors and computers to scale the rendering performance, visual quality
-  and display size. An Equalizer-based application runs unmodified on any
+  processors and computers to scale rendering performance, visual quality and
+  display size. An Equalizer-based application runs unmodified on any
   visualization system, from a simple workstation to large scale graphics
   clusters, multi-GPU workstations and Virtual Reality installations.
 </p>
@@ -99,10 +99,15 @@
 </ul>
 
 <div class="footnote">
-Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of Apple
-Computer, Inc. OpenGL&reg; is a trademark of Silicon Graphics, Inc. Windows&reg;
-is a trademark of Microsoft Corporation. All other products named are trademarks
-of their respective owners.
+<p>
+ Image copyright Realtime Technology AG, 2008.
+</p>
+<p>
+  Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of
+  Apple Computer, Inc. OpenGL&reg; is a trademark of Silicon Graphics,
+  Inc. Windows&reg; is a trademark of Microsoft Corporation. All other products
+  named are trademarks of their respective owners.
+</p>
 </div>
 
 #include "footer.shtml"
