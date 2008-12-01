@@ -85,7 +85,7 @@
   <td>0.5</td>
 </tr><tr>
   <td>orthographic frustum support</td>
-  <td>0.5.3</td>
+  <td>0.6</td>
 </tr><tr>
   <td><a href="/documents/design/view.html">View API</a></td>
   <td>0.6</td>
@@ -143,13 +143,13 @@
   <td>?</td>
 </tr><tr>
   <td><a href="http://paracomp.sf.net">Paracomp compositing backend</td>
-  <td>0.5.1, 0.5.2</td>
+  <td>0.6</td>
 </tr><tr>
   <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
   <td>0.5</td>
 </tr><tr>
   <td>compound load-balancing</td>
-  <td>0.5.4, 0.5.5</td>
+  <td>0.6</td>
 </tr><tr>
   <td><a href="/documents/design/compounds.html">DPlex (time-multiplex)
       compounds</a></td>

@@ -4,6 +4,8 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>1. December 2008</b> <a href="/news/Release_0.6.html">Released Version
+      0.6</a>.</li>
   <li><b>21. November 2007</b> The research project 'Efficient load balancing
     for cluster-based parallel real-time rendering' starts at
     the <a href="http://www.ifi.uzh.ch/vmml/">VMML</a></li>
