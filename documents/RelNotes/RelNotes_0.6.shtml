@@ -6,11 +6,11 @@
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [ ] src/lib/client/version.h, src/Makefile, src/Doxyfile
+     [x] src/lib/client/version.h, src/Makefile, src/Doxyfile
      [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
          relnotes.shtml
-     [ ] doc/Developer/ProgrammingGuide
-     [ ] src/RELNOTES, src/lib/eq.h
+     [x] doc/Developer/ProgrammingGuide
+     [x] src/RELNOTES, src/lib/eq.h
   -->
 
 <ul>
