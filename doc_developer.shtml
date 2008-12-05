@@ -7,9 +7,16 @@
 
 <h3>Generic Information</h3>
 <ul>
-  <li><a href="/survey.html">Programming Guide</a>
-    is the recommended reading for developers new to Equalizer
-    (<a href="http://www.lulu.com/content/1359268">order a hardcopy</a>).</li>
+  <div class="float_right">
+    <a href="http://www.lulu.com/commerce/index.php?fBuyContent=5006510">
+      <img src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
+           border="0" 
+           alt="Support independent publishing: buy this book on Lulu.">
+    </a>
+  </div>
+  <li>
+    <a href="/survey.html">Programming Guide</a> is the recommended reading for
+    developers new to Equalizer.</li>
   <li><a href="/documents/Developer/doxies/index.html">API Documentation</a>,
       automatically generated from the source code usyng doxygen. Covers only
       partially the API.</li>
