@@ -17,7 +17,7 @@
   <li>
     <a href="/survey.html">Programming Guide</a> is the recommended reading for
     developers new to Equalizer.</li>
-  <li><a href="/documents/Developer/doxies/index.html">API Documentation</a>,
+  <li><a href="/documents/Developer/API/index.html">API Documentation</a>,
       automatically generated from the source code usyng doxygen. Covers only
       partially the API.</li>
   <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
