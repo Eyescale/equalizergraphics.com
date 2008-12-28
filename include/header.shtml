@@ -54,12 +54,11 @@
       <script type="text/javascript"
               src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
 #ifndef NO_POLL
-#if 0
+#if 1
       <!-- Jobs -->
       <div class="subnavigation"><center>
-          <b>Open Equalizer Jobs</b><br>
-          <a href="http://www.telejob.ch/telejob/offer.xml?offer=7877">PhD 
-            Position, Uni Z&uuml;rich</a>
+          <a href="/contributions.html#packagers"><b>Packagers
+              Wanted!</b></a><br>
       </center></div>
 #endif
 #if 0

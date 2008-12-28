@@ -39,12 +39,16 @@
   you have any open questions. If you are not sure were to start, below are a
   few ideas we think are important, in no particular order:
 </p>
+<a name="packagers"></a>
 <ul>
   <li><b>Binary Packages:</b> Create binary packages of Equalizer releases for
-    your favorite platform and operating system (RPM, Windows Installer,
-    etc.). One hot candidate is the integration into
-    the <a href="http://www.rocksclusters.org/">Rocks Viz Roll</a>. We are happy
-    to add your packages to the SourceForge download page.</li>
+    your favorite platform and operating system (Linux distribution packages,
+    Windows Installer, etc.). One hot candidate is the integration into Linux
+    distributions such
+    as <a href="https://bugs.launchpad.net/ubuntu/+bug/300472">Ubuntu</a>
+    or <a href="https://bugzilla.redhat.com/show_bug.cgi?id=473077">Fedora</a>.
+    We are happy to add your packages to the SourceForge download page, and will
+    try to maintain them.</li>
   <li><b>Documentation:</b> Good documentation is important for Equalizer. While
     we try our best, we have limited time and sometimes we are just to immersed
     in the details. We are looking for a User Guide, contributions to the
