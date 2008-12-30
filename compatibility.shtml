@@ -23,29 +23,29 @@
   <td bgcolor="#ccffcc">pipe creates affinity context<sup>6</sup>, window uses
     handle (HWND) and WGL context (HGLRC)</td>
   <td bgcolor="#ffcccc">not yet implemented</td>
-  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#cccccc">API does not exist</td>
 </tr>
 
 <tr>
   <th>Linux<sup>2</sup></th>
-  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#cccccc">API does not exist</td>
   <td bgcolor="#ccffcc">pipe uses X11 display connection (Display*), window uses
     X11 drawable (XID) and glX context (GLXContext)</td>
-  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#cccccc">API does not exist</td>
 </tr>
 
 <tr>
   <th>Mac OS X<sup>3</sup></th>
-  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#cccccc">API does not exist</td>
   <td bgcolor="#ccffcc">same as Linux</td>
   <td bgcolor="#ccffcc">window uses Carbon WindowRef and AGLContext</td>
 </tr>
 
 <tr>
-  <th>Other Unix-like<sup>4</sup></th><td bgcolor="#ffcccc">API does not
+  <th>Other Unix-like<sup>4</sup></th><td bgcolor="#cccccc">API does not
   exist</td>
   <td bgcolor="#ffffcc">same as Linux, minimal porting needed</td>
-  <td bgcolor="#ffcccc">API does not exist</td>
+  <td bgcolor="#cccccc">API does not exist</td>
 </tr>
 </table>
 
