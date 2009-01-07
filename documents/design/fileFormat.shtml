@@ -67,7 +67,7 @@ global
      EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
      EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
      EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   // AGL, WGL only
-     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer
+     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | fbo
      EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
      EQ_WINDOW_IATTR_PLANES_COLOR             unsigned
      EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
@@ -139,7 +139,7 @@ server
                         hint_decoration     OFF | ON
                         hint_fullscreen     OFF | ON
                         hint_swapsync       OFF | ON         // AGL, WGL only
-                        hint_drawable       window | pbuffer
+                        hint_drawable       window | pbuffer | fbo
                         hint_statistics     off | fastest [on] | nicest
                         planes_color        unsigned
                         planes_alpha        unsigned
@@ -225,6 +225,22 @@ server
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>FBO Support added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer | fbo
+      }
+
+      window
+      {
+          attributes
+          {
+              hint_drawable    window | pbuffer | fbo
+          }
+      }
+    </pre><!-- */ -->
+  </li>  
   <li>Easier thread model selection added:
     <!-- /* --><pre>
       global

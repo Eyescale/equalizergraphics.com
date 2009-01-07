@@ -259,5 +259,8 @@ $(TARGET)/% : %
 
 $(TARGET)/changes.html: changes.shtml changes_log.html
 
+equalizer.rdf:
+	./changes.pl > $@
+
 changes_log.html:
 	./changes.pl > $@
