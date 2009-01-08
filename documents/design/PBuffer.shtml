@@ -26,7 +26,7 @@ State: Implemented in 0.5
 <p>
   The PBuffer support adds the possibility to configure the window's drawable
   type in the configuration file. The default is 'window', 'pbuffer' is used to
-  configure a PBuffer and 'fbo' is for Frame-Buffer Objects.
+  configure a PBuffer and 'FBO' is for Frame-Buffer Objects.
 </p>
 
 <h2>API</h2>
@@ -55,6 +55,8 @@ State: Implemented in 0.5
     enum IAttrValue
     {
         ...
+        FBO        = -11,
+        ...
         PBUFFER    = -7,
         WINDOW     = -6,
         ...
@@ -65,14 +67,14 @@ State: Implemented in 0.5
 <!-- /* --><pre>
     global
     {
-        EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer | fbo
+        EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer | FBO
     }
 
     window
     {
         attributes
         {
-            hint_drawable    window | pbuffer | fbo
+            hint_drawable    window | pbuffer | FBO
         }
     }
 </pre><!-- */ -->
