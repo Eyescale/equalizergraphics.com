@@ -2,15 +2,274 @@
 #define S_DOCUMENTATION_DEVELOPER
 #define PAGE Documentation
 #define SUBPAGE Developer
-#define TITLE View API
+#define TITLE View Management
 
 #include "header.shtml"
 
 <p>
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-State: Implemented in 0.6-rc1
+State:
+<ul>
+  <li>Implemented in 0.6</li>
+  <li>Redesign in progress</li> 
+</ul>
+
+<h2>Overview</h2>
+<p>
+  The purpose of the management layer is to provide a programming interface and
+  file format for describing the visible content of an application, i.e., what
+  are my projection surfaces, which data is visible in which part of the
+  projection surfaces and how are the views updated.
+</p>
+<div class="float_left">
+  <a href="/documents/design/images/view.png">
+    <img src="/documents/design/images/view-small.jpg" 
+         alt="View Entities"/></a>
+  <div class="label">Relationship of View Entities</div>
+</div>
+<p>
+  A typical system setup consists of one or more
+  projection <b>surface</b>s. Desktop windows are considered a projection
+  surface in this context.
+</p>
+<p>
+  Each projection surface is made of one or more <b>segment</b>s. Segments can
+  be planar or non-planar to each other, and can overlap or have gaps between
+  each other. A segment is referencing a <b>channel</b>, which defines the
+  output area of this segment, e.g., on a DVI connector connected to a
+  projector.
+</p>
+<p>
+  A surface can define a frustum, which will create default, planar
+  sub-frusta for its segments. A segment can also define a frustum, which
+  overrides the surface frustum, e.g., for non-planar setups (CAVE, curved
+  screen). These frusta typically describe a physically-correct display setup
+  for Virtual Reality installations.
+<p>
+  On each surface, the application can display one or more <b>view</b>s. A view
+  is a view on a model, in the sense used by the MVC pattern. It can be a scene,
+  viewing mode, viewing position, or any other representation of the
+  application's data.
+</p>
+<p>
+  A <b>layout</b> groups one or more views which logically belong together. A
+  layout is applied to a surface. This assignment can be changed at run-time by
+  the application. The intersection between views and segments defines which
+  output (sub-)channels are available. These output channels are typically used
+  as <b>destination channels</b> in a <b>compound</b>. They are automatically
+  created during configuration loading or creation.
+</p>
+<p>
+  Each view can have a frustum description. The view's frustum overrides frusta
+  specified at the surface or segment level. This is typically used for
+  non-physically correct rendering, e.g., to compare two models side-by-side. If
+  the view does not specify a frustum, the corresponding destination channels
+  will use the sub-frustum resulting from the view/segment intersection.
+</p>
+<p>
+  A configuration file has to specify compounds (rendering instructions) for all
+  destination channels. The currently used (active) layouts on the surface(s)
+  define which compounds are active, that is, for which compound channels
+  rendering tasks are generated.
+</p>
+<p>
+  Switching a layout at run-time will cause the deletion, creation, exit and
+  initialization of channels, and potentially windows...nodes on the affected
+  render clients.
+</p>
+<p>
+  An <b>observer</b> looks at one or more views. It is described by the observer
+  position in the world and it's eye separation. Each observer has its own
+  stereo mode, focus distance and frame loop (framerate).
 </p>
 
+<h2>File Format</h2>
+<!-- /* --><pre>
+config
+{
+    node { pipe { window { channel { ...output and source channels... }}}}
+
+    observer  # later
+    {
+        name    "observer1"
+        eyeBase float
+    }
+
+    layout  # 1...n times
+    {
+        name "layout1"
+        view  # 1...n times
+        {
+            name     "view1"
+            viewport [ x y w h ]
+            observer "observer1"  # later
+        }
+    }
+
+    surface  # 1...n times
+    {
+        name   "display_wall"
+        layout "layout1"
+        wall/projection {...}
+        
+        segment # 1...n times
+        {
+            channel  "output-channel"
+            name     "segment1"
+            viewport [ x y w h ]
+            wall/projection {...}
+        }
+    }
+
+    compound
+    {
+        channel "output-channel.layout1.view1"
+        ...
+    }
+    compound  # inactive (incl. all children)
+    {
+        channel "output-channel.layout2.view1"
+        ...
+    }
+}
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+     class Config
+     {
+         const SurfaceVector& getSurfaces() const;
+         const LayoutVector& getLayouts() const;
+     };
+
+     class Surface
+     {
+         const std::string& getName() const;
+
+         void useLayout( const Layout* layout );
+         const Layout* getLayout() const;
+     };
+
+     class Layout
+     {
+         const std::string& getName() const;
+         const ViewVector& getViews() const;
+         const SurfaceVector& getSurfaces() const;
+     };
+
+     class View
+     {
+         const std::string& getName() const;
+         const eq::Viewport& getViewport() const;
+         const Layout& getLayout() const;
+
+         void setWall( const Wall& wall );
+         const Wall& getWall() const;
+         void setProjection( const Projection& projection );
+         const Projection& getProjection() const;
+         View::Type getLatestView() const;
+     };
+
+     class Channel
+     {
+         const View& getView() const; // valid only in frameFoo()
+     };
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+<h3>View/Segment Intersection</h3>
+<p>
+  Layouts have to be specified before surfaces. Setting a surface on a config
+  will generate destination channels for all existing layouts:
+</p>
+<!-- /* --><pre>
+Config::addSurface( surface )
+    for each layout
+        for each view of layout
+            for each segment of surface
+                if segment intersects view
+                    find or create "channelname.layoutname.viewname"
+                    set viewport to sub-viewport of segment channel
+                    set channel inactive
+                    set view on channel, add channel to view
+</pre><!-- */ -->
+
+<h3>Channel Activation</h3>
+<p>
+  Channels are activated when the layout of a surface changes. Inactive channels
+  are not traversed during frame update.
+</p>
+<!-- /* --><pre>
+Surface::useLayout
+    for each segment
+        find channels "channelName.newLayoutName.*"
+            for each channel
+                increase channel, window, pipe, node) activation count
+                create and init entities which got activated
+        find channels "channelName.oldLayoutName.*"
+            for each channel
+                decrease channel, window, pipe, node activation count
+                exit and release entities with 0 activation count
+
+Compound::accept
+     Don't traverse compounds with inactive channels if activeOnly is set
+</pre><!-- */ -->
+
+<h3>Frustum Updates</h3>
+<p>
+  Frusta can only be changed through the view class. Setting a frustum on a View
+  overrides existing surface or segment frusta, bypassing physical descriptions
+  of the display setup:
+</p>
+<!-- /* --><pre>
+View::setFrustum
+    for each channel of view (set in intersection)
+        for each compound using channel as destination channel
+            compute and set sub-frustum on compound
+View::clear
+    for each channel of view (set in intersection)
+        for each compound using channel as destination channel
+            compute sub-frustum from segment and set on compound
+</pre><!-- */ -->
+<p>
+  The same calculations are to be done on Compound::init for all compounds.
+</p>
+
+<h3>Backward-Compatibility</h3>
+<p>
+  Each frustum (wall/projection) description on a compound generates a new
+  surface. Each destination channel of this compound sub-tree generates a
+  segment, using the compound's viewport. The views and channels are connected
+  like done during intersection.
+</p>
+<p>
+  A config always has one default layout named "???". This layout is used as the
+  default layout for all surfaces.
+</p>
+
+<h3>Everything Else</h3>
+<p>
+  Remove 0.6 screen interface (replaced by View::getViewport).
+</p>
+
+<h2>Open Issues</h2>
+<p>
+  Observer interface will be implemented later. Right now there is one observer
+  (the config).
+</p>
+<p>
+  Are Views intended to be sub-classed, e.g., to attach model to view. If yes,
+  how is eq::net::Object data distribution implemented?
+</p>
+<p>
+  When one layout is applied to multiple surfaces, and the views of the layout
+  use frusta, the frusta might have the wrong aspect ratio on one of the
+  surfaces. Can be solved by adding the capability of specifying frusta
+  aspect-ratio-aware, or by copying the layout for each surface.
+</p>
+
+<hr></hr>
+<h1>Equalizer 0.6 Implementation</h1>
 <h2>Overview</h2>
 <p>
   The purpose of this API is to give read and write access to the views of a

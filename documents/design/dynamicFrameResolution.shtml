@@ -1,0 +1,76 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Dynamic Frame Resolution
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  This feature dynamically changes the resolution of a channel to match a
+  certain quality requirement. The quality requirement is a function for the
+  framerate and current resolution.  
+</p>
+  
+<a name="Implementation"></a>
+<h2>Implementation</h2>
+<p>
+  Implement a new feature to set the rendering size of a compound. The
+  compound's channel will use an FBO for its rendering operations (clear, draw,
+  assemble). Before the readback, the FBO content will be copied to
+  the framebuffer. The readback happens from the framebuffer.
+</p>
+<p>
+  The framerate is stored in the compound data. It is not inherited, that is, it
+  applies only to the compound which specifies the framerate.
+</p>
+<p>
+  A DFR load-balancer takes care of the server-side calculations.
+</p>
+<p>
+  The DFR load-balancer computes each frame a new PVP used. The
+  new PVP is a function of the old PVP and the last rendering time of the
+  channel (frameFinish - frameStart).
+</p>
+<p>
+  - Channel renders, assembles and reads back using FBO and 'real' pixelviewport
+  - At the end of the frame, channel copies FBO texture to its draw buffer
+</p>
+
+<h2>Internal API</h2>
+<!-- /* --><pre>
+  void eq::server::Compound::setResolution( const vmml::Vector2i size );
+  
+  void eq::server::Compound::setFramerate( const float framerate );
+  float eq::server::Compound::getFramerate() const;
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+      channel    "destination"
+      framerate  float
+      wall {...}
+
+      compound {} // further decomposition possible
+  }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+<p>
+  Configuration of FBO size, i.e., max PVP for rendering.
+</p>
+<p>
+  DVR load-balancer?
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

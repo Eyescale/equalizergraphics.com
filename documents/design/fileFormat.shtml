@@ -80,7 +80,6 @@ global
      EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
      EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
      EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
-     EQ_COMPOUND_IATTR_UPDATE_FOV             HORIZONTAL [ON] | VERTICAL | OFF
 }
 server
 {
@@ -185,7 +184,6 @@ server
                 stereo_mode                  QUAD | ANAGLYPH    // default QUAD
                 stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default red
                 stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
-                update_FOV                   HORIZONTAL [ON] | VERTICAL | OFF
             }
 
             wall       // frustum description
@@ -347,24 +345,6 @@ server
       compound
       {
           pixel    [ int int int int ]     // pixel decomposition (x y w h)
-      }
-    </pre><!-- */ -->
-  </li>  
-
-  <li><a href="/documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
-    added:
-    <!-- /* --><pre>
-      global
-      {
-          EQ_COMPOUND_IATTR_UPDATE_FOV     HORIZONTAL [ON] | VERTICAL | OFF
-      }
-
-      compound
-      {
-          attributes
-          {
-              update_FOV                   HORIZONTAL [ON] | VERTICAL | OFF
-          }
       }
     </pre><!-- */ -->
   </li>  

@@ -92,6 +92,7 @@ FILES = \
 	documents/design/eventHandling.html \
 	documents/design/dataTransmission.html \
 	documents/design/depthTransferOpt.html \
+	documents/design/dynamicFrameResolution.html \
 	documents/design/dynamicNearFar.html \
 	documents/design/environment.html \
 	documents/design/fileFormat.html \
@@ -213,9 +214,6 @@ doxygen:
 
 sitemap:
 	sitemap_gen --config=sitemap_config.xml || true
-
-$(TARGET)/stylesheet.css: stylesheet.css
-	cp stylesheet.css $@
 
 $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
