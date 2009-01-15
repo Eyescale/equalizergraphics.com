@@ -19,7 +19,7 @@ State:
   The purpose of the management layer is to provide a programming interface and
   file format for describing the visible content of an application, i.e., what
   are my projection surfaces, which data is visible in which part of the
-  projection surfaces and how are the views updated.
+  projection surface and how are the views updated.
 </p>
 <div class="float_left">
   <a href="/documents/design/images/view.png">
@@ -29,31 +29,31 @@ State:
 </div>
 <p>
   A typical system setup consists of one or more
-  projection <b>surface</b>s. Desktop windows are considered a projection
-  surface in this context.
+  projection <b>canvas</b>es. Desktop windows are considered a projection
+  canvas in this context.
 </p>
 <p>
-  Each projection surface is made of one or more <b>segment</b>s. Segments can
+  Each canvas is made of one or more <b>segment</b>s. Segments can
   be planar or non-planar to each other, and can overlap or have gaps between
   each other. A segment is referencing a <b>channel</b>, which defines the
   output area of this segment, e.g., on a DVI connector connected to a
   projector.
 </p>
 <p>
-  A surface can define a frustum, which will create default, planar
+  A canvas can define a frustum, which will create default, planar
   sub-frusta for its segments. A segment can also define a frustum, which
-  overrides the surface frustum, e.g., for non-planar setups (CAVE, curved
+  overrides the canvas frustum, e.g., for non-planar setups (CAVE, curved
   screen). These frusta typically describe a physically-correct display setup
   for Virtual Reality installations.
 <p>
-  On each surface, the application can display one or more <b>view</b>s. A view
+  On each canvas, the application can display one or more <b>view</b>s. A view
   is a view on a model, in the sense used by the MVC pattern. It can be a scene,
   viewing mode, viewing position, or any other representation of the
   application's data.
 </p>
 <p>
   A <b>layout</b> groups one or more views which logically belong together. A
-  layout is applied to a surface. This assignment can be changed at run-time by
+  layout is applied to a canvas. This assignment can be changed at run-time by
   the application. The intersection between views and segments defines which
   output (sub-)channels are available. These output channels are typically used
   as <b>destination channels</b> in a <b>compound</b>. They are automatically
@@ -61,14 +61,14 @@ State:
 </p>
 <p>
   Each view can have a frustum description. The view's frustum overrides frusta
-  specified at the surface or segment level. This is typically used for
+  specified at the canvas or segment level. This is typically used for
   non-physically correct rendering, e.g., to compare two models side-by-side. If
   the view does not specify a frustum, the corresponding destination channels
   will use the sub-frustum resulting from the view/segment intersection.
 </p>
 <p>
   A configuration file has to specify compounds (rendering instructions) for all
-  destination channels. The currently used (active) layouts on the surface(s)
+  destination channels. The currently used (active) layouts on the canvas(es)
   define which compounds are active, that is, for which compound channels
   rendering tasks are generated.
 </p>
@@ -106,7 +106,7 @@ config
         }
     }
 
-    surface  # 1...n times
+    canvas  # 1...n times
     {
         name   "display_wall"
         layout "layout1"
@@ -138,11 +138,11 @@ config
 <!-- /* --><pre>
      class Config
      {
-         const SurfaceVector& getSurfaces() const;
+         const CanvasVector& getCanvases() const;
          const LayoutVector& getLayouts() const;
      };
 
-     class Surface
+     class Canvas
      {
          const std::string& getName() const;
 
@@ -154,7 +154,7 @@ config
      {
          const std::string& getName() const;
          const ViewVector& getViews() const;
-         const SurfaceVector& getSurfaces() const;
+         const CanvasVector& getCanvases() const;
      };
 
      class View
@@ -179,14 +179,14 @@ config
 <h2>Implementation</h2>
 <h3>View/Segment Intersection</h3>
 <p>
-  Layouts have to be specified before surfaces. Setting a surface on a config
+  Layouts have to be specified before canvases. Setting a canvas on a config
   will generate destination channels for all existing layouts:
 </p>
 <!-- /* --><pre>
-Config::addSurface( surface )
+Config::addCanvas( canvas )
     for each layout
         for each view of layout
-            for each segment of surface
+            for each segment of canvas
                 if segment intersects view
                     find or create "channelname.layoutname.viewname"
                     set viewport to sub-viewport of segment channel
@@ -196,11 +196,11 @@ Config::addSurface( surface )
 
 <h3>Channel Activation</h3>
 <p>
-  Channels are activated when the layout of a surface changes. Inactive channels
+  Channels are activated when the layout of a canvas changes. Inactive channels
   are not traversed during frame update.
 </p>
 <!-- /* --><pre>
-Surface::useLayout
+Canvas::useLayout
     for each segment
         find channels "channelName.newLayoutName.*"
             for each channel
@@ -218,7 +218,7 @@ Compound::accept
 <h3>Frustum Updates</h3>
 <p>
   Frusta can only be changed through the view class. Setting a frustum on a View
-  overrides existing surface or segment frusta, bypassing physical descriptions
+  overrides existing canvas or segment frusta, bypassing physical descriptions
   of the display setup:
 </p>
 <!-- /* --><pre>
@@ -238,13 +238,13 @@ View::clear
 <h3>Backward-Compatibility</h3>
 <p>
   Each frustum (wall/projection) description on a compound generates a new
-  surface. Each destination channel of this compound sub-tree generates a
+  canvas. Each destination channel of this compound sub-tree generates a
   segment, using the compound's viewport. The views and channels are connected
   like done during intersection.
 </p>
 <p>
   A config always has one default layout named "???". This layout is used as the
-  default layout for all surfaces.
+  default layout for all canvases.
 </p>
 
 <h3>Everything Else</h3>
@@ -262,10 +262,10 @@ View::clear
   how is eq::net::Object data distribution implemented?
 </p>
 <p>
-  When one layout is applied to multiple surfaces, and the views of the layout
+  When one layout is applied to multiple canvases, and the views of the layout
   use frusta, the frusta might have the wrong aspect ratio on one of the
-  surfaces. Can be solved by adding the capability of specifying frusta
-  aspect-ratio-aware, or by copying the layout for each surface.
+  canvases. Can be solved by adding the capability of specifying frusta
+  aspect-ratio-aware, or by copying the layout for each canvas.
 </p>
 
 <hr></hr>
