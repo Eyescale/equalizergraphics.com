@@ -53,11 +53,13 @@ State:
 </p>
 <p>
   A <b>layout</b> groups one or more views which logically belong together. A
-  layout is applied to a canvas. This assignment can be changed at run-time by
-  the application. The intersection between views and segments defines which
-  output (sub-)channels are available. These output channels are typically used
-  as <b>destination channels</b> in a <b>compound</b>. They are automatically
-  created during configuration loading or creation.
+  layout is applied to a canvas. If no layout is applied to a canvas, nothing is
+  rendered on this canvas, i.e, the canvas is inactive. The layout assignment
+  can be changed at run-time by the application. The intersection between views
+  and segments defines which output (sub-)channels are available. These output
+  channels are typically used as <b>destination channels</b> in
+  a <b>compound</b>. They are automatically created during configuration loading
+  or creation.
 </p>
 <p>
   Each view can have a frustum description. The view's frustum overrides frusta
@@ -102,6 +104,7 @@ config
         {
             name     "view1"
             viewport [ x y w h ]
+            wall/projection {...}
             observer "observer1"  # later
         }
     }
