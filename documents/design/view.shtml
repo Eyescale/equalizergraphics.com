@@ -207,7 +207,7 @@ Canvas::useLayout
     for each segment
         find channels "channelName.newLayoutName.*"
             for each channel
-                increase channel, window, pipe, node) activation count
+                increase channel, window, pipe, node activation count
                 create and init entities which got activated
         find channels "channelName.oldLayoutName.*"
             for each channel
@@ -216,6 +216,10 @@ Canvas::useLayout
 
 Compound::accept
      Don't traverse compounds with inactive channels if activeOnly is set
+
+Compound::init
+     increase activation count for all used layouts
+     set wall/projection on all compounds with a layout destination channel
 </pre><!-- */ -->
 
 <h3>Frustum Updates</h3>
