@@ -193,9 +193,40 @@ Config::addCanvas( canvas )
                 if segment intersects view
                     find or create "channelname.layoutname.viewname"
                     set viewport to sub-viewport of segment channel
-                    set channel inactive
+                    decrement channel activation count [inactivates channel]
                     set view on channel, add channel to view
 </pre><!-- */ -->
+
+<h3>Config Initialization</h3>
+<p>
+</p>
+<!-- /* --><pre>
+  [channel...nodes are created with activation count 1]
+  [channel...nodes used as layout destination channels are inactivated above]
+
+    modify Compound::accept
+       Don't traverse compounds with inactive channels if activeOnly is set
+
+    for each canvas
+        if canvas uses layout
+            for each segment
+                for each channel named "channelName.newLayoutName.*"
+                    increase channel, window, pipe, node activation count
+     -> use ConfigVisitor!
+
+  Existing init:
+    for each root compound
+        init compound
+            for each compound in tree
+                reference channel (reference window, pipe, node)
+                update (init) inherit data
+
+   for each node, pipe, window, channel
+       if entity is referenced [new: and activated]
+           send entity's config init task
+</pre><!-- */ -->
+
+
 
 <h3>Channel Activation</h3>
 <p>
@@ -213,13 +244,6 @@ Canvas::useLayout
             for each channel
                 decrease channel, window, pipe, node activation count
                 exit and release entities with 0 activation count
-
-Compound::accept
-     Don't traverse compounds with inactive channels if activeOnly is set
-
-Compound::init
-     increase activation count for all used layouts
-     set wall/projection on all compounds with a layout destination channel
 </pre><!-- */ -->
 
 <h3>Frustum Updates</h3>
