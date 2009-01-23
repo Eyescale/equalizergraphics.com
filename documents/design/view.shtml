@@ -253,10 +253,11 @@ Config::addCanvas( canvas )
 
   in CanvasInitVisitor
       ...
-          for each channel named "channelName.newLayoutName.*"
-              ...
-              find compounds where channel is a destination channel
-              set compound frustum to frustum of the channel's segment
+      for each channel named "channelName.newLayoutName.*"
+      ...
+      find compounds where channel is a destination channel
+          if segment has frustum
+             set compound frustum = segment frustum X channel/segment coverage
 
   after CanvasInitVisitor
       for each view
