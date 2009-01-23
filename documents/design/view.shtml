@@ -199,11 +199,13 @@ Config::addCanvas( canvas )
 
 <h3>Config Initialization</h3>
 <p>
+  All resouce entities are by default activated, that is, they are created with
+  activation count of 1. When a resource is used as a destination channel of a
+  view/segment intersection, it's activation count is decreased, that is, it isi
+  deactivated. Using a layout (re-)activates the entities used in by this
+  layout.
 </p>
 <!-- /* --><pre>
-  [channel...nodes are created with activation count 1]
-  [channel...nodes used as layout destination channels are inactivated above]
-
     modify Compound::accept
        Don't traverse compounds with inactive channels if activeOnly is set
 
@@ -226,6 +228,42 @@ Config::addCanvas( canvas )
            send entity's config init task
 </pre><!-- */ -->
 
+
+
+<h3>Frustum Calculation</h3>
+<p>
+  The frustum priority is View, Segment, Canvas, i.e., a frustum defined on a
+  view overrides segment frustum definitions, which in turn override canvas
+  segment definitions.
+</p>
+<p>
+  View frusta define projections which are by definition independent of the
+  physical projection system. Layouts with frusta are typically not used for
+  immersive installations.
+</p>
+<p>
+  Segment and canvas frusta define the characteristics of a physical projection
+  system. They are given by the real-world setup, and are therefore immutable
+  resource descriptions which cannot be changed by the application at run-time.
+</p>
+<!-- /* --><pre>
+  Canvas::addSegment
+      if segment has no frustum and canvas has frustum
+          set segment frustum = canvas frustum X segment viewport
+
+  in CanvasInitVisitor
+      ...
+          for each channel named "channelName.newLayoutName.*"
+              ...
+              find compounds where channel is a destination channel
+              set compound frustum to frustum of the channel's segment
+
+  after CanvasInitVisitor
+      for each view
+          for each channel of view (set in intersection)
+              for each compound using channel as destination channel
+                  set compound frustum = view frustum X channel/view coverage
+</pre><!-- */ -->
 
 
 <h3>Channel Activation</h3>
