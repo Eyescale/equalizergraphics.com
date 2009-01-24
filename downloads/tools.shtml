@@ -1,14 +1,31 @@
 #define S_DOWNLOADS
-#define S_DOWNLOADS_GLASYNC
+#define S_DOWNLOADS_TOOLS
 #define PAGE Downloads
-#define SUBPAGE glAsync
+#define SUBPAGE Tools
 #include "header.shtml"
 
+<h2>GPU Affinity Checker</h2>
+<p>
+  The GPU Affinity Checker is a simple program which lists all available GPU's
+  using the
+  <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
+  extension. It is useful to verify that your system is configured correctly for
+  Equalizer. It works only on Windows with nVidia Quadro FX graphics cards.
+</p>
+<p>
+  The tool is automatically build when using the Visual Studio 2005 solution. A
+  precompiled executable can be found 
+  <a href="/downloads/affinityCheck.exe">here</a>, and the source code 
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/tools/affinityCheck/affinityCheck.cpp?view=markup">here</a>.
+</p>
+
+<h2>GLAsync</h2>
 <p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
   downloads in the spirit of the 
   <a href="http://oss.sgi.com/projects/ogl-sample/registry/SGIX/async.txt">
     SGIX_async</a> extension.
 </p>
+
 <p>
   GLAsync is completely independent from Equalizer. This download is offered for
   historical reasons, and the usage of the new

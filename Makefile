@@ -151,7 +151,7 @@ FILES = \
 	downloads/DBCAAF49A0C0/ProgrammingGuide.pdf \
 	downloads/developer.html \
 	downloads/major.html \
-	downloads/glAsync.html \
+	downloads/tools.html \
 	downloads/source.html \
 	news/EqualizerNewsJuly07.html \
 	news/EqualizerNewsDecember07.html \

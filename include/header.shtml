@@ -297,11 +297,11 @@
 #endif
               >Source Code</a></p>
 
-        <p><a href="/downloads/glAsync.html"
-#ifdef S_DOWNLOADS_GLASYNC
+        <p><a href="/downloads/tools.html"
+#ifdef S_DOWNLOADS_TOOLS
               class="used"
 #endif
-              >GLAsync</a></p>
+              >Tools</a></p>
       </div>
 #endif // S_DOWNLOADS
 
