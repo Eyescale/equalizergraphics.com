@@ -1,10 +1,10 @@
-
 .PHONY: update sitemap doxygen
 
 TARGET = build
 
 FILES = \
 	$(wildcard downloads/*.gz) \
+	$(wildcard downloads/*.exe) \
 	api.html \
 	applications.html \
 	changes.html \
