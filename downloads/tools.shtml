@@ -19,6 +19,12 @@
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/tools/affinityCheck/affinityCheck.cpp?view=markup">here</a>.
 </p>
 
+<h3>Example Output</h3>
+<pre>
+GPU 0: NVIDIA Quadro FX 5600 used on [0 0 1600 1200]
+GPU 1: NVIDIA Quadro FX 5600 used on [1600 0 1600 1200]
+</pre>
+
 <h2>GLAsync</h2>
 <p>GLAsync is a small, independent C++ class delivering asynchronous OpenGL
   downloads in the spirit of the 
