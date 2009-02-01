@@ -5,6 +5,7 @@ TARGET = build
 FILES = \
 	$(wildcard downloads/*.gz) \
 	$(wildcard downloads/*.exe) \
+	$(wildcard downloads/*.zip) \
 	api.html \
 	applications.html \
 	changes.html \

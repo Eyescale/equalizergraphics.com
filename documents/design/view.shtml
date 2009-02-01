@@ -112,7 +112,7 @@ config
     canvas  # 1...n times
     {
         name   "display_wall"
-        layout "layout1"
+        layout "layout1" | int
         wall/projection {...}
         
         segment # 1...n times
@@ -126,7 +126,7 @@ config
 
     compound
     {
-        channel "output-channel.layout1.view1"
+        channel [ segment "name" view "name" ]
         ...
     }
     compound  # inactive (incl. all children)
