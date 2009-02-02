@@ -86,6 +86,35 @@ State:
 </p>
 
 <h2>File Format</h2>
+<h3>Referencing channels</h3>
+<p>
+  Traditionally, channels are referenced by name. This API requires channels to
+  be used by compounds which not in the config file, but created by the
+  view/segment combinations. Since the name is an arbitrary,
+  application-specified field, it can't be used for channel references.
+</p>
+<p>
+  Channels can be referenced by name, position or view and segment. The full
+  grammar for referencing is:
+</p>
+<!-- /* --><pre>
+  channel-ref: 'string' | '(' channel-segment-ref ')' | '(' channel-node-ref ')'
+
+  channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
+  canvas-ref:  'string' | 'index'
+  segment-ref: 'string' | 'index'
+  layout-ref:  'string' | 'index'
+  view-ref:    'string' | 'index'
+
+  channel-node-ref: ( window-ref ) 'index'
+  window-ref: ( pipe-ref ) 'string' | 'index'
+  pipe-ref: ( node-ref ) 'string' | 'index'
+  node-ref: 'string' | 'index'
+</pre><!-- */ -->
+<p>
+  Referencing using the entities by index might be implemented later.
+</p>
+
 <!-- /* --><pre>
 config
 {
@@ -126,12 +155,12 @@ config
 
     compound
     {
-        channel [ segment "name" view "name" ]
+        channel ( canvas "display_wall" segment 0 view "view1" )
         ...
     }
     compound  # inactive (incl. all children)
     {
-        channel "output-channel.layout2.view1"
+        channel ( canvas "display_wall" segment 0 layout 1 view 0 )
         ...
     }
 }
@@ -191,10 +220,11 @@ Config::addCanvas( canvas )
         for each view of layout
             for each segment of canvas
                 if segment intersects view
-                    find or create "channelname.layoutname.viewname"
+                    create copy of segment channel
                     set viewport to sub-viewport of segment channel
                     decrement channel activation count [inactivates channel]
                     set view on channel, add channel to view
+                    set segment on channel
 </pre><!-- */ -->
 
 <h3>Config Initialization</h3>
@@ -212,7 +242,7 @@ Config::addCanvas( canvas )
     for each canvas
         if canvas uses layout
             for each segment
-                for each channel named "channelName.newLayoutName.*"
+                for each channel using segment and layout
                     increase channel, window, pipe, node activation count
      -> use ConfigVisitor!
 
@@ -253,7 +283,7 @@ Config::addCanvas( canvas )
 
   in CanvasInitVisitor
       ...
-      for each channel named "channelName.newLayoutName.*"
+      for each channel using segment and layout
       ...
       find compounds where channel is a destination channel
           if segment has frustum
@@ -275,11 +305,11 @@ Config::addCanvas( canvas )
 <!-- /* --><pre>
 Canvas::useLayout
     for each segment
-        find channels "channelName.newLayoutName.*"
+        for each channel using segment and new layout
             for each channel
                 increase channel, window, pipe, node activation count
                 create and init entities which got activated
-        find channels "channelName.oldLayoutName.*"
+        for each channel using segment and old layout
             for each channel
                 decrease channel, window, pipe, node activation count
                 exit and release entities with 0 activation count
@@ -313,7 +343,7 @@ View::clear
   like done during intersection.
 </p>
 <p>
-  A config always has one default layout named "???". This layout is used as the
+  A config always has one default layout (the first). This layout is used as the
   default layout for all canvases.
 </p>
 
@@ -322,14 +352,31 @@ View::clear
   Remove 0.6 screen interface (replaced by View::getViewport).
 </p>
 
-<h2>Open Issues</h2>
+<h2>Issues</h2>
+<h3>1. Do we need to create canvases and layouts for
+  backward-compatibility?</h3>
+<p>
+  The fixed aspect ratio support modifies the wall/projection of an 0.6-style
+  view. In the new API this would be done through modification of the view
+  frustum - which would get the current frustum from where?
+</p>
+
+<h3>2. Are Views intended to be sub-classed?</h3>
+<p>
+  Yes: Sub-classing allows to attach application-specific data to a view, e.g.,
+  a model. eqPly will provide an example implementatoin of eq::net::Object data
+  distribution.
+</p>
+
+<h3>3. Are hierarchical layouts needed?</h3>
+<p>
+  Seems that app can implement hierarchical layout and flatten it for Equalizer?
+</p>
+
+<h2>Unimplemented</h2>
 <p>
   Observer interface will be implemented later. Right now there is one observer
   (the config).
-</p>
-<p>
-  Are Views intended to be sub-classed, e.g., to attach model to view. If yes,
-  how is eq::net::Object data distribution implemented?
 </p>
 <p>
   When one layout is applied to multiple canvases, and the views of the layout
