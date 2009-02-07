@@ -1,0 +1,38 @@
+#define S_NEWS
+#define PAGE News
+#define SUBPAGE Equalizer BOF at Eurographics 2009
+
+#include "header.shtml"
+
+<p>
+  We will be holding an Equalizer Birds-Of-a-Feather meeting during
+  <a href="http://www.eurographics2009.de/">Eurographics'09</a> - mark your
+  calendars:
+</p>
+<p>
+  Place: Eurographics 2009, TU Munich<br>
+  Date:  Tuesday, March 31, 14:30-16:00<br>
+  Room:  To be announced<br>
+</p>
+<p>
+  Co-located with EG is the <a href="http://www.egpgv.org/">Eurographics
+    Symposium on Parallel Graphics and Visualization</a>, so there is yet
+  another good reason to come to Munich!
+</p>
+
+<h2>Call for presentations</h2>
+<p>
+  Please contact 
+  <a href="mailto:eile@equalizergraphics.com?subject=Equalizer BOF">me</a> by
+  end of February if you are working with Equalizer and like to present your
+  work.
+</p>
+
+<h2>Agenda</h2>
+<p>
+  To be announced later.
+</p>
+
+
+#include "footer.shtml"
+<!-- $Id$ -->

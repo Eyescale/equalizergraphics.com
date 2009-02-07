@@ -154,6 +154,7 @@ FILES = \
 	downloads/major.html \
 	downloads/tools.html \
 	downloads/source.html \
+	news/EgBof.html \
 	news/EqualizerNewsJuly07.html \
 	news/EqualizerNewsDecember07.html \
 	news/Release_0.1.html \
