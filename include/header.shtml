@@ -42,6 +42,7 @@
   <body>
     <div class="poll">
         <img src="/images/Equalizer.png" alt="Equalizer logo">
+#ifndef NO_POLL
       <!-- Search Box  -->
       <form action="http://www.equalizergraphics.com/search.html"
             id="searchbox_003884678311182543665:v1o4knw6fuq">
@@ -53,7 +54,6 @@
       </form>
       <script type="text/javascript"
               src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
-#ifndef NO_POLL
 #if 1
       <!-- Jobs -->
       <div class="subnavigation"><center>
