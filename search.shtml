@@ -14,9 +14,10 @@
 <!-- Google CSE Search Box Ends -->
 
 <!-- Popular Queries -->
-<div id="queries">Popular: </div>
+<div id="queries">Popular Searches: </div>
 <script src="http://www.google.com/coop/query_renderer.js"></script>
 <script src="http://www.google.com/coop/api/003884678311182543665/cse/v1o4knw6fuq/queries/js?callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+<hr>
 
 <!-- Google Search Result Snippet Begins -->
 <div id="results_003884678311182543665:v1o4knw6fuq"></div>
