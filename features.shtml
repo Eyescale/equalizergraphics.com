@@ -38,7 +38,7 @@
   <td><a href="/documents/design/immersive.html">head tracking</a></td>
   <td>0.1</td>
 </tr><tr>
-  <td><a href="/documents/design/compounds.html#swapbarrier">software
+  <td><a href="/documents/design/swapBarrier.html">software
       swapbarrier</a> for synchronization of multipipe displays</td>
   <td>0.1</td>
 </tr><tr>

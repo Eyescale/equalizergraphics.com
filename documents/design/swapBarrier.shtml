@@ -1,0 +1,112 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Swap Barriers
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State:
+<ul>
+  <li>Software swapbarrier implemented in 0.1</li>
+  <li>Hardware swapbarrier (G-Sync) in design</li> 
+</ul>
+
+<h2>Overview</h2>
+<p>
+  The purpose of a swap barrier is to synchronize buffer swaps of multiple
+  windows, potentially residing on different nodes.
+</p>
+
+<h3>Software Swap Barrier</h3>
+<p>
+  The software swapbarrier uses a <code>net::Barrier</code> together with
+  a <code>Window::finish</code> to synchronize the buffer swaps without special
+  hardware support. The finish ensures that all GL commands for the window have
+  been executed prior to entering the barrier. When leaving the barrier, the
+  buffer swap is the next command and will be executed immediately.
+</p>
+<p>
+  Software swap synchronization can not guarantee frame-precise sync. The
+  contributing displays are not frame-synchronized with each other, and
+  furthermore a swap command might be executed on video frame later, because it
+  just missed its turn due to timing issues.
+</p>
+<p>
+  The server creates one <code>net::Barrier</code> with the appropriate height
+  for all swap barriers with the same name. Deadlocks are not checked and can
+  occur if multiple swap barriers are used inappropriately.
+</p>
+
+<h3>NV_swap_group synchronization</h3>
+<p>
+  The WGL and GLX swap group extensions use a two-tiered strategy to provide
+  hardware-based swap synchronization. On a single system, all windows join a
+  swap group, which ensures that the buffer swaps happen synchronously. Between
+  systems, swap groups join the same swap barrier for synchronization.
+</p>
+<p>
+  If a swap barrier defines a <code>NV_group</code> or <code>NV_barrier</code>,
+  the appropriate NV_swap_group extension (GLX or WGL) is used. Setting a
+  barrier number implies a valid group number.
+</p>
+<p>
+  If the extension is not supported by the driver of window system (AGL), a
+  warning is printed and no barrier is joined.
+</p>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+       swapbarrier 
+       { 
+           name "barrier-name" // sync's compound's window swap buffers
+           NV_group    OFF | ON (1) | unsigned
+           NV_barrier  OFF | ON (1) | unsigned
+       }
+  }
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+  class OSWindow
+  {
+      virtual bool joinNVSwapBarrier( const uint32_t group, 
+          const uint32_t barrier ) { return false; }
+  };
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+<h3>NV_swap_group synchronization</h3>
+<p>
+  Implement GLXWindow, WGLWindow joinNVSwapBarrier. Check if extension is
+  available, if not warn and return false. Do check for max barriers and
+  groups. Barrier and group can be 0 to un-join.
+</p>
+<p>
+  Server sends swap group and barrier as part of the window's config init
+  packet, which are saved on the eq::Window. The OSWindow implementation queries
+  the values in configInit and configExit and calls joinNVSwapBarrier.
+</p>
+<p>
+  Compound::init sets eq::server::Window swap group and barrier. Check that
+  there is only one per window, otherwise warn and overwrite values.
+</p>
+<p>
+  Ignore swap barriers with NV settings in software swapbarrier implementation.
+</p>
+
+<h2>Issues</h2>
+<h3>1. Do we need to create canvases and layouts for
+  backward-compatibility?</h3>
+<p>
+  The fixed aspect ratio support modifies the wall/projection of an 0.6-style
+  view. In the new API this would be done through modification of the view
+  frustum - which would get the current frustum from where?
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

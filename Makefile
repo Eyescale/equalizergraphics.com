@@ -117,6 +117,7 @@ FILES = \
 	documents/design/standalone.html \
 	documents/design/statistics.html \
 	documents/design/statisticsOverlay.html \
+	documents/design/swapBarrier.html \
 	documents/design/taskMethods.html \
 	documents/design/threads.html \
 	documents/design/transparency.html \
