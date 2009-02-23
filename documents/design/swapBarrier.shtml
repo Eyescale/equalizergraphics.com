@@ -100,13 +100,6 @@ State:
 </p>
 
 <h2>Issues</h2>
-<h3>1. Do we need to create canvases and layouts for
-  backward-compatibility?</h3>
-<p>
-  The fixed aspect ratio support modifies the wall/projection of an 0.6-style
-  view. In the new API this would be done through modification of the view
-  frustum - which would get the current frustum from where?
-</p>
 
 #include "footer.shtml"
 <!-- $Id$ -->
