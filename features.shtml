@@ -77,10 +77,6 @@
   <td><a href="/documents/design/aspectRatio.html">aspect ratio support</a></td>
   <td>0.4</td>
 </tr><tr>
-  <td><a href="/documents/design/dataTransmission.html">data
-      transmission</a></td>
-  <td>disabled</td>
-</tr><tr>
   <td><a href="/documents/design/PBuffer.html">PBuffer support</a></td>
   <td>0.5</td>
 </tr><tr>
