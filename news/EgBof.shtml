@@ -20,19 +20,71 @@
   another good reason to come to Munich!
 </p>
 
-<h2>Call for presentations</h2>
-<p>
-  Please contact 
-  <a href="mailto:eile@equalizergraphics.com?subject=Equalizer BOF">me</a> by
-  end of February if you are working with Equalizer and like to present your
-  work.
-</p>
+<h2>Schedule</h2>
+<ul>
+  <li><b>15:00-15:20</b> Equalizer: Past, Present and Future, Stefan Eilemann,
+    Eyescale Software GmbH</li>
+  <li><b>15:20-15:40</b> Virtual Architecture with Equalizer and OpenSceneGraph,
+    Julia Sigmund, University of Siegen</li>
+  <li><b>15:40-16:00</b> Performance Optimizations for Image Compositing, Renato
+    Pajarola, University of Zurich</li>
+  <li><b>16:00-16:30</b> Questions and Answers, Open Discussion</li>
+</ul>
 
-<h2>Agenda</h2>
-<p>
-  To be announced later.
-</p>
+<div class="flush_float"></div>
+<table>
+  <tr>
+    <td>
+      <h3>Equalizer: Past, Present and Future</h3>
 
+      <div class="float_right">
+        <img src="/images/EgBof.jpg" 
+             alt="Layout API">
+      </div>
+      <p>
+        In this presentation we will provide an overview of the roots, current
+        state and future work on the Equalizer parallel rendering framework. Hot
+        new features, e.g., dynamic frame resolution and the layout API will
+        receive special attention.
+      </p>
+    </td>
+    <td>
+      <h3>Virtual Architecture with Equalizer and OpenSceneGraph</h3>
+      
+      <div class="float_right">
+        <img src="/images/VR_Lab_Siegen.jpg" 
+             alt="Virtual Architecture with Equalizer and OpenSceneGraph">
+      </div>
+      <p>
+        In the context of a project work for virtual architecture we combined
+        Equalizer and OpenSceneGraph. Special consideration was given to the
+        flexibility of the parallel rendering capabilities. The presentation
+        reviews the synthesis of Equalizer and OpenSceneGraph for our virtual
+        reality environment.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>Performance Optimizations for Image Compositing</h3>
+      <p>
+        We will briefly review the current performance bottlenecks in Equalizer
+        and provide some preliminary information on our research to eliminate
+        the major issues.
+      </p>
+    </td>
+    <td>
+      <h3>Q&amp;A, Open Discussion</h3>
+      <p>
+        A relaxed get-together for current and future Equalizer developers. We
+        encourage an open exchange of ideas, current and futures usage around
+        Equalizer and other parallel rendering software. Getting to know each
+        other and finding synergies between different parallel rendering
+        applications is the other objective for this meeting.
+      </p>
+    </td>
+  </tr>
+</table>
 
 #include "footer.shtml"
 <!-- $Id$ -->
