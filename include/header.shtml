@@ -54,11 +54,15 @@
       </form>
       <script type="text/javascript"
               src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
-#if 1
+#if 0
       <!-- Jobs -->
       <div class="subnavigation"><center>
           <a href="/contributions.html#packagers"><b>Packagers
               Wanted!</b></a><br>
+      </center></div>
+#else
+      <div class="subnavigation"><center>
+          <a href="/news/EgBof.html"><b>BOF Schedule available</b></a><br>
       </center></div>
 #endif
 #if 0
