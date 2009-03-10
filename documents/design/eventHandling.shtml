@@ -14,6 +14,7 @@
     <li>WGL implemented in 0.3</li>
     <li>AGL implemented in 0.4</li>
     <li>Message pump configuration and removal of (glX) event thread in 0.5</li>
+    <li>AGL event dispatch to pipe threads in svn</li>
   </ul>
 </p>
 
@@ -62,7 +63,7 @@
 </p>
 
 
-<h2>External Message Pump (WGL/AGL)</h2>
+<h2>External Message Pump</h2>
 <p>
   Equalizer dispatches the window system events automatically between the
   execution of two task methods. External toolkits, e.g., QT, might implement a
@@ -73,11 +74,9 @@
 <p>
   The virtual method <code>useMessagePump</code> is called by Equalizer during
   application and pipe thread initialization (before configInit!) to determine
-  if the pipe thread shall automatically dispatch OS events. For non-threaded
-  and AGL pipes, the method affects the node thread. On WGL and GLX, messages
-  are dispatched in the application and each pipe thread. On AGL, events are
-  dispatched only on the application thread. If useMessagePump returns false,
-  the application has to dispatch events.
+  if the pipe thread shall automatically dispatch OS events. Messages are always
+  dispatched to the window's pipe thread. If useMessagePump returns false, the
+  application has to dispatch events itself.
 </p>
 
 <h2>Customized Event Handling</h2>
