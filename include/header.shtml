@@ -43,17 +43,43 @@
     <div class="poll">
         <img src="/images/Equalizer.png" alt="Equalizer logo">
 #ifndef NO_POLL
-      <!-- Search Box  -->
-      <form action="http://www.equalizergraphics.com/search.html"
-            id="searchbox_003884678311182543665:v1o4knw6fuq">
-        <input type="hidden" name="cx" 
-               value="003884678311182543665:v1o4knw6fuq" >
-        <input type="hidden" name="cof" value="FORID:11" >
-        <input type="text" name="q" size="20" >
-        <input type="submit" name="sa" value="Search" >
-      </form>
-      <script type="text/javascript"
-              src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&amp;lang=en"></script>
+        <!-- Search Box  -->
+        <form action=""
+              id="searchbox_003884678311182543665:v1o4knw6fuq" 
+              onsubmit="return false;">
+          <div>
+            <input type="text" name="q" size="25"/>
+            <input type="submit" value="Search"/>
+          </div>
+        </form>
+        <script type="text/javascript" 
+                src="http://www.google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq&lang=en">
+        </script>
+        <div id="results_003884678311182543665:v1o4knw6fuq" 
+             style="display:none">
+          <div class="cse-closeResults">
+            <a>&times; Close</a>
+          </div>
+          <div class="cse-resultsContainer"></div>
+        </div>
+
+        <style type="text/css">
+          @import url(http://www.google.com/cse/api/overlay.css);
+        </style>
+
+        <script
+           src="http://www.google.com/uds/api?file=uds.js&v=1.0&key=ABQIAAAAb8Y-IvKeW2SjjgJZ0OtWwxSF1ru9w_BDt2-W0105ZQshFxapoxThUAIJ1RYoB_W6WuNd9ImFqknMkg&hl=en" 
+           type="text/javascript"></script>
+        <script src="http://www.google.com/cse/api/overlay.js" 
+                type="text/javascript"></script>
+        <script type="text/javascript">
+          function OnLoad() {
+          new CSEOverlay("003884678311182543665:v1o4knw6fuq",
+          document.getElementById("searchbox_003884678311182543665:v1o4knw6fuq"),
+          document.getElementById("results_003884678311182543665:v1o4knw6fuq"));
+          }
+          GSearch.setOnLoadCallback(OnLoad);
+        </script>
 #if 0
       <!-- Jobs -->
       <div class="subnavigation"><center>
