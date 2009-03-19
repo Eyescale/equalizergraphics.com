@@ -152,7 +152,7 @@ server
                     {
                         name     string
                         viewport [ viewport ] //wrt window, default full window
-
+                        drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
                         attributes
                         {
                             hint_statistics     OFF | FASTEST [ON] | NICEST
@@ -161,10 +161,76 @@ server
                 }
             }
         }
+        
+        layout  # 1...n times
+        {
+            name string
+            view  # 1...n times
+            {
+                name     string
+                viewport [ viewport ]
+
+                wall       // frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                }
+                projection // alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+
+        canvas  # 1...n times
+        {
+            name    string
+            layout  name
+
+            wall       
+            {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+            }
+            projection
+            {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+            }
+            
+            segment # 1...n times
+            {
+                channel  string
+                name     string
+                viewport [ viewport ] 
+
+                wall       // frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                }
+                projection // alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+        
         compound // 1-n times
         {
             name     string
-            channel  string   // where the compound's tasks are executed
+            channel  channel-ref             // see below
 
             task     [ CLEAR DRAW READBACK ASSEMBLE ] // CULL later
             buffer   [ COLOR DEPTH ]         // default COLOR
@@ -173,10 +239,12 @@ server
             range    [ float float ]         // DB-range for sort-last
             pixel    [ int int int int ]     // pixel decomposition (x y w h)
             eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
+            zoom     [ float float ]         // up/downscale of parent pvp
 
             loadBalancer 
             {
-                mode [ 2D | DB | VERTICAL | HORIZONTAL ]
+                mode [ 2D | DB | VERTICAL | HORIZONTAL | DPLEX | DFR ]
+                framerate float // DFR only
             }
 
             attributes
@@ -205,11 +273,14 @@ server
             swapbarrier  // compounds with the same barriername sync swap
             {
                 name string
+                NV_group OFF | ON | unsigned
+                NV_barrier OFF | ON | unsigned
             }
             outputframe
             {
                 name   string
                 buffer [ COLOR DEPTH ]
+                type texture | memory
             }
             inputframe
             {
@@ -218,11 +289,123 @@ server
         }
     }
 }
+
+channel-ref: 'string' | '(' channel-segment-ref ')'
+channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
+canvas-ref:  'string' | 'index'
+segment-ref: 'string' | 'index'
+layout-ref:  'string' | 'index'
+view-ref:    'string' | 'index'
 </pre><!-- */ -->
 
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+    <li><a href="/documents/design/view.html">Layout API</a> added:
+    <!-- /* --><pre>
+       layout  # 1...n times
+       {
+            name string
+            view  # 1...n times
+            {
+                name     string
+                viewport [ viewport ]
+
+                wall       // frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                }
+                projection // alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+
+        canvas  # 1...n times
+        {
+            name   string
+            layout string
+
+            wall       
+            {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+            }
+            projection
+            {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+            }
+            
+            segment # 1...n times
+            {
+                channel  string
+                name     string
+                viewport [ viewport ] 
+
+                wall       // frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                }
+                projection // alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+
+
+        }
+        compound
+        {
+            channel channel-ref
+            ...
+        }
+
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/swapBarrier.html">NV_swap_group (G-Sync)
+      support</a> added:
+    <!-- /* --><pre>
+      swapbarrier 
+      {
+         NV_group   OFF | ON | unsigned
+         NV_barrier OFF | ON | unsigned
+      }
+    </pre><!-- */ -->
+  </li>
+  </li>
+  <li>Dynamic frame resolution added:
+    <!-- /* --><pre>
+      compound
+      {
+          zoom     [ float float ]         // up/downscale of parent pvp
+          loadBalancer 
+          {
+             mode DFR
+             framerate float
+          }
+          outputframe
+          {
+              type texture | memory
+          }
+      }
+    </pre><!-- */ -->
+  </li>  
   <li>FBO Support added:
     <!-- /* --><pre>
       global
@@ -235,6 +418,10 @@ server
           attributes
           {
               hint_drawable    window | pbuffer | FBO
+          }
+          channel
+          {
+              drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
           }
       }
     </pre><!-- */ -->

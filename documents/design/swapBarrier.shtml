@@ -11,7 +11,7 @@ Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
 State:
 <ul>
   <li>Software swapbarrier implemented in 0.1</li>
-  <li>Hardware swapbarrier (G-Sync) in design</li> 
+  <li>Hardware swapbarrier (G-Sync) implemented in svn</li> 
 </ul>
 
 <h2>Overview</h2>
@@ -100,6 +100,10 @@ State:
 </p>
 
 <h2>Issues</h2>
+<p>
+  Only one window per swap group and system supported in nVidia drivers before
+  release 185.
+</p>
 
 #include "footer.shtml"
 <!-- $Id$ -->

@@ -10,8 +10,8 @@
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
 State:
 <ul>
-  <li>Implemented in 0.6</li>
-  <li>Redesign in progress</li> 
+  <li>Layout API implemented in svn</li> 
+  <li>0.6 Implementation below</li>
 </ul>
 
 <h2>Overview</h2>
