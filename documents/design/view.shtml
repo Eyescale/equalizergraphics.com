@@ -211,11 +211,11 @@ config
 <h2>Backward-Compatibility</h2>
 <p>
   One canvas, layout and view are used for each group of compounds. A group of
-  compounds is defined of all the siblings have a destination channel. Each
-  sibling uses one segment. The frustum of the view is the frustum of the parent
-  compound. The frustum and viewport of each segment is given by the
-  sibling. The compound channels are exchanged with the newly created
-  destination channels.
+  compounds is defined by all the siblings that have a destination channel. Each
+  sibling uses one segment. The frustum and viewport of each segment is given by
+  the sibling. The frustum of the view is set to the frustum of the compound, if
+  it is the root compound.  The compound channels are exchanged with the newly
+  created destination channels.
 </p>
 <p>
   There are three different types of legacy configs: standalone (root compound
@@ -224,15 +224,15 @@ config
   frustum).
 </p>
 <p>
-  By the above specification, for the standalone config one canvas, segment,
+  By the above specification, for a standalone config one canvas, segment,
   layout and view is created. The frustum is set on the view and will therefore
-  track aspect ratio (window resize) updates. The planar wall will create one
+  track aspect ratio (window resize) updates. A planar wall will create one
   canvas with n segments, one layout and view. The frustum is set on the canvas,
-  and inherited by the segments using the segment viewport. The non-planar is
-  handled similarly, except that each frustum and viewport is specified by the
-  sibling compound. Planar and non-planar configurations define the frustum on
-  the canvas or segment, which will cause aspect ratio changes not to be
-  tracked, since they configure immutable physical installations.
+  and inherited by the segments using the segment viewport. A non-planar
+  configuration is handled similarly, except that each frustum and viewport is
+  specified by the sibling compound. Planar and non-planar configurations define
+  the frustum on the canvas or segment, which will cause aspect ratio changes
+  not to be tracked, since they configure immutable physical installations.
 </p>
 
 <h2>Implementation</h2>
