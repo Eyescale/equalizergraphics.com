@@ -208,6 +208,33 @@ config
      };
 </pre><!-- */ -->
 
+<h2>Backward-Compatibility</h2>
+<p>
+  One canvas, layout and view are used for each group of compounds. A group of
+  compounds is defined of all the siblings have a destination channel. Each
+  sibling uses one segment. The frustum of the view is the frustum of the parent
+  compound. The frustum and viewport of each segment is given by the
+  sibling. The compound channels are exchanged with the newly created
+  destination channels.
+</p>
+<p>
+  There are three different types of legacy configs: standalone (root compound
+  has channel and frustum), planar wall (root compound has no channel but
+  frustum) and non-planar projection (root compound has neither channel nor
+  frustum).
+</p>
+<p>
+  By the above specification, for the standalone config one canvas, segment,
+  layout and view is created. The frustum is set on the view and will therefore
+  track aspect ratio (window resize) updates. The planar wall will create one
+  canvas with n segments, one layout and view. The frustum is set on the canvas,
+  and inherited by the segments using the segment viewport. The non-planar is
+  handled similarly, except that each frustum and viewport is specified by the
+  sibling compound. Planar and non-planar configurations define the frustum on
+  the canvas or segment, which will cause aspect ratio changes not to be
+  tracked, since they configure immutable physical installations.
+</p>
+
 <h2>Implementation</h2>
 <h3>View/Segment Intersection</h3>
 <p>
@@ -333,18 +360,6 @@ View::clear
 </pre><!-- */ -->
 <p>
   The same calculations are to be done on Compound::init for all compounds.
-</p>
-
-<h3>Backward-Compatibility</h3>
-<p>
-  Each frustum (wall/projection) description on a compound generates a new
-  canvas. Each destination channel of this compound sub-tree generates a
-  segment, using the compound's viewport. The views and channels are connected
-  like done during intersection.
-</p>
-<p>
-  A config always has one default layout (the first). This layout is used as the
-  default layout for all canvases.
 </p>
 
 <h3>Everything Else</h3>
