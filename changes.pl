@@ -6,7 +6,13 @@
 use strict;
 use XML::RSS;
 
-my @changes = `svn log --limit 15 -v`;
+my $svn = $ENV{'SVN'};
+if( $svn eq "" )
+{
+    $svn = "svn";
+}
+
+my @changes = `$svn log --limit 15 -v`;
 my $state   = "initial";
 my $rev;
 my $date;

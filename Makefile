@@ -185,8 +185,9 @@ TARGETS  = $(FILES:%=$(TARGET)/%)
 IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 	   $(IMAGES_SRC:%.jpg=%-small.jpg)
 
+SVN ?= svn
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
-           -DUPDATE="`svn info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
+           -DUPDATE="`$(SVN) info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\" \
            -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%) \
            -DPAGEURL=$(@:$(TARGET)%=%)
@@ -203,7 +204,7 @@ auxinst: all
 	rsync -avz --exclude=".svn" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 update:
-	svn update ..
+	$(SVN) update ..
 	rm -f changes_log.html
 
 .SUFFIXES: .html .css
