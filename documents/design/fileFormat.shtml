@@ -175,6 +175,7 @@ server
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
+                    type         fixed | HMD
                 }
                 projection // alternate frustum description, last one wins
                 {
@@ -196,6 +197,7 @@ server
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
+                    type         fixed | HMD
             }
             projection
             {
@@ -216,6 +218,7 @@ server
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
+                    type         fixed | HMD
                 }
                 projection // alternate frustum description, last one wins
                 {
@@ -259,6 +262,7 @@ server
                 bottom_left  [ float float float ]
                 bottom_right [ float float float ]
                 top_left     [ float float float ]
+                type         fixed | HMD
             }
             projection // alternate frustum description, last one wins
             {
@@ -439,7 +443,8 @@ view-ref:    'string' | 'index'
               thread_model    async | draw_sync | local_sync
           }
       }
-  </li>  
+    </pre><!-- */ -->
+  </li>
   <li>Support for accumulation buffer and multisampling added:
     <!-- /* --><pre>
       global

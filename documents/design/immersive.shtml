@@ -8,7 +8,11 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
-  State: Implemented in 0.2
+  State:
+  <ul>
+    <li>Implemented in 0.2</li>
+    <li>HMD: implemented in svn</li>
+  </ul>
 </p>
 
 <h2>Overview</h2>
@@ -26,7 +30,7 @@
 </p>
   
 <h2>Stereo Rendering</h2>
-<div class="float_right"><a href="/documents/design/images/mono.png">
+<div class="float_left"><a href="/documents/design/images/mono.png">
     <img src="/documents/design/images/mono-small.jpg" 
          alt="View frustum for monoscopic rendering"></a>
   <div class="label">Monoscopic View Frustum</div>
@@ -38,7 +42,7 @@
   compound's <code>eye</code> field the eye passes are specified. The eye passes
   are inherited to children, unless the children overwrite the eye field.
 </p>
-<div class="float_left"><a href="/documents/design/images/stereo.png">
+<div class="float_right"><a href="/documents/design/images/stereo.png">
     <img src="/documents/design/images/stereo-small.jpg" 
          alt="View frusta for stereo rendering"></a>
   <div class="label">Stereoscopic View Frusta</div>
@@ -76,6 +80,27 @@
   matrix, thus the default eye positions are <code>( +-eye_base/2, 0, 0
   )</code>, as show above in the stereoscopic view frusta.
 </p>
+
+<a name="HMD"></a>
+<h2>Head-Mounted Displays (HMD)</h2>
+<div class="float_left"><a href="/documents/design/images/HMD.png">
+    <img src="/documents/design/images/HMD-small.jpg" 
+         alt="View frusta for head-mounted displays"></a>
+  <div class="label">View Frusta for Head-Mounted Displays</div>
+</div>
+<p>
+  Head-mounted displays move the display 'wall' with the observer, they are
+  fixed in front of the viewer. In Equalizer terms, the head matrix defines the
+  position of the wall. The eyes and the frustum are using the head matrix.
+</p>
+<p>
+  HMD's are configured using a wall description. When the type of the wall
+  description is set to HMD, the frustum is tracked using the current head
+  matrix.
+</p>
+<div class="flush_float"></div>
+
+
 <h2>Eye compounds</h2>
 <p>
   Eye compounds parallelize the rendering of the eye passes, by assigning each
@@ -116,6 +141,11 @@
     compound
     {
         eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
+    }
+    wall
+    {
+        ...
+        type fixed | HMD
     }
 </pre><!-- */ -->
 

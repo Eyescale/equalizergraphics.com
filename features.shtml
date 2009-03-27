@@ -89,6 +89,9 @@
   <td>FBO support</td>
   <td>svn</td>
 </tr><tr>
+  <td><a href="/documents/design/immersive.html#HMD">HMD support</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>FrameData API</td>
   <td>?</td>
 </tr><tr>
