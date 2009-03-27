@@ -305,6 +305,15 @@ view-ref:    'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+    <li><a href="/documents/design/immersive.html#HMD">HMD support</a> added:
+    <!-- /* --><pre>
+    wall
+    {
+        ...
+        type fixed | HMD
+    }
+    </pre><!-- */ -->
+    </li>
     <li><a href="/documents/design/view.html">Layout API</a> added:
     <!-- /* --><pre>
        layout  # 1...n times
