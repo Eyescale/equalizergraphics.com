@@ -66,6 +66,9 @@ FILES = \
 	documents/ParallelGraphicsProgramming.pdf \
 	documents/ParallelGraphicsProgramming.html \
 	documents/ParallelGraphicsProgramming.html_files \
+	documents/Presentations/EqualizerBOF2009.pdf \
+	documents/Presentations/EqualizerBOF2009.html \
+	documents/Presentations/EqualizerBOF2009.html_files \
 	documents/Projects_Stefan_Eilemann.pdf \
 	documents/RelNotes/RelNotes_0.1.0.html \
 	documents/RelNotes/RelNotes_0.2.0.html \
