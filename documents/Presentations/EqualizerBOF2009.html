@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Equalizer BOF Equalizer: Past, Present and FutureVirtual Architecture with Equalizer and OpenSceneGraph Performance Optimizations for Image Compositing Open Discussion, Q&amp;A Equalizer: Past, Present, Future Eurographics’09 Birds of a Feather  Stefan Eilemann, Eyescale Software GmbH  Past  Past 199?: Cavelib 2000: SGI OpenGL Multipipe SDK 2005: Project Equalizer 2006: 0.1, 0.2 Multi-View, Scalability 2007: 0.3, 0.4 Windows, eVolve 2008: 0.5, 0.6 Load-balancing, PBuffers  Present Flexibility, Scalability Minimally Invasive Distributed Object API Comprehensive Documentation Active Community Open and Independent  Present Multi-Display and Immersive 2D, DB, Stereo, DPlex, Pixel compounds Dynamic Frame Resolution Parallel Compositing Mix-and-match features  Selected Use Cases  Dynamic Frame Resolution Trade quality (resolution) for performance (framerate) Fill-rate bound applications: Volume rendering, raytracing, Shaders Combinable with scalable rendering  Dynamic Frame Resolution  Sort-last Compositing serial, binary-swap, direct-send, streaming, ... Example: Stream Compositing Mode ‘3D’ in MPK: n frames latency New configuration file in Equalizer 1-2 frames latency to hide compositing pipeline  DB Stream Compositing  Near Future Image Compression + Plug-In API Modularization: Network API Multi-Display Load-balancing  OpenSceneGraph Integration Compositing Optimizations   Future Visualization Server Multi-application Remote Rendering (WAN/MAN) Data Processing and GPGPU Failure Tolerance  Final Words LGPL license: commercial use welcome Open standard for scalable graphics Minimally invasive: easy porting Clusters and shared memory systems Linux, Windows, Mac OS X More on: www.equalizergraphics.com"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (14);
+            images[0] = "EqualizerBOF2009.html_files/EqualizerBOF2009.001.jpg";
+            images[1] = "EqualizerBOF2009.html_files/EqualizerBOF2009.002.jpg";
+            images[2] = "EqualizerBOF2009.html_files/EqualizerBOF2009.003.jpg";
+            images[3] = "EqualizerBOF2009.html_files/EqualizerBOF2009.004.jpg";
+            images[4] = "EqualizerBOF2009.html_files/EqualizerBOF2009.005.jpg";
+            images[5] = "EqualizerBOF2009.html_files/EqualizerBOF2009.006.jpg";
+            images[6] = "EqualizerBOF2009.html_files/EqualizerBOF2009.007.jpg";
+            images[7] = "EqualizerBOF2009.html_files/EqualizerBOF2009.008.jpg";
+            images[8] = "EqualizerBOF2009.html_files/EqualizerBOF2009.009.jpg";
+            images[9] = "EqualizerBOF2009.html_files/EqualizerBOF2009.010.jpg";
+            images[10] = "EqualizerBOF2009.html_files/EqualizerBOF2009.011.jpg";
+            images[11] = "EqualizerBOF2009.html_files/EqualizerBOF2009.012.jpg";
+            images[12] = "EqualizerBOF2009.html_files/EqualizerBOF2009.013.jpg";
+            images[13] = "EqualizerBOF2009.html_files/EqualizerBOF2009.014.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EqualizerBOF2009.html_files/EqualizerBOF2009.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EqualizerBOF2009.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EqualizerBOF2009.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EqualizerBOF2009.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

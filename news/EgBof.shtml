@@ -47,6 +47,11 @@
         new features, e.g., dynamic frame resolution and the layout API will
         receive special attention.
       </p>
+      <p>
+        Presentation:     
+        <a href="/documents/Presentations/EqualizerBOF2009.pdf">pdf</a> or
+        <a href="/documents/Presentations/EqualizerBOF2009.html">html</a>
+      </p>
     </td>
     <td>
       <h3>Virtual Architecture with Equalizer and OpenSceneGraph</h3>
