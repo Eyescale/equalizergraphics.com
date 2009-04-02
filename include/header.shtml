@@ -109,16 +109,6 @@
         <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)
         </span>
       </noscript>
-      <div class="subnavigation">
-        <b>Poll</b><br>
-        <script type="text/javascript" language="javascript"
-                src="http://static.polldaddy.com/p/1348984.js"></script>
-        <noscript>
-          <a href="http://answers.polldaddy.com/poll/1000076/">Equalizer BOF at
-            EuroGraphics: I will...</a><br/>
-          <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)</span>
-        </noscript>
-      </div>
 #endif
     </div>
     <div class="header">
