@@ -69,6 +69,10 @@
 
 <h2>Research Papers</h2>
 <ul>
+  <li><a href="http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.104">Equalizer:
+      A Scalable Parallel Rendering Framework</a>, IEEE Transactions on
+    Visualization and Computer Graphics, vol. 15, no. 3, pp. 436-452, May/June
+    2009.</li>
   <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report 2007/06.</li>
   <li><a href="/documents/directSend.pdf">Direct Send Compositing for
