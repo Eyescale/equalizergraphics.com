@@ -80,7 +80,7 @@ foreach ( @changes )
             {
                 push( @files, $file );
 
-                if( $type =~ /(png|jpg)/ && -e "build/$file" )
+                if( $image ne "" && $type =~ /(png|jpg)/ && -e "build/$file" )
                 {
                     $image = $file;
                 }
