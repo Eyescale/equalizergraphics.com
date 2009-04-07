@@ -69,7 +69,7 @@ global
      EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   // AGL, WGL only
      EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
      EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
-     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned
+     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
      EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
      EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
      EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
@@ -140,7 +140,7 @@ server
                         hint_swapsync       OFF | ON         // AGL, WGL only
                         hint_drawable       window | pbuffer | FBO
                         hint_statistics     off | fastest [on] | nicest
-                        planes_color        unsigned
+                        planes_color        unsigned | RGBA16F | RGBA32F
                         planes_alpha        unsigned
                         planes_depth        unsigned
                         planes_stencil      unsigned
@@ -305,6 +305,22 @@ view-ref:    'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Floating point pipeline added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_PLANES_COLOR   unsigned | RGBA16F | RGBA32F
+      }
+
+      window
+      {
+          attributes
+          {
+              planes_color    unsigned | RGBA16F | RGBA32F
+          }
+      }
+    </pre><!-- */ -->
+  </li>
     <li><a href="/documents/design/immersive.html#HMD">HMD support</a> added:
     <!-- /* --><pre>
     wall
