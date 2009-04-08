@@ -301,11 +301,10 @@ segment-ref: 'string' | 'index'
 layout-ref:  'string' | 'index'
 view-ref:    'string' | 'index'
 </pre><!-- */ -->
-
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
-  <li>Floating point pipeline added:
+  <li><a href="/documents/design/FloatingPointPipeline">Floating point pipeline</a> added:
     <!-- /* --><pre>
       global
       {

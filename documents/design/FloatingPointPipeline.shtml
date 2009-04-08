@@ -1,0 +1,68 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE PBuffer Integration
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:cedric.stalder@gmail.com">cedric.stalder@gmail.com</a><br/>
+State: Implemented in 0.5
+</p>
+
+<h2>Overview</h2>
+  <div class="label">Using Float point to color pixel</div>
+</div>
+<p>
+  Using floating point for define color texture.
+  Frame buffer object and Pbuffer will be able to work with this new definition.
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+    class Window
+    {
+        int getInternalFormatColor()
+    };
+
+    enum IAttrValue
+    {
+        ...
+        RGBA32F    = -13,
+        RGBA16F    = -12,
+        ...
+    };
+
+    FrameBufferObject::FrameBufferObject( GLEWContext* glewContext, const GLuint format )
+
+    update int WGLWindow::chooseWGLPixelFormat()
+    update bool OSWindow::configInitFBO()
+    update bool Channel::_configInitFBO()
+
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_PLANES_COLOR   unsigned | RGBA16F | RGBA32F
+      }
+
+      window
+      {
+          attributes
+          {
+              planes_color    unsigned | RGBA16F | RGBA32F
+          }
+      }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+<p>
+  The second part of implementation is to adapt the compositing.
+</p>
+
+#include "footer.shtml"
+
