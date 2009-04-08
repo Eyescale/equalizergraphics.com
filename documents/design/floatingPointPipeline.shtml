@@ -8,15 +8,14 @@
 
 <p>
 Author: <a href="mailto:cedric.stalder@gmail.com">cedric.stalder@gmail.com</a><br/>
-State: Implemented in 0.5
+State: Design
 </p>
 
 <h2>Overview</h2>
-  <div class="label">Using Float point to color pixel</div>
-</div>
 <p>
-  Using floating point for define color texture.
-  Frame buffer object and Pbuffer will be able to work with this new definition.
+  The objective of this extension is to support render targets using shorts
+  (float16) or float (float32). Frame Buffer Objects and PBuffers will be able
+  to work with this new formats.
 </p>
 
 <h2>API</h2>

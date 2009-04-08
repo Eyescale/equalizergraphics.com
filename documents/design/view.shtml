@@ -81,7 +81,7 @@ State:
 </p>
 <p>
   An <b>observer</b> looks at one or more views. It is described by the observer
-  position in the world and it's eye separation. Each observer has its own
+  position in the world and it's eye separation. Each observer will have its own
   stereo mode, focus distance and frame loop (framerate).
 </p>
 
@@ -120,7 +120,7 @@ config
 {
     node { pipe { window { channel { ...output and source channels... }}}}
 
-    observer  # later
+    observer
     {
         name    "observer1"
         eyeBase float
@@ -134,7 +134,7 @@ config
             name     "view1"
             viewport [ x y w h ]
             wall/projection {...}
-            observer "observer1"  # later
+            observer "observer1"
         }
     }
 
@@ -170,17 +170,18 @@ config
 <!-- /* --><pre>
      class Config
      {
-         const CanvasVector& getCanvases() const;
+         const ObserverVector& getObservers() const;
          const LayoutVector& getLayouts() const;
+         const CanvasVector& getCanvases() const;
      };
 
-     class Canvas
+     class Observer
      {
-         const std::string& getName() const;
-
-         void useLayout( const Layout* layout );
-         const Layout* getLayout() const;
-     };
+         void setEyeBase( const float eyeBase );
+         float getEyeBase() const;
+         void setHeadMatrix( const vmml::Matrix4f& matrix );
+         const vmml::Matrix4f& getHeadMatrix() const;
+     }
 
      class Layout
      {
@@ -202,6 +203,14 @@ config
          View::Type getLatestView() const;
      };
 
+     class Canvas
+     {
+         const std::string& getName() const;
+
+         void useLayout( const Layout* layout );
+         const Layout* getLayout() const;
+     };
+
      class Channel
      {
          const View& getView() const; // valid only in frameFoo()
@@ -209,6 +218,7 @@ config
 </pre><!-- */ -->
 
 <h2>Backward-Compatibility</h2>
+<h3>Views</h3>
 <p>
   One canvas, layout and view are used for each group of compounds. A group of
   compounds is defined by all the siblings that have a destination channel. Each
@@ -233,6 +243,15 @@ config
   specified by the sibling compound. Planar and non-planar configurations define
   the frustum on the canvas or segment, which will cause aspect ratio changes
   not to be tracked, since they configure immutable physical installations.
+</p>
+
+<h3>Observer</h3>
+<p>
+  The loader will create one default observer and assign it to all views for
+  legacy configurations with no observer. Config::setHeadMatrix will be
+  deprecated and will set the head matrix on all
+  observers. Config::getHeadMatrix will return the head matrix of the first
+  observer.
 </p>
 
 <h2>Implementation</h2>
@@ -373,14 +392,16 @@ View::clear
 <p>
   The fixed aspect ratio support modifies the wall/projection of an 0.6-style
   view. In the new API this would be done through modification of the view
-  frustum - which would get the current frustum from where?
+  frustum - which would get the current frustum from where? Resolved: The loader
+  creates views and segments by analyzing the configuration.
 </p>
 
 <h3>2. Are Views intended to be sub-classed?</h3>
 <p>
   Yes: Sub-classing allows to attach application-specific data to a view, e.g.,
   a model. eqPly will provide an example implementatoin of eq::net::Object data
-  distribution.
+  distribution. Open Issue: The server receives the application's view data on
+  deserialization, but ignores it.
 </p>
 
 <h3>3. Are hierarchical layouts needed?</h3>
@@ -388,10 +409,19 @@ View::clear
   Seems that app can implement hierarchical layout and flatten it for Equalizer?
 </p>
 
+<h3>4. How are observers handled for legacy configurations?</h3>
+<p>
+  The config is the one and only observer in 0.6. For legacy configurations,
+  which have no observer, the loader will create one default observer and assign
+  it to all views. Config::setHeadMatrix will be deprecated and will set the
+  head matrix on all observers. Config::getHeadMatrix will return the head
+  matrix of the first observer.
+</p>
+
 <h2>Unimplemented</h2>
 <p>
-  Observer interface will be implemented later. Right now there is one observer
-  (the config).
+  Observer interface will be extended later to support independent frame loops
+  and stereo mode.
 </p>
 <p>
   When one layout is applied to multiple canvases, and the views of the layout

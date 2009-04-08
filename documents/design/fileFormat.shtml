@@ -162,12 +162,19 @@ server
             }
         }
         
-        layout  # 1...n times
+        observer # 0...n times
+        {
+            name    string
+            eyeBase float
+        }
+
+        layout  # 0...n times
         {
             name string
             view  # 1...n times
             {
                 name     string
+                observer observer-ref
                 viewport [ viewport ]
 
                 wall       // frustum description
@@ -187,10 +194,10 @@ server
             }
         }
 
-        canvas  # 1...n times
+        canvas  # 0...n times
         {
             name    string
-            layout  name
+            layout  layout-ref
 
             wall       
             {
@@ -294,17 +301,35 @@ server
     }
 }
 
-channel-ref: 'string' | '(' channel-segment-ref ')'
+channel-ref:  'string' | '(' channel-segment-ref ')'
 channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
-canvas-ref:  'string' | 'index'
-segment-ref: 'string' | 'index'
-layout-ref:  'string' | 'index'
-view-ref:    'string' | 'index'
+canvas-ref:   'string' | 'index'
+segment-ref:  'string' | 'index'
+layout-ref:   'string' | 'index'
+view-ref:     'string' | 'index'
+observer-ref: 'string' | 'index'
 </pre><!-- */ -->
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
-  <li><a href="/documents/design/FloatingPointPipeline">Floating point pipeline</a> added:
+  <li><a href="/documents/design/view.html">Support for multiple observers</a>
+    added:
+    <!-- /* --><pre>
+    observer # 0...n times
+    {
+        name    string
+        eyeBase float
+    }
+
+    view  # 1...n times
+    {
+        observer observer-ref
+        ...
+    }
+    </pre><!-- */ -->
+    </li>
+  <li><a href="/documents/design/floatingPointPipeline.html">Floating
+    point pipeline support</a> added:
     <!-- /* --><pre>
       global
       {

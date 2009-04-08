@@ -103,6 +103,7 @@ FILES = \
 	documents/design/dynamicNearFar.html \
 	documents/design/environment.html \
 	documents/design/fileFormat.html \
+	documents/design/floatingPointPipeline.html \
 	documents/design/frames.html \
 	documents/design/glExtensions.html \
 	documents/design/imageCompression.html \
