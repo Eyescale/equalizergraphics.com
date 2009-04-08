@@ -83,13 +83,17 @@
   <td>orthographic frustum support</td>
   <td>0.6</td>
 </tr><tr>
-  <td><a href="/documents/design/view.html">View API</a></td>
-  <td>0.6</td>
+  <td><a href="/documents/design/view.html">view API</a></td>
+  <td>0.6, svn</td>
 </tr><tr>
   <td>FBO support</td>
   <td>svn</td>
 </tr><tr>
   <td><a href="/documents/design/immersive.html#HMD">HMD support</a></td>
+  <td>svn</td>
+</tr><tr>
+  <td><a href="/documents/design/immersive.html#observers">multiple 
+      observers</a></td>
   <td>svn</td>
 </tr><tr>
   <td>FrameData API</td>

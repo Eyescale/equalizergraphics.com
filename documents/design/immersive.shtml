@@ -12,6 +12,7 @@
   <ul>
     <li>Implemented in 0.2</li>
     <li>HMD: implemented in svn</li>
+    <li>Observers: implemented in svn</li>
   </ul>
 </p>
 
@@ -98,8 +99,16 @@
   description is set to HMD, the frustum is tracked using the current head
   matrix.
 </p>
-<div class="flush_float"></div>
 
+<a name="observers"></a>
+<h2>Multiple Observers</h2>
+<p>
+  The configuration holds a list of observers. Each observer has its own head
+  matrix and eye separation. One observer tracks multiple views. For further
+  information on multiple observer and their integration with the Layout API
+  please refer to the <a href="/documents/design/view.html">specification</a>.
+</p>
+<div class="flush_float"></div>
 
 <h2>Eye compounds</h2>
 <p>
