@@ -91,45 +91,6 @@ FILES = \
 	documents/WhitePapers/OpenMP_ICC.pdf \
 	documents/WhitePapers/ParallelRenderingSystems.pdf \
 	documents/WhitePapers/ProjectEqualizer.pdf \
-	documents/design/anaglyph.html \
-	documents/design/aspectRatio.html \
-	documents/design/configInit.html \
-	documents/design/compositor.html \
-	documents/design/compounds.html \
-	documents/design/eventHandling.html \
-	documents/design/dataTransmission.html \
-	documents/design/depthTransferOpt.html \
-	documents/design/dynamicFrameResolution.html \
-	documents/design/dynamicNearFar.html \
-	documents/design/environment.html \
-	documents/design/fileFormat.html \
-	documents/design/floatingPointPipeline.html \
-	documents/design/frames.html \
-	documents/design/glExtensions.html \
-	documents/design/imageCompression.html \
-	documents/design/immersive.html \
-	documents/design/infiniBand.html \
-	documents/design/loadBalancing.html \
-	documents/design/nodeConnect.html \
-	documents/design/nonthreaded.html \
-	documents/design/environment.html \
-	documents/design/nodeFailure.html \
-	documents/design/objects.html \
-	documents/design/objectManager.html \
-	documents/design/packets.html \
-	documents/design/PBuffer.html \
-	documents/design/pixelCompound.html \
-	documents/design/residentNodes.html \
-	documents/design/roi.html \
-	documents/design/standalone.html \
-	documents/design/statistics.html \
-	documents/design/statisticsOverlay.html \
-	documents/design/swapBarrier.html \
-	documents/design/taskMethods.html \
-	documents/design/threads.html \
-	documents/design/transparency.html \
-	documents/design/view.html \
-	documents/design/volumeRendering.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \
@@ -173,7 +134,8 @@ FILES = \
 	news/Release_0.6.html \
 	news/tungsten.html \
 	restricted/index.html \
-	$(IMAGES)
+	$(IMAGES) \
+	$(PAGES)
 
 IMAGES_SRC = \
 	$(wildcard images/*png) \
@@ -184,6 +146,9 @@ IMAGES_SRC = \
 	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \
 
+HTML_SRC = \
+	$(wildcard documents/design/*.shtml) \
+
 INCLUDES = \
 	include/header.shtml \
 	include/footer.shtml
@@ -191,6 +156,7 @@ INCLUDES = \
 TARGETS  = $(FILES:%=$(TARGET)/%)
 IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 	   $(IMAGES_SRC:%.jpg=%-small.jpg)
+PAGES    = $(HTML_SRC:%.shtml=%.html)
 
 SVN ?= svn
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \

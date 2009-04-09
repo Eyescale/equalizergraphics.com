@@ -1,0 +1,84 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Compression Plugin API
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
+  State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  The compression plugin API is an interface to create binary
+  compression/decompression modules which are loaded at runtime, allowing
+  third-party developers to implement new compression schemes. Initially the
+  plugins are used for eq::Image and eq::net::Object data transmission.
+</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>Backward and forward binary compatibility</li>
+  <li>Runtime load and init of compressors</li>
+  <li>Runtime query of the following compressor parameters:</li>
+  <ul>
+    <li>Lossy and loss-less compression</li>
+    <li>Speed</li>
+    <li>Compression Ratio</li>
+  </ul>
+  <li>Re-usability of compressors for different tasks</li>
+  <li>No performance penalty over current 'inline' implementation</li>
+  <li>Support for compression of:</li>
+  <ul>
+    <li>RGB8, RGBA8, DEPTH, DEPTH_STENCIL image data</li>
+    <li>RGB16f, RGBA16f, RGB32f, RGBA32f image data</li>
+    <li>Unstructured binary data</li>
+  </ul>
+</ul>
+
+<h2>Issues</h2>
+<h3>1. How does Equalizer select the Compressor at runtime?</h3>
+<p>
+  Certain parameters exclude some compressors up-front, such as lossy
+  compression and supported formats. After this exclusion a number of potential
+  candidates are available. The goal is to select automatically the compressor
+  which provides the best overall system performance.
+</p>
+<p>
+  For image compression, the compressor can be dynamically adapted based on past
+  performances. The compression should always save time, that is, the time to
+  transmit 'uncompressed - compressed' bytes should be longer than the time to
+  compress. If that is not the case, a faster compressor is selected. If the
+  compressor is substantially faster, a slower compressor is chosen. We assume
+  that decompression is faster than compression.
+</p>
+<p>
+  For object data compression automatic selection of the compressor is harder,
+  since the structure of the data varies from object to object. OPEN ISSUE.
+</p>
+
+<h2>Design</h2>
+<p>
+  Image compressors are implemented as shared libraries (.so/.dll). Equalizer
+  loads 
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  EqCompressor
+</pre><!-- */ -->
+
+<h2>Restrictions</h2>
+<p>
+</p>
+
+<h2>Open Issues</h2>
+<p>
+</p>
+
+
+#include "footer.shtml"
+<!-- $Id: dataTransmission.shtml 2673 2009-03-02 08:20:41Z eile $ -->

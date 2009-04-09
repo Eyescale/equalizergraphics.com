@@ -62,6 +62,12 @@ State:
   or creation.
 </p>
 <p>
+  The Canvas has a list of allowed layouts, to restrict the set of possible
+  destination channels and to allow the restiction of layouts to certain
+  canvases. One of the allowed layouts can be 0 (OFF in the file format) to
+  deactivate the canvas. The first specified layout on a canvas is the default
+  layout.
+<p>
   Each view can have a frustum description. The view's frustum overrides frusta
   specified at the canvas or segment level. This is typically used for
   non-physically correct rendering, e.g., to compare two models side-by-side. If
@@ -141,7 +147,8 @@ config
     canvas  # 1...n times
     {
         name   "display_wall"
-        layout "layout1" | int
+        layout OFF | "layout1" | int  # 1...n times, allowed layouts for canvas
+
         wall/projection {...}
         
         segment # 1...n times
@@ -208,7 +215,8 @@ config
          const std::string& getName() const;
 
          void useLayout( const Layout* layout );
-         const Layout* getLayout() const;
+         const Layout* getActiveLayout() const;
+         const LayoutVector& getLayouts() const;
      };
 
      class Channel
