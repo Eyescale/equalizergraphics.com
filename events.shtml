@@ -6,6 +6,12 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td nowrap>15. June - 17. June 2009</td>
+    <td>5th NVidia Round Table Meeting</td>
+    <td>The NV RTM is a Bi-Directional Technology Meeting held in Germany, Sankt
+      Augustin @ Fraunhofer IAIS Castel Birlinghoven</td>
+  </tr>
+  <tr>
     <td nowrap>30. March - 3. April 2009</td>
     <td><a href="http://www.eurographics2009.de/">Eurographics 2009</a> and
       <a href="http://www.egpgv.org/">EGPGV 2009</a>, Munich</td>
