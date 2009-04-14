@@ -68,8 +68,11 @@
   features will be release in the next version.
 </p>
 <ul>
-  <li><a href="/documents/design/view.html">View API</a>
-    provides read and write access to the views of a configuration.</li>
+  <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
+    the official interface to create binary plugins for data compression.</li>
+  <li><a href="/documents/design/view.html">Layout API</a>
+    provides a way to configure projection surfaces with logical layouts and
+    multiple observers.</li>
 </ul>
 
 <h4>Version 0.6</h4>
