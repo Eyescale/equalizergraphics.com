@@ -161,7 +161,7 @@ PAGES    = $(HTML_SRC:%.shtml=%.html)
 SVN ?= svn
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`$(SVN) info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
-           -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<\" \
+           -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<?view=log\" \
            -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%) \
            -DPAGEURL=$(@:$(TARGET)%=%)
 

@@ -8,7 +8,8 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
-  State: Design
+  State: Design (<a href=CHANGEURL>Change History</a>)
+
 </p>
 
 <h2>Overview</h2>
@@ -127,9 +128,10 @@
       };
 
      // Compressor capability flags
-  #  define EQ_COMPRESSOR_INPLACE EQ_BIT_1
-  #  define EQ_COMPRESSOR_DATA_1D EQ_BIT_2
-  #  define EQ_COMPRESSOR_DATA_2D EQ_BIT_3
+  #  define EQ_COMPRESSOR_INPLACE    EQ_BIT_1
+  #  define EQ_COMPRESSOR_DATA_1D    EQ_BIT_2
+  #  define EQ_COMPRESSOR_DATA_2D    EQ_BIT_3
+  #  define EQ_COMPRESSOR_IGNORE_MSE EQ_BIT_4
 
       extern void EqCompressorGetInfo( EqCompressorInfo* const info );
 
@@ -209,7 +211,8 @@
       info->version = EQ_COMPRESSOR_VERSION;
       info->type = EQ_COMPRESSOR_RLE_4_BYTE;
       info->tokenType = EQ_COMPRESSOR_DATA_4_BYTE;
-      info->capabilities = EQ_COMPRESSOR_DATA_1D | EQ_COMPRESSOR_DATA_2D;
+      info->capabilities = EQ_COMPRESSOR_DATA_1D | EQ_COMPRESSOR_DATA_2D | 
+                           EQ_COMPRESSOR_IGNORE_MSE;
       info->quality = 1.f;
       info->ratio = .8f;
       info->speed = 0.95f;
@@ -231,9 +234,11 @@
                              void* const in, const uint64_t* inDims,
                              const uint64_t flags )
   {
+      const bool ignoreAlpha = (flags & EQ_COMPRESSOR_IGNORE_MSE);
       const uint64_t inSize = (flags & EQ_COMPRESSOR_DATA_1D) ? 
                                   inDims[1] * 4 : inDims[1] * inDims[3] * 4;
-      (eq::plugin::RLE4BCompressor*)( compressor )->compress( in, inSize );
+      (eq::plugin::RLE4BCompressor*)( compressor )->compress( in, inSize, 
+                                                              ignoreAlpha );
   }
       
   uint32_t EqCompressorGetNumResults( void* const compressor )
@@ -347,11 +352,27 @@
 </p>
 
 <h3>6. How can inter-frame compression be implemented?</h3>
+<p>Resolved: Compressor saves previous frame(s)</p>
 <p>
   The compressor maintains a copy of the previous data, based on the input
   dimensions. Based on that copy, inter-frame compression algorithms can be
   applied. A compressor declares the dimensionalities it supports. The
   compression routine is called with the current dimensionality of the data.
+</p>
+
+<h3>7. How to support Image::ignoreAlpha?</h3>
+<p>Resolved: through a flag</p>
+<p>
+  The application can tell the image to ignore the alpha channel, even though it
+  is used during readback for performance reasons. The compressor input and
+  output data is GL_RGBA, but the alpha channel is compressed away.
+</p>
+<p>
+  The caller will pass the flag <code>EQ_COMPRESSOR_IGNORE_MSE</code> to the
+  compression routine. This tells the compressor that it can ignore the most
+  significant element. The flag is invalid for non-vector formats. The
+  decompressor will not get passed this flag, it is the compressors
+  responsibility to create valid output for both cases (flag set, not set).
 </p>
 
 #include "footer.shtml"
