@@ -95,12 +95,12 @@
 
       struct EqCompressorInfo
       {
-          // set to EQ_COMPRESSOR_VERSION
-          unsigned version; // in and out
+          // set to EQ_COMPRESSOR_VERSION on output
+          unsigned version;    // in and out
 
           // set variables below for (in) version >= 1
           unsigned name; // EQ_COMPRESSOR_name
-          EqCompressorDataType dataType; // see below
+          unsigned dataType; // see below
           uint64_t capabilities; // see below
           float quality; // 1.0f: loss-less, <1.0f: lossy
           float ratio;   // ~ compression ratio (sizeCompressed/sizeIn)
@@ -111,21 +111,18 @@
       };
 
       // Compressor token type
-      enum EqCompressorDataType
-      {
-          // single base types
-          EQ_COMPRESSOR_DATATYPE_BYTE,       // uint8_t
-          EQ_COMPRESSOR_DATATYPE_UNSIGNED,   // uint32_t
-          EQ_COMPRESSOR_DATATYPE_HALF_FLOAT, // float16_t
-          EQ_COMPRESSOR_DATATYPE_FLOAT,      // float32_t
-          // vector types
-          EQ_COMPRESSOR_DATATYPE_3_BYTE = 1024, // uint8_t[3] (e.g. RGB)
-          EQ_COMPRESSOR_DATATYPE_4_BYTE,        // uint8_t[4] (e.g. RGBA)
-          EQ_COMPRESSOR_DATATYPE_4_HALF_FLOAT,  // float16_t[4] (e.g. RGBA16f)
-          EQ_COMPRESSOR_DATATYPE_4_FLOAT,       // float32_t[4] (e.g. RGBA32f)
-          // special types
-          EQ_COMPRESSOR_DATATYPE_3BYTE_1BYTE = 2048, // e.g. DEPTH_STENCIL
-      };
+      //   single base types
+  #  define EQ_COMPRESSOR_DATATYPE_BYTE       1   // uint8_t
+  #  define EQ_COMPRESSOR_DATATYPE_UNSIGNED   2   // uint32_t
+  #  define EQ_COMPRESSOR_DATATYPE_HALF_FLOAT 3   // float16_t
+  #  define EQ_COMPRESSOR_DATATYPE_FLOAT      4   // float32_t
+      //   vector types
+  #  define EQ_COMPRESSOR_DATATYPE_3_BYTE       1024 // uint8_t[3] (e.g. RGB)
+  #  define EQ_COMPRESSOR_DATATYPE_4_BYTE       1025 // uint8_t[4] (e.g. RGBA)
+  #  define EQ_COMPRESSOR_DATATYPE_4_HALF_FLOAT 1026 // float16_t[4] eg RGBA16f
+  #  define EQ_COMPRESSOR_DATATYPE_4_FLOAT      1027 // float32_t[4] eg RGBA32f
+      //   special types
+  #  define EQ_COMPRESSOR_DATATYPE_3BYTE_1BYTE  2048 // e.g. DEPTH_STENCIL
 
      // Compressor capability flags
   #  define EQ_COMPRESSOR_INPLACE    EQ_BIT_1
@@ -133,27 +130,36 @@
   #  define EQ_COMPRESSOR_DATA_2D    EQ_BIT_3
   #  define EQ_COMPRESSOR_IGNORE_MSE EQ_BIT_4
 
-      extern void EqCompressorGetInfo( EqCompressorInfo* const info );
+      // query interface
+      extern size_t EqCompressorGetNumCompressors();
+      extern void EqCompressorGetInfo( const size_t n,
+                                       EqCompressorInfo* const info );
 
       // lifecycle management
-      extern void* EqCompressorNewCompressor();
-      extern void EqCompressorDeleteCompressor( void* const compressor );
+      extern void* EqCompressorNewCompressor( const unsigned name );
+      extern void EqCompressorDeleteCompressor( const unsigned name,
+                                                void* const compressor );
 
       //     Note: 0 is allowed (for state-less decompressors)
-      extern void* EqCompressorNewDecompressor();
-      extern void EqCompressorDeleteDecompressor( void* const decompressor );
+      extern void* EqCompressorNewDecompressor( const unsigned name );
+      extern void EqCompressorDeleteDecompressor( const unsigned name,
+                                                  void* const decompressor );
 
       // worker functions
-      extern void EqCompressorCompress( void* const compressor, 
+      extern void EqCompressorCompress( const unsigned name,
+                                        void* const compressor, 
                                         void* const in, const uint64_t* inDims,
                                         const uint64_t flags );
-      extern uint32_t EqCompressorGetNumResults( void* const compressor );
-      extern void EqCompressorGetResult( void* const compressor, 
+      extern uint32_t EqCompressorGetNumResults( const unsigned name,
+                                                 void* const compressor );
+      extern void EqCompressorGetResult( const unsigned name,
+                                         void* const compressor, 
                                          const uint32_t i, 
                                          void** const out, 
                                          uint64_t* const outSize );
 
-      extern void EqCompressorDecompress( void* const decompressor, 
+      extern void EqCompressorDecompress( const unsigned name,
+                                          void* const decompressor, 
                                           const void** const in, 
                                           const uint64_t* const inSizes,
                                           const uint32_t numInputs, 
@@ -206,8 +212,14 @@
 <!-- /* --><pre>
   #include eq/plugin/compressor.h
 
-  void EqCompressorGetInfo( EqCompressorInfo* const info )
+  size_t EqCompressorGetNumCompressors()
   {
+      return 1;
+  }
+
+  void EqCompressorGetInfo( const size_t n, EqCompressorInfo* const info )
+  {
+      assert( n == 0 );
       info->version = EQ_COMPRESSOR_VERSION;
       info->type = EQ_COMPRESSOR_RLE_4_BYTE;
       info->tokenType = EQ_COMPRESSOR_DATA_4_BYTE;
@@ -218,19 +230,22 @@
       info->speed = 0.95f;
   }
 
-  void* EqCompressorNewCompressor()
+  void* EqCompressorNewCompressor( const unsigned name )
   {
       return new eq::plugin::RLE4BCompressor;
   }
-  void EqCompressorDeleteCompressor( void* const compressor )
+  void EqCompressorDeleteCompressor( const unsigned name, 
+                                     void* const compressor )
   {
       delete (eq::plugin::RLE4BCompressor*)( compressor );
   }
 
-  void* EqCompressorNewDecompressor() { return 0; }
-  void EqCompressorDeleteDecompressor( void* const decompressor ) { /* nop */ }
+  void* EqCompressorNewDecompressor( const unsigned name ) { return 0; }
+  void EqCompressorDeleteDecompressor( const unsigned name,
+                                       void* const decompressor ) { /* nop */ }
 
-  void EqCompressorCompress( void* const compressor,
+  void EqCompressorCompress( const unsigned name,
+                             void* const compressor,
                              void* const in, const uint64_t* inDims,
                              const uint64_t flags )
   {
@@ -241,13 +256,14 @@
                                                               ignoreAlpha );
   }
       
-  uint32_t EqCompressorGetNumResults( void* const compressor )
+  uint32_t EqCompressorGetNumResults( const unsigned name,
+                                      void* const compressor )
   {
       return (eq::plugin::RLE4BCompressor*)( compressor )->getChunks().size();
   }
-  void EqCompressorGetResult( void* const compressor, const uint32_t i, 
-                              void** const out, 
-                              uint64_t* const outSize )
+  void EqCompressorGetResult( const unsigned name, void* const compressor,
+                              const uint32_t i,
+                              void** const out, uint64_t* const outSize )
   {
       const eq::plugin::RLE4BCompressor::Chunk* chunk = 
           (eq::plugin::RLE4BCompressor*)( compressor )->getChunks()[ i ];
@@ -255,7 +271,7 @@
       *outSize = chunk->size;
   }
 
-  void EqCompressorDecompress( void* const decompressor, 
+  void EqCompressorDecompress( const unsigned name, void* const decompressor, 
                                const void** const in,
                                const uint64_t* const inSizes,
                                const uint32_t numInputs, 
@@ -375,4 +391,15 @@
   responsibility to create valid output for both cases (flag set, not set).
 </p>
 
+<h3>8. Can compressors be chained?</h3>
+<p>Resolved: Not in version 1</p>
+<p>
+  The use case for chaining compressors is to combine multiple compression
+  algorithms, e.g., RLE + Huffman. The main issue is that the output of a
+  compressor is unstructured data, that is, it can only be processed by a
+  EQ_COMPRESSOR_DATATYPE_BYTE compressor. Later Equalizer versions could
+  automatically try out compressor chains. Often it is desirable for performance
+  reasons to combine the algorithms in one compressor, e.g., the RLE compression
+  can produce the histogram for Huffman compression as a side product.
+</p>
 #include "footer.shtml"
