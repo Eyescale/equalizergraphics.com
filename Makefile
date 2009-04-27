@@ -69,6 +69,9 @@ FILES = \
 	documents/Presentations/EqualizerBOF2009.pdf \
 	documents/Presentations/EqualizerBOF2009.html \
 	documents/Presentations/EqualizerBOF2009.html_files \
+	documents/Presentations/EqualizerBOF2009_USG.pdf \
+	documents/Presentations/EqualizerBOF2009_USG.html \
+	documents/Presentations/EqualizerBOF2009_USG.html_files \
 	documents/Presentations/EqualizerBOF2009_UZH.pdf \
 	documents/Presentations/EqualizerBOF2009_UZH.html \
 	documents/Presentations/EqualizerBOF2009_UZH.html_files \

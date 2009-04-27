@@ -5,6 +5,7 @@
 #include "header.shtml"
 
 <h2>Presentations</h2>
+<h3>Generic Presentations</h3>
 <ul>
   <li><a href="/documents/EqualizerTeaser.html">Teaser</a> is a three 
     slide abstract of Equalizer,
@@ -28,6 +29,13 @@
   <li><a href="/documents/FlyerWeb.pdf">Flyer</a> is a folded, two-sided
     brochure for the Equalizer project.
   </li>
+</ul>
+<h3>Event Presentations</h3>
+<ul>
+  <li>The <a href="/news/EgBof.html">Birds-Of-a-Feather meeting 2009</a> took
+    place during <a href="http://www.eurographics2009.de/">Eurographics'09</a>.
+    The page contains the presentations given during the BOF.
+  </li>
 
   <li><a href="/documents/EGPGV07.html">Direct Send Compositing
       for Parallel Sort-Last Rendering</a> is the paper presentation for the
@@ -36,7 +44,7 @@
     <a href="/documents/EGPGV07.html">html</a>,   
     <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">collateral 
       video</a>.
-</li>
+  </li>
 
   <li><a href="/documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
     is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
