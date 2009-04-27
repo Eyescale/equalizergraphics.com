@@ -289,16 +289,27 @@
   PluginRegistry::init (called by eq::init)
       for each plugin directory // need new eq::base helper to read directories
           for each file libeqCompressor*(.dll|.so)
-              init Compressor:
-                  open DSO // new eq::base helper class
-                  resolve EqCompressorGetInfo
-                  read and store Compressor::Info
-                  resolve function pointers based on version
+              init Compressor dll:
+                  DSOPtr dso = open DSO // new eq::base helper class
+                  resolve EqCompressorGetNumCompressors
+                  for each Compressor
+                      resolve EqCompressorGetInfo
+                      read and store Compressor::Info
+                      set dso in compressor
+                      resolve function pointers based on version
 
   PluginRegistry::exit (called by eq::exit)
       for each compressor
           exit compressor (closes DSO)
           delete compressor         
+
+  File structure:
+      src/plugins/interface/compressor.h (installs to eq/plugin/compressor.h)
+      src/plugins/examples/compressors.h (does not link against libeq!) 
+      src/plugins/examples/compressors.cpp   resolves name -> algorithm
+      src/plugins/examples/compressorBase.h/cpp  
+      src/plugins/examples/compressorRLE1.h/cpp  
+      src/plugins/examples/compressorRLE4.h/cpp  
 </pre><!-- */ -->
 
 <h2>Restrictions</h2>
