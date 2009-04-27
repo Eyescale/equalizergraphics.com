@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Virtual Architecture with Equalizer and OpenSceneGraph Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Our  team  11 computer science students of the University of Siegen  Project work is a part of our study   Duration of one year  Many of us plan to specialize in field of computer graphics    Four representatives of our project  group are here to present our work   Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Our project  Interactive navigation and visualisation of architectural data  Real-time manipulation of the model structure like adding furniture or moving windows   Collaboration with the faculty of architecture  at the University of Siegen  We visualize the data in the institute’s  virtual reality lab Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Our lab at the University of Siegen  Half cylinder with rear projection surfaces on the wall and front projection on the floor  Unique installation: Suitable for single tracked users or presentations   Stereo separation is done with Infitec glasses (colour separation)   One beamer per stereo channel, 6 projection surfaces in total (12 beamers)    Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Our lab at the University of Siegen  6 render clients, each two graphic cards (two stereo channels each)   Mirrors allow efficient use of available space       Cylindrical surface creates distortion effects  Static warping using CineIPM  video processors  Problem: IPMs calibrated for fixed sweet spot  Dynamic warping for tracked users in fragment shader      Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Control			         Cluster 	    IPM	    Beamer 								      pairs Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Tracking  Infrared reflection of markers  (A.R.T.)  Recorded by four IR-cameras  Head Tracking  Navigation   Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Why have we chosen Equalizer?  Best VR framework for our purpose   No restriction for OpenGL programming    Supports distributed rendering (essential for the VR-lab)  Easy configuration for different systems (VR-lab and single-user PC)     Operation system independent (Linux, Windows and OS X)  Active development and support   Open Source Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Why do we use OpenSceneGraph?  Offers all the functionality we need   Lots of different file formats are supported  Very flexible and extensible  Large community (tutorials, documentation,  ...)     Open Source and platform independent, like Equalizer Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Integration between Equalizer and OpenSceneGraph   Tell OSG to use context provided by Equalizer  Now OSG doesn’t create its own window  Osg::Camera-&gt;setGraphicsContext( new OsgViewer::GraphicsWindowEmbedded );   Pass the viewport and frustum information to OSG   Viewport:  const eq::PixelViewport&amp; viewport = eq::Channel-&gt;getPixelViewport(); Osg::Camera-&gt;setViewport( 0, 0, viewport.w, viewport.h ); Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Integration between Equalizer and OpenSceneGraph  Frustum:           const vmml::Frustumf&amp; frustum = eq::Channel-&gt;getFrustum();          osg::Camera-&gt;setProjectionMatrixAsFrustum( frustum.left,               frustum.right, frustum.bottom, frustum.top,                     frustum.nearPlane, frustum.farPlane );  In Channel::frameDraw(), multiply view matrix with head matrix           osg::Matrix headView = getViewMatrix();          headView.postMult( getHeadTransform() );          osg::Viewer-&gt;getRenderCamera()-&gt;setViewMatrix( headView );  Multipass Rendering  One osg::Viewer per Channel renders scene to texture  Warping shader corrects distortion in texture  Texture is rendered onto quad Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Distribution of the scene graph    No special decomposition used Complete scene graph is available on each node  Shared file system to load the same model on all nodes  FrameData is used to pass camera position to the nodes  Nodes are told via the FrameData about dynamic updates and have to manipulate the scene graph themselves like &quot;Place model 'table.3ds' at position ( x, y, z )“  Collision detection runs on the application node  render clients really do only rendering Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 eqOSG   Snapshot of earlier VIA version, now in Equalizer SVN  Minimal example code based on the above principles  As generic as possible (no head tracking, no warping shaders, etc.)  We hope to extend eqOSG and collaborate with others  For example : Camera controls or collision detection Support for dynamic scene graph updates Virtual Architecture with Equalizer and OpenSceneGraph | Virtual Interactive Architecture | University of Siegen 31th March 2009 /15 Thank you for your attention.  				Are there any questions?   http://www.cg.informatik.uni-siegen.de/Teaching/ProjectGroups/VIA"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (15);
+            images[0] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.001.jpg";
+            images[1] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.002.jpg";
+            images[2] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.003.jpg";
+            images[3] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.004.jpg";
+            images[4] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.005.jpg";
+            images[5] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.006.jpg";
+            images[6] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.007.jpg";
+            images[7] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.008.jpg";
+            images[8] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.009.jpg";
+            images[9] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.010.jpg";
+            images[10] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.011.jpg";
+            images[11] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.012.jpg";
+            images[12] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.013.jpg";
+            images[13] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.014.jpg";
+            images[14] = "EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.015.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EqualizerBOF2009_USG.html_files/EqualizerBOF2009_USG.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EqualizerBOF2009_USG.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EqualizerBOF2009_USG.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EqualizerBOF2009_USG.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>
