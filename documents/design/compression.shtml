@@ -193,7 +193,7 @@
       bool init( const std::string& filename );
       void exit();
 
-      const EqCompressorInfo& getInfo() const;
+      const EqCompressorInfoVector& getInfos() const;
 
       // resolved function pointers mirroring C API
       typedef ... FooFunc; // see C API
@@ -203,7 +203,7 @@
       DecompressFunc decompress;
 
   private:
-      EqCompressorInfo _info;
+      EqCompressorInfoVector _infos;
       base::DSO _dso;
   };
 </pre><!-- */ -->
@@ -290,13 +290,8 @@
       for each plugin directory // need new eq::base helper to read directories
           for each file libeqCompressor*(.dll|.so)
               init Compressor dll:
-                  DSOPtr dso = open DSO // new eq::base helper class
-                  resolve EqCompressorGetNumCompressors
-                  for each Compressor
-                      resolve EqCompressorGetInfo
-                      read and store Compressor::Info
-                      set dso in compressor
-                      resolve function pointers based on version
+                  open DSO
+                  resolve function pointers based on version
 
   PluginRegistry::exit (called by eq::exit)
       for each compressor
