@@ -251,11 +251,18 @@ server
             eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
             zoom     [ float float ]         // up/downscale of parent pvp
 
-            loadBalancer 
+            load_equalizer // adapt 2D tiling or DB range of children
             {
-                mode [ 2D | DB | VERTICAL | HORIZONTAL | DPLEX | DFR ]
-                framerate float // DFR only
+                mode 2D | DB | VERTICAL | HORIZONTAL
+                damping float // 0: no damping, 1: no changes
             }
+            DFR_equalizer // adapt ZOOM to achieve constant framerate
+            {
+                framerate float // target framerate
+                damping float   // 0: no damping, 1: no changes
+            }
+            framerate_equalizer {} // smoothen window swapbuffer rate (DPlex)
+            monitor_equalizer {}   // set frame zoom when monitoring other views
 
             attributes
             {
@@ -312,6 +319,24 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Equalizer cleanup deprecated loadBalancer {} section and added:
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer // adapt 2D tiling or DB range of children
+          {
+              mode 2D | DB | VERTICAL | HORIZONTAL
+              damping float // 0: no damping, 1: no changes
+          }
+          DFR_equalizer // adapt ZOOM to achieve constant framerate
+          {
+              framerate float // target framerate
+              damping float   // 0: no damping, 1: no changes
+          }
+          framerate_equalizer {} // smoothen window swapbuffer rate (DPlex)
+          monitor_equalizer {}   // set frame zoom when monitoring other views
+      }
+    </pre><!-- */ -->
   <li><a href="/documents/design/view.html">Support for multiple observers</a>
     added:
     <!-- /* --><pre>
