@@ -350,8 +350,8 @@
   transmission by the DataOStream.
 </p>
 <p>
-  The compression call has a flag set (INPLACE_ALLOWED) if in-place compression
-  is allowed. The compressor can then write into the input data, and will return
+  The compression call has a flag set (INPLACE) if in-place compression is
+  allowed. The compressor can then write into the input data, and will return
   one result pointer to the input data.
 </p>
 

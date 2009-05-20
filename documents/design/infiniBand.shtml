@@ -30,10 +30,10 @@
   and Implementation of Sockets Direct Protocol in Windows</a> paper.
 </p>
 <p>
-  The Mellanox Win32 implementation allows currently no mixing between SDP
-  sockets and TCP/IP sockets. That means that all machines have to be
-  connected using InfiniBand, and need to have the full installation as decribed
-  below. Furthermore, only SDP IP addresses are to be used for all connections.
+  By default, the Mellanox Win32 implementation does not allow using SDP and
+   TCP/IP sockets concurrently. That means that all machines have to be
+   connected using InfiniBand, and only SDP IP addresses are to be used for all
+   connections. See the next section for SDP/TCP Coexistence.
 </p>
 
 <h3>Installation and Configuration</h3>
@@ -74,11 +74,12 @@
 </ul>
 
 <a name="explicit"></a>
-<h3>Using Explicit SDP Connections</h3>
+<h3>SDP and TCP Coexistence</h3>
 <p>
-  Mellanox is working on providing a patch to allow applications to explicitly
-  specify the socket type, which allows mixing of TCP and SDP sockets. If you
-  have access to this patch, you can use TCP and SDP concurrently. Revisions 
+  Starting with WinIB 1.4, it is possible to use both SDP and TCP sockets in one
+  application process. The applications have to explicitly specify the socket
+  type, which allows mixing of TCP and SDP sockets. Please refer to the Mellanox
+  documentation on how to activate the 'mixed SDP applications' mode. Revisions
   <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1001">1001</a> to 
   <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1010">1010</a> implement
   support for multiple node connections, which means that if a node (or the
@@ -104,9 +105,9 @@
         --eq-listen 10.1.1.x:SDP</code>. Note the :SDP qualifier, which is
       needed for the client to use SDP (it is unaware of the configuration file
       during startup!).</li>
-    <li>Optionally configure (secondary) TCPIP connections. Note that when a
+    <li>Optionally configure (secondary) TCP connections. Note that when a
       node has no SDP capabilities, the server and all nodes he connects to
-      (potentially all in the configuration) need to have a secondary TCPIP
+      (potentially all in the configuration) need to have a secondary TCP
       connection configured.</li>
   </ul>
 </p>
