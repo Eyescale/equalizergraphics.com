@@ -56,7 +56,7 @@
   server. These callback functions typically receive an identifier defined by
   the application to provide contextual information. For example, the node's
   init method receives the identifier of the InitData object, as defined by the
-  application. It instanciates the object and loads the polygonal model named by
+  application. It instantiates the object and loads the polygonal model named by
   the InitData. A seperate document describes
   all <a href="/documents/design/taskMethods.html">task methods</a>.
 </p>

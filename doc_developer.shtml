@@ -39,7 +39,7 @@
       executed during initialization and exit.</li>
   <li><a href="/documents/design/objects.html">Distributed Objects</a>
     provides an overview on how to implement static and versioned objects, which
-    can be instanciated on multiple nodes.</li>
+    can be instantiated on multiple nodes.</li>
   <li><a href="/documents/design/images/codingStyle.png">codingStyle.png</a>
     illustrates the C++ coding style used in Equalizer, to ensure a consistent
     appearance for better readability.</li>

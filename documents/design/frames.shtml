@@ -66,7 +66,7 @@
   <li>Same optimisation for other attributes, i.e., viewport, eye(?)</li>
   <li>Frames and images are relatively static during rendering. The objects
     should be reused from (config) frame to frame to avoid costly network
-    instanciation and reallocation.</li>
+    instantiation and reallocation.</li>
  </ul>
 </p>
 <p>

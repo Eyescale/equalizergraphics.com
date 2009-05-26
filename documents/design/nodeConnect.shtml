@@ -36,7 +36,7 @@
   information (node id and type, all connection descriptions) of the sending
   node. The receiving node stores this information, and can pass it on to other
   nodes for connection setup. The node type is used by createNode to determine
-  the node subclass to instanciate.
+  the node subclass to instantiate.
 </p>
 <p>
   One special case, not shown in the image, is when two nodes simultaneously

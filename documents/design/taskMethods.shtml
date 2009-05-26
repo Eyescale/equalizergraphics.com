@@ -45,8 +45,8 @@
 <p>
   The <code>NodeFactory</code> is the place where the subclassed Equalizer
   objects are created by the application. It consists of virtual methods to
-  instanciate new instances of all classes mentioned below. The methods in the
-  base class <code>eq::NodeFactory</code> instanciate base Equalizer
+  instantiate new instances of all classes mentioned below. The methods in the
+  base class <code>eq::NodeFactory</code> instantiate base Equalizer
   objects, allowing selective subclassing. The node factory is created by the
   application and passed to <code>eq::init</code>.
 </p>
@@ -55,7 +55,7 @@
 <h2>Config</h2>
 <p>
   The config represents an Equalizer session and controls frame generation. It
-  is instanciated on the application node
+  is instantiated on the application node
   by <code>eq::Server::chooseConfig</code> and on the render nodes
   during <code>eq::Config::init</code>.
 </p>
@@ -125,7 +125,7 @@
 <hr><a name="node"></a>
 <h2>Node</h2>
 <p>
-  The node represent a single machine in the cluster. It is instanciated on the
+  The node represent a single machine in the cluster. It is instantiated on the
   render clients during <code>Config::init</code>.
 </p>
 
@@ -178,7 +178,7 @@
 <hr><a name="pipe"></a>
 <h2>Pipe</h2>
 <p>
-  The pipe represents a graphic card. It is instanciated
+  The pipe represents a graphic card. It is instantiated
   during <code>Config::init</code> on the render nodes. All pipe, window and
   channel task methods are currently called from the pipe thread.
 </p>
@@ -258,7 +258,7 @@
 <hr><a name="window"></a>
 <h2>Window</h2>
 <p>
-  The window represents an OpenGL drawable. It is instanciated
+  The window represents an OpenGL drawable. It is instantiated
   during <code>Config::init</code> on the render nodes. All window and
   channel task methods are called from the pipe thread, with the exception of 
   <code>processEvent</code>, which might be called from a separate event thread.

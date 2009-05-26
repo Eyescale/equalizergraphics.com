@@ -28,7 +28,7 @@
 <p>
   Equalizer can manage static and versioned objects.
 </p><p>
-  Static objects can be instanciated on multiple nodes. Upon instanciation,
+  Static objects can be instantiated on multiple nodes. Upon instantiation,
   the data from the master version is replicated to the 'slave' node. Static
   objects do not retain object data, since this data is assumed to be
   immutable.
@@ -55,7 +55,7 @@
   using <code>Session::registerObject</code>. Upon registration, a
   session-unique identifier is assigned, which can be used to map slave
   instances using <code>Session::mapObject</code>. Mapped slave instance are
-  instanciated with the oldest known version from the master instance, and can
+  instantiated with the oldest known version from the master instance, and can
   be synchronized to the head version using <code>Object::sync</code>.
 </p><p>
   Additionally, the object identifier can be used to send
