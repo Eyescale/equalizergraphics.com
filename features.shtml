@@ -42,6 +42,10 @@
       swapbarrier</a> for synchronization of multipipe displays</td>
   <td>0.1</td>
 </tr><tr>
+  <td><a href="/documents/design/swapBarrier.html#gsync">hardware
+      swapbarrier</a> for synchronization of multipipe displays</td>
+  <td>svn</td>
+</tr><tr>
   <td><a href="/documents/design/dynamicNearFar.html">dynamic near and far plane
       support</a></td>
   <td>0.2</td>
@@ -96,13 +100,14 @@
       observers</a></td>
   <td>svn</td>
 </tr><tr>
+  <td><a href="/documents/design/view.html">application-specified frusta for
+      destination views</a></td>
+  <td>svn</td>
+</tr><tr>
   <td>FrameData API</td>
   <td>?</td>
 </tr><tr>
   <td><a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">software edge blending</a></td>
-  <td>?</td>
-</tr><tr>
-  <td>application-specified frusta for destination views</td>
   <td>?</td>
 </tr><tr>
   <td>mono/stereo switching</td>
@@ -151,8 +156,20 @@
   <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
   <td>0.5</td>
 </tr><tr>
-  <td>compound load-balancing</td>
+  <td>Load-Balancing</td>
+  <td></td>
+</tr><tr>
+  <td>&rarr; Per-segment 2D, DB load-balancing</td>
   <td>0.6</td>
+</tr><tr>
+  <td>&rarr; Cross-segment resource load-balancing</td>
+  <td>svn</td>
+</tr><tr>
+  <td>&rarr; Cross-view resource load-balancing</td>
+  <td>?</td>
+</tr><tr>
+  <td>&rarr; Cross-application resource load-balancing</td>
+  <td>?</td>
 </tr><tr>
   <td><a href="/documents/design/compounds.html">DPlex (time-multiplex)
       compounds</a></td>

@@ -40,6 +40,7 @@ State:
   occur if multiple swap barriers are used inappropriately.
 </p>
 
+<a name="gsync"></a>
 <h3>NV_swap_group synchronization</h3>
 <p>
   The WGL and GLX swap group extensions use a two-tiered strategy to provide
