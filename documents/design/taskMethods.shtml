@@ -459,6 +459,23 @@
   calls <code>resetAssemblyState</code>.
 </p>
 
+<h3>Channel::frameViewStart</h3>
+<p>
+  This method is called before updating a channel with a view for a given
+  frame. It is only called on channels which are used for display output, that
+  is, for the destination channels created on view/segment intersections. The
+  default implementation is empty.
+</p>
+
+<h3>Channel::frameViewFinish</h3>
+<p>
+  This method is called after a destination channel has been updated. It is only
+  called on channels which are used for display output, that is, for the
+  destination channels created on view/segment intersections. It is typically
+  used to do operations on the output channel after it has been fully updated,
+  e.g., to draw a 2D overlay. The default implementation is empty.
+</p>
+
 <h3>Channel::setupAssemblyState</h3>
 <p>
   Setup the OpenGL state for a readback or assemble operation. The default
