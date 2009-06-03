@@ -68,6 +68,8 @@
   features will be release in the next version.
 </p>
 <ul>
+  <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
+      swapbarrier</a> for synchronization of multipipe displays</li>
   <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
     the official interface to create binary plugins for data compression.</li>
   <li><a href="/documents/design/view.html">Layout API</a>
