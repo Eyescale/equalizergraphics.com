@@ -6,6 +6,13 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td nowrap>18. June 2009</td>
+    <td>
+      <a href="http://www.cg.informatik.uni-siegen.de/Teaching/Lectures/09_SS/Koll/2009_06_18">Graphics
+        Colloquium, University of Siegen</a></td>
+    <td>Presentation Parallel Rendering: Past, Present, Future</td>
+  </tr>
+  <tr>
     <td nowrap>15. June - 17. June 2009</td>
     <td>5th NVidia Round Table Meeting</td>
     <td>The NV RTM is a Bi-Directional Technology Meeting held in Germany, Sankt
