@@ -31,7 +31,7 @@
   equalizer</a>, which adapts the tiling automatically each frame.
 </p>
 <p>
-  For typical OpenGL applications, 2D compounds provide a good scalability up to
+  For typical OpenGL applications, 2D compounds provide good scalability up to
   four to eight GPU's per display. The scalability depends on the effectiveness
   of the application's view frustum culling and per-pixel load. Some
   applications, e.g., volume rendering, provide much better scalability to tens

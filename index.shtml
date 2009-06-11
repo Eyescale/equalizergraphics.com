@@ -20,9 +20,6 @@
   clusters, multi-GPU workstations and Virtual Reality installations.
 </p>
 
-<div class="float_left">
-  <img src="/images/teapots.png" alt="2D decomposition">
-</div>
 <h2>Benefits</h2>
 <ul>
   <li><b>Parallel Rendering Know-How:</b> Equalizer contains the essence of 10+

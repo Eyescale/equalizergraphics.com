@@ -21,7 +21,7 @@
 </p>
 <p>
   The mix-and-match of Equalizer features is not limited to the basic
-  decomposition modes (2D, DB, DPlex, stereo, pixel), but also applies to more
+  decomposition modes 2D, DB, DPlex, stereo and pixel, but also applies to more
   advanced functionality. For example, a view equalizer relies on 2D load
   equalizers to balance the per-segment load on multi-display installations, or
   a DFR equalizer can be used with a 2D decomposition.

@@ -31,16 +31,15 @@
   systems.
 </p>
 <p>
-  Equalizer applications however parallelize the rendering, so that each GPU has
-  its own local rendering thread. This parallel execution and per-segment view
-  frustum culling results in much better performance and compatibility over
-  transparent approaches.
+  Equalizer applications parallelize the rendering, each GPU has its own local
+  rendering thread. This parallel execution and per-segment view frustum culling
+  results in much <a href="/documents/WhitePapers/Chromium_Equalizer.pdf">better
+  performance</a> and compatibility compared to transparent approaches.
 </p>
 <p>
-  To further increase the performance, Equalizer schedules the rendering
-  resources asynchronously. This asynchronous execution decouples and pipelines
-  the render threads and the application thread, e.g., hiding network transfers
-  for data updates.
+  Equalizer schedules the rendering resources asynchronously. This asynchronous
+  execution decouples and pipelines the render threads and the application
+  thread, e.g., hiding network transfers for data updates.
 </p>
 
 #include "footer.shtml"

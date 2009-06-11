@@ -9,8 +9,9 @@
 
 <p>
   <b>Parallel compositing</b> distributes the work of assembling the final image
-  over multiple resources. It is typically used with database decomposition,
-  where the compositing work increases linearly with the number of resources.
+  over multiple resources. It is typically used
+  with <a href="/scalability/DB.html">database decomposition</a>, where the
+  compositing work increases linearly with the number of resources.
 </p>
 <div class="center">
   <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">Watch a video<br>
@@ -19,10 +20,10 @@
 </div>
 <p>
   Compositing in Equalizer is very flexible, and supports all major parallel
-  sort-last compositing algorithms, including, but not limited to, <em>direct
-  send</em> and <em>binary swap</em>. Such algorithms keep the compositing cost
-  constant due to the parallelization across all rendering units. The example
-  shows a three-node direct-send composition. Each rendering unit does a z-based
+  compositing algorithms, including, but not limited to, <em>direct send</em>
+  and <em>binary swap</em>. Such algorithms keep the compositing cost constant
+  due to the parallelization across all rendering units. The example shows a
+  three-node direct-send composition. Each rendering unit does a z-based
   composition of one tile, and sends the composited result to the destination
   channel.
 </p>
