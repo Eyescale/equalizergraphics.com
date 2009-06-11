@@ -1,0 +1,35 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Multi-level
+#define KEYWORDS "Pixel, scalability"
+
+#include "header.shtml"
+
+<p>
+  All Equalizer scalability features can be combined with each other to address
+  the individual bottlenecks in a flexible way.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=08R2QyfByTc&fmt=18">Watch a video<br>
+    <img src="/scalability/images/mixed.png" alt="A 2D/DB decomposition"></a>
+</div>
+<p>
+  For example, a DB compound can be combined with a 2D compound to first break
+  down the data size to fully fit onto the GPU, and then further sub-decompose
+  the rendering using 2D decomposition with less compositing overhead.
+</p>
+<p>
+  The mix-and-match of Equalizer features is not limited to the basic
+  decomposition modes (2D, DB, DPlex, stereo, pixel), but also applies to more
+  advanced functionality. For example, a view equalizer relies on 2D load
+  equalizers to balance the per-segment load on multi-display installations, or
+  a DFR equalizer can be used with a 2D decomposition.
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote">
+  <p>3D model courtesy of <a href="http://www.cyberware.com">Cyberware</a>.</p>
+</div>
+
+#include "footer.shtml"

@@ -1,0 +1,46 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Multi-View
+
+#define KEYWORDS "multi-view, sort-first, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>Multi-View</b> rendering provides more display size and resolution by using
+  multiple screens or projectors, GPU's and potentially computers. An Equalizer
+  application runs optimally in this environment, each GPU has it's own local
+  render thread for optimal performance.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=dsR1vamTKrI&fmt=18">Watch a video<br>
+    <img src="/scalability/images/wall.png" alt="Multi-View Rendering"></a>
+</div>
+<p>
+  Multi-view rendering has a wide range of use cases: planar and curved
+  projector and display walls, immersive environments using stereo rendering,
+  head-mounted displays or simply multi-GPU, multi-monitor workstations.
+</p>
+<p>
+  Planar multi-view rendering is the elementary use case, and as such supported
+  by a number of other middleware solutions. Most of these solutions provide an
+  application-transparent approach by intercepting and distributing the OpenGL
+  command stream. This approach has inherent performance and compatibility
+  issues, in particular with advanced OpenGL features and non-planar projection
+  systems.
+</p>
+<p>
+  Equalizer applications however parallelize the rendering, so that each GPU has
+  its own local rendering thread. This parallel execution and per-segment view
+  frustum culling results in much better performance and compatibility over
+  transparent approaches.
+</p>
+<p>
+  To further increase the performance, Equalizer schedules the rendering
+  resources asynchronously. This asynchronous execution decouples and pipelines
+  the render threads and the application thread, e.g., hiding network transfers
+  for data updates.
+</p>
+
+#include "footer.shtml"

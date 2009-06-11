@@ -1,0 +1,56 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: View Equalizer
+
+#define KEYWORDS "view-balancing, sort-first, sort-last, scalability"
+
+#include "header.shtml"
+
+<p>
+  The <b>View Equalizer</b> automatically assigns resources to segments of a
+  multi-view installation
+</p>
+<div class="center">
+    <img src="/scalability/images/viewEqualizer.png" 
+         alt="View Equalizer on two segments using eight GPU's"></a>
+</div>
+<p>
+  Depending on the model position and data structure, each segment of a
+  multi-display system has a different rendering load. The segment with the
+  biggest load determines the overall performance when using a static assignment
+  of resources to segments. The view equalizer analyzes the load of all
+  segments, and adapts the resource usage each frame. It equalizes the load on
+  all segments of a view.
+</p>
+<p>
+  The figure above illustrates this process. On the left side, a static
+  assigment of resources to display segments is used. The right-hand segment has
+  a higher load than the left-hand segment, causing sub-optimal performance. The
+  configuration on the left uses a view equalizer, which assigns two GPU's to
+  the left segment and four GPU's to the right segment, which leads to optimal
+  performance for this model and camera position.
+</p>
+<p>
+  The view equalizer can also use resources from another display resource, if
+  this resource has little rendering load by itself. It is therefore possible to
+  improve the rendering performance of a multi-display system without any
+  additional resources than needed for the display setup. This is particulary
+  useful for installations with a higher number of displays where the rendering
+  load is typically in a few segments only, e.g., for a CAVE.
+</p>
+<p>
+  Cross-segment load-balancing is configured hierarchically. On the top compound
+  level, a view equalizer assigns resources to each of its children, so that the
+  optimal number of resources is used for each segment. On the next level,
+  a <a href="/scalability/loadEqualizer.html">load equalizer</a> on each child
+  computes the resource distribution within the segment, taking the resource
+  usage given by the view equalizer into account.
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote">
+  <p>Image Copyright <a href="http://www.rtt.ag">Realtime Technology AG</a>,
+    2008</p>
+</div>
+#include "footer.shtml"

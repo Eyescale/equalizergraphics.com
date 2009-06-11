@@ -1,0 +1,37 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Monitor Equalizer
+
+#define KEYWORDS "dynamic frame resolution, sort-first, sort-last, scalability"
+
+#include "header.shtml"
+
+<p>
+  The <b>Monitor Equalizer</b> allows the observation of another view,
+  potentially made of multiple segments, in a different channel at a different
+  resolution. This is typically used to re-use the rendering of a large-scale
+  display on an operator station.
+</p>
+<div class="center">
+    <img src="/scalability/images/monitorEqualizer.png" 
+         alt="Monitoring a two-segment PowerWall"></a>
+</div>
+<p>
+  The monitor equalizer adapts the frame zoom of the output frames used to
+  observe the rendering, depending on the destination channel size. The output
+  frames are downscaled on the GPU before readback, which results in optimal
+  performance.
+</p>
+<p>
+  The figure above shows a usage of the monitor equalizer. A two-segment display
+  wall is driven by a separate control station. The rendering happens only on
+  the display wall, and the control window receives the correctly downscaled
+  version of the rendering.
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote">
+  <p>3D model courtesy of <a href="http://www.cyberware.com">Cyberware</a>.</p>
+</div>
+#include "footer.shtml"

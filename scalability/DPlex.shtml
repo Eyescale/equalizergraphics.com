@@ -1,0 +1,43 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: DPlex
+#define KEYWORDS "DPlex, time-multiplex, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>DPlex</b>, also called time-multiplex or AFR, assigns alternating, full
+  frames to multiple rendering resources to produce a steady stream of output
+  images. The rendered images are copied to the destination view, and the
+  swap buffer rate of the destination window is typically balanced by
+  a framerate equalizer.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=ag3DAN7nqG8&fmt=18">Watch a video<br>
+  <img src="/scalability/images/DPlex.png" alt="DPlex or sort-last"></a>
+</div>
+<p>
+  DPlex compounds provide very good scalability, since the rendering load is
+  ideally distributed. They introduce latency into the rendering, which
+  partially is compensated by the higher frame rate. The AFR (Alternate Frame
+  Rendering) mode of multi-GPU systems works in a similar way.
+</p>
+<p>
+  Any Equalizer application can benefit from DPlex compounds. The
+  time-multiplexing requires the application to process different frames
+  concurrently. This can be achieved by using a separate rendering process per
+  GPU, or by modifying the application to support the <code>async</code>
+  threading model.
+</p>
+<p>
+  The compositing overhead of DPlex compounds is similar
+  to <a href="/scalability/2D.html">2D compounds</a>. DPlex is often combined
+  with other modes to keep the latency reasonable while profiting from the
+  linear scalability of DPlex compounds. DPlex is not recommended for immersive
+  installations due to VR sickness caused by the increased latency.
+</p>
+
+<div class="flush_float"></div>
+
+#include "footer.shtml"

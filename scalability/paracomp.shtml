@@ -1,0 +1,46 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Parallel Compositing
+
+#define KEYWORDS "multi-view, sort-first, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>Parallel compositing</b> distributes the work of assembling the final image
+  over multiple resources. It is typically used with database decomposition,
+  where the compositing work increases linearly with the number of resources.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">Watch a video<br>
+    <img src="/scalability/images/directSend.png" 
+         alt="direct send parallel compositing"></a>
+</div>
+<p>
+  Compositing in Equalizer is very flexible, and supports all major parallel
+  sort-last compositing algorithms, including, but not limited to, <em>direct
+  send</em> and <em>binary swap</em>. Such algorithms keep the compositing cost
+  constant due to the parallelization across all rendering units. The example
+  shows a three-node direct-send composition. Each rendering unit does a z-based
+  composition of one tile, and sends the composited result to the destination
+  channel.
+</p>
+<p>
+  Equalizer integrates well with third-party compositing libraries or hardware
+  compositors. The <a href="http://paracomp.sourceforge.net/">Parallel
+  Compositing Library</a> is supported directly, if it is installed on the
+  visualization system.
+</p>
+
+
+<div class="flush_float"></div>
+<div class="footnote">
+<p>
+  3D model courtesy
+  of <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
+    Computer Graphics Laboratory</a>.
+</p>
+</div>
+
+#include "footer.shtml"

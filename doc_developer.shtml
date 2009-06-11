@@ -47,6 +47,11 @@
     the individual threads in Equalizer and explains some thread synchronization
     concepts.</li>
 </ul>
+
+<div class="float_right">
+  <img src="/images/teapots.png" 
+       alt="2D, DB, DPlex, stereo and pixel decomposition">
+</div>
 <h3>Design  Documentation</h3>
 <p>
   The design documentation is technical documentation, specifications or other

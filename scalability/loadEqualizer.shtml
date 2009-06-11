@@ -1,0 +1,55 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Load Equalizer
+
+#define KEYWORDS "load-balancing, sort-first, sort-last, scalability"
+
+#include "header.shtml"
+
+<p>
+  The <b>Load Equalizer</b> automatically adapts the 2D tiling or DB range of a
+  compound, balancing all render resources of a single output for optimal
+  performance.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=1MWbmydnkTI&fmt=18">Watch a video<br>
+    <img src="/scalability/images/loadEqualizer.png" 
+         alt="2D Load Equalizer"></a>
+</div>
+<p>
+  While pixel and stereo compounds are naturally
+  load-balanced, the performance of <a href="/scalability/2D.html">2D</a>
+  and <a href="/scalability/DB.html">DB</a> compounds can often be improved by
+  using load-balancing.
+</p>
+<p>
+  Using a load equalizer is transparent to the application, and can be used on
+  any application for 2D, and on most applications for DB load-balancing. Some
+  applications do not support dynamic updates of the database range, and
+  therefore cannot be used with DB load-balancing.
+</p>
+<p>
+  Using a 2D or DB load-balancer will adapt the 2D split or database range
+  automatically each frame. The 2D load-balancer exists in three flavors:
+  2D using tiles, VERTICAL using columns and HORIZONTAL using rows.
+</p>
+<p>
+  2D load-balancing increases the framerate over a static decomposition in
+  virtually all cases. It works best if the application data is relatively
+  uniformly distributed in screen-space. A damping parameter can be used to
+  fine-tune the algorithm.
+</p>
+<p>
+  DB load-balancing is beneficial for applications which cannot precisely
+  predict the load for their scene data, e.g., when the data is
+  non-uniform. Volume rendering is a counterexample, where the data is uniform
+  and a static DB decomposition typically results in a better performance.
+</p>
+<p>
+  For <a href="/scalability/multiview.html">multi-view</a> setups using 2D or DB
+  compounds, a <a href="/scalability/viewEqualizer.html">view equalizer</a> will
+  assign resources to each segment, and each segment uses a load equalizer to
+  balance the rendering within the segment.
+</p>
+#include "footer.shtml"

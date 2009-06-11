@@ -104,11 +104,14 @@ div.image {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    border: 0;
-    padding: 0;
-    margin: 0;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 2px;
+    margin: 2px;
     border-collapse: collapse;
-    color: black;
+    float:   left;
+    font-size: small;
 }
 
 div.gallery {
@@ -212,6 +215,9 @@ div.content {
 }
 
 div.social { 
+    text-align: center;
+}
+div.center { 
     text-align: center;
 }
 

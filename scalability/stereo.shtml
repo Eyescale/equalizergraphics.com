@@ -1,0 +1,47 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Stereo
+
+#define KEYWORDS "stereo, eye, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>Stereo</b> or eye decomposition is used during stereo rendering. The
+  individual views for each eye are assigned to different rendering units and
+  later copied to the appropriate stereo buffer.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=FLvAUWAKJtI&fmt=18">Watch a video<br>
+  <img src="/scalability/images/stereo.png" alt="stereo or sort-last"></a>
+</div>
+<p>
+  This mode supports a variety of stereo modes, including active
+  (quad-buffered) stereo, anaglyphic stereo or auto-stereo displays with
+  multiple eye passes. Auto-stereoscopic displays have not yet been implemented
+  due to a lack of demand.
+</p>
+<p>
+  Due to the frame consistency between the eye views, this modes scales very
+  well. It is often combined with other modes to achieve further scalability
+</p>
+<p>
+  The compositing overhead of stereo compounds is similar
+  to <a href="/scalability/2D.html">2D compounds</a>, with the exception that
+  twice the data might be copied due to the stereo rendering.
+</p>
+<p>
+  Any Equalizer application can render in stereo and benefit from stereo
+  compounds. Immersive and virtual reality installations are fully supported if
+  the application provides the head tracking data to Equalizer.
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote">
+<p>
+  3D model courtesy of <a href="http://www.cyberware.com">Cyberware</a>.
+</p>
+</div>
+
+#include "footer.shtml"

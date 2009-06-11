@@ -2,280 +2,101 @@
 #define S_HOME_SCALABILITY
 #define PAGE About
 #define SUBPAGE Scalability
- 
+#define NO_POLL
 #define DESCRIPTION "Equalizer implements a wide range of task decomposition algorithms to parallelize the rendering of large data sets."
-#define KEYWORDS "scalability, Equalizer, OpenGL, compound, decomposition, recomposition, 2D, DB, DPlex, sort-first, sort-last, parallel, direct send, binary swap"
+#define KEYWORDS "scalability, Equalizer, OpenGL, 2D, DB, DPlex, sort-first, sort-last, parallel, direct send, binary swap"
 
 #include "header.shtml"
 
-<h2>Table of Contents</h2>
-<p>
-  <a href="/scalability.html#overview">Overview</a><br>
-  <a href="/scalability.html#basic">Basic Decomposition Modes</a><br>
-  <a href="/scalability.html#advanced">Advanced Scalability Features</a><br>
-</p>
 
-
-<a name="overview"></a>
-<h2>Overview</h2>
 <p>
   Applications build with Equalizer are inherently scalable, aggregating
   multiple graphics cards, processors and computers to render a single or
   multiple views. The application's rendering code is parallelized, in contrast
-  to other solutions which operate on the OpenGL command stream produced by a
-  single application thread.
+  to most other solutions which distribute the OpenGL command stream produced by
+  a single application thread.
 </p>
 <p>
-  Equalizer provides a comprehensive set of algorithms to parallelize and
-  load-balance the rendering of demanding data sets. The rendering is
-  distributed across all available resources (decomposition) and the results are
-  assembled on the final view (recomposition).
-</p>
-<p>
-  Equalizer supports screen-space, database, time-multiplex, pixel and stereo
-  task distribution. Several parallel compositing algorithms use for
-  recomposition are configurable, for example direct-send and binary
-  swap. Task distribution and result composition is configured using
-  <a href="/documents/design/compounds.html">compounds</a>.
-</p>
-<p>
-  All scalability features apply to graphic clusters and multi-GPU systems in
-  the same way. Multi-GPU systems have the advantadge of a shared memory, which
-  eliminates the need of transferring pixel data across a network, but on the
-  other hand the number of GPUs per system is limited.
-</p>
-<p>
-  The achievable performance depends on a number of factors. The I/O
-  bandwidth of the graphics cards, the cluster interconnect and the used
-  decomposition mode define the upper limit of the achievable frame rate. The
-  application characteristics and some application-specific optimizations
-  determine how close to this limit the performance can be
-  pushed. Some <a href="/documentation/performance.html">performance studies</a>
-  can be found in the <a href="/documentation.html">documentation</a> section.
-</p>
-
-<a name="basic"></a>
-<h2>Basic Decomposition Modes</h2>
-
-<p>
-  Equalizer uses compounds to configure the parallelization of the rendering
-  tasks. This compound tree allows a flexible configuration of the task
-  decomposition. The Equalizer distribution contains numerous configuration
-  files for the implemented feature set. The following parallel rendering
-  algorithms are supported:
-</p>
-
-<div class="float_right"><a href="/images/2D.png">
-    <img src="/images/2D-small.jpg" alt="A 2D compound"></a>
-  <div class="label">A sort-first compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=DtnSRlZnbrQ&fmt=18">Watch a
-    video</a>
-  </div>
-</div>
-<p>
-  <b>2D</b>, sort-first or SFR decomposes the rendering in screen-space, that
-  is, each contributing rendering unit processes a tile of the final
-  view. Equalizer simply recomposes the tiles side-by-side on the destination
-  view. This mode has a low, constant IO overhead for the image transfers and
-  can provide good scalability when combined with view frustum
-  culling. Depending on the application data structure, the overlap of some
-  primitives between individual tiles limits the scalability of this mode,
-  typically to around eight graphic cards.
-  <br>
-</p><div class="flush_float"></div>
-
-<div class="float_right"><a href="/images/DB.png">
-  <img src="/images/DB-small.jpg" alt="A DB compound"></a>
-  <div class="label">A sort-last compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=1V69jqCcdpQ&fmt=18">Watch a
-    video</a>
-  </div>
-</div>
-<p>
-  <b>DB</b> or sort-last decomposes the rendered database so that all rendering
-  units process a part of the scene in parallel. The depth buffer information is
-  used to composite the individual images correctly for polygonal data. Volume
-  rendering applications use an ordered alpha-based blending to composite the
-  result image. This mode provides very good scalability while having linear
-  increasing IO requirements. The increasing recomposition work can be addressed
-  by using parallel compositing, as described below.
-</p><div class="flush_float"></div>
-
-<div class="float_right"><a href="/images/EYE.png">
-  <img src="/images/EYE-small.jpg" alt="An Eye compound"></a>
-  <div class="label">A stereo compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=FLvAUWAKJtI&fmt=18">Watch a
-    video</a>
-  </div>
-</div>
-<p>
-  <b>Eye</b> decomposition is used during stereo rendering. The individual views
-  for each eye are assigned to different rendering units and later copied to the
-  appropriate stereo buffer. This modes supports a variety of stereo modes,
-  including active (quad-buffered) stereo, anaglyphic stereo or auto-stereo
-  displays with multiple eye passes. Due to the frame consistency between the
-  eye views, this modes scales very good up to the number of eye passes. It is
-  often combined with another mode on large-scale visualization clusters.
-</p><div class="flush_float"></div>
-
-<a name="DPlex"></a>
-<div class="float_right"><a href="/images/DPlex.png">
-    <img src="/images/DPlex-small.jpg" alt="A DPlex compound"></a>
-  <div class="label">A DPlex compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=ag3DAN7nqG8&fmt=18">Watch a
-    video</a>
-  </div>
-</div>
-<p>
-  <b>DPlex</b>, time-multiplex or AFR assigns alternating, full frames to
-  multiple rendering resources to produce a steady stream of output images. The
-  rendered images are copied to the destination view, and the destination window
-  is load-balanced by Equalizer to provide a smooth framerate. This mode
-  provides very good scalability but introduces latency into the
-  rendering. Depending on the application, the additional latency is compensated
-  by the higher frame rate. The AFR (Alternate Frame Rendering) mode of
-  multi-GPU systems implements this feature in hardware.
-</p><div class="flush_float"></div>
-
-<div class="float_right"><a href="/images/Pixel.png">
-    <img src="/images/Pixel-small.jpg" alt="A Pixel compound"></a>
-  <div class="label">A pixel compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=rW7Z8Tuxjs0&fmt=18">Watch a
-    video</a>
-  </div>
-</div>
-<p>
-  <b>Pixel</b> compounds are similar to 2D compounds, but the frusta
-  of the source rendering units are modified so that each unit renders an evenly
-  distributed subset of pixels. Pixel compounds are ideal for purely
-  fill-limited applications such as volume rendering and raytracing. The load is
-  always almost equally distributed, thus allowing to scale the fill-rate nearly
-  linearly.
-</p><div class="flush_float"></div>
-
-<a name="advanced"></a>
-<h2>Advanced Scalability Features</h2>
-<p>
-  Equalizer provides a number of features to better utilize the rendering
-  resources with the basic decomposition modes mentioned in the previous
-  chapter. The following gives a short overview of these optimisations.
-</p>
-
-<h3>Multilevel Task Decompositions</h3>
-<div class="float_right"><a href="/images/ML.png">
-    <img src="/images/ML-small.jpg" alt="Multi-Level Compounds"></a>
-  <div class="label">A multilevel compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=08R2QyfByTc&fmt=18">Watch a
-      video</a>
-  </div>
-</div>
-<p>
-  The basic decomposition schemes described above can be combined in any
-  possible way to address different bottlenecks within the rendering
-  process. For example, an Eye compound can be combined with a 2D compound to
-  first decompose the rendering for the left and right eye, and then further
-  sub-decompose the rendering for each individual eye pass. This allows to
-  exploit the excellent scalability of a stereo decomposition with the ability
-  to use four graphic cards to render a single stereo view.
-</p><div class="flush_float"></div>
-
-<h3>Parallel Compositing</h3>
-<div class="float_right"><a href="/images/directSend.png">
-  <img src="/images/directSend-small.jpg" 
-       alt="Direct Send Parallel Compositing"></a>
-  <div class="label">Data flow for direct send compositing</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">Watch a
-      video</a>
-  </div>
-</div>
-<p>
-  Equalizer supports various parallel compositing algorithms, typically used
-  for DB (sort-last) rendering. Due to the linear increase in pixel data, it
-  becomes necessary to parallelize the compositing.
-</p>
-<p>
-  The compound implementation of Equalizer supports various parallel sort-last
-  compositing algorithms, including, but not limited to, <em>direct send</em>
-  and <em>binary swap</em>. Such algorithms keep the compositing cost constant
-  due to the parallelization across all rendering units. The example shows a
-  three-node direct-send composition. Each rendering unit does a z-based
-  composition of one tile, and sends the composited result to the destination
-  channel.
-</p>
-<p>
-  Equalizer integrates well with third-party compositing libraries or hardware
-  compositors. The <a href="http://paracomp.sourceforge.net/">Parallel
-  Compositing Library</a> is supported directly, if it is installed on the
-  visualization system.
+  Equalizer provides a comprehensive set of algorithms to parallelize,
+  balance and optimize the rendering of demanding data sets:
 </p>
 <div class="flush_float"></div>
-
-<h3>Asynchronous Execution</h3>
-<a name="async"></a>
-<div class="float_right"><a href="/images/syncAsync.png">
-  <img src="/images/syncAsync-small.jpg" 
-       alt="Synchronous vs. asynchronous execution"></a>
-  <div class="label">Synchronous vs. asynchronous execution</div>
+<div class="image">
+  <a href="/scalability/multiview.html">
+    <img src="/scalability/images/wall-small.jpg" alt="Multi-View">
+  <div>Multi-View</div></a>
 </div>
-<p>
-  Equalizer schedules the rendering resources asynchronously. Rendering threads
-  which are independent from others start rendering the next frame immediately
-  after they finish a frame.
-</p>
-<p>
-  The asynchronous execution pipelines certain rendering tasks and hides
-  imbalances in the task decomposition. Typically a latency of one frame
-  increases the framerate between 10 and 15 percent for scalable rendering.
-</p>
-<p>
-  The picture on the right shows the actual statistics from the same
-  configuration with one frame latency (asynchronous) and no latency
-  (synchronous). Notice the longer time and the idle periods of one rendering
-  thread during synchronous execution.
-</p><div class="flush_float"></div>
-
-<a name="lb"></a>
-<h3>Load Balancing</h3>
-<div class="float_right"><a href="/images/LB.png">
-  <img src="/images/LB-small.jpg" alt="2D Load-Balancing"></a>
-  <div class="label">Load balancing a sort-first compound</div>
-  <div class="label">
-    <a href="http://www.youtube.com/watch?v=1MWbmydnkTI&fmt=18">Watch a
-      video</a>
-  </div>
+<div class="image">
+  <a href="/scalability/DB.html">
+    <img src="/scalability/images/DB-small.jpg" alt="DB or sort-last">
+  <div>DB or sort-last</div></a>
 </div>
-<p>
-  The Equalizer dynamically adjusts the decomposition parameters based
-  on the current workload distribution. This load balancing can happen
-  automatically (based on time measurements) or programatically (based on
-  application input). Automatic, application-transparent load-balancing is
-  supported by Equalizer.
-</p><div class="flush_float"></div>
-
-<div class="float_right"><a href="/images/Cross.png">
-  <img src="/images/Cross-small.jpg" alt="Advanced Load-Balancing"></a>
-  <div class="label">Advanced load balancing</div>
+<div class="image">
+  <a href="/scalability/2D.html">
+    <img src="/scalability/images/2D-small.jpg" alt="2D or sort-first">
+  <div>2D or sort-first</div></a>
 </div>
-<p>
-  Advanced load balancing uses off-screen rendering buffers on the same graphic
-  cards which display the final result. These buffers contribute to the
-  rendering of other output channels, enabling the optimal usage of all
-  rendering units on a multi-GPU machine. This feature is not yet implemented.
-</p><div class="flush_float"></div>
+<div class="image">
+  <a href="/scalability/stereo.html">
+    <img src="/scalability/images/stereo-small.jpg" alt="Stereo or Eye">
+  <div>Stereo or Eye</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/DPlex.html">
+    <img src="/scalability/images/DPlex-small.jpg" alt="DPlex or AFR">
+  <div>DPlex or AFR</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/pixel.html">
+    <img src="/scalability/images/pixel-small.jpg" 
+         alt="Pixel">
+  <div>Pixel</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/mixed.html">
+    <img src="/scalability/images/mixed-small.jpg" 
+         alt="Mixed">
+  <div>Multi-level</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/paracomp.html">
+    <img src="/scalability/images/directSend-small.jpg" 
+         alt="Parallel Compositing">
+  <div>Parallel Compositing</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/loadEqualizer.html">
+    <img src="/scalability/images/loadEqualizer-small.jpg" 
+         alt="Load Equalizer">
+  <div>Load Equalizer</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/viewEqualizer.html">
+    <img src="/scalability/images/viewEqualizer-small.jpg" 
+         alt="View Equalizer">
+  <div>View Equalizer</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/dfrEqualizer.html">
+    <img src="/scalability/images/dfrEqualizer-small.jpg" 
+         alt="DFR Equalizer">
+  <div>DFR Equalizer</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/monitorEqualizer.html">
+    <img src="/scalability/images/monitorEqualizer-small.jpg" 
+         alt="Monitor Equalizer">
+  <div>Monitor Equalizer</div></a>
+</div>
 
+<div class="flush_float"></div>
 <div class="footnote">
 <p>
   3D models courtesy of <a href="http://www.cyberware.com">Cyberware</a>
   , <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
   Computer Graphics Laboratory</a>, Stereolithography Archive at Clemson
-  University and AVS, USA.
+  University and AVS, USA. Image Copyright <a href="http://www.rtt.ag">Realtime
+  Technology AG</a>, 2008.
 </p>
 </div>
 

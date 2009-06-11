@@ -137,6 +137,18 @@ FILES = \
 	news/Release_0.6.html \
 	news/tungsten.html \
 	restricted/index.html \
+	scalability/2D.html \
+	scalability/DB.html \
+	scalability/dfrEqualizer.html \
+	scalability/DPlex.html \
+	scalability/loadEqualizer.html \
+	scalability/mixed.html \
+	scalability/monitorEqualizer.html \
+	scalability/multiview.html \
+	scalability/paracomp.html \
+	scalability/pixel.html \
+	scalability/stereo.html \
+	scalability/viewEqualizer.html \
 	$(IMAGES) \
 	$(PAGES)
 
@@ -146,6 +158,7 @@ IMAGES_SRC = \
 	$(wildcard images/NewsJune07/*gif) \
 	$(wildcard images/NewsJune07/*jpg) \
 	$(wildcard applications/images/*png) \
+	$(wildcard scalability/images/*png) \
 	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \
 
@@ -222,6 +235,10 @@ $(TARGET)/documents/%-small.jpg: documents/%.png
 $(TARGET)/applications/%-small.jpg: applications/%.png
 	@mkdir -p $(@D)
 	convert $< -geometry 150x1000 $@
+
+$(TARGET)/scalability/%-small.jpg: scalability/%.png
+	@mkdir -p $(@D)
+	convert $< -geometry 150x150 $@
 
 $(TARGET)/%-small.jpg: %.jpg
 	@mkdir -p $(@D)

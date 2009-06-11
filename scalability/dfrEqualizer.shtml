@@ -1,0 +1,46 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: DFR Equalizer
+
+#define KEYWORDS "dynamic frame resolution, sort-first, sort-last, scalability"
+
+#include "header.shtml"
+
+<p>
+  The <b>Dynamic Frame Resolution (DFR) Equalizer</b> delivers a constant
+  performance by adapting the rendering viewport for fill-limited
+  applications. This feature is sometimes called dynamic video resize (DVR).
+</p>
+<div class="center">
+    <img src="/scalability/images/dfrEqualizer.png" 
+         alt="DFR Equalizer for Volume Rendering"></a>
+</div>
+<p>
+  Dynamic Frame Resolution (DFR) trades rendering performance for visual
+  quality. The rendering for a channel is done at a different resolution than
+  the native channel resolution to keep the framerate constant. The DFR
+  equalizer adapts the zoom of a channel, based on the target and current
+  framerate. It is typically used for fill-rate bound applications, such as
+  volume rendering and raytracing.
+</p>
+<p>
+  The figure above shows DFR for volume rendering. To achieve 10 frames per
+  second, the model is rendered at a lower resolution, and upscaled to the
+  native resolution for display. The rendering quality is slightly degraded,
+  while the rendering performance remains interactive. When the application is
+  idle, it renders a full-resolution view.
+</p>
+<p>
+  The dynamic frame resolution is not limited to down-scaling the rendering
+  resolution, it will also up-scale the resolution if the parameters allow for
+  it. Upscaled rendering, which will downsample the result for display, provides
+  dynamic anti-aliasing at a constant framerate.
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote">
+  <p>Data set courtesy of Olaf Ronneberger, Computer Science Institute,
+    University of Freiburg, Germany</p>
+</div>
+#include "footer.shtml"

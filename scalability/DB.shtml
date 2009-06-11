@@ -1,0 +1,54 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: DB
+
+#define KEYWORDS "DB, sort-last, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>DB</b> or sort-last decomposes the rendered database so that all rendering
+  units process a part of the scene in parallel. This process is called domain
+  decomposition in the HPC world.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=1V69jqCcdpQ&fmt=18">Watch a 
+    video</a><br>
+  <img src="/scalability/images/DB.png" alt="DB or sort-last">
+</div>
+<p>
+  For applications rendering polygonal data, the depth buffer information is
+  used to composite the individual images correctly. Volume rendering
+  applications use an ordered alpha-based blending to composite the result
+  image.
+<p>
+  The task decomposition for sort-last rendering provides near-linear
+  scalability. The recomposition has linear increasing IO requirements, and is
+  often the factor limiting scalability. This increasing recomposition work can
+  be addressed by using <a href="/scalability/paracomp.html">parallel
+  compositing</a>.
+</p>
+<p>
+  Equalizer-based applications have to interpret the database range given at
+  run-time to support DB compounds. The database range is a one-dimensional
+  vector in normalized coordinates giving the start and end of the part of the
+  application's data to render.
+</p>
+<p>
+  DB compounds are often used to break down the data size to fit onto GPU
+  memory, which provides super-linear scalability. For further scalability, it
+  is advisable to combine it with other scalability modes, such as
+  <a href="/scalability/2D.html">2D compounds</a>.
+</p>
+<p>
+  Applications visualizing irregular data should use
+  a <a href="/scalability/loadEqualizer.html">DB load equalizer</a>, which will
+  adapt the database range each frame based on the current load. The application
+  has to be capable to render a different DB-range each frame. 
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote"><p>3D model courtesy of AVS, USA.</p></div>
+
+#include "footer.shtml"
