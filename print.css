@@ -12,6 +12,14 @@ pre, code {
     font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
 }
 
+p.quote
+{ 
+    font-family: Helvetica Neue, Arial, Futura;
+    font-size: small;
+    font-weight: bold;
+    margin-left: 2em;
+}
+
 h1 { 
     text-align: center;
     margin-top: 0;
@@ -40,6 +48,7 @@ dt
 td
 {
     text-align: left;
+    vertical-align: top;
     padding: .5ex;
 }
 
@@ -69,17 +78,25 @@ a:visited, a:active
 
 img
 { 
-  padding: 5px;
+  padding: 10px;
   border:  0px;
 }
 
 a img:hover
 { 
-  padding: 0;
+  padding: 4px;
   margin: 4px;
-  border: 1px;
+  border: 2px;
   border-color: blue;
   border-style: solid;
+}
+
+img.inline, img.inline:hover, a img.inline, a img.inline:hover
+{ 
+  padding: 0;
+  border: 0;
+  margin: 0;
+  text-align: center;
 }
 
 div.image {
@@ -87,11 +104,14 @@ div.image {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    border: 0;
-    padding: 0;
-    margin: 0;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 2px;
+    margin: 2px;
     border-collapse: collapse;
-    color: black;
+    float:   left;
+    font-size: small;
 }
 
 div.gallery {
@@ -103,20 +123,18 @@ div.gallery {
     border-color: black;
     border-style: solid;
     border-collapse: collapse;
-    margin: 1px;
-    padding: 5px;
-    width: 200px;
-    height: 210px;
-    float: left;
+    padding: 5px 0 5px 0;
+    clear: left;
 }
 
-div.gallery img { 
-    padding: 0px 0px 5px 0px;
+div.gallery img, div.gallery object { 
+    padding: 0 5px 5px 5px;
+    float:   left;
 }
 
 div.gallery img:hover
 { 
-    padding: 0px 0px 5px 0px;
+    padding: 0 5px 5px 5px;
     margin: 0;
     border:  0;
 }
@@ -127,8 +145,12 @@ div.header
     vertical-align: middle;
     background-color: #aaaaaa;
     border: 0;
-    padding: 0;
-    margin: 0;
+    padding: .5em;
+    padding-left: 10px;
+    margin-top: 0;
+    margin-left: 10em;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 div.header img
@@ -162,6 +184,13 @@ div.content {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+}
+
+div.social { 
+    text-align: center;
+}
+div.center { 
+    text-align: center;
 }
 
 div.footer { 
@@ -227,6 +256,10 @@ ul.toc2
 .flush_float
 { 
     clear: both;
+}
+.flush_left
+{ 
+    clear: left;
 }
 
 hr
