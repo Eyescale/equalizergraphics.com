@@ -39,6 +39,7 @@ FILES = \
 	applications/eqPly.html \
 	applications/eVolve.html \
 	applications/thirdParty.html \
+	applications/UniSiegen.html \
 	documentation/parallelOpenGLFAQ.html \
 	documentation/performance.html \
 	documents/CV_Stefan_Eilemann.pdf \
@@ -158,6 +159,7 @@ IMAGES_SRC = \
 	$(wildcard images/NewsJune07/*gif) \
 	$(wildcard images/NewsJune07/*jpg) \
 	$(wildcard applications/images/*png) \
+	$(wildcard applications/images/UniSiegen/*png) \
 	$(wildcard scalability/images/*png) \
 	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \

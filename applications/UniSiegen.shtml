@@ -1,0 +1,117 @@
+#define S_APPLICATIONS
+#define S_APPLICATIONS_THIRDPARTY
+#define PAGE Third Party Applications
+#define SUBPAGE University of Siegen Gallery
+#define NO_POLL
+
+#include "header.shtml"
+
+
+<p>
+  The following pictures show Equalizer-based applications developed by the
+  University of Siegen, displayed in an immersive installation driven by a
+  six-node dual-GPU cluster.
+</p>
+<h2>Architectural Walk-through</h2>
+<div class="flush_float"></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000588.png">
+    <img src="/applications/images/UniSiegen/P1000588-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000594.png">
+    <img src="/applications/images/UniSiegen/P1000594-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000602.png">
+    <img src="/applications/images/UniSiegen/P1000602-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000603.png">
+    <img src="/applications/images/UniSiegen/P1000603-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000606.png">
+    <img src="/applications/images/UniSiegen/P1000606-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000607.png">
+    <img src="/applications/images/UniSiegen/P1000607-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000584.png">
+    <img src="/applications/images/UniSiegen/P1000584-small.jpg">
+</a></div>
+
+<div class="flush_float"></div>
+<h2>Swirling Balls</h2>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000609.png">
+    <img src="/applications/images/UniSiegen/P1000609-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000612.png">
+    <img src="/applications/images/UniSiegen/P1000612-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000615.png">
+    <img src="/applications/images/UniSiegen/P1000615-small.jpg">
+</a></div>
+
+<div class="flush_float"></div>
+<h2>Climate Research</h2>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000618.png">
+    <img src="/applications/images/UniSiegen/P1000618-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000623.png">
+    <img src="/applications/images/UniSiegen/P1000623-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000624.png">
+    <img src="/applications/images/UniSiegen/P1000624-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000625.png">
+    <img src="/applications/images/UniSiegen/P1000625-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000634.png">
+    <img src="/applications/images/UniSiegen/P1000634-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000637.png">
+    <img src="/applications/images/UniSiegen/P1000637-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000642.png">
+    <img src="/applications/images/UniSiegen/P1000642-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000643.png">
+    <img src="/applications/images/UniSiegen/P1000643-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000644.png">
+    <img src="/applications/images/UniSiegen/P1000644-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000645.png">
+    <img src="/applications/images/UniSiegen/P1000645-small.jpg">
+</a></div>
+
+<div class="flush_float"></div>
+<h2>Volume Raytracing</h2>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000651.png">
+    <img src="/applications/images/UniSiegen/P1000651-small.jpg">
+</a></div>
+<div class="image">
+  <a href="/applications/images/UniSiegen/P1000654.png">
+    <img src="/applications/images/UniSiegen/P1000654-small.jpg">
+</a></div>
+
+<div class="flush_float"></div>
+#include "footer.shtml"
+<!-- $Id: scalability.shtml 3057 2009-06-11 16:57:50Z eile $ -->
