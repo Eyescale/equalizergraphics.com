@@ -159,7 +159,7 @@ IMAGES_SRC = \
 	$(wildcard images/NewsJune07/*gif) \
 	$(wildcard images/NewsJune07/*jpg) \
 	$(wildcard applications/images/*png) \
-	$(wildcard applications/images/UniSiegen/*png) \
+	$(wildcard applications/images/UniSiegen/*jpg) \
 	$(wildcard scalability/images/*png) \
 	$(wildcard documents/design/images/*png) \
 	$(wildcard screenshots/*) \
