@@ -2,7 +2,6 @@
 #define S_APPLICATIONS_THIRDPARTY
 #define PAGE Third Party Applications
 #define SUBPAGE University of Siegen Gallery
-#define NO_POLL
 
 #include "header.shtml"
 
@@ -13,7 +12,6 @@
   six-node dual-GPU cluster.
 </p>
 <h2>Architectural Walk-through</h2>
-<div class="flush_float"></div>
 <div class="image">
   <a href="/applications/images/UniSiegen/P1000588.jpg">
     <img src="/applications/images/UniSiegen/P1000588-small.jpg">

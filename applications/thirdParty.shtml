@@ -35,10 +35,14 @@
 <a name="hase3d"></a>
 <h2>Computer Graphics and Multimedia Systems, University of Siegen</h2>
 
+<p><center>
+    <a href="/applications/UniSiegen.html">VR Lab Image Gallery</a>
+</center></p>
+
 <h3>Hase3d: Hardware accelerated flow visualization</h3>
 
 <div class="float_right">
-  <a href="/applications/UniSiegen.html">
+  <a href="/applications/images/gpu_flow_001.png">
     <img src="/applications/images/gpu_flow_001-small.jpg" 
          alt="GPU-based Dynamic Flow Visualization"></a>
   <div class="label">GPU-based Flow Visualization</div>
