@@ -6,6 +6,12 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td nowrap>22.-26 June 2009</td>
+    <td>
+      <a href="http://www.supercomp.de/isc09/">ISC, Hamburg</a></td>
+    <td>Presentation of an Equalizer-based CUDA demo</td>
+  </tr>
+  <tr>
     <td nowrap>18. June 2009</td>
     <td>
       <a href="http://www.cg.informatik.uni-siegen.de/Teaching/Lectures/09_SS/Koll/2009_06_18">Graphics
