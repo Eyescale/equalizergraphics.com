@@ -56,8 +56,9 @@ global
      EQ_CONNECTION_SATTR_HOSTNAME             string
      EQ_CONNECTION_SATTR_LAUNCH_COMMAND       string
      EQ_CONNECTION_CATTR_LAUNCH_COMMAND_QUOTE 'character'
-     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP
+     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | NAMEDPIPE
      EQ_CONNECTION_IATTR_TCPIP_PORT           unsigned
+     EQ_CONNECTION_SATTR_PIPE_FILENAME        string
      EQ_CONNECTION_IATTR_LAUNCH_TIMEOUT       unsigned
      EQ_CONFIG_FATTR_EYE_BASE                 float
      EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
@@ -85,8 +86,9 @@ server
 {
     connection // 0-n times, listening connections of the server
     {
-        type       TCPIP | SDP
+        type       TCPIP | SDP | NAMEDPIPE
         TCPIP_port unsigned
+        NAMEDPIPE_filename string
         hostname   string
     }
 
@@ -104,9 +106,10 @@ server
             name     string
             connection // 0-n times, possible connections to this node
             {
-                type          TCPIP | SDP
+                type          TCPIP | SDP | NAMEDPIPE
                 TCPIP_port    unsigned
                 hostname      string
+                NAMEDPIPE_filename string
                 command       string      // render client launch command
                 command_quote 'character' // launch command argument quote char
                 timeout       unsigned    // timeout in milliseconds for launch
@@ -319,6 +322,22 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+   <li>Named pipe communcation locale
+      support added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | NAMEDPIPE
+          EQ_CONNECTION_SATTR_PIPE_FILENAME        string
+      }
+
+      connection <
+      {
+        type       TCPIP | SDP | NAMEDPIPE
+        NAMEDPIPE_filename string
+      }
+    </pre><!-- */ -->
+  </li>
   <li>Equalizer cleanup deprecated loadBalancer {} section and added:
     <!-- /* --><pre>
       compound
