@@ -322,8 +322,7 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
-   <li>Named pipe communcation locale
-      support added:
+   <li>Local named pipe communcation support added:
     <!-- /* --><pre>
       global
       {
