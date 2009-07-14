@@ -1,0 +1,296 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_RELNOTES
+#define PAGE Release Notes
+#define SUBPAGE Release Notes for Equalizer 0.9
+
+#include "header.shtml"
+
+<!-- Release Checklist:
+     [ ] src/lib/client/version.h, src/Makefile, src/Doxyfile
+     [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
+         relnotes.shtml
+     [ ] doc/Developer/ProgrammingGuide
+     [ ] src/RELNOTES, src/lib/eq.h
+  -->
+
+<ul>
+  <li><a href="/documents/RelNotes/RelNotes_0.9.html#introduction">1.
+      Introduction</a></li>
+  <ul>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#features">1.1.
+        Features</a></li>
+  </ul>
+  <li><a href="/documents/RelNotes/RelNotes_0.9.html#new">2. New in this
+      release</a></li>
+  <ul>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#newFeatures">2.1. New
+        Features</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#enhancements">2.2.
+        Enhancements</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#optimizations">2.3.
+        Optimizations</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#examples">2.4.
+        Examples</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#tools">2.5. 
+        Tools</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#changes">2.6. API
+        Changes</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#documentation">2.7.
+        Documentation</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#bugfixes">2.8. Bug
+        Fixes</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#knownbugs">2.9. Known
+        Bugs</a></li>
+  </ul>
+  <li><a href="/documents/RelNotes/RelNotes_0.9.html#about">3. About</a></li>
+  <ul>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#os">3.1. Operating
+        System Support</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#ws">3.2. Window
+        System Support</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#documentation">3.3.
+        Documentation</a></li>
+    <li><a href="/documents/RelNotes/RelNotes_0.9.html#support">3.4.
+        Support</a></li>
+  </ul>
+</ul>
+
+<a name="introduction"></a>
+<h2>1. Introduction</h2>
+<p>
+  Welcome to Equalizer, a framework for the development and deployment of
+  parallel, scalable OpenGL applications. Equalizer 0.9 delivers major new
+  features, most notably . It is the last beta release before Equalizer 1.0.
+</p>
+<p>
+  Equalizer 0.9 can be retrieved by downloading the
+  <a href="http://www.equalizergraphics.com/downloads/Equalizer-0.9.tar.gz">source
+    code</a>.
+</p>
+
+
+<a name="features"></a>
+<h3>1.1. Features</h3>
+<p>
+  Equalizer provides the following major features to facilitate the development
+  and deployment of scalable OpenGL applications. A
+  <a href="/features.html">detailed feature list</a> can be found on the
+  Equalizer website.
+</p>
+<ul>
+  <li><b>Runtime Configurability:</b> An Equalizer application can run on any
+    configuration, from laptops to large-scale visualization clusters, without
+    recompilation. The runtime configuration is externalized from the
+    application to a system-wide resource server.</li>
+  <li><b>Runtime Scalability:</b> An Equalizer application can aggregate
+    multiple CPU's, GPU's and computers to increase the rendering performance of
+    a single or multiple views.</li>
+  <li><b>Distributed Execution:</b> Equalizer applications can be written to
+    support cluster-based execution. The task of distributing the application
+    data is facilitated by support for versioned, distributed objects.</li>
+  <li><b>Support for Stereo and Immersive Environments:</b> Equalizer supports
+    both active and passive stereo rendering, as well as head tracking, used in
+    immersive Virtual Reality installations.</li>
+</ul>
+
+<a name="new"></a>
+<h2>2. New in this release</h2>
+<p>
+  Equalizer 0.9 contains the following features, enhancements, bug fixes and
+  documentation changes:
+</p>
+
+<a name="newFeatures"></a>
+<h3>2.1. New Features</h3>
+<ul>
+  <li>Cross-segment load-balancing</li>
+  <li>Compression Plugin API</li>
+  <li>Canvas, Layout API</li>
+  <ul>
+    <li>Description of projection system</li>
+    <li>Multiple Views</li>
+    <li>2D operations</li>
+    <li>Run-time activation of nodes, pipes, windows</li>
+  </ul>
+  <li>Support for multiple observers</li>
+  <li>Dynamic Frame Rate</li>
+  <li>Frame scaling</li>
+  <li>Monitor Equalizer</li>
+  <li>Support for G-Sync (NV_swap_group)</li>
+  <li>Support for Head-Mounted Displays (HMD)</li>
+  <li>Support for Framebuffer Objects (FBO)</li>
+  <li>Support for half_float and float PBuffers and FBOs</li>
+  <li>Spacemouse support (AGL only)</li>
+  <li>New helper class to handle dynamic libraries</li>
+  <li>New helper class for memory-mapped files</li>
+</ul>
+
+<a name="enhancements"></a>
+<h3>2.2. Enhancements</h3>
+<ul>
+  <li>Upgraded to VMMlib 1.0</li>
+  <li>Frames using textures</li>
+  <li>OSPipe</li>
+  <li>Improved statistics: FPS, compression ratio, pipe idle ratio, framerate
+    throttling</li>
+  <li>eq::Object</li>
+  <li>AGL event handling follows same threading model as GLX, WGL</li>
+  <li>Config file versioning</li>
+  <li>Synchronize clock used for logging across all nodes</li>
+</ul>
+
+<a name="optimizations"></a>
+<h3>2.3. Optimizations</h3>
+<ul>
+  <li>Lock-free network packet cache</li>
+  <li>Network layer uses asynchronous IO semantics, better perf on Win32</li>
+  <li>Per-component and differential RLE compressor</li>
+  <li>Transfer GL_UNSIGNED_INT depth buffer instead of GL_FLOAT for better performance</li>
+  <li>Optimize the DPlex load-balancer</li>
+  <li>Better serialization of std::vectors in distributed objects</li>
+  <li>Named pipe connection (Win32 only)</li>
+</ul>
+
+<a name="examples"></a>
+<h3>2.4. Examples</h3>
+<ul>
+  <li>eqOSG: OpenSceneGraph example</li>
+  <li>eqPly: wireframe mode</li>
+  <li>eqPly: multi-model support</li>
+  <li>eqPly: full support of layout API</li>
+  <li>eqPly: help overlay on 'F1'</li>
+  <li>eqPly: optimize kD-tree layout</li>
+  <li>eqPly: walk-through mode</li>
+  <li>eqPly: Spacemouse support (AGL only)</li>
+  <li>eqPly: loadable camera paths</li>
+  <li>eqPly: add command-line option to disable overlay logo</li>
+  <li>eqPly: unify way to demonstrate decomposition</li>
+</ul>
+
+<a name="tools"></a>
+<h3>2.5. Tools</h3>
+<ul>
+  <li>configTool: support for having an async compositing GPU for DB</li>
+  <li>configTool: support for setting the destination window resolution</li>
+  <li>configTool: refactored code to use eq::server classes for config
+    creation</li>
+  <li>affinityCheck: new command-line tool to list available affinity GPUs (WGL
+    only)</li>
+</ul>
+
+<a name="changes"></a>
+<h3>2.6. API Changes</h3>
+<ul>
+  <li>TBD</li>
+</ul>
+
+<a name="documentation"></a>
+<h3>2.7. Documentation</h3>
+<ul>
+  <li>The <a href="/survey.html">Programming Guide</a> has been extended to TBD
+    pages and TBD figures.</li>
+  <li>TBD</li>
+</ul>
+
+<a name="bugfixes"></a>
+<h3>2.8. Bug Fixes</h3>
+<p>
+  Equalizer 0.9 includes various bugfixes over the 0.6 release, including
+  the following:
+</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=TBD&group_id=170962&atid=856209">TBD</a>:
+  TBD</li>
+</ul>
+
+<a name="knownbugs"></a>
+<h3>2.9. Known Bugs</h3>
+<p>TBD</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2268547&group_id=170962&atid=856209">2268547</a>:
+    fullscreen windows not always active on Win32</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2151376&group_id=170962&atid=856209">2151376</a>:
+    Irregular Pixel kernels do not work</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003195&group_id=170962&atid=856209">2003195</a>:
+    Ortho frusta ignore eye offset</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003132&group_id=170962&atid=856209">2003132</a>:
+    3-wnd.DB.ds is broken on some ppc machines for eqPly</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997583&group_id=170962&atid=856209">1997583</a>:
+    eqPly: ortho frustum culling broken</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1959418&group_id=170962&atid=856209">1959418</a>:
+    DB Compositing fails on MacBook with GMA X3100</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854948&group_id=170962&atid=856209">1854948</a>:
+    eVolve: lighting ignores head transformation</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854929&group_id=170962&atid=856209">1854929</a>:
+    eqPly GLSL shader has artefacts</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1816670&group_id=170962&atid=856209">1816670</a>:
+    eVolve: binary swap configs don't work</li>
+</ul>
+
+
+<a name="about"></a>
+<h2>3. About</h2>
+<p>
+  Equalizer is a cross-platform toolkit, designed to run on any modern operating
+  system, including all Unix variants and the Windows operating system. A 
+  <a href="/compatibility.html">compatibility matrix</a> can be found on the
+  Equalizer website.
+</p>
+<p>
+  Equalizer requires at least <a href="http://www.opengl.org">OpenGL 1.1</a>,
+  but uses newer OpenGL features when available. Version 0.9 has been tested
+  on:
+</p>
+
+<a name="os"></a>
+<h3>3.1. Operating System Support</h3>
+<ul>
+  <li><b>Linux:</b> Ubuntu 6.10 (x64, i386), RHEL4 (x64, i386)</li>
+  <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
+    Cygwin (i386)</li>
+  <li><b>Mac OS X:</b> 10.5 (PowerPC, i386)</li>
+</ul>
+
+<a name="ws"></a>
+<h3>3.2. Window System Support</h3>
+<ul>
+  <li><b>X11:</b> Full support for all documented features.</li>
+  <li><b>WGL:</b> Full support for all documented features.</li>
+  <li><b>AGL:</b> Full support for all documented features.</li>
+</ul>
+
+<a name="documentation"></a>
+<h3>3.3. Documentation</h3>
+<p>
+  The Programming Guide is available as a 
+  <a href="http://www.lulu.com/browse/book_view.php?fCID=5006510">hard-copy</a>
+  and <a href="/survey.html">online</a>. <a href="http://www.equalizergraphics.com/documents/Developer/API/index.html">API documentation</a> can be
+  found on the Equalizer website. Equalizer does not yet have an Users Guide.
+</p>
+<p>
+  As with any open source project, the available source code, in particular the
+  shipped
+  <a href="/cgi-bin/viewvc.cgi/tags/release-0.9/examples/">examples</a>
+  provide a reference for developing or porting applications. The
+  <a href="/doc_developer.html">Developer Documentation</a> on the website
+  provides further design documents for specific features.
+</p>
+
+<a name="support"></a>
+<h3>3.4. Support</h3>
+<p>
+  Technical questions can be posted to the 
+  <a href="/cgi-bin/mailman/listinfo/eq-dev">
+    Developer Mailing List</a>, or directly to
+  <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">
+    info@equalizergraphics.com</a>.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from <a href="http://www.eyescale.ch">Eyescale</a>. Please contact
+  <a href="mailto:info@eyescale.ch?subject=Equalizer%20support">info@eyescale.ch</a>
+  for further information.
+</p>
+
+#include "footer.shtml"
+<!-- $Id: RelNotes_0.5.5.shtml 1538 2007-11-19 13:10:33Z eile $ -->
