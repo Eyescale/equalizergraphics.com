@@ -5,8 +5,9 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="images/release-0.4.png"><img src="images/release-0.4-small.jpg" 
-                                     alt="Volume Rendering"></a>
+  <a href="/images/release-0.4.png">
+    <img src="/images/release-0.4-small.jpg" 
+         alt="Volume Rendering"></a>
   <div class="label">Scalable Volume Rendering</div>
 </div>
 <p>

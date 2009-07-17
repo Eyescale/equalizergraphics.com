@@ -13,8 +13,8 @@
 <h2>Overview</h2>
 
 <div class="float_right">
-  <a href="documents/design/images/volumeDB.png">
-    <img src="documents/design/images/volumeDB-small.jpg"
+  <a href="/documents/design/images/volumeDB.png">
+    <img src="/documents/design/images/volumeDB-small.jpg"
          alt="Volume DB decomposition"></a>
   <div class="label">Volume DB decomposition example</div>
 </div>
@@ -42,8 +42,8 @@
 <h3>3D Texture-Based approach in volume rendering</h3>
 
 <div class="float_right">
-  <a href="documents/design/images/currentBackFront.png">
-    <img src="documents/design/images/currentBackFront-small.jpg"
+  <a href="/documents/design/images/currentBackFront.png">
+    <img src="/documents/design/images/currentBackFront-small.jpg"
          alt="back to front compositing"></a>
   <div class="label">Semi-transparent image compositing</div>
 </div>
@@ -62,15 +62,15 @@
 </p>
 
 <div class="float_left">
-  <a href="documents/design/images/vol_texMap3D.png">
-    <Img src="documents/design/images/vol_texMap3D-small.jpg"
+  <a href="/documents/design/images/vol_texMap3D.png">
+    <Img src="/documents/design/images/vol_texMap3D-small.jpg"
          alt="Rendering slices with model 'fuel'.">
   </a>
   <div class="label">Rendering slices with model 'fuel'</div>
 </div>
 <div class="float_right">
-  <a href="documents/design/images/vol_texMap3Drot.png">
-    <Img src="documents/design/images/vol_texMap3Drot-small.jpg"
+  <a href="/documents/design/images/vol_texMap3Drot.png">
+    <Img src="/documents/design/images/vol_texMap3Drot-small.jpg"
          alt="Rendering slices with rotated model 'fuel'.">
   </a>
   <div class="label">Rendering slices with rotated model 'fuel'</div>
@@ -91,8 +91,8 @@
 <h3>DB decomposition in eVolve example and Texture Memory Allocation</h3>
 
 <div class="float_right">
-  <a href="documents/design/images/vol_mem_allocation.png">
-    <img src="documents/design/images/vol_mem_allocation-small.jpg"
+  <a href="/documents/design/images/vol_mem_allocation.png">
+    <img src="/documents/design/images/vol_mem_allocation-small.jpg"
          alt="Volume's memory allocation"></a>
   <div class="label">Volume's memory allocation</div>
 </div>
@@ -222,8 +222,8 @@
 <p>
     
 <div class="float_right">
-  <a href="documents/design/images/vol_slice_compositing_1.png">
-    <img src="documents/design/images/vol_slice_compositing_1-small.jpg"
+  <a href="/documents/design/images/vol_slice_compositing_1.png">
+    <img src="/documents/design/images/vol_slice_compositing_1-small.jpg"
          alt="Compositing in case of parallel projection.">
   </a>
   <div class="label">Compositing for parallel projection</div>
@@ -240,8 +240,8 @@
 
 <div class="flush_float"></div>
 <div class="float_right">
-  <a href="documents/design/images/vol_slice_compositing_2.png">
-    <img src="documents/design/images/vol_slice_compositing_2-small.jpg"
+  <a href="/documents/design/images/vol_slice_compositing_2.png">
+    <img src="/documents/design/images/vol_slice_compositing_2-small.jpg"
          alt="Compositing in case of perspective projection.">
   </a>
   <div class="label">Compositing for perspective projection</div>

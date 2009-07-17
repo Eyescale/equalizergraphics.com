@@ -5,8 +5,10 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="images/release-0.3.png"><img src="images/release-0.3-small.jpg" 
-                                     alt="Scalable Rendering on Windows XP"></a>
+  <a href="/images/release-0.3.png">
+    <img src="/images/release-0.3-small.jpg" 
+         alt="Scalable Rendering on Windows XP">
+  </a>
   <div class="label">Using two GPU's in parallel on Windows XP</div>
 </div>
 <p>

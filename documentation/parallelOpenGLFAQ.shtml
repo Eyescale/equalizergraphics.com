@@ -212,7 +212,7 @@
 <a name="links"></a>
 <h2>Appendix: Further Information</h2>
 <ul>
-  <li><a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_threading/chapter_12_section_1.html">OpenGL Programming Guide for Mac OS X, Multithreading and OpenGL</a></li>
+  <li><a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_threading/opengl_threading.html">OpenGL Programming Guide for Mac OS X, Multithreading and OpenGL</a></li>
   <li><a href="http://developer.apple.com/qa/qa2001/qa1248.html">Apple Technical
       Q&amp;A QA1248: Context Sharing Tips</a>
 </ul>

@@ -19,7 +19,7 @@
 <p>
   Equalizer provides the following major features to facilitate the development
   and deployment of scalable OpenGL applications. A
-  <a href="features.html">detailed feature list</a> can be found on the
+  <a href="/features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
 <ul>
@@ -66,20 +66,20 @@
 
 <h4>New Documentation</h4>
 <ul>
-  <li><a href="documents/Developer/ProgrammingGuide.pdf">Programming
+  <li><a href="/documents/Developer/ProgrammingGuide.pdf">Programming
       Guide</a></li>
-  <li><a href="documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
+  <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report</li>
-  <li><a href="documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+  <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
       OpenGL Polygon-Renderers</a>, semester thesis in German about the new
       eqPly example</li>
-  <li><a href="documents/EGPGV07.html">Direct Send Compositing
+  <li><a href="/documents/EGPGV07.html">Direct Send Compositing
       for Parallel Sort-Last Rendering</a> presentation</li>
-  <li><a href="documents/design/transparency.html">Transparency
+  <li><a href="/documents/design/transparency.html">Transparency
       and sort-last (DB) compounds</a></li>
-  <li><a href="documents/design/volumeRendering.html">Volume Rendering
+  <li><a href="/documents/design/volumeRendering.html">Volume Rendering
       Example</a></li>
-  <li><a href="documents/design/aspectRatio.html">Fixed Aspect Ratio</a></li>
+  <li><a href="/documents/design/aspectRatio.html">Fixed Aspect Ratio</a></li>
 </ul>
 
 <h3>Removed Features</h3>
@@ -93,7 +93,7 @@
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
   system, including all Unix variants and the Windows operating system.  A 
-  <a href="compatibility.html">compatibility matrix</a> can be found on the
+  <a href="/compatibility.html">compatibility matrix</a> can be found on the
   Equalizer website. Version 0.4 has been tested on:
 </p>
 <h4>Operating System Support</h4>
@@ -118,7 +118,7 @@
   yet have an Users Guide. The shipped
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.4/src/examples/eqPly/">eqPly
     example</a> provides a reference for developing or porting
-  applications. The <a href="doc_developer.html">Developer Documentation</a>
+  applications. The <a href="/doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
   source code is a last resort for information.
 </p>

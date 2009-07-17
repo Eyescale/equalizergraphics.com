@@ -21,49 +21,49 @@
     <td>glutInitDisplayString, glutGameModeString, glutFullScreen,
       glutEnterGameMode, glutInitDisplayMode</td>
     <td>Window attributes from 
-      <a href="documents/design/fileFormat.html">config file</a></td>
+      <a href="/documents/design/fileFormat.html">config file</a></td>
   </tr>
   <tr>
     <td>glutInitWindowSize</td>
-    <td>Window viewport from <a href="documents/design/fileFormat.html">config 
+    <td>Window viewport from <a href="/documents/design/fileFormat.html">config 
         file</a></td>
   </tr>
   <tr>
     <td>glutCreateWindow</td>
     <td>
-      <a href="documents/design/taskMethods.html#configinit">Config::init</a>
+      <a href="/documents/design/taskMethods.html#configinit">Config::init</a>
       causes 
-      <a href="documents/design/taskMethods.html#windowinit">Window::configInit</a>
+      <a href="/documents/design/taskMethods.html#windowinit">Window::configInit</a>
       to be called for each window used by the current configuration</td>
   </tr>
   <tr>
     <td>glutMainLoop, glutPostRedisplay, glutIdleFunc</td>
     <td>
-      <a href="documents/design/taskMethods.html#configstartframe">Config::startFrame</a>,
-      <a href="documents/design/taskMethods.html#configfinishframe">Config::finishFrame</a>
+      <a href="/documents/design/taskMethods.html#configstartframe">Config::startFrame</a>,
+      <a href="/documents/design/taskMethods.html#configfinishframe">Config::finishFrame</a>
       (explicit, application-controlled main loop)</td>
   </tr>
   <tr>
     <td>glutDisplayFunc</td>
     <td>
-      <a href="documents/design/taskMethods.html#channelclear">Channel::frameClear</a>
+      <a href="/documents/design/taskMethods.html#channelclear">Channel::frameClear</a>
       , 
-      <a href="documents/design/taskMethods.html#channeldraw">Channel::frameDraw</a>
+      <a href="/documents/design/taskMethods.html#channeldraw">Channel::frameDraw</a>
 </td>
   </tr>
   <tr>
     <td>glutReshapeFunc, glutKeyboardFunc, glutMouseFunc, 
       glutVisibilityFunc, glutMotionFunc</td>
     <td>
-      <a href="documents/design/taskMethods.html#confighandleevent">Config::handleEvent</a>
+      <a href="/documents/design/taskMethods.html#confighandleevent">Config::handleEvent</a>
       , 
-      <a href="documents/design/taskMethods.html#windowprocessevent">Window::processEvent</a>
+      <a href="/documents/design/taskMethods.html#windowprocessevent">Window::processEvent</a>
 </td>
   </tr>
   <tr>
     <td>glutSwapBuffers</td>
     <td>
-      <a href="documents/design/taskMethods.html#windowswap">Window::swapBuffers</a>
+      <a href="/documents/design/taskMethods.html#windowswap">Window::swapBuffers</a>
       (called automatically at the end of a frame)</td>
   </tr>
   <tr>

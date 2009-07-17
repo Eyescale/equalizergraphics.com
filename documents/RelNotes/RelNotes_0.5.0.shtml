@@ -21,7 +21,7 @@
 <p>
   Equalizer provides the following major features to facilitate the development
   and deployment of scalable OpenGL applications. A
-  <a href="features.html">detailed feature list</a> can be found on the
+  <a href="/features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
 <ul>
@@ -100,7 +100,7 @@
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
   system, including all Unix variants and the Windows operating system.  A 
-  <a href="compatibility.html">compatibility matrix</a> can be found on the
+  <a href="/compatibility.html">compatibility matrix</a> can be found on the
   Equalizer website. Version 0.5 has been tested on:
 </p>
 <h4>Operating System Support</h4>
@@ -125,7 +125,7 @@
  does not yet have an Users Guide. The shipped
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.5/src/examples/eqPly/">eqPly
     example</a> provides a reference for developing or porting
-  applications. The <a href="doc_developer.html">Developer Documentation</a>
+  applications. The <a href="/doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
   source code is a last resort for information.
 </p>
