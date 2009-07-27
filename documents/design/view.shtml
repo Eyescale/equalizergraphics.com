@@ -87,7 +87,7 @@ State:
 </p>
 <p>
   An <b>observer</b> looks at one or more views. It is described by the observer
-  position in the world and it's eye separation. Each observer will have its own
+  position in the world and its eye separation. Each observer will have its own
   stereo mode, focus distance and frame loop (framerate).
 </p>
 

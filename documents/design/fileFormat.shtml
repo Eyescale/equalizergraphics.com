@@ -56,7 +56,7 @@ global
      EQ_CONNECTION_SATTR_HOSTNAME             string
      EQ_CONNECTION_SATTR_LAUNCH_COMMAND       string
      EQ_CONNECTION_CATTR_LAUNCH_COMMAND_QUOTE 'character'
-     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | NAMEDPIPE
+     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
      EQ_CONNECTION_IATTR_TCPIP_PORT           unsigned
      EQ_CONNECTION_SATTR_PIPE_FILENAME        string
      EQ_CONNECTION_IATTR_LAUNCH_TIMEOUT       unsigned
@@ -67,7 +67,7 @@ global
      EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
      EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
      EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
-     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   // AGL, WGL only
+     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
      EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
      EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
      EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
@@ -84,55 +84,55 @@ global
 }
 server
 {
-    connection // 0-n times, listening connections of the server
+    connection # 0-n times, listening connections of the server
     {
-        type       TCPIP | SDP | NAMEDPIPE
+        type       TCPIP | SDP | PIPE
         TCPIP_port unsigned
-        NAMEDPIPE_filename string
+        PIPE_filename string
         hostname   string
     }
 
-    config // 1-n times, currently only the first one is used by the server
+    config # 1-n times, currently only the first one is used by the server
     {
-        latency int    // # of frames pipes may fall behind application
+        latency int    # Number of frames nodes may fall behind app, default 1
         attributes
         {
-             eye_base     float // distance between left and right eye
+             eye_base     float # distance between left and right eye
         }
 
-        (node|appNode) // 1-n times, a system in the cluster
-                       // 0|1 appNode: launches render thread within app process
+        (node|appNode) # 1-n times, a system in the cluster
+                       # 0|1 appNode: launches render thread within app process
         {
             name     string
-            connection // 0-n times, possible connections to this node
+            connection # 0-n times, possible connections to this node
             {
-                type          TCPIP | SDP | NAMEDPIPE
+                type          TCPIP | SDP | PIPE
                 TCPIP_port    unsigned
                 hostname      string
-                NAMEDPIPE_filename string
-                command       string      // render client launch command
-                command_quote 'character' // launch command argument quote char
-                timeout       unsigned    // timeout in milliseconds for launch
+                PIPE_filename string
+                command       string      # render client launch command
+                command_quote 'character' # launch command argument quote char
+                timeout       unsigned    # timeout in milliseconds for launch
             }
             attributes
             {
                 thread_model ASYNC | DRAW_SYNC | LOCAL_SYNC
             }
-            pipe // 1-n times
+            pipe # 1-n times
             {
                 name     string
-                port     unsigned     // X server number or ignored
-                device   unsigned     // graphics adapter number
-                viewport [ viewport ] // default: autodetect
+                port     unsigned     # X server number or ignored
+                device   unsigned     # graphics adapter number
+                viewport [ viewport ] # default: autodetect
                 attributes
                 {
-                    hint_thread   OFF | ON   // default ON
+                    hint_thread   OFF | ON   # default ON
                 }
 
-                window // 1-n times
+                window # 1-n times
                 {
                     name     string
-                    viewport [ viewport ] // wrt pipe, default full screen
+                    viewport [ viewport ] # wrt pipe, default full screen
 
                     attributes
                     {
@@ -140,7 +140,7 @@ server
                         hint_doublebuffer   OFF | ON | AUTO
                         hint_decoration     OFF | ON
                         hint_fullscreen     OFF | ON
-                        hint_swapsync       OFF | ON         // AGL, WGL only
+                        hint_swapsync       OFF | ON         # AGL, WGL only
                         hint_drawable       window | pbuffer | FBO
                         hint_statistics     OFF | FASTEST [ON] | NICEST
                         planes_color        unsigned | RGBA16F | RGBA32F
@@ -151,10 +151,10 @@ server
                         planes_accum_alpha  unsigned
                         planes_samples      unsigned
                     }
-                    channel // 1-n times
+                    channel # 1-n times
                     {
                         name     string
-                        viewport [ viewport ] //wrt window, default full window
+                        viewport [ viewport ] #wrt window, default full window
                         drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
                         attributes
                         {
@@ -180,14 +180,14 @@ server
                 observer observer-ref
                 viewport [ viewport ]
 
-                wall       // frustum description
+                wall       # frustum description
                 {
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
                     type         fixed | HMD
                 }
-                projection // alternate frustum description, last one wins
+                projection # alternate frustum description, last one wins
                 {
                     origin       [ float float float ]
                     distance     float
@@ -200,7 +200,7 @@ server
         canvas  # 0...n times
         {
             name    string
-            layout  layout-ref
+            layout  layout-ref   # 1...n times
 
             wall       
             {
@@ -223,14 +223,14 @@ server
                 name     string
                 viewport [ viewport ] 
 
-                wall       // frustum description
+                wall       # frustum description
                 {
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
                     type         fixed | HMD
                 }
-                projection // alternate frustum description, last one wins
+                projection # alternate frustum description, last one wins
                 {
                     origin       [ float float float ]
                     distance     float
@@ -240,48 +240,50 @@ server
             }
         }
         
-        compound // 1-n times
+        compound # 1-n times
         {
             name     string
-            channel  channel-ref             // see below
+            channel  channel-ref             # see below
 
-            task     [ CLEAR DRAW READBACK ASSEMBLE ] // CULL later
-            buffer   [ COLOR DEPTH ]         // default COLOR
+            task     [ CLEAR DRAW READBACK ASSEMBLE ] # CULL later
+            buffer   [ COLOR DEPTH ]         # default COLOR
 
-            viewport [ viewport ]            // wrt parent compound, sort-first
-            range    [ float float ]         // DB-range for sort-last
-            pixel    [ int int int int ]     // pixel decomposition (x y w h)
-            eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
-            zoom     [ float float ]         // up/downscale of parent pvp
+            viewport [ viewport ]            # wrt parent compound, sort-first
+            range    [ float float ]         # DB-range for sort-last
+            pixel    [ int int int int ]     # pixel decomposition (x y w h)
+            eye      [ CYCLOP LEFT RIGHT ]   # monoscopic or stereo view
+            zoom     [ float float ]         # up/downscale of parent pvp
+            period   int                     # DPlex period
+            phase    int                     # DPlex phase
 
-            load_equalizer // adapt 2D tiling or DB range of children
+            load_equalizer # adapt 2D tiling or DB range of children
             {
                 mode 2D | DB | VERTICAL | HORIZONTAL
-                damping float // 0: no damping, 1: no changes
+                damping float # 0: no damping, 1: no changes
             }
-            DFR_equalizer // adapt ZOOM to achieve constant framerate
+            DFR_equalizer # adapt ZOOM to achieve constant framerate
             {
-                framerate float // target framerate
-                damping float   // 0: no damping, 1: no changes
+                framerate float # target framerate
+                damping float   # 0: no damping, 1: no changes
             }
-            framerate_equalizer {} // smoothen window swapbuffer rate (DPlex)
-            monitor_equalizer {}   // set frame zoom when monitoring other views
+            framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
+            monitor_equalizer {}   # set frame zoom when monitoring other views
 
             attributes
             {
-                stereo_mode                  QUAD | ANAGLYPH    // default QUAD
-                stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default red
-                stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
+                stereo_mode                  QUAD | ANAGLYPH    # default QUAD
+                stereo_anaglyph_left_mask    [ RED GREEN BLUE ] # default red
+                stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
             }
 
-            wall       // frustum description
+            wall       # frustum description
             {
                 bottom_left  [ float float float ]
                 bottom_right [ float float float ]
                 top_left     [ float float float ]
                 type         fixed | HMD
             }
-            projection // alternate frustum description, last one wins
+            projection # alternate frustum description, last one wins
             {
                 origin       [ float float float ]
                 distance     float
@@ -291,7 +293,7 @@ server
             
             child-compounds
 
-            swapbarrier  // compounds with the same barriername sync swap
+            swapbarrier  # compounds with the same barriername sync swap
             {
                 name string
                 NV_group OFF | ON | unsigned
@@ -305,7 +307,7 @@ server
             }
             inputframe
             {
-                name string // corresponding output frame
+                name string # corresponding output frame
             }
         }
     }
@@ -326,14 +328,14 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       global
       {
-          EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | NAMEDPIPE
+          EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
           EQ_CONNECTION_SATTR_PIPE_FILENAME        string
       }
 
       connection <
       {
-        type       TCPIP | SDP | NAMEDPIPE
-        NAMEDPIPE_filename string
+        type       TCPIP | SDP | PIPE
+        PIPE_filename string
       }
     </pre><!-- */ -->
   </li>
@@ -341,18 +343,18 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       compound
       {
-          load_equalizer // adapt 2D tiling or DB range of children
+          load_equalizer # adapt 2D tiling or DB range of children
           {
               mode 2D | DB | VERTICAL | HORIZONTAL
-              damping float // 0: no damping, 1: no changes
+              damping float # 0: no damping, 1: no changes
           }
-          DFR_equalizer // adapt ZOOM to achieve constant framerate
+          DFR_equalizer # adapt ZOOM to achieve constant framerate
           {
-              framerate float // target framerate
-              damping float   // 0: no damping, 1: no changes
+              framerate float # target framerate
+              damping float   # 0: no damping, 1: no changes
           }
-          framerate_equalizer {} // smoothen window swapbuffer rate (DPlex)
-          monitor_equalizer {}   // set frame zoom when monitoring other views
+          framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
+          monitor_equalizer {}   # set frame zoom when monitoring other views
       }
     </pre><!-- */ -->
   <li><a href="/documents/design/view.html">Support for multiple observers</a>
@@ -407,13 +409,13 @@ observer-ref: 'string' | 'index'
                 name     string
                 viewport [ viewport ]
 
-                wall       // frustum description
+                wall       # frustum description
                 {
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
                 }
-                projection // alternate frustum description, last one wins
+                projection # alternate frustum description, last one wins
                 {
                     origin       [ float float float ]
                     distance     float
@@ -448,13 +450,13 @@ observer-ref: 'string' | 'index'
                 name     string
                 viewport [ viewport ] 
 
-                wall       // frustum description
+                wall       # frustum description
                 {
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
                     top_left     [ float float float ]
                 }
-                projection // alternate frustum description, last one wins
+                projection # alternate frustum description, last one wins
                 {
                     origin       [ float float float ]
                     distance     float
@@ -489,7 +491,7 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       compound
       {
-          zoom     [ float float ]         // up/downscale of parent pvp
+          zoom     [ float float ]         # up/downscale of parent pvp
           loadBalancer 
           {
              mode DFR
@@ -610,14 +612,14 @@ observer-ref: 'string' | 'index'
 
       node
       {
-          connection // 0-n times, possible connections to this node
+          connection # 0-n times, possible connections to this node
           {
               type          TCPIP | SDP
               TCPIP_port    unsigned
               hostname      string
-              command       string      // render client launch command
-              command_quote 'character' // launch command argument quote char
-              timeout       unsigned    // timeout in milliseconds for launch
+              command       string      # render client launch command
+              command_quote 'character' # launch command argument quote char
+              timeout       unsigned    # timeout in milliseconds for launch
           }
       }
     </pre><!-- */ -->
@@ -628,7 +630,7 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       compound
       {
-          pixel    [ int int int int ]     // pixel decomposition (x y w h)
+          pixel    [ int int int int ]     # pixel decomposition (x y w h)
       }
     </pre><!-- */ -->
   </li>  
@@ -659,14 +661,14 @@ observer-ref: 'string' | 'index'
           EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
           EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
       }
-      compound // 1-n times
+      compound # 1-n times
       {
           attributes
           {
-              stereo_mode                  QUAD | ANAGLYPH    // default QUAD
-              // enable visible color components
-              stereo_anaglyph_left_mask    [ RED GREEN BLUE ] // default red
-              stereo_anaglyph_right_mask   [ RED GREEN BLUE ] // df green blue
+              stereo_mode                  QUAD | ANAGLYPH    # default QUAD
+              # enable visible color components
+              stereo_anaglyph_left_mask    [ RED GREEN BLUE ] # default red
+              stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
           }
       }
     </pre><!-- */ -->
@@ -680,11 +682,11 @@ observer-ref: 'string' | 'index'
           EQ_CONFIG_FATTR_EYE_BASE            float
           EQ_WINDOW_IATTR_HINT_STEREO         OFF | ON | AUTO
       }
-      config // 1-n times, currently only the first one is used by the server
+      config # 1-n times, currently only the first one is used by the server
       {
           attributes
           {
-               eye_base float // distance between left and right eye
+               eye_base float # distance between left and right eye
           }
       }
       window
@@ -696,7 +698,7 @@ observer-ref: 'string' | 'index'
       }
       compound
       {
-          eye      [ CYCLOP LEFT RIGHT ]   // monoscopic or stereo view
+          eye      [ CYCLOP LEFT RIGHT ]   # monoscopic or stereo view
       }
     </pre><!-- */ -->
   </li>  
@@ -724,7 +726,7 @@ observer-ref: 'string' | 'index'
       {
           EQ_COMPOUND_*
       }
-      compound // 1-n times
+      compound # 1-n times
       {
           ...
       }
