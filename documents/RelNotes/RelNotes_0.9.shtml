@@ -103,9 +103,10 @@
 <a name="newFeatures"></a>
 <h3>2.1. New Features</h3>
 <ul>
-  <li>Cross-segment load-balancing</li>
-  <li>Compression Plugin API</li>
-  <li>Canvas, Layout API</li>
+  <li>Automatic cross-segment load-balancing for multi-display
+    installations</li>
+  <li>Compression Plugin API for runtime-loadable image compression engines</li>
+  <li>Canvas and Layout API</li>
   <ul>
     <li>Description of projection system</li>
     <li>Multiple Views</li>
