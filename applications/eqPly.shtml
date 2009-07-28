@@ -15,17 +15,14 @@
 <p>
   The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/eqPly">eqPly example</a>
   is the reference implementation of an Equalizer application. It does render
-  polygonal data, read from a ply file. It supports all Equalizer compound
-  features, namely 2D (sort-first), DB (sort-last) and Eye (stereo)
-  decompositions. In DB mode, each contributor renders it's part of a model in a
-  different color to illustrate the database decomposition.
+  polygonal data, read from a ply file. It supports all Equalizer scalability
+  features.
 </p>
 <p>
-  The <a href="/documents/Developer/ProgrammingGuide.pdf">Programming Guide</a>
-  covers the application structure of eqPly extensively. A semester thesis in
-  German (<a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
-  OpenGL Polygon-Renderers</a>) covers the kd-tree implementation for Equalizer
-  0.4.
+  The <a href="/survey.html">Programming Guide</a> covers the application
+  structure of eqPly extensively. A semester thesis in German
+  (<a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen OpenGL
+  Polygon-Renderers</a>) covers the kd-tree implementation for Equalizer 0.4.
 </p>
 
 <h2>Application Structure</h2>
@@ -77,36 +74,51 @@
   <!-- /* --><pre>
 USAGE: 
 
-   ./examples/eqPly/eqPly  [-g] [-v] [-w <string>] [-n <unsigned>] [-r]
-                           [-b] [-p <string>] [-m <string>] [--]
-                           [--version] [-h]
+   ./build/Darwin/bin/eqPly.app/Contents/MacOS/eqPly  [-o] [-a &lt;string&gt;]
+                                        [-l &lt;string&gt;] [-i] [-g] [-c
+                                        &lt;string&gt;] [-w &lt;string&gt;] [-n
+                                        &lt;unsigned&gt;] [-r] [-b] [-p &lt;string&gt;]
+                                        [-m &lt;string&gt;] ...  [--] [--version]
+                                        [-h]
 
 
 Where: 
 
+   -o,  --noOverlay
+     Disable overlay logo
+
+   -a &lt;string&gt;,  --cameraPath &lt;string&gt;
+     File containing camera path animation
+
+   -l &lt;string&gt;,  --log &lt;string&gt;
+     output log file
+
+   -i,  --invertFaces
+     Invert faces (valid during binary file creation)
+
    -g,  --glsl
      Enable GLSL shaders
 
-   -v,  --vbo
-     Use the new VBO rendering
+   -c &lt;string&gt;,  --renderMode &lt;string&gt;
+     Rendering Mode (immediate, displayList, VBO)
 
-   -w <string>,  --windowSystem <string>
+   -w &lt;string&gt;,  --windowSystem &lt;string&gt;
      Window System API ( one of: AGL glX )
 
-   -n <unsigned>,  --numFrames <unsigned>
+   -n &lt;unsigned&gt;,  --numFrames &lt;unsigned&gt;
      Maximum number of rendered frames
 
    -r,  --resident
      Keep client resident (see resident node documentation on website)
 
-   -b,  --bw
+   -b,  --blackAndWhite
      Don't use colors from ply file
 
-   -p <string>,  --port <string>
+   -p &lt;string&gt;,  --port &lt;string&gt;
      tracking device port
 
-   -m <string>,  --model <string>
-     ply model file name
+   -m &lt;string&gt;,  --model &lt;string&gt;  (accepted multiple times)
+     ply model file name or directory
 
    --,  --ignore_rest
      Ignores the rest of the labeled arguments following this flag.
@@ -116,6 +128,30 @@ Where:
 
    -h,  --help
      Displays usage information and exits.
+
+
+   eqPly - Equalizer polygonal rendering example
+
+        Run-time commands:
+                Left Mouse Button:         Rotate model
+                Middle Mouse Button:       Move model in X, Y
+                Right Mouse Button:        Move model in Z
+                &lt;Cursor Keys&gt;:             Move head in X,Y plane
+                &lt;Page Up,Down&gt;:            Move head in Z
+                &lt;Esc&gt;, All Mouse Buttons:  Exit program
+                &lt;Space&gt;:                   Reset camera
+                F1, h:                     Toggle help overlay
+                i:                         Reset camera for Immersive Setups
+                o:                         Toggle perspective/orthographic
+                s:                         Toggle statistics overlay
+                w:                         Toggle wireframe mode
+                d:                         Toggle color demo mode
+                p:                         Toggle navigation mode (trackball, walk)
+                r:                         Switch rendering mode (display list, VBO,   immediate)
+                v:                         Switch active canvas
+                v:                         Switch active view
+                m:                         Switch model for active view
+                l:                         Switch layout for active canvas
   </pre><!-- */ -->
 </p>
 

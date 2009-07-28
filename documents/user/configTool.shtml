@@ -36,23 +36,46 @@
   <!-- /* --><pre>
 USAGE: 
 
-   ./configTool  [-a] [-c unsigned] [-p unsigned] [-m <2D|DB|DB_ds>] 
-                 [--] [--version] [-h]
+   ./build/Darwin/bin/configTool  [-d &lt;filename&gt;] [-r &lt;unsigned&gt;] ...  [-n
+                                  &lt;filename&gt;] [-a] [-R &lt;unsigned&gt;] [-C
+                                  &lt;unsigned&gt;] [-c &lt;unsigned&gt;] [-p
+                                  &lt;unsigned&gt;] [-m &lt;2D|DB|DB_ds|DB_stream
+                                  |DB_ds_ac|DPlex|Wall&gt;] [-f] [--]
+                                  [--version] [-h]
 
 
 Where: 
 
+   -d &lt;filename&gt;,  --descr &lt;filename&gt;
+     file with channels per-node description
+
+   -r &lt;unsigned&gt;,  --resolution &lt;unsigned&gt;  (accepted multiple times)
+     output window resolution
+
+   -n &lt;filename&gt;,  --nodes &lt;filename&gt;
+     file with list of node-names
+
    -a,  --assembleOnly
      Destination channel does not contribute to rendering
 
-   -c unsigned,  --numChannels unsigned
+   -R &lt;unsigned&gt;,  --rows &lt;unsigned&gt;
+     number of rows in a display wall
+
+   -C &lt;unsigned&gt;,  --columns &lt;unsigned&gt;
+     number of columns in a display wall
+
+   -c &lt;unsigned&gt;,  --numChannels &lt;unsigned&gt;
      Total number of channels (default 4)
 
-   -p unsigned,  --numPipes unsigned
+   -p &lt;unsigned&gt;,  --numPipes &lt;unsigned&gt;
      Number of pipes per node (default 1)
 
-   -m <2D|DB|DB_ds>,  --mode <2D|DB|DB_ds>
+   -m &lt;2D|DB|DB_ds|DB_stream|DB_ds_ac|DPlex|Wall&gt;,  --mode &lt;2D|DB|DB_ds
+      |DB_stream|DB_ds_ac|DPlex|Wall&gt;
      Compound mode (default 2D)
+
+   -f,  --fullScreen
+     Full screen rendering
 
    --,  --ignore_rest
      Ignores the rest of the labeled arguments following this flag.
@@ -62,7 +85,6 @@ Where:
 
    -h,  --help
      Displays usage information and exits.
-
   </pre><!-- */ -->
 </p>
 

@@ -15,44 +15,28 @@
   -->
 
 <ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.9.html#introduction">1.
-      Introduction</a></li>
+  <li><a href="#introduction">1. Introduction</a></li>
   <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#features">1.1.
-        Features</a></li>
+    <li><a href="#features">1.1. Features</a></li>
   </ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.9.html#new">2. New in this
-      release</a></li>
+  <li><a href="#new">2. New in this release</a></li>
   <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#newFeatures">2.1. New
-        Features</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#enhancements">2.2.
-        Enhancements</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#optimizations">2.3.
-        Optimizations</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#examples">2.4.
-        Examples</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#tools">2.5. 
-        Tools</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#changes">2.6. API
-        Changes</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#documentation">2.7.
-        Documentation</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#bugfixes">2.8. Bug
-        Fixes</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#knownbugs">2.9. Known
-        Bugs</a></li>
+    <li><a href="#newFeatures">2.1. New Features</a></li>
+    <li><a href="#enhancements">2.2. Enhancements</a></li>
+    <li><a href="#optimizations">2.3. Optimizations</a></li>
+    <li><a href="#examples">2.4. Examples</a></li>
+    <li><a href="#tools">2.5. Tools</a></li>
+    <li><a href="#changes">2.6. API Changes</a></li>
+    <li><a href="#documentation">2.7. Documentation</a></li>
+    <li><a href="#bugfixes">2.8. Bug Fixes</a></li>
+    <li><a href="#knownbugs">2.9. Known Bugs</a></li>
   </ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.9.html#about">3. About</a></li>
+  <li><a href="#about">3. About</a></li>
   <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#os">3.1. Operating
-        System Support</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#ws">3.2. Window
-        System Support</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#documentation">3.3.
-        Documentation</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.9.html#support">3.4.
-        Support</a></li>
+    <li><a href="#os">3.1. Operating System Support</a></li>
+    <li><a href="#ws">3.2. Window System Support</a></li>
+    <li><a href="#documentation">3.3. Documentation</a></li>
+    <li><a href="#support">3.4. Support</a></li>
   </ul>
 </ul>
 
@@ -179,28 +163,31 @@ for easier data distribution of dynamic, versioned objects</li>
 <a name="examples"></a>
 <h3>2.4. Examples</h3>
 <ul>
-  <li>eqOSG: OpenSceneGraph example</li>
-  <li>eqPly: wireframe mode</li>
-  <li>eqPly: multi-model support</li>
-  <li>eqPly: full support of layout API</li>
-  <li>eqPly: help overlay on 'F1'</li>
-  <li>eqPly: optimize kD-tree layout</li>
-  <li>eqPly: walk-through mode</li>
-  <li>eqPly: Spacemouse support (AGL only)</li>
-  <li>eqPly: loadable camera paths</li>
-  <li>eqPly: add command-line option to disable overlay logo</li>
-  <li>eqPly: unify way to demonstrate decomposition</li>
+  <li>eqOSG: new OpenSceneGraph-based example</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added wireframe mode</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added multi-model support</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: full support of the new layout API</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added help overlay on 'F1'</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: optimized kD-tree layout</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added walk-through mode</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added loadable camera paths</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added Spacemouse support (AGL only)</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: added command-line option to disable overlay logo</li>
+  <li><a href="http://www.equalizergraphics.com/applications/eqPly.html">eqPly</a>: unified coloring to demonstrate decomposition</li>
 </ul>
 
 <a name="tools"></a>
 <h3>2.5. Tools</h3>
 <ul>
-  <li>configTool: support for having an async compositing GPU for DB</li>
-  <li>configTool: support for setting the destination window resolution</li>
-  <li>configTool: refactored code to use eq::server classes for config
-    creation</li>
-  <li>affinityCheck: new command-line tool to list available affinity GPUs (WGL
+  <li>
+    <a href="http://www.equalizergraphics.com/downloads/tools.html">affinityCheck</a>:
+    new command-line tool to list available affinity GPUs (WGL
     only)</li>
+  <li><a href="http://www.equalizergraphics.com/documents/user/configTool.html">configTool</a>: added support for having an async compositing GPU for DB</li>
+  <li><a href="http://www.equalizergraphics.com/documents/user/configTool.html">configTool</a>: added support for setting the destination window
+    resolution</li>
+  <li><a href="http://www.equalizergraphics.com/documents/user/configTool.html">configTool</a>: refactored code to use eq::server classes for config
+    creation</li>
 </ul>
 
 <a name="changes"></a>
