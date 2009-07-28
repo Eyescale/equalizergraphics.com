@@ -104,8 +104,9 @@
 <a name="newFeatures"></a>
 <h3>2.1. New Features</h3>
 <ul>
-  <li>Automatic cross-segment load-balancing for multi-display
-    installations</li>
+  <li>Automatic 
+    <a href="http://www.equalizergraphics.com/scalability/viewEqualizer.html">cross-segment
+    load-balancing</a> for multi-display installations</li>
   <li><a href="http://www.equalizergraphics.com/scalability/dfrEqualizer.html">Dynamic
       Frame Resolution (DFR)</a> for constant framerate rendering</li>
   <li><a href="http://www.equalizergraphics.com/documents/design/compression.html">Compression
@@ -144,15 +145,18 @@
 <a name="enhancements"></a>
 <h3>2.2. Enhancements</h3>
 <ul>
-  <li>Improved statistics overlay (added FPS counter, image compression ratio,
-    pipe idle ratio, framerate throttle statistic)</li>
+  <li>Improved 
+    <a href="http://www.equalizergraphics.com/documents/design/statisticsOverlay.html">statistics
+    overlay</a> (added legend, FPS counter, image compression ratio, pipe idle
+    ratio, framerate throttle statistic)</li>
   <li>New helper class 
     <a href="http://www.equalizergraphics.com/documents/Developer/API-0.9/classeq_1_1Object.html">eq::Object</a>
 for easier data distribution of dynamic, versioned objects</li>
-  <li>Upgraded to VMMlib 1.0</li>
-  <li>Frames using textures</li>
-  <li>OSPipe</li>
-  <li>AGL event handling follows same threading model as GLX, WGL</li>
+  <li>Texture-based frames for optimal compositing on a single GPU</li>
+  <li>Upgraded to <a href="http://vmmlib.sourceforge.net/">VMMlib 1.0</a></li>
+  <li>Abstraction for window-system specific code through 
+    <a href="http://www.equalizergraphics.com/documents/Developer/API-0.9/classeq_1_1OSPipe.html">OSPipe interface</a></li>
+  <li>AGL event handling follows same threading model as GLX and WGL</li>
   <li>Config file versioning</li>
   <li>Synchronize clock used for logging across all nodes</li>
 </ul>
@@ -160,13 +164,16 @@ for easier data distribution of dynamic, versioned objects</li>
 <a name="optimizations"></a>
 <h3>2.3. Optimizations</h3>
 <ul>
-  <li>Lock-free network packet cache</li>
-  <li>Network layer uses asynchronous IO semantics, better perf on Win32</li>
-  <li>Per-component and differential RLE compressor</li>
-  <li>Transfer GL_UNSIGNED_INT depth buffer instead of GL_FLOAT for better performance</li>
-  <li>Optimize the DPlex load-balancer</li>
-  <li>Better serialization of std::vectors in distributed objects</li>
-  <li>Named pipe connection (Win32 only)</li>
+  <li>Lock-free network packet cache for low-latency, high-performance packet
+    dispatch</li>
+  <li>Network layer uses asynchronous IO semantics and has better performance on
+    Windows</li>
+  <li>Per-component and differential RLE image compressor</li>
+  <li>Use GL_UNSIGNED_INT depth buffer instead of GL_FLOAT for better
+    performance and compression</li>
+  <li>DPlex framerate equalizer optimizations</li>
+  <li>Faster serialization of std::vectors in distributed objects</li>
+  <li>Named pipe connection for fast local communication on Windows</li>
 </ul>
 
 <a name="examples"></a>
