@@ -9,6 +9,7 @@
      [ ] src/lib/client/version.h, src/Makefile, src/Doxyfile
      [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
          relnotes.shtml
+     [ ] Copy API documentation on website
      [ ] doc/Developer/ProgrammingGuide
      [ ] src/RELNOTES, src/lib/eq.h
   -->
@@ -105,36 +106,52 @@
 <ul>
   <li>Automatic cross-segment load-balancing for multi-display
     installations</li>
-  <li>Compression Plugin API for runtime-loadable image compression engines</li>
-  <li>Canvas and Layout API</li>
+  <li><a href="http://www.equalizergraphics.com/scalability/dfrEqualizer.html">Dynamic
+      Frame Resolution (DFR)</a> for constant framerate rendering</li>
+  <li><a href="http://www.equalizergraphics.com/documents/design/compression.html">Compression
+      Plugin API</a> for runtime-loadable image compression engines</li>
+  <li><a href="http://www.equalizergraphics.com/documents/design/view.html">Canvas
+      and Layout API</a> for runtime-switchable layouts and resource
+    configurations</li>
   <ul>
-    <li>Description of projection system</li>
-    <li>Multiple Views</li>
-    <li>2D operations</li>
-    <li>Run-time activation of nodes, pipes, windows</li>
+    <li>Simple configuration of physical projection system</li>
+    <li>Logical view layouts on multi-segment projection surfaces</li>
+    <li>Simple 2D operations on multi-segment projection surfaces</li>
+    <li>Run-time (de-)activation of nodes, pipes, windows and channels</li>
   </ul>
-  <li>Support for multiple observers</li>
-  <li>Dynamic Frame Rate</li>
-  <li>Frame scaling</li>
-  <li>Monitor Equalizer</li>
-  <li>Support for G-Sync (NV_swap_group)</li>
-  <li>Support for Head-Mounted Displays (HMD)</li>
+  <li>Support for
+    <a href="http://www.equalizergraphics.com/documents/design/immersive.html#observers">multiple
+      observers</a> in a single configuration</li>
+  <li>Support for 
+    <a href="http://www.equalizergraphics.com/documents/design/immersive.html#HMD">Head-Mounted Displays (HMD)</a></li>
+  <li>Up- and down-scaling for source channel pixel viewports, including zoom
+    support for compositing.</li>
+  <li><a
+  href="http://www.equalizergraphics.com/scalability/monitorEqualizer.html">Monitor
+      Equalizer</a> for the observation of other views</li>
+  <li>Support for
+    <a href="http://www.equalizergraphics.com/documents/design/swapBarrier.html#gsync">hardware
+    swapbuffer synchronization</a> with nVidia G-Sync</li>
   <li>Support for Framebuffer Objects (FBO)</li>
   <li>Support for half_float and float PBuffers and FBOs</li>
   <li>Spacemouse support (AGL only)</li>
-  <li>New helper class to handle dynamic libraries</li>
-  <li>New helper class for memory-mapped files</li>
+  <li>New helper
+    <a href="http://www.equalizergraphics.com/documents/Developer/API-0.9/classeq_1_1base_1_1DSO.html">class to handle dynamic libraries</a></li>
+  <li>New helper 
+    <a href="http://www.equalizergraphics.com/documents/Developer/API-0.9/classeq_1_1base_1_1MemoryMap.html">class for memory-mapped files</a></li>
 </ul>
 
 <a name="enhancements"></a>
 <h3>2.2. Enhancements</h3>
 <ul>
+  <li>Improved statistics overlay (added FPS counter, image compression ratio,
+    pipe idle ratio, framerate throttle statistic)</li>
+  <li>New helper class 
+    <a href="http://www.equalizergraphics.com/documents/Developer/API-0.9/classeq_1_1Object.html">eq::Object</a>
+for easier data distribution of dynamic, versioned objects</li>
   <li>Upgraded to VMMlib 1.0</li>
   <li>Frames using textures</li>
   <li>OSPipe</li>
-  <li>Improved statistics: FPS, compression ratio, pipe idle ratio, framerate
-    throttling</li>
-  <li>eq::Object</li>
   <li>AGL event handling follows same threading model as GLX, WGL</li>
   <li>Config file versioning</li>
   <li>Synchronize clock used for logging across all nodes</li>

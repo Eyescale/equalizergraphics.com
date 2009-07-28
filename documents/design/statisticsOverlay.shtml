@@ -19,14 +19,15 @@ State: Implemented in 0.5.1
   <div class="label">Statistics Overlay</div>
 </div>
 <p>
-  Statistics are send as events to the application thread. On the application
-  thread, <code>Config::handleEvent</code> sorts the events per frame and per
+  Statistics are send as events to the application node. On the application
+  node, <code>Config::handleEvent</code> sorts the events per frame and per
   originator (channel, window, config). Events for up to <code>latency +
-  1 </code> frames are kept by the application node config.
+  1 </code> frames are kept by the <code>eq::Config</code> on the application
+  node.
 </p>
 <p>
   Statistics can be visualized by calling <code>Channel::drawStatistics</code>.
-  The Equalizer examples use the key 's' to toggle statistics drawing on and
+  The Equalizer examples use the 's' key to toggle statistics drawing on and
   off.
 </p>
 
@@ -43,11 +44,13 @@ State: Implemented in 0.5.1
     millisecond. The right-most pixel is the most current time.</li>
   <li>On the Y axis are the rendering entities: channels, windows and
     the config.</li>
-  <li>The remote machine is a Mac Mini, the local a MacBook Pro. The draw times
-    are unbalanced due to the speed difference of the machines, and the
-    transmit time is relatively long since 100 MBit Ethernet is used.</li>
+  <li>The draw times are unbalanced due to the load imbalance of a static 2D
+    compound.</li>
   <li>Frames overlap due to asynchronous execution, in the example above for
     one frame.</li>
+  <li>The percentage on the frame compress statistic is the compression ratio,
+    in this case the data was compressed down to 11% of the original size during
+    network transport.</li>
   <li>Older frames are gradually attenuated for easier identification of tasks
     to frames.</li>
   <li>Frame borders are identified by vertical lines, green is the start of a
@@ -55,8 +58,6 @@ State: Implemented in 0.5.1
   <li>The swap buffer task includes the time to wait for the vertical retrace
     (vsync is on).</li>
   <li>The waiting for images task is a subset of the assemble task.</li>
-  <li>Swap barriers (not used in the example) are sold red tasks directly before
-    the white swap buffer task.</li>
 </ul>
 
 <h2>API</h2>
