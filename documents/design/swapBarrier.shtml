@@ -12,6 +12,7 @@ State:
 <ul>
   <li>Software swapbarrier implemented in 0.1</li>
   <li>Hardware swapbarrier (G-Sync) implemented in svn</li> 
+  <li>Multiple-windows-per-pipe software swapbarrier implemented in svn</li>
 </ul>
 
 <h2>Overview</h2>
@@ -20,7 +21,7 @@ State:
   windows, potentially residing on different nodes.
 </p>
 
-<h3>Software Swap Barrier</h3>
+<h3>Software Synchronization</h3>
 <p>
   The software swapbarrier uses a <code>net::Barrier</code> together with
   a <code>Window::finish</code> to synchronize the buffer swaps without special
@@ -36,12 +37,20 @@ State:
 </p>
 <p>
   The server creates one <code>net::Barrier</code> with the appropriate height
-  for all swap barriers with the same name. Deadlocks are not checked and can
-  occur if multiple swap barriers are used inappropriately.
+  for all swap barriers with the same name.
+</p>
+<p>
+  Multiple windows on the same pipe can join the same software swap barrier. All
+  windows will execute a finish, but the barrier will only be executed by the
+  first window of each pipe. Since all windows have finished before swapBuffers,
+  the first window will block in the barrier, and all subsequent windows will
+  swap immediately afterwards since all commands have been finished
+  already. Each window will flush at the end of a frame to ensure timely
+  execution of the swap command.
 </p>
 
 <a name="gsync"></a>
-<h3>NV_swap_group synchronization</h3>
+<h3>Hardware Synchronization (NV_swap_group)</h3>
 <p>
   The WGL and GLX swap group extensions use a two-tiered strategy to provide
   hardware-based swap synchronization. On a single system, all windows join a
