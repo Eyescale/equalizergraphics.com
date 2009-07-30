@@ -143,6 +143,7 @@ for easier data distribution of dynamic, versioned objects</li>
   <li>AGL event handling follows same threading model as GLX and WGL</li>
   <li>Config file versioning</li>
   <li>Synchronize clock used for logging across all nodes</li>
+  <li>Improved handling for event-driven applications</li>
 </ul>
 
 <a name="optimizations"></a>
@@ -186,22 +187,66 @@ for easier data distribution of dynamic, versioned objects</li>
   <li><a href="http://www.equalizergraphics.com/documents/user/configTool.html">configTool</a>: added support for having an async compositing GPU for DB</li>
   <li><a href="http://www.equalizergraphics.com/documents/user/configTool.html">configTool</a>: added support for setting the destination window
     resolution</li>
-  <li><a href="http://www.equalizergraphics.com/documents/user/configTool.html">configTool</a>: refactored code to use eq::server classes for config
-    creation</li>
 </ul>
 
 <a name="changes"></a>
 <h3>2.6. API Changes</h3>
+<p>
+  The following changes breaking compatibility with Equalizer 0.6 source code
+  were made:
+</p>
 <ul>
-  <li>TBD</li>
+  <li><a href="http://vmmlib.sourceforge.net/">VMMlib</a>, the vector and matrix
+    library used by Equalizer, was upgraded to version 1.0. The API of this
+    library changed, and all type definitions used by Equalizer now reside in
+    the <code>eq</code> namespace instead of
+    the <code>vmml</code namespace.</li>
+  <li>The View API introduced in 0.6 has been replaced by the more powerful
+    <a href="http://www.equalizergraphics.com/documents/design/view.html">Layout/Canvas/Observer</a>
+    API</li>
+  <li>All window system specific calls have been moved
+    from <code>eq::Pipe</code> to the corresponding <code>eq::OSPipe</code>
+    implementation.</li>
+  <li><code>Config::setHeadMatrix</code> and <code>Config::setEyeBase</code>
+    have been deprecated. Use <code>Config::getObservers</code>,
+    <code>Observer::setHeadMatrix</code> and <code>Observer::setEyeBase</code>
+    instead.</li>
+  <li>The <code>ChannelVisitor::Result</code> type has been renamed to the
+  generic <code>VisitorResult</code> type used by all visitors.</li>
+  <li>The access to pixel data in <code>eq::Image</code> has been slightly
+    changed by the introduction of compression plugins.</li>
+  <li>The enum <code>Node::IATTR_HINT_STATISTICS</code> has been removed since
+    it is not used anymore.</li>
+  <li>Reference counting of OpenGL objects allocated
+    by <code>eq::ObjectManager</code> has been removed. This functionality proved
+    unnecessary and complicated the API.</li>
 </ul>
 
 <a name="documentation"></a>
 <h3>2.7. Documentation</h3>
+<p>
+  The following documentation has been added or substantially improved since the
+  last release:
+</p>
 <ul>
-  <li>The <a href="/survey.html">Programming Guide</a> has been extended to TBD
-    pages and TBD figures.</li>
-  <li>TBD</li>
+  <li>The <a href="http://www.equalizergraphics.com/survey.html">Programming
+      Guide</a> has been extended to TBD pages and TBD figures.</li>
+  <li><a href="http://www.equalizergraphics.com/documents/EqualizerGuide.pdf">Quickstart
+      and Demo Guide</a></li>
+  <li><a href="http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.104">Equalizer:
+      A Scalable Parallel Rendering Framework</a>, IEEE Transactions on
+    Visualization and Computer Graphics, vol. 15, no. 3, pp. 436-452, May/June
+    2009.</li>
+  <li><a href="http://www.equalizergraphics.com/documents/Developer/API/index.html">API Documentation</a></li>
+  <li><a href="http://www.equalizergraphics.com/downloads/tools.html">GPU
+      Affinity Checker</a>
+  <li><a href="http://www.equalizergraphics.com/documents/design/swapBarrier.html#gsync">Hardware
+      swapbarrier</a> for synchronization of multipipe displays</li>
+  <li><a href="http://www.equalizergraphics.com/documents/design/compression.html">Compression Plugin API</a> is
+    the official interface to create binary plugins for data compression.</li>
+  <li><a href="http://www.equalizergraphics.com/documents/design/view.html">Layout API</a> provides a way to
+    configure physical projection surfaces with logical layouts and multiple
+    observers.</li>
 </ul>
 
 <a name="bugfixes"></a>
@@ -211,8 +256,17 @@ for easier data distribution of dynamic, versioned objects</li>
   the following:
 </p>
 <ul>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=TBD&group_id=170962&atid=856209">TBD</a>:
-  TBD</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2822348&group_id=170962&atid=856209">2822348</a>: No latency when event-driven
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2803528&group_id=170962&atid=856209">2803528</a>: assertion with zero area pvps
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2797391&group_id=170962&atid=856209">2797391</a>: Error state in parser not reset
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2788964&group_id=170962&atid=856209">2788964</a>: Suspicious compiler warning
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2782038&group_id=170962&atid=856209">2782038</a>: Mapping of multiple Objects of type DELTA creates assertions
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2778587&group_id=170962&atid=856209">2778587</a>: eqServer crashes when running without an appNode
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2688797&group_id=170962&atid=856209">2688797</a>: Configs with no appNode crash
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2592240&group_id=170962&atid=856209">2592240</a>: DPlex LB breaks swapbarrier
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2556921&group_id=170962&atid=856209">2556921</a>: AGL context updates broken
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2545209&group_id=170962&atid=856209">2545209</a>: crashes on specific configs
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2458583&group_id=170962&atid=856209">2458583</a>: Mouse buttons are numbered differently between AGL and GLX
 </ul>
 
 <a name="knownbugs"></a>
@@ -245,7 +299,7 @@ for easier data distribution of dynamic, versioned objects</li>
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
   system, including all Unix variants and the Windows operating system. A 
-  <a href="/compatibility.html">compatibility matrix</a> can be found on the
+  <a href="http://www.equalizergraphics.com/compatibility.html">compatibility matrix</a> can be found on the
   Equalizer website.
 </p>
 <p>
@@ -276,15 +330,15 @@ for easier data distribution of dynamic, versioned objects</li>
 <p>
   The Programming Guide is available as a 
   <a href="http://www.lulu.com/browse/book_view.php?fCID=5006510">hard-copy</a>
-  and <a href="/survey.html">online</a>. <a href="http://www.equalizergraphics.com/documents/Developer/API/index.html">API documentation</a> can be
+  and <a href="http://www.equalizergraphics.com/survey.html">online</a>. <a href="http://www.equalizergraphics.com/documents/Developer/API/index.html">API documentation</a> can be
   found on the Equalizer website. Equalizer does not yet have an Users Guide.
 </p>
 <p>
   As with any open source project, the available source code, in particular the
   shipped
-  <a href="/cgi-bin/viewvc.cgi/tags/release-0.9/examples/">examples</a>
+  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.9/examples/">examples</a>
   provide a reference for developing or porting applications. The
-  <a href="/doc_developer.html">Developer Documentation</a> on the website
+  <a href="http://www.equalizergraphics.com/doc_developer.html">Developer Documentation</a> on the website
   provides further design documents for specific features.
 </p>
 
@@ -292,7 +346,7 @@ for easier data distribution of dynamic, versioned objects</li>
 <h3>3.4. Support</h3>
 <p>
   Technical questions can be posted to the 
-  <a href="/cgi-bin/mailman/listinfo/eq-dev">
+  <a href="http://www.equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">
     Developer Mailing List</a>, or directly to
   <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">
     info@equalizergraphics.com</a>.

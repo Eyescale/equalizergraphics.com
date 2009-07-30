@@ -75,101 +75,10 @@
 
 <h2>API</h2>
 <h3>Plugin API (eq/plugin/compressor.h)</h3>
-<!-- /* --><pre>
-  extern "C"
-  {
-     // versioning
-  #  define EQ_COMPRESSOR_VERSION 1
-  #  define EQ_COMPRESSOR_VERSION_1 1
-
-     // Compressor registry 
-  #  define EQ_COMPRESSOR_NONE            0x1u
-  #  define EQ_COMPRESSOR_RLE_UNSIGNED    0x2u
-  #  define EQ_COMPRESSOR_RLE_BYTE        0x3u
-  #  define EQ_COMPRESSOR_RLE_3_BYTE      0x4u
-  #  define EQ_COMPRESSOR_RLE_4_BYTE      0x5u
-  #  define EQ_COMPRESSOR_DIFF_RLE_3_BYTE 0x6u
-  #  define EQ_COMPRESSOR_DIFF_RLE_4_BYTE 0x7u
-     // Private types -FOR DEVELOPMENT ONLY-. 
-     // Request public type from info@equalizergraphics.com for deployment
-  #  define EQ_COMPRESSOR_PRIVATE         0xefffffffu
-
-      struct EqCompressorInfo
-      {
-          // set to EQ_COMPRESSOR_VERSION on output
-          unsigned version;    // in and out
-
-          // set variables below for (in) version >= 1
-          unsigned name; // EQ_COMPRESSOR_name
-          unsigned dataType; // see below
-          uint64_t capabilities; // see below
-          float quality; // 1.0f: loss-less, <1.0f: lossy
-          float ratio;   // ~ compression ratio (sizeCompressed/sizeIn)
-          float speed;   // ~ speed( EQ_COMPRESSOR_BYTE_RLE ) / speed( this )
-
-          // set variables below for (in) version >= 2
-          // there be future extensions
-      };
-
-      // Compressor token type
-      //   single base types
-  #  define EQ_COMPRESSOR_DATATYPE_BYTE       1   // uint8_t
-  #  define EQ_COMPRESSOR_DATATYPE_UNSIGNED   2   // uint32_t
-  #  define EQ_COMPRESSOR_DATATYPE_HALF_FLOAT 3   // float16_t
-  #  define EQ_COMPRESSOR_DATATYPE_FLOAT      4   // float32_t
-      //   vector types
-  #  define EQ_COMPRESSOR_DATATYPE_3_BYTE       1024 // uint8_t[3] (e.g. RGB)
-  #  define EQ_COMPRESSOR_DATATYPE_4_BYTE       1025 // uint8_t[4] (e.g. RGBA)
-  #  define EQ_COMPRESSOR_DATATYPE_4_HALF_FLOAT 1026 // float16_t[4] eg RGBA16f
-  #  define EQ_COMPRESSOR_DATATYPE_4_FLOAT      1027 // float32_t[4] eg RGBA32f
-      //   special types
-  #  define EQ_COMPRESSOR_DATATYPE_3BYTE_1BYTE  2048 // e.g. DEPTH_STENCIL
-
-     // Compressor capability flags
-  #  define EQ_COMPRESSOR_INPLACE    EQ_BIT_1
-  #  define EQ_COMPRESSOR_DATA_1D    EQ_BIT_2
-  #  define EQ_COMPRESSOR_DATA_2D    EQ_BIT_3
-  #  define EQ_COMPRESSOR_IGNORE_MSE EQ_BIT_4
-
-      // query interface
-      extern size_t EqCompressorGetNumCompressors();
-      extern void EqCompressorGetInfo( const size_t n,
-                                       EqCompressorInfo* const info );
-
-      // lifecycle management
-      extern void* EqCompressorNewCompressor( const unsigned name );
-      extern void EqCompressorDeleteCompressor( const unsigned name,
-                                                void* const compressor );
-
-      //     Note: 0 is allowed (for state-less decompressors)
-      extern void* EqCompressorNewDecompressor( const unsigned name );
-      extern void EqCompressorDeleteDecompressor( const unsigned name,
-                                                  void* const decompressor );
-
-      // worker functions
-      extern void EqCompressorCompress( const unsigned name,
-                                        void* const compressor, 
-                                        void* const in, const uint64_t* inDims,
-                                        const uint64_t flags );
-      extern uint32_t EqCompressorGetNumResults( const unsigned name,
-                                                 void* const compressor );
-      extern void EqCompressorGetResult( const unsigned name,
-                                         void* const compressor, 
-                                         const uint32_t i, 
-                                         void** const out, 
-                                         uint64_t* const outSize );
-
-      extern void EqCompressorDecompress( const unsigned name,
-                                          void* const decompressor, 
-                                          const void** const in, 
-                                          const uint64_t* const inSizes,
-                                          const uint32_t numInputs, 
-                                          void* const out,
-                                          const uint64_t* outDims,
-                                          const uint64_t flags );
-  }
-
-</pre><!-- */ -->
+<p>
+  See <a href="/documents/Developer/API/plugins_2compressor_8h.html">API
+    Documentation</a>
+</p>
 
 <h3>Equalizer API</h3>
 <!-- /* --><pre>
