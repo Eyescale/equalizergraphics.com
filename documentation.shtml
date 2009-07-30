@@ -101,21 +101,25 @@
 </ul>
 
 <h2>Previous Polls</h2>
-<p>
-  Note: Blogflux polls are currently broken.
-</p>
-<script type="text/javascript" language="javascript"
-        src="http://static.polldaddy.com/p/1348984.js"></script>
-<noscript>
-  <a href="http://answers.polldaddy.com/poll/1000076/">Equalizer BOF at
-    EuroGraphics: I will...</a><br/>
-  <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)</span>
-</noscript>
-<iframe src="http://polls.blogflux.com/poll.php?poll=28115&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://polls.blogflux.com/poll.php?poll=22540&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://polls.blogflux.com/poll.php?poll=19679&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://polls.blogflux.com/poll.php?poll=16014&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://polls.blogflux.com/poll.php?poll=12544&amp;width=200&amp;fontsize=11&amp;height=300&amp;fontface=Verdana&amp;padding=2&amp;textcolor=%23000000&amp;bgcolor=%23bbbbbb&amp;doublespace=0&amp;borderwidth=1&amp;linkmap=1&amp;bordercolor=%23aaaaaa" width="200" height="322" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+<div class="float_left">
+  <script type="text/javascript" language="javascript"
+          src="http://static.polldaddy.com/p/1105358.js"></script>
+  <noscript>
+    <a href="http://answers.polldaddy.com/poll/1105358/">Best new 0.6 feature?</a><br/>
+    <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)
+    </span>
+  </noscript>
+</div>
+<div class="float_left">
+  <script type="text/javascript" language="javascript"
+          src="http://static.polldaddy.com/p/1348984.js"></script>
+  <noscript>
+    <a href="http://answers.polldaddy.com/poll/1348984/">Equalizer BOF at
+      EuroGraphics: I will...</a><br/>
+    <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)</span>
+  </noscript>
+</div>
 
+<div class="flush_float"></div>
 #include "footer.shtml"
 <!-- $Id$ -->
