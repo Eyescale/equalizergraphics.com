@@ -14,7 +14,7 @@
     <li>WGL implemented in 0.3</li>
     <li>AGL implemented in 0.4</li>
     <li>Message pump configuration and removal of (glX) event thread in 0.5</li>
-    <li>AGL event dispatch to pipe threads in svn</li>
+    <li>AGL event dispatch to pipe threads in 0.9</li>
   </ul>
 </p>
 

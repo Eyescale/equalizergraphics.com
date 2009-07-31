@@ -44,7 +44,7 @@
 </tr><tr>
   <td><a href="/documents/design/swapBarrier.html#gsync">hardware
       swapbarrier</a> for synchronization of multipipe displays</td>
-  <td>svn</td>
+  <td>0.9</td>
 </tr><tr>
   <td><a href="/documents/design/dynamicNearFar.html">dynamic near and far plane
       support</a></td>
@@ -87,22 +87,22 @@
   <td>orthographic frustum support</td>
   <td>0.6</td>
 </tr><tr>
-  <td><a href="/documents/design/view.html">view API</a></td>
-  <td>0.6, svn</td>
+  <td><a href="/documents/design/view.html">canvas and layout API</a></td>
+  <td>0.9</td>
 </tr><tr>
   <td>FBO support</td>
-  <td>svn</td>
+  <td>0.9</td>
 </tr><tr>
   <td><a href="/documents/design/immersive.html#HMD">HMD support</a></td>
-  <td>svn</td>
+  <td>0.9</td>
 </tr><tr>
   <td><a href="/documents/design/immersive.html#observers">multiple 
       observers</a></td>
-  <td>svn</td>
+  <td>0.9</td>
 </tr><tr>
   <td><a href="/documents/design/view.html">application-specified frusta for
       destination views</a></td>
-  <td>svn</td>
+  <td>0.9</td>
 </tr><tr>
   <td>FrameData API</td>
   <td>?</td>
@@ -163,7 +163,7 @@
   <td>0.6</td>
 </tr><tr>
   <td>&rarr; Cross-segment resource load-balancing</td>
-  <td>svn</td>
+  <td>0.9</td>
 </tr><tr>
   <td>&rarr; Cross-view resource load-balancing</td>
   <td>?</td>

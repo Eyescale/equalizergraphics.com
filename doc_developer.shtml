@@ -73,6 +73,8 @@
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+
+<h4>Version 0.9</h4>
 <ul>
   <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
       swapbarrier</a> for synchronization of multipipe displays</li>

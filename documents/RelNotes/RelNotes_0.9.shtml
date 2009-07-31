@@ -6,12 +6,13 @@
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [ ] src/lib/client/version.h, src/Makefile, src/Doxyfile
-     [ ] downloads/developers.shtml, downloads/source.shtml, features.shtml,
-         relnotes.shtml
+     [x] src/lib/client/version.h, src/Makefile, src/Doxyfile
+     [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
+     [ ] downloads/source.shtml, relnotes.shtml
      [ ] Copy API documentation on website
      [ ] doc/Developer/ProgrammingGuide
      [ ] src/RELNOTES, src/lib/eq.h
+     [ ] lulu.com, Google Books
   -->
 
 <ul>
@@ -45,7 +46,8 @@
 <p>
   Welcome to Equalizer, a framework for the development and deployment of
   parallel, scalable OpenGL applications. Equalizer 0.9 delivers major new
-  features, most notably . It is the last beta release before Equalizer 1.0.
+  features, most notably major new scalability features and a compression plugin
+  API. It is the last beta release before Equalizer 1.0.
 </p>
 <p>
   Equalizer 0.9 can be retrieved by downloading the
@@ -267,30 +269,26 @@ for easier data distribution of dynamic, versioned objects</li>
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2556921&group_id=170962&atid=856209">2556921</a>: AGL context updates broken
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2545209&group_id=170962&atid=856209">2545209</a>: crashes on specific configs
   <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2458583&group_id=170962&atid=856209">2458583</a>: Mouse buttons are numbered differently between AGL and GLX
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2268547&group_id=170962&atid=856209">2268547</a>: fullscreen windows not always active on Win32</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997583&group_id=170962&atid=856209">1997583</a>: eqPly: ortho frustum culling broken</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1816670&group_id=170962&atid=856209">1816670</a>: eVolve: binary swap configs don't work</li>
 </ul>
 
 <a name="knownbugs"></a>
 <h3>2.9. Known Bugs</h3>
-<p>TBD</p>
+<p>The following bugs were known at release time. Please file a
+  <a href="http://sourceforge.net/tracker/?atid=856209&group_id=170962&func=browse">Bug
+  Report</a> if you find any other issue with this release.
+</p>
 <ul>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2268547&group_id=170962&atid=856209">2268547</a>:
-    fullscreen windows not always active on Win32</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2151376&group_id=170962&atid=856209">2151376</a>:
-    Irregular Pixel kernels do not work</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003195&group_id=170962&atid=856209">2003195</a>:
-    Ortho frusta ignore eye offset</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003132&group_id=170962&atid=856209">2003132</a>:
-    3-wnd.DB.ds is broken on some ppc machines for eqPly</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997583&group_id=170962&atid=856209">1997583</a>:
-    eqPly: ortho frustum culling broken</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1959418&group_id=170962&atid=856209">1959418</a>:
-    DB Compositing fails on MacBook with GMA X3100</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854948&group_id=170962&atid=856209">1854948</a>:
-    eVolve: lighting ignores head transformation</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854929&group_id=170962&atid=856209">1854929</a>:
-    eqPly GLSL shader has artefacts</li>
-  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1816670&group_id=170962&atid=856209">1816670</a>:
-    eVolve: binary swap configs don't work</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2828296&group_id=170962&atid=856209">2828296</a>: eVolve depth compositing is broken</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2796444&group_id=170962&atid=856209">2796444</a>: Race during simultaneous node connect</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2642034&group_id=170962&atid=856209">2642034</a>: Win32: max 64 connections possible</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2609161&group_id=170962&atid=856209">2609161</a>: zoom: depth readback does not work</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2556940&group_id=170962&atid=856209">2556940</a>: zoom: FBO usage</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003195&group_id=170962&atid=856209">2003195</a>: Ortho frustra ignores eye offset</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854948&group_id=170962&atid=856209">1854948</a>: eVolve: lighting ignores head transformation</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854929&group_id=170962&atid=856209">1854929</a>: eqPly GLSL shader has artefacts</li>
 </ul>
 
 
@@ -311,7 +309,7 @@ for easier data distribution of dynamic, versioned objects</li>
 <a name="os"></a>
 <h3>3.1. Operating System Support</h3>
 <ul>
-  <li><b>Linux:</b> Ubuntu 6.10 (x64, i386), RHEL4 (x64, i386)</li>
+  <li><b>Linux:</b> Ubuntu 7.10 (i386)</li>
   <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
     Cygwin (i386)</li>
   <li><b>Mac OS X:</b> 10.5 (PowerPC, i386)</li>
