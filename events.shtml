@@ -3,10 +3,20 @@
 
 #include "header.shtml"
 
+
+
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
-    <td nowrap>22.-26 June 2009</td>
+    <td nowrap>18./19. September 2009</td>
+    <td>
+      <a href="http://www.ti.bfh.ch/index.php?id=5370&L=2">TechDays
+        BFH-TI, Biel</a></td>
+    <td>Presentation of the Equalizer OpenSceneGraph example in the
+      four-sided CAVE of the Bern University of Applied Sciences</td>
+  </tr>
+  <tr>
+    <td nowrap>22.-26. June 2009</td>
     <td>
       <a href="http://www.supercomp.de/isc09/">ISC, Hamburg</a></td>
     <td>Presentation of an Equalizer-based CUDA demo</td>
