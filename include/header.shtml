@@ -89,17 +89,15 @@
     </div>
     <div class="header">
       <a name="top"></a>
-      <h1>
 #ifdef TITLE
-      TITLE
+      <h1>TITLE</h1>
 #elif defined (SUBPAGE)
-      SUBPAGE
+      <h1>SUBPAGE</h1>
 #elif defined (PAGE)
-      PAGE
+      <h1>PAGE</h1>
 #else
 #  error No page title defined
 #endif
-      </h1>
     </div>
 
     <!-- Footer line -->
