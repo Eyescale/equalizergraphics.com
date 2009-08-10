@@ -1,0 +1,54 @@
+#define S_NEWS
+#define PAGE News
+#define SUBPAGE Equalizer 0.9 delivers scalability and flexibility for OpenGL applications
+
+#include "header.shtml"
+
+<div class="float_right">
+  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg" 
+                                     alt="Cross-Segment Load-Balancing"></a>
+  <div class="label">Cross-Segment Load-Balancing</div>
+</div>
+<p>
+  We are pleased to announce the release
+  of <a href="http://www.equalizergraphics.com">Equalizer</a> 0.9, the standard
+  framework to create and deploy parallel, scalable OpenGL applications. The
+  most notable new features in this release are:
+  <ul>
+    <li>Automatic 
+      <a href="http://www.equalizergraphics.com/scalability/viewEqualizer.html">cross-segment
+        load-balancing</a> for multi-display installations</li>
+    <li><a href="http://www.equalizergraphics.com/scalability/dfrEqualizer.html">Dynamic
+        Frame Resolution (DFR)</a> for constant framerate rendering</li>
+    <li><a href="http://www.equalizergraphics.com/documents/design/compression.html">Compression
+        Plugin API</a> for runtime-loadable image compression engines</li>
+  </ul>
+</p>
+<p>
+  Please check the
+  <a
+    href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_0.9.html">release
+    notes</a> on the Equalizer website for a comprehensive list of new features,
+  enhancements, optimizations and bug fixes. A paperback book of the
+  <a href="http://www.lulu.com/content/paperback-book/equalizer-09-programming-and-user-guide/7501548">Programming
+    and User Guide</a> is available from Lulu.com</a>.
+</p>
+<p>
+  We would like to thank all individuals and parties who have contributed to the
+  development of Equalizer 0.9.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from
+  <a href="http://www.eyescale.ch">Eyescale Software GmbH</a>. Please
+  contact
+  <a href="mailto:info@eyescale.ch?subject=Equalizer">info@eyescale.ch</a>
+  for further information.
+</p>
+
+<div class="footnote">
+ Image copyright Realtime Technology AG, 2008.
+</div>
+
+#include "footer.shtml"
+<!-- $Id: Release_0.6.shtml 2388 2008-12-01 16:03:52Z eile $ -->
