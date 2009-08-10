@@ -124,6 +124,7 @@ FILES = \
 	documents/user/configTool.html \
 	documents/user/crComparison.html \
 	downloads/DBCAAF49A0C0/ProgrammingUserGuide.pdf \
+	downloads/DBCAAF49A0C0/index.html \
 	downloads/developer.html \
 	downloads/major.html \
 	downloads/tools.html \

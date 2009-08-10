@@ -76,7 +76,7 @@ foreach ( @changes )
 
             $file =~ s/\.shtml/.html/;
 
-            if( !($file =~ /include/) && $op ne "D" )
+            if( !($file =~ /include/) && !($file =~ /DBCAAF49A0C0/) && $op ne "D" )
             {
                 push( @files, $file );
 

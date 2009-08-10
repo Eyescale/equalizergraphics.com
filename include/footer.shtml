@@ -1,4 +1,5 @@
 
+#ifndef SKIP_SOCIAL
   <!-- social bookmark sites, added here again for convenience and to WAR
        ignored bottom margin on IE7 -->
   <div class="social">
@@ -14,6 +15,8 @@
             src="http://s7.addthis.com/js/152/addthis_widget.js">
     </script>
   </div>
+#endif
+
 </div> <!-- div content -->
 
 <!-- Google Analytics -->

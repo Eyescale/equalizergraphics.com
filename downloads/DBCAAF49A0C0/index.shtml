@@ -1,0 +1,25 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Downloads
+#define SUBPAGE Programming and User Guide
+#define SKIP_SOCIAL
+
+#include "header.shtml"
+
+<h2>Programming and User Guide</h2>
+<p>
+  Please bookmarks this page for further reference.
+</p>
+<ul>
+  <li><a href="ProgrammingUserGuide.pdf">Latest version</a> (PDF)</li>
+  <li><a href="ProgrammingUserGuide-0.9.pdf">Version 1.6 for Equalizer 0.9</a> (PDF)</li>
+</ul>
+
+<p>
+  You can also buy a 
+  <a href="http://www.lulu.com/content/paperback-book/equalizer-09-programming-and-user-guide/7501548">full-color</a>  
+  or <a href="http://www.lulu.com/content/paperback-book/equalizer-09-programming-and-user-guide-%28bw%29/7506726">black
+    and white</a> paperback book from Lulu.com.
+</p>
+
+#include "footer.shtml"

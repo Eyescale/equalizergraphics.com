@@ -328,6 +328,7 @@
 #endif
             >Survey</a></p>
 
+#ifndef SKIP_SOCIAL
       <!-- social bookmark sites -->
       <div class="social">
         <script type="text/javascript">addthis_pub  = 'eile';</script>
@@ -342,5 +343,6 @@
                 src="http://s7.addthis.com/js/152/addthis_widget.js">
         </script>
       </div>
+#endif
     </div>
     <div class="content">
