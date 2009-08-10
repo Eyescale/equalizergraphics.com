@@ -9,6 +9,17 @@
   <tr><th>Version</th><th>Links</th><th>Major Feature(s)</th></tr>
 
   <tr>
+    <td>0.9</td>
+    <td nowrap>
+      <a href="/documents/RelNotes/RelNotes_0.9.html">Release 
+        Notes</a><br>
+      <a href="/downloads/Equalizer-0.9.tar.gz">Source tar.gz</a><br> 
+      <a href="/documents/Developer/API-0.9/index.html">API documentation</a>
+    </td>
+    <td>Cross-segment load-balancing, dynamic frame resolution, compression
+      plugins.</td>
+  </tr>
+
     <td>0.6</td>
     <td nowrap>
       <a href="/documents/RelNotes/RelNotes_0.6.html">Release 

@@ -14,6 +14,6 @@
      [ ] lulu.com, Google Books
   -->
 
-#include "../../../src/lib/RelNotes.dox"
+#include "../../../../tags/release-0.9/lib/RelNotes.dox"
 
 #include "footer.shtml"
