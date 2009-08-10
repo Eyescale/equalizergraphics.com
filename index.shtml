@@ -7,9 +7,9 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.6.png"><img src="/images/release-0.6-small.jpg" 
-                                         alt="Scalable Rendering"></a>
-  <div class="label">Scalability for large-scale displays</div>
+  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg" 
+                                         alt="Cross-Segment Load-Balancing"></a>
+  <div class="label">Cross-Segment Load-Balancing</div>
 </div>
 <p>
   Equalizer is the standard middleware to create and deploy parallel
@@ -23,16 +23,19 @@
 
 <h2>Benefits</h2>
 <ul>
-  <li><b>Parallel Rendering Know-How:</b> Equalizer contains the essence of 10+
-    years of experience in parallel and scalable rendering, easily integrated
-    into your application.</li>
-  <li><b>Fast Path for Scalable OpenGL Applications:</b> Equalizer provides the
-    natural parallel execution model to exploit the parallelism of multicore,
-    multi-GPU workstations and graphics clusters.</li>
+  <li><b>Increased Performance, Visual Quality and Display Size:</b> Equalizer
+    contains the essence of 10+ years of experience in parallel and scalable
+    rendering, easily integrated into your application.</li>
+  <li><b>Fast Path for Parallel OpenGL Applications:</b> Equalizer is minimally
+    invasive and provides the natural parallel execution model to exploit the
+    parallelism of multicore, multi-GPU workstations and graphics clusters.</li>
   <li><b>Feature-Rich Framework:</b> Equalizer contains state-of-the-art
     scalable rendering algorithms, and its open development model ensures
     constant improvement. Equalizer applications are flexible and deployable in
     many, rapidly changing environments.</li>
+  <li><b>Future-Proof:</b> An active development community and a liberal open
+    source license provide cutting-edge features and ensure the safety of your
+    investment.</li>
 </ul>
 
 <h2>Features</h2>
