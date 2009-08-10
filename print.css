@@ -148,7 +148,7 @@ div.header
     padding: .5em;
     padding-left: 10px;
     margin-top: 0;
-    margin-left: 10em;
+    margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
 }
@@ -187,7 +187,7 @@ div.content {
 }
 
 div.social { 
-    text-align: center;
+    display: none;
 }
 div.center { 
     text-align: center;

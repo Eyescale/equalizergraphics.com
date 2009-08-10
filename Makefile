@@ -123,7 +123,7 @@ FILES = \
 	documents/Howtos/glutToEqualizer.html \
 	documents/user/configTool.html \
 	documents/user/crComparison.html \
-	downloads/DBCAAF49A0C0/ProgrammingGuide.pdf \
+	downloads/DBCAAF49A0C0/ProgrammingUserGuide.pdf \
 	downloads/developer.html \
 	downloads/major.html \
 	downloads/tools.html \
@@ -227,7 +227,7 @@ $(TARGET)/documents/Developer/eqPly.pdf: ../doc/Developer/eqPly/Semesterarbeit.p
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/downloads/DBCAAF49A0C0/ProgrammingGuide.pdf: ../doc/Developer/ProgrammingGuide/paper.pdf
+$(TARGET)/downloads/DBCAAF49A0C0/ProgrammingUserGuide.pdf: ../doc/Developer/ProgrammingGuide/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
