@@ -5,21 +5,38 @@
 
 #include "header.shtml"
 
-<h3>Generic Information</h3>
+<h2>Programming and User Guide</h2>
+<div class="float_right">
+  <a href="http://www.lulu.com/commerce/index.php?fBuyContent=7501548">
+    <img src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
+         border="0" 
+         alt="Support independent publishing: buy this book on Lulu.">
+  </a>
+</div>
+<p>
+  The Programming and User Guide is the official reference for the Equalizer
+  parallel rendering framework. You can obtain it using one of the following
+  options:
+</p>
 <ul>
-  <div class="float_right">
-    <a href="http://www.lulu.com/commerce/index.php?fBuyContent=5006510">
-      <img src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
-           border="0" 
-           alt="Support independent publishing: buy this book on Lulu.">
-    </a>
-  </div>
-  <li>
-    <a href="/survey.html">Programming Guide</a> is the recommended reading for
-    developers new to Equalizer.</li>
+  <li>As a direct download, after filling out our <a href="/survey.html">online
+      survey</a>. This survey helps us to understand where and how Equalizer is
+      used, and to set priorities for the development.</li>
+  <li>As a 
+    <a href="http://www.lulu.com/content/paperback-book/equalizer-09-programming-and-user-guide/7501548">full-color</a>  
+      or <a href="http://www.lulu.com/content/paperback-book/equalizer-09-programming-and-user-guide-%28bw%29/7506726">black
+      and white</a> paperback book from Lulu.com.</li>
+  <li>As a 
+    <a href="http://www.lulu.com/content/paperback-book/equalizer-09-programming-and-user-guide/7501548">high-resolution
+      download</a>.</li>
+</ul>
+
+<h2>Generic Information</h2>
+<ul>
   <li><a href="/documents/Developer/API/index.html">API Documentation</a>,
-      automatically generated from the source code using doxygen. Covers only
-      partially the API.</li>
+      automatically generated from the source code using doxygen.
+  <li><a href="/documents/design/fileFormat.html">File Format</a> is the
+    documentation for the server configuration files.</li>
   <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
     Programming</a> is a presentation explaining the concepts and scope of
     the Equalizer API,
@@ -28,8 +45,6 @@
   <li><a href="/documents/Howtos/glutToEqualizer.html">Equalizer for GLUT
       Developers</a> provides a mapping of commonly used GLUT functions to
       their Equalizer counterparts</li>
-  <li><a href="/documents/design/fileFormat.html">File Format</a> is the
-    documentation for the server configuration files.</li>
   <li><a href="/documents/design/environment.html">Environment
         Variables</a> lists the variables used by Equalizer.</li>
   <li><a href="/documents/design/taskMethods.html">Task Methods</a> lists
@@ -53,7 +68,7 @@
   <img src="/images/teapots.png" 
        alt="2D, DB, DPlex, stereo and pixel decomposition">
 </div>
-<h3>Design  Documentation</h3>
+<h2>Design  Documentation</h2>
 <p>
   The design documentation is technical documentation, specifications or other
   information, typically for a specific, isolated feature. It is intended for
@@ -67,14 +82,14 @@
   the <a href="/features.html">Feature List</a>.
 </p>
 
-<h4>SVN 'trunk' version</h4>
+<h3>SVN 'trunk' version</h3>
 <p>
   This information contains specification for features currently under
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
 
-<h4>Version 0.9</h4>
+<h3>Version 0.9</h3>
 <ul>
   <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
       swapbarrier</a> for synchronization of multipipe displays</li>
@@ -85,13 +100,13 @@
     multiple observers.</li>
 </ul>
 
-<h4>Version 0.6</h4>
+<h3>Version 0.6</h3>
 <ul>
   <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a>
     explains the statistics overlay.</li>
 </ul>
 
-<h4>Version 0.5</h4>
+<h3>Version 0.5</h3>
 <ul>
   <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> adds the
     capability for off-screen rendering buffers.</li>
@@ -104,7 +119,7 @@
     explains the event handling model and implementation.</li>
 </ul>
 
-<h4>Version 0.4</h4>
+<h3>Version 0.4</h3>
 <ul>
   <li><a href="/documents/design/volumeRendering.html">Volume Rendering</a> 
     application overview.</li>
@@ -119,7 +134,7 @@
     allows an easier porting path for existing, non-threadsafe software.</li>
 </ul>
 
-<h4>Version 0.3</h4>
+<h3>Version 0.3</h3>
 <ul>
   <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a>
     specifies the implementation and changes for anaglyphic stereo 
@@ -141,7 +156,7 @@
     multipipe applications.</li>
 </ul>
 
-<h4>Version 0.2</h4>
+<h3>Version 0.2</h3>
 <ul>
   <li><a href="/documents/design/compounds.html">Compounds</a> is the
     initial design documentation on the API and config file interface for the
@@ -159,7 +174,7 @@
     is the initial design documentation on the API and config file interface for
     statistics gathering.</li>
 </ul>
-<h4>Version 0.1</h4>
+<h3>Version 0.1</h3>
 <ul>
   <li><a href="/documents/design/packets.html">Packet Handling</a>
     explains the basic concept and mechanism of the Equalizer networking
