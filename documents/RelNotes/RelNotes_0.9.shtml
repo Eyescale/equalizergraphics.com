@@ -8,10 +8,10 @@
 <!-- Release Checklist:
      [x] src/lib/client/version.h, src/Makefile, src/Doxyfile
      [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
-     [ ] downloads/source.shtml, relnotes.shtml
-     [ ] Copy API documentation on website
+     [x] downloads/source.shtml, relnotes.shtml, news.shtml
+     [x] Copy API documentation on website
      [x] doc/Developer/ProgrammingGuide
-     [ ] lulu.com, Google Books
+     [x] lulu.com, Google Books
   -->
 
 #include "../../../../tags/release-0.9/lib/RelNotes.dox"
