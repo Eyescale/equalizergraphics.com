@@ -211,7 +211,7 @@ doxygen:
 	cd ../src; doxygen Doxyfile
 
 sitemap:
-	sitemap_gen --config=sitemap_config.xml || true
+	-sitemap_gen --config=sitemap_config.xml
 
 $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)

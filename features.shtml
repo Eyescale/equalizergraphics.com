@@ -104,6 +104,9 @@
       destination views</a></td>
   <td>0.9</td>
 </tr><tr>
+  <td>OpenGL 3 support and example</td>
+  <td>?</td>
+</tr><tr>
   <td>FrameData API</td>
   <td>?</td>
 </tr><tr>
@@ -141,11 +144,9 @@
     for network transfers</td>
   <td>0.2</td>
 </tr><tr>
-  <td>&rarr; Compression plug-in API</td>
-  <td>?</td>
-</tr><tr>
-  <td>&rarr; Automatic selection of compression plug-in</td>
-  <td>?</td>
+  <td>&rarr; <a href="/documents/design/compression.html">Compression plug-in
+      API</a></td>
+  <td>0.9</td>
 </tr><tr>
   <td>&rarr; GPU-based image compression</td>
   <td>?</td>
