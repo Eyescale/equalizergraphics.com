@@ -1,0 +1,245 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Compute Extensions
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:philippe.robert@gmail.com">philippe.robert@gmail.com</a><br/>
+Version: last modified date: September 3, 2009<BR>
+Status: Request for discussion<BR>
+Dependencies: CUDA (libcuda, libcudart), OpenCL<BR>
+</p>
+
+<h2>Overview</h2>
+<p>
+The objective of this extension is to support GPU compute tasks within the 
+programming and execution model of Equalizer.
+In the first phase we target C for CUDA, later we will also add support for 
+OpenCL.
+</p>
+<p>
+This extension defines 
+<ul>
+  <li>the proper initialisation of each participating pipe, </li>
+  <li>the synchronisation of shared (GPU) memory, </li>
+  <li>the execution of CUDA kernels.</li>
+</ul>
+Moreover, the file format is extended to support COMPUTE tasks.
+There exist two different use-cases:
+<ul>
+  <li> [Mixed:] Compute tasks are executed on a pipe which also performs 
+       OpenGL draw operations; i.e. interoperability with OpenGL is 
+       possible.</li>
+  <li> [Pure:] Compute tasks are executed on a compute-only device, such as 
+       a Tesla GPU or a designated GPU.</li>
+</ul>
+</p>
+
+<p>
+By design Equalizer uses <b>Compounds</b> to describe the execution of the 
+rendering operations.
+The  actual rendering is done by <b>Channels</b> which are simply referenced
+-- Channels belong to a <b>Window</b> which manages the GL context. 
+Windows in turn are managed by a <b>Pipe</b> which provides the threading 
+code. Usually, only one window is used per pipe.
+Internally, each Window uses a <b>OSWindow</b> object which implements the 
+glue to the native windowing system; i.e., using WGL, glX, or AGL. 
+</p>
+<p>
+When using CUDA a host thread can execute device code on exactly one GPU 
+device; i.e., a host thread may have only one device context current at a 
+time. 
+To support multiple devices multiple host threads are thus required. This 
+is a perfect match to the pipe abstraction of Equalizer. On the other hand,
+since GPU computing does not do any rendering and as such does not rely on
+a window, the window abstraction does not fit. Instead we use specific 
+attributes on the pipe which allows us to set up a <b>ComputeContext</b> 
+that provides the interface to either CUDA or OpenCL.
+As a consequence, pipes are directly referenced by Compounds to perform 
+COMPUTE tasks. 
+</p>
+
+<h2>Internal Changes</h2>
+
+<h3>Initialisation</h3>
+<p>
+CUDA initialisation is handled by a <b>cudaComputeContext</b> object. In the
+future, other contexts might be used, such as <b>clComputeContext</b> for 
+OpenCL. 
+The context uses the specified <b>cuda_device</b> to select the appropriate 
+compute device, or 0 if none is specified explicitely. Internally, the CUDA 
+device is then selected by calling cudaSetDevice(). 
+If OpenGL interoperability is required the specified CUDA device has to be 
+set up accordingly. This mode can be selected using the attribute 
+<b>cuda_gl_interop</b> which results in a call to cudaGLSetGLDevice() using 
+the appropriate device identifier. Thus, the compute context is set up
+after the window (OpenGL context) initialisation.
+</p>
+<p>
+To select the behaviour of synchronous CUDA function calls, either choose 
+<b>yield</b>, <b>block</b> or <b>spin</b> for the attribute 
+<b>cuda_sync_mode</b>. 
+Internally this results in a call to cudaSetDeviceFlags() prior to any other
+runtime calls.
+</p>
+
+<h3>Execution Model</h3>
+
+<p>
+The execution model of this extension is based on a special-purpose COMPUTE 
+task, analogous to the common rendering tasks. To integrate the compute 
+tasks into the Equalizer execution model, pipes are referenced from 
+the compound structure just as channels are used for rendering.
+</p>
+<p>
+Equalizer transports the information required to launch a CUDA kernel as it 
+is done with rendering specific parameters, such as the viewport for 
+example. In the context of CUDA based GPU computing this includes
+
+<ul>
+<li>The rank of the ComputeUnit</li>
+<li>The grid of thread blocks [TBD]</li>
+<li>The block parameters [TBD]</li>
+</ul>
+
+It is then up to the developer to manage the kernel-specific launch 
+parameters (offset based on the rank) and data distribution. The former can 
+be implemented using frame data, the latter by using distributed shared 
+memory. Note that we do not have to provide additional synchronisation 
+functionality because __syncthreads() only operates on GPU threads within a 
+particular block to coordinate shared memory access on the GPU. 
+</p>
+<p>
+To coordinate global memory access in a cluster, existing functionality 
+provided by eq::net can be used; i.e., by mapping of shared memory proxy 
+objects. We will provide various concrete examples to illustrate how this 
+can be achieved. The memory transfer from/to the GPU is then performed 
+implicitly by the proxy objects as part of the sync/dirty/commit cycle.
+</p>
+<p>
+Note that when the glinterop hint is specified, compute tasks can be 
+scheduled before and/or after the common rendering tasks. 
+</p>
+
+<h2>API</h2>
+<h3>Data Distribution</h3>
+<!-- /* --><pre>
+    class ComputeContext
+    {
+    };
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<h3>Extension</h3>
+<h3>Example</h3>
+In this example 2 compute units are used, one on a compute-only device, the 
+other interoperating with the rendering:
+<!-- /* --><pre>
+  pipe
+  {
+      name "gpu1"
+
+      window
+      {
+          name "window"
+          channel
+          {
+              name "channel1"
+          }
+      }
+      attributes
+      { 
+          cuda_gl_interop on 
+          cuda_sync_mode block
+          cuda_device 0
+      }
+  }
+  pipe
+  {
+      name "gpu2"
+
+      attributes
+      { 
+          cuda_gl_interop off 
+          cuda_sync_mode block
+          cuda_device 1
+      }
+  }
+  compound
+  {
+      channel "channel1"
+
+      compound
+      {
+          name "mixed-mode compound"
+      }
+
+      compound
+      {
+          name "compute compound"
+      }
+  }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+
+<ol>
+<li><b>CUDA Implementation:</b>
+    Do we use the CUDA driver API or the CUDA runtime API for the 
+    implementation? These APIs are mutually exclusive. 
+    <BR><BR>
+    For now we use the CUDA runtime API. It eases device code management by 
+    providing implicit initialization, context and module management. The 
+    host code generated by nvcc is based on the CUDA runtime API, so 
+    applications that link to this code must use the CUDA runtime API. 
+    Finally, device emulation only works for code written for the runtime 
+    API.
+    <BR><BR>
+</li>
+
+<li><b>Equalizer Integration:</b> 
+    Do we have to introduce new abstractions as equivalent to Windows and
+    Channels?
+    <BR><BR>
+    No. GPU compute tasks can be implemented on pipes.
+    <BR><BR>
+</li>
+
+<li><b>Compound Definition:</b>
+    How are pipes integrated into the compound description?
+    <BR><BR>
+</li>
+
+<li><b>Dynamic Workload Balancing:</b>
+    Do we provide separate timing values to balance the compute tasks, or 
+    should they be integrated into the normal loadbalancing?
+    <BR><BR>
+</li>
+
+<li><b>Kernel Launch Parameters:</b>
+    Should the grid and block parameters be transported by Equalizer, or 
+    should this be done by the programmer using regular frame data? What if 
+    multiple kernels are used in one compute task, do they use the same 
+    launch configuration?
+    <BR><BR>
+</li>
+
+<li><b>Memory Proxies:</b>
+    Should we provide special-purpose implementations of shared memory 
+    proxy objects or just one abstract base class? E.g., a global array?
+    <BR><BR>
+</li>
+
+<li><b>Asynchronous Memory Transfer:</b>
+    How can we use asynchronous communication to hide the latency of the 
+    host-device transfer?
+    <BR><BR>
+</li>
+</ol>
+
+#include "footer.shtml"
+
