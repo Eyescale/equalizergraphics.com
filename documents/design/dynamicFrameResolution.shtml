@@ -8,7 +8,7 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
-  State: Design
+  State: Implemented in 0.9
 </p>
 
 <h2>Overview</h2>
@@ -45,10 +45,6 @@
 
 <h2>Internal API</h2>
 <!-- /* --><pre>
-  void eq::server::Compound::setResolution( const vmml::Vector2i size );
-  
-  void eq::server::Compound::setFramerate( const float framerate );
-  float eq::server::Compound::getFramerate() const;
 </pre><!-- */ -->
 
 <h2>File Format</h2>
@@ -56,8 +52,11 @@
   compound
   {
       channel    "destination"
-      framerate  float
-      wall {...}
+      DFR_equalizer # adapt ZOOM to achieve constant framerate
+      {
+          framerate float # target framerate
+          damping float   # 0: no damping, 1: no changes
+      }
 
       compound {} // further decomposition possible
   }
@@ -66,10 +65,7 @@
 <a name="Issues"></a>
 <h2>Open Issues</h2>
 <p>
-  Configuration of FBO size, i.e., max PVP for rendering.
-</p>
-<p>
-  DVR load-balancer?
+  None
 </p>
 
 #include "footer.shtml"

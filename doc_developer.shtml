@@ -98,6 +98,11 @@
   <li><a href="/documents/design/view.html">Layout API</a>
     provides a way to configure projection surfaces with logical layouts and
     multiple observers.</li>
+  <li><a href="/documents/design/dynamicFrameResolution.html">Dynamic Frame
+    Resolution (DFR)</a> provides a constant framerate at the expense of visual
+    quality.</li>
+  <li><a href="/documents/design/floatingPointPipeline.html">Floating-point
+      pipeline</a> adds support for float16 and float32 visuals.</li>
 </ul>
 
 <h3>Version 0.6</h3>

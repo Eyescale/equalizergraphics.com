@@ -122,7 +122,8 @@
 </p>
 
 <h2>Object Typing</h2>
-<p>Design only:</p>
+<p>Object typing can easily be done by the application. So far no use case has
+  emerged where Equalizer should do object typing, as described below:</p>
 <pre>
   Provide type with objects: 
       virtual uint32_t Object::getTypeID() const { return EQ_ID_INVALID; }
@@ -135,7 +136,9 @@
 </pre>
 
 <h2>Multi-Buffered Objects</h2>
-<p>Design only!</p>
+<p>Multi-buffering of objects provides each thread with a potentially different
+  version of the object, while optimizing memory requirements when two threads
+  happen to use the same version of an object. Below is the current design:</p>
 <h3>Requirements</h3>
 <pre>
   - each thread has its own version.
