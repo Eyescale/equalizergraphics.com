@@ -67,13 +67,13 @@
             you at Siggraph Asia!</b></a>
       </center></div>
 #endif
-      <!-- What's new? -->
+      <!-- What is new? -->
       <div class="subnavigation"><center>
-          <b>What's New?</b><br>
+          <b>What is new?</b><br>
           <a href="/changes.html">Latest Website Changes</a><br>
           <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/?view=log">Latest
             Source Code Changes</a><br>
-          <a href="http://pogl.wordpress.com/">Developer's Blog</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
           <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
       </center></div>
       <!-- Poll  -->

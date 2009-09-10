@@ -1,0 +1,178 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Multicast Data Transfer
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
+  State: Design<br/>
+</p>
+
+<h2>Overview</h2>
+<p>
+  This document explores the usage of multicast or broadcast to speed up
+  one-to-many communication in Equalizer, i.e., the data distribution
+  for <code>eq::net::Object</code>.
+</p>
+<ul>
+  <li><a href="http://msdn.microsoft.com/en-us/library/ms740125(VS.85).aspx">Windows
+      XP Implementation</a></li>
+  <li><a href="http://developer.novell.com/wiki/index.php/OpenPGM">Linux/OSS
+      Implementation</a></li>
+</ul>
+
+<h2>Requirements</h2>
+<ul>
+  <li>Optional usage of a many-to-one network protocols</li>
+  <li>Reliable and in-order data transmission</li>
+  <li>Usage of point-to-point and many-to-one communication for one data
+    transfer, e.g., to update clients within the subnet and outside.</li>
+  <li>High performance, target should be 80% speed when distributing to 10
+    clients compared to one point-to-point transfer.</li>
+  <li>Usage of many-to-one communication for:
+    <ul>
+      <li><code>eq::net::Object</code> mapping</li>
+      <li><code>eq::net::Object::commit</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Multicast Primer</h2>
+<p>
+  A multicast group is defined by the IPv4 multicast address. A multicast sender
+  binds and connects a socket to the multicast address in order to send data to
+  all multicast receivers. A multicast receiver listens on the multicast
+  address, accepts a new sender which will return a handle (file descriptor) to
+  receive data from the sender.
+</p>
+
+<h2>Design</h2>
+<h3>Object Mapping</h3>
+<div class="float_right">
+  <a href="/documents/design/images/objectSync.png">
+    <img src="/documents/design/images/objectSync-small.jpg" 
+         alt="Object Synchronization Diagram (0.9)"/></a>
+  <div class="label">Object Synchronization Diagram (0.9)</div>
+</div>
+<p>
+  Object mapping is requested by the slave instance. The master instance does
+  not know beforehand the list of slaves, and can therefore not optimize the
+  object mapping in the current implementation.
+</p>
+<p>
+  In order to overcome this limitation, there are two possibilities: A per-node
+  object instance data cache or deferring the initialization be separating it
+  from the object mapping.
+</p>
+<p>
+  When using an object instance data cache, the master instance broadcasts the
+  object instance data to the first slave node mapping the object. Each node
+  receiving the data will enter it into its own cache. Subsequent slave nodes
+  use the instance data from the cache and only need a registration handshake
+  with the master instance.
+</p>
+<p>
+  When using a delayed initialization, no data is transmitted during
+  mapping. The master instance registers the slave nodes. The first slave node
+  will explicitely request the initialization data at a later time (before the
+  first sync?), upon which the master will broadcast the information to all
+  known slaves.
+</p>
+
+<h4>Instance Cache</h4>
+<div class="float_right">
+  <a href="/documents/design/images/objectSyncCache.png">
+    <img src="/documents/design/images/objectSyncCache-small.jpg" 
+         alt="Object Synchronization Diagram using Caching"/></a>
+  <div class="label">Object Synchronization Diagram using Caching</div>
+</div>
+<p>
+  Caching instance data has a performance penalty for the cache management and
+  multicast data transfer. Multicast transfer has to be carefully selected to
+  not overload the network if multiple Equalizer session run within the same
+  subnet. The caching algorithm needs to yield high hit rates to avoid
+  re-broadcasting instance data and conservative memory usage (instance data is
+  typically only needed during initialization of a new model).
+</p>
+<p>
+  To optimize instance data broadcast, slave instance have to explicitely
+  declare interest in a certain type of data. A set of objects belongs to the
+  same type of data, typically all scene graph nodes of one model have the same
+  type, but scene graph nodes of different models have different types. Each
+  render client subscribes to instance data broadcasts of the model it is
+  currently mapping, and unsubscribes after all model data has been mapped.
+</p>
+<!-- /* --><pre>
+  ObjectCache& Session::getObjectCache();
+  uint32_t Object::getType() const;
+  class ObjectCache
+  {
+  public:
+      void request( const uint32_t type );
+      void ignore( const uint32_t type );
+
+  private:
+      stde::hash_map< uint32_t, NodeVector > _registrations;
+  };
+</pre><!-- */ -->
+
+<h4>Delayed Initialization</h4>
+<p>
+  The delayed initialization decouples the registration from the initialization
+  during mapping. This allows the master to send the initialization data to all
+  registered slave instances on the first initialization request.
+</p>
+<p>
+  The main issue with delayed initialization is that it does not have a lot of
+  potential for the typical hierarchical data structures used in scene
+  graphs. In order to register children of a given node, the node has to be
+  initialized, which causes the registration and mapping to happen almost at the
+  same time.
+</p>
+
+<h3>Object Commit</h3>
+<p>
+  During commit time, all receivers are know. The master needs to build a
+  connection list containing the multi-point connection(s) to the 'local'
+  clients and the point-to-point connections to the 'remote' clients.
+</p>
+
+<h2>API</h2>
+<p>
+</p>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  node
+  {
+      connection { type TCPIP }
+      connection { type PGM hostname "239.255.42.42" }
+  }
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+<!-- /* --><pre>
+  Benchmark PGM on Windows
+  Implement PGM Connection
+    readFD is a listening socket FD
+    writeFD is a connected socket FD to group
+    accept returns new connected PGM connection for each sender
+      readFD is FD returned by accept
+      writeFD is shared with listening socket?
+  Node::connect( peer )
+    search peer for PGM connections corresponding to our PGM connection
+    activate peer PGM connection?
+</pre><!-- */ -->
+
+<h2>Restrictions</h2>
+<p>
+</p>
+
+<h2>Issues</h2>
+<h3>1. ?</h3>
+<p>
+</p>
+#include "footer.shtml"
