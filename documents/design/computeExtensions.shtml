@@ -121,8 +121,8 @@ example. In the context of CUDA based GPU computing this includes
 
 <ul>
 <li>The rank of the ComputeUnit</li>
-<li>The grid of thread blocks [TBD]</li>
-<li>The block parameters [TBD]</li>
+<li>The number of blocks (grid dimension) [TBD]</li>
+<li>The block parameters (block size) [TBD]</li>
 </ul>
 
 It is then up to the developer to manage the kernel-specific launch 
