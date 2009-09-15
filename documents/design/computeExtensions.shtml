@@ -8,7 +8,6 @@
 
 <p>
 Author: <a href="mailto:philippe.robert@gmail.com">philippe.robert@gmail.com</a><br/>
-Version: last modified date: September 10, 2009<BR>
 Status: Request for discussion<BR>
 Dependencies: CUDA (libcuda, libcudart)[, OpenCL]<BR>
 </p>
@@ -44,8 +43,8 @@ implementation.
 <p>
 <center>
 <img src="images/computeClasses.png"><BR><BR>
-Overview class diagram (aside from AGL we currently also support glX and 
-WGL)
+Figure 1: Overview class diagram (aside from AGL we currently also support 
+glX and WGL)
 </center>
 </p>
 <p>
@@ -61,7 +60,20 @@ CUDA and OpenCL, and moreover we can avoid introducing another object
 hierarchy in parallel to the current pipe - window - channel model.
 As a consequence, we can simply use specific attributes on the pipe to set 
 up the <b>ComputeContext</b> that provides the interface to either CUDA or 
-OpenCL.
+OpenCL; see Figure 1.
+</p>
+<p>
+<i>
+In this context it would make sense to change the notion of a pipe into a
+more generic device abstraction, which can represent a GPU, a CPU, or any 
+other accelerator. 
+Alternatively, we could introduce other device abstractions in parallel to
+the pipe. This would be far less elegant, though, and add further complexity
+to the configuration file.
+Furthermore, a natural extension would then be to allow an arbitrary
+number of threads per device - imagine a multi-core CPU w/ hyperthreading, 
+for example.
+</i>
 </p>
 
 <h2>Internal Changes</h2>
@@ -84,6 +96,7 @@ two different use-cases:
        GPU or a designated GPU.</li>
 </ul>
 </p>
+
 <h3>Initialisation</h3>
 <p>
 CUDA initialisation is handled by a <b>cudaComputeContext</b> object. In the
@@ -114,52 +127,81 @@ the common rendering tasks. To integrate the compute tasks into the
 Equalizer execution model, pipes are referenced from the compound structure 
 just as channels are used for rendering.
 </p>
+<p><i>
+In the common case the COMPUTE tasks are part of the Equalizer rendering 
+loop. To decouple the task execution from the rendering we might introduce 
+special-purpose task queues on each compute device (pipe) to schedule 
+asynchronous tasks (following the OpenCL design approach). In this model, 
+synchronisation between tasks can be achieved using fence events, for 
+example. 
+</i></p>
+
 <p>
 Equalizer provides the information required to launch a CUDA kernel as it is
 done with other, rendering specific parameters, such as the viewport for 
-example. In the context of CUDA based GPU computing this includes
+example. In the context of CUDA based GPU computing this is the rank of the
+compute device. It is left to the developer to manage data distribution and 
+kernel-specific launch parameters:
 
 <ul>
-<li>The rank of the ComputeUnit</li>
-<li>The number of blocks (grid dimension) [TBD]</li>
-<li>The block parameters (block size) [TBD]</li>
+<li>The correct offset based on the rank</li>
+<li>The number of blocks (grid dimension)</li>
+<li>The block parameters (block size)</li>
+<li>The shared memory size</li>
 </ul>
 
-It is then up to the developer to manage the kernel-specific launch 
-parameters (offset based on the rank) and data distribution. The former can 
-be implemented using common frame data, the latter by using distributed 
-shared memory. 
-Note that we do not have to provide additional synchronisation functionality
-because __syncthreads() only operates on GPU threads within a particular 
-block to coordinate shared memory access on the GPU. 
+These parameters can be distributed using the common framedata mechanism. 
+Furthermore, we do not have to provide additional synchronisation 
+functionality because <i>__syncthreads()</i> only operates on GPU threads 
+within a particular block to coordinate shared memory access on the GPU. 
 </p>
-<p>
+<p><i>
 Note that when the glinterop hint is specified, compute tasks can be 
 scheduled before and/or after the common rendering tasks. 
-</p>
+</i></p>
 <h3>Shared Memory</h3>
 <p>
-To coordinate global memory access in a cluster we will provide an 
-additional higher-level API targeting the needs of distributed GPU 
-computing applications. These additions will be part of eq::net.
-The memory transfer from/to the GPU is performed implicitly by these
-shared memory objects as part of the sync/dirty/commit 
-cycle.
+Data can either be replicated or partitioned on the participating nodes. In
+case of (full or partial) data replication Equalizer provides a solution to
+synchronise memory changes between participating nodes; i.e., to quickly 
+transfer memory changes from the (GPU-) memory of one node to the (GPU-) 
+memory of another node.
 </p>
-
-<h3>Events</h3>
+<p><i>
+In case of partitioned global data message passing functionality is needed
+to enable the communication between different nodes. This can be achieved
+using a more generalised event system. This is not part of this extension,
+though.
+</i></p>
 <p>
-To optimise the communication between participating nodes we propose an
-extension of the event handling mechanism with the goal to support a more
-generic producer-consumer model; i.e., to support arbitrary node-to-node 
-communication.
+If data is replicated on multiple nodes, a subset of the data might 
+subsequently have to be synchronised at runtime. To guarantee an optimal 
+memory transfer performance a direct node-to-node communication model is 
+established through <b>shared memory proxy objects</b> which handle the 
+mapping and synchronisation of a specific memory range (see Figure 2). 
+The memory transfer from/to the GPU is performed implicitly by the proxy 
+objects as part of the map/sync/dirty/commit cycle.
 </p>
 <p>
-Note that strictly speaking this extension is not part of the GPU computing 
-extension itself, but it is a requirement for more complex GPU computing 
-applications. The details will therefore be part of the separate 
-<a href="eventHandling.shtml">event handling design document</a>.
+<center>
+<img src="images/memproxy.png"><BR><BR>
+Figure 2: Data replication using proxy objects.
+</center>
 </p>
+<p>
+To simplify the initialisation of the proxy objects a global naming 
+directory is used which links custom proxy names to system defined 
+shared memory IDs. This directory is part of the shared data and thus can
+be used by all nodes with only little overhead. 
+In case where the same memory range is modified by more than one node it is 
+up to the application to handle the synchronisation. 
+Please note that even though it is possible to map multiple proxies to the 
+same memory range it is not actually recommended.
+</p>
+<p><i>
+The memory update process could be further optimised using a RMA based 
+network implementation. 
+</i></p>
 
 <h2>API</h2>
 <h3>Data Distribution</h3>
@@ -241,7 +283,7 @@ other interoperating with the rendering:
     Do we have to introduce new abstractions as equivalent to Windows and
     Channels?
     <BR><BR>
-    No. GPU compute tasks can be implemented on pipes.
+    No. GPU compute tasks can be implemented on pipes (devices).
     <BR><BR>
 </li>
 
