@@ -19,8 +19,8 @@
 </p>
 <ul>
   <li><a href="http://msdn.microsoft.com/en-us/library/ms740125(VS.85).aspx">Windows
-      XP Implementation</a></li>
-  <li><a href="http://developer.novell.com/wiki/index.php/OpenPGM">Linux/OSS
+      XP PGM Implementation</a></li>
+  <li><a href="http://developer.novell.com/wiki/index.php/OpenPGM">OpenPGM
       Implementation</a></li>
 </ul>
 
@@ -142,6 +142,7 @@
 
 <h2>API</h2>
 <p>
+  
 </p>
 
 <h2>File Format</h2>
@@ -156,15 +157,50 @@
 <h2>Implementation</h2>
 <!-- /* --><pre>
   Benchmark PGM on Windows
-  Implement PGM Connection
-    readFD is a listening socket FD
-    writeFD is a connected socket FD to group
-    accept returns new connected PGM connection for each sender
-      readFD is FD returned by accept
-      writeFD is shared with listening socket?
-  Node::connect( peer )
-    search peer for PGM connections corresponding to our PGM connection
-    activate peer PGM connection?
+  PGM listening connection
+    o readFD is a listening socket FD
+    o writeFD is a connected socket FD to group
+  PGM connected connection
+    o readFD is result from accept
+    o writeFD is shared with listening connection
+
+  Node::connect( peer, TCPConnection )
+    search peer for PGM connection description for our PGM connection(s)
+     -> send NodeID to PGM connection, creates connected connection on peer
+  
+  Node::_handleConnect
+    accept new connection
+    if new connection is PGM connection
+      read peer node id from new connection
+      find existing, connected node
+      set new PGM connection on node
+
+  *MasterCM::_cmdCommit
+    DataOStream::enable( slaves )
+      prefer and filter duplicate PGM connections 
+      [Opt: Cache result in MasterCM?]
+
+  Session::mapObject
+    mapObjectNB
+      lookup and pin object instance data in cache
+      send SubscribeObject packet with known instance version
+    mapObjectSync
+      wait on SubscribeObjectReply
+      retrieve and unpin object instance data from cache
+      Object::applyMapData( instance data )
+
+  Session::_cmdSubsribeObject
+    send SubscribeObjectSuccess
+    Object::addSlave( nodeID, cachedVersion )
+      if cachedVersion != neededVersion
+        send neededVersion w/ nodeID
+      ...
+  
+  Session::_cmdInstanceData
+    if nodeID is ours
+      add and ping instance in cache
+    else
+      potentially add unpinned instance to cache
 </pre><!-- */ -->
 
 <h2>Restrictions</h2>
@@ -172,7 +208,47 @@
 </p>
 
 <h2>Issues</h2>
-<h3>1. ?</h3>
+<h3>1. How are late joins to the multicast group handled, e.g., caused by a
+  layout switch?</h3>
 <p>
+  Resolved: The Equalizer implementation has to ensure that no application code
+  is executed during node initialization and exit.
 </p>
+<p>
+  A layout switch currently ensures this partly. The eq::Config finishes all
+  frames on a layout switch in startFrame. The application and all render
+  clients have to be blocked until eq::server::Config::_updateRunning is
+  finished.
+</p>
+
+<h3>2. How are the 'cache enable' requests synced during rendering, e.g., when
+  running in DPlex?</h3>
+<p>
+  Open
+</p>
+<p>
+  Option 1: The application has to call finishAllFrames, which will cause the
+  render clients to restart almost simultaneously.
+</p>
+<p>
+  Option 2: The application can synchronize all or a subset of the clients
+  without blocking the rest or the application.<br>
+  The issues is what to sync: Most of the data-to-be-mapped is view-specific,
+  e.g., the model, and might be shared among multiple views.
+</p>
+
+<h3>3. Which network adapter is used in multi-network hosts?</h3>
+<p>
+  Open: probably another connection parameter is needed.
+</p>
+<p>
+  By default, the first interface is used on Windows XP
+  (<a href="http://msdn.microsoft.com/en-us/library/ms739175(VS.85).aspx">MSDN
+    doc</a>), but the RM_SET_SEND_IF socket option can be used to define another
+  interface by IP address
+  (<a href="http://msdn.microsoft.com/en-us/library/ms738591(VS.85).aspx">MSDN
+    doc</a>), probably using the interface's unicast address (to be verified).
+</p>
+
+
 #include "footer.shtml"
