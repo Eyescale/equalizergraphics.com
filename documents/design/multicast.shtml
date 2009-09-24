@@ -198,7 +198,7 @@
   
   Session::_cmdInstanceData
     if nodeID is ours
-      add and ping instance in cache
+      add and pin instance in cache
     else
       potentially add unpinned instance to cache
 </pre><!-- */ -->
