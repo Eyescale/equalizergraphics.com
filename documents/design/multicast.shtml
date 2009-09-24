@@ -152,7 +152,7 @@
   node
   {
       connection { type TCPIP }
-      connection { type PGM hostname "239.255.42.42" }
+      connection { type MCIP hostname "239.255.42.42" port 4242 }
   }
 </pre><!-- */ -->
 
