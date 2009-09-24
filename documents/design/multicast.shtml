@@ -19,7 +19,9 @@
 </p>
 <ul>
   <li><a href="http://msdn.microsoft.com/en-us/library/ms740125(VS.85).aspx">Windows
-      XP PGM Implementation</a></li>
+      XP PGM Implementation</a> (Install Control Panel -&gt; Add or Remove
+      Programs -&gt; Add or Remove Windows Components -&gt; Message
+      Queueing)</li>
   <li><a href="http://developer.novell.com/wiki/index.php/OpenPGM">OpenPGM
       Implementation</a></li>
 </ul>

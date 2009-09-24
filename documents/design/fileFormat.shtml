@@ -57,7 +57,7 @@ global
      EQ_CONNECTION_SATTR_LAUNCH_COMMAND       string
      EQ_CONNECTION_CATTR_LAUNCH_COMMAND_QUOTE 'character'
      EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
-     EQ_CONNECTION_IATTR_TCPIP_PORT           unsigned
+     EQ_CONNECTION_IATTR_PORT                 unsigned
      EQ_CONNECTION_SATTR_PIPE_FILENAME        string
      EQ_CONNECTION_IATTR_LAUNCH_TIMEOUT       unsigned
      EQ_CONFIG_FATTR_EYE_BASE                 float
@@ -87,8 +87,8 @@ server
     connection # 0-n times, listening connections of the server
     {
         type       TCPIP | SDP | PIPE
-        TCPIP_port unsigned
-        PIPE_filename string
+        port       unsigned # TCPIP, SDP
+        filename   string   # PIPE
         hostname   string
     }
 
@@ -107,9 +107,9 @@ server
             connection # 0-n times, possible connections to this node
             {
                 type          TCPIP | SDP | PIPE
-                TCPIP_port    unsigned
+                port          unsigned
                 hostname      string
-                PIPE_filename string
+                filename      string
                 command       string      # render client launch command
                 command_quote 'character' # launch command argument quote char
                 timeout       unsigned    # timeout in milliseconds for launch
@@ -328,14 +328,14 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       global
       {
-          EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
-          EQ_CONNECTION_SATTR_PIPE_FILENAME        string
+          EQ_CONNECTION_IATTR_TYPE            PIPE
+          EQ_CONNECTION_SATTR_FILENAME        string
       }
 
-      connection <
+      connection
       {
-        type       TCPIP | SDP | PIPE
-        PIPE_filename string
+        type     PIPE
+        filename string
       }
     </pre><!-- */ -->
   </li>
@@ -615,7 +615,7 @@ observer-ref: 'string' | 'index'
           connection # 0-n times, possible connections to this node
           {
               type          TCPIP | SDP
-              TCPIP_port    unsigned
+              port          unsigned
               hostname      string
               command       string      # render client launch command
               command_quote 'character' # launch command argument quote char
