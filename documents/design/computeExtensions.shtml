@@ -18,6 +18,12 @@ This extension proposes some modifications to Equalizer which enable the
 integration of GPU computing tasks into the programming and execution model 
 of Equalizer.
 </p>
+<i>
+One step further would be the integration of generic compute tasks, not 
+limited to GPU computing ("throughput computing"). For example to support 
+software based rendering on both CPUs and GPUs or compute intensive HPC 
+tasks in a supercomputing centre.
+</i>
 <h3>Requirements</h3>
 <p>
 <ul>
@@ -53,7 +59,9 @@ device; i.e., a host thread may have only one CUDA device context current
 at a time. To support multiple devices multiple host threads are thus 
 required. This is a perfect match to the pipe abstraction of Equalizer. 
 On the other hand, since GPU computing does not perform any rendering and 
-as such does not rely on a drawable, the window abstraction does not fit. 
+as such does not rely on a drawable, the window abstraction does not fit
+(software based rendering is the exception here, since this requires some 
+soft of framebuffer abstraction). 
 Instead we use the pipe itself to execute the COMPUTE tasks defined in the 
 compound description. This fits naturally to the design approach of both 
 CUDA and OpenCL, and moreover we can avoid introducing another object 
@@ -65,11 +73,8 @@ OpenCL; see Figure 1.
 <p>
 <i>
 In this context it would make sense to change the notion of a pipe into a
-more generic device abstraction, which can represent a GPU, a CPU, or any 
+more generic device abstraction which can represent a GPU, a CPU, or any 
 other accelerator. 
-Alternatively, we could introduce other device abstractions in parallel to
-the pipe. This would be far less elegant, though, and add further complexity
-to the configuration file.
 Furthermore, a natural extension would then be to allow an arbitrary
 number of threads per device - imagine a multi-core CPU w/ hyperthreading, 
 for example.
@@ -287,8 +292,14 @@ other interoperating with the rendering:
     <BR><BR>
 </li>
 
+<li><b>Generic Compositing:</b> 
+    Can we provide a generic compositing solution for arbitrary chunks of
+    memory (think of software based rendering)?
+    <BR><BR>
+</li>
+
 <li><b>Compound Definition:</b>
-    How are pipes integrated into the compound description?
+    How are generic devices/pipes integrated into the compound description?
     <BR><BR>
 </li>
 
