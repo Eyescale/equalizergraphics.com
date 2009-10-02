@@ -54,14 +54,14 @@ State: Implemented
 global
 {
      EQ_CONNECTION_SATTR_HOSTNAME             string
-     EQ_CONNECTION_SATTR_LAUNCH_COMMAND       string
-     EQ_CONNECTION_CATTR_LAUNCH_COMMAND_QUOTE 'character'
      EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
      EQ_CONNECTION_IATTR_PORT                 unsigned
      EQ_CONNECTION_SATTR_PIPE_FILENAME        string
-     EQ_CONNECTION_IATTR_LAUNCH_TIMEOUT       unsigned
      EQ_CONFIG_FATTR_EYE_BASE                 float
+     EQ_NODE_SATTR_LAUNCH_COMMAND             string
+     EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
      EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
+     EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
      EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
      EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
      EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
@@ -110,13 +110,13 @@ server
                 port          unsigned
                 hostname      string
                 filename      string
-                command       string      # render client launch command
-                command_quote 'character' # launch command argument quote char
-                timeout       unsigned    # timeout in milliseconds for launch
             }
             attributes
             {
                 thread_model ASYNC | DRAW_SYNC | LOCAL_SYNC
+                launch_command       string      # render client launch command
+                launch_command_quote 'character' # command argument quote char
+                launch_timeout       unsigned    # timeout in milliseconds
             }
             pipe # 1-n times
             {
@@ -324,6 +324,25 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Launch parameter cleanup after 0.9 changed launch parameters to:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_NODE_SATTR_LAUNCH_COMMAND             string
+          EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
+          EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
+      }
+      node
+      {
+          attributes
+          {
+              launch_command       string      # render client launch command
+              launch_command_quote 'character' # command argument quote char
+              launch_timeout       unsigned    # timeout in milliseconds
+          }
+      }
+    </pre><!-- */ -->
+  </li>  
    <li>Local named pipe communcation support added:
     <!-- /* --><pre>
       global
