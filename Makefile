@@ -132,6 +132,7 @@ FILES = \
 	news/EgBof.html \
 	news/EqualizerNewsJuly07.html \
 	news/EqualizerNewsDecember07.html \
+	news/Newsletter200910 \
 	news/Release_0.1.html \
 	news/Release_0.2.html \
 	news/Release_0.3.html \

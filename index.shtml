@@ -44,21 +44,24 @@
   benefit from the following features:
 </p>
 <ul>
-  <li><a href="/configuration.html">Runtime Configurability</a>: An Equalizer
-    application can run optimally on any configuration, from laptops to large
-    scale visualization clusters. The application is configured flexibly at
-    runtime using a simple configuration file.</li>
-  <li><a href="/scalability.html">Runtime Scalability</a>: An Equalizer
+  <li><a href="/configuration.html">Flexibility</a>: An Equalizer application is
+    configured at run-time, allowing the same executable to run optimally on any
+    configuration -- from laptops to large scale visualization clusters, driving
+    a single window or a six-sided CAVE while using one or multiple graphics
+    cards to render each view.</li>
+  <li><a href="/scalability.html">Large Data Visualization</a>: An Equalizer
     application can aggregate the power of multiple processors, graphics cards
     and computers to scale the rendering performance, visual quality and display
-    size.</li>
-  <li><b>Distributed Execution:</b> Equalizer applications can be written to
-    support cluster-based execution. The task of distributing the application
-    data is simplified through versioned, distributed objects.</li>
-  <li><a href="/documents/design/immersive.html">Support for Stereo and
-      Immersive Environments:</a> Equalizer supports both active and passive
-    stereo rendering, as well as head tracking used in Virtual Reality
-    installations.</li>
+    size. This allows virtually any data set to be rendered at any resolution at
+    interactive framerates, given sufficient hardware resources.</li>
+  <li><a href="/documents/design/immersive.html">Support for Virtual
+    Reality:</a> Equalizer applications can run seamlessly in Virtual Reality
+    installations using active and passive stereo rendering, as well as head
+    tracking for one or multiple observers.</li>
+  <li><b>Data Distribution:</b> Equalizer simplifies and optimizes the data
+    distribution needed for cluster-based execution. The versioned distributed
+    objects offered be Equalizer are optimally suited for interactive rendering
+    of dynamic data sets on large-scale visualization clusters.</li>
 </ul>
 
 <h2>Compatibility</h2>
@@ -109,8 +112,9 @@
 <p>
   Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of
   Apple Computer, Inc. OpenGL&reg; is a trademark of Silicon Graphics,
-  Inc. Windows&reg; is a trademark of Microsoft Corporation. All other products
-  named are trademarks of their respective owners.
+  Inc. Windows&reg; is a trademark of Microsoft Corporation. The CAVE is a
+  registered Trademark of the Board of Trustees of the University of Illinois at
+  Chicago. All other products named are trademarks of their respective owners.
 </p>
 </div>
 

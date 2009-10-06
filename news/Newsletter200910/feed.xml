@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:B392994A-0D53-462D-9049-A70164F30B4E</id>
+ <title>Page list Atom feed</title>
+ <updated>2009-10-06T11:31:02+02:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:2AD897A8-7188-411B-96CA-13FB4541ABC3</id>
+  <title>October 2009</title>
+  <title xmlns="urn:iweb:">October 2009</title>
+  <in-navbar xmlns="urn:iweb:">2AD897A8-7188-411B-96CA-13FB4541ABC3</in-navbar>
+  <link rel="alternate" href="October_2009.html"/>
+  <updated>2009-10-06T11:31:02.001+02:00</updated>
+  <content>October 2009</content>
+ </entry>
+</feed>
