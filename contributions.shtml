@@ -21,6 +21,16 @@
   Stefan Eilemann leading the project development.
 </p><div class="flush_left"></div>
 
+<div class="float_left"><a href="http://www.cpvr.ti.bfh.ch/">
+  <img src="images/CPVRLogo.png"
+       alt="Computer Perception and Virtual Reality (CPVR) research group, Berne University of Applied Sciences"></a>
+</div>
+<p>
+  The Computer Perception and Virtual Reality (CPVR) research group of the Berne
+  University of Applied Sciences is using Equalizer for their Virtual Reality
+  research, and currently maintains the OpenSceneGraph integration.
+</p><div class="flush_left"></div>
+
 <h2>Contribute to Equalizer!</h2>
 <p>
   Equalizer is an open source project, and therefore the open source community

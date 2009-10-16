@@ -1,0 +1,71 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Pixel Compounds
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  This features adds support for a new type of decomposition and recomposition,
+  whereby each contributing channel renders one or multiple subsamples for
+  full-scene anti-aliasing (FSAA).
+</p>
+<p>
+  Applications might already do multi-pass software FSAA, either during
+  rendering or when the application is idle. Equalizer does not yet have a
+  notion of idle/non-idle rendering.
+</p>
+
+<h2>Design</h2>
+<p>
+  The application will do the application of the frustum jitter, since it is the
+  one which knows how many FSAA samples are desired. Therefore it needs to know
+  in Channel::frameDraw which sample out of how many it should render.
+</p>
+<p>
+  The default implementation of Channel::applyFrustum will use the FSAA sample
+  description to compute the jitter using a pre-defined lookup table. It will
+  add this jitter to the frustum supplied by getFrustum.
+</p>
+<p>
+  Applications which have their own SWAA settings will use the FSAA sample
+  description to calculate how many passes with which samples have to be
+  rendered, e.g., if it desires to render 16 samples on a 4-time decomposition,
+  the application will render 4 passes out of a 16-value jitter lookup table on
+  each channel.
+</p>
+<p>
+  It is the application's responsibility to provide a blended result of the
+  sub-passes on each channel. This should not be an overhead, since the
+  application could already compute the accumulation and averaging before.
+</p>
+<p>
+  Compositing
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+    compound
+    {
+        ???
+    }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<p>
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
