@@ -77,6 +77,13 @@ Eq changes:
     glFrustum( ... );
   Compositor?
 
+  Channel::getJitter
+    Compute normalized jitter area (idle step, channel index)
+    Compute pixel size on near plane (frustum)
+    Compute random sample position in normalized coordinates
+    jitter = jitter area * pixel size * random position
+    Attn: Floating point rounding errors!
+
 --------------------------------------------------
 Current idle AA in Eq application:
 
