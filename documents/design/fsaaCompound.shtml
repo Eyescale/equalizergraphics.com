@@ -52,7 +52,7 @@ State: Design
 
 <h2>API</h2>
 <!-- /* --><pre>
-  vmml::Vector2f Channel::getJitter( ??? ) const;
+  vmml::Vector2f Channel::getJitter() const;
   vmml::Vector2i Channel::getSubpixel() const;
 </pre><!-- */ -->
 
@@ -66,10 +66,35 @@ State: Design
 
 <h2>Implementation</h2>
 <!-- /* --><pre>
-Modify eqPly to do idle SWAA
-  TBD
+Modify eqPly to do idle SWAA:
 
-Eq changes:
+  EqPly
+    static const uint32_t sampleSize
+
+  FrameData
+    uint32_t _idleStep
+    bool     _idleMode
+  
+  Channel
+    FBO*     _accumBuffer
+    uint32_t _primeNumberTable
+
+  Config::startFrame
+    if view is idle
+      idleMode = true
+      idleStep++
+    else
+      idleMode = false
+    commit frame data
+
+  Channel::frameViewFinish
+    frameAssemble is done and back buffer is ready
+    if view is idle
+      if first idle step
+        reset accum buffer
+      accumulate back buffer to accum buffer
+      compute average in back buffer
+
   Channel::applyFrustum
     frustum = getFrustum()
     jitter = getJitter();
@@ -77,7 +102,16 @@ Eq changes:
     glFrustum( ... );
   Compositor?
 
-  Channel::getJitter
+  Channel::_lookupPrimeNumberTable( channel ID )
+
+  Channel::_generateFloatRand( begin, end )
+
+  Channel::_computeJitterStep
+    subset_size = ( sample_size * sample_size ) / nb_channels
+    idx =  ( idle_step * getPrimeNumber()) % subset_size
+    global_jitter = ( id_channel * subset_size ) + idx
+
+  Channel::_computeJitter
     Compute normalized jitter area (idle step, channel index)
     Compute pixel size on near plane (frustum)
     Compute random sample position in normalized coordinates
@@ -139,6 +173,9 @@ Idle AA with AA compounds:
 <p>
   Open Issue: the function itself. The jitter values for all channels in the
   first pass should be evenly distributed over the total subpixel grid.
+</p>
+<p>
+  Idea: Divide the sample grid into the number of channels to get a subset of pixels for each channel. For each pass, compute (pass_number * rnd_prime_number) % size to get kind of a randomized distribution. The size parameter is the size of the pixel subset for the current channel.
 </p>
 
 #include "footer.shtml"
