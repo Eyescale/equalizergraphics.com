@@ -18,10 +18,13 @@
 
 <p>
   Equalizer provides facilities to ease the data distribution of an
-  application. The central piece is the <code>eq::net::Object</code> base class,
-  from which distributed objects are derived. Objects become accessable by
-  making them known to a session. The example code shipped with Equalizer
-  contains examples of distributed objects.
+  application. The central piece is
+  the <a href="/documents/Developer/API/classeq_1_1net_1_1Object.html">eq::net::Object</a>
+  base class, from which distributed objects are derived. Objects become
+  accessable by making them known to a session. The example code shipped with
+  Equalizer contains examples of distributed objects. The Programming Guide
+  explains distributed objects in more detail, including the easier to use
+  variant <a href="/documents/Developer/API/classeq_1_1Object.html">eq::Object</a>.
 </p>
 
 <h2>Classification</h2>
@@ -79,9 +82,9 @@
     is identical, that is, only instance data is serialized. Previous instance
     data is saved to be able to map old versions.</li>
   <li><b>DELTA</b> The object is versioned, and the delta data is typically
-    smaller than the instance data. Both the delta and instance data are
-    serialized and saved to map old versions.</li>
-  <li><b>DELTA_UNBUFFERED</b> The object is versioned, and delta data is used to
+    smaller than the instance data. Previous instance data is saved to be able
+    to map old versions.</li>
+  <li><b>UNBUFFERED</b> The object is versioned, and delta data is used to
     update slave instances. No data is stored, and no previous versions can be
     mapped. The instance data is serialized whenever a new slave instance is
     mapped.</li>
@@ -90,9 +93,7 @@
 <h2>Static Objects</h2>
 <p>
   The implementation of unversioned objects is straight-forward and requires the
-  application to either declare the distributed data using
-  <code>Object::setInstanceData</code> or to implement 
-  <code>Object::getInstanceData</code>.
+  application to implement <code>Object::getInstanceData</code>.
 </p>
 
 <h2>Versioned Objects</h2>
@@ -101,9 +102,7 @@
   indicate how changes are to be handled. They possibly have to implement, in
   addition to unversioned objects, the methods <code>Object::pack</code>
   and <code>Object::unpack</code> to create or apply a diff from the last
-  version. Alternatively they can declare the location of the data
-  using <code>Object::setDeltaData</code> on both the master and slave
-  instances.
+  version.
 </p><p>
   Objects with the same instance and delta data only distribute instance data
   for each new version, and do not have to implement pack and unpack.
@@ -158,10 +157,6 @@
 </pre>
 
 <h2>Implementation</h2>
-<p>
-  The header file is in 
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/object.h?view=markup">src/lib/net/object.h</a>.
-</p>
 <p>
   Each object has a change manager, which depends on the type of the object and
   its master/slave status. Equalizer implements a change manager for static
