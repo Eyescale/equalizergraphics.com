@@ -121,7 +121,7 @@ Modify eqPly to do idle SWAA:
 --------------------------------------------------
 Current idle AA in Eq application:
 
-  Channel::frameAssemble()
+  Channel::frameViewFinish()
     assemble input frames into back buffer
     if view is idle
       if first idle step
@@ -136,7 +136,7 @@ Current idle AA in Eq application:
     render
 
 Idle AA with AA compounds:
-  Channel::frameAssemble
+  Channel::frameViewFinish()
     if first idle step
       reset accum buffer
     if has more than one jitter step or view is idle
@@ -152,7 +152,17 @@ Idle AA with AA compounds:
       jitter step = idle_step * jitter_grp_size + jitter_offset
     render
 
-
+--------------------------------------------------
+ Add new subpixel parameter in loader
+ Add new subpixel parameter in Compound::InheritData
+ Update subpixel in Compound::updateInheritData
+ Set subpixel in ChannelUpdateVisitor::_setupRenderContext
+ Create getter in eq::Channel
+ Use Channel::getSubpixel for rendering
+   -> step & subpixel groups size?
+ Add subpixel to eq::FrameData
+ Compositor extension?
+ frameAssemble and frameViewFinish logics?
 </pre><!-- */ -->
 
 <a name="Issues"></a>
