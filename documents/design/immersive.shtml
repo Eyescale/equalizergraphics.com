@@ -79,7 +79,7 @@
   with the wall description, are used to compute an OpenGL frustum and the head
   transformation to position the frustum. The default head matrix is an identity
   matrix, thus the default eye positions are <code>( +-eye_base/2, 0, 0
-  )</code>, as show above in the stereoscopic view frusta.
+  )</code>, as shown above in the stereoscopic view frusta.
 </p>
 
 <a name="HMD"></a>

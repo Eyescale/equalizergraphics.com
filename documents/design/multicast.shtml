@@ -153,6 +153,13 @@
   {
       connection { type TCPIP }
       connection { type MCIP hostname "239.255.42.42" port 4242 }
+      connection
+      {
+          type PGM
+          hostname  "239.255.42.42"
+          interface "10.1.1.1"
+          port 4242
+      } 
   }
 </pre><!-- */ -->
 
