@@ -1,0 +1,19 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_RELNOTES
+#define PAGE Release Notes
+#define SUBPAGE Release Notes for Equalizer 0.9.1
+
+#include "header.shtml"
+
+<!-- Release Checklist:
+     [x] src/lib/client/version.h, src/Makefile, src/Doxyfile
+     [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
+     [x] downloads/source.shtml, relnotes.shtml, news.shtml
+     [x] Copy API documentation on website
+     [x] doc/Developer/ProgrammingGuide
+     [x] lulu.com, Google Books
+  -->
+
+#include "../../src/lib/RelNotes.dox"
+
+#include "footer.shtml"

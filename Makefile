@@ -91,6 +91,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.6-rc1.html \
 	documents/RelNotes/RelNotes_0.6.html \
 	documents/RelNotes/RelNotes_0.9.html \
+	documents/RelNotes/RelNotes_0.9.1.html \
 	documents/WhitePapers/Chromium_Equalizer.pdf \
 	documents/WhitePapers/MultiGPU.pdf \
 	documents/WhitePapers/OpenMP_ICC.pdf \
