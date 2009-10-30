@@ -156,11 +156,14 @@ Idle AA with AA compounds:
  Add new subpixel parameter in loader
  Add new subpixel parameter in Compound::InheritData
  Update subpixel in Compound::updateInheritData
+ Update subpixel in CompoundUpdateOutput::_updateOutput
  Set subpixel in ChannelUpdateVisitor::_setupRenderContext
  Create getter in eq::Channel
+ Add subpixel to eq::FrameData (+ setter in the server FrameData)
+ 
  Use Channel::getSubpixel for rendering
    -> step & subpixel groups size?
- Add subpixel to eq::FrameData
+ 
  Compositor extension?
  frameAssemble and frameViewFinish logics?
 </pre><!-- */ -->
@@ -186,6 +189,19 @@ Idle AA with AA compounds:
 </p>
 <p>
   Idea: Divide the sample grid into the number of channels to get a subset of pixels for each channel. For each pass, compute (pass_number * rnd_prime_number) % size to get kind of a randomized distribution. The size parameter is the size of the pixel subset for the current channel.
+</p>
+
+<h3>3. How do I disable FSAA when it's not supported?</h3>
+<p>
+  The window sends an event to the config to disable FSAA idle mode.
+</p>
+<p>
+  MacOSX problem: floating point texture not supported and the use of glAccum needs a different implementation.
+</p>
+
+<h3>4. How do I compute the jitter steps for FSAA compound?</h3>
+<p>
+  The destination channel asks for a new frame instead that the config starts a new frame itself.
 </p>
 
 #include "footer.shtml"
