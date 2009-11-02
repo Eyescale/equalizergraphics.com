@@ -72,35 +72,51 @@ Modify eqPly to do idle SWAA:
     static const uint32_t sampleSize
 
   FrameData
-    uint32_t _idleStep
     bool     _idleMode
-  
+
+  Config
+  	uint32_t _nbFramesAA
+  	
   Channel
     FBO*     _accumBuffer
     uint32_t _primeNumberTable
+    uint32_t _jitterStep
+    uint32_t _nbSteps
 
   Config::startFrame
     if view is idle
       idleMode = true
-      idleStep++
+      nbFramesAA--;
     else
       idleMode = false
     commit frame data
+    
+  Config::handleEvent
+  	get the event IDLE_AA
+  	nbFramesAA = MAX( nbFramesAA, event->jitter )
 
+  Channel::frameViewStart
+    if view is not in idle mode
+      jitter = nbSteps
+      
   Channel::frameViewFinish
     frameAssemble is done and back buffer is ready
     if view is idle
-      if first idle step
-        reset accum buffer
-      accumulate back buffer to accum buffer
-      compute average in back buffer
+      if jitter > 0
+        if first idle step
+          reset accum buffer
+        accumulate back buffer to accum buffer
+        compute average in back buffer
+        jitter--
+      else if jitter == 0
+        put the accum buffer result in the back buffer
+    send event to the config
 
   Channel::applyFrustum
     frustum = getFrustum()
     jitter = getJitter();
     frustum += jitter;
     glFrustum( ... );
-  Compositor?
 
   Channel::_lookupPrimeNumberTable( channel ID )
 
@@ -188,20 +204,28 @@ Idle AA with AA compounds:
   first pass should be evenly distributed over the total subpixel grid.
 </p>
 <p>
-  Idea: Divide the sample grid into the number of channels to get a subset of pixels for each channel. For each pass, compute (pass_number * rnd_prime_number) % size to get kind of a randomized distribution. The size parameter is the size of the pixel subset for the current channel.
+  Idea: Divide the sample grid into the number of channels to get a subset of 
+  pixels for each channel. 
+  For each pass, compute (pass_number * rnd_prime_number) % size to get kind 
+  of a randomized distribution. The size parameter is the size of the pixel 
+  subset for the current channel.
 </p>
 
 <h3>3. How do I disable FSAA when it's not supported?</h3>
 <p>
-  The window sends an event to the config to disable FSAA idle mode.
+  Depending on the OpenGL version, we run either the glAccum method either the FBO'str one.
+  On MacOSX, a different implementation of glAccum is needed.
 </p>
 <p>
-  MacOSX problem: floating point texture not supported and the use of glAccum needs a different implementation.
+  MacOSX problem: floating point texture not supported and the use of glAccum 
+  needs a different implementation.
 </p>
 
 <h3>4. How do I compute the jitter steps for FSAA compound?</h3>
 <p>
-  The destination channel asks for a new frame instead that the config starts a new frame itself.
+  The destination channel asks for a new frame instead that the config starts a 
+  new frame itself. Each destination channel sends an event to the config which 
+  takes the maximum number of steps needed and enables to start a new frame.
 </p>
 
 #include "footer.shtml"
