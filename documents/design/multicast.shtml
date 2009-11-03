@@ -195,21 +195,20 @@
       send SubscribeObject packet with known instance version
     mapObjectSync
       wait on SubscribeObjectReply
-      retrieve and unpin object instance data from cache
+      retrieve and unpin pinned object instance data from cache
       Object::applyMapData( instance data )
 
   Session::_cmdSubsribeObject
     send SubscribeObjectSuccess
-    Object::addSlave( nodeID, cachedVersion )
-      if cachedVersion != neededVersion
-        send neededVersion w/ nodeID
+    Object::addSlave( nodeID, cachedVersionStart, cachedVersionEnd )
+      send missing versions
       ...
+      return first version to apply
   
-  Session::_cmdInstanceData
+  Session::_cmdInstance
     if nodeID is ours
-      add and pin instance in cache
-    else
-      potentially add unpinned instance to cache
+      forward to object instance
+    potentially add to cache
 </pre><!-- */ -->
 
 <h2>Restrictions</h2>

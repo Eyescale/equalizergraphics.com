@@ -152,6 +152,20 @@ Current idle AA in Eq application:
     render
 
 Idle AA with AA compounds:
+  Channel::frameAssemble()
+    if input frames have more than one jitter step
+      composite images using accumulation
+      -> need to know jitter state of current framebuffer
+
+    if( more than one jitter decomp [self+input frames] )
+       assemble all input frames with self jitter decomp
+       load accum buffer
+       for each remaining jitter decomp
+         assemble all input frames with jitter decomp
+         add accum buffer
+       return accum buffer
+       
+
   Channel::frameViewFinish()
     if first idle step
       reset accum buffer
@@ -227,6 +241,74 @@ Idle AA with AA compounds:
   new frame itself. Each destination channel sends an event to the config which 
   takes the maximum number of steps needed and enables to start a new frame.
 </p>
+
+<h3>5. How do I decrement the jitter steps done in the current frame?</h3>
+<p>
+  The destination channel might render 0..n jitter steps and receive 0..n jitter
+  steps as input frames during compositing.
+</p>
+<p>
+  We could assume that a subpixel decomposition parameter is set for the
+  destination channel. If the destination channel does a frameDraw, he will
+  decrement the jitter step by the subpixel decomposition size in frameDraw,
+  otherwise he will decrement it by the subpixel decomposition size of the input
+  frames in frameAssemble:
+</p>
+<!-- /* --><pre>
+  Channel::frameStart
+    _subpixelSteps = 0;
+  Channel::frameDraw
+    _subpixelSteps = EQ_MAX( _subpixelSteps, subpixel.size );
+  Channel::frameAssemble
+    for each input frame
+      _subpixelSteps = EQ_MAX( _subpixelSteps, frame.subpixel.size );
+  Channel::frameFinish
+    _jitterSteps -= _subpixelSteps;
+    send event
+</pre><!-- */ -->
+
+<h3>5. How does the accumulation in frameAssemble work together with the one in
+  frameViewFinish?</h3>
+<p>
+  Without any scalability, each destination channel accumulates in idle mode the
+  results of different frames into an accumulation buffer. With scalability,
+  frameAssemble might accumulate the results of different, jittered input
+  frames.
+</p>
+<p>
+  A simple, but non-optimal solution is to assemble and average all jitter steps
+  in frameAssemble, and to transfer the result into the accumulation buffer n
+  times in frameViewFinish:
+</p>
+<!-- /* --><pre>
+  Channel::frameAssemble
+    accumulate all input frames in separate accum buffer
+    return accum buffer to frame buffer
+  Channel::frameViewFinish
+    copy frame buffer _subpixelSteps times into accum buffer
+    _stepsDone += _subpixelSteps;
+    return accum buffer
+</pre><!-- */ -->
+<p>
+  In the optimal case, frameAssemble and frameViewFinish should share the
+  accumulation buffer:
+</p>
+<!-- /* --><pre>
+  Channel::frameDraw
+    set _needsTransfer
+  Channel::frameAssemble
+    if( all input frames have Subpixel::ALL )
+      do normal assembly
+      set _needsTransfer
+    else if for each jitter decomp in input frames
+      assemble all input frames with jitter decomp
+      accumulate result
+      clear _needsTransfer
+  Channel::frameViewFinish
+    if _needsTransfer
+      accumulate FB into accum buffer
+    return accum buffer
+</pre><!-- */ -->
 
 #include "footer.shtml"
 <!-- $Id$ -->
