@@ -151,36 +151,21 @@ Current idle AA in Eq application:
       get idle step # and jitter frustum
     render
 
-Idle AA with AA compounds:
-  Channel::frameAssemble()
-    if input frames have more than one jitter step
-      composite images using accumulation
-      -> need to know jitter state of current framebuffer
+AA compounds without idle AA:
+  eq::Channel::applyFrustum / applyOrtho
+    -> add jitter
+  eq::Channel::frameAssemble
+    Step 1: Do accumulation using GPU:
+      for each jitter decomp in input frames
+        assemble all input frames with jitter decomp
+        accumulate result
+      return result
+    Step 2: Opt: Do accumulate using CPU (later)
 
-    if( more than one jitter decomp [self+input frames] )
-       assemble all input frames with self jitter decomp
-       load accum buffer
-       for each remaining jitter decomp
-         assemble all input frames with jitter decomp
-         add accum buffer
-       return accum buffer
-       
-
-  Channel::frameViewFinish()
-    if first idle step
-      reset accum buffer
-    if has more than one jitter step or view is idle
-      for each jitter step in input frames
-        assemble input frames with jitter step in back buffer
-        accumulate back buffer in accum buffer
-        ++n
-      compute average in back buffer
-      increase application idle steps done by n
-      
-  Channel::frameDraw()
-    jitter step = f(application idle step, Channel jitter param)
-      jitter step = idle_step * jitter_grp_size + jitter_offset
-    render
+AA compounds with idle AA:
+  See also Issue 6.
+  -> extend compositor functions so the accumulation buffer (and state?) can be
+  given as parameter
 
 --------------------------------------------------
  Add new subpixel parameter in loader
@@ -267,7 +252,7 @@ Idle AA with AA compounds:
     send event
 </pre><!-- */ -->
 
-<h3>5. How does the accumulation in frameAssemble work together with the one in
+<h3>6. How does the accumulation in frameAssemble work together with the one in
   frameViewFinish?</h3>
 <p>
   Without any scalability, each destination channel accumulates in idle mode the
@@ -294,20 +279,27 @@ Idle AA with AA compounds:
   accumulation buffer:
 </p>
 <!-- /* --><pre>
-  Channel::frameDraw
-    set _needsTransfer
-  Channel::frameAssemble
+  Channel::frameDraw -
+    set _needsTransfer -
+  Channel::frameViewStart
+    save current pvp
+  Channel::frameAssemble -
+    if( current pvp != saved pvp )
+      use separate accum buffer
+      return accum buffer after assembly
+      set _needsTransfer
+      Q: what if glAccum is used? Disable idle AA for this channel?
     if( all input frames have Subpixel::ALL )
       do normal assembly
       set _needsTransfer
     else if for each jitter decomp in input frames
       assemble all input frames with jitter decomp
       accumulate result
-      clear _needsTransfer
-  Channel::frameViewFinish
-    if _needsTransfer
-      accumulate FB into accum buffer
-    return accum buffer
+      clear _needsTransfer -
+  Channel::frameViewFinish -
+    if _needsTransfer -
+      accumulate FB into accum buffer -
+    return accum buffer -
 </pre><!-- */ -->
 
 #include "footer.shtml"
