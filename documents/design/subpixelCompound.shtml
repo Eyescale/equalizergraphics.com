@@ -52,6 +52,13 @@ State: Design
 
 <h2>API</h2>
 <!-- /* --><pre>
+  class SubPixel
+  {
+  public:
+    uint32_t index;
+    uint32_t size;
+  }
+  
   vmml::Vector2f Channel::getJitter() const;
   vmml::Vector2i Channel::getSubpixel() const;
 </pre><!-- */ -->
@@ -65,92 +72,109 @@ State: Design
 </pre><!-- */ -->
 
 <h2>Implementation</h2>
+
+<h3>Idle SWAA in eqPly</h3>
+
 <!-- /* --><pre>
-Modify eqPly to do idle SWAA:
+  class FrameData
+    bool _idleMode         // idle AA mode
 
-  EqPly
-    static const uint32_t sampleSize
-
-  FrameData
-    bool     _idleMode
-
-  Config
-  	uint32_t _nbFramesAA
+  class Config
+    uint32_t _nbFramesAA   // number of frames left
   	
-  Channel
-    FBO*     _accumBuffer
-    uint32_t _primeNumberTable
-    uint32_t _jitterStep
-    uint32_t _nbSteps
+  class Channel
+    Accum* _accum          // accumulation buffer
+    uint32_t _jitterStep   // current jitter step decrementing
+    uint32_t _totalSteps   // total steps to be done
+    uint32_t _subpixelStep // number of ressources (subpixel.size)
+
+    bool _needsTransfer    // combining idle AA with AA compound
+    PixelViewport _currentPVP // current saved pvp
+
+-------------------------------------------------------------------
 
   Config::startFrame
-    if view is idle
-      idleMode = true
-      nbFramesAA--;
+    if view is idle AA
+      assert( nbFramesAA > 0 )
+      --nbFramesAA
+      set idleMode
     else
-      idleMode = false
+      nbFrames = 0
+      clear idleMode
     commit frame data
     
   Config::handleEvent
-  	get the event IDLE_AA
-  	nbFramesAA = MAX( nbFramesAA, event->jitter )
+    event = get IDLE_AA event
+    nbFramesAA = MAX( nbFramesAA, event->jitter )
+
+  Channel::frameStart
+    if view is not in idle AA mode
+      clear accum
+      reset idle AA
 
   Channel::frameViewStart
-    if view is not in idle mode
-      jitter = nbSteps
-      
+    save _currentPVP
+
+  Channel::frameDraw
+    [...]
+    _subpixelStep = MAX( _subpixelStep, getSubPixel().size )
+    set _needsTransfer
+
+  Channel::frameAssemble
+    if getPVP != _currentPVP
+      if accum doesn't use an FBO
+        warning, idle AA not implemented
+        stop idle AA
+      do normal assembly
+      set _needsTransfer
+    else
+      if all input frames have SubPixel::ALL
+        do normal assembly
+        set _needsTransfer
+      else
+        for each input frame
+          assemble each frame with subpixel decomp
+          accumulate
+        clear _needsTransfer
+
   Channel::frameViewFinish
-    frameAssemble is done and back buffer is ready
-    if view is idle
-      if jitter > 0
-        if first idle step
-          reset accum buffer
-        accumulate back buffer to accum buffer
-        compute average in back buffer
-        jitter--
-      else if jitter == 0
-        put the accum buffer result in the back buffer
-    send event to the config
-
-  Channel::applyFrustum
-    frustum = getFrustum()
-    jitter = getJitter();
-    frustum += jitter;
-    glFrustum( ... );
-
-  Channel::_lookupPrimeNumberTable( channel ID )
-
-  Channel::_generateFloatRand( begin, end )
-
-  Channel::_computeJitterStep
-    subset_size = ( sample_size * sample_size ) / nb_channels
-    idx =  ( idle_step * getPrimeNumber()) % subset_size
-    global_jitter = ( id_channel * subset_size ) + idx
-
-  Channel::_computeJitter
-    Compute normalized jitter area (idle step, channel index)
-    Compute pixel size on near plane (frustum)
-    Compute random sample position in normalized coordinates
-    jitter = jitter area * pixel size * random position
-    Attn: Floating point rounding errors!
-
---------------------------------------------------
-Current idle AA in Eq application:
-
-  Channel::frameViewFinish()
-    assemble input frames into back buffer
-    if view is idle
+    if PVP has changed
+      resize accum buffer
+      clear accum
+      reset idle AA
+    else if idle mode && _needsTransfer
       if first idle step
         reset accum buffer
       accumulate back buffer to accum buffer
-      compute average in back buffer
-    
-      
-  Channel::frameDraw()
-    if view is idle
-      get idle step # and jitter frustum
-    render
+      display average result in back buffer
 
+  Channel::frameFinish
+    if idle mode && _jitterStep > 0
+      _jitterStep -= subpixelStep
+
+    create IDLE_AA event
+    send event to the config
+
+  Channel::applyFrustum
+    if idle mode && _jitterStep > 0
+      jitter = _getJitter();
+      apply jitter vector to frustum
+    else
+      do normal apply frustum
+
+  Channel::_getJitterStep
+    idx = channelID * _totalSteps;
+    idx += ( _jitterStep * primeNumber[channelID] ) % subset_size
+    return ( idx % sampleSize, idx / sampleSize )
+
+  Channel::_getJitter
+    compute pixel size and subpixel size on near plane (frustum)
+    generate random sample position in _getJitterStep() subpixel
+</pre><!-- */ -->
+
+<h3>AA compound in Equalizer</h3>
+
+<!-- /* --><pre>
 AA compounds without idle AA:
   eq::Channel::applyFrustum / applyOrtho
     -> add jitter
@@ -166,22 +190,62 @@ AA compounds with idle AA:
   See also Issue 6.
   -> extend compositor functions so the accumulation buffer (and state?) can be
   given as parameter
+</pre><!-- /* -->
 
---------------------------------------------------
- Add new subpixel parameter in loader
- Add new subpixel parameter in Compound::InheritData
- Update subpixel in Compound::updateInheritData
- Update subpixel in CompoundUpdateOutput::_updateOutput
- Set subpixel in ChannelUpdateVisitor::_setupRenderContext
- Create getter in eq::Channel
- Add subpixel to eq::FrameData (+ setter in the server FrameData)
- 
- Use Channel::getSubpixel for rendering
-   -> step & subpixel groups size?
- 
- Compositor extension?
- frameAssemble and frameViewFinish logics?
+<h4>Server</h4>
+
+<!-- /* --><pre>
+loader
+  add subpixel token
+
+Compound::InheritData
+  add subpixel param
+
+Compound::updateInheritData
+  update subpixel
+
+CompoundUpdateOutput::_updateOutput
+  update subpixel
+
+ChannelUpdateVisitor::_setupRenderContext
+  update subpixel
+
+FrameData::setSubPixel
 </pre><!-- */ -->
+
+<h4>Client</h4>
+
+<!-- /* --><pre>
+FrameData::Data
+  add subpixel param
+
+Channel::getSubPixel
+
+Channel::applyFrustum
+  if subpixel decomp
+    lookup on precomputed jitter tables
+    if no table is found
+      compute the sample randomly
+    apply the jitter vector
+
+Compositor::obtainAcum
+  get accum object from ObjectManager
+  if accum doesn't exist
+    create new accum object
+  else
+    resize accum
+
+Compositor::assembleFramesSorted/Unsorted
+  if input frames have different subpixel decomp
+    if accum doesn't exist
+      obtain accum from compositor
+      clear accum
+    extract similar subpixel decomp
+    assemble frames (recursion on assembleFramesSorted/Unsorted)
+    accumulate frames
+    display result
+  [...]
+</pre><!-- /* -->
 
 <a name="Issues"></a>
 <h2>Issues</h2>
@@ -212,12 +276,8 @@ AA compounds with idle AA:
 
 <h3>3. How do I disable FSAA when it's not supported?</h3>
 <p>
-  Depending on the OpenGL version, we run either the glAccum method either the FBO'str one.
+  Depending on the OpenGL version, we run either the glAccum method either the FBO's one.
   On MacOSX, a different implementation of glAccum is needed.
-</p>
-<p>
-  MacOSX problem: floating point texture not supported and the use of glAccum 
-  needs a different implementation.
 </p>
 
 <h3>4. How do I compute the jitter steps for FSAA compound?</h3>
@@ -279,11 +339,11 @@ AA compounds with idle AA:
   accumulation buffer:
 </p>
 <!-- /* --><pre>
-  Channel::frameDraw -
-    set _needsTransfer -
+  Channel::frameDraw
+    set _needsTransfer
   Channel::frameViewStart
     save current pvp
-  Channel::frameAssemble -
+  Channel::frameAssemble
     if( current pvp != saved pvp )
       use separate accum buffer
       return accum buffer after assembly
@@ -295,11 +355,11 @@ AA compounds with idle AA:
     else if for each jitter decomp in input frames
       assemble all input frames with jitter decomp
       accumulate result
-      clear _needsTransfer -
-  Channel::frameViewFinish -
-    if _needsTransfer -
-      accumulate FB into accum buffer -
-    return accum buffer -
+      clear _needsTransfer
+  Channel::frameViewFinish
+    if _needsTransfer
+      accumulate FB into accum buffer
+    return accum buffer
 </pre><!-- */ -->
 
 #include "footer.shtml"
