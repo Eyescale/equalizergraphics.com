@@ -1,0 +1,27 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: Subpixel
+#define KEYWORDS "Subpixel, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>Subpixel</b> compounds decompose the rendering into different jittered frusta so 
+  that the recomposition anti-aliases the final rendering. 
+  The Subpixel compound is also compatible with applications doing their own software 
+  anti-aliasing.
+</p>
+<div class="center">
+  <!-- <a href="http://www.youtube.com/watch?v=rW7Z8Tuxjs0&fmt=18">Watch a video<br> -->
+  <img src="/scalability/images/Subpixel.png" alt="Subpixel decomposition"><!-- </a> -->
+</div>
+<p>
+  As for the DB compound, the subpixel recomposition has linear increasing 
+  IO requirements for the pixel transfer with the difference that only 
+  color information has to be transmitted.
+</p>
+
+<div class="flush_float"></div>
+
+#include "footer.shtml"

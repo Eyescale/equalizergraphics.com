@@ -88,6 +88,12 @@
          alt="Monitor Equalizer">
   <div>Monitor Equalizer</div></a>
 </div>
+<div class="image">
+  <a href="/scalability/subpixel.html">
+    <img src="/scalability/images/Subpixel.png" 
+         alt="Subpixel">
+  <div>Subpixel Compound</div></a>
+</div>
 
 <div class="flush_float"></div>
 <div class="footnote">
