@@ -88,11 +88,15 @@
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+<ul>
+  <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
+      for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
+</ul>
 
 <h3>Version 0.9</h3>
 <ul>
   <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
-      swapbarrier</a> for synchronization of multipipe displays</li>
+      swapbarrier</a> for synchronization of multipipe displays.</li>
   <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
     the official interface to create binary plugins for data compression.</li>
   <li><a href="/documents/design/view.html">Layout API</a>

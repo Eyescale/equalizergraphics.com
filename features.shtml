@@ -179,9 +179,9 @@
   <td><a href="/documents/design/compounds.html">cull compounds</a></td>
   <td>?</td>
 </tr><tr>
-  <td><a href="/documents/design/compounds.html">subpixel (FSAA, DOF)
+  <td><a href="/documents/design/subpixelCompound.html">subpixel (FSAA, DOF)
       compounds</a></td>
-  <td>?</td>
+  <td>SVN</td>
 </tr><tr>
   <td>hardware-based recomposition (Crossfire, SLI)</td>
   <td>?</td>
