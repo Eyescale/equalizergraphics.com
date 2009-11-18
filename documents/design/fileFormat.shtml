@@ -251,6 +251,7 @@ server
             viewport [ viewport ]            # wrt parent compound, sort-first
             range    [ float float ]         # DB-range for sort-last
             pixel    [ int int int int ]     # pixel decomposition (x y w h)
+            subpixel [ int int ]			 # subpixel decomposition (index size)
             eye      [ CYCLOP LEFT RIGHT ]   # monoscopic or stereo view
             zoom     [ float float ]         # up/downscale of parent pvp
             period   int                     # DPlex period
@@ -751,6 +752,17 @@ observer-ref: 'string' | 'index'
       }
     </pre><!-- */ -->
   </li>  
+  
+  <li><a href="/documents/design/subpixelCompound.html">Subpixel Decompositions</a>
+    added:
+    <!-- /* --><pre>
+      compound
+      {
+          subpixel    [ int int ]     # subpixel decomposition (index size)
+      }
+    </pre><!-- */ -->
+  </li>  
+  
 </ul>
 
 #include "footer.shtml"
