@@ -154,6 +154,7 @@ FILES = \
 	scalability/paracomp.html \
 	scalability/pixel.html \
 	scalability/stereo.html \
+	scalability/subpixel.html \
 	scalability/viewEqualizer.html \
 	$(IMAGES) \
 	$(PAGES)
