@@ -91,6 +91,8 @@
 <ul>
   <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
       for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
+  <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range
+      Boundaries</a> for load-balancing</a>
 </ul>
 
 <h3>Version 0.9</h3>

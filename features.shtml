@@ -160,7 +160,8 @@
   <td>Load-Balancing</td>
   <td></td>
 </tr><tr>
-  <td>&rarr; Per-segment 2D, DB load-balancing</td>
+  <td>&rarr; <a href="/documents/design/loadBalancing.html">Per-segment 2D, DB
+      load-balancing</a></td>
   <td>0.6</td>
 </tr><tr>
   <td>&rarr; Cross-segment resource load-balancing</td>

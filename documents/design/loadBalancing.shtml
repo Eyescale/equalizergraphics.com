@@ -8,7 +8,12 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-  State: Design Brainstorming
+  State: 
+  <ul>
+    <li>Implemented in 0.6</li>
+    <li>view_equalizer in 0.9 (not described here)</li>
+    <li>Boundaries: design</li>
+  </ul>
 </p>
 
 <h2>Overview</h2>
@@ -86,18 +91,44 @@
   </ul>
 </p>
 
+<a name="boundaries"></a>
+<h2>RFE: Tile and Range Boundaries</h2>
+<p>
+  See also
+  <a href="https://sourceforge.net/tracker/?func=detail&aid=2894535&group_id=170962&atid=856212">RFE
+    2894535: Restrict 2D loadbalancer to tile boundaries</a>
+</p>
+
+<h3>Implementation</h3>
+<!-- /* --><pre>
+  Implement file format as below
+  Add:
+    void LoadEqualizer::setBoundary( const Vector2i& boundary );
+    void LoadEqualizer::setBoundary( const float boundary );
+    const Vector2i& LoadEqualizer::getBoundary2i() const;
+    float LoadEqualizer::getBoundaryf() const;
+    Vector2i _boundary2i;  // default: 1 1
+    float _boundaryf       // default: numeric_limits&lt;float&gt;::epsilon
+  Add 'Vector2i boundary' to LoadEqualizer::Node
+  In _assignTargetTimes
+    set boundary on leaf nodes
+    compute boundaries on non-leaf on up traversal
+      Note: add values for split axis, max values for non-split axis
+  In _computeSplit
+    replace current epsilon/MIN_PIXELS code with boundary computation
+</pre><!-- */ -->
+
+
 <h2>File Format</h2>
 <!-- /* --><pre>
-loadbalancer
-{
-    name          string
-    split         [ 2D | VERTICAL | HORIZONTAL | DB ]
-}
-
-compound
-{
-    loadbalancer  string // balances all children
-}
+  compound
+  {
+      load_equalizer
+      {
+          mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+          boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
+      }
+  }
 </pre><!-- */ -->
 
 <h2>API</h2>
