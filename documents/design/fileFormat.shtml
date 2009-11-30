@@ -261,6 +261,7 @@ server
             {
                 mode 2D | DB | VERTICAL | HORIZONTAL
                 damping float # 0: no damping, 1: no changes
+				boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
             }
             DFR_equalizer # adapt ZOOM to achieve constant framerate
             {
@@ -325,6 +326,19 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+    <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer
+          {
+              mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+              boundary [ x y ] | float  # x,y: tile boundary for 2D, float: range
+          }
+      }
+
+    </pre><!-- */ -->
+  </li>  
   <li>Launch parameter cleanup after 0.9 changed launch parameters to:
     <!-- /* --><pre>
       global
