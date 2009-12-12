@@ -111,8 +111,8 @@ State:
 
 <h2>Issues</h2>
 <p>
-  Only one window per swap group and system supported in nVidia drivers before
-  release 185.
+  Only one window per swap group, and therefore system, is supported for current
+  nVidia hardware.
 </p>
 
 #include "footer.shtml"
