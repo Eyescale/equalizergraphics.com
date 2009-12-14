@@ -13,7 +13,7 @@ Dependencies: CUDA (libcuda, libcudart)[, OpenCL]<BR>
 </p>
 
 <h2>Overview</h2>
-<p>
+<p
 This extension proposes some modifications to Equalizer which enable the 
 integration of GPU computing tasks into the programming and execution model 
 of Equalizer.
@@ -144,12 +144,12 @@ example.
 <p>
 Equalizer provides the information required to launch a CUDA kernel as it is
 done with other, rendering specific parameters, such as the viewport for 
-example. In the context of CUDA based GPU computing this is the rank of the
-compute device. It is left to the developer to manage data distribution and 
-kernel-specific launch parameters:
+example. In the context of CUDA based GPU computing this is the range of the
+input domain to be processed by the particular GPU. It is left to the 
+developer to manage data distribution and kernel-specific launch parameters:
 
 <ul>
-<li>The correct offset based on the rank</li>
+<li>The correct offsets based on the compute range</li>
 <li>The number of blocks (grid dimension)</li>
 <li>The block parameters (block size)</li>
 <li>The shared memory size</li>
