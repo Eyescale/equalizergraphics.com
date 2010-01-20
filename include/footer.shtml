@@ -1,4 +1,17 @@
 
+  <div id="cse"></div>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">
+    google.load('search', '1', {language : 'en'});
+    google.setOnLoadCallback(function(){
+    var customSearchControl = new
+    google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    customSearchControl.draw('cse');
+    }, true);
+  </script>
+  <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css"
+        type="text/css" />
 #ifndef SKIP_SOCIAL
   <!-- social bookmark sites, added here again for convenience and to WAR
        ignored bottom margin on IE7 -->
