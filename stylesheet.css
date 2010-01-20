@@ -212,6 +212,7 @@ div.content {
     margin-right: 10px;
     margin-bottom: 4ex;
     padding-left: 10px;
+    background-color: #ffffff;
 }
 
 div.social { 
@@ -253,7 +254,7 @@ div.footer a.rule {
     margin-right: 4px;       
 }
 
-div.navigation p{
+div.navigation p {
     margin: 2px 0px 2px 0px;
 }
 div.navigation a, div.subnavigation a
@@ -269,11 +270,6 @@ div.navigation a.used {
 }
 div.subnavigation a.used { 
     background-color: #99ccff;
-}
-
-div.content
-{
-    background-color: #ffffff;
 }
 
 div.footnote 
