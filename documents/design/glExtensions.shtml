@@ -8,7 +8,11 @@
 
 <p>
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-State: Implemented in 0.5
+State:
+<ul>
+  <li>Implemented in 0.5</li>
+  <li>Upgraded to GLEW 1.5.2 in svn</li>
+</ul>
 </p>
 
 <h2>Overview</h2>
@@ -89,6 +93,16 @@ void VertexBufferLeaf::setupRendering( VertexBufferState& state,
 <p>
   None known
 </p>
+
+<h2>Changes to GLEW</h2>
+<ul>
+  <li><b><a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=3989">3989</a>:</b>
+    The package nvidia-glx-185-dev defines <code>GLXEvent</code> without the
+    safeguard definition <code>GLX_VERSION_1_3</code>. Disable the definition in
+    <code>glxew.h</code>, unless explicitely requested by
+    defining <code>EQ_NEED_GLXEVENT</code>.</li>
+
+</ul>
 
 #include "footer.shtml"
 <!-- $Id$ -->

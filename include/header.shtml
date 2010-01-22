@@ -94,8 +94,9 @@
       <a href=QUOTE( SITE_EMAIL ) class="rule">Questions?</a>
       <a href="/impressum.html" class="rule">Impressum</a>
 #ifndef S_CHANGES
-      <a href=CHANGEURL>Changed UPDATE</a>
+      <a href=CHANGEURL class="rule">Changed UPDATE</a>
 #endif
+      <a href="#search">Search</a>
     </div>
 
     <!-- Navigation -->
