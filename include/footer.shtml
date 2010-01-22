@@ -1,4 +1,6 @@
 
+  <!-- Search Results -->
+  <div class="flush_float"></div>
   <a name="search"></a>
   <div id="cse"></div>
   <script src="http://www.google.com/jsapi" type="text/javascript"></script>
