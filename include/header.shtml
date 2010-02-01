@@ -39,7 +39,6 @@
   </head>
 
   <body>
-    <!-- Search Results -->
     <div class="poll">
         <img src="/images/Equalizer.png" alt="Equalizer logo">
 #ifndef NO_POLL

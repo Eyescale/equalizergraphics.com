@@ -8,7 +8,7 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
-  State: Design<br/>
+  State: Implemented in 0.9.1<br/>
 </p>
 
 <h2>Overview</h2>
@@ -52,6 +52,47 @@
 </p>
 
 <h2>Design</h2>
+<h3>Reliable Multicast Protocol</h3>
+<p>
+  PGM seems like a promising protocol, but has the disadvantage of not providing
+  the reliability needed for Equalizer. PGM uses a send window to buffer data,
+  and a client my only request retransmissions within this send window. Whenever
+  a client reads data too slowly, the local implementation disconnects this
+  client from the PGM sender. We can not recover from this disconnect, since it
+  implies that data was lost.
+</p>
+<p>
+  Equalizer contains a reliable stream protocol (RSP) using UDP multicast as a
+  low-level transport. Equalizer 0.9.1 allows to use both PGM and RSP as a
+  multicast protocol. We strongly recommend using RSP and will possibly retire
+  PGM support in the future. RSP provides the following features:
+</p>
+<ul>
+  <li></li>
+  <li>Full reliablity using active acks, a slow receiver will eventually slow
+    down the sender</li>
+  <li>High-performance implementation</li>
+  <ul>
+    <li>Read and write buffering with lock-free queueing</li>
+    <li>Merging of small writes</li>
+    <li>Early nacks (negative acknowledgements)</li>
+    <li>Nack merging</li>
+  </ul>
+  <li>Multicast send interface selection</li>
+  <li>Event-based (Windows) or FD-based (Posix) notification mechanism</li>
+</ul>
+<p>
+  It does not yet provide (TODO-list):
+</p>
+<ul>
+  <li>Client connects and disconnects during active write operations</li>
+  <li>Automatic MTU discovery between Windows and non-Windows hosts</li>
+  <li>Infiniband support</li>
+  <li>Early Acks</li>
+  <li>TTL selection, i.e., multicast traffic will not leave the local
+    subnet</li>
+</ul>
+
 <h3>Object Mapping</h3>
 <div class="float_right">
   <a href="/documents/design/images/objectSync.png">
@@ -152,10 +193,9 @@
   node
   {
       connection { type TCPIP }
-      connection { type MCIP hostname "239.255.42.42" port 4242 }
       connection
       {
-          type PGM
+          type MCIP | RSP | PGM
           hostname  "239.255.42.42"
           interface "10.1.1.1"
           port 4242
