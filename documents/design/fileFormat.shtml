@@ -243,19 +243,19 @@ server
         compound # 1-n times
         {
             name     string
-            channel  channel-ref             # see below
+            channel  channel-ref           # see below
 
             task     [ CLEAR DRAW READBACK ASSEMBLE ] # CULL later
-            buffer   [ COLOR DEPTH ]         # default COLOR
+            buffer   [ COLOR DEPTH ]       # default COLOR
 
-            viewport [ viewport ]            # wrt parent compound, sort-first
-            range    [ float float ]         # DB-range for sort-last
-            pixel    [ int int int int ]     # pixel decomposition (x y w h)
-            subpixel [ int int ]			 # subpixel decomposition (index size)
-            eye      [ CYCLOP LEFT RIGHT ]   # monoscopic or stereo view
-            zoom     [ float float ]         # up/downscale of parent pvp
-            period   int                     # DPlex period
-            phase    int                     # DPlex phase
+            viewport [ viewport ]          # wrt parent compound, sort-first
+            range    [ float float ]       # DB-range for sort-last
+            pixel    [ int int int int ]   # pixel decomposition (x y w h)
+            subpixel [ int int ]           # subpixel decomposition (index size)
+            eye      [ CYCLOP LEFT RIGHT ] # monoscopic or stereo view
+            zoom     [ float float ]       # up/downscale of parent pvp
+            period   int                   # DPlex period
+            phase    int                   # DPlex phase
 
             load_equalizer # adapt 2D tiling or DB range of children
             {
@@ -326,6 +326,13 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+    <li><a href="/documents/design/subPixel.html">Subpixel compounds:</a>
+    <!-- /* --><pre>
+      compound
+      {
+          subpixel [ int int ]           # subpixel decomposition (index size)
+      }
+    </pre><!-- */ -->
     <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
     <!-- /* --><pre>
       compound
@@ -336,7 +343,6 @@ observer-ref: 'string' | 'index'
               boundary [ x y ] | float  # x,y: tile boundary for 2D, float: range
           }
       }
-
     </pre><!-- */ -->
   </li>  
   <li>Launch parameter cleanup after 0.9 changed launch parameters to:

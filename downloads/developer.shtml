@@ -19,13 +19,11 @@
 </p>
 <table>
   <tr><th>Version</th><th>Release Notes and Date</th><th>Source Code</th></tr>
-<!--
   <tr>
-    <td>0.5.4</td>
-    <td><a href="/documents/RelNotes/RelNotes_0.5.4.html">29. July 2008</a></td>
+    <td>0.9.1</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.9.1.html">TBD February 2010</a></td>
     <td></td>
   </tr>
--->
 </table>
 
 #include "footer.shtml"
