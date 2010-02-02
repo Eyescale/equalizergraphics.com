@@ -139,6 +139,26 @@ div.gallery img:hover
     border:  0;
 }
 
+div.box
+{
+    background-color: #bbbbbb;
+    font-size: x-small;
+    text-align: center;
+    vertical-align: middle;
+    float:   left;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 1px;
+    margin: 0 1em 0 -3em;
+    width: 3em;
+}
+
+ul.none li
+{
+    list-style-type: none;
+}
+
 div.header
 { 
     text-align: center;

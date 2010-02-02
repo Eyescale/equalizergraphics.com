@@ -7,275 +7,222 @@
 
 <h2>Table of Contents</h2>
 <p>
-<a href="/features.html#client">Client Library</a><br>
-<a href="/features.html#scalable">Scalable Rendering</a><br>
-<a href="/features.html#server">Resource Server</a><br>
-<a href="/features.html#extensions">Extensions</a><br>
-<a href="/features.html#applications">Applications</a><br>
 <a href="/features.html#platforms">Platform Support</a><br>
+<a href="/features.html#vr">Virtual Reality Features</a><br>
+<a href="/features.html#scalability">Scalable Rendering Features</a><br>
+<a href="/features.html#rendering">3D Rendering Features</a><br>
+<a href="/features.html#examples">Examples</a><br>
+<a href="/features.html#tools">Tools and Utility Functions</a><br>
 </p>
 
 <p>
-  Features with version 'svn' are in the subversion development repository and
-  will most likely be released in the next version.
+  The version label references the Equalizer version introducing the feature.
+  Features labeled 'svn' are in the subversion development repository and will
+  most likely be released in the next version.
 </p>
 
-<table>
-<tr>
-  <th>Feature</th> <th>Version</th>
-</tr>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><a name="client"></a><b>Client Library</b></td></tr>
-<tr>
-  <td>parallel rendering on distributed memory and shared memory systems</td>
-  <td>0.1</td>
-</tr><tr>
-  <td><a href="/documents/design/immersive.html">active and passive stereo
-      rendering</a></td>
-  <td>0.1</td>
-</tr><tr>
-  <td><a href="/documents/design/immersive.html">head tracking</a></td>
-  <td>0.1</td>
-</tr><tr>
-  <td><a href="/documents/design/swapBarrier.html">software
-      swapbarrier</a> for synchronization of multipipe displays</td>
-  <td>0.1</td>
-</tr><tr>
-  <td><a href="/documents/design/swapBarrier.html#gsync">hardware
-      swapbarrier</a> for synchronization of multipipe displays</td>
-  <td>0.9</td>
-</tr><tr>
-  <td><a href="/documents/design/dynamicNearFar.html">dynamic near and far plane
-      support</a></td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="/documents/design/statistics.html">statistics API</a></td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="/documents/design/anaglyph.html">anaglyphic stereo 
-      rendering</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td><a href="/documents/design/objects.html">distributed object API</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td><a href="/documents/design/nonthreaded.html">nonthreaded
-      rendering</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td><a href="/documents/design/infiniBand.html">InfiniBand networking</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td>&rarr; Native RDMA connection</td>
-  <td>?</td>
-</tr><tr>
-  <td><a href="/documents/design/residentNodes.html">resident render
-      clients</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td><a href="/documents/design/objectManager.html">OpenGL object
-      manager</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td><a href="/documents/design/aspectRatio.html">aspect ratio support</a></td>
-  <td>0.4</td>
-</tr><tr>
-  <td><a href="/documents/design/PBuffer.html">PBuffer support</a></td>
-  <td>0.5</td>
-</tr><tr>
-  <td>orthographic frustum support</td>
-  <td>0.6</td>
-</tr><tr>
-  <td><a href="/documents/design/view.html">canvas and layout API</a></td>
-  <td>0.9</td>
-</tr><tr>
-  <td>FBO support</td>
-  <td>0.9</td>
-</tr><tr>
-  <td><a href="/documents/design/immersive.html#HMD">HMD support</a></td>
-  <td>0.9</td>
-</tr><tr>
-  <td><a href="/documents/design/immersive.html#observers">multiple 
-      observers</a></td>
-  <td>0.9</td>
-</tr><tr>
-  <td><a href="/documents/design/view.html">application-specified frusta for
-      destination views</a></td>
-  <td>0.9</td>
-</tr><tr>
-  <td>OpenGL 3 support and example</td>
-  <td>?</td>
-</tr><tr>
-  <td>FrameData API</td>
-  <td>?</td>
-</tr><tr>
-  <td><a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">software edge blending</a></td>
-  <td>?</td>
-</tr><tr>
-  <td>mono/stereo switching</td>
-  <td>?</td>
-</tr><tr>
-  <td>better support for
+<a name="platforms"></a>
+<h2>Platform Support</h2>
+<ul class="none">
+  <li><div class="box">0.3</div> Windows XP ia32 and x86_64</li>
+  <li><div class="box">0.1</div> Linux ia32, x86_64, ia64, X11/glX</li>
+  <li><div class="box">0.4</div> discontinued Linux ia64 support</li>
+  <li><div class="box">TBD</div> Mac OS X Universal, Cocoa/NSGL</li>
+  <li><div class="box">0.9.1</div> Mac OS X 10.6 support</li>
+  <li><div class="box">0.5</div> discontinued Mac OS X 10.4 support</li>
+  <li><div class="box">0.4</div> Mac OS X Carbon/AGL support</li>
+  <li><div class="box">0.4</div> discontinued Mac OS X CGL support</li>
+  <li><div class="box">0.1</div> Max OS X 10.4, 10.5, X11/glX, CGL
+    (partial)</li>
+</ul>
+
+<a name="vr"></a>
+<h2>Virtual Reality Features</h2>
+<ul class="none">
+  <li><div class="box">0.1</div>
+    Support for shared memory multi-GPU systems</li>
+  <li><div class="box">0.1</div>
+    Support for distributed memory GPU clusters</li>
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/immersive.html">active and passive stereo
+      rendering</a></li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/anaglyph.html">anaglyphic stereo
+      rendering</a></li>
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/immersive.html">head tracking</a> for immersive
+    installations</li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/immersive.html#HMD">HMD support</a><li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/immersive.html#observers">multiple 
+      observers</a> in immersive environments</li>
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/swapBarrier.html">software swapbarrier</a> for
+    synchronization of multiple displays</li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/swapBarrier.html#gsync">hardware swapbarrier</a>
+      for synchronization of multiple displays</li>
+  <li><div class="box">TBD</div>
+    <a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">software
+      edge blending</a></li>
+</ul>
+
+<a name="scalability"></a>
+<h2>Scalable Rendering Features</h2>
+<h3>Decomposition Modes</h3>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/scalability/2D.html">sort-first (2D)
+      compounds</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/scalability/DB.html">sort-last (DB) compounds</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/scalability/stereo.html">eye (stereo) compounds</a></li>
+  <li><div class="box">0.5</div>
+    <a href="/scalability/pixel.html">pixel compounds</a></li>
+  <li><div class="box">0.6</div>
+    <a href="/scalability/DPlex.html">DPlex (time-multiplex) compounds</a></li>
+  <li><div class="box">0.9.1</div>
+    <a href="/scalability/subpixel.html">subpixel (FSAA, DOF) compounds</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/scalability/mixel.html">hierarchical, multi-level</a>
+    compounds</li>
+  <li><div class="box">TBD</div>
+    <a href="/documents/design/compounds.html">cull compounds</a></li>
+</ul>
+
+<h3>Compositing Features</h3>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/compounds.html">flexible, parallel compositing
+      engine</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/imageCompression.html">image compression</a>
+    for network transfers</li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/compression.html">Compression plug-in
+      API</a></li>
+  <li><div class="box">TBD</div>
+    GPU-based image compression</li>
+  <li><div class="box">0.6</div>
+    <a href="http://paracomp.sf.net">Paracomp</a> compositing backend</li>
+  <li><div class="box">TBD</div>
+    nVidia CompleX compositing backend</li>
+  <li><div class="box">TBD</div>
+    hardware-based recomposition (Crossfire, SLI)</li>
+  <li><div class="box">TBD</div>
+    asynchronous framebuffer readback</li>
+  <li><div class="box">TBD</div>
+    ROI readback interface</li>
+</ul>
+
+<h3>Load-Balancing</h3>
+<ul class="none">
+  <li><div class="box">0.6</div>
+    <a href="/scalability/loadEqualizer.html">Per-segment 2D and DB
+      load-balancing</a></li>
+  <li><div class="box">0.9</div>
+    <a href="/scalability/viewEqualizer.html">Cross-segment
+      load-balancing</a></li>
+  <li><div class="box">TBD</div>
+    Cross-view resource load-balancing</li>
+  <li><div class="box">TBD</div>
+    Cross-application resource load-balancing</li>
+</ul>
+
+<a name="rendering"></a>
+<h2>3D Rendering Features</h2>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/dynamicNearFar.html">dynamic near and far plane
+      support</a></li>
+  <li><div class="box">0.6</div>
+    orthographic frustum support</li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/view.html">canvas and layout API</a></li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/view.html">application-specified frusta</a> for
+      destination views</li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/nonthreaded.html">nonthreaded rendering</a> for
+    non-threadsafe UI toolkits</li>
+  <li><div class="box">0.5</div>
+    <a href="/documents/design/PBuffer.html">PBuffer support</a></li>
+  <li><div class="box">0.9</div>
+    FBO support</li>
+  <li><div class="box">0.9.1</div>
+    support for applications not using OpenGL for rendering</li>
+  <li><div class="box">TBD</div>
+    OpenGL 3 compositing and example</li>
+  <li><div class="box">TBD</div>
+    runtime mono/stereo switching</li>
+  <li><div class="box">TBD</div>
+    advanced support for
     <a href="/documents/design/transparency.html">transparency and sort-last
-      (DB) compounds</a></td>
-  <td>?</td>
-</tr>
+      (DB) compounds</a></li>
+  <li><div class="box">TBD</div>
+    transparent OpenGL library (Chromium?)</li>
+  <li><div class="box">TBD</div>
+    remote visualization (VNC, SAGE?)</li>
+  <li><div class="box">TBD</div>
+    distributed scene graph: OpenSceneGraph, OpenSG, Coin</li>
+</ul>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><a name="scalable"></a><b>Scalable Rendering</b></td></tr>
-<tr>
-  <td><a href="/documents/design/compounds.html">sort-first (2D) 
-      compounds</a></td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="/documents/design/compounds.html">sort-last (DB) 
-      compounds</a></td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="/documents/design/compounds.html">eye (stereo) compounds</a></td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="/documents/design/compounds.html">flexible recomposition
-      engine</a> for parallel compositing</td>
-  <td>0.2</td>
-</tr><tr>
-  <td><a href="/documents/design/imageCompression.html">image compression</a>
-    for network transfers</td>
-  <td>0.2</td>
-</tr><tr>
-  <td>&rarr; <a href="/documents/design/compression.html">Compression plug-in
-      API</a></td>
-  <td>0.9</td>
-</tr><tr>
-  <td>&rarr; GPU-based image compression</td>
-  <td>?</td>
-</tr><tr>
-  <td><a href="http://paracomp.sf.net">Paracomp compositing backend</td>
-  <td>0.6</td>
-</tr><tr>
-  <td><a href="/documents/design/pixelCompound.html">pixel compounds</a></td>
-  <td>0.5</td>
-</tr><tr>
-  <td>Load-Balancing</td>
-  <td></td>
-</tr><tr>
-  <td>&rarr; <a href="/documents/design/loadBalancing.html">Per-segment 2D, DB
-      load-balancing</a></td>
-  <td>0.6</td>
-</tr><tr>
-  <td>&rarr; Cross-segment resource load-balancing</td>
-  <td>0.9</td>
-</tr><tr>
-  <td>&rarr; Cross-view resource load-balancing</td>
-  <td>?</td>
-</tr><tr>
-  <td>&rarr; Cross-application resource load-balancing</td>
-  <td>?</td>
-</tr><tr>
-  <td><a href="/documents/design/compounds.html">DPlex (time-multiplex)
-      compounds</a></td>
-  <td>0.6</td>
-</tr><tr>
-  <td><a href="/documents/design/compounds.html">cull compounds</a></td>
-  <td>?</td>
-</tr><tr>
-  <td><a href="/documents/design/subpixelCompound.html">subpixel (FSAA, DOF)
-      compounds</a></td>
-  <td>SVN</td>
-</tr><tr>
-  <td>hardware-based recomposition (Crossfire, SLI)</td>
-  <td>?</td>
-</tr><tr>
-  <td>asynchronous framebuffer readback</td> <!--  -->
-  <td>?</td>
-</tr><tr>
-  <td>ROI readback interface</td>
-  <td>?</td>
-</tr>
+<h2>Clustering Features</h2>
+<ul class="none">
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/objects.html">distributed object API</a></li>
+  <li><div class="box">0.9.1</div>
+    <a href="/documents/design/multicast.html">multicast data distribution and
+    synchronization</a></li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/residentNodes.html">resident render
+      clients</a></li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/infiniBand.html">InfiniBand networking</a></li>
+  <li><div class="box">TBD</div>
+    Native InfiniBand RDMA connection</li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/standalone.html">standalone application
+      support</a></li>
+  <li><div class="box">TBD</div>
+    multiple applications in a single cluster</li>
+  <li><div class="box">TBD</div>
+    node failure handling</li>
+</ul>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><a name="server"></a><b>Resource Server</b></td></tr>
-<tr>
-  <td><a href="/documents/design/standalone.html">standalone application
-      support</a></td>
-  <td>0.3</td>
-</tr><tr>
-  <td>auto-configuration for standalone applications</td>
-  <td>?</td>
-</tr><tr>
-  <td>multiple applications</td>
-  <td>?</td>
-</tr><tr>
-  <td>node failure handling</td>
-  <td>?</td>
-</tr>
+<a name="examples"></a>
+<h2>Examples</h2>
+<ul class="none">
+  <li><div class="box">0.1</div>
+    <a href="/applications/eqPly.html">eqPly</a> polygonal rendering demo</li>
+  <li><div class="box">0.4</div>
+    <a href="/applications/eVolve.html">eVolve</a> volume renderer</li>
+  <li><div class="box">0.4</div>
+    <a href="/applications/eqHello.html">eqHello</a> Hello, World! example</li>
+  <li><div class="box">0.9</div>
+    OpenSceneGraph rendering application</li>
+  <li><div class="box">TBD</div>
+    molecular viewer (<a href="http://www.cscs.ch/molekel/">Molekel</a>,
+    <a href="http://www.ks.uiuc.edu/Research/vmd/">VMD</a>?)
+  </li>
+  <li><div class="box">TBD</div>
+    medical viewer (<a href="http://www.osirix-viewer.com/">Osirix</a>?)
+  </li>
+</ul>
 
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><a name="extensions"></a><b>Extensions</b></td></tr>
-<tr>
-  <td>transparent OpenGL library (Chromium?)</td>
-  <td>?</td>
-</tr><tr>
-  <td>remote visualization (VNC integration?)</td>
-  <td>?</td>
-</tr><tr>
-  <td>distributed scene graph: OpenSceneGraph, OpenSG, Coin</td>
-  <td>?</td>
-</tr>
-
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><a name="applications"></a><b>Applications</b></td></tr>
-<tr>
-  <td>polygonal rendering demo (eqPly)</td>
-  <td>0.1</td>
-</tr><tr>
-  <td>&rarr; support for sort-last rendering</td>
-  <td>0.2</td>
-</tr><tr>
-  <td>&rarr; rendering using VBO's and kd-tree</td>
-  <td>0.4</td>
-</tr><tr>
-  <td>&rarr; better rendering and shading effects</td>
-  <td>0.4?</td>
-</tr><tr>
-  <td><a href="/documents/design/volumeRendering.html">volume renderer</a></td>
-  <td>0.4</td>
-</tr><tr>
-  <td>molecular viewer (<a href="http://www.cscs.ch/molekel/">Molekel</a>,
-    <a href="http://www.ks.uiuc.edu/Research/vmd/">VMD</a>?)</td>
-  <td>?</td>
-</tr><tr>
-  <td>medical viewer (<a href="http://www.osirix-viewer.com/">Osirix</a>?)</td>
-  <td>?</td>
-</tr>
-
-<tr><td colspan="2"><hr></td></tr>
-<tr><td colspan="2"><a name="platforms"></a><b>Platform Support</b></td></tr>
-<tr>
-  <td>Linux ia32, X11/glX</td>
-  <td>0.1</td>
-</tr><tr>
-  <td>Linux x86_64, X11/glX</td>
-  <td>0.1</td>
-</tr><tr>
-  <td>Linux ia64, X11/glX</td>
-  <td>0.1</td>
-</tr><tr>
-  <td>OS X 10.4, 10.5 Universal, X11/glX</td>
-  <td>0.1</td>
-</tr><tr>
-  <td>OS X 10.4, 10.5 Universal, Carbon/AGL</td>
-  <td>0.4</td>
-</tr><tr>
-  <td>OS X 10.4 Universal, CGL (partial)</td>
-  <td>0.1-0.3</td>
-</tr><tr>
-  <td>Windows XP</td>
-  <td>0.3</td>
-</tr>
-
-</table>
+<a name="tools"></a>
+<h2>Tools and Utility Functions</h2>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/statistics.html">statistics overlay</a> for
+    performance analysis</li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/objectManager.html">OpenGL object
+      manager</a></li>
+</ul>
 
 
 #include "footer.shtml"
