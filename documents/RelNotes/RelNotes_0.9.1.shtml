@@ -7,13 +7,13 @@
 
 <!-- Release Checklist:
      [x] src/lib/client/version.h, src/Doxyfile
-     [ ] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
-     [ ] downloads/source.shtml, relnotes.shtml, news.shtml
+     [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
+     [x] downloads/source.shtml, relnotes.shtml, news.shtml
      [ ] Copy API documentation on website
-     [ ] doc/Developer/ProgrammingGuide
-     [ ] lulu.com, Google Books
+     [x] doc/Developer/ProgrammingGuide
+     [x] lulu.com, Google Books
   -->
 
-#include "../../../src/lib/RelNotes.dox"
+#include "../../../../tags/release-0.9.1/lib/RelNotes.dox"
 
 #include "footer.shtml"

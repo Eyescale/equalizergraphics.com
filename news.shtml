@@ -4,6 +4,9 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>05. February 2010</b>
+    <a href="/documents/RelNotes/RelNotes_0.9.1.html">Released Developer Version
+      0.9.1</a>.</li>
   <li><b>10. August 2009</b> <a href="/news/Release_0.9.html">Released Version
       0.9</a>.</li>
   <li><b>7. February 2009</b> <a href="/news/EgBof.html">Equalizer BOF at
