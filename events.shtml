@@ -8,6 +8,12 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td nowrap>15. March 2010</td>
+    <td>
+      <a href="http://www.hpcadvisorycouncil.com/events/switzerland_workshop/">HPC
+      Advisory Council Switzerland Workshop</a>, Lugano, Switzerland</td>
+    <td>Presentation: Using InfiniBand for High-Performance Visualization</td>
+  <tr>
     <td nowrap>18./19. September 2009</td>
     <td>
       <a href="http://www.ti.bfh.ch/index.php?id=5370&L=2">TechDays
