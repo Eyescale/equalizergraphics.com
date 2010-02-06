@@ -91,6 +91,7 @@
 
 <h3>Version 0.9.1</h3>
 <ul>
+  <li><a href="/documents/Developer/API-0.9.1">0.9.1 API documentation</a></li>
   <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
       for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
   <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range
@@ -101,6 +102,7 @@
 
 <h3>Version 0.9</h3>
 <ul>
+  <li><a href="/documents/Developer/API-0.9">0.9 API documentation</a></li>
   <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
       swapbarrier</a> for synchronization of multipipe displays.</li>
   <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
