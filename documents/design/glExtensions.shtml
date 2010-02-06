@@ -96,6 +96,8 @@ void VertexBufferLeaf::setupRendering( VertexBufferState& state,
 
 <h2>Changes to GLEW</h2>
 <ul>
+  <li><b><a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=4092">4092</a>:</b>
+    Some glxew functions used in glew.c where not defined in glxew.h.</li>
   <li><b><a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer?view=rev&revision=3989">3989</a>:</b>
     The package nvidia-glx-185-dev defines <code>GLXEvent</code> without the
     safeguard definition <code>GLX_VERSION_1_3</code>. Disable the definition in
