@@ -15,19 +15,21 @@
 <h2>Table of Contents</h2>
 <p>
   <a href="/documentation/parallelOpenGLFAQ.html#one">Using one Context from
-    Multiple Threads</a><br>
+    multiple Threads</a><br>
   <a href="/documentation/parallelOpenGLFAQ.html#multicore">Using Multiple Cores
     with OpenGL</a><br>
   <a href="/documentation/parallelOpenGLFAQ.html#multicontext">Using Multiple
     OpenGL contexts with one Graphics Card</a><br>
   <a href="/documentation/parallelOpenGLFAQ.html#multigpu">Using Multiple
     Graphics Cards with OpenGL</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multiprocess">Using one
+  Context from multiple Processes</a><br>
   <a href="/documentation/parallelOpenGLFAQ.html#links">Further
     Information</a><br>
 </p>
 
 <a name="one"></a>
-<h2>1. Using one Context from Multiple Threads</h2>
+<h2>1. Using one Context from multiple Threads</h2>
 <ul>
   <li><b>Q: </b>Why does my OpenGL application crash/not work when I am
     rendering from another thread?</li>
@@ -207,6 +209,21 @@
     barrier to complete all outstanding OpenGL commands. Note that glFinish is
     bad for the performance, consider using a hardware synchronization
     mechanism if this is an issue.</li>
+</ul>
+
+<a name="multiprocess"></a>
+<h2>5. Using one Context from multiple Processes</h2>
+<ul>
+  <li><b>Q: </b>Can I use a context created in one process in another
+    Process?</li>
+  <li><b>A: </b> No, with the exception noted in the next question.</li>
+</ul><ul>
+  <li><b>Q: </b>So what about
+    <a href="http://oss.sgi.com/projects/ogl-sample/registry/EXT/import_context.txt">EXT_import_context</a>?</li>
+  <li><b>A: </b> This extension lets you indeed share an <b>indirect</b>
+    context between processes. Indirect means that all OpenGL commands are
+    send through the glX wire protocol, instead of directly to the GPU. This
+    results in very slow performance, and often in less functionality.</li>
 </ul>
 
 <a name="links"></a>

@@ -58,15 +58,27 @@
       priority   - value 0.0 to 1.0 of relative importance in your site
   -->
   <url
-     href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/"
-     changefreq="daily"
-     priority="0.1"
+     href="http://www.equalizergraphics.com/documents/Developer/API-0.9/"
+     changefreq="monthly"
+     priority="0.4"
   />
 
   <url
-     href="http://www.equalizergraphics.com/documents/Developer/doxies/"
+     href="http://www.equalizergraphics.com/documents/Developer/API-0.9.1/"
+     changefreq="monthly"
+     priority="0.4"
+  />
+
+  <url
+     href="http://www.equalizergraphics.com/documents/Developer/API/"
      changefreq="weekly"
-     priority="0.1"
+     priority="0.5"
+  />
+
+  <url
+     href="http://www.equalizergraphics.com/pipermail/eq-dev/"
+     changefreq="weekly"
+     priority="0.5"
   />
 
   <url
@@ -78,7 +90,7 @@
   <directory
      path="build"
      url="http://www.equalizergraphics.com/"
-    default_file="index.html"
+     default_file="index.html"
   />
 
 

@@ -212,6 +212,10 @@ $(TARGET)/%.html : %.shtml $(INCLUDES)
 
 doxygen:
 	cd ../src; doxygen Doxyfile
+	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
+	@rm $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
+	cd $(TARGET)/documents/Developer/API; \
+	  zip -qr ch.eyescale.Equalizer.docset.zip ch.eyescale.Equalizer.docset
 
 sitemap:
 	-sitemap_gen --config=sitemap_config.xml
