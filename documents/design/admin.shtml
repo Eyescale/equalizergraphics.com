@@ -1,0 +1,260 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Administrative API
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
+  State: Design<br/>
+</p>
+
+<h2>Overview</h2>
+<p>
+  The administrative API provides access to a running eqServer for the purpose
+  of monitoring and modifying its configuration.
+</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>Observe a running configuration, e.g., window viewport changes.
+  <li>Allow modification of stopped and running configurations, e.g., adding and
+    removing resources.</li>
+  <li>Allow the creation and removal of configurations.</li>
+  <li>The admin API is independent of the client interface</li>
+  <ul>
+    <li>The admin API is not frame-driven</li>
+    <li>The admin API does not modify the client's resource tree directly</li>
+    <li>The server modifies the client resource tree when it applies a change
+      caused by an admin application</li>
+  </ul>
+  <li>Modifying a running configuration only requires the modified entities to
+    be initialized or de-initialized.</li>
+  <li>Automatic resource discovery (future feature) should use the same
+    mechanism.</li>
+</ul>
+
+<h2>Design</h2>
+<p>
+  The admin API resides in its own namespace. An admin application connects to a
+  server, which will map a slave instance of the <code>eq::server::Server</code>
+  and all children into the admin's process (as
+  an <code>eq::admin::Server</code>. The admin application can <code>sync</code>
+  this copy whenever it deems it necessary, modify its copy
+  and <code>commit</code> the modification. The modification of data on a mapped
+  object is detailed in <a href="#slaveWrite">Slave Object Commit</a>.
+</p>
+
+<h3>Namespace Layering</h3>
+<p>
+  The current implementation (0.9.1) does not use <code>net::Object</code> data
+  distribution between the server and the client. It uses custom command packets
+  to communicate the few allowed modifications.
+</p>
+<div class="float_right">
+  <a href="/documents/design/images/admin.png">
+    <img src="/documents/design/images/admin-small.jpg" 
+         alt="New eq::admin namespace layering"/></a>
+  <div class="label">New eq::admin namespace layering</div>
+</div>
+<p>
+  With the admin interface, there are new two implementations mapping a view of
+  the server resource hierarchy. Potentially all data will be modifyable. To
+  accomodate this change, a new <code>eq::data</code> namespace will provide
+  resource synchronization for
+  the <code>eq::server</code>, <code>eq::admin</code> and <code>eq</code>
+  implementations. This means that the inheritance for resources is increased
+  (e.g. <code>eq::Window</code> &rarr; <code>eq::data::Window</code>
+  &rarr; <code>eq::data::Object</code>
+  &rarr; <code>eq::net::Object</code>). Furthermore, the data synchronization
+  between the server, client and admin interfaces will be unified by this
+  namesapace. The server will retain the master instance of the data.
+</p>
+<p>
+  This requires moving the <code>eq::Object</code> into
+  the <code>eq::data</code> namespace, using this class as a base class for all
+  Equalizer resource entities (Server...Channel) and implementing the proper
+  serializers. Furthermore, the server has to override the deserialization and
+  to apply the corresponding tasks upon data modifications.
+</p>
+<div class="flush_float"></div>
+
+<a name="slaveWrite"></a>
+<h3>Slave Object Commit</h3>
+<div class="float_right">
+  <a href="/documents/design/images/slaveWrites.png">
+    <img src="/documents/design/images/slaveWrites-small.jpg" 
+         alt="Modifying an eq::net::Object from a slave instance"/></a>
+  <div class="label">Modifying an eq::net::Object from a slave instance</div>
+</div>
+<p>
+  Committing data on a slave instance is not yet implemented. Since Equalizer
+  does not know about the application data contained in the serialization
+  streams, there are two options to implement this feature:
+</p>
+<ol>
+  <li>Use a synchronization protocol to ensure no two modifications on the
+    same object happen simultaneously on two instances.</li>
+  <li>The application has to either ensure the above or be able to resolve
+    eventual conflicts when synchronizing data.</li>
+</ol>
+<p>
+  Using the second approach, the following sequence provides a light-weight
+  implementation for slave object writes:
+</p>
+<ul>
+  <li>The slave instance is mapped and synchronized to a recent version.</li>
+  <li>The slave instance modifies some data.</li>
+  <li>The slave instance commits the data.</li>
+  <ul>
+    <li>The data is packed and send to the master instance.</li>
+    <li>The master instance receives a notification of the data arrival.</li>
+  </ul>
+  <li>The master instance applies the received delta datas
+    using <code>sync</code>. This does not create a new version of the object
+    on the master.</li>
+  <li>(optional) The master instance modifies the object.</li>
+  <li>The master instance commits the object.</li>
+  <ul>
+    <li>All changes since the last commit of the master instance are send to all
+      slave instances.</li>
+  </ul>
+  <li>The slave instances apply the data.</li>
+</ul>
+<p>
+  Note that the slave which modified an object will eventually receive its own
+  modification, and it has to be able to apply this delta. Furthermore, an
+  application using slave writes has either to avoid or to handle the following
+  situations:
+</p>
+<ul>
+  <li>The master commits a new version while the slave modifies it: The slave
+    has to be able to apply the master delta on the modified object, and the
+    master has to be able to apply the slave delta from an older version.</li>
+  <li>Multiple slaves modify the same data: The master has to be able to apply
+    multiple, potentially conflicting deltas to its instance.</li>
+</ul>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  namespace eq { namespace admin { TBD }}
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<p>None</p>
+
+<h2>Implementation</h2>
+<ol>
+  <li>Implement slave object writes</li>
+  <li>Implement <code>eq::data</code> serialization</li>
+  <li>Use and test 1 and 2 for client and server library</li>
+  <li>Specify and implement currently needed subset for admin API</li>
+</ol>
+
+<h2>Examples</h2>
+<h3>Run-time Window Creation</h3>
+<!-- /* --><pre>
+namespace eq{ namespace admin{
+
+ServerPtr server = new Server;
+client->connectServer( server ); // clones full server config
+
+...
+
+server->sync();
+Pipe* pipe = findPipe( server );
+
+Window* window = new Window( pipe );
+window->setIAttribute( ... );
+
+Channel* channel = new Channel( window );
+channel->setViewport( ... );
+
+Layout* layout = new Layout( config );
+View view = new View( layout );
+view->setViewport( ... );
+
+Canvas* canvas = new Canvas( config );
+canvas->addLayout( 0 );
+canvas->addLayout( layout );
+canvas->useLayout( 1 );
+
+Segment* segment = new Segment( canvas );
+segment->setViewport( ... );
+segment->setWall( ... );
+segment->setChannel( channel );
+
+server->commit();
+server->sync(); // applies accepted changes
+
+}}
+
+-> activated on next eq:Config::startFrame, configInit is called on window
+-> compounds will be created automatically, no scalability
+</pre><!-- */ -->
+
+
+<h3>Automatic Resource Discovery</h3>
+<!-- /* --><pre>
+namespace eq { namespace admin {
+
+Config* config = new Config;
+Node* node = new Node( config );
+
+for( each GPU in system )
+{
+    Pipe* pipe = new Pipe( node );
+    pipe->setDevice( i );
+}
+
+// begin PowerWall nodes
+
+for( each display attached ) // parsed from local config file
+{
+    Window* window = new Window( pipe );
+    Channel* channel = new Channel( window );
+    channel->setViewport( ... );
+
+    Canvas* canvas = new Canvas( config );
+    Segment* segment( canvas );
+    segment->setViewport( ... );
+    segment->setWall( ... );
+    segment->setChannel( channel );
+}
+
+// end PowerWall nodes
+
+announce( config );
+daemon->waitForTermination();
+revoke( config );
+</pre><!-- */ -->
+
+<h2>Restrictions</h2>
+<p>
+  Compounds are not part of the admin API.
+</p>
+
+<h2>Issues</h2>
+<h3>1. How is automatic resource discovery implemented?</h3>
+<p>
+  Open
+</p>
+<p>
+  The example code above outlines one scenario: A daemon on each node builds a
+  local configuration, which then is announced to the local subnet. Unclear is
+  the exact API for this.
+</p>
+
+<h3>2. How is the applied (vs. commited) change communicated to the
+  requestor?</h3>
+<p>
+  Open
+</p>
+<p>
+  The server might decide not to apply all changes an admin client has commited,
+  e.g., if a modified entity was removed in the meantime.
+</p>
+
+#include "footer.shtml"
