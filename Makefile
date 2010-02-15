@@ -212,6 +212,8 @@ $(TARGET)/%.html : %.shtml $(INCLUDES)
 
 doxygen:
 	cd ../src; doxygen Doxyfile
+
+docset: doxygen
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
 	@rm $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
 	cd $(TARGET)/documents/Developer/API; \

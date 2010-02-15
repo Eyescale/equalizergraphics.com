@@ -40,11 +40,15 @@
 <p>
   The admin API resides in its own namespace. An admin application connects to a
   server, which will map a slave instance of the <code>eq::server::Server</code>
-  and all children into the admin's process (as
-  an <code>eq::admin::Server</code>. The admin application can <code>sync</code>
-  this copy whenever it deems it necessary, modify its copy
-  and <code>commit</code> the modification. The modification of data on a mapped
-  object is detailed in <a href="#slaveWrite">Slave Object Commit</a>.
+  and all its children into the admin's process (as
+  an <code>eq::admin::Server</code>). The admin application
+  can <code>sync</code> this copy whenever it deems it necessary, modify its
+  copy and <code>commit</code> the modification. The server will apply the
+  change and activate when possible, i.e., before the beginning of a new frame
+  for a running config. A sample update sequence can be
+  found <a href="/documents/design/images/adminUpdate.png">here</a>. The
+  modification of data on a mapped object is detailed
+  in <a href="#slaveWrite">Slave Object Commit</a>.
 </p>
 
 <h3>Namespace Layering</h3>
