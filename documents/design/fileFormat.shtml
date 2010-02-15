@@ -86,10 +86,11 @@ server
 {
     connection # 0-n times, listening connections of the server
     {
-        type       TCPIP | SDP | PIPE
+        type       TCPIP | SDP | PIPE | RSP
         port       unsigned # TCPIP, SDP
         filename   string   # PIPE
         hostname   string
+        interface  string   # RSP
     }
 
     config # 1-n times, currently only the first one is used by the server
@@ -326,14 +327,24 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
-    <li><a href="/documents/design/subPixel.html">Subpixel compounds:</a>
+  <li><a href="/documents/design/multicast.html">Multicast data transfer:</a>
+    <!-- /* --><pre>
+      connection
+      {
+          type RSP
+          interface "10.1.1.1"
+      } 
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/subPixel.html">Subpixel compounds:</a>
     <!-- /* --><pre>
       compound
       {
           subpixel [ int int ]           # subpixel decomposition (index size)
       }
     </pre><!-- */ -->
-    <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
+  </li>
+  <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
     <!-- /* --><pre>
       compound
       {

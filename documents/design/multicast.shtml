@@ -17,14 +17,6 @@
   one-to-many communication in Equalizer, i.e., the data distribution
   for <code>eq::net::Object</code>.
 </p>
-<ul>
-  <li><a href="http://msdn.microsoft.com/en-us/library/ms740125(VS.85).aspx">Windows
-      XP PGM Implementation</a> (Install Control Panel -&gt; Add or Remove
-      Programs -&gt; Add or Remove Windows Components -&gt; Message
-      Queueing)</li>
-  <li><a href="http://developer.novell.com/wiki/index.php/OpenPGM">OpenPGM
-      Implementation</a></li>
-</ul>
 
 <h2>Requirements</h2>
 <ul>
@@ -52,7 +44,7 @@
 </p>
 
 <h2>Design</h2>
-<h3>Reliable Multicast Protocol</h3>
+<h3>Pragmatic General Multicast (PGM)</h3>
 <p>
   PGM seems like a promising protocol, but has the disadvantage of not providing
   the reliability needed for Equalizer. PGM uses a send window to buffer data,
@@ -61,6 +53,8 @@
   client from the PGM sender. We can not recover from this disconnect, since it
   implies that data was lost.
 </p>
+
+<h3>Reliable Stream Protocol (RSP)</h3>
 <p>
   Equalizer contains a reliable stream protocol (RSP) using UDP multicast as a
   low-level transport. Equalizer 0.9.1 allows to use both PGM and RSP as a
@@ -68,7 +62,6 @@
   PGM support in the future. RSP provides the following features:
 </p>
 <ul>
-  <li></li>
   <li>Full reliablity using active acks, a slow receiver will eventually slow
     down the sender</li>
   <li>High-performance implementation</li>
@@ -255,6 +248,16 @@
 <p>
 </p>
 
+<h2>References</h2>
+<ul>
+  <li><a href="http://msdn.microsoft.com/en-us/library/ms740125(VS.85).aspx">Windows
+      XP PGM Implementation</a> (Install Control Panel -&gt; Add or Remove
+      Programs -&gt; Add or Remove Windows Components -&gt; Message
+      Queueing)</li>
+  <li><a href="http://developer.novell.com/wiki/index.php/OpenPGM">OpenPGM
+      Implementation</a></li>
+</ul>
+
 <h2>Issues</h2>
 <h3>1. How are late joins to the multicast group handled, e.g., caused by a
   layout switch?</h3>
@@ -287,7 +290,8 @@
 
 <h3>3. Which network adapter is used in multi-network hosts?</h3>
 <p>
-  Open: probably another connection parameter is needed.
+  Resolved: The 'interface' connection parameter is used to set the IP address
+  or hostname of the outgoing multicast interface.
 </p>
 <p>
   By default, the first interface is used on Windows XP
