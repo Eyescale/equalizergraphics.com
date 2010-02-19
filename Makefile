@@ -92,11 +92,6 @@ FILES = \
 	documents/RelNotes/RelNotes_0.6.html \
 	documents/RelNotes/RelNotes_0.9.html \
 	documents/RelNotes/RelNotes_0.9.1.html \
-	documents/WhitePapers/Chromium_Equalizer.pdf \
-	documents/WhitePapers/MultiGPU.pdf \
-	documents/WhitePapers/OpenMP_ICC.pdf \
-	documents/WhitePapers/ParallelRenderingSystems.pdf \
-	documents/WhitePapers/ProjectEqualizer.pdf \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \
@@ -156,6 +151,7 @@ FILES = \
 	scalability/stereo.html \
 	scalability/subpixel.html \
 	scalability/viewEqualizer.html \
+	$(wildcard documents/WhitePapers/*.pdf) \
 	$(IMAGES) \
 	$(PAGES)
 
@@ -195,10 +191,10 @@ clean:
 	rm -rf $(TARGETS)
 
 install: update all doxygen sitemap
-	rsync -avz --exclude=".svn" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 auxinst: all
-	rsync -avz --exclude=".svn" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 update:
 	$(SVN) update ..
