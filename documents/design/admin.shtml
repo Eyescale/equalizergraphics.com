@@ -235,6 +235,14 @@ daemon->waitForTermination();
 revoke( config );
 </pre><!-- */ -->
 
+
+<h3>Adding nodes to a scalability config</h3>
+<!-- /* --><pre>
+namespace eq { namespace admin {
+TBD
+}}
+</pre><!-- */ -->
+
 <h2>Restrictions</h2>
 <p>
   Compounds are not part of the admin API.
@@ -259,6 +267,17 @@ revoke( config );
 <p>
   The server might decide not to apply all changes an admin client has commited,
   e.g., if a modified entity was removed in the meantime.
+</p>
+
+<h3>3. How are delays handled if a modification requires expensive
+  initialization on a render client, e.g., caused by mapping the scene data
+  required on the node? Who handles this?</h3>
+<p>
+  Open
+</p>
+<p>
+  The startup has to happen asynchronously to a running config, and the new
+  resources are activately used after they have been initialized.
 </p>
 
 #include "footer.shtml"
