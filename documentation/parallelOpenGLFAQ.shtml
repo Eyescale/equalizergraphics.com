@@ -143,16 +143,25 @@
 </ul><ul>
   <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
     Windows 2000/XP?</li>
-  <li><b>A: </b>The operating system dispatches the OpenGL commands to all
+  <li><b>A1: </b>nVidia: The driver dispatches the OpenGL commands to all
     cards. This allows to move the window across cards, but incurs a small
     performance overhead.</li>
+  <li><b>A1: </b>ATI: The driver dispatches the OpenGL commands to card the
+    window was created on.</li>
 </ul><ul>
-  <li><b>Q: </b>How to I address a specific graphics card on Windows
+  <li><b>Q: </b>How do I address a specific nVidia graphics card on Windows
     2000/XP?</li>
   <li><b>A: </b>The 
     <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
     extension, available on nVidia Quadro cards, can be used to restrict the
     OpenGL calls to certain cards for optimal performance.</li>
+</ul><ul>
+  <li><b>Q: </b>How do I address a specific ATI graphics card on Windows
+    2000/XP?</li>
+  <li><b>A: </b>For an on-screen window, just create it on the right position
+    for your GPU. For off-screen drawables, use the
+    <a href="http://www.opengl.org/registry/specs/AMD/wgl_gpu_association.txt">WGL_AMD_gpu_association</a>
+    extension.</li>
 </ul><ul>
   <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
     Mac OS X?</li>
