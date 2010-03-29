@@ -9,6 +9,7 @@
 <p>
 Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
 State:
+</p>
 <ul>
   <li>Layout API implemented in 0.9</li> 
   <li>0.6 Implementation below</li>
@@ -404,12 +405,18 @@ View::clear
   creates views and segments by analyzing the configuration.
 </p>
 
-<h3>2. Are Views intended to be sub-classed?</h3>
+<h3>2. Are Views intended to be subclassed?</h3>
 <p>
-  Yes: Sub-classing allows to attach application-specific data to a view, e.g.,
-  a model. eqPly will provide an example implementatoin of eq::net::Object data
-  distribution. Open Issue: The server receives the application's view data on
-  deserialization, but ignores it.
+  Yes (0.9): Subclassing allows to attach application-specific data to a view,
+  e.g., a model. eqPly will provide an example implementation of eq::net::Object
+  data distribution. Open Issue: The server receives the application's view data
+  on deserialization, but ignores it.
+</p>
+<p>
+  No (svn): The server has to maintain the master instance of a view. It can not
+  deserialize application-specific data, since it does not run application
+  code. Therefore a <code>UserData</code> object can be attached to a view, of
+  which the application maintains the master version.
 </p>
 
 <h3>3. Are hierarchical layouts needed?</h3>

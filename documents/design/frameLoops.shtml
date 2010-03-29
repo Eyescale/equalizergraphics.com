@@ -1,0 +1,138 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Independent Frame Loops
+
+#include "header.shtml"
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  The purpose of this feature is to allow decoupled framerates in separate
+  views, so that the rendering performance of one view is not coupled to another
+  view.
+</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>One configuration is used. The configuration is one visualization session
+    of an application. It is not feasible to create multiple configurations, as
+    this would require a separate mechanism for data distribution.</li>
+  <li>The independent frame loops can be driven from one main thread. Using one
+    thread per frame loop is the easy way, but creates numerous thread-safety
+    issues for developers.</li>
+  <li>Views sharing resources may be coupled. The obvious example is the update
+    of two views sharing one window.</li>
+</ul>
+
+<h2>Implementation</h2>
+<p>
+  Currently, the application starts a rendering for all views of a configuration
+  using <code>Config::startFrame</code>. To synchronize the
+  completion, <code>Config::finishFrame</code> is used, which waits on:
+  <ul>
+    <li>The completion of all node-local draw operations of all views (with the
+      default thread model <code>draw_sync</code>)</li>
+    <li>The completion of all operations of all views for
+      frame <code>current-latency</code></li>
+  </ul>
+</p>
+<p>
+  For per-view frame loops, the application wants to wait on the completion of
+  one view to request a redraw on this view, if needed. Multiple views need to
+  be updateable at once. 
+</p>
+<!-- /* --><pre>
+while( config->isRunning( ))
+{
+    version = commit();
+    config->startFrame( version );
+    View* view = config->finishView();
+    while no redraw needed
+        for each ready view
+            update view redraw state
+}
+
+eq::server::Config::startFrame()
+{
+    generate tasks for ready, redraw views
+}
+
+eq::Config::finishFrame()
+{
+    for each active view
+        view->finishFrame();
+        view->postRedraw();
+OR
+    View* view = config->finishView();
+    view->postRedraw();
+}
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+
+<h2>Issues</h2>
+<h3>1. Are the frame loops per view or per observer?</h3>
+<p>
+  Resolved: Per view. Running per observer seems more logical at first. However,
+  one observer might observe multiple views with different content. The observer
+  does not necessarily require a synchronization between theses views.
+</p>
+
+<h3>2. What happens to view a, if view b is updated and they share a
+  window?</h3>
+<p>
+  There are two situations: view a is idle or it is actively rendering a
+  frame. Situation two may never arise, since the resource would not be ready
+  yet and the per-view synchronization of both views would not yet have
+  triggered.
+</p>
+<p>
+  Option 1: All dependent destination channels are updated as well. One issue
+  is that the data used for the redraw does no longer correspond to the data
+  used when updating the full view, i.e., an update of view b would fully
+  trigger an update of view a.
+</p>
+<p>
+  Option 2: Equalizer saves the front buffer before swap. A new task
+  method <code>Channel::frameViewRestore</code> would perform a glCopyPixels
+  from the front to the back buffer. A possibly destroyed front buffer would not
+  be an issue, as this would trigger a redraw in any case. Application 
+</p>
+
+<h3>3. What is the basic synchronization entity?</h3>
+<p>
+  From an OpenGL POV, all views of a single drawable are dependent. From a
+  multithreading POV, all views of a single thread (aka pipe) are
+  dependent. From an application POV, all views of a single process (aka node)
+  are dependent, if one database is used per process.
+</p>
+<p>
+  The thread model should take care of enforcing the appropriate synchronization
+  by not allowing a new frame to start if a dependent resource is still used for
+  another view.
+</p>
+
+<h3>4. How is the latency handled?</h3>
+<p>
+  A configuration has a latency of <code>n</code> frames. When running with
+  multiple framerates, one view should be able to get ahead more than n frames.
+</p>
+<p>
+  Option: Consider the latency per view.
+</p>
+
+#include "footer.shtml"

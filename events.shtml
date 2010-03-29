@@ -8,11 +8,22 @@
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
   <tr>
+    <td nowrap>2.-3. May 2010</td>
+    <td>
+      <a href="http://www.vis.uni-stuttgart.de/egpgv/egpgv2010/">EGPGV 2010</a>,
+      Norrk&ouml;ping, Sweden</td>
+    <td>The Visualization and MultiMedia Lab, Department of Informatics at
+      University of Z&uuml;rich is presenting the Equalizer-based papers
+      'Presentation: Using InfiniBand for High-Performance Visualization' and
+      'Fast Compositing for Cluster-Parallel Rendering'.</td>
+  </tr>
+  <tr>
     <td nowrap>15. March 2010</td>
     <td>
       <a href="http://www.hpcadvisorycouncil.com/events/switzerland_workshop/">HPC
       Advisory Council Switzerland Workshop</a>, Lugano, Switzerland</td>
     <td>Presentation: Using InfiniBand for High-Performance Visualization</td>
+  </tr>
   <tr>
     <td nowrap>18./19. September 2009</td>
     <td>
