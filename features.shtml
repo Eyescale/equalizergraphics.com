@@ -92,7 +92,7 @@
   <li><div class="box">0.9.1</div>
     <a href="/scalability/subpixel.html">Subpixel (FSAA, DOF) compounds</a></li>
   <li><div class="box">0.2</div>
-    <a href="/scalability/mixel.html">Hierarchical, multi-level</a>
+    <a href="/scalability/mixed.html">Hierarchical, multi-level</a>
     compounds</li>
   <li><div class="box">TBD</div>
     <a href="/documents/design/compounds.html">Cull compounds</a></li>
