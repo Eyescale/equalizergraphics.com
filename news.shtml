@@ -4,6 +4,10 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>30. March 2010</b>
+    <a href="http://www.cgw.com/Press-Center/News/2010/RTT-DeltaGen-9-5-Achieve-Faster-Results-with-New.aspx">RTT
+    DeltaGen 9.5 Press Release</a>, including a paragraph on RTT Scale which is
+    based on Equalizer 0.9.1.</li>
   <li><b>05. February 2010</b>
     <a href="/documents/RelNotes/RelNotes_0.9.1.html">Released Developer Version
       0.9.1</a>.</li>
