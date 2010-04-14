@@ -336,7 +336,7 @@ observer-ref: 'string' | 'index'
       } 
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/subPixel.html">Subpixel compounds:</a>
+  <li><a href="/documents/design/subpixelCompound.html">Subpixel compounds:</a>
     <!-- /* --><pre>
       compound
       {

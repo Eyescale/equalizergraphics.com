@@ -14,6 +14,8 @@
   <li><a href="/applications/eqHello.html">eqHello - Hello, World!</a></li>
   <li><a href="/applications/eqPly.html">eqPly - Polygonal Renderer</a></li>
   <li><a href="/applications/eVolve.html">eVolve - Volume Renderer</a></li>
+  <li><a href="/applications/osgScaleViewer.html">osgScaleViewer - Scalable
+      OpenSceneGraph Viewer</a></li>
 </ul>
 
 <h2>Third Party Applications</h2>

@@ -38,6 +38,7 @@ FILES = \
 	applications/eqHello.html \
 	applications/eqPly.html \
 	applications/eVolve.html \
+	applications/osgScaleViewer.html \
 	applications/thirdParty.html \
 	applications/UniSiegen.html \
 	documentation/parallelOpenGLFAQ.html \
@@ -191,6 +192,9 @@ clean:
 	rm -rf $(TARGETS)
 
 install: update all doxygen sitemap
+	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+
+install_only: all
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 auxinst: all

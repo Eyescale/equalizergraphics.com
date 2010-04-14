@@ -1,0 +1,27 @@
+#define S_APPLICATIONS
+#define S_APPLICATIONS_OSGSV
+#define PAGE Applications
+#define SUBPAGE OSGScaleViewer: Scalable OpenSceneGraph viewer
+
+#include "header.shtml"
+
+<h2>Overview</h2>
+<div class="float_right">
+  <a href="/applications/images/OmniTerra.png">
+    <img src="/applications/images/OmniTerra-small.jpg" 
+         alt="OmniTerra"></a>
+  <div class="label"><a href="http://www.omniterra.ch">OmniTerra</a><br>An
+    Equalizer-based OSG application</div>
+</div>
+<p>
+  The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/osgScaleViewer">OSGScaleViewer</a>
+   is a scalable, cluster-ready viewer application based on OpenSceneGraph and
+   Equalizer. It demonstrates how to integrate OSG and Equalizer optimally to
+   exploit the power of multi-GPU systems and visualization clusters.
+</p>
+<p>
+  Further details about OSGScaleViewer can be found in this White Paper.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

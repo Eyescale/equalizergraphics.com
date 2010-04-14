@@ -165,6 +165,12 @@
 #endif
               >eVolve</a></p>
 
+        <p><a href="/applications/osgScaleViewer.html"
+#ifdef S_APPLICATIONS_OSGSV
+              class="used"
+#endif
+              >OSGScaleViewer</a></p>
+
         <p><a href="/applications/thirdParty.html"
 #ifdef S_APPLICATIONS_THIRDPARTY
               class="used"
