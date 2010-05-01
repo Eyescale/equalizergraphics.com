@@ -73,6 +73,21 @@
         </span>
       </noscript>
 #endif
+#ifdef GOOGLEAD
+      <div class="subnavigation">
+        <script type="text/javascript"><!--
+               google_ad_client = "pub-1533483071170061";
+               /* 250x250, created 4/26/10 */
+               google_ad_slot = "4079149628";
+               google_ad_width = 250;
+               google_ad_height = 250;
+               //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+      </div>
+#endif
     </div>
     <div class="header">
       <a name="top"></a>
