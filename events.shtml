@@ -3,10 +3,21 @@
 
 #include "header.shtml"
 
-
-
 <table>
   <tr><th>Date</th><th>Event</th><th>Description</th></tr>
+  <tr>
+    <td nowrap>9. June - 11. June 2010</td>
+    <td><a href="http://eurovis2010.labri.fr/">EuroVis 2010</a>, Bordeaux,
+      France</td>
+    <td>Poster and live demonstration of the latest developments in
+      Equalizer</td>
+  </tr>
+  <tr>
+    <td nowrap>18. May - 20. May 2010</td>
+    <td>6th NVidia Round Table Meeting</td>
+    <td>The NV RTM is a Bi-Directional Technology Meeting held in Germany, Sankt
+      Augustin @ Fraunhofer IAIS Castel Birlinghoven</td>
+  </tr>
   <tr>
     <td nowrap>2.-3. May 2010</td>
     <td>
