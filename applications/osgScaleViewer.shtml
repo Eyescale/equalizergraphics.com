@@ -14,13 +14,14 @@
     Equalizer-based OSG application</div>
 </div>
 <p>
-  The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/osgScaleViewer">OSGScaleViewer</a>
+  The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/osgScaleViewer">osgScaleViewer</a>
    is a scalable, cluster-ready viewer application based on OpenSceneGraph and
    Equalizer. It demonstrates how to integrate OSG and Equalizer optimally to
    exploit the power of multi-GPU systems and visualization clusters.
 </p>
 <p>
-  Further details about OSGScaleViewer can be found in this White Paper.
+  Further details about osgScaleViewer can be found in this
+  <a href="/documents/WhitePapers/OpenSceneGraphClustering.pdf">White Paper</a>.
 </p>
 
 #include "footer.shtml"
