@@ -82,9 +82,9 @@
 
 <h2>White Papers</h2>
 <ul>
-  <li><a href="/documents/WhitePapers/Scalability.pdf">Advanced Scalability for
-    OpenGL Applications</a> shows the Equalizer scalability features on one
-    page.</li>
+  <li><a href="/documents/WhitePapers/OpenSceneGraphClustering.pdf">Parallel
+      Rendering for OpenSceneGraph</a> introduces osgScaleViewer, a scalable 3D
+    rendering foundation for large-scale GPU clusters.</li>
   <li><a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two Methods for
       driving OpenGL Display Walls</a> compares and benchmarks Chromium and
     Equalizer on a 12-node display wall.</li>

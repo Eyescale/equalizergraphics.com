@@ -131,7 +131,7 @@
 			<integer>1050</integer>
 			<key>Points</key>
 			<array>
-				<string>{325.985, 241.444}</string>
+				<string>{325.984, 241.444}</string>
 				<string>{325.984, 269.291}</string>
 			</array>
 			<key>Style</key>
@@ -364,8 +364,8 @@
 			<integer>1042</integer>
 			<key>Points</key>
 			<array>
-				<string>{99.2126, 156.905}</string>
-				<string>{99.2126, 183.752}</string>
+				<string>{99.2127, 156.905}</string>
+				<string>{99.2127, 183.752}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -496,7 +496,7 @@
 			<integer>1038</integer>
 			<key>Points</key>
 			<array>
-				<string>{218.893, 241.725}</string>
+				<string>{218.892, 241.725}</string>
 				<string>{240.944, 269.291}</string>
 			</array>
 			<key>Style</key>
@@ -552,7 +552,7 @@
 			<integer>1036</integer>
 			<key>Points</key>
 			<array>
-				<string>{105.194, 241.335}</string>
+				<string>{105.194, 241.336}</string>
 				<string>{127.559, 269.292}</string>
 			</array>
 			<key>Style</key>
@@ -614,7 +614,7 @@
 			<key>Points</key>
 			<array>
 				<string>{325.984, 198.925}</string>
-				<string>{325.985, 226.271}</string>
+				<string>{325.984, 226.271}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -641,7 +641,7 @@
 			<integer>1032</integer>
 			<key>Points</key>
 			<array>
-				<string>{93.231, 241.335}</string>
+				<string>{93.231, 241.336}</string>
 				<string>{70.8661, 269.292}</string>
 			</array>
 			<key>Style</key>
@@ -669,7 +669,7 @@
 			<integer>1031</integer>
 			<key>Points</key>
 			<array>
-				<string>{212.599, 241.944}</string>
+				<string>{212.598, 241.944}</string>
 				<string>{212.598, 269.291}</string>
 			</array>
 			<key>Style</key>
@@ -1078,8 +1078,8 @@
 			<integer>1025</integer>
 			<key>Points</key>
 			<array>
-				<string>{212.599, 199.425}</string>
-				<string>{212.599, 225.771}</string>
+				<string>{212.598, 199.425}</string>
+				<string>{212.598, 225.771}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1149,8 +1149,8 @@
 			<integer>1023</integer>
 			<key>Points</key>
 			<array>
-				<string>{241.945, 191.338}</string>
-				<string>{297.138, 191.338}</string>
+				<string>{241.945, 191.339}</string>
+				<string>{297.138, 191.339}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1683,7 +1683,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
 
-\f0\b\fs24 \cf1 eq::data}</string>
+\f0\b\fs24 \cf1 eq::fabric}</string>
 			</dict>
 		</dict>
 	</array>
@@ -1804,7 +1804,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2010-04-15 17:30:20 +0200</string>
+	<string>2010-05-11 11:35:41 +0200</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
