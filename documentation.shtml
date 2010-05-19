@@ -109,10 +109,11 @@
 <ul>
   <li>Fast compositing for cluster-parallel rendering. Maxim Makhinya, Stefan
       Eilemann, and Renato Pajarola. In Proceedings Eurographics Symposium on
-      Parallel Graphics and Visualization, to appear 2010.</li>
+      Parallel Graphics and Visualization, pp. 111-120, May 2010.</li>
   <li>Scalable parallel out-of-core terrain rendering. Prashant Goswami, Maxim
       Makhinya, Jonas Bosch, and Renato Pajarola. In Proceedings Eurographics
-      Symposium on Parallel Graphics and Visualization, to appear 2010.</li>
+      Symposium on Parallel Graphics and Visualization, pp. 63-71, May
+      2010.</li>
   <li><a href="http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.104">Equalizer:
       A Scalable Parallel Rendering Framework</a>, IEEE Transactions on
     Visualization and Computer Graphics, vol. 15, no. 3, pp. 436-452, May/June
