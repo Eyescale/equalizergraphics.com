@@ -68,6 +68,12 @@ FILES = \
 	documents/ParallelGraphicsProgramming.pdf \
 	documents/ParallelGraphicsProgramming.html \
 	documents/ParallelGraphicsProgramming.html_files \
+	documents/EGPGV10_compositing.html \
+	documents/EGPGV10_compositing.html_files \
+	documents/EGPGV10_compositing.pdf \
+	documents/EGPGV10_raster.html \
+	documents/EGPGV10_raster.html_files \
+	documents/EGPGV10_raster.pdf \
 	documents/Presentations/EqualizerBOF2009.pdf \
 	documents/Presentations/EqualizerBOF2009.html \
 	documents/Presentations/EqualizerBOF2009.html_files \
@@ -76,6 +82,7 @@ FILES = \
 	documents/Presentations/EqualizerBOF2009_USG.html_files \
 	documents/Presentations/EqualizerBOF2009_UZH.pdf \
 	documents/Presentations/EqualizerBOF2009_UZH.html \
+	documents/Presentations/EqualizerBOF2009_UZH.html_files \
 	documents/Presentations/EqualizerBOF2009_UZH.html_files \
 	documents/Projects_Stefan_Eilemann.pdf \
 	documents/RelNotes/RelNotes_0.1.0.html \
