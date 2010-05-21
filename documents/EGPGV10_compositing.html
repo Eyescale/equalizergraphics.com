@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Fast Compositing for Cluster-Parallel Rendering M. Makhinya, S. Eilemann, R. Pajarola Content Motivation Methods Experimental analysis Conclusion Motivation - Focus of Study Sort-first (2D) Sort-last (DB) Existing Approaches Read-back / compositing improvement Less data over network Data transmission improvement Color / depth buffers compression Difficult to integrate in to existent frameworks Hardware dependent Doesn’t necessarily improve performance on modern hardware Motivation - Other Solutions  Methods - Equalizer (EQ) Typical compositing loop in parallel rendering   Methods - Equalizer (EQ) Typical compositing loop in parallel rendering  Swizzle  Component  64 bit  Methods - RLEs Methods - RLE vs LZO Methods - YUV12 Methods - YUV12 (Example)  Methods - ROI (Idea)  Methods - ROI GPU  CPU   Methods - ROI   GPU  CPU   Methods - ROI         GPU  CPU   Methods - ROI          GPU  CPU   Methods - ROI           GPU  CPU   Methods - ROI         GPU  CPU   ROI speed:  ~600 fps  Methods - ROI Regions requirements:  Cover all data No overlapping Smallest total area      Methods - ROI Cut away unused space instead!   Methods - ROI      Methods - ROI                      1 2 3 4 5 6 7 8 9 10 11 12 13 15 14 16 ROI Demonstration Demo Methods - Integration ROI and YUV12 simply integrated as separate layers  Compatible with other compression methods Analysis Setup Throughput and rendering limits Sort-first performance Sort-last performance ROI for sort-last Models David statue ~56 M  Power plant ~13 M  David head ~4 M        Cluster Setup (Hactar) 2   2.2GHz AMD  GeForce 9800 GX2 4 GB RAM 2 Gbit/s (Myrinet) 1  Gbit/s (Ethernet) 2 3 10 2 TB (4   1Gbit/s Ethernet) x NAS 1 x ... Throughput and Rendering Limits (No Compression) Data to receive  Performance of sort-first  Sort-First Performance Sort-First Performance Sort-First Performance Sort-First Performance      Sort-First Performance David head model rendered 1, 2 and 4 times  Sort-Last Performance Serial Sort-Last  Direct-Send  ROI Performance David head  PPLA  Relative ROI Performance Relative ROI  Relative ROI+YUV  ROI Best Case David statue (56M triangles)  Conclusion Several compression techniques are compared in terms of overall rendering performance Fast ROI algorithm for sort-last rendering is demonstrated Thank You! Questions?"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (39);
+            images[0] = "EGPGV10_compositing.html_files/EGPGV10_compositing.001.jpg";
+            images[1] = "EGPGV10_compositing.html_files/EGPGV10_compositing.002.jpg";
+            images[2] = "EGPGV10_compositing.html_files/EGPGV10_compositing.003.jpg";
+            images[3] = "EGPGV10_compositing.html_files/EGPGV10_compositing.004.jpg";
+            images[4] = "EGPGV10_compositing.html_files/EGPGV10_compositing.005.jpg";
+            images[5] = "EGPGV10_compositing.html_files/EGPGV10_compositing.006.jpg";
+            images[6] = "EGPGV10_compositing.html_files/EGPGV10_compositing.007.jpg";
+            images[7] = "EGPGV10_compositing.html_files/EGPGV10_compositing.008.jpg";
+            images[8] = "EGPGV10_compositing.html_files/EGPGV10_compositing.009.jpg";
+            images[9] = "EGPGV10_compositing.html_files/EGPGV10_compositing.010.jpg";
+            images[10] = "EGPGV10_compositing.html_files/EGPGV10_compositing.011.jpg";
+            images[11] = "EGPGV10_compositing.html_files/EGPGV10_compositing.012.jpg";
+            images[12] = "EGPGV10_compositing.html_files/EGPGV10_compositing.013.jpg";
+            images[13] = "EGPGV10_compositing.html_files/EGPGV10_compositing.014.jpg";
+            images[14] = "EGPGV10_compositing.html_files/EGPGV10_compositing.015.jpg";
+            images[15] = "EGPGV10_compositing.html_files/EGPGV10_compositing.016.jpg";
+            images[16] = "EGPGV10_compositing.html_files/EGPGV10_compositing.017.jpg";
+            images[17] = "EGPGV10_compositing.html_files/EGPGV10_compositing.018.jpg";
+            images[18] = "EGPGV10_compositing.html_files/EGPGV10_compositing.019.jpg";
+            images[19] = "EGPGV10_compositing.html_files/EGPGV10_compositing.020.jpg";
+            images[20] = "EGPGV10_compositing.html_files/EGPGV10_compositing.021.jpg";
+            images[21] = "EGPGV10_compositing.html_files/EGPGV10_compositing.022.jpg";
+            images[22] = "EGPGV10_compositing.html_files/EGPGV10_compositing.023.jpg";
+            images[23] = "EGPGV10_compositing.html_files/EGPGV10_compositing.024.jpg";
+            images[24] = "EGPGV10_compositing.html_files/EGPGV10_compositing.025.jpg";
+            images[25] = "EGPGV10_compositing.html_files/EGPGV10_compositing.026.jpg";
+            images[26] = "EGPGV10_compositing.html_files/EGPGV10_compositing.027.jpg";
+            images[27] = "EGPGV10_compositing.html_files/EGPGV10_compositing.028.jpg";
+            images[28] = "EGPGV10_compositing.html_files/EGPGV10_compositing.029.jpg";
+            images[29] = "EGPGV10_compositing.html_files/EGPGV10_compositing.030.jpg";
+            images[30] = "EGPGV10_compositing.html_files/EGPGV10_compositing.031.jpg";
+            images[31] = "EGPGV10_compositing.html_files/EGPGV10_compositing.032.jpg";
+            images[32] = "EGPGV10_compositing.html_files/EGPGV10_compositing.033.jpg";
+            images[33] = "EGPGV10_compositing.html_files/EGPGV10_compositing.034.jpg";
+            images[34] = "EGPGV10_compositing.html_files/EGPGV10_compositing.035.jpg";
+            images[35] = "EGPGV10_compositing.html_files/EGPGV10_compositing.036.jpg";
+            images[36] = "EGPGV10_compositing.html_files/EGPGV10_compositing.037.jpg";
+            images[37] = "EGPGV10_compositing.html_files/EGPGV10_compositing.038.jpg";
+            images[38] = "EGPGV10_compositing.html_files/EGPGV10_compositing.039.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EGPGV10_compositing.html_files/EGPGV10_compositing.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EGPGV10_compositing.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EGPGV10_compositing.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EGPGV10_compositing.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>
