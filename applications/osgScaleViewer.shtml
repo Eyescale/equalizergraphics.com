@@ -1,7 +1,7 @@
 #define S_APPLICATIONS
 #define S_APPLICATIONS_OSGSV
 #define PAGE Applications
-#define SUBPAGE OSGScaleViewer: Scalable OpenSceneGraph viewer
+#define SUBPAGE osgScaleViewer
 
 #include "header.shtml"
 

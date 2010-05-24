@@ -4,6 +4,10 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>19. May 2010</b>
+    <a href="http://vizstack.sourceforge.net/">VizStack</a>, a management
+    package for multi-GPU clusters sponsored by HP, adds support for configuring
+    and running Equalizer applications.</li>
   <li><b>30. March 2010</b>
     <a href="http://www.cgw.com/Press-Center/News/2010/RTT-DeltaGen-9-5-Achieve-Faster-Results-with-New.aspx">RTT
     DeltaGen 9.5 Press Release</a>, including a paragraph on RTT Scale which is
