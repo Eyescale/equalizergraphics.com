@@ -26,6 +26,10 @@
   and receive a free download of the latest Equalizer programming guide, also
   available as a <a href="http://www.lulu.com/content/1359268">book</a>!
 </p>
+<p>
+  Finally we have a few useful <a href="/downloads/tools.html">tools</a> for
+  multi-GPU development.
+</p>
 
 #include "footer.shtml"
 <!-- $Id$ -->

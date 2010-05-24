@@ -222,7 +222,7 @@ doxygen:
 
 docset: doxygen
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
-	@rm $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
+	@rm -f $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
 	cd $(TARGET)/documents/Developer/API; \
 	  zip -qr ch.eyescale.Equalizer.docset.zip ch.eyescale.Equalizer.docset
 

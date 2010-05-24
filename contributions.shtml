@@ -77,11 +77,7 @@
   <li><b>Applications:</b> Start porting your own OpenGL-based application, or
     pick an existing one. A few suggestions from our side are:</li>
   <ul>
-    <li><a href="http://www.openscenegraph.org">OpenSceneGraph</a> is regularly
-      requested. You would make a lot of friend if you come up with a killer
-      demo based on OSG.</li>
-    <li><a href="http://www.vtk.org/">VTK</a> is second on the list
-      of requests.</li>
+    <li><a href="http://www.vtk.org/">VTK</a> is often requested.</li>
     <li><a href="http://bzflag.org/">BZFlag</a> Wouldn't it be fun to play
       BZFlag in an immersive environment?</li>
   </ul>
