@@ -63,6 +63,7 @@
           <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
           <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
       </center></div>
+#if 0
       <!-- Poll  -->
       <script type="text/javascript" language="javascript"
               src="http://static.polldaddy.com/p/1822666.js"></script>
@@ -72,6 +73,7 @@
         <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)
         </span>
       </noscript>
+#endif
 #endif
 #ifdef GOOGLEAD
       <div class="subnavigation">

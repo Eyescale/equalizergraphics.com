@@ -80,8 +80,8 @@
 <p>
   The Equalizer framework is licensed under the
   <a href="http://www.gnu.org/licenses/lgpl.html">LGPL open source license</a>,
-  which allows free usage in commercial and open source projects. Any changes to
-  the framework itself have to be contributed back to open source.
+  which allows free usage in commercial and open source projects. Only changes
+  to the framework itself have to be contributed back to open source.
 </p>
 <p>
   Consulting, software development service and support are available

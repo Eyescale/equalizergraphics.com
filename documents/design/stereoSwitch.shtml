@@ -1,0 +1,232 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Runtime Stereo Switch
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State:
+  <ul>
+    <li>Design based on 0.9.1-trunk</li>
+  </ul>
+</p>
+
+<h2>Overview</h2>
+<p>
+  This documents specifies how to switch between stereo and mono rendering in a
+  running config. The application has to be able to switch between mono and
+  stereo rendering selectively for each view. The configurations file shall be
+  able to specify different segments for each eye pass to mix passive stereo and
+  mono, as well as contain different (scalability) compounds for stereo and
+  mono.
+</p>
+  
+<h2>Specification</h2>
+<p>
+  Each segment is stereo-aware, that is, its destination compounds are only
+  activated for the eye passes activated by the active views. For example, a
+  segment rendering the left and cyclop eye with a view in mono mode will only
+  activate the cyclop rendering on the compounds using its destination channels.
+</p>
+<p>
+  Each view has a stereo mode (mono / stereo). Switching the stereo mode
+  activates different compound eye traversals and potentially different
+  compounds and dependent entities.
+</p>
+<p>
+  The semantics of the compound eye attribute changes from describing the eye
+  passes to be rendered to the eye passes this compound can render. The actual
+  selection of the eye passes will be done by the view of the destination
+  channel(s). That is, a compound using <code>eye [ LEFT RIGHT CYCPLOP ]</code>
+  will render all three eye passes in Equalizer 0.9.1, but only the cyclop (view
+  is in mono mode) or left and right (view is in stereo) passes in the new
+  implementation. Consequently, the default setting shall change from <code>eye
+  [ CYCLOP ]</code> to <code>eye [ LEFT RIGHT CYCPLOP ]</code>.
+</p>
+<p>
+  For convenience, the compound attribute <code>stereo_mode</code> will also
+  support the new value <code>AUTO</code>, which will become the new default
+  value. Auto selects quad-buffered stereo if the destination channel has a
+  quad-buffered visual, otherwise anaglyphic stereo.
+</p>
+
+<h2>Implementation</h2>
+<ul>
+  <li>Implement file format</li>
+  <li>Implement compound auto stereo mode</li>
+  <li>Implement View::changeMode</li>
+  <ul>
+    <li>Make compound activation eye-aware</li>
+    <li>Make compound update and task generation eye-aware</li>
+    <li>Move compound activation from canvas to view</li>
+  </ul>
+</ul>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  View::changeMode( EQ_MONO | EQ_STEREO );
+
+  Also setter/getter for file format additions.
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  view
+  {
+      mode MONO | STEREO
+  }
+  segment
+  {
+      ...
+      eye [ CYCLOP LEFT RIGHT ] # eye passes rendered by segment, default all
+  }
+  compound
+  {
+      attributes
+      {
+          stereo_mode QUAD | ANAGLYPH | AUTO # new AUTO, also new default
+      }
+  }
+</pre><!-- */ -->
+
+<h2>Examples</h2>
+<!-- /* --><pre>
+Passive stereo powerwall:
+  layout { view { }}
+  canvas
+  {
+      layout 1
+      wall {}
+      segment
+      {
+          eye [ LEFT CYCLOP ]
+          channel "left-projector"
+      }
+      segment
+      {
+          eye [ RIGHT ]
+          channel "right-projector"
+      }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+      eye [ CYCLOP ]
+      load_equalizer{}
+
+      compound {}
+      compound
+      {
+          channel "right-PBuffer"
+          outputframe{}
+      }  
+      inputframe{ name "frame.right-PBuffer" }
+  }
+  compound
+  {
+      compound
+      {
+          channel ( view 0 segment 0 )
+          eye [ LEFT ]
+          swapbarrier{}
+      }
+      compound
+      {
+          channel ( view 0 segment 1 )
+          eye [ RIGHT ]
+          swapbarrier{}
+      }
+  }
+
+Active stereo powerwall:
+  layout { view { }}
+  canvas
+  {
+      layout 1
+      wall {}
+      segment
+      {
+          eye [ LEFT RIGHT CYCLOP ]
+          channel "projector"
+      }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+  }
+
+Active stereo powerwall with second source GPU:
+  layout { view { }}
+  canvas
+  {
+      layout 1
+      wall {}
+      segment
+      {
+          eye [ LEFT RIGHT CYCLOP ]
+          channel "projector"
+      }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+      eye [ CYCLOP ]
+      load_equalizer{}
+
+      compound {}
+      compound
+      {
+          channel "source"
+          outputframe{}
+      }  
+      inputframe{ name "frame.source" }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+      eye [ LEFT RIGHT ]
+
+      compound { eye [ LEFT ] }
+      compound
+      {
+          eye [ RIGHT ]
+          compound
+          {
+              channel "source"
+              outputframe{}
+          }
+          inputframe{ name "frame.source" }
+      }
+  }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<h3>Q1: Is the stereo switch per view or per observer?</h3>
+<p>
+  Resolved: per view, implementing a convenience method Observer::setEyePasses
+  is possible.
+</p>
+<p>
+  The eye separation and head matrix, affecting stereo rendering, are on the
+  observer. It should however be possible to observe one view in stereo and one
+  in mono with one observer.
+</p>
+
+<h3>Q2: Shall one view be able to render mono and stereo concurrently?</h3>
+<p>
+  Resolved: No.
+</p>
+<p>
+  The benefit of rendering mono and stereo concurrently, presumably to different
+  segments, is marginal but makes writing different compounds for stereo and
+  mono difficult. Typically the mono config assumes that the resources used for
+  stereo rendering can be used for scalability, since stereo and mono are rarely
+  active at the same time.
+</p>
+
+#include "footer.shtml"
+<!-- $Id: immersive.shtml 3520 2009-10-26 16:00:08Z eile $ -->
