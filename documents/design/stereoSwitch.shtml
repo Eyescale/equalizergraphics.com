@@ -10,7 +10,7 @@
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
   State:
   <ul>
-    <li>Design based on 0.9.1-trunk</li>
+    <li>Design based on 0.9.1+svn</li>
   </ul>
 </p>
 
@@ -56,7 +56,7 @@
 <a name="implementation"></a>
 <h2>Implementation</h2>
 <ul>
-  <li>Implement file format</li>
+  <li>Implement file format, including converter</li>
   <li>Implement compound auto stereo mode</li>
   <li>Implement View::changeMode</li>
   <ul>
