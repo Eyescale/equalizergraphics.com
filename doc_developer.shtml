@@ -88,6 +88,19 @@
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+<ul>
+  <li><a href="/documents/design/admin.html">Administrative API</a>
+      for runtime configuration changes.</li>
+  <li><a href="/documents/design/stereoSwitch.html">Runtime stereo switching</a>
+    allows to change the rendering between mono and stereo at runtime, with
+    different scalability compounds.</li>
+  <li><a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
+    initialization and runtime.</a>
+  <li><a href="/documents/design/frameLoops.html">Independent frame loops</a>
+    for different views.</a>
+  <li><a href="/documents/design/roi.html">Region of interest</a> optimization
+    for scalable rendering and load-balancing.</li>
+</ul>
 
 <h3>Version 0.9.1</h3>
 <ul>
@@ -95,9 +108,11 @@
   <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
       for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
   <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range
-      Boundaries</a> for load-balancing</a>
+      Boundaries</a> for load-balancing.</a>
   <li><a href="/documents/design/multicast.html">Data distribution and data
       updates using reliable UDP multicast</a>.</li>
+  <li><a href="/documents/design/computeExtensions.html">CUDA and OpenCL
+      integration</a>.</li>
 </ul>
 
 <h3>Version 0.9</h3>
@@ -178,8 +193,10 @@
   <li><a href="/documents/design/compounds.html">Compounds</a> is the
     initial design documentation on the API and config file interface for the
     configuration of scalable rendering.</li>
+  <li><a href="/documents/design/frames.html">Compound frames</a> details the
+    inputframe and outputframe logics .</li>
   <li><a href="/documents/design/immersive.html">Stereo and Head
-        Tracking</a> gives an overview how stereo rendering, head tracking
+      Tracking</a> gives an overview how stereo rendering, head tracking
     and eye compounds are implemented.</li>
   <li><a href="/documents/design/dynamicNearFar.html">Dynamic Near and
         Far Plane Support</a> explains the API for adjusting the near and

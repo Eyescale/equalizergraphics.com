@@ -43,8 +43,7 @@
 
 <h2>Open Issues</h2>
 <p>
-  Can be used for automatic load balancing, but load balancing is not yet
-  implemented.
+  Can be used for automatic load balancing.
 </p>
 
 #include "footer.shtml"
