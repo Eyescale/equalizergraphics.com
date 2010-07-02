@@ -215,6 +215,7 @@ update:
 
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
+	wget -b "http://chart.apis.google.com/chart?chs=150x150&cht=qr&chl=$(@:$(TARGET)%=http://www.equalizergraphics.com%)" -q -o /dev/null -O $@.png
 	$(CPP_HTML) $< | sed 's/^#.*//' > $@
 
 doxygen:
