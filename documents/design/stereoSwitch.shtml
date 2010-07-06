@@ -62,7 +62,32 @@
   <ul>
     <li>Make compound activation eye-aware</li>
     <li>Make compound update and task generation eye-aware</li>
-    <li>Move compound activation from canvas to view</li>
+    <li>Move compound activation from canvas to view:</li>
+<!-- /* --><pre>
+ChannelUpdateVisitor:
+ - skip compound if not activated for current eye
+   -> need per-eye activation count for each compound
+      Compounds are activated globally right now
+
+server::View:
+  new member _currentMode; // NONE, MONO or STEREO
+
+server::View::activateMode:
+   Activate destination compounds for new eye(s)
+     for each destination channel of view:
+       if channel's canvas uses our layout and segment supports new eye
+          find and activate destination compound for eye(s)
+   Deactivate destination compounds for old eye(s)
+     for each destination channel of view:
+       if channel's canvas uses our layout and segment supports old eye
+          find and deactivate destination compound for eye(s)
+   _currentMode = mode;
+
+Refactor server::Canvas::activateLayout to use server::View::activateMode:
+  activateMode( MODE_NONE ) on old layout views
+  set new layout
+  activateMode( getMode( )) on new layout views
+</pre><!-- */ -->
   </ul>
 </ul>
 
@@ -75,6 +100,7 @@
 
 <h2>File Format</h2>
 <!-- /* --><pre>
+  #Equalizer 1.1 ascii
   view
   {
       mode MONO | STEREO

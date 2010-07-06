@@ -7,7 +7,7 @@ use strict;
 use XML::RSS;
 
 my $svn = $ENV{'SVN'};
-if( $svn eq "" )
+if( !$svn || $svn eq "" )
 {
     $svn = "svn";
 }

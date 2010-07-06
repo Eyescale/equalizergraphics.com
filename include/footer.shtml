@@ -32,7 +32,11 @@
     </script>
   </div>
 #endif
-<p><img src=QUOTE(FULLURL.png)></img></p>
+  <div class="center">
+    <img src=QUOTE(FULLURL.png) alt="QR code for this website">
+    <div class="label">QR Code linking to this website, to be read with a mobile
+      device.</div>
+  </div>
 </div> <!-- div content -->
  
 

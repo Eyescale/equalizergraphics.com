@@ -51,6 +51,7 @@ State: Implemented
 
 <a name="global"></a>
 <!-- /* --><pre>
+#Equalizer 1.0 ascii
 global
 {
      EQ_CONNECTION_SATTR_HOSTNAME             string
@@ -144,6 +145,7 @@ server
                         hint_swapsync       OFF | ON         # AGL, WGL only
                         hint_drawable       window | pbuffer | FBO
                         hint_statistics     OFF | FASTEST [ON] | NICEST
+                        hint_affinity       OFF | ON | AUTO | EXTERN
                         planes_color        unsigned | RGBA16F | RGBA32F
                         planes_alpha        unsigned
                         planes_depth        unsigned
