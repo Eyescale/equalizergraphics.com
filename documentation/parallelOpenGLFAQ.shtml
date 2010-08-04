@@ -125,6 +125,60 @@
 <a name="multigpu"></a>
 <h2>4. Using Multiple Graphics Cards with OpenGL</h2>
 <ul>
+  <li><b>Q: </b>How do the data types in my program relate to my hardware on
+    the different operating systems?</li>
+  <li><b>A: </b> The following table is a high-level overview:
+    <table>
+      <tr>
+        <th></th>
+        <th>GLX</th>
+        <th>WGL</th>
+        <th>AGL</th>
+      </tr>
+      <tr>
+        <th>GPU</th>
+        <td>Display* and Screen<sup>1</sup></td>
+        <td>(affinity) HDC<sup>2</sup></td>
+        <td>CGDirectDisplayID or CGOpenGLDisplayMask</td>
+      </tr>
+      <tr>
+        <th>OpenGL Context</th>
+        <td>GLXContext</td>
+        <td>HGLRC</td>
+        <td>AGLContext</td>
+      </tr>
+      <tr>
+        <th>Window</th>
+        <td>XID</td>
+        <td>HWND</td>
+        <td>WindowRef</td>
+      </tr>
+      <tr>
+        <th>PBuffer</th>
+        <td>XID</td>
+        <td>HPBUFFERARB</td>
+        <td>AGLPbuffer</td>
+      </tr>
+      <tr>
+        <th>Pixel Format</th>
+        <td>int (Visual ID)</td>
+        <td>int</td>
+        <td>AGLPixelFormat</td>
+      </tr>
+      <tr>
+        <th>Pixel Format Info</th>
+        <td>XVisualInfo or GLXFBConfig</td>
+        <td>PIXELFORMATDESCRIPTOR</td>
+        <td>AGLPixelFormat</td>
+      </tr>
+    </table>
+    <sup>1</sup> The display identifies the X Server, and the screen the GPU
+    handled by this X Server. Typically <code>DefaultScreen( display )</code> is
+    used to determine the screen given by the the display string (see
+    below).<br>
+    <sup>2</sup> The core WGL implementation does not select a specific GPU --
+    see below for details.
+  </li>
   <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
     Linux (X11)?</li>
   <li><b>A: </b>Normally, the OpenGL commands are only send to the card
