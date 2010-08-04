@@ -218,6 +218,15 @@
     <a href="http://www.opengl.org/registry/specs/AMD/wgl_gpu_association.txt">WGL_AMD_gpu_association</a>
     extension.</li>
 </ul><ul>
+  <li><b>Q: </b>How do I address a specific nVidia graphics card on Windows
+    7/Vista?</li>
+  <li><b>A: </b>The
+    <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
+    extension currently only supports FBO-based rendering. NVIdia release 256
+    and later drivers to exhibit the same limitation on Windows XP and 2000. It
+    is not possible to select a specific GPU to render into a window or
+    PBuffer.</li>
+</ul><ul>
   <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
     Mac OS X?</li>
   <li><b>A: </b>The OpenGL rendering happens on the card where most of the
