@@ -47,6 +47,21 @@
   handling in <code>eq::net</code>.
 </p>
 
+<h2>File Format</h2>
+<!-- /* --><pre>
+  global
+  {
+      EQ_CONFIG_IATTR_ROBUSTNESS OFF | ON
+  }
+  config
+  {
+      attributes
+      {
+          robustness OFF | ON  # tolerate resource failures (init only)
+      }
+  }
+</pre><!-- */ -->
+
 
 #include "footer.shtml"
 <!-- $Id$ -->

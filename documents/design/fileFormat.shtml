@@ -54,34 +54,35 @@ State: Implemented
 #Equalizer 1.0 ascii
 global
 {
-     EQ_CONNECTION_SATTR_HOSTNAME             string
-     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
-     EQ_CONNECTION_IATTR_PORT                 unsigned
-     EQ_CONNECTION_SATTR_PIPE_FILENAME        string
-     EQ_CONFIG_FATTR_EYE_BASE                 float
-     EQ_NODE_SATTR_LAUNCH_COMMAND             string
-     EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
-     EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
-     EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
-     EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
-     EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
-     EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
-     EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
-     EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
-     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
-     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
-     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
-     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
-     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
-     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
-     EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
-     EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
-     EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
-     EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
-     EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
-     EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
-     EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
-     EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
+    EQ_CONNECTION_SATTR_HOSTNAME             string
+    EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
+    EQ_CONNECTION_IATTR_PORT                 unsigned
+    EQ_CONNECTION_SATTR_PIPE_FILENAME        string
+    EQ_CONFIG_FATTR_EYE_BASE                 float
+    EQ_CONFIG_IATTR_ROBUSTNESS               OFF | ON
+    EQ_NODE_SATTR_LAUNCH_COMMAND             string
+    EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
+    EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
+    EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
+    EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
+    EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
+    EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
+    EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
+    EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
+    EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
+    EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
+    EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
+    EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
+    EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
+    EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
+    EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
+    EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
+    EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
+    EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
+    EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
+    EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
+    EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
+    EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
 }
 server
 {
@@ -99,7 +100,8 @@ server
         latency int    # Number of frames nodes may fall behind app, default 1
         attributes
         {
-             eye_base     float # distance between left and right eye
+            eye_base     float     # distance between left and right eye
+            robustness   OFF | ON  # tolerate resource failures (init only)
         }
 
         (node|appNode) # 1-n times, a system in the cluster
