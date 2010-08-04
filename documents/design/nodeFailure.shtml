@@ -20,16 +20,16 @@
 
 <h2>Launching</h2>
 <p>
-  Equalizer already detects the failure of a node to launch. To run a
+  Equalizer already detects the failure of an entity to launch. To run a
   configuration observing such a failure, implement to following:
   <ul>
     <li>A new config attribute to allow init failures</li>
-    <li>Leave each unlaunched node in the INIT_FAILED state</li>
+    <li>Leave each unlaunched entity in the INIT_FAILED state</li>
     <li>Deactivate all dependent compounds</li>
-    <li>Ignore any layout switch on inactive compounds</li>
+    <li>Ignore any layout switches on inactive compounds</li>
   </ul>
-  This will allow to launch configurations even if one of the nodes in the
-  cluster is offline. If the failed node is a source-only node, the
+  This will allow to launch configurations even if one of the entities in the
+  cluster is failing. If the failed node is a source-only node, the
   configurations will run flawlessly, with slightly degraded performance. If it
   is a destination node, the corresponding display segment will not be
   updated. Any dependent source nodes are automatically deactivated and will not
