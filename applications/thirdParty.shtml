@@ -90,23 +90,18 @@
     modelling in the VR application.
 </p>
 
+<a name="compcore"></a>
 <h2>CompCore at CSU East Bay</h2>
 <p>
-  The California State University, East Bay uses Equalizer for point-based
-  rendering of LIDAR data, force-directed graph layout and panoramic image
-  viewing on a 40-core cluster driving an immersive projected display system.
+  The <a href="http://www.compcore.csueastbay.edu/">California State University,
+  East Bay</a> uses Equalizer for point-based rendering of LIDAR data,
+  force-directed graph layout and panoramic image viewing on a 40-core cluster
+  driving an immersive projected display system.
 </p>
 <ul>
   <li><a href="http://www.mcs.csueastbay.edu/~tebo/TheCompCoreImmersiveDisplay.pdf">Presentation</a></li>
   <li><a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">Video</a></li>
 </ul>
-
-<h2>TinySG</h2>
-<p>
-  <a href="http://www.tinysg.de/index.html">Tiny Scene Graph</a> is a scene
-  graph library for fast rendering of polygonal and volumetric datasets, GLSL
-  shader evaluation, cluster support, raytracing and scalable rendering.
-</p>
 
 <a name="eqSmart"></a>
 <h2>eqSmart: Terrain rendering</h2>
