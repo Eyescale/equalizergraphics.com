@@ -136,7 +136,10 @@
 <ul>
   <li><a href="http://www.mcs.csueastbay.edu/~tebo/papers/SIGGRAPH2010.pdf">Camera-based
       Calibration for Scalable Immersive Rendering</a>. William
-    C. Thibault. Siggraph 2010 Poster.</li>
+    C. Thibault. Siggraph 2010 Poster,
+    <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral 
+      video</a>.
+</li>
   <li><a href="http://blog.blackhc.net/wp-content/uploads/2009/10/BachelorThesisOnline.pdf">Multi-Tile
       Terrain Rendering with OGL/Equalizer</a>. Andreas Kirsch. Bachelor Thesis
     in Computer Science, TU M&uuml;nchen.</li>
