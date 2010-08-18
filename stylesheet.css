@@ -8,8 +8,13 @@ body {
     margin: 0;
 }
 
-pre, code {
+code {
     font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+}
+
+pre {
+    font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+    font-size: small;
 }
 
 p.quote

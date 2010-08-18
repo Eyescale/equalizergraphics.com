@@ -2,13 +2,17 @@
 #define S_DOCUMENTATION_DEVELOPER
 #define PAGE Documentation
 #define SUBPAGE Developer
-#define TITLE Multicast Data Transfer
+#define TITLE Reliable Multicast
 
 #include "header.shtml"
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
-  State: Implemented in 0.9.1<br/>
+  State:
+<ul>
+  <li>Implemented in 0.9.1</li>
+  <li>Sliding ack window and early acks in svn</li>
+</ul>
 </p>
 
 <h2>Overview</h2>
@@ -54,21 +58,29 @@
   implies that data was lost.
 </p>
 
+<a name="RSP"></a>
 <h3>Reliable Stream Protocol (RSP)</h3>
 <p>
-  Equalizer contains a reliable stream protocol (RSP) using UDP multicast as a
+  Equalizer implements a reliable stream protocol (RSP) using UDP multicast as a
   low-level transport. Equalizer 0.9.1 allows to use both PGM and RSP as a
   multicast protocol. We strongly recommend using RSP and will possibly retire
   PGM support in the future. RSP provides the following features:
 </p>
+<div class="float_right">
+      <a href="/documents/design/images/rspPackets.png">
+        <img src="/documents/design/images/rspPackets-small.jpg" 
+         alt="RSP Packet Flow"></a>
+  <div class="label">RSP packet control flow</div>
+</div>
 <ul>
   <li>Full reliablity using active acks, a slow receiver will eventually slow
     down the sender</li>
-  <li>High-performance implementation</li>
+  <li>High-performance implementation:</li>
   <ul>
     <li>Read and write buffering with lock-free queueing</li>
     <li>Merging of small writes</li>
     <li>Early nacks (negative acknowledgements)</li>
+    <li>Early acks, sliding sender-side ack window (svn only)</li>
     <li>Nack merging</li>
   </ul>
   <li>Multicast send interface selection</li>
@@ -81,10 +93,94 @@
   <li>Client connects and disconnects during active write operations</li>
   <li>Automatic MTU discovery between Windows and non-Windows hosts</li>
   <li>Infiniband support</li>
-  <li>Early Acks</li>
   <li>TTL selection, i.e., multicast traffic will not leave the local
     subnet</li>
 </ul>
+<p>
+  The RSP protocol follows roughly the following pseudo-code algorithm:
+</p>
+<!-- /* --><pre>
+[Application thread]
+  RSPConnection::write( buffer, size )
+      numPackets = size / _mtu;
+      for each packet
+          if no free packet available
+              wake up I/O thread to trigger processing
+          get free packet from _appBuffers [may block]
+          copy data to packet
+          enqueue packet to _threadBuffers
+      wake up I/O thread to trigger processing
+
+[RSPConnection IO thread]
+  RSPConnection::handleTimeout
+      processOutgoing()
+
+  RSPConnection::handleData
+      handleData()
+      processOutgoing()
+
+  RSPConnection::processOutgoing
+      if repeat requests pending
+          send one repeat
+          set timeout to 0
+      else if write pending (_threadBuffers not empty)
+          merge pending write buffers up to mtu size
+          update packet sequence
+          send one data packet
+          save packet for repetion (_writeBuffers)
+      if _writeBuffers not empty and _threadBuffers empty 
+          (i.e. still need ack and nothing to write)
+          if timeout exceeded
+              send ack request
+          set timeout
+
+  RSPConnection::handleData
+      if data packet in order
+          try to get free packet from application thread (_threadBuffers)
+          if no packet available
+              drop data packet
+          else
+              enqueue data packet to application (_appBuffers)
+              enqueue in-order saved early packets (_recvBuffers)
+              update sequence
+              if sequence % ack frequency
+                  send ack to sender
+      else if earlier packet already received (repetition for other receiver)
+          drop packet
+      else if early future packet
+          try to get free packet from application thread (_threadBuffers)
+          if no packet available
+              drop data packet
+          else
+              save packet (_recvBuffers)
+              send NAck for all packets not received before this one
+
+  RSPConnection::handleAck
+      update receiver's sequence
+      if all other receiver's have later sequence
+          enqueue packets up to sequence for own read operation
+              _writeBuffers -> _appBuffers
+
+  RSPConnection::handleNAck
+      queue repeat requests
+
+  RSPConnection::handleAckRequest
+      if own sequence smaller than request
+          send nack with all missing packets
+      else
+          send ack with own sequence
+
+[Application thread]
+  RSPConnection::read( buffer, size )
+     while data to be read
+         if no current read buffer
+             get read buffer from _appBuffers [may block]
+         copy data from read buffer to application memory
+         if read buffer fully used
+             push buffer to IO thread (_threadBuffers)
+         else
+             update read buffer size
+</pre><!-- */ -->
 
 <h3>Object Mapping</h3>
 <div class="float_right">
