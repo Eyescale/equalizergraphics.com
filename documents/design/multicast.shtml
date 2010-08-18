@@ -145,12 +145,14 @@
   RSPConnection::processOutgoing
       if repeat requests pending
           send one repeat
+          speed up by bandwidth * RSP_ERROR_UPSCALE permille
           set timeout to 0
       else if write pending (_threadBuffers not empty)
           merge pending write buffers up to mtu size
           update packet sequence
           send one data packet
           save packet for repetion (_writeBuffers)
+          speed up by bandwidth * RSP_ERROR_UPSCALE permille
       if _writeBuffers not empty and _threadBuffers empty 
           (i.e. still need ack and nothing to write)
           if timeout exceeded
@@ -186,6 +188,8 @@
 
   RSPConnection::handleNAck
       queue repeat requests
+      slow down lost * sendRate * RSP_ERROR_DOWNSCALE permille
+          (up to bandwidth >> RSP_MIN_SENDRATE_SHIFT)
 
   RSPConnection::handleAckRequest
       if own sequence smaller than request
