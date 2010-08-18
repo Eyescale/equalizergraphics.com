@@ -98,15 +98,29 @@
 </div>
 <p>
   Each member of the multicast groups call <code>listen</code> on its RSP
-  connection. This creates an I/O thread for this multicast connection. The
-  connection discovers all other members in the multicast group during the
-  initialization and creates one <code>connected</code> RSPConnection for each
-  group member. A new member is signaled on the listening connection, and can be
-  retrieved using accept. On each process there is therefore one listening and n
-  connected connections for each multicast group. Data send is also received
-  locally, that is, there is one connected RSPConnection for the local
-  sender. The RSP communication protocol follows roughly the following
-  pseudo-code algorithm:
+  connection
+  (<a href="/documents/Developer/API/classeq_1_1net_1_1RSPConnection.html">API
+  documentation</a>). This creates an I/O thread for this multicast
+  connection. The connection discovers all other members in the multicast group
+  during the initialization and creates one <code>connected</code> RSPConnection
+  for each group member. A new member is signaled on the listening connection,
+  and can be retrieved using accept. On each process there is therefore one
+  listening and n connected connections for each multicast group. Data send is
+  also received locally, that is, there is one connected RSPConnection for the
+  local sender.
+</p>
+<p>
+  Each RSP connection has a number of data buffers (64 Windows/1024 others) of
+  mtu size (65000 Windows/1470 others). These buffers are circulated between the
+  the application and IO thread during operations, ultimately causing the
+  application thread to block in <code>read</code> or <code>write</code> if no
+  buffers are available. Care has been taken in the implementation to use
+  lock-free queues and batching locked operations where possible. This ensures a
+  high parallelism between the application and network communications.
+</p>
+<p>
+  The RSP communication protocol follows roughly the following pseudo-code
+  algorithm:
 </p>
 <!-- /* --><pre>
 [Application thread]
