@@ -66,12 +66,6 @@
   multicast protocol. We strongly recommend using RSP and will possibly retire
   PGM support in the future. RSP provides the following features:
 </p>
-<div class="float_right">
-      <a href="/documents/design/images/rspPackets.png">
-        <img src="/documents/design/images/rspPackets-small.jpg" 
-         alt="RSP Packet Flow"></a>
-  <div class="label">RSP packet control flow</div>
-</div>
 <ul>
   <li>Full reliablity using active acks, a slow receiver will eventually slow
     down the sender</li>
@@ -87,7 +81,7 @@
   <li>Event-based (Windows) or FD-based (Posix) notification mechanism</li>
 </ul>
 <p>
-  It does not yet provide (TODO-list):
+  It does not yet implement (TODO-list):
 </p>
 <ul>
   <li>Client connects and disconnects during active write operations</li>
@@ -96,8 +90,23 @@
   <li>TTL selection, i.e., multicast traffic will not leave the local
     subnet</li>
 </ul>
+<div class="float_right">
+      <a href="/documents/design/images/rspPackets.png">
+        <img src="/documents/design/images/rspPackets-small.jpg" 
+         alt="RSP Packet Flow"></a>
+  <div class="label">RSP packet control flow</div>
+</div>
 <p>
-  The RSP protocol follows roughly the following pseudo-code algorithm:
+  Each member of the multicast groups call <code>listen</code> on its RSP
+  connection. This creates an I/O thread for this multicast connection. The
+  connection discovers all other members in the multicast group during the
+  initialization and creates one <code>connected</code> RSPConnection for each
+  group member. A new member is signaled on the listening connection, and can be
+  retrieved using accept. On each process there is therefore one listening and n
+  connected connections for each multicast group. Data send is also received
+  locally, that is, there is one connected RSPConnection for the local
+  sender. The RSP communication protocol follows roughly the following
+  pseudo-code algorithm:
 </p>
 <!-- /* --><pre>
 [Application thread]
