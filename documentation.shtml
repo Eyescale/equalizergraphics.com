@@ -106,12 +106,12 @@
 <h2>Research Papers</h2>
 <h3>Core Team</h3>
 <ul>
-  <li>Fast compositing for cluster-parallel rendering. Maxim Makhinya, Stefan
+  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/FastCompositing.pdf">Fast compositing for cluster-parallel rendering</a>. Maxim Makhinya, Stefan
     Eilemann, and Renato Pajarola. In Proceedings Eurographics Symposium on
     Parallel Graphics and Visualization, pp. 111-120, May 2010. (Presentation:
     <a href="/documents/EGPGV10_compositing.html">html</a>
     <a href="/documents/EGPGV10_compositing.pdf">pdf</a>)</li>
-  <li>Scalable parallel out-of-core terrain rendering. Prashant Goswami, Maxim
+  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/ParallelRASTeR.pdf">Scalable parallel out-of-core terrain rendering</a>. Prashant Goswami, Maxim
     Makhinya, Jonas Bosch, and Renato Pajarola. In Proceedings Eurographics
     Symposium on Parallel Graphics and Visualization, pp. 63-71, May 2010.
     (Presentation: <a href="/documents/EGPGV10_raster.html">html</a>

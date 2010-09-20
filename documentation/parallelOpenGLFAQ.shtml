@@ -179,12 +179,13 @@
     <sup>2</sup> The core WGL implementation does not select a specific GPU --
     see below for details.
   </li>
+</ul><ul>
   <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
     Linux (X11)?</li>
   <li><b>A: </b>Normally, the OpenGL commands are only send to the card
       belonging to the screen used to open the display connection to the X
       server. That means that when Xinerama is used to virtualize the graphics
-      cards, the window will only display OpenGL content on one card.</b></li>
+      cards, the window will only display OpenGL content on one card.</li>
 </ul><ul>
   <li><b>Q: </b>How to I address a specific graphics card on Linux (X11)?</li>
   <li><b>A: </b>The graphics card is selected using 
