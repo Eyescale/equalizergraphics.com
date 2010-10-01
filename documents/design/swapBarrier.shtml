@@ -82,7 +82,7 @@ State:
 
 <h2>API</h2>
 <!-- /* --><pre>
-  class OSWindow
+  class SystemWindow
   {
       virtual bool joinNVSwapBarrier( const uint32_t group, 
           const uint32_t barrier ) { return false; }
@@ -98,8 +98,8 @@ State:
 </p>
 <p>
   Server sends swap group and barrier as part of the window's config init
-  packet, which are saved on the eq::Window. The OSWindow implementation queries
-  the values in configInit and configExit and calls joinNVSwapBarrier.
+  packet, which are saved on the eq::Window. The SystemWindow implementation
+  queries the values in configInit and configExit and calls joinNVSwapBarrier.
 </p>
 <p>
   Compound::init sets eq::server::Window swap group and barrier. Check that

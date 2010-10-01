@@ -41,8 +41,8 @@ referenced by the compounds -- a channel belongs to a <b>Window</b> which
 again manages the GL context. 
 Windows in turn are managed by a <b>Pipe</b> object which provides the 
 threading logic. Usually, only one window is used per pipe. Internally, each
-Window uses an <b>OSWindow</b> object which abstracts window-system specific
-functionality; i.e., using WGL, glX, or AGL. Similarly, an <b>OSPipe</b> 
+Window uses an <b>SystemWindow</b> object which abstracts window-system specific
+functionality; i.e., using WGL, glX, or AGL. Similarly, an <b>SystemPipe</b> 
 object is used by each pipe to handle the backend specific device
 implementation.
 </p>

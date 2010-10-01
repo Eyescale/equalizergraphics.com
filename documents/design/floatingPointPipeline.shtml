@@ -36,7 +36,7 @@ State: Implemented in 0.9
     FrameBufferObject::FrameBufferObject( GLEWContext* glewContext, const GLuint format )
 
     update int WGLWindow::chooseWGLPixelFormat()
-    update bool OSWindow::configInitFBO()
+    update bool GLWindow::configInitFBO()
     update bool Channel::_configInitFBO()
 
 </pre><!-- */ -->

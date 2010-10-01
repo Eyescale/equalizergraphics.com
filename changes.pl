@@ -1,7 +1,7 @@
 #!/opt/local/bin/perl -w
 # Creates an html page and RSS feed for latest changes on the website.
 
-# needs RSS perl module, 'sudo port install p5-xml-rss'
+# needs perl modules: 'sudo port install p5-xml-rss p5-datetime'
 
 use strict;
 use XML::RSS;
