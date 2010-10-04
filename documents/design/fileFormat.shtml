@@ -72,6 +72,7 @@ global
     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
+    EQ_WINDOW_IATTR_HINT_AFFINITY            OFF | ON | AUTO | EXTERN
     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
@@ -331,6 +332,21 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>A workaround for broken WGL_NV_gpu_affinity added:
+    <!-- /* --><pre>
+      global
+      {
+b          EQ_WINDOW_IATTR_HINT_AFFINITY            OFF | ON | AUTO | EXTERN
+      }
+      window
+      {
+          attributes
+          {
+              hint_affinity       OFF | ON | AUTO | EXTERN
+          }
+      }
+    </pre><!-- */ -->
+  </li>
   <li><a href="/documents/design/multicast.html">Multicast data transfer:</a>
     <!-- /* --><pre>
       connection
