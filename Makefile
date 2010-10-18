@@ -1,4 +1,5 @@
 .PHONY: update sitemap doxygen
+.SUFFIXES: .html .css
 
 TARGET = build
 
@@ -172,10 +173,11 @@ IMAGES_SRC = \
 	$(wildcard applications/images/UniSiegen/*jpg) \
 	$(wildcard scalability/images/*png) \
 	$(wildcard documents/design/images/*png) \
-	$(wildcard screenshots/*) \
+	$(wildcard screenshots/*)
 
-HTML_SRC = \
-	$(wildcard documents/design/*.shtml) \
+MD_SRC = $(wildcard Equalizer.wiki/*.md)
+HTML_SRC = $(wildcard documents/design/*.shtml) \
+           $(MD_SRC:Equalizer.wiki/%.md=documents/design/%.shtml)
 
 INCLUDES = \
 	include/header.shtml \
@@ -187,11 +189,14 @@ IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 PAGES    = $(HTML_SRC:%.shtml=%.html)
 
 SVN ?= svn
+GIT ?= git
+MD2HTML ?= markdown-2.6
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`$(SVN) info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<?view=log\" \
            -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%) \
-           -DPAGEURL=$(@:$(TARGET)%=%)
+           -DPAGEURL=$(@:$(TARGET)%=%) \
+           -DWIKIURL=$(<:documents/design/%.shtml=http://github.com/Eyescale/Equalizer/wiki/%)
 
 all: $(TARGETS) $(INCLUDES)
 
@@ -209,14 +214,20 @@ auxinst: all
 
 update:
 	$(SVN) update ..
+	-cd Equalizer.wiki; $(GIT) pull
 	rm -f changes_log.html
-
-.SUFFIXES: .html .css
 
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	wget -b "http://chart.apis.google.com/chart?chs=150x150&cht=qr&chl=$(@:$(TARGET)%=http://www.equalizergraphics.com%)" -q -o /dev/null -O $@.png
 	$(CPP_HTML) $< | sed 's/^#.*//' > $@
+
+documents/design/%.shtml: Equalizer.wiki/%.md
+	@mkdir -p $(@D)
+	@head -1 $< | sed 's/# /#define TITLE /' > $@
+	@cat include/mdHeader.shtml >> $@
+	$(MD2HTML) $< >> $@
+	@cat include/mdFooter.shtml >> $@
 
 doxygen:
 	cd ../src; doxygen Doxyfile

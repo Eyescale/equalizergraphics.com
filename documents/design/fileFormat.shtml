@@ -267,7 +267,7 @@ server
             {
                 mode 2D | DB | VERTICAL | HORIZONTAL
                 damping float # 0: no damping, 1: no changes
-				boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
+                                boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
             }
             DFR_equalizer # adapt ZOOM to achieve constant framerate
             {
