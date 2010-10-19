@@ -89,6 +89,8 @@
   features will be release in the next version.
 </p>
 <ul>
+  <li><a href="/documents/design/Capabilities.html">Rendering capabilities</a>
+      allow application-dependent deactivation of channels.</li>
   <li><a href="/documents/design/admin.html">Administrative API</a>
       for runtime configuration changes.</li>
   <li><a href="/documents/design/stereoSwitch.html">Runtime stereo switching</a>

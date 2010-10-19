@@ -5,4 +5,5 @@
 
 #include "header.shtml"
 
-<p>Edit this page on the <a href=QUOTE( WIKIURL )>GitHub Wiki</a></p>
+<p>Contribute to this document on the <a href=QUOTE( WIKIURL )>GitHub
+Wiki</a></p>
