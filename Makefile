@@ -227,7 +227,7 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
 	@cat include/mdHeader.shtml >> $@
-	$(MD2HTML) $< >> $@
+	$(MD2HTML) $< | sed 's/^\<h1\>.*//'>> $@
 	@cat include/mdFooter.shtml >> $@
 
 doxygen:
