@@ -15,14 +15,63 @@
 <p>
   The tool is automatically build when using the Visual Studio 2005 solution. A
   precompiled executable can be found 
-  <a href="/downloads/affinityCheck.exe">here</a>, and the source code 
-  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/tools/affinityCheck/affinityCheck.cpp?view=markup">here</a>.
+  <a href="/downloads/affinityCheck.exe">here</a>, and the source in
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/tools/affinityCheck/affinityCheck.cpp?view=markup">tools/affinityCheck/affinityCheck.cpp</a>.
 </p>
 
 <h3>Example Output</h3>
 <pre>
 GPU 0: NVIDIA Quadro FX 5600 used on [0 0 1600 1200]
 GPU 1: NVIDIA Quadro FX 5600 used on [1600 0 1600 1200]
+</pre>
+
+<h2>Network Benchmark Tool</h2>
+<p>
+  Equalizer provides <code>netperf</code>, a command line tool to benchmark
+  network throughput of all supported protocols. It is automatically compiled
+  during the build process, and the source code is in
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/tools/netperf/netperf.cpp?view=markup">tools/netperf/netperf.cpp</a>.
+</p>
+<p>
+  Netperf differs from other similar tools in that it uses the Equalizer source
+  code. This has the benefit of benchmarking 'the real thing' for Equalizer
+  applications, and furthermore allows benchmarking of other protocols such as
+  InfiniBand SDP and RSP reliable multicast.
+</p>
+<p>
+  Netperf is either invoked as a server (receiver) or client (sender). The
+  server(s) are always started before the client(s). For unicast protocols, one
+  server can receive data from multiple clients. For multicast protocols, one
+  client can send data to multiple servers. For technical reasons, only one
+  process can open a multicast connection on a single endpoint (interface, IP,
+  port).
+</p>
+<p>
+  The protocol and protocol parameters are specified on the command line, along
+  with other optional parameters. The following connections types are supported:
+  <ul>
+    <li>TCP: unicast TCP/IP, parameters hostname and port</li>
+    <li>SDP: unicast Socket Direct Protocol (InfiniBand), parameters hostname
+      and port</li>
+    <li>PIPE: single-host named pipe (Win32 only), parameters filename</li>
+    <li>PGM: multicast Pragmatic Generic Multicast (Win32 only), parameters
+      IP, port and interface</li>
+    <li>RSP: multicast Reliable Stream Protocol, parameters IP, port and
+      interface</li>
+  </ul>
+</p>
+
+<h3>Example Output</h3>
+<pre>
+[server]
+eile% ./release/bin/netperf -s :4242 -n 100000 -p 8192
+Recv perf: 515.113MB/s (65934.4pps) from TCPIP#102400#127.0.0.1##61736#default#
+0 clients
+
+[client]
+eile% ./release/bin/netperf -c :4242 -n 100000 -p 8192
+Send perf: 515.154MB/s (65939.7pps)
+Send perf: 494.175MB/s (63254.4pps)
 </pre>
 
 <h2>GLAsync</h2>
