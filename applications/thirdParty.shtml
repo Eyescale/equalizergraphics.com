@@ -54,15 +54,6 @@
   extended to multi-node rendering in order to immerse the user into the virtual
   reality cave at the University of Siegen.
 </p>
-<p>
-  "Equalizer bundles multi-node rendering and synchronization tools into an
-  easy-to-use and well-structured object-oriented framework", says Nicolas
-  Cuntz, researcher at the University of Siegen. "Porting to Equalizer can be
-  achieved without completely restructuring the application.  However, one has
-  to deal with data synchronization and possible problems related to threading
-  and parallelism, which is a problem that cannot completely be delegated to a
-  library."
-</p>
 <div class="float_right">
   <a href="/applications/images/clay_bunny.png">
     <img src="/applications/images/clay_bunny-small.jpg" 

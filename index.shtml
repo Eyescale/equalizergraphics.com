@@ -63,6 +63,22 @@
     of dynamic data sets on large-scale visualization clusters.</li>
 </ul>
 
+<h2>Project Mission</h2>
+<p>
+  Equalizer is an open platform for high-performance visualization:
+</p>
+<ul>
+  <li><b>Vendor Independence:</b> The development is not governed by a single
+    company. We work with several industry-leading hardware and software vendors
+    as well as research institutions on improving Equalizer.</li>
+  <li><b>Open Source:</b> Equalizer uses a liberal license which allows usage in
+    both open source and commercial products. The license ensures progress on
+    the core framework and protects the ISV's investment in the future.</li>
+  <li><b>Open Community:</b> We encourage the usage in custom projects and
+    welcome contributions to Equalizer by the community. We contribute our
+    experience in parallel rendering back to the OpenGL community.</li>
+</ul>
+
 <h2>Compatibility</h2>
 <div class="float_right">
   <a href="http://www.opengl.org"><img src="images/ogl.jpg"
@@ -88,21 +104,36 @@
   from <a href="http://www.eyescale.ch">Eyescale Software GmbH</a>.
 </p>
 
-<h2>Project Mission</h2>
+<h2>Testimonials</h2>
 <p>
-  Equalizer is an open platform for high-performance visualization:
+  Please send us your <a href="mailto:info@equalizergraphics.com?subject=Feedback regarding Equalizer">feedback</a>.
 </p>
-<ul>
-  <li><b>Vendor Independence:</b> The development is not governed by a single
-    company. We work with several industry-leading hardware and software vendors
-    as well as research institutions on improving Equalizer.</li>
-  <li><b>Open Source:</b> Equalizer uses a liberal license which allows usage in
-    both open source and commercial products. The license ensures progress on
-    the core framework and protects the ISV's investment in the future.</li>
-  <li><b>Open Community:</b> We encourage the usage in custom projects and
-    welcome contributions to Equalizer by the community. We contribute our
-    experience in parallel rendering back to the OpenGL community.</li>
-</ul>
+
+<p class="quote">
+  November 2008, Dan Wilcox, developer at <a href="http://www.aec.at/futurelab_about_en.php">Ars Electronica Futurelab</a>:
+</p>
+<p>
+  Equalizer abstracts the windowing and distribution of shared objects which,
+  trust me, is well worth the overhead of learning it. It's one thing to have
+  each machine running the same rendering thread and it's quite another to send
+  control and input dynamically between them. Plus it runs on Mac, Windows, and
+  Linux.
+  (<a href="http://www.openframeworks.cc/forum/viewtopic.php?p=24110#p24110">source</a>)
+</p>
+
+<p class="quote">
+  April 2008, Nicolas Cuntz, researcher at
+    the <a href="http://www.cg.informatik.uni-siegen.de/">University of
+    Siegen</a>:
+</p>
+<p>
+  Equalizer bundles multi-node rendering and synchronization tools into an
+  easy-to-use and well-structured object-oriented framework. Porting to
+  Equalizer can be achieved without completely restructuring the application.
+  However, one has to deal with data synchronization and possible problems
+  related to threading and parallelism, which is a problem that cannot
+  completely be delegated to a library.
+</p>
 
 <div class="footnote">
 <p>

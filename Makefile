@@ -20,6 +20,7 @@ FILES = \
 	equalizer.rdf \
 	favicon.ico \
 	features.html \
+	feedback.html \
 	forum.html \
 	impressum.html \
 	index.html \

@@ -150,6 +150,14 @@
               class="used"
 #endif
               >Framework</a></p>
+
+#if 0
+        <p><a href="/feedback.html"
+#ifdef S_HOME_FEEDBACK
+              class="used"
+#endif
+              >Feedback</a></p>
+#endif
       </div>
 #endif  // S_HOME
 

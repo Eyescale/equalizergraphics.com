@@ -1,0 +1,38 @@
+#define S_HOME
+#define S_HOME_FEEDBACK
+#define PAGE Testimonials
+
+#include "header.shtml"
+
+<p>
+  Please send us your <a href="mailto:info@equalizergraphics.com?subject=Feedback regarding Equalizer">feedback</a>.
+</p>
+
+<p class="quote">
+  November 2008, Dan Wilcox, developer at <a href="http://www.aec.at/futurelab_about_en.php">Ars Electronica Futurelab</a>:
+</p>
+<p>
+  Equalizer abstracts the windowing and distribution of shared objects which,
+  trust me, is well worth the overhead of learning it. It's one thing to have
+  each machine running the same rendering thread and it's quite another to send
+  control and input dynamically between them. Plus it runs on Mac, Windows, and
+  Linux.
+  (<a href="http://www.openframeworks.cc/forum/viewtopic.php?p=24110#p24110">source</a>)
+</p>
+
+<p class="quote">
+  April 2008, Nicolas Cuntz, researcher at
+    the <a href="http://www.cg.informatik.uni-siegen.de/">University of
+    Siegen</a>:
+</p>
+<p>
+  Equalizer bundles multi-node rendering and synchronization tools into an
+  easy-to-use and well-structured object-oriented framework. Porting to
+  Equalizer can be achieved without completely restructuring the application.
+  However, one has to deal with data synchronization and possible problems
+  related to threading and parallelism, which is a problem that cannot
+  completely be delegated to a library.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->
