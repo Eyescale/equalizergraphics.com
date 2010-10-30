@@ -8,8 +8,13 @@ body {
     margin: 0;
 }
 
-pre, code {
+code {
     font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+}
+
+pre {
+    font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+    font-size: small;
 }
 
 p.quote
@@ -206,6 +211,10 @@ div.content {
     margin-right: 0px;
 }
 
+div.search { 
+    display: none;
+}
+
 div.social { 
     display: none;
 }
@@ -217,7 +226,7 @@ div.footer {
     display: none;
 }
 
-div.navigation p{
+div.navigation p {
     margin: 2px 0px 2px 0px;
 }
 div.navigation a, div.subnavigation a

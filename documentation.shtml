@@ -139,7 +139,12 @@
     C. Thibault. Siggraph 2010 Poster,
     <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral 
       video</a>.
-</li>
+  </li>
+<li><a href="http://users.utcluj.ro/~cristimocan/Pages/Publications/Master%20Thesis/Master%20Thesis.pdf">A
+    Cluster-ready Viewer Application for building scalable High-Performance 3D
+    virtual geographical Space Scenarios using Graphics Cluster
+    Architectures</a>. Cristinel Mihai Mocan. Master Thesis in Computer Science,
+    Technical University of Cluj-Napoca, Romania.</li>
   <li><a href="http://blog.blackhc.net/wp-content/uploads/2009/10/BachelorThesisOnline.pdf">Multi-Tile
       Terrain Rendering with OGL/Equalizer</a>. Andreas Kirsch. Bachelor Thesis
     in Computer Science, TU M&uuml;nchen.</li>

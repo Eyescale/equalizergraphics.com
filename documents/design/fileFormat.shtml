@@ -336,7 +336,7 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       global
       {
-b          EQ_WINDOW_IATTR_HINT_AFFINITY            OFF | ON | AUTO | EXTERN
+           EQ_WINDOW_IATTR_HINT_AFFINITY            OFF | ON | AUTO | EXTERN
       }
       window
       {
