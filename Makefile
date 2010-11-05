@@ -191,7 +191,7 @@ PAGES    = $(HTML_SRC:%.shtml=%.html)
 
 SVN ?= svn
 GIT ?= git
-MD2HTML ?= markdown-2.6
+MD2HTML ?= markdown-2.6 -x toc -x fenced_code
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`$(SVN) info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
            -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<?view=log\" \
@@ -227,7 +227,7 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
 	@cat include/mdHeader.shtml >> $@
-	$(MD2HTML) $< | sed 's/^\<h1\>.*//'>> $@
+	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@
 
 doxygen:
