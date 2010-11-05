@@ -267,7 +267,8 @@ server
             {
                 mode 2D | DB | VERTICAL | HORIZONTAL
                 damping float # 0: no damping, 1: no changes
-                                boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
+                boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
+		assemble_only_limit float # decision value for use or not the assemble compound 
             }
             DFR_equalizer # adapt ZOOM to achieve constant framerate
             {
@@ -332,6 +333,14 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+   <li>load equalizer: auto-disable of dest channel added:
+    <!-- /* --><pre>
+      load_equalizer # adapt 2D tiling or DB range of children
+      {
+	   assemble_only_limit float # decision value for use or not the assemble compound 
+      }
+    </pre><!-- */ -->
+  </li>
   <li>A workaround for broken WGL_NV_gpu_affinity added:
     <!-- /* --><pre>
       global
