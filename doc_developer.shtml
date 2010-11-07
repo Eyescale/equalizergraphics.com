@@ -5,18 +5,19 @@
 
 #include "header.shtml"
 
-<h2>Programming and User Guide</h2>
+<h2>Reference Documentation</h2>
 <div class="float_right">
   <a href="http://www.lulu.com/commerce/index.php?fBuyContent=7501548">
-    <img src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
-         border="0" 
-         alt="Support independent publishing: buy this book on Lulu.">
+    <img
+       src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
+       border="0" 
+       alt="Support independent publishing: buy this book on Lulu.">
   </a>
 </div>
 <p>
   The Programming and User Guide is the official reference for the Equalizer
-  parallel rendering framework. You can obtain it using one of the following
-  options:
+  parallel rendering framework, similar to the OpenGL Red Book. You can obtain
+  it using one of the following options:
 </p>
 <ul>
   <li>As a direct download, after filling out our <a href="/survey.html">online
@@ -31,10 +32,16 @@
       download</a>.</li>
 </ul>
 
+<p>
+  <li>The <a href="/documents/Developer/API/index.html">API Documentation</a>
+    is the reference guide for the official programming interface, similar to
+    the OpenGL Blue Book.</li>
+</p>
+
 <h2>Generic Information</h2>
 <ul>
-  <li><a href="/documents/Developer/API/index.html">API Documentation</a>,
-      automatically generated from the source code using doxygen.
+  <li><a href="/documents/Developer/API/index.html">Internal API
+      Documentation</a>.
   <li><a href="/documents/design/fileFormat.html">File Format</a> is the
     documentation for the server configuration files.</li>
   <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
