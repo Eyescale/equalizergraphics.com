@@ -231,7 +231,7 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	@cat include/mdFooter.shtml >> $@
 
 doxygen:
-	cd ../src; doxygen Doxyfile
+	make -C ../src docs
 
 docset: doxygen
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
