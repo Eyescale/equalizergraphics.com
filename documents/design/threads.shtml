@@ -53,6 +53,13 @@
   execute <code>eq::net::Object</code> mapping requests by a slave node.
 </p>
 
+<h3>Node Transmit Thread</h3>
+<p>
+  Each <code>eq::Node</code> has a transmit thread, created during
+  intialization. It executes the compression and network transmission of output
+  frames to the nodes using them as input frames.
+</p>
+
 <h3>Pipe Thread(s)</h3>
 <p>
   All commands for a pipe and its siblings (windows, channels) are executed in a

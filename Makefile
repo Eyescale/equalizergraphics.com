@@ -239,7 +239,7 @@ docset: doxygen
 	cd $(TARGET)/documents/Developer/API; \
 	  zip -qr ch.eyescale.Equalizer.docset.zip ch.eyescale.Equalizer.docset
 
-sitemap:
+sitemap: $(TARGETS)
 	-sitemap_gen --config=sitemap_config.xml
 
 $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf

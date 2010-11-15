@@ -267,8 +267,9 @@ server
             {
                 mode 2D | DB | VERTICAL | HORIZONTAL
                 damping float # 0: no damping, 1: no changes
-                boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
-		assemble_only_limit float # decision value for use or not the assemble compound 
+                boundary [ x y ]          # 2D tile boundary
+                boundary float            # DB range granularity
+                assemble_only_limit float # resource limit for using dest as src
             }
             DFR_equalizer # adapt ZOOM to achieve constant framerate
             {
@@ -337,7 +338,7 @@ observer-ref: 'string' | 'index'
     <!-- /* --><pre>
       load_equalizer # adapt 2D tiling or DB range of children
       {
-	   assemble_only_limit float # decision value for use or not the assemble compound 
+           assemble_only_limit float # resource limit for using dest as src
       }
     </pre><!-- */ -->
   </li>
