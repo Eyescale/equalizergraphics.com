@@ -40,7 +40,7 @@
 
 <h2>Generic Information</h2>
 <ul>
-  <li><a href="/documents/Developer/API/index.html">Internal API
+  <li><a href="/documents/Developer/API/internal/index.html">Internal API
       Documentation</a>.
   <li><a href="/documents/design/fileFormat.html">File Format</a> is the
     documentation for the server configuration files.</li>
