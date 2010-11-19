@@ -4,7 +4,10 @@
 #include "header.shtml"
 
 <p></p>
-<iframe src="http://app.sgizmo.com/s/survey.php?id=4R3NDK0K14PHXOOXACM6EAVXH7RRTG-57576" frameborder="0" width="600" height="1200" style="overflow: hidden" ></iframe>
+<iframe src="http://www.surveygizmo.com/s3/iframe/416121/cf88eebc1118"
+        frameborder="0" width="600" height="1400"
+        style="overflow:hidden">
+</iframe>
 
 #include "footer.shtml"
 <!-- $Id$ -->
