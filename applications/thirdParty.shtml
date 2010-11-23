@@ -32,6 +32,17 @@
   information. Image copyright Realtime Technology AG, 2008.
 </p>
 
+<a name="bino"</a>
+<h2>Bino: a 3D video player with multi-display support</h2>
+
+<p>
+  <a href="http://bino.nongnu.org/">Bino</a> is a video player with support for
+  3D (stereo) videos and for multi-display installations, e.g., for powerwalls,
+  Virtual Reality installations and other multi-projector setups. It supports
+  video synchronization across multiple GPU's in the same system or in a
+  cluster.
+</p>
+
 <a name="hase3d"></a>
 <h2>Computer Graphics and Multimedia Systems, University of Siegen</h2>
 
