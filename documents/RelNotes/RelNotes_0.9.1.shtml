@@ -13,6 +13,7 @@
      [x] doc/Developer/ProgrammingGuide
      [x] lulu.com, Google Books
      [ ] bug tracker group
+     [ ] Switch default to release build
   -->
 
 #include "../../../../tags/release-0.9.1/lib/RelNotes.dox"
