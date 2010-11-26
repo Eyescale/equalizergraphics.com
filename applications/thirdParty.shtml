@@ -32,9 +32,16 @@
   information. Image copyright Realtime Technology AG, 2008.
 </p>
 
+<div class="flush_float"></div>
 <a name="bino"</a>
 <h2>Bino: a 3D video player with multi-display support</h2>
 
+<div class="float_right">
+  <a href="/applications/images/bino.png">
+    <img src="/applications/images/bino-small.jpg" 
+         alt="Bino video player"></a>
+  <div class="label">Bino video player</div>
+</div>
 <p>
   <a href="http://bino.nongnu.org/">Bino</a> is a video player with support for
   3D (stereo) videos and for multi-display installations, e.g., for powerwalls,
@@ -43,6 +50,7 @@
   cluster.
 </p>
 
+<div class="flush_float"></div>
 <a name="hase3d"></a>
 <h2>Computer Graphics and Multimedia Systems, University of Siegen</h2>
 
@@ -65,7 +73,7 @@
   extended to multi-node rendering in order to immerse the user into the virtual
   reality cave at the University of Siegen.
 </p>
-<div class="float_right">
+<div class="float_left">
   <a href="/applications/images/clay_bunny.png">
     <img src="/applications/images/clay_bunny-small.jpg" 
          alt="Surface Evolution"></a>
