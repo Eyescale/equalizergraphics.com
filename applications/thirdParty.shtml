@@ -49,6 +49,16 @@
   video synchronization across multiple GPU's in the same system or in a
   cluster.
 </p>
+<p>
+  Bino uses the Canvas and Layout information of any Equalizer configuration to
+  align the video. This enables an intuitive configuration of one or more
+  display walls (canvases) with overlap or underlap as well as mixed mono,
+  active, passive and anaglyphic stereo (3D) projections from a single
+  application. The individual displays or projectors (segments) can easily be
+  mapped to different computers, GPU's and output areas. Detailed technical
+  documentation is part of the
+  <a href="http://git.savannah.gnu.org/cgit/bino.git/tree/doc/multi-display.txt">BINO distribution</a>.
+</p>
 
 <div class="flush_float"></div>
 <a name="hase3d"></a>
