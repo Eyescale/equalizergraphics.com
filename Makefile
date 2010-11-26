@@ -1,4 +1,4 @@
-.PHONY: update sitemap doxygen
+.PHONY: update svnupdate gitupdate doxygen update_and_targets
 .SUFFIXES: .html .css
 
 TARGET = build
@@ -188,6 +188,7 @@ TARGETS  = $(FILES:%=$(TARGET)/%)
 IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
 	   $(IMAGES_SRC:%.jpg=%-small.jpg)
 PAGES    = $(HTML_SRC:%.shtml=%.html)
+SITEMAP  = $(TARGET)/sitemap.xml.gz
 
 SVN ?= svn
 GIT ?= git
@@ -199,12 +200,14 @@ CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DPAGEURL=$(@:$(TARGET)%=%) \
            -DWIKIURL=$(<:documents/design/%.shtml=http://github.com/Eyescale/Equalizer/wiki/%)
 
-all: $(TARGETS) $(INCLUDES)
+all: $(TARGETS)
+
+$(TARGETS): $(INCLUDES)
 
 clean:
 	rm -rf $(TARGETS)
 
-install: update all doxygen sitemap
+install: $(SITEMAP)
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 install_only: all
@@ -213,10 +216,29 @@ install_only: all
 auxinst: all
 	rsync -avz --exclude=".svn" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
-update:
-	$(SVN) update ..
-	-cd Equalizer.wiki; $(GIT) pull
+$(SITEMAP): update_and_targets doxygen
+	@sitemap_gen --config=sitemap_config.xml
+
+update_and_targets: update
+	 @$(MAKE) all
+
+update: svnupdate gitupdate
 	rm -f changes_log.html
+
+svnupdate:
+	$(SVN) update ..
+
+gitupdate:
+	-cd Equalizer.wiki; $(GIT) pull
+
+doxygen: update
+	make -C ../src docs
+
+docset: doxygen
+	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
+	@rm -f $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
+	cd $(TARGET)/documents/Developer/API; \
+	  zip -qr ch.eyescale.Equalizer.docset.zip ch.eyescale.Equalizer.docset
 
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
@@ -229,18 +251,6 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	@cat include/mdHeader.shtml >> $@
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@
-
-doxygen:
-	make -C ../src docs
-
-docset: doxygen
-	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
-	@rm -f $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
-	cd $(TARGET)/documents/Developer/API; \
-	  zip -qr ch.eyescale.Equalizer.docset.zip ch.eyescale.Equalizer.docset
-
-sitemap: $(TARGETS)
-	-sitemap_gen --config=sitemap_config.xml
 
 $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
@@ -284,7 +294,7 @@ $(TARGET)/%-small.jpg: %.png
 
 $(TARGET)/% : %
 	@mkdir -p $(@D)
-	cp -r $< $(@D)
+	cp -rf $< $(@D)
 
 $(TARGET)/changes.html: changes.shtml changes_log.html
 
