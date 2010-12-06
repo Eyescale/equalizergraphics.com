@@ -37,10 +37,11 @@
 <h2>Bino: a 3D video player with multi-display support</h2>
 
 <div class="float_right">
-  <a href="/applications/images/bino.png">
+  <a href="/applications/images/bino.jpg">
     <img src="/applications/images/bino-small.jpg" 
          alt="Bino video player"></a>
-  <div class="label">Bino video player</div>
+  <div class="label">Bino video player<br><br>Film (c) copyright 2008<br>Blender
+    Foundation<br>www.bigbuckbunny.org</div>
 </div>
 <p>
   <a href="http://bino.nongnu.org/">Bino</a> is a video player with support for
