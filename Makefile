@@ -1,4 +1,4 @@
-.PHONY: update svnupdate gitupdate doxygen update_and_targets
+.PHONY: update svnupdate cdash gitupdate doxygen update_and_targets
 .SUFFIXES: .html .css
 
 TARGET = build
@@ -171,6 +171,7 @@ IMAGES_SRC = \
 	$(wildcard images/NewsJune07/*gif) \
 	$(wildcard images/NewsJune07/*jpg) \
 	$(wildcard applications/images/*png) \
+	$(wildcard applications/images/*jpg) \
 	$(wildcard applications/images/UniSiegen/*jpg) \
 	$(wildcard scalability/images/*png) \
 	$(wildcard documents/design/images/*png) \
@@ -225,14 +226,17 @@ update_and_targets: update
 update: svnupdate gitupdate
 	rm -f changes_log.html
 
-svnupdate:
+svnupdate: cdash
 	$(SVN) update ..
 
 gitupdate:
 	-cd Equalizer.wiki; $(GIT) pull
 
+cdash:
+	$(MAKE) -C ../src cdash
+
 doxygen: update
-	make -C ../src docs
+	$(MAKE) -C ../src docs
 
 docset: doxygen
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
