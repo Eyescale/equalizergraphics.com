@@ -233,7 +233,7 @@ gitupdate:
 	-cd Equalizer.wiki; $(GIT) pull
 
 cdash:
-	$(MAKE) -C ../src cdash
+	-$(MAKE) -C ../src cdash
 
 doxygen: update
 	$(MAKE) -C ../src docs
