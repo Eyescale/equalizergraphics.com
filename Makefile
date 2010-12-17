@@ -1,12 +1,11 @@
-.PHONY: update svnupdate cdash gitupdate doxygen update_and_targets
+.PHONY: update svnupdate gitupdate doxygen update_and_targets
 .SUFFIXES: .html .css
 
 TARGET = build
 
 FILES = \
-	$(wildcard downloads/*.gz) \
-	$(wildcard downloads/*.exe) \
-	$(wildcard downloads/*.zip) \
+	print.css \
+	stylesheet.css \
 	api.html \
 	applications.html \
 	changes.html \
@@ -16,6 +15,9 @@ FILES = \
 	doc_developer.html \
 	documentation.html \
 	downloads.html \
+	$(wildcard downloads/*.gz) \
+	$(wildcard downloads/*.exe) \
+	$(wildcard downloads/*.zip) \
 	events.html \
 	equalizer.rdf \
 	favicon.ico \
@@ -32,8 +34,6 @@ FILES = \
 	search.html \
 	support.html \
 	survey.html \
-	print.css \
-	stylesheet.css \
 	useCases.html \
         robots.txt \
 	applications/index.html \
@@ -43,6 +43,10 @@ FILES = \
 	applications/osgScaleViewer.html \
 	applications/thirdParty.html \
 	applications/UniSiegen.html \
+	collage/print.css \
+	collage/stylesheet.css \
+	collage/index.html \
+	collage/documentation.html \
 	documentation/parallelOpenGLFAQ.html \
 	documentation/performance.html \
 	documents/CV_Stefan_Eilemann.pdf \
@@ -168,6 +172,8 @@ FILES = \
 IMAGES_SRC = \
 	$(wildcard images/*png) \
 	$(wildcard images/*jpg) \
+	$(wildcard collage/images/*png) \
+	$(wildcard collage/images/*jpg) \
 	$(wildcard images/NewsJune07/*gif) \
 	$(wildcard images/NewsJune07/*jpg) \
 	$(wildcard applications/images/*png) \
@@ -183,10 +189,13 @@ HTML_SRC = $(wildcard documents/design/*.shtml) \
 
 INCLUDES = \
 	include/header.shtml \
-	include/footer.shtml
+	include/footer.shtml \
+	include/collage.shtml \
+	include/equalizer.shtml
 
 TARGETS  = $(FILES:%=$(TARGET)/%)
-IMAGES   = $(IMAGES_SRC) $(IMAGES_SRC:%.png=%-small.jpg) \
+IMAGES   = $(IMAGES_SRC) \
+	   $(IMAGES_SRC:%.png=%-small.jpg) \
 	   $(IMAGES_SRC:%.jpg=%-small.jpg)
 PAGES    = $(HTML_SRC:%.shtml=%.html)
 SITEMAP  = $(TARGET)/sitemap.xml.gz
@@ -203,7 +212,7 @@ CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
 
 all: $(TARGETS)
 
-$(TARGETS): $(INCLUDES)
+$(TARGETS):
 
 clean:
 	rm -rf $(TARGETS)
@@ -226,14 +235,11 @@ update_and_targets: update
 update: svnupdate gitupdate
 	rm -f changes_log.html
 
-svnupdate: cdash
+svnupdate:
 	$(SVN) update ..
 
 gitupdate:
 	-cd Equalizer.wiki; $(GIT) pull
-
-cdash:
-	-$(MAKE) -C ../src cdash
 
 doxygen: update
 	$(MAKE) -C ../src docs

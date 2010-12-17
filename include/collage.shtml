@@ -1,0 +1,225 @@
+      <p><a href="/index.html"
+            #ifdef S_HOME_MAIN
+            class="used"
+#endif
+            >About</a></p>
+
+#if 0
+      <!-- About sub-navigation-->
+#ifdef S_HOME
+      <div class="subnavigation">
+
+        <p><a href="/useCases.html"
+#ifdef S_HOME_USECASES
+              class="used"
+#endif
+              >Use Cases</a></p>
+
+        <p><a href="/configuration.html"
+#ifdef S_HOME_CONFIG
+              class="used"
+#endif
+              >Flexibility</a></p>
+
+        <p><a href="/scalability.html"
+#ifdef S_HOME_SCALABILITY
+              class="used"
+#endif
+              >Scalability</a></p>
+
+        <p><a href="/api.html"
+#ifdef S_HOME_API
+              class="used"
+#endif
+              >Framework</a></p>
+      </div>
+#endif  // S_HOME
+
+
+      <p><a href="/applications.html"
+#ifdef S_APPLICATIONS_MAIN
+            class="used"
+#endif
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+#ifdef S_APPLICATIONS
+      <div class="subnavigation">
+
+        <p><a href="/applications/eqHello.html"
+#ifdef S_APPLICATIONS_EQHELLO
+              class="used"
+#endif
+              >eqHello</a></p>
+
+        <p><a href="/applications/eqPly.html"
+#ifdef S_APPLICATIONS_EQPLY
+              class="used"
+#endif
+              >eqPly</a></p>
+
+        <p><a href="/applications/eVolve.html"
+#ifdef S_APPLICATIONS_EVOLVE
+              class="used"
+#endif
+              >eVolve</a></p>
+
+        <p><a href="/applications/osgScaleViewer.html"
+#ifdef S_APPLICATIONS_OSGSV
+              class="used"
+#endif
+              >OSGScaleViewer</a></p>
+
+        <p><a href="/applications/thirdParty.html"
+#ifdef S_APPLICATIONS_THIRDPARTY
+              class="used"
+#endif
+              >Third Party</a></p>
+
+      </div>
+#endif // S_APPLICATIONS
+
+#endif // 0
+
+      <p><a href="/documentation.html"
+#ifdef S_DOCUMENTATION_MAIN
+            class="used"
+#endif
+            >Documentation</a></p>
+
+#if 0
+      <!-- Documentation sub-navigation-->
+#ifdef S_DOCUMENTATION
+      <div class="subnavigation">
+        <p><a href="/documentation/performance.html"
+#ifdef S_DOCUMENTATION_PERFORMANCE
+              class="used"
+#endif
+              >Performance Studies</a></p>
+
+        <p><a href="/doc_developer.html"
+#ifdef S_DOCUMENTATION_DEVELOPER
+              class="used"
+#endif
+              >Developer</a></p>
+
+        <p><a href="/features.html"
+#ifdef S_DOCUMENTATION_FEATURES
+              class="used"
+#endif
+              >Feature List</a></p>
+
+        <p><a href="/compatibility.html"
+#ifdef S_DOCUMENTATION_COMPATIBILITY
+              class="used"
+#endif
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/relnotes.html"
+#ifdef S_DOCUMENTATION_RELNOTES
+              class="used"
+#endif
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+#ifdef S_DOCUMENTATION_FAQ
+              class="used"
+#endif
+              >Parallel GL FAQ</a></p>
+      </div>
+#endif // S_DOCUMENTATION
+
+      <p><a href="/support.html"
+#ifdef S_SUPPORT_MAIN
+            class="used"
+#endif
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+#ifdef S_SUPPORT
+      <div class="subnavigation">
+
+        <p><a href="/lists.html"
+#ifdef S_SUPPORT_LISTS
+              class="used"
+#endif
+              >Mailing Lists</a></p>
+
+        <p><a href="/forum.html"
+#ifdef S_SUPPORT_FORUM
+              class="used"
+#endif
+              >Forum</a></p>
+      </div>
+#endif // S_SUPPORT
+
+      <p><a href="/gallery.html"
+#ifdef S_GALLERY
+            class="used"
+#endif
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+#ifdef S_DOWNLOADS
+            class="used"
+#endif
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+#ifdef S_DOWNLOADS
+      <div class="subnavigation">
+
+        <p><a href="/downloads/major.html"
+#ifdef S_DOWNLOADS_MAJOR
+              class="used"
+#endif
+              >Major Releases</a></p>
+
+        <p><a href="/downloads/developer.html"
+#ifdef S_DOWNLOADS_DEVELOPER
+              class="used"
+#endif
+              >Developer Releases</a></p>
+
+        <p><a href="/downloads/source.html"
+#ifdef S_DOWNLOADS_SOURCE
+              class="used"
+#endif
+              >Source Code</a></p>
+
+        <p><a href="/downloads/tools.html"
+#ifdef S_DOWNLOADS_TOOLS
+              class="used"
+#endif
+              >Tools</a></p>
+      </div>
+#endif // S_DOWNLOADS
+
+
+      <p><a href="/news.html"
+#ifdef S_NEWS
+            class="used"
+#endif
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+#ifdef S_EVENTS
+            class="used"
+#endif
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+#ifdef S_CONTRIBUTIONS
+            class="used"
+#endif
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+#ifdef S_SURVEY
+            class="used"
+#endif
+            >Survey</a></p>
+#endif

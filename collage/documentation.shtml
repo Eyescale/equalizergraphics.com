@@ -1,0 +1,15 @@
+#define S_COLLAGE
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+
+#include "header.shtml"
+
+<p>
+  The <a href="/documents/Developer/API/namespaceco.html">API Documentation</a>
+    is the reference guide for the official programming interface.
+</p>
+
+#include "footer.shtml"
+<!-- $Id: doc_developer.shtml 5113 2010-11-16 11:17:07Z eile $ -->

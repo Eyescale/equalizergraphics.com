@@ -1,0 +1,56 @@
+#define S_COLLAGE
+#define S_HOME
+#define S_HOME_MAIN
+#define PAGE Network Library
+#define DESCRIPTION "Equalizer is the standard middleware to create and deploy parallel OpenGL-based applications."
+#define KEYWORDS "parallel rendering, parallel OpenGL, Equalizer, OpenGL, scalable graphics, graphics cluster, graphics clusters, visualization, multi-GPU"
+
+#include "header.shtml"
+
+<p>
+  Collage is a cross-platform C++ library for building heterogenous, distributed
+  applications. It is used as the cluster backend for the Equalizer parallel
+  rendering framework. Collage provides an abstraction of different network
+  connections, peer-to-peer messaging, discovery and synchronization as well as
+  high-performance, object-oriented, versioned data distribution. Collage is
+  designed for low-overhead multi-threaded execution which allows applications
+  to easily exploit multi-core architectures.
+</p>
+<p>
+  An alpha version of Collage is available on request. Please
+  <a href="mailto:info@eyescale.ch?subject=Inquiry about Collage">contact us</a>
+  for more information about Collage.
+</p>
+
+<h2>Features</h2>
+<h3>Network Protocols</h3>
+<ul>
+  <li>TCP/IP unicast sockets</li>
+  <li>SDP unicast (InfiniBand Socket Direct Protocol)</li>
+  <li>UDP-based reliable multicast (RSP)</li>
+  <li>Unidirectional anonymous pipes</li>
+  <li>Bidirectional named pipes (Windows only)</li>
+  <li>Native InfiniBand unicast (RDMA-based, experimental)</li>
+</ul>
+<h3>Peer-to-Peer Communication</h3>
+<ul>
+  <li>Network connection de-multiplexer</li>
+  <li>Node-based process abstraction</li>
+  <li>Multiple connections per node</li>
+  <li>Message-oriented packet communication</li>
+  <li>High-performance packet allocation and thread dispatch</li>
+  <li>Object-oriented command handler registration</li>
+  <li>Distributed Barriers</li>
+</ul>
+<h3>Object-Oriented Serialization</h3>
+<ul>
+  <li>Versioned, distributed C++ objects</li>
+  <li>High-performance binary serialization and transparent (de)compression</li>
+  <li>Multicast data distribution</li>
+  <li>Demand-driven object registration and mapping</li>
+  <li>Object-to-object messaging</li>
+  <li>Compression plugin API</li>
+</ul>
+
+#include "footer.shtml"
+<!-- $Id: index.shtml 5152 2010-11-23 10:57:05Z eile $ -->
