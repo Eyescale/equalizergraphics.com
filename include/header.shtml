@@ -1,3 +1,11 @@
+#ifdef S_COLLAGE
+#  define SITE libcollage.net
+#  define SITE_NAME Collage
+#else
+#  define SITE equalizergraphics.com
+#  define SITE_NAME Equalizer
+#endif
+
 #define QUOTE( string ) STRINGIFY( string )
 #define STRINGIFY( foo ) #foo
 #define SITE_EMAIL mailto:info@equalizergraphics.com?subject=Question regarding TITLESTRING
@@ -27,11 +35,11 @@
           type="application/rss+xml">
   
 #ifdef TITLE
-#  define TITLESTRING Equalizer: PAGE: SUBPAGE: TITLE
+#  define TITLESTRING SITE_NAME: PAGE: SUBPAGE: TITLE
 #elif defined(SUBPAGE)
-#  define TITLESTRING Equalizer: PAGE: SUBPAGE
+#  define TITLESTRING SITE_NAME: PAGE: SUBPAGE
 #elif defined(PAGE)
-#  define TITLESTRING Equalizer: PAGE
+#  define TITLESTRING SITE_NAME: PAGE
 #else
 #  error No page title defined
 #endif

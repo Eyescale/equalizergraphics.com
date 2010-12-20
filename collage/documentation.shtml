@@ -7,8 +7,9 @@
 #include "header.shtml"
 
 <p>
-  The <a href="/documents/Developer/API/namespaceco.html">API Documentation</a>
-    is the reference guide for the official programming interface.
+  The <a href="/documents/Developer/API/namespaceco.html#_details">API
+    Documentation</a> is the reference guide for the official programming
+    interface.
 </p>
 
 #include "footer.shtml"
