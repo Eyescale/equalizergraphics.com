@@ -72,7 +72,6 @@ global
     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
-    EQ_WINDOW_IATTR_HINT_AFFINITY            OFF | ON | AUTO | EXTERN
     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
@@ -148,7 +147,6 @@ server
                         hint_swapsync       OFF | ON         # AGL, WGL only
                         hint_drawable       window | pbuffer | FBO
                         hint_statistics     OFF | FASTEST [ON] | NICEST
-                        hint_affinity       OFF | ON | AUTO | EXTERN
                         planes_color        unsigned | RGBA16F | RGBA32F
                         planes_alpha        unsigned
                         planes_depth        unsigned
@@ -354,21 +352,6 @@ observer-ref: 'string' | 'index'
       load_equalizer # adapt 2D tiling or DB range of children
       {
            assemble_only_limit float # resource limit for using dest as src
-      }
-    </pre><!-- */ -->
-  </li>
-  <li>A workaround for broken WGL_NV_gpu_affinity added:
-    <!-- /* --><pre>
-      global
-      {
-           EQ_WINDOW_IATTR_HINT_AFFINITY            OFF | ON | AUTO | EXTERN
-      }
-      window
-      {
-          attributes
-          {
-              hint_affinity       OFF | ON | AUTO | EXTERN
-          }
       }
     </pre><!-- */ -->
   </li>
