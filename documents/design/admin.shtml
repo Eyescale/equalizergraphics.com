@@ -8,7 +8,7 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
-  State: Design<br/>
+  State: Usable subset implemented in svn<br/>
 </p>
 
 <h2>Overview</h2>
@@ -94,9 +94,9 @@
   <div class="label">Modifying an eq::net::Object from a slave instance</div>
 </div>
 <p>
-  Committing data on a slave instance is not yet implemented. Since Equalizer
-  does not know about the application data contained in the serialization
-  streams, there are two options to implement this feature:
+  Committing data on a slave instance was not implemented in Equalizer
+  0.9.1. Since Equalizer does not know about the application data contained in
+  the serialization streams, there are two options to implement this feature:
 </p>
 <ol>
   <li>Use a synchronization protocol to ensure no two modifications on the

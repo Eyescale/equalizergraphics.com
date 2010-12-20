@@ -45,6 +45,7 @@ FILES = \
 	applications/UniSiegen.html \
 	collage/print.css \
 	collage/stylesheet.css \
+        collage/robots.txt \
 	collage/index.html \
 	collage/documentation.html \
 	documentation/parallelOpenGLFAQ.html \
@@ -106,6 +107,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.6.html \
 	documents/RelNotes/RelNotes_0.9.html \
 	documents/RelNotes/RelNotes_0.9.1.html \
+	documents/RelNotes/RelNotes_0.9.2.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \

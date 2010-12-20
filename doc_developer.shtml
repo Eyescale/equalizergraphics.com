@@ -97,7 +97,7 @@
 </p>
 <ul>
   <li><a href="/documents/design/errorHandling.html">Error handling</a>
-      structures error reporting better, mostly during initialization.</li>
+      structures error reporting, mostly during initialization.</li>
   <li><a href="/documents/design/stopFrames.html">Interruptible rendering</a>
       allows applications to stop rendering on all pending frames.</li>
   <li><a href="/documents/design/Capabilities.html">Rendering capabilities</a>
