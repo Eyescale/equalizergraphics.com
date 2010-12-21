@@ -6,7 +6,7 @@
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [ ] src/lib/client/version.h, src/Doxyfile.*, src/CMakeLists.txt
+     [x] src/libs/client/version.h, src/Doxyfile.*, src/CMakeLists.txt
      [ ] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
      [ ] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
      [ ] Copy API documentation on website
