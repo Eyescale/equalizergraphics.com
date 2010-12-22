@@ -40,8 +40,6 @@
 
 <h2>Generic Information</h2>
 <ul>
-  <li><a href="/documents/Developer/API/internal/index.html">Internal API
-      Documentation</a>.
   <li><a href="/documents/design/fileFormat.html">File Format</a> is the
     documentation for the server configuration files.</li>
   <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
@@ -68,6 +66,8 @@
   <li><a href="/documents/design/threads.html">Threads</a> is a description of
     the individual threads in Equalizer and explains some thread synchronization
     concepts.</li>
+  <li><a href="/documents/Developer/API/internal/index.html">Internal API
+      Documentation</a>.
 </ul>
 
 <div class="flush_float"></div>
@@ -89,12 +89,16 @@
   the <a href="/features.html">Feature List</a>.
 </p>
 
+#if 0
 <h3>SVN 'trunk' version</h3>
 <p>
   This information contains specification for features currently under
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
+#endif
+
+<h3>Version 1.0</h3>
 <ul>
   <li><a href="/documents/design/errorHandling.html">Error handling</a>
       structures error reporting, mostly during initialization.</li>
@@ -108,9 +112,9 @@
     allows to change the rendering between mono and stereo at runtime, with
     different scalability compounds.</li>
   <li><a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
-    initialization and runtime.</a>
+    initialization and runtime.</li>
   <li><a href="/documents/design/frameLoops.html">Independent frame loops</a>
-    for different views.</a>
+    for different views.</li>
   <li><a href="/documents/design/roi.html">Region of interest</a> optimization
     for scalable rendering and load-balancing.</li>
 </ul>
@@ -121,7 +125,7 @@
   <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
       for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
   <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range
-      Boundaries</a> for load-balancing.</a>
+      Boundaries</a> for load-balancing.</li>
   <li><a href="/documents/design/multicast.html">Data distribution and data
       updates using reliable UDP multicast</a>.</li>
   <li><a href="/documents/design/computeExtensions.html">CUDA and OpenCL
