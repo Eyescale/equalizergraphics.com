@@ -7,12 +7,12 @@
 
 <!-- Release Checklist:
      [x] src/libs/client/version.h, src/Doxyfile.*, src/CMakeLists.txt
-     [ ] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
+     [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
      [ ] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
      [ ] Copy API documentation on website
-     [ ] doc/Developer/ProgrammingGuide
-     [ ] lulu.com, Google Books
-     [ ] bug tracker group
+     [x] doc/Developer/ProgrammingGuide
+     [x] lulu.com, Google Books
+     [x] bug tracker group
      [ ] Switch default to release build
   -->
 

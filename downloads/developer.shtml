@@ -20,6 +20,12 @@
 <table>
   <tr><th>Version</th><th>Release Notes and Date</th><th>Source Code</th></tr>
   <tr>
+    <td>1.0-alpha</td>
+    <td><a href="/documents/RelNotes/RelNotes_0.9.2.html">07. January
+        2011</a></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>0.9.1</td>
     <td><a href="/documents/RelNotes/RelNotes_0.9.1.html">05. February
         2010</a></td>

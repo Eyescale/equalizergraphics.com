@@ -25,8 +25,11 @@
 <a name="platforms"></a>
 <h2>Platform Support</h2>
 <ul class="none">
-  <li><div class="box">0.3</div> Windows XP ia32 and x86_64</li>
-  <li><div class="box">0.1</div> Linux ia32, x86_64, ia64, X11/glX</li>
+  <li><div class="box">0.3</div> Windows 7 and XP, ia32 and x86_64</li>
+  <ul>
+    <li><div class="box">0.9.2</div> Introduced Windows 7 support</li>
+  </ul>
+  <li><div class="box">0.1</div> Linux ia32, x86_64, X11/glX</li>
   <ul>
     <li><div class="box">0.4</div> Discontinued Linux ia64 support</li>
   </ul>
@@ -34,6 +37,7 @@
     Carbon/AGL support</li>
   <ul>
     <li><div class="box">TBD</div> Mac OS X Universal, Cocoa/NSGL</li>
+    <li><div class="box">0.9.1</div> Introduced Mac OS X 10.6 support</li>
     <li><div class="box">0.5</div> Discontinued Mac OS X 10.4 support</li>
     <li><div class="box">0.4</div> Introduced Mac OS X Carbon/AGL support</li>
     <li><div class="box">0.4</div> Discontinued Mac OS X CGL support</li>
@@ -69,6 +73,9 @@
   <li><div class="box">0.9</div>
     <a href="/documents/design/swapBarrier.html#gsync">Hardware swapbarrier</a>
       for synchronization of multiple displays</li>
+  <li><div class="box">0.9.2</div>
+    <a href="/documents/design/stereoSwitch.html">Runtime
+      stereo switching</a></li>
   <li><div class="box">TBD</div>
     <a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">Software
       edge blending</a></li>
@@ -106,23 +113,23 @@
   <li><div class="box">0.2</div>
     <a href="/documents/design/imageCompression.html">Image compression</a>
     for network transfers</li>
-  <li><div class="box">0.9</div>
-    <a href="/documents/design/compression.html">Compression plug-in
-      API</a></li>
-  <li><div class="box">TBD</div>
-    GPU-based image compression</li>
-  <li><div class="box">0.6</div>
-    <a href="http://paracomp.sf.net">Paracomp</a> compositing backend</li>
-  <li><div class="box">TBD</div>
-    Fast node-local composition using NV_copy_image extension</li>
-  <li><div class="box">TBD</div>
-    nVidia CompleX compositing backend</li>
-  <li><div class="box">TBD</div>
-    Hardware-based recomposition (Crossfire, SLI)</li>
-  <li><div class="box">TBD</div>
-    Asynchronous framebuffer readback</li>
-  <li><div class="box">TBD</div>
-    ROI readback interface</li>
+  <ul>
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/compression.html">CPU Compression plugin
+        API</a></li>
+    <li><div class="box">0.9.2</div>
+      <a href="/documents/Developer/API/compressor_8h.html">GPU Compression
+        plugin API</a></li>
+  </ul>
+  <li><div class="box">0.6</div> <a href="http://paracomp.sf.net">Paracomp</a>
+    compositing backend</li>
+  <li><div class="box">TBD</div> Fast node-local composition using NV_copy_image
+    extension</li>
+  <li><div class="box">TBD</div> nVidia CompleX compositing backend</li>
+  <li><div class="box">TBD</div> Hardware-based recomposition (Crossfire,
+    SLI)</li>
+  <li><div class="box">TBD</div> Asynchronous framebuffer readback</li>
+  <li><div class="box">TBD</div> ROI readback interface</li>
 </ul>
 
 <h3>Load-Balancing</h3>
@@ -177,14 +184,22 @@
     Distributed scene graph: OpenSceneGraph, OpenSG, Coin</li>
 </ul>
 
-<h2>Clustering Features</h2>
+<h2>Cluster Features</h2>
 <ul class="none">
+  <li><div class="box">0.9.2</div>
+    <a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
+     initialization</li>
   <li><div class="box">0.3</div>
     <a href="/documents/design/objects.html">Distributed object API</a></li>
   <ul>
     <li><div class="box">0.9.1</div>
       <a href="/documents/design/multicast.html">Multicast data distribution and
         synchronization</a></li>
+    <li><div class="box">0.9.2</div>
+      <a href="/documents/design/admin.html#slaveWrite">Slave object
+        commits</a></li>
+    <li><div class="box">0.9.2</div>Automatic compression of distributed object
+      data</li>
   </ul>
   <li><div class="box">0.3</div>
     <a href="/documents/design/residentNodes.html">Resident render
@@ -225,6 +240,8 @@
 <a name="tools"></a>
 <h2>Tools and Utility Functions</h2>
 <ul class="none">
+  <li><div class="box">0.9.2</div>
+    <a href="/documents/design/admin.html">Administrative API</a></li>
   <li><div class="box">0.2</div>
     <a href="/documents/design/statistics.html">Statistics overlay</a> for
     performance analysis</li>

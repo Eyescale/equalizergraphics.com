@@ -11,7 +11,7 @@
   State:
 <ul>
   <li>Implemented in 0.9.1</li>
-  <li>Sliding ack window and early acks in svn</li>
+  <li>Sliding ack window and early acks in 1.0-alpha</li>
 </ul>
 </p>
 

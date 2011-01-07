@@ -7,10 +7,13 @@
 #include "header.shtml"
 
 <p>
-  Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br/>
-  State: Implemented in 0.9 (<a href=CHANGEURL>Change History</a>)<br/>
-  <a href="/documents/Developer/API/plugins_2compressor_8h.html">API
-    Documentation</a>
+  Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br>
+  State:
+  <ul>
+    <li>CPU compressors implemented in 0.9</li>
+    <li>GPU transfer compressors implemented in 0.9.2</li>
+  </ul>
+  <a href="/documents/Developer/API/compressor_8h.html">API Documentation</a><br>
 </p>
 
 <h2>Overview</h2>
