@@ -152,6 +152,7 @@ FILES = \
 	news/Release_0.5.html \
 	news/Release_0.6.html \
 	news/Release_0.9.html \
+	news/Release_0.9.2.html \
 	news/tungsten.html \
 	restricted/index.html \
 	scalability/2D.html \
