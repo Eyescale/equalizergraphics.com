@@ -1,0 +1,130 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Cross-Segment Load Balancing
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State: 
+  <ul>
+    <li>Implemented in 0.9</li>
+  </ul>
+</p>
+
+<h2>Overview</h2>
+<p>
+  Cross-segment load balancing allocates resources (GPUs) dynamically to a set
+  of destination channels. Normally all destination channels managed by a view
+  equalizer belong to multiple segments (displays) of a single view.
+</p>
+<p>
+  A configuration with cross-segment load balancing is hierarchical. The
+  top-level compound has a view equalizer. Each child of this root compound has
+  one destination channel and a load equalizer. Each destination channel
+  compound has the potential leaf nodes executing the rendering. One resource is
+  normally used in multiple leaf nodes of different destination compounds.
+</p>
+<p>
+  For each frame, the view equalizer sets the usage of each leaf compound to
+  activate or deactivate it for rendering. The load equalizer assigns work to
+  each leaf compound according to its allowed usage.
+</p>
+
+<div class="float_right">
+  <a href="/documents/design/images/viewEqualizer.png">
+    <img src="/documents/design/images/viewEqualizer-small.jpg" 
+         alt="Cross-segment load balancing"/></a>
+  <div class="label">Cross-segment load balancing</div>
+</div>
+<p>
+  The Figure on the right depicts a snapshot of a simple cross-segment load
+  balancing setup. Two destination channel, each connected to a projector,
+  create the final output. Each projector is driven be a distinct GPU. Each GPU
+  can potentially contribute to the rendering of the other segment (and GPU)
+  through the channels Source 1 and 2. 
+</p>
+<p>
+  The left segment has a lower load than the right segment. Consequently, the
+  view equalizer assigns 80% of the 'left' GPU to the left segment, and 20% to
+  the right segment. The 'right' GPU is fully assigned to the right segment,
+  assigning 0.8 resources to the right segment and 1.2 to the left. The load
+  balancing within a segment is performed by the load equalizer assigned to each
+  segment and not described here.
+</p>
+<p>
+  Cross-segment load balancing allows for optimal resource usage of multiple
+  GPUs used for display output and additional source GPUs. It combines
+  multi-display parallel rendering with scalable rendering for optimal
+  performance.
+</p>
+
+<h2>Algorithm</h2>
+<ul>
+  <li>Initialization:</li>
+  <ul>
+    <li>Set up statistic load listeners on all leaf channels</li>
+    <li>Calculate total number of GPUs available</li>
+  </ul>
+  <li>For each frame:</li>
+  <ul>
+    <li>Find newest frame with complete load data</li>
+    <li>Compute time needed to redraw each destination channel:<br>
+      <code>t_dest = sum( max( t_source_render, t_source_transmit ))</code></li>
+    <ul>
+      <li>Time to update a source is maximum of render or transmit, since these
+        two operations run concurrently in two different threads</li>
+      <li>Actually used is:<br>
+        <code>t_dest = t_source_average * sqrt( n_sources )</code>.<br>
+        This is a heuristical calculation accounting for the non-linear
+        relationship between number of resources and performance.</li>
+    </ul> 
+    <li><code>t_total = sum( t_dest )</code></li>
+    <li><code>t_GPU = t_total / n_GPU</code></li>
+    <li>For each destination compound:</li>
+    <ul>
+      <li><code>n_dest_GPU = t_total / t_dest</code></li>
+      <li>Assign usage 'self' GPU: <code>max( 1.0, n_dest_GPU )</code> if GPU is
+        used for segment</li>
+      <li><code>n_dest_remaining = n_dest_GPU - n_self_usage</code></li>
+    </ul>
+    <li>For each destination compound:</li>
+    <ul>
+      <li>Assign GPUs used in last frame (up to n_dest_remaining)</li>
+      <li>Update n_dest_remaining</li>
+    </ul>
+    <li>For each destination compound:</li>
+    <ul>
+      <li>Assign unused GPUs (up to n_dest_remaining)</li>
+    </ul>
+  </ul>
+</ul>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+      view_equalizer {}
+      compound
+      {
+          channel "destination1"
+          load_equalizer{}
+          compound {} # self
+          compound { channel "source1" outputframe {} }
+          inputframe{}
+          ...
+      }
+      compound
+      {
+          channel "destination2"
+          load_equalizer{}
+          ...
+      }
+      ...
+  }
+</pre><!-- */ -->
+
+#include "footer.shtml"
+<!-- $Id: loadBalancing.shtml 3704 2009-11-22 14:46:56Z eile $ -->
