@@ -136,9 +136,9 @@
 
 <h3>Version 0.9</h3>
 <ul>
+  <li><a href="/documents/Developer/API-0.9">0.9 API documentation</a></li>
   <li><a href="/documents/design/viewEqualizer.html">View Equalizer</a>
     for cross-segment load balancing.</li>
-  <li><a href="/documents/Developer/API-0.9">0.9 API documentation</a></li>
   <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
       swapbarrier</a> for synchronization of multipipe displays.</li>
   <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
