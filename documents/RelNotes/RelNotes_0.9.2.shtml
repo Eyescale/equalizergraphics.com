@@ -17,6 +17,6 @@
      [x] Switch default to release build
   -->
 
-#include "../../src/libs/RelNotes.dox"
+#include "../../../../tags/release-1.0-alpha/libs/RelNotes.dox"
 
 #include "footer.shtml"
