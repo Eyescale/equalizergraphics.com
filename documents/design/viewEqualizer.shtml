@@ -29,8 +29,10 @@
 </p>
 <p>
   For each frame, the view equalizer sets the usage of each leaf compound to
-  activate or deactivate it for rendering. The load equalizer assigns work to
-  each leaf compound according to its allowed usage.
+  activate or deactivate it for
+  rendering. The <a href="/documents/design/loadBalancing.html">load
+  equalizer</a> assigns work to each leaf compound according to its allowed
+  usage.
 </p>
 
 <div class="float_right">

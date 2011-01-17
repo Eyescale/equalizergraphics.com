@@ -24,17 +24,23 @@
 </p>
 <p>
   Compound load balancing either adapts the viewport or the range of the
-  children to make sure all resource are busy all the time so that optimal
+  children to make sure all resource are busy all the time, so that optimal
   scalability can be achieved.
 </p>
 <p>
-  The first implementation will be fully transparent and uses the timing values
-  from the last finished frame. Later versions should be able to get load
-  information for the current frame from the application, to allow a more
-  accurate approach.
+  The implementation is fully transparent to the applicatoin and uses the timing
+  values from the last finished frame. Later versions may introduce an API to
+  get load information for the current frame from the application, to allow a
+  more accurate approach.
 </p>
 
 <h2>Implementation</h2>
+<div class="float_right">
+  <a href="/documents/design/images/loadEqualizer.png">
+    <img src="/documents/design/images/loadEqualizer-small.jpg" 
+         alt="Load Balancing Grid"/></a>
+  <div class="label">Load Balancing Grid</div>
+</div>
 <p>
   The <a href="/documents/design/statistics.html">statistics interface</a> does
   provide us with the timing values from the last finished frame. This timing
@@ -42,55 +48,77 @@
   distribution. The ROI readback interface will be used to refine the load
   distribution.
 </p>
-<div class="float_right">
-  <a href="/documents/design/images/loadBalancing.png">
-    <img src="/documents/design/images/loadBalancing-small.jpg" 
-         alt="Simulated Load Balancing Run"/></a>
-  <div class="label">Simulated Load Balancing on Four Channels</div>
+<p>
+  The goal of the load balancer is that all channels use the same time for
+  rendering. The basic assumption is that the new frame will take the same time
+  as the last finished frame and that is has roughly the same load distribution.
+</p>
+<p>
+  Using the statistics from the last finished frame, a 2D load grid is
+  generated. Each grid cell containst the area and load for this cell. The load
+  is time per normalized viewport, i.e., assuming an even work distribution
+  within the call. The Figure on the right shows a load grid for a three-way 2D
+  decomposition.
+</p>
+<div class="float_left">
+  <a href="/documents/design/images/loadEqualizer-tree.png">
+    <img src="/documents/design/images/loadEqualizer-tree-small.jpg" 
+         alt="Load Balancing Grid"/></a>
+  <div class="label">Load Balancing Split Tree</div>
 </div>
 <p>
-  The goal of the load balancer is that all channels finish at the same time,
-  since channels might be ahead due to the compound latency. Note that this
-  differs from the typical approach of giving all channels the same work for the
-  next frame, but will achieve the same result for a latency of 0.
+  The viewport distribution is calculated using a binary split tree. The leaf
+  nodes of the tree represent the child compounds performing the
+  rendering. Intermediate nodes define the split direction at this level. The
+  Figure on the left shows the split tree for the example load grid. Unless
+  a <a href="/documents/design/viewEqualizer.html">view equalizer</a> is used,
+  each child counts as a full resource.
 </p>
 <p>
-  Assume frame will take the same time as the last finished frame, i.e. 
-  sum( channel end time - channel start time ).
+  The load equalizer computes the split position using a top-down traversal on
+  each level of the split tree, based on the resources and total rendering time
+  of the given node. In the given example, the target time for the root node is
+  180 ms with a 60/120 ms split, and a 60/60 ms split on the right sub-node.
+</p>
+<div class="float_right">
+  <a href="/documents/design/images/loadEqualizer-new.png">
+    <img src="/documents/design/images/loadEqualizer-new-small.jpg" 
+         alt="Load Balancing Grid"/></a>
+  <div class="label">New Split Computation</div>
+</div>
+<p>
+  To find the y split position on the root node, the load equalizer iterates
+  over the 2D grid until 60ms have been accumulated. In the given example, this
+  is reached at split position 0.4, giving the first source channel a viewport
+  of [ 0 0 1 0.4 ].
 </p>
 <p>
-  Generate 2D load grid. Data per cell: viewport, load per square unit. Split
-  existing cells as necessary when adding new, overlapping data. Cells are never
-  overlapping. Default cell has full(-fixed) viewport with load 0.
+  On the intermediate node, the 60/60 ms split leads to a split at X position
+  0.62. Note that the yellow and grid cells do only partially contribute to the
+  new split due to the new split position, in this case about 92 percent
+  (0.6/0.65), i.e., about 55ms for the yellow grid cell.
 </p>
 <p>
-  Each channel has a time budget for the next frame. Time budget is derived from
-  the frame time and the 'early finished time' of this channel:
+  Note that the new split reduced the size of the red source channel, which had
+  the longest render time.
+</p>
+<p>
+  The calculation for database decomposition uses the same algorithm, except
+  that it is simplified to a one-dimensional integration across the range.
+</p>
+<p>
+  In addition to the simplified algorithm explained above, the load equalizer
+  implements the following additional features:
   <ul>
-    <li>T_c = T_c_early + T_remaining/n_channels</li>
-    <li>T_remaining = max( 0, T_frame - sum( T_c_early ))</li>
-    <li>T_c_early = T_last - T_c_finish</li>
+    <li>Dampening the per-frame adaptation by interpolating between the old and
+      new value using a configurable damping factor</li>
+    <li>Restrict a source viewport to be not bigger than the underlying source
+      channel</li>
+    <li>Restrict a source viewport to fall on a pre-defined pixel boundary,
+      e.g., to balance for tiles with a size modulo 8.</li>
+    <li>Do not create zero-sized tiles</li>
   </ul>
 </p>
-<p>
-  Load-balancing approach is:
-  <ul>
-    <li>Compute total work = sum( cell vp * load ). If total work is 0 set all
-      cell's load to 1 and recompute (initial state).</li>
-    <li>Normalize cell load so total work = frame time, i.e., each cell's load
-      is now estimated time needed to render the cell.</li>
-    <li>Generate/get two-dimensional kd-split-tree of all children. Tree node
-      content is T_node = T_node_left + T_node_right for non-leafs or T_node =
-      T_c for leafs.</li>
-    <li>Find split position of node by iterating over cell list, where sum( load
-      cell ) == T_node.</li>
-    <li>Generate two new cell lists for left and right subtree while finding the
-      position. Repeat until leaf reached.</li>
-    <li>Compute VP/range for each leaf from cell list of leaf node, based on the
-      split position.</li>
-  </ul>
-</p>
-
 <a name="boundaries"></a>
 <h2>RFE: Tile and Range Boundaries</h2>
 <p>
