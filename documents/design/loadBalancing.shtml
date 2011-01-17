@@ -11,7 +11,8 @@
   State: 
   <ul>
     <li>Implemented in 0.6</li>
-    <li>view_equalizer in 0.9 (not described here)</li>
+    <li>view_equalizer in 0.9
+      (<a href="/documents/design/viewEqualizer.html">described here</a>)</li>
     <li>Boundaries: implemented in 0.9.1</li>
   </ul>
 </p>
@@ -115,7 +116,9 @@
     <li>Restrict a source viewport to be not bigger than the underlying source
       channel</li>
     <li>Restrict a source viewport to fall on a pre-defined pixel boundary,
-      e.g., to balance for tiles with a size modulo 8.</li>
+      e.g., to balance for tiles with a size modulo 8</li>
+    <li>Remove the time needed to assemble the results from the destination
+      channel's budget</li>
     <li>Do not create zero-sized tiles</li>
   </ul>
 </p>
