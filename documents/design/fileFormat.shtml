@@ -51,7 +51,7 @@ State: Implemented
 
 <a name="global"></a>
 <!-- /* --><pre>
-#Equalizer 1.0 ascii
+#Equalizer 1.1 ascii
 global
 {
     EQ_CONNECTION_SATTR_HOSTNAME             string
@@ -227,7 +227,7 @@ server
                 channel  string
                 name     string
                 viewport [ viewport ] 
-				eye [ CYCLOP LEFT RIGHT ] # eye passes rendered by segment, default all
+                eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
 
                 wall       # frustum description
                 {
@@ -344,7 +344,7 @@ observer-ref: 'string' | 'index'
       segment
       {
           ...
-          eye [ CYCLOP LEFT RIGHT ] # eye passes rendered by segment, default all
+          eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
       }
       compound
       {
