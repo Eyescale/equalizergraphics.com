@@ -183,6 +183,7 @@ server
                 name     string
                 observer observer-ref
                 viewport [ viewport ]
+                mode MONO | STEREO
 
                 wall       # frustum description
                 {
@@ -226,6 +227,7 @@ server
                 channel  string
                 name     string
                 viewport [ viewport ] 
+				eye [ CYCLOP LEFT RIGHT ] # eye passes rendered by segment, default all
 
                 wall       # frustum description
                 {
@@ -332,6 +334,27 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="/documents/design/stereoSwitch.html">Runtime Stereo Switch added:</a>
+    <!-- /* --><pre>
+      #Equalizer 1.1 ascii
+      view
+      {
+          mode MONO | STEREO
+      }
+      segment
+      {
+          ...
+          eye [ CYCLOP LEFT RIGHT ] # eye passes rendered by segment, default all
+      }
+      compound
+      {
+          attributes
+          {
+              stereo_mode QUAD | ANAGLYPH | AUTO # new AUTO, also new default
+          }
+      }
+    </pre><!-- */ -->
+  </li>
   <li>RFE 3132979 added:
     <!-- /* --><pre>
       global
