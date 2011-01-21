@@ -87,8 +87,8 @@
     <li><code>t_GPU = t_total / n_GPU</code></li>
     <li>For each destination compound:</li>
     <ul>
-      <li><code>n_dest_GPU = t_total / t_dest</code></li>
-      <li>Assign usage 'self' GPU: <code>max( 1.0, n_dest_GPU )</code> if GPU is
+      <li><code>n_dest_GPU = t_dest / t_GPU</code></li>
+      <li>Assign usage 'self' GPU: <code>min( 1.0, n_dest_GPU )</code> if GPU is
         used for segment</li>
       <li><code>n_dest_remaining = n_dest_GPU - n_self_usage</code></li>
     </ul>
