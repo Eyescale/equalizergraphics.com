@@ -222,14 +222,16 @@ clean:
 
 install: $(SITEMAP)
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
 
 install_only: all
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
 
 auxinst: all
 	rsync -avz --exclude=".svn" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
-$(SITEMAP): update_and_targets doxygen
+$(SITEMAP): update_and_targets doxygen package
 	@sitemap_gen --config=sitemap_config.xml
 
 update_and_targets: update
@@ -246,6 +248,9 @@ gitupdate:
 
 doxygen: update
 	$(MAKE) -C ../src docs
+
+package: doxygen
+	$(MAKE) -C ../src/docs package
 
 docset: doxygen
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
