@@ -237,7 +237,7 @@ $(SITEMAP): update_and_targets doxygen package
 update_and_targets: update
 	 @$(MAKE) all
 
-update: svnupdate gitupdate
+update: svnupdate gitupdate nightlyupdate
 	rm -f changes_log.html
 
 svnupdate:
@@ -246,7 +246,12 @@ svnupdate:
 gitupdate:
 	-cd Equalizer.wiki; $(GIT) pull
 
+nightlyupdate:
+	@mkdir -p $(TARGET)/downloads/nightly
+	-rsync -avx eyescale.local:Software/equalizer/release/Equalizer-\* $(TARGET)/downloads/nightly
+
 doxygen: update
+	@touch ../src/docs/CMakeCache.txt
 	$(MAKE) -C ../src docs
 
 package: doxygen

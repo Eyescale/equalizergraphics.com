@@ -61,10 +61,11 @@
 <a name="RSP"></a>
 <h3>Reliable Stream Protocol (RSP)</h3>
 <p>
-  Equalizer implements a reliable stream protocol (RSP) using UDP multicast as a
-  low-level transport. Equalizer 0.9.1 allows to use both PGM and RSP as a
-  multicast protocol. We strongly recommend using RSP and will possibly retire
-  PGM support in the future. RSP provides the following features:
+  <a href="http://www.libcollage.net">Collage</a> implements a reliable stream
+  protocol (RSP) using UDP multicast as a low-level transport. Equalizer 0.9.1
+  allows to use both PGM and RSP as a multicast protocol. We strongly recommend
+  using RSP and will possibly retire PGM support in the future. RSP provides the
+  following features:
 </p>
 <ul>
   <li>Full reliablity using active acks, a slow receiver will eventually slow
