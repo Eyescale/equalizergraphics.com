@@ -254,11 +254,12 @@ server
             task     [ CLEAR DRAW READBACK ASSEMBLE ] # CULL later
             buffer   [ COLOR DEPTH ]       # default COLOR
 
+            eye      [ CYCLOP LEFT RIGHT ] # eyes handled, default all
+
             viewport [ viewport ]          # wrt parent compound, sort-first
             range    [ float float ]       # DB-range for sort-last
             pixel    [ int int int int ]   # pixel decomposition (x y w h)
             subpixel [ int int ]           # subpixel decomposition (index size)
-            eye      [ CYCLOP LEFT RIGHT ] # monoscopic or stereo view
             zoom     [ float float ]       # up/downscale of parent pvp
             period   int                   # DPlex period
             phase    int                   # DPlex phase
@@ -286,7 +287,7 @@ server
                 stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
             }
 
-            wall       # frustum description
+            wall   # frustum description, deprecated by view and segment frustum
             {
                 bottom_left  [ float float float ]
                 bottom_right [ float float float ]
