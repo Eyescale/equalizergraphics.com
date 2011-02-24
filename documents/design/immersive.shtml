@@ -13,6 +13,7 @@
     <li>Implemented in 0.2</li>
     <li>HMD: implemented in 0.9</li>
     <li>Observers: implemented in 0.9</li>
+    <li>Focal Distance: design</li>
   </ul>
 </p>
 
@@ -107,6 +108,78 @@
   matrix and eye separation. One observer tracks multiple views. For further
   information on multiple observer and their integration with the Layout API
   please refer to the <a href="/documents/design/view.html">specification</a>.
+</p>
+<div class="flush_float"></div>
+
+<a name="focal"></a>
+<h2>Focal Distance</h2>
+
+<h3>Fixed Focal Distance</h3>
+<div class="float_right"><a href="/documents/design/images/focalFixed.png">
+    <img src="/documents/design/images/focalFixed-small.jpg" 
+         alt="Fixed focal distance"></a>
+  <div class="label">Fixed focal distance</div>
+</div>
+<p>
+  The focal distance defines at which range the left and right eye converge into
+  the same image. Objects placed at the focal distance do not have a stereo
+  divergence.
+</p>
+<p>
+  In the current implementation (0.9.3), the focal distance is equal to the
+  physical projection wall, as shown in the right image. As the observer moves
+  closer to a wall, the focal distance converges to 0 and often causes
+  discomfort, when the observer is looking at a model behind the physical wall
+  since the rendered focal distance does not correspond to the viewed focal
+  distance.
+</p>
+<p>
+  The application has to be able to set the focal distance
+  using <code>Observer::setFocalDistance</code>. The focal distance is either
+  given by the user, depending on the scene, or calculated automatically, e.g.,
+  by using the distance of the closest object in the view direction.
+</p>
+
+<div class="float_left"><a href="/documents/design/images/focalOrigin.png">
+    <img src="/documents/design/images/focalOrigin-small.jpg" 
+         alt="Focal distance relative to the origin"></a>
+  <div class="label">Focal distance relative to the origin</div>
+</div>
+<h3>Focal Distance relative to World</h3>
+<p>
+  The first implementation computes the focal distance relative to the origin,
+  as shown on the left. This setting might change on a per-frame basis. When the
+  observer moves, the focal distance between the observer and the focused object
+  changes. While this is not semantically correct, it has the benefit of
+  providing a stable convergence plane (see second implementation below).
+</p>
+
+<div class="float_right"><a href="/documents/design/images/focalObserver.png">
+    <img src="/documents/design/images/focalObserver-small.jpg" 
+         alt="Focal distance relative to the observer"></a>
+  <div class="label">Focal distance relative to the observer</div>
+</div>
+<h3>Focal Distance relative to Observer</h3>
+<p>
+  The second implementation computes the focal distance relative to the
+  observer, as shown on the right. The observer view direction determines the
+  focal plane, as described in the following paragraph. This causes the stereo
+  convergence to change continously as the observer looks around, which might
+  not be comfortable. This is shown be the dotted circle which determines the
+  possible focal planes.
+</p>
+<p>
+  The nearest wall plane in the observer's view direction is placed to intersect
+  <code>observer_position + view_vector * focal_distance</code>. It is moved
+  along the vector <code>w = cyclop_eye -> wall center point</code>. The wall
+  plane equation instead of the 'clipped' wall is used for continuity when the
+  observer looks 'over' a wall. Using the nearest plane ensures that wall the
+  observer looks at is used. If no wall is in the view direction, the last
+  computation is kept.
+</p>
+<p>
+  All other walls are placed to provide continuity in the edges of the
+  projection. TODO: describe algorithm.
 </p>
 <div class="flush_float"></div>
 
