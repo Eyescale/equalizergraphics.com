@@ -75,7 +75,7 @@
     <li>Read and write buffering with lock-free queueing</li>
     <li>Merging of small writes</li>
     <li>Early nacks (negative acknowledgements)</li>
-    <li>Early acks, sliding sender-side ack window (svn only)</li>
+    <li>Early acks, sliding sender-side ack window (1.0-alpha)</li>
     <li>Nack merging</li>
   </ul>
   <li>Multicast send interface selection</li>

@@ -413,8 +413,8 @@ View::clear
   on deserialization, but ignores it.
 </p>
 <p>
-  No (svn): The server has to maintain the master instance of a view. It can not
-  deserialize application-specific data, since it does not run application
+  No (0.9.2): The server has to maintain the master instance of a view. It can
+  not deserialize application-specific data, since it does not run application
   code. Therefore a <code>UserData</code> object can be attached to a view, of
   which the application maintains the master version.
 </p>
