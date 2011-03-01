@@ -32,10 +32,11 @@
   has the following layout and size:
 </p>
 <!-- /* --><pre>
-210M trunk/src
+202M trunk/src
 202M trunk/doc
 298M trunk/website
 
+202M tags/release-1.0-beta
 210M tags/release-1.0-alpha
 198M tags/release-0.9.1
 199M tags/release-0.9
