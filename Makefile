@@ -221,9 +221,12 @@ $(TARGETS):
 clean:
 	rm -rf $(TARGETS)
 
-install: $(SITEMAP)
+install: $(SITEMAP) package
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
+
+install_web: $(SITEMAP)
+	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 install_only: all
 	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
@@ -232,7 +235,7 @@ install_only: all
 auxinst: all
 	rsync -avz --exclude=".svn" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
-$(SITEMAP): update_and_targets doxygen package
+$(SITEMAP): update_and_targets doxygen
 	@sitemap_gen --config=sitemap_config.xml
 
 update_and_targets: update

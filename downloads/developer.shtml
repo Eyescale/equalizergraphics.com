@@ -25,8 +25,8 @@
         2011</a></td>
     <td><a href="/downloads/Equalizer-1.0-beta.tar.gz">tar.gz</a></td>
     <td>
-      <a href="/downloads/nightly/Equalizer-0.9.3-win32.dmg">Win32</a>
-      <a href="/downloads/nightly/Equalizer-0.9.3-win64.dmg">Win64</a>
+      <a href="/downloads/Equalizer-0.9.3-win32.exe">Win32</a>
+      <a href="/downloads/Equalizer-0.9.3-win64.exe">Win64</a>
       <a href="/downloads/nightly/Equalizer-0.9.3-i386-Darwin.dmg">Darwin i386</a>
       <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293180">Ubuntu 10.10 i386</a>
       <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293179">Ubuntu 10.10 amd64</a>
