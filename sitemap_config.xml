@@ -70,6 +70,18 @@
   />
 
   <url
+     href="http://www.equalizergraphics.com/documents/Developer/API-0.9.2/"
+     changefreq="monthly"
+     priority="0.4"
+  />
+
+  <url
+     href="http://www.equalizergraphics.com/documents/Developer/API-0.9.3/"
+     changefreq="monthly"
+     priority="0.4"
+  />
+
+  <url
      href="http://www.equalizergraphics.com/documents/Developer/API/"
      changefreq="weekly"
      priority="0.5"
