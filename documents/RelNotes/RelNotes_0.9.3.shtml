@@ -9,7 +9,7 @@
      [x] src/Doxyfile.*, src/CMakeLists.txt
      [x] src/AUTHORS, src/ACKNOWLEDGMENTS
      [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
-     [ ] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
+     [x] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
      [ ] Copy API documentation on website
      [x] doc/Developer/ProgrammingGuide
      [x] lulu.com, Google Books
@@ -17,6 +17,6 @@
      [x] Switch default to release build
   -->
 
-#include "../../src/libs/RelNotes.dox"
+#include "../../../../tags/release-1.0-beta/libs/RelNotes.dox"
 
 #include "footer.shtml"
