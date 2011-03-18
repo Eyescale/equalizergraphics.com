@@ -140,6 +140,7 @@ FILES = \
 	downloads/DBCAAF49A0C0/index.html \
 	downloads/developer.html \
 	downloads/major.html \
+	downloads/plugins.html \
 	downloads/tools.html \
 	downloads/source.html \
 	news/EgBof.html \

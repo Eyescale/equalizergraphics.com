@@ -1,0 +1,41 @@
+#define S_DOWNLOADS
+#define S_DOWNLOADS_PLUGINS
+#define PAGE Downloads
+#define SUBPAGE Plugins
+#include "header.shtml"
+
+<p>
+  If you have developed an Equalizer compression or transfer plugin, please
+  <a href="mailto:eile@equalizergraphics.com?subject=New Equalizer Plugin">drop us an email</a> 
+  and we will add your program to the list or, if the license permits, to the
+  Equalizer distribution. The
+  <a href="/documents/Developer/API/compressor_8h.html">Plugin API
+  documentation</a> describes the C interface for runtime-loadable plugins.
+</p>
+
+<h2>FastJpeg Compression Plugin</h2>
+<p>
+  Eyescale offers the FastJpeg image compression plugin for Equalizer, which
+  enables applications to achieve interactive frame rates even for the highest
+  display resolutions. This free version is time-limited and will stop working
+  after 10 minutes or 10.000 frames. Please refer to the
+  <a href="http://eyescale.ch/fastjpeg.html">Eyescale website</a> for further
+  information.
+</p>
+<table>
+  <tr>
+    <th>32 bit</th>
+    <td><a href="/downloads/FastJPEG_Win32.zip"><img src="/images/windows.png" alt="Windows 32 bit"></a></td>
+    <td></td>
+    <td><a href="/downloads/FastJPEG_OSX.tar.gz"><img src="/images/mac.png" alt="OS X 32 bit"></a></td>
+  </tr>
+  <tr>
+    <th>64 bit</th>
+    <td><a href="/downloads/FastJPEG_Win64.zip"><img src="/images/windows.png" alt="Windows 64 bit"></a></td>
+    <td><a href="/downloads/FastJPEG_Linux_64.tar.gz"><img src="/images/linux.png" alt="Linux 64 bit"></a></td>
+    <td></td>
+  </tr>
+</table>
+
+#include "footer.shtml"
+<!-- $Id$ -->

@@ -198,6 +198,12 @@
               class="used"
 #endif
               >Tools</a></p>
+
+        <p><a href="/downloads/plugins.html"
+#ifdef S_DOWNLOADS_PLUGINS
+              class="used"
+#endif
+              >Plugins</a></p>
       </div>
 #endif // S_DOWNLOADS
 

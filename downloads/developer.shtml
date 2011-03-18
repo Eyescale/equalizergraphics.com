@@ -17,19 +17,23 @@
     repository</a> or by downloading the source code below. The following
   developer releases, based on the last major release, are available:
 </p>
+<div class="flush_float"></div>
 <table>
-  <tr><th>Version</th><th>Release Notes and Date</th><th>Source Code</th><th>Packages</th></tr>
+  <tr><th>Version</th><th>Release Notes and Date</th><th>Source Code</th><th>Precompiled Packages</th></tr>
   <tr>
     <td>1.0-beta</td>
     <td><a href="/documents/RelNotes/RelNotes_0.9.3.html">01. March
         2011</a></td>
     <td><a href="/downloads/Equalizer-1.0-beta.tar.gz">tar.gz</a></td>
     <td>
-      <a href="/downloads/Equalizer-1.0-beta-win32.exe">Win32</a>
-      <a href="/downloads/Equalizer-1.0-beta-win64.exe">Win64</a>
-      <a href="/downloads/nightly/Equalizer-0.9.3-i386-Darwin.dmg">Darwin i386</a>
-      <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293180">Ubuntu 10.10 i386</a>
-      <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293179">Ubuntu 10.10 amd64</a>
+      32 bit:<br>
+      <a href="/downloads/Equalizer-1.0-beta-win32.exe"><img src="/images/windows.png" alt="Windows 32 bit"></a>
+      <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293180"><img src="/images/ubuntu.png" alt="Ubuntu 10.10 32 bit"></a>
+      <a href="/downloads/nightly/Equalizer-0.9.3-i386-Darwin.dmg"><img src="/images/mac.png" alt="Mac OS X 32 bit"></a>
+      <br>
+      64 bit:<br>
+      <a href="/downloads/Equalizer-1.0-beta-win64.exe"><img src="/images/windows.png" alt="Windows 64 bit"></a>
+      <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293179"><img src="/images/ubuntu.png" alt="Ubuntu 10.10 64 bit"></a>
     </td>
   </tr>
   <tr>
