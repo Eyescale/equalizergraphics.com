@@ -66,8 +66,6 @@
 <a name="implementation"></a>
 <h2>Implementation</h2>
 <!-- /* --><pre>
-  
-</pre><!-- */ -->
 Collage Task Queues
   Similar to co::Barrier
   Master instance does push() and pop() items
