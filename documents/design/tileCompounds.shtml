@@ -1,0 +1,268 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Tile Compounds
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State:
+  <ul>
+    <li>Design</li>
+  </ul>
+</p>
+
+<h2>Overview</h2>
+<p>
+  Tile compounds decompose the view into regular-sized 2D tiles. Each
+  contributing resources renders tiles, until all tiles have been
+  processed. This provides a natural way of balancing the load. Similarly to
+  tile compounds, chunk compounds decompose a database range into DB chunks. For
+  the most part in this document we will consider chunk compounds as a special
+  case for tile compounds.
+</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li><b>Tile Affinity</b>: A given tile should preferably be processed by the
+    same resource. This is even more important for chunks where the resource
+    has to map the data into its address space and upload it to a GPU.</li>
+  <li><b>Configurability</b>: The tile size and chunk granularity has to be
+    configurable in the config file and programmatically on a frame-by-frame
+    basis.</li>
+</ul>
+
+<h2>Specification</h2>
+<p>
+  There are two approaches of distributing the tasks to all resources: a central
+  queue or a per-resource queue with task stealing.
+</p>
+<p>
+  The central queue requires:
+  <ul>
+    <li>Client-side prefetching for performance</li>
+    <li>Server-side pre-distribution for affinity</li>
+    <li>Inter-frame knowledge for affinity</li>
+    <li>Per-frame queue, keeping #latency queues</li>
+  </ul>
+</p>
+<p>
+  The per-resource queue requires:
+  <ul>
+    <li>Pre-distribution of tasks</li>
+    <li>Client-to-client communication for work stealing</li>
+    <li>Client-to-server feedback for pre-distribution of next frame</li>
+  </ul>
+</p>
+<p>
+  The second implementation is more complex without gaining any feature or
+  performance improvement. We will focus on the first implementation.
+</p>
+<p>
+</p>
+
+<a name="implementation"></a>
+<h2>Implementation</h2>
+<!-- /* --><pre>
+  
+</pre><!-- */ -->
+Collage Task Queues
+  Similar to co::Barrier
+  Master instance does push() and pop() items
+  Slave instances do pop() items
+
+class QueueMaster // can only be registered
+{
+public:
+    void push( const QueuePacket& packet );
+    Command& pop(); // release()d by callee
+
+private:
+    typedef std::deque< Command* > PacketQueue;
+    PacketQueue _queue;
+    CommandCache _cache;
+
+    _cmdGetItem( Command& command )
+        while( !_queue.empty( ))
+            packet->instanceID = slaveInstanceID;
+            send( command.getNode(), _queue.front( ));
+            _queue.pop_front();
+        if( _queue.empty( ))
+            send( command.getNode(), QueueEmptyPacket );
+};
+
+class QueueSlave // can only be mapped
+{
+public:
+    void attach()
+    {
+        registerCommand( CMD_QUEUE_ITEM, 0, _queue );
+        registerCommand( CMD_QUEUE_EMPTY, 0, _queue );
+    }
+
+    Command* pop(); // release()d by callee
+       if( _queue.getSize() < _prefetchLow )
+           GetItemPacket packet;
+           packet.num = _prefetchSize;
+           send( master, packet );
+       Command* command = _queue.pop();
+       if( command->command == CMD_QUEUE_ITEM )
+           return command;
+       command->release();
+       return 0;
+
+private:
+    CommandQueue _queue;
+
+    uint32_t _prefetchLow;
+    uint32_t _prefetchSize;
+
+};
+
+Fabric Task Queues Specializations
+
+Server Queue Logics
+
+Client Queue Logics
+
+<h2>API</h2>
+<!-- /* --><pre>
+  2D tiles:
+    void eq::View::setTileSize( const Vector2i& tile );
+
+  DB chunks:
+    void eq::View::setChunkSize( const float range );
+    const Range& eq::Channel::getNextRange() const;
+    - fetches and returns the next range to be rendered
+    - returns Range::INVALID (to be created) when all chunks are done
+    - initially the first range is set
+    - getRange always returns the last fetched range
+
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+      channel "destination"
+      outputtiles { name "queue" size [ int int ] }
+
+      compound
+      {
+          channel "source1..n"
+          inputtiles { name "queue" }
+          outputframe {}
+      }
+      inputframe { name "frame.source1..n" }
+  }
+
+  compound
+  {
+      channel "destination"
+      outputchunks { name "queue" granularity float }
+
+      compound
+      {
+          channel "source1..n"
+          inputchunks { name "queue" }
+          outputframe {}
+      }
+      inputframe { name "frame.source1..n" }
+  }
+
+  compound
+  {
+      channel "destination"
+      outputtiles { name "tiles" size [ int int ] }
+      buffer [ COLOR DEPTH ]
+
+      compound
+      {
+          inputtiles { name "tiles" }
+          outputchunks { name "chunks1" granularity float }
+          compound
+          {
+              channel "source1..n"
+              inputchunks { name "chunks1" }
+              outputframe {}
+          }
+      }
+      compound
+      {
+          buffer [ COLOR DEPTH ]
+          inputtiles { name "tiles" }
+          outputchunks { name "chunks2" granularity float }
+          compound
+          {
+              channel "source1..m"
+              inputchunks { name "chunks2" }
+              outputframe {}
+          }
+      }
+      inputframe { name "frame.source1..n" }
+      inputframe { name "frame.source1..m" }
+  }
+</pre><!-- */ -->
+
+<h2>Examples</h2>
+<!-- /* --><pre>
+Collage queue usage:
+  Producer:
+    QueueMaster queue;
+    localNode->registerObject( queue );
+    for each task
+        queue.push( task );
+    send( queue->getID( ));
+
+  Consumer:
+    const uint128_t queueID = recv();
+    QueueSlave queue;
+    localNode->mapObject( queue, queueID );
+    while( task = queue.pop( ))
+        execute task
+        task->release()
+
+  Channel::frameDraw()
+     setup
+     Range range = getRange();
+     while( range != INVALID )
+         draw( range );
+         range = getNextRange();
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<h3>Q1: Do we have one draw call per tile, or does one draw call render multiple
+  tiles?</h3>
+<p>
+  Resolved: Have one draw call per tile. This is transparent to the
+  application. The static setup can be amortized by caching the relevant state
+  information on the channel itself, and resetting it in
+  each <code>frameStart</code>
+</p>
+<p>
+  Having one <code>Channel::frameClear, frameDraw, frameReadback</code> per tile
+  has the advantage of exposing this feature completely transparent to the
+  application. Having one call for all tiles has the advantage that the
+  application may amortize certain static setup calls, e.g., loading a shader or
+  texture, over all tiles.
+</p>
+
+<h3>Q2: Do we have one draw call per chunk, or does one draw call render
+  multiple chunks?</h3>
+<p>
+  Resolved: For DB chunks, the application has to get all chunks to render in a
+  single <code>Channel::frameDraw</code> invokation.
+</p>
+<p>
+  The same logic applies as for tiles, with the exception that we want to have
+  one clear and readback for all chunks. This does not exclude using multiple
+  draw calls, but reusing the same framebuffer does. Often applications adapt
+  the near and far based on the current data, thus changing the meaning of the
+  existing, reused depth buffer.
+</p>
+
+#include "footer.shtml"
+<!-- $Id: immersive.shtml 3520 2009-10-26 16:00:08Z eile $ -->
