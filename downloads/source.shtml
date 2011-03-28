@@ -15,34 +15,22 @@
   </a>
 </div>
 <p>
-  The subversion repository gives access to the latest source code, and should
-  be used by developers modifying the Equalizer source code or interested in the
-  latest features. The tree can be checked out using
-  <a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer/trunk/src">subversion</a>.
+  The git repository gives access to the latest source code, and should be used
+  by developers modifying the Equalizer source code or interested in the latest
+  features. The tree can be checked out from
+  <a href="https://github.com/Eyescale/Equalizer">github</a>.
   We try to keep the svn tree stable and encourage developers to use the svn
   tree, or at least a developer version.
 </p>
 <p>
-  Make sure you check out <code>trunk/src</code> only, not the top-level
-  repository as explained on sourceforge. Otherwise you will get all previous
-  releases, well over one gigabyte of data.
-<p>
-  A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
-    read-only copy</a> is available for browsing the source code. The repository
-  has the following layout and size:
+  <!-- A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
+       read-only copy</a> is available for browsing the source code.--> The
+  repository has the following layout and clone size:
 </p>
 <!-- /* --><pre>
-202M trunk/src
-202M trunk/doc
-298M trunk/website
-
-202M tags/release-1.0-beta
-210M tags/release-1.0-alpha
-198M tags/release-0.9.1
-199M tags/release-0.9
-202M tags/release-0.6 (switched to tagging only src)
-544M tags/release-0.5
-[...]
+49M Equalizer
+272M EqDocs
+939M equalizergraphics.com
 </pre><!-- */ -->
 
 <h2>Source Code Analysis</h2>

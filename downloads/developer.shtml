@@ -12,10 +12,10 @@
   early access to new features. 
 </p>
 <p>
-  Developer releases can be checked out from the
-  <a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags">subversion
-    repository</a> or by downloading the source code below. The following
-  developer releases, based on the last major release, are available:
+  Developer releases can be checked out from
+  <a href="https://github.com/Eyescale/Equalizer">github</a> or by downloading
+  the source code below. The following developer releases, based on the last
+  major release, are available:
 </p>
 <div class="flush_float"></div>
 <table>

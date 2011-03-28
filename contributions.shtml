@@ -51,20 +51,11 @@
 </p>
 <a name="packagers"></a>
 <ul>
-  <li><b>Binary Packages:</b> Create binary packages of Equalizer releases for
-    your favorite platform and operating system (Linux distribution packages,
-    Windows Installer, etc.). One hot candidate is the integration into Linux
-    distributions such
-    as <a href="https://bugs.launchpad.net/ubuntu/+bug/300472">Ubuntu</a>
-    or <a href="https://bugzilla.redhat.com/show_bug.cgi?id=473077">Fedora</a>.
-    We are happy to add your packages to the SourceForge download page, and will
-    try to maintain them.</li>
   <li><b>Documentation:</b> Good documentation is important for Equalizer. While
     we try our best, we have limited time and sometimes we are just to immersed
     in the details. We are looking for a User Guide, contributions to the
     Programming Guide and stand-alone HowTos for whatever you feel needs
-    documentation. You can also start adding articles to
-    the <a href="http://equalizer.wiki.sourceforge.net/">Wiki</a>.</li>
+    documentation.</li>
   <li><b>Better Mac OS X Integration:</b> An XCode project, creation of proper
     frameworks and application packages will help Apple developers. We are also
     looking for a Cocoa port to support 64 bit natively, not just via X11.</li>
