@@ -1,4 +1,4 @@
-.PHONY: update svnupdate gitupdate doxygen update_and_targets
+.PHONY: update srcupdate doxygen update_and_targets
 .SUFFIXES: .html .css
 
 TARGET = build
@@ -8,7 +8,6 @@ FILES = \
 	stylesheet.css \
 	api.html \
 	applications.html \
-	changes.html \
 	compatibility.html \
 	configuration.html \
 	contributions.html \
@@ -205,12 +204,11 @@ IMAGES   = $(IMAGES_SRC) \
 PAGES    = $(HTML_SRC:%.shtml=%.html)
 SITEMAP  = $(TARGET)/sitemap.xml.gz
 
-SVN ?= svn
 GIT ?= git
 MD2HTML ?= markdown-2.6 -x toc -x fenced_code
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
-           -DUPDATE="`$(SVN) info $< | grep 'Last Changed Date' | sed 's/.*, \(.*\))/\1/'`" \
-           -DCHANGEURL=\"http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/$<?view=log\" \
+           -DUPDATE="`$(GIT) log -1 $< | grep 'Date:' | sed 's/Date:   //'`" \
+           -DCHANGEURL=\"https://github.com/Eyescale/equalizergraphics.com/commits/master/$<\" \
            -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%) \
            -DPAGEURL=$(@:$(TARGET)%=%) \
            -DWIKIURL=$(<:documents/design/%.shtml=http://github.com/Eyescale/Equalizer/wiki/%)
@@ -223,18 +221,18 @@ clean:
 	rm -rf $(TARGETS)
 
 install: $(SITEMAP) package
-	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
 
 install_web: $(SITEMAP)
-	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 install_only: all
-	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-	rsync -avz --exclude=".svn" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../src/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
 
 auxinst: all
-	rsync -avz --exclude=".svn" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".git" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 $(SITEMAP): update_and_targets doxygen
 	@sitemap_gen --config=sitemap_config.xml
@@ -242,13 +240,13 @@ $(SITEMAP): update_and_targets doxygen
 update_and_targets: update
 	 @$(MAKE) all
 
-update: svnupdate gitupdate nightlyupdate
+update: srcupdate nightlyupdate
 	rm -f changes_log.html
 
-svnupdate:
-	$(SVN) update ..
-
-gitupdate:
+srcupdate:
+	-$(GIT) pull
+	-cd ../Equalizer; $(GIT) pull
+	-cd ../EqDocs; $(GIT) pull
 	-cd Equalizer.wiki; $(GIT) pull
 
 nightlyupdate:
@@ -284,19 +282,19 @@ $(TARGET)/documents/WhitePapers/%.pdf: documents/WhitePapers/%/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/documents/Developer/%.pdf: ../doc/Developer/%/paper.pdf
+$(TARGET)/documents/Developer/%.pdf: ../EqDocs/Developer/%/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/documents/Developer/eqPlyPresentation.pdf: ../doc/Developer/eqPly/presentation/eqPly.pdf
+$(TARGET)/documents/Developer/eqPlyPresentation.pdf: ../EqDocs/Developer/eqPly/presentation/eqPly.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/documents/Developer/eqPly.pdf: ../doc/Developer/eqPly/Semesterarbeit.pdf
+$(TARGET)/documents/Developer/eqPly.pdf: ../EqDocs/Developer/eqPly/Semesterarbeit.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(TARGET)/downloads/DBCAAF49A0C0/ProgrammingUserGuide.pdf: ../doc/Developer/ProgrammingGuide/paper.pdf
+$(TARGET)/downloads/DBCAAF49A0C0/ProgrammingUserGuide.pdf: ../EqDocs/Developer/ProgrammingGuide/paper.pdf
 	@mkdir -p $(@D)
 	cp $< $@
 
@@ -323,11 +321,3 @@ $(TARGET)/%-small.jpg: %.png
 $(TARGET)/% : %
 	@mkdir -p $(@D)
 	cp -rf $< $(@D)
-
-$(TARGET)/changes.html: changes.shtml changes_log.html
-
-equalizer.rdf:
-	./changes.pl > $@
-
-changes_log.html:
-	./changes.pl > $@
