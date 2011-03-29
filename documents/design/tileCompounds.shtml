@@ -66,7 +66,9 @@
 <a name="implementation"></a>
 <h2>Implementation</h2>
 <!-- /* --><pre>
-Collage Task Queues
+                              Collage Task Queues
+                              -------------------
+
   Similar to co::Barrier
   Master instance does push() and pop() items
   Slave instances do pop() items
@@ -74,8 +76,17 @@ Collage Task Queues
 class QueueMaster // can only be registered
 {
 public:
-    void push( const QueuePacket& packet );
+    void push( const QueuePacket& packet )
+        Command* command = _cache.alloc( packet.size( ));
+        copy packet -> command;
+        command->command = CMD_QUEUE_ITEM;
+        command->objectID = getID();
+        _queue.push_back( command );
+
     Command& pop(); // release()d by callee
+
+protected:
+    getChangeType() { return TYPE_STATIC; }
 
 private:
     typedef std::deque< Command* > PacketQueue;
@@ -83,7 +94,7 @@ private:
     CommandCache _cache;
 
     _cmdGetItem( Command& command )
-        while( !_queue.empty( ))
+        while( !_queue.empty() && --itemsRequested )
             packet->instanceID = slaveInstanceID;
             send( command.getNode(), _queue.front( ));
             _queue.pop_front();
@@ -111,6 +122,9 @@ public:
        command->release();
        return 0;
 
+protected:
+    getChangeType() { return TYPE_STATIC; }
+
 private:
     CommandQueue _queue;
 
@@ -121,9 +135,87 @@ private:
 
 Fabric Task Queues Specializations
 
-Server Queue Logics
+                           Server-Side Implementation
+                           --------------------------
 
-Client Queue Logics
+  - Implement loader and API
+  in Compound::update:
+  - in CompoundUpdateOutputVisitor:
+    o get co::QueueMaster [member of outputtiles/chunks]
+      - TBD: one per eye and latency, cf. Frame::cycleData
+    o generate all tasks packets[1] and push them to queue
+      - fill in all non-source dependent data, e.g., PVP but not drawbuffer
+      - cf. ChannelUpdateVisitor for task generation code
+        o for chunks: only draw
+
+  - in CompoundUpdateInputVisitor:
+    o set QueueMaster id on inputtiles/chunks
+  - register queues (cf. Barriers)
+  - TBD output frame links for tile queues
+    o Issue: one per tile, but only one frame per leaf in config
+    o start with chunk queue impl which only has one output frame per leaf
+
+  in ChannelUpdateVisitor:
+  - if compound has input queue
+    do generate tasks:
+      o chunks: clear, chunks, readback
+      o tiles: tiles [+output frame IDs]
+      o contains queueID [cf. input frames]
+      o all others, including transmit, do not change
+      o pay attention that frameReadback does not set ready the frame
+
+  - CLEANUP!
+
+  - in CommandQueue::_cmdGetItem
+    o TBD add compound-specific data
+
+[1]
+TileTaskPacket : public QueuePacket
+{
+    TileTaskPacket()
+    {
+        size = ...;
+    }
+
+    PixelViewport pvp;
+    Viewport vp;
+    Frustum, ...
+}
+
+ChunkTaskPacket : public QueuePacket
+{
+    ChunkTaskPacket()
+    {
+        size = ...;
+    }
+
+    Range range;
+}
+[...]
+
+                           Client-Side Implementation
+                           --------------------------
+ Channel::_cmdFrameTiles()
+    map QueueSlave to packet->queueID; [see Channel::getView() ]
+    while( packet = queue.pop( ))
+       set tile data in current context
+       call frameClear, frameDraw, frameReadback
+
+ Channel::_cmdFrameTasks()
+    map QueueSlave to packet->queueID; [see Channel::getView() ]
+    getNextRange()
+    call frameDraw
+
+ Channel::getNextRange()
+    get packet = queue.pop();
+    if !packet
+      return false
+
+    set range in current context
+    release packet
+    return true
+
+
 </pre><!-- */ -->
 
 <h2>API</h2>
