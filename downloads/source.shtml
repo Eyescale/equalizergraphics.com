@@ -5,15 +5,8 @@
 
 #include "header.shtml"
 
-<h2>Subversion</h2>
+<h2>Git Repository</h2>
 
-<div class="float_right">
-  <a href="http://sourceforge.net/projects/equalizer">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&type=15"
-         width="150" height="40" border="0"
-         alt="Get Equalizer - Parallel Rendering at SourceForge.net. Fast, secure and Free Open Source software downloads" />
-  </a>
-</div>
 <p>
   The git repository gives access to the latest source code, and should be used
   by developers modifying the Equalizer source code or interested in the latest
