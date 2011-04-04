@@ -210,6 +210,9 @@
     <li>Move all wall coordinates by ratio in Compound::updateFrustum:
       <code>top_left = top_left * ratio</code></li>
   </ul>
+  <li>Same logics to move view wall, finding the wall is trivial</li>
+  <li>Same logics for untracked views, using config attributes (relative to
+    observer falls back to relative to origin due to lack of observer)</li>
 </ul>
 <div class="flush_float"></div>
 
