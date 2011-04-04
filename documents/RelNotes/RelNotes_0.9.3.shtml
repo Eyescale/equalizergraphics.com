@@ -17,6 +17,6 @@
      [x] Switch default to release build
   -->
 
-#include "../../../../tags/release-1.0-beta/libs/RelNotes.dox"
+#include "../../../eq-svn/tags/release-1.0-beta/libs/RelNotes.dox"
 
 #include "footer.shtml"
