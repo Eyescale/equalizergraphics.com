@@ -171,8 +171,8 @@ server
         
         observer # 0...n times
         {
-            name    string
-            eyeBase float
+            name     string
+            eye_base float
         }
 
         layout  # 0...n times

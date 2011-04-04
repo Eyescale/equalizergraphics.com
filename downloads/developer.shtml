@@ -9,7 +9,8 @@
   Developer releases are regular, minor versions in-between major
   releases. Typically we tag a developer release after a feature has been
   implemented and tested. This ensures a reasonable stability, while providing
-  early access to new features. 
+  early access to new features. The minor version of developer releases is odd
+  (e.g. 1.1.0) while major releases have even minor revisions (e.g. 1.2.1).
 </p>
 <p>
   Developer releases can be checked out from

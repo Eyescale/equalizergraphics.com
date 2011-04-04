@@ -234,6 +234,8 @@
     global
     {
         EQ_CONFIG_FATTR_EYE_BASE            float
+        EQ_CONFIG_FATTR_FOCUS_DISTANCE      float
+        EQ_CONFIG_IATTR_FOCUS_MODE          fixed | relative_to_origin | relative_to_observer
         EQ_WINDOW_IATTR_HINT_STEREO         OFF | ON | AUTO
     }
     config // 1-n times, currently only the first one is used by the server
@@ -241,6 +243,8 @@
         attributes
         {
              eye_base float // distance between left and right eye
+             focus_distance float
+             focus_mode     fixed | relative_to_origin | relative_to_observer
         }
     }
     window
@@ -249,6 +253,12 @@
         {
             hint_stereo         off | on | auto
         }
+    }
+    observer
+    {
+         eye_base float // distance between left and right eye
+         focus_distance float
+         focus_mode     fixed | relative_to_origin | relative_to_observer
     }
     compound
     {
