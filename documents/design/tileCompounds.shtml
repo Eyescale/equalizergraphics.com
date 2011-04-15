@@ -177,6 +177,7 @@ TileTaskPacket : public QueuePacket
         size = ...;
     }
 
+    uint32_t tasks;
     PixelViewport pvp;
     Viewport vp;
     Frustum, ...
@@ -189,6 +190,7 @@ ChunkTaskPacket : public QueuePacket
         size = ...;
     }
 
+    uint32_t tasks;
     Range range;
 }
 [...]
@@ -199,7 +201,7 @@ ChunkTaskPacket : public QueuePacket
     map QueueSlave to packet->queueID; [see Channel::getView() ]
     while( packet = queue.pop( ))
        set tile data in current context
-       call frameClear, frameDraw, frameReadback
+       call frameClear, frameDraw, frameReadback [if task is set in tasks]
 
  Channel::_cmdFrameTasks()
     map QueueSlave to packet->queueID; [see Channel::getView() ]
@@ -252,7 +254,7 @@ ChunkTaskPacket : public QueuePacket
   compound
   {
       channel "destination"
-      outputchunks { name "queue" granularity float }
+      outputchunks { name "queue" divisor int }
 
       compound
       {

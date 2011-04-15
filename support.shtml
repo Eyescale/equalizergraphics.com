@@ -33,19 +33,9 @@
 <h2>Open Source Support</h2>
 <h3>Bug Reports and Feature Requests</h3>
 <p>
-  Please use the following links to sourceforge.net to submit bugs and request
-  new features. Due to abuse we can no longer support anonymous bug reporting.
+  Please use the <a href="https://github.com/Eyescale/Equalizer/issues">GitHub
+  issue tracker</a> to submit bugs and request new features.
 </p>
-<div class="float_right">
-  <a href="http://sourceforge.net">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&amp;type=4"
-         width="125" height="37" border="0" alt="SourceForge.net Logo" />
-  </a>
-</div>
-<ul>
-  <li><a href="http://sourceforge.net/tracker/?atid=856209&group_id=170962&func=browse">Bug Reports</a></li>
-  <li><a href="http://sourceforge.net/tracker/?atid=856212&group_id=170962&func=browse">Feature Requests</a></li>
-</ul>
 
 <h3>Developer Discussion</h3>
 <p>
