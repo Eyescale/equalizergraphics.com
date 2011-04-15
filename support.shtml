@@ -31,19 +31,12 @@
 </p>
 
 <h2>Open Source Support</h2>
-<h3>Bug Reports and Feature Requests</h3>
 <p>
   Please use the <a href="https://github.com/Eyescale/Equalizer/issues">GitHub
-  issue tracker</a> to submit bugs and request new features.
-</p>
-
-<h3>Developer Discussion</h3>
-<p>
-  Please use the <a href="mailto:eq-dev@equalizergraphics.com">eq-dev</a>
-  mailing list (<a href="/cgi-bin/mailman/listinfo/eq-dev">subscribe here</a>)
-  or the <a href="/forum.html">online forum</a> to ask your questions.
-</p>
-
+  issue tracker</a> to submit bugs and request new features, and
+  the <a href="mailto:eq-dev@equalizergraphics.com">eq-dev</a> mailing list
+  (<a href="/cgi-bin/mailman/listinfo/eq-dev">subscribe here</a>) or
+  the <a href="/forum.html">online forum</a> to ask any other questions.
 </p>
 
 <div class="float_right"><a href="http://www.cs.uzh.ch/vmml/">
