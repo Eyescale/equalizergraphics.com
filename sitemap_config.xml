@@ -58,27 +58,33 @@
       priority   - value 0.0 to 1.0 of relative importance in your site
   -->
   <url
-     href="http://www.equalizergraphics.com/documents/Developer/API-0.9/"
+     href="http://www.equalizergraphics.com/documents/Developer/API-1.0/"
      changefreq="monthly"
      priority="0.4"
+  />
+
+  <url
+     href="http://www.equalizergraphics.com/documents/Developer/API-0.9/"
+     changefreq="monthly"
+     priority="0.3"
   />
 
   <url
      href="http://www.equalizergraphics.com/documents/Developer/API-0.9.1/"
      changefreq="monthly"
-     priority="0.4"
+     priority="0.3"
   />
 
   <url
      href="http://www.equalizergraphics.com/documents/Developer/API-0.9.2/"
      changefreq="monthly"
-     priority="0.4"
+     priority="0.3"
   />
 
   <url
      href="http://www.equalizergraphics.com/documents/Developer/API-0.9.3/"
      changefreq="monthly"
-     priority="0.4"
+     priority="0.3"
   />
 
   <url

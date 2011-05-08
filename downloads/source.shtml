@@ -11,9 +11,14 @@
   The git repository gives access to the latest source code, and should be used
   by developers modifying the Equalizer source code or interested in the latest
   features. The tree can be checked out from
-  <a href="https://github.com/Eyescale/Equalizer">github</a>.
-  We try to keep the svn tree stable and encourage developers to use the svn
-  tree, or at least a developer version.
+  <a href="https://github.com/Eyescale/Equalizer">github</a>. We try to keep the
+  git master stable and encourage developers to use git, or at least a developer
+  version.
+</p>
+<p>
+  Versions up to and including 1.0 were developed using
+  a <a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer">Subversion
+  repository</a>.
 </p>
 <p>
   <!-- A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,

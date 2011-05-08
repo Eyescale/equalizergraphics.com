@@ -6,7 +6,20 @@
 #include "header.shtml"
 
 <table>
-  <tr><th>Version</th><th>Links</th><th>Major Feature(s)</th></tr>
+  <tr><th>Version</th><th>Links</th><th>Binary Packages</th><th>Major Feature(s)</th></tr>
+
+  <tr>
+    <td>1.0</td>
+    <td nowrap>
+      <a href="/documents/RelNotes/RelNotes_1.0.html">Release 
+        Notes</a><br>
+      <a href="/downloads/Equalizer-1.0.tar.gz">Source tar.gz</a><br> 
+      <a href="/documents/Developer/API-1.0/index.html">API documentation</a>
+    </td>
+    <td></td>
+    <td>Stable API, Collage library, download and upload plugins, runtime stereo
+    switch.</td>
+  </tr>
 
   <tr>
     <td>0.9</td>
@@ -16,19 +29,23 @@
       <a href="/downloads/Equalizer-0.9.tar.gz">Source tar.gz</a><br> 
       <a href="/documents/Developer/API-0.9/index.html">API documentation</a>
     </td>
+    <td></td>
     <td>Cross-segment load-balancing, dynamic frame resolution, compression
       plugins.</td>
   </tr>
 
+  <tr>
     <td>0.6</td>
     <td nowrap>
       <a href="/documents/RelNotes/RelNotes_0.6.html">Release 
         Notes</a><br>
-      <a href="/downloads/Equalizer-0.6.tar.gz">Source tar.gz</a><br> 
-      <a href="/downloads/Equalizer-0.6-win32.zip">32bit VS2005 SP1 zip</a><br>
-      <a href="/downloads/Equalizer-0.6-x64.zip">64bit VS2005 SP1 zip</a><br>
+      <a href="/downloads/Equalizer-0.6.tar.gz">Source tar.gz</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=640364">SourceForge</a><br>
       <a href="/documents/Developer/API/0.6/index.html">API documentation</a>
+    </td>
+    <td>
+      <a href="/downloads/Equalizer-0.6-win32.zip"><img src="/images/windows.png" alt="Windows 32 bit"></a><br>32 bit<br>
+      <a href="/downloads/Equalizer-0.6-x64.zip"><img src="/images/windows.png" alt="Windows 64 bit"></a><br>64 bit<br>
     </td>
     <td>2D and DB load-balancing, DPlex compounds.</td>
   </tr>
@@ -41,6 +58,7 @@
       <a href="/downloads/Equalizer-0.5.0.tar.gz">Source tar.gz</a><br> 
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=592910">SourceForge</a><br>
     </td>
+    <td></td>
     <td>Pixel compounds, fast sort-last compositing.</td>
   </tr>
 
@@ -52,6 +70,7 @@
       <a href="/downloads/Equalizer-0.4.1.tar.gz">Source tar.gz</a><br> 
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
+    <td></td>
     <td>Fixes a bug in the build system for Mac OS X 10.5.1 and later.</td>
   </tr>
 
@@ -64,6 +83,7 @@
       <a href="/downloads/Equalizer-0.4.0.tar.gz">Source tar.gz</a><br> 
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
+    <td></td>
     <td>Volume rendering support, simplification of application porting.</td>
   </tr>
 
@@ -74,6 +94,8 @@
         Notes</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=505909">SourceForge</a><br>
       <a href="/downloads/Equalizer-0.3.0.tar.gz">Source tar.gz</a><br> 
+    </td>
+    <td>
       <a href="/downloads/Equalizer-0.3.0-0.x86_64.rpm">RHEL4 x64 rpm</a><br>
     </td>
     <td>Windows XP support.</td>
@@ -86,6 +108,7 @@
       <a href="/downloads/Equalizer-0.2.tar.gz">Local source tarball</a><br> 
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">SourceForge mirror</a>
     </td>
+    <td></td>
     <td>Support for scalable rendering, by using multiple CPU's, GPU's and
       computers to scale the rendering performance of a single view.</td>
   </tr>
@@ -97,6 +120,7 @@
       <a href="/downloads/Equalizer-0.1.tar.gz">Local source tarball</a><br> 
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">SourceForge mirror</a><br>
     </td>
+    <td></td>
     <td>First official release.</td>
   </tr>
 </table>
