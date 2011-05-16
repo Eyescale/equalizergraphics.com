@@ -17,6 +17,7 @@ FILES = \
 	$(wildcard downloads/*.gz) \
 	$(wildcard downloads/*.exe) \
 	$(wildcard downloads/*.zip) \
+	$(wildcard downloads/*.dmg) \
 	events.html \
 	equalizer.rdf \
 	favicon.ico \

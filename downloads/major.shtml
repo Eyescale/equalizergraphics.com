@@ -16,7 +16,9 @@
       <a href="/downloads/Equalizer-1.0.tar.gz">Source tar.gz</a><br> 
       <a href="/documents/Developer/API-1.0/index.html">API documentation</a>
     </td>
-    <td></td>
+    <td>
+      <a href="/downloads/Equalizer-1.0.0-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
+    </td>
     <td>Stable API, Collage library, download and upload plugins, runtime stereo
     switch.</td>
   </tr>
