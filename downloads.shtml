@@ -32,5 +32,14 @@
   multi-GPU development.
 </p>
 
+<h2>Ubuntu Packages</h2>
+<p>
+  Ubuntu packages are available through PPA:
+</p>
+<pre>
+  sudo add-apt-repository ppa:eilemann/equalizer/ubuntu
+  sudo apt-get install equalizer-apps equalizer-examples equalizer-tools
+</pre>
+
 #include "footer.shtml"
 <!-- $Id$ -->
