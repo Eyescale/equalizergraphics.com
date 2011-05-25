@@ -32,6 +32,30 @@
   multi-GPU development.
 </p>
 
+<h2>Versioning</h2>
+<h3>Compatibility</h3>
+<p>
+  Prior to version 1.0 all releases were beta releases and each new release
+  potentially changed the API. All 1.x releases are forward-source-compatible,
+  that is, a program written against version 1.x can be compiled with any
+  Equalizer version 1.y where y &gt;= x. An eventual version 2.0 will be
+  introduced when it is absolutely necessary to break this compatiblity. A CMake
+  option (EQUALIZER_BUILD_2_0_API) is available to disable all deprecated 1.x
+  methods.
+</p>
+
+<h3>Version Numbers</h3>
+<p>
+  Released versions have an even minor number, e.g., 1.0, 1.2, 2.0. Bugfix
+  releases increase the patch number, e.g., 1.0.1.
+</p>
+<p>
+  The development tree always has an odd minor number, e.g., the version of the
+  git master between the 1.0 and 1.2 release is 1.1.x. The patch number is used
+  to denote new features or other changes which applications may want to check
+  against.
+</p>
+
 <h2>Ubuntu Packages</h2>
 <p>
   Ubuntu packages are available through PPA:
