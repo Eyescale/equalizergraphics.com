@@ -55,6 +55,10 @@
   to denote new features or other changes which applications may want to check
   against.
 </p>
+<p>
+  The shared library (DLL) version is incremented every time the version number
+  changes and the ABI is incompatible.
+</p>
 
 <h2>Ubuntu Packages</h2>
 <p>
