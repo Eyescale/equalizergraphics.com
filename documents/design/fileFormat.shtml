@@ -264,6 +264,7 @@ server
             period   int                   # DPlex period
             phase    int                   # DPlex phase
 
+            view_equalizer {} # assign resources to child load_equalizers
             load_equalizer # adapt 2D tiling or DB range of children
             {
                 mode 2D | DB | VERTICAL | HORIZONTAL
@@ -461,6 +462,15 @@ observer-ref: 'string' | 'index'
           monitor_equalizer {}   # set frame zoom when monitoring other views
       }
     </pre><!-- */ -->
+  <li><a href="/documents/design/viewEqualizer.html">Cross-Segment Load Balancing</a>
+    added:
+    <!-- /* --><pre>
+    compound
+    {
+        view_equalizer{}
+    }
+    </pre><!-- */ -->
+  </li>
   <li><a href="/documents/design/view.html">Support for multiple observers</a>
     added:
     <!-- /* --><pre>
