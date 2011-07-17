@@ -17,8 +17,8 @@
 
 <p>
   The version label references the Equalizer version introducing the feature.
-  Features labeled 'svn' are in the subversion development repository and will
-  most likely be released in the next version.
+  Features labeled 'git' are in the git master repository and will most likely
+  be released in the next version.
 </p>
 
 
@@ -83,6 +83,19 @@
 
 <a name="scalability"></a>
 <h2>Scalable Rendering Features</h2>
+<h3>Configuration</h3>
+<ul class="none">
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/fileFormat.html">Static configuration using an
+      ASCII file</a></li>
+  <li><div class="box">git</div>
+    Automatic configuration of Multi-GPU workstations</a></li>
+  <li><div class="box">TBD</div>
+    Automatic configuration and discovery of remote scalability GPUs</a></li>
+  <li><div class="box">TBD</div>
+    Automatic configuration and discovery of remote display surfaces</a></li>
+</ul>
+
 <h3>Decomposition Modes</h3>
 <ul class="none">
   <li><div class="box">0.2</div>
