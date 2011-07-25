@@ -225,14 +225,14 @@ clean:
 
 install: $(SITEMAP) package
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
 
 install_web: $(SITEMAP)
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 install_only: all
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/docs/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
 
 auxinst: all
 	rsync -avz --exclude=".git" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
@@ -266,7 +266,7 @@ doxygen: update
 	$(MAKE) -C ../Equalizer docs
 
 package: doxygen
-	$(MAKE) -C ../Equalizer/docs package
+	$(MAKE) -C ../Equalizer package
 
 docset: doxygen
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
