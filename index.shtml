@@ -19,6 +19,16 @@
   any visualization system, from a simple workstation to large scale graphics
   clusters, multi-GPU workstations and Virtual Reality installations.
 </p>
+<p>
+  <a href="/api.html">Sequel</a> is an easily accessible interface to the
+  Equalizer parallel rendering framework, and allows rapid development of
+  clustered multi-GPU applications.
+</p>
+<p>
+  <a href="http://www.libcollage.net/">Collage</a> is a cross-platform C++
+  library for building heterogenous, distributed applications. It is the
+  multi-threaded cluster backend for Equalizer.
+</p>
 
 <h2>Benefits</h2>
 <ul>
@@ -53,14 +63,16 @@
     and computers to scale the rendering performance, visual quality and display
     size. This allows virtually any data set to be rendered at any resolution at
     interactive framerates, given sufficient hardware resources.</li>
-  <li><a href="/documents/design/immersive.html">Support for Virtual
-    Reality:</a> Equalizer applications can run seamlessly in Virtual Reality
-    installations using active and passive stereo rendering, as well as head
-    tracking for one or multiple observers.</li>
-  <li><b>Data Distribution:</b> Equalizer simplifies and optimizes the data
-    distribution needed for cluster-based execution. The versioned distributed
-    objects offered be Equalizer are optimally suited for interactive rendering
-    of dynamic data sets on large-scale visualization clusters.</li>
+  <li><a href="/documents/design/immersive.html">Virtual Reality:</a> Equalizer
+    applications can run seamlessly in Virtual Reality installations using
+    active and passive stereo rendering, as well as head tracking for one or
+    multiple observers.</li>
+  <li><a href="http://www.libcollage.net/">Distributed Execution:</a> Equalizer
+    includes Collage, an advanced library for distributed applications. The data
+    distribution needed for cluster-based is made simple through versioned,
+    distributed objects. Features like reliable multicast, InfiniBand support
+    and data compression enable optimal performance on large-scale visualization
+    clusters.</li>
 </ul>
 
 <h2>Project Mission</h2>

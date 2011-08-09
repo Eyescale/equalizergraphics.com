@@ -265,7 +265,7 @@ doxygen: update
 	@touch ../Equalizer/docs/CMakeCache.txt
 	$(MAKE) -C ../Equalizer docs
 
-package: doxygen
+package:
 	$(MAKE) -C ../Equalizer package
 
 docset: doxygen

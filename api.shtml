@@ -8,32 +8,39 @@
 #include "header.shtml"
 
 <p>
-  The Equalizer programming interface and execution model provides,
-  over-simplified, a distributed, scalable, multipipe, multithreaded GLUT
-  implementation. The <a href="/documents/Howtos/glutToEqualizer.html">Equalizer
-    for GLUT Developers Howto</a> helps to find some pointers for GLUT
-  programmers. The 
-  <a href="/documents/Developer/API/namespaceeq.html#_details">API 
-    reference</a> documents the important classes and methods.
+  Equalizer provides a distributed, scalable, multipipe,
+  multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
+  <a href="/documents/Developer/API/namespaceeq.html#_details">programming
+  interface</a>.
 </p>
 <p>
-  Application developers use the Equalizer client library to write parallel,
-  scalable OpenGL applications. The Equalizer client library is the interface to
-  the Equalizer server, and it abstracts the application from the actual
-  configuration of the execution environment. Compared to other
-  cluster-rendering software, it does not replace the OpenGL library but
-  parallelizes and distributes the application's rendering code for optimal
-  performance.
+  <a href="/documents/Developer/API/sequel/namespaceseq.html">Sequel</a>
+  provides an abstraction to the Equalizer parallel rendering framework which
+  allows rapid development of clustered multi-GPU applications. The central
+  interface of Sequel is provided by the two
+  classes <a href="/documents/Developer/API/sequel/classseq_1_1Application.html">Application</a>
+  and <a href="/documents/Developer/API/sequel/classseq_1_1Renderer.html">Renderer</a>
+  which provide a streamlined interface for parallel rendering applications.
+</p>
+<p>
+  Equalizer abstracts the application code from the actual configuration of the
+  execution environment. Compared to other cluster-rendering software, it does
+  not replace the OpenGL library but parallelizes and distributes the
+  application's rendering code for optimal performance.
 </p>
 <p>
   The API is <em>minimally invasive</em> and allows to retain almost all of the
   application's OpenGL rendering code. Equalizer provides the natural execution
-  framework for any multi-pipe application and does not impose any specific
+  framework for any multi-GPU application and does not impose any specific
   rendering framework, such as a scenegraph, to the application. It follows the
-  natural execution model of any multipipe application, and provided the
-  functionality common to multipipe applications, thus making it as easy as
-  possible to port existing applications to Equalizer.
+  natural execution model of any multi-GPU application, thus making it as easy
+  as possible to modify existing applications for parallel rendering on
+  visualization clusters.
 </p>
+<div class="float_right"><a href="/images/executionFlow.png">
+    <img src="images/executionFlow-small.jpg" 
+         alt="Execution flow of a single-threaded and a multi-GPU application">
+</a></div>
 <p>
   Equalizer uses a callback-driven interface. Applications provide their
   rendering methods, which are called by the Equalizer framework according to
@@ -41,20 +48,15 @@
   synchronization and network connections are externalized from the application
   and handled by the Equalizer framework.
 </p>
-
-<div class="float_right"><a href="/images/executionFlow.png">
-    <img src="images/executionFlow-small.jpg" 
-         alt="Execution flow of a singlepipe and a multipipe application">
-</a></div>
-
 <p>
-  In order to port an application to run in a multipipe environment, the
-  rendering routines have to be separated from the core application. The
-  Equalizer framework will then take care of the multiprocessing and
-  synchronization and call the application-provided rendering methods in
-  parallel. The basic execution flow of a singlepipe and a multipipe application
-  is show on the right (click on picture to enlarge).
-</p><p>
+  To port an application to run in a multi-GPU environment, the rendering code
+  is separated from the core application logic. The Equalizer framework will
+  then take care of the multiprocessing and synchronization and call the
+  application-provided rendering methods in parallel. The basic execution flow
+  of a singlepipe and a multi-GPU application is show on the right (click on
+  picture to enlarge).
+</p>
+<p>
   Equalizer abstracts common graphic entities into C++ classes, for example:
 </p>
 <ul>

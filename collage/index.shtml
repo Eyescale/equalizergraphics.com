@@ -23,6 +23,16 @@
 </p>
 
 <h2>Features</h2>
+<h3>Parallel Programming</h3>
+<ul>
+  <li>Threads</li>
+  <li>Locks, optimized spin locks, timed locks and scoped mutexes</li>
+  <li>Condition variables</li>
+  <li>Atomic variables</li>
+  <li>Lock-free queues</li>
+  <li>Blocking thread-safe queues</li>
+  <li>Blocking monitor variables</li>
+</ul>
 <h3>Network Protocols</h3>
 <ul>
   <li>TCP/IP unicast sockets</li>
