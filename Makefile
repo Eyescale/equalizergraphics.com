@@ -1,4 +1,4 @@
-.PHONY: update srcupdate doxygen update_and_targets
+.PHONY: update srcupdate docset update_and_targets
 .SUFFIXES: .html .css
 
 TARGET = build
@@ -237,7 +237,7 @@ install_only: all
 auxinst: all
 	rsync -avz --exclude=".git" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
-$(SITEMAP): update_and_targets doxygen
+$(SITEMAP): update_and_targets
 	@sitemap_gen --config=sitemap_config.xml
 
 update_and_targets: update
@@ -261,14 +261,10 @@ nightlyupdate:
 	@mkdir -p $(TARGET)/downloads/nightly
 	-rsync -avx eyescale.local:Software/equalizer/release/Equalizer-\* $(TARGET)/downloads/nightly
 
-doxygen: update
-	@touch ../Equalizer/docs/CMakeCache.txt
-	$(MAKE) -C ../Equalizer docs
-
 package:
 	$(MAKE) -C ../Equalizer package
 
-docset: doxygen
+docset:
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
 	@rm -f $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
 	cd $(TARGET)/documents/Developer/API; \
