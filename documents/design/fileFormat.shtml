@@ -51,280 +51,281 @@ State: Implemented
 
 <a name="global"></a>
 <!-- /* --><pre>
-#Equalizer 1.1 ascii
-global
-{
-    EQ_CONNECTION_SATTR_HOSTNAME             string
-    EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
-    EQ_CONNECTION_IATTR_PORT                 unsigned
-    EQ_CONNECTION_SATTR_PIPE_FILENAME        string
-    EQ_CONFIG_FATTR_EYE_BASE                 float
-    EQ_CONFIG_IATTR_ROBUSTNESS               OFF | ON
-    EQ_NODE_SATTR_LAUNCH_COMMAND             string
-    EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
-    EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
-    EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
-    EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
-    EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
-    EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
-    EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
-    EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
-    EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
-    EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
-    EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
-    EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
-    EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
-    EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
-    EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
-    EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
-    EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
-    EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
-    EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
-    EQ_COMPOUND_IATTR_STEREO_MODE            AUTO | QUAD | ANAGLYPH | PASSIVE
-    EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
-    EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
-}
-server
-{
-    connection # 0-n times, listening connections of the server
-    {
-        type       TCPIP | SDP | PIPE | RSP
-        port       unsigned # TCPIP, SDP
-        filename   string   # PIPE
-        hostname   string
-        interface  string   # RSP
-    }
-
-    config # 1-n times, currently only the first one is used by the server
-    {
-        latency int    # Number of frames nodes may fall behind app, default 1
-        attributes
-        {
-            eye_base     float     # distance between left and right eye
-            robustness   OFF | ON  # tolerate resource failures (init only)
-        }
-
-        (node|appNode) # 1-n times, a system in the cluster
-                       # 0|1 appNode: launches render thread within app process
-        {
-            name     string
-            connection # 0-n times, possible connections to this node
-            {
-                type          TCPIP | SDP | PIPE
-                port          unsigned
-                hostname      string
-                filename      string
-            }
-            attributes
-            {
-                thread_model ASYNC | DRAW_SYNC | LOCAL_SYNC
-                launch_command       string      # render client launch command
-                launch_command_quote 'character' # command argument quote char
-                launch_timeout       unsigned    # timeout in milliseconds
-            }
-            pipe # 1-n times
-            {
-                name     string
-                port     unsigned     # X server number or ignored
-                device   unsigned     # graphics adapter number
-                viewport [ viewport ] # default: autodetect
-                attributes
-                {
-                    hint_thread   OFF | ON   # default ON
-                }
-
-                window # 1-n times
-                {
-                    name     string
-                    viewport [ viewport ] # wrt pipe, default full screen
-
-                    attributes
-                    {
-                        hint_stereo         OFF | ON | AUTO
-                        hint_doublebuffer   OFF | ON | AUTO
-                        hint_decoration     OFF | ON
-                        hint_fullscreen     OFF | ON
-                        hint_swapsync       OFF | ON         # AGL, WGL only
-                        hint_drawable       window | pbuffer | FBO
-                        hint_statistics     OFF | FASTEST [ON] | NICEST
-                        planes_color        unsigned | RGBA16F | RGBA32F
-                        planes_alpha        unsigned
-                        planes_depth        unsigned
-                        planes_stencil      unsigned
-                        planes_accum        unsigned
-                        planes_accum_alpha  unsigned
-                        planes_samples      unsigned
-                    }
-                    channel # 1-n times
-                    {
-                        name     string
-                        viewport [ viewport ] #wrt window, default full window
-                        drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
-                        attributes
-                        {
-                            hint_statistics     OFF | FASTEST [ON] | NICEST
-                        }
-                    }
-                }
-            }
-        }
-        
-        observer # 0...n times
-        {
-            name     string
-            eye_base float
-        }
-
-        layout  # 0...n times
-        {
-            name string
-            view  # 1...n times
-            {
-                name     string
-                observer observer-ref
-                viewport [ viewport ]
-                mode MONO | STEREO
-
-                wall       # frustum description
-                {
-                    bottom_left  [ float float float ]
-                    bottom_right [ float float float ]
-                    top_left     [ float float float ]
-                    type         fixed | HMD
-                }
-                projection # alternate frustum description, last one wins
-                {
-                    origin       [ float float float ]
-                    distance     float
-                    fov          [ float float ]
-                    hpr          [ float float float ]
-                }
-            }
-        }
-
-        canvas  # 0...n times
-        {
-            name    string
-            layout  layout-ref | OFF   # 1...n times
-
-            wall       
-            {
-                    bottom_left  [ float float float ]
-                    bottom_right [ float float float ]
-                    top_left     [ float float float ]
-                    type         fixed | HMD
-            }
-            projection
-            {
-                    origin       [ float float float ]
-                    distance     float
-                    fov          [ float float ]
-                    hpr          [ float float float ]
-            }
-            
-            segment # 1...n times
-            {
-                channel  string
-                name     string
-                viewport [ viewport ] 
-                eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
-
-                wall       # frustum description
-                {
-                    bottom_left  [ float float float ]
-                    bottom_right [ float float float ]
-                    top_left     [ float float float ]
-                    type         fixed | HMD
-                }
-                projection # alternate frustum description, last one wins
-                {
-                    origin       [ float float float ]
-                    distance     float
-                    fov          [ float float ]
-                    hpr          [ float float float ]
-                }
-            }
-        }
-        
-        compound # 1-n times
-        {
-            name     string
-            channel  channel-ref           # see below
-
-            task     [ CLEAR DRAW READBACK ASSEMBLE ] # CULL later
-            buffer   [ COLOR DEPTH ]       # default COLOR
-
-            eye      [ CYCLOP LEFT RIGHT ] # eyes handled, default all
-
-            viewport [ viewport ]          # wrt parent compound, sort-first
-            range    [ float float ]       # DB-range for sort-last
-            pixel    [ int int int int ]   # pixel decomposition (x y w h)
-            subpixel [ int int ]           # subpixel decomposition (index size)
-            zoom     [ float float ]       # up/downscale of parent pvp
-            period   int                   # DPlex period
-            phase    int                   # DPlex phase
-
-            view_equalizer {} # assign resources to child load_equalizers
-            load_equalizer # adapt 2D tiling or DB range of children
-            {
-                mode 2D | DB | VERTICAL | HORIZONTAL
-                damping float # 0: no damping, 1: no changes
-                boundary [ x y ]          # 2D tile boundary
-                boundary float            # DB range granularity
-                assemble_only_limit float # resource limit for using dest as src
-            }
-            DFR_equalizer # adapt ZOOM to achieve constant framerate
-            {
-                framerate float # target framerate
-                damping float   # 0: no damping, 1: no changes
-            }
-            framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
-            monitor_equalizer {}   # set frame zoom when monitoring other views
-
-            attributes
-            {
-                stereo_mode    AUTO | QUAD | ANAGLYPH | PASSIVE # default AUTO
-                stereo_anaglyph_left_mask    [ RED GREEN BLUE ] # default red
-                stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
-            }
-
-            wall   # frustum description, deprecated by view and segment frustum
-            {
-                bottom_left  [ float float float ]
-                bottom_right [ float float float ]
-                top_left     [ float float float ]
-                type         fixed | HMD
-            }
-            projection # alternate frustum description, last one wins
-            {
-                origin       [ float float float ]
-                distance     float
-                fov          [ float float ]
-                hpr          [ float float float ]
-            }
-            
-            child-compounds
-
-            swapbarrier  # compounds with the same barriername sync swap
-            {
-                name string
-                NV_group OFF | ON | unsigned
-                NV_barrier OFF | ON | unsigned
-            }
-            outputframe
-            {
-                name   string
-                buffer [ COLOR DEPTH ]
-                type texture | memory
-            }
-            inputframe
-            {
-                name string # corresponding output frame
-            }
-        }
-    }
-}
-
+ #Equalizer 1.2 ascii
+ global
+ {
+     EQ_CONNECTION_SATTR_HOSTNAME             string
+     EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | PIPE
+     EQ_CONNECTION_IATTR_PORT                 unsigned
+     EQ_CONNECTION_SATTR_PIPE_FILENAME        string
+     EQ_CONFIG_FATTR_EYE_BASE                 float
+     EQ_CONFIG_IATTR_ROBUSTNESS               OFF | ON
+     EQ_NODE_SATTR_LAUNCH_COMMAND             string
+     EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
+     EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
+     EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
+     EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
+     EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
+     EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
+     EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
+     EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
+     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
+     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
+     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
+     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
+     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
+     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
+     EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
+     EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
+     EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
+     EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
+     EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
+     EQ_COMPOUND_IATTR_STEREO_MODE            AUTO | QUAD | ANAGLYPH | PASSIVE
+     EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
+     EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
+ }
+ server
+ {
+     connection # 0-n times, listening connections of the server
+     {
+         type       TCPIP | SDP | PIPE | RSP
+         port       unsigned # TCPIP, SDP
+         filename   string   # PIPE
+         hostname   string
+         interface  string   # RSP
+     }
+ 
+     config # 1-n times, currently only the first one is used by the server
+     {
+         latency int    # Number of frames nodes may fall behind app, default 1
+         attributes
+         {
+             eye_base     float     # distance between left and right eye
+             robustness   OFF | ON  # tolerate resource failures (init only)
+         }
+ 
+         (node|appNode) # 1-n times, a system in the cluster
+                        # 0|1 appNode: launches render thread within app process
+         {
+             name     string
+             host     string  # Used to auto-launch render nodes
+             connection # 0-n times, possible connections to this node
+             {
+                 type          TCPIP | SDP | PIPE
+                 port          unsigned
+                 hostname      string
+                 filename      string
+             }
+             attributes
+             {
+                 thread_model ASYNC | DRAW_SYNC | LOCAL_SYNC
+                 launch_command       string      # render client launch command
+                 launch_command_quote 'character' # command argument quote char
+                 launch_timeout       unsigned    # timeout in milliseconds
+             }
+             pipe # 1-n times
+             {
+                 name     string
+                 port     unsigned     # X server number or ignored
+                 device   unsigned     # graphics adapter number
+                 viewport [ viewport ] # default: autodetect
+                 attributes
+                 {
+                     hint_thread   OFF | ON   # default ON
+                 }
+ 
+                 window # 1-n times
+                 {
+                     name     string
+                     viewport [ viewport ] # wrt pipe, default full screen
+ 
+                     attributes
+                     {
+                         hint_stereo         OFF | ON | AUTO
+                         hint_doublebuffer   OFF | ON | AUTO
+                         hint_decoration     OFF | ON
+                         hint_fullscreen     OFF | ON
+                         hint_swapsync       OFF | ON         # AGL, WGL only
+                         hint_drawable       window | pbuffer | FBO
+                         hint_statistics     OFF | FASTEST [ON] | NICEST
+                         planes_color        unsigned | RGBA16F | RGBA32F
+                         planes_alpha        unsigned
+                         planes_depth        unsigned
+                         planes_stencil      unsigned
+                         planes_accum        unsigned
+                         planes_accum_alpha  unsigned
+                         planes_samples      unsigned
+                     }
+                     channel # 1-n times
+                     {
+                         name     string
+                         viewport [ viewport ] #wrt window, default full window
+                         drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
+                         attributes
+                         {
+                             hint_statistics     OFF | FASTEST [ON] | NICEST
+                         }
+                     }
+                 }
+             }
+         }
+         
+         observer # 0...n times
+         {
+             name     string
+             eye_base float
+         }
+ 
+         layout  # 0...n times
+         {
+             name string
+             view  # 1...n times
+             {
+                 name     string
+                 observer observer-ref
+                 viewport [ viewport ]
+                 mode MONO | STEREO
+ 
+                 wall       # frustum description
+                 {
+                     bottom_left  [ float float float ]
+                     bottom_right [ float float float ]
+                     top_left     [ float float float ]
+                     type         fixed | HMD
+                 }
+                 projection # alternate frustum description, last one wins
+                 {
+                     origin       [ float float float ]
+                     distance     float
+                     fov          [ float float ]
+                     hpr          [ float float float ]
+                 }
+             }
+         }
+ 
+         canvas  # 0...n times
+         {
+             name    string
+             layout  layout-ref | OFF   # 1...n times
+ 
+             wall       
+             {
+                     bottom_left  [ float float float ]
+                     bottom_right [ float float float ]
+                     top_left     [ float float float ]
+                     type         fixed | HMD
+             }
+             projection
+             {
+                     origin       [ float float float ]
+                     distance     float
+                     fov          [ float float ]
+                     hpr          [ float float float ]
+             }
+             
+             segment # 1...n times
+             {
+                 channel  string
+                 name     string
+                 viewport [ viewport ] 
+                 eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
+ 
+                 wall       # frustum description
+                 {
+                     bottom_left  [ float float float ]
+                     bottom_right [ float float float ]
+                     top_left     [ float float float ]
+                     type         fixed | HMD
+                 }
+                 projection # alternate frustum description, last one wins
+                 {
+                     origin       [ float float float ]
+                     distance     float
+                     fov          [ float float ]
+                     hpr          [ float float float ]
+                 }
+             }
+         }
+         
+         compound # 1-n times
+         {
+             name     string
+             channel  channel-ref           # see below
+ 
+             task     [ CLEAR DRAW READBACK ASSEMBLE ] # CULL later
+             buffer   [ COLOR DEPTH ]       # default COLOR
+ 
+             eye      [ CYCLOP LEFT RIGHT ] # eyes handled, default all
+ 
+             viewport [ viewport ]         # wrt parent compound, sort-first
+             range    [ float float ]      # DB-range for sort-last
+             pixel    [ int int int int ]  # pixel decomposition (x y w h)
+             subpixel [ int int ]          # subpixel decomposition (index size)
+             zoom     [ float float ]      # up/downscale of parent pvp
+             period   int                  # DPlex period
+             phase    int                  # DPlex phase
+ 
+             view_equalizer {} # assign resources to child load_equalizers
+             load_equalizer # adapt 2D tiling or DB range of children
+             {
+                 mode 2D | DB | VERTICAL | HORIZONTAL
+                 damping float # 0: no damping, 1: no changes
+                 boundary [ x y ]          # 2D tile boundary
+                 boundary float            # DB range granularity
+                 assemble_only_limit float # limit for using dest as src
+             }
+             DFR_equalizer # adapt ZOOM to achieve constant framerate
+             {
+                 framerate float # target framerate
+                 damping float   # 0: no damping, 1: no changes
+             }
+             framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
+             monitor_equalizer {}   # set frame zoom when monitoring other views
+ 
+             attributes
+             {
+                 stereo_mode    AUTO | QUAD | ANAGLYPH | PASSIVE # default AUTO
+                 stereo_anaglyph_left_mask    [ RED GREEN BLUE ] # default red
+                 stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
+             }
+ 
+             wall  # frustum description, deprecated by view and segment frustum
+             {
+                 bottom_left  [ float float float ]
+                 bottom_right [ float float float ]
+                 top_left     [ float float float ]
+                 type         fixed | HMD
+             }
+             projection # alternate frustum description, last one wins
+             {
+                 origin       [ float float float ]
+                 distance     float
+                 fov          [ float float ]
+                 hpr          [ float float float ]
+             }
+             
+             child-compounds
+ 
+             swapbarrier  # compounds with the same barriername sync swap
+             {
+                 name string
+                 NV_group OFF | ON | unsigned
+                 NV_barrier OFF | ON | unsigned
+             }
+             outputframe
+             {
+                 name   string
+                 buffer [ COLOR DEPTH ]
+                 type texture | memory
+             }
+             inputframe
+             {
+                 name string # corresponding output frame
+             }
+         }
+     }
+ }
+ 
 channel-ref:  'string' | '(' channel-segment-ref ')'
 channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
 canvas-ref:   'string' | 'index'
@@ -337,6 +338,16 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Render nodes without listening connections added:
+    <!-- /* --><pre>
+      #Equalizer 1.2 ascii
+      node
+      {
+          host     string  # Used to auto-launch render nodes
+          ...
+      }
+    </pre><!-- */ -->
+  </li>
   <li><a href="/documents/design/stereoSwitch.html">Runtime Stereo Switch added:</a>
     <!-- /* --><pre>
       #Equalizer 1.1 ascii
