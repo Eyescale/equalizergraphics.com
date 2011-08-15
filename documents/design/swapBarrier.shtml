@@ -18,53 +18,11 @@ State:
 <h2>Overview</h2>
 <p>
   The purpose of a swap barrier is to synchronize buffer swaps of multiple
-  windows, potentially residing on different nodes.
+  windows, potentially residing on different nodes. More information is to in
+  the <a href="/documentation/user/synchronization.html">user documentation</a>.
 </p>
 
-<h3>Definitions</h3>
-<p>
-  The following defines the various synchronization terms, since they are often
-  confused in the literature:
-</p>
-<ul>
-  <li><strong>Genlock</strong> is the strongest form of synchronization, where
-    the video signal of multiple video outputs is synchronized at the beginning
-    of each line. To our knowledge, this is no longer implemented on current
-    GPUs.</li>
-  <li><strong>Frame synchronization</strong> synchronizes the video signal of
-    multiple video outputs at the beginning of each frame. By definition, it
-    happens with the video refresh rate. This is implemented by some
-    professional-grade GPUs.</li>
-  <li><strong>Swap synchronization</strong> synchronizes the buffer swap of
-    multiple windows, potentially on multiple video outputs. By definition, this
-    happens at the application's rendering frame rate.</li>
-  <li><strong>Hardware swap synchronization</strong> uses a electrical signal on
-    the GPU as a very fast and precise barrier for swap synchronization.</li>
-  <li><strong>Software swap synchronization</strong> provides swap
-    synchronization using a software construct, typically a network-based
-    barrier. Software swap synchronization might fail to synchronize a window
-    for one video frame very occasionally, which is only noticable by very
-    skilled observers.</li>
-</ul>
-
-<h3>What do I need?</h3>
-<ul>
-  <li><strong>Single-display system</strong> do not need any of the above,
-    regardless of the stereo mode</li>
-  <li><strong>Monoscopic display walls</strong> need a software swap
-    synchronization. Due to the space imposed by the bezels between displays, a
-    frame synchronization is typically not needed.</li>
-  <li><strong>Projector-based monoscopic or passive stereo systems</strong>
-    need at least a software swap synchronization. Frame synchronization is
-    recommended since the video outputs overlap and some people might notice
-    tearing.</li>
-  <li><strong>Active stereo systems</strong> need frame synchronization and at
-  least software swap synchronization, otherwise the per-eye images of the
-  various projectors do not match. Hardware swap synchronization is recommended
-  for demanding high-performance use cases, e.g., flight simulators.</li>
-</ul>
-
-<h3>Software Swap Synchronization</h3>
+<h2>Software Swap Synchronization</h2>
 <p>
   The software swapbarrier uses a <code>co::Barrier</code> together with
   a <code>Window::finish</code> to synchronize the buffer swaps without special
@@ -74,10 +32,10 @@ State:
   ensured using a second finish.
 </p>
 <p>
-  Software swap synchronization can not guarantee frame-precise sync. The
-  contributing displays are not frame-synchronized with each other, and
-  furthermore a swap command might be executed on video frame later, because it
-  just missed its turn due to timing issues.
+  Software swap synchronization does not perform frame synchronization, but can
+  work with frame synchronization provided by the driver, e.g., using an NVidia
+  G-Syn board. Furthermore a swap command may very occasionally be executed on
+  video too late, because it just missed its turn due to timing issues.
 </p>
 <p>
   The server creates one <code>co::Barrier</code> with the appropriate height
@@ -94,7 +52,7 @@ State:
 </p>
 
 <a name="gsync"></a>
-<h3>Hardware Synchronization (NV_swap_group)</h3>
+<h2>Hardware Swap Synchronization (NV_swap_group)</h2>
 <p>
   The WGL and GLX swap group extensions use a two-tiered strategy to provide
   hardware-based swap synchronization. On a single system, all windows join a

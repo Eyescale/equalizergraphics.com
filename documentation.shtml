@@ -37,32 +37,6 @@
       download</a>.</li>
 </ul>
 
-<h2>Tools</h2>
-<ul>
-  <li><a href="/documents/user/configTool.html">Configuration Tool</a>
-    automatically generates common configuration files.</li>
-</ul>
-
-<h2>Previous Polls</h2>
-<div class="float_left">
-  <script type="text/javascript" language="javascript"
-          src="http://static.polldaddy.com/p/1105358.js"></script>
-  <noscript>
-    <a href="http://answers.polldaddy.com/poll/1105358/">Best new 0.6 feature?</a><br/>
-    <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)
-    </span>
-  </noscript>
-</div>
-<div class="float_left">
-  <script type="text/javascript" language="javascript"
-          src="http://static.polldaddy.com/p/1348984.js"></script>
-  <noscript>
-    <a href="http://answers.polldaddy.com/poll/1348984/">Equalizer BOF at
-      EuroGraphics: I will...</a><br/>
-    <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)</span>
-  </noscript>
-</div>
-
 <div class="flush_float"></div>
 #include "footer.shtml"
 <!-- $Id$ -->

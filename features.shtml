@@ -217,8 +217,12 @@
       clients</a></li>
   <li><div class="box">0.3</div>
     <a href="/documents/design/infiniBand.html">InfiniBand networking</a></li>
-  <li><div class="box">TBD</div>
-    Native InfiniBand RDMA connection</li>
+  <li><div class="box">git</div>
+    RDMA (native InfiniBand) connection</li>
+  <ul>
+    <li><div class="box">git</div>Linux</li>
+    <li><div class="box">TBD</div>Windows</li>
+  </ul>
   <li><div class="box">0.3</div>
     <a href="/documents/design/standalone.html">Standalone application
       support</a></li>

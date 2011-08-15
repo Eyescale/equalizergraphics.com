@@ -78,7 +78,7 @@
   <li><a href="/documents/design/standalone.html">Standalone Application 
       Support</a></li>
   <li><a href="/documents/design/nodeConnect.html">Node Connection Setup</a></li>
-  <li><a href="/documents/user/configTool.html">Configuration Tool</a></li>
+  <li><a href="/documentation/user/configTool.html">Configuration Tool</a></li>
 </ul>
 <h4>Known Bugs</h4>
 

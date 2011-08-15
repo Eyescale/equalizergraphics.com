@@ -15,8 +15,8 @@ State: Implemented
   The configuration file format for the Equalizer server is described below. The
   <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/configs/">examples
   directory</a> does contain some example configuration
-  files. The <a href="/documents/user/configTool.html">configuration tool</a>
-  automatically creates some standard configuration files.
+  files. The <a href="/documentation/user/configTool.html">configuration
+  tool</a> automatically creates some standard configuration files.
 </p>
 <p>
   The file format is not described in detail here. Please refer to

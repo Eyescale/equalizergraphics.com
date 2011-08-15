@@ -14,6 +14,8 @@ FILES = \
 	documentation.html \
 	documentation/developer.html \
 	documentation/user.html \
+	documentation/user/configTool.html \
+	documentation/user/synchronization.html \
 	documentation/research.html \
 	downloads.html \
 	$(wildcard downloads/*.gz) \
@@ -137,7 +139,6 @@ FILES = \
 	documents/glAsync/tab_r.gif \
 	documents/glAsync/tabs.css \
 	documents/Howtos/glutToEqualizer.html \
-	documents/user/configTool.html \
 	documents/user/crComparison.html \
 	downloads/DBCAAF49A0C0/ProgrammingUserGuide.pdf \
 	downloads/DBCAAF49A0C0/index.html \
