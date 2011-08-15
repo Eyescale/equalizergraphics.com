@@ -53,7 +53,7 @@
 
 <h3>Namespace Layering</h3>
 <p>
-  The current implementation (0.9.1) does not use <code>net::Object</code> data
+  The current implementation (0.9.1) does not use <code>co::Object</code> data
   distribution between the server and the client. It uses custom command packets
   to communicate the few allowed modifications.
 </p>
@@ -66,19 +66,19 @@
 <p>
   With the admin interface, there are new two implementations mapping a view of
   the server resource hierarchy. Potentially all data will be modifyable. To
-  accomodate this change, a new <code>eq::data</code> namespace will provide
+  accomodate this change, a new <code>eq::fabric</code> namespace will provide
   resource synchronization for
   the <code>eq::server</code>, <code>eq::admin</code> and <code>eq</code>
   implementations. This means that the inheritance for resources is increased
-  (e.g. <code>eq::Window</code> &rarr; <code>eq::data::Window</code>
-  &rarr; <code>eq::data::Object</code>
-  &rarr; <code>eq::net::Object</code>). Furthermore, the data synchronization
+  (e.g. <code>eq::Window</code> &rarr; <code>eq::fabric::Window</code>
+  &rarr; <code>eq::fabric::Object</code>
+  &rarr; <code>co::Object</code>). Furthermore, the data synchronization
   between the server, client and admin interfaces will be unified by this
   namesapace. The server will retain the master instance of the data.
 </p>
 <p>
   This requires moving the <code>eq::Object</code> into
-  the <code>eq::data</code> namespace, using this class as a base class for all
+  the <code>eq::fabric</code> namespace, using this class as a base class for all
   Equalizer resource entities (Server...Channel) and implementing the proper
   serializers. Furthermore, the server has to override the deserialization and
   to apply the corresponding tasks upon data modifications.
@@ -90,8 +90,8 @@
 <div class="float_right">
   <a href="/documents/design/images/slaveWrites.png">
     <img src="/documents/design/images/slaveWrites-small.jpg" 
-         alt="Modifying an eq::net::Object from a slave instance"/></a>
-  <div class="label">Modifying an eq::net::Object from a slave instance</div>
+         alt="Modifying an co::Object from a slave instance"/></a>
+  <div class="label">Modifying an co::Object from a slave instance</div>
 </div>
 <p>
   Committing data on a slave instance was not implemented in Equalizer
@@ -152,7 +152,7 @@
 <h2>Implementation</h2>
 <ol>
   <li>Implement slave object writes</li>
-  <li>Implement <code>eq::data</code> serialization</li>
+  <li>Implement <code>eq::fabric</code> serialization</li>
   <li>Use and test 1 and 2 for client and server library</li>
   <li>Specify and implement currently needed subset for admin API</li>
 </ol>

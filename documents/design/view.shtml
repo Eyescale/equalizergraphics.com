@@ -408,7 +408,7 @@ View::clear
 <h3>2. Are Views intended to be subclassed?</h3>
 <p>
   Yes (0.9): Subclassing allows to attach application-specific data to a view,
-  e.g., a model. eqPly will provide an example implementation of eq::net::Object
+  e.g., a model. eqPly will provide an example implementation of co::Object
   data distribution. Open Issue: The server receives the application's view data
   on deserialization, but ignores it.
 </p>

@@ -20,7 +20,7 @@
 <p>
   The initial node connection handshake, as described below, is fully
   implemented by the
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/node.cpp?view=markup">eq::net::Node</a>
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/node.cpp?view=markup">co::Node</a>
   class.
 </p>
 <p>

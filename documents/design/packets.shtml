@@ -61,9 +61,9 @@
 
 <h2>The eq::net Base Class</h2>
 <p>
-  <code>eq::net::Base</code> provides packet dispatching using a command handler
-  table. During construction, sub classes provide command handlers for each
-  command using <code>registerCommand</code>. The method
+  <code>co::Dispatcher</code> provides packet dispatching using a command
+  handler table. During construction, sub classes provide command handlers for
+  each command using <code>registerCommand</code>. The method
   <code>invokeCommand</code> calls the registered command handler for the
   provided packet. The command handler may return one of the following command
   result codes, which is returned by <code>invokeCommand</code>:
@@ -103,7 +103,7 @@
 <h2>Session Packet Dispatch</h2>
 <p>
   The <code>Session</code> inherits, like the node, from 
-  <code>eq::net::Base</code>. The session dispatch works similar to the node
+  <code>co::Dispatcher</code>. The session dispatch works similar to the node
   dispatch. For session packets, <code>invokeCommand</code> is called, and the
   result is returned to the node, which handles it accordingly. For object
   packets, <code>Object::invokeCommand</code> is called and the result is

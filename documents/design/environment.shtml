@@ -36,7 +36,7 @@
   loop, allowing to identify the process, and to attach a debugger to it. Only
   enabled in debug builds.</p>
 <p><code>EQ_NET_OBJECT_BUFFER_SIZE</code> can be used to change the minimum
-  buffer size of 64 kilobyte during eq::net::Object serialization.</p>
+  buffer size of 64 kilobyte during co::Object serialization.</p>
 
 
 #include "footer.shtml"

@@ -19,7 +19,7 @@
 <p>
   Equalizer provides facilities to ease the data distribution of an
   application. The central piece is
-  the <a href="/documents/Developer/API/classeq_1_1net_1_1Object.html">eq::net::Object</a>
+  the <a href="/documents/Developer/API/classco_1_1Object.html">co::Object</a>
   base class, from which distributed objects are derived. Objects become
   accessable by making them known to a session. The example code shipped with
   Equalizer contains examples of distributed objects. The Programming Guide

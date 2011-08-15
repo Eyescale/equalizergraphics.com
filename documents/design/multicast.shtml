@@ -19,7 +19,7 @@
 <p>
   This document explores the usage of multicast or broadcast to speed up
   one-to-many communication in Equalizer, i.e., the data distribution
-  for <code>eq::net::Object</code>.
+  for <code>co::Object</code>.
 </p>
 
 <h2>Requirements</h2>
@@ -32,8 +32,8 @@
     clients compared to one point-to-point transfer.</li>
   <li>Usage of many-to-one communication for:
     <ul>
-      <li><code>eq::net::Object</code> mapping</li>
-      <li><code>eq::net::Object::commit</code></li>
+      <li><code>co::Object</code> mapping</li>
+      <li><code>co::Object::commit</code></li>
     </ul>
   </li>
 </ul>

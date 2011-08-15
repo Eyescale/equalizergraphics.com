@@ -21,13 +21,57 @@ State:
   windows, potentially residing on different nodes.
 </p>
 
-<h3>Software Synchronization</h3>
+<h3>Definitions</h3>
 <p>
-  The software swapbarrier uses a <code>net::Barrier</code> together with
+  The following defines the various synchronization terms, since they are often
+  confused in the literature:
+</p>
+<ul>
+  <li><strong>Genlock</strong> is the strongest form of synchronization, where
+    the video signal of multiple video outputs is synchronized at the beginning
+    of each line. To our knowledge, this is no longer implemented on current
+    GPUs.</li>
+  <li><strong>Frame synchronization</strong> synchronizes the video signal of
+    multiple video outputs at the beginning of each frame. By definition, it
+    happens with the video refresh rate. This is implemented by some
+    professional-grade GPUs.</li>
+  <li><strong>Swap synchronization</strong> synchronizes the buffer swap of
+    multiple windows, potentially on multiple video outputs. By definition, this
+    happens at the application's rendering frame rate.</li>
+  <li><strong>Hardware swap synchronization</strong> uses a electrical signal on
+    the GPU as a very fast and precise barrier for swap synchronization.</li>
+  <li><strong>Software swap synchronization</strong> provides swap
+    synchronization using a software construct, typically a network-based
+    barrier. Software swap synchronization might fail to synchronize a window
+    for one video frame very occasionally, which is only noticable by very
+    skilled observers.</li>
+</ul>
+
+<h3>What do I need?</h3>
+<ul>
+  <li><strong>Single-display system</strong> do not need any of the above,
+    regardless of the stereo mode</li>
+  <li><strong>Monoscopic display walls</strong> need a software swap
+    synchronization. Due to the space imposed by the bezels between displays, a
+    frame synchronization is typically not needed.</li>
+  <li><strong>Projector-based monoscopic or passive stereo systems</strong>
+    need at least a software swap synchronization. Frame synchronization is
+    recommended since the video outputs overlap and some people might notice
+    tearing.</li>
+  <li><strong>Active stereo systems</strong> need frame synchronization and at
+  least software swap synchronization, otherwise the per-eye images of the
+  various projectors do not match. Hardware swap synchronization is recommended
+  for demanding high-performance use cases, e.g., flight simulators.</li>
+</ul>
+
+<h3>Software Swap Synchronization</h3>
+<p>
+  The software swapbarrier uses a <code>co::Barrier</code> together with
   a <code>Window::finish</code> to synchronize the buffer swaps without special
   hardware support. The finish ensures that all GL commands for the window have
   been executed prior to entering the barrier. When leaving the barrier, the
-  buffer swap is the next command and will be executed immediately.
+  buffer swap is the next command and will be executed immediately, which is
+  ensured using a second finish.
 </p>
 <p>
   Software swap synchronization can not guarantee frame-precise sync. The
@@ -36,7 +80,7 @@ State:
   just missed its turn due to timing issues.
 </p>
 <p>
-  The server creates one <code>net::Barrier</code> with the appropriate height
+  The server creates one <code>co::Barrier</code> with the appropriate height
   for all swap barriers with the same name.
 </p>
 <p>

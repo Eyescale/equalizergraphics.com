@@ -53,9 +53,9 @@
 </p>
 <p>
   The event dispatch is implemented by subclassing
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eq::net::CommandQueue</a> 
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/libs/co/commandQueue.cpp?view=markup">co::CommandQueue</a> 
   into a 
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/commandQueue.cpp?view=markup">eq::CommandQueue</a>
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/eq/commandQueue.cpp?view=markup">eq::CommandQueue</a>
   which 'pumps' events on every pop operation. The CommandQueue is used between
   the receiver and the rendering threads to dispatch the received
   commands. Consequently, events are only processed in between task
