@@ -4,6 +4,13 @@
 
 #include "header.shtml"
 
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="documentation/user.html">User</a></li>
+  <li><a href="documentation/developer.html">Developer</a></li>
+  <li><a href="documentation/research.html">Research</a></li>
+</ul>
+
 <h2>Programming and User Guide</h2>
 <div class="float_right">
   <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide/10352563">
@@ -28,151 +35,6 @@
   <li>As a 
     <a href="http://www.lulu.com/product/paperback/equalizer-10-programming-and-user-guide/15165632">high-resolution
       download</a>.</li>
-</ul>
-
-<h2>Presentations</h2>
-<h3>Generic Presentations</h3>
-<ul>
-  <li><a href="/documents/EqualizerTeaser.html">Teaser</a> is a three 
-    slide abstract of Equalizer,
-    <a href="/documents/EqualizerTeaser.pdf">pdf</a> or
-    <a href="/documents/EqualizerTeaser.html">html</a>.</li>
-
-  <li><a href="/documents/Equalizer.html">Overview</a> is a presentation
-    to provide a background to high-performance visualization, Equalizer
-    components and features,
-    <a href="/documents/Equalizer.pdf">pdf</a> or
-    <a href="/documents/Equalizer.html">html</a>.</li>
-
-  <li><a href="/documents/EqualizerGuide.pdf">Quickstart and Demo
-        Guide</a> guides through running and understanding a few Equalizer
-    configurations,
-    <a href="/documents/EqualizerGuide.pdf">pdf</a> or
-    <a href="/documents/EqualizerGuide.html">html</a>,  
-    <a href="/documents/EqualizerGuide-0.4.pdf">Guide for 0.4 and
-      earlier</a>.</li>
-
-  <li><a href="/documents/FlyerWeb.pdf">Flyer</a> is a folded, two-sided
-    brochure for the Equalizer project.
-  </li>
-</ul>
-<h3>Event Presentations</h3>
-<ul>
-  <li>The <a href="/news/EgBof.html">Birds-Of-a-Feather meeting 2009</a> took
-    place during <a href="http://www.eurographics2009.de/">Eurographics'09</a>.
-    The page contains the presentations given during the BOF.
-  </li>
-
-  <li><a href="/documents/EGPGV07.html">Direct Send Compositing
-      for Parallel Sort-Last Rendering</a> is the paper presentation for the
-    Equalizer paper with the same name at EGPGV07,
-    <a href="/documents/EGPGV07.pdf">pdf</a>,   
-    <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">collateral 
-      video</a>.
-  </li>
-
-  <li><a href="/documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
-    is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
-    based on the overview presentation but features more technical content about
-    the programming interface and configuration,
-    <a href="/documents/EqualizerVizSIG06.pdf">pdf</a> or
-    <a href="/documents/EqualizerVizSIG06.html">html</a>.</li>
-</ul>
-
-<h2>White Papers</h2>
-<ul>
-  <li><a href="/documents/WhitePapers/OpenSceneGraphClustering.pdf">Parallel
-      Rendering for OpenSceneGraph</a> introduces osgScaleViewer, a scalable 3D
-    rendering foundation for large-scale GPU clusters.</li>
-  <li><a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two Methods for
-      driving OpenGL Display Walls</a> compares and benchmarks Chromium and
-    Equalizer on a 12-node display wall.</li>
-  <li><a href="/documents/WhitePapers/OpenMP_ICC.pdf">Performance of ICC, GCC
-      and OpenMP</a> benchmarks OpenMP and different compilers on Mac OS X to
-    optimize scalable rendering.</li>
-  <li><a href="/documents/WhitePapers/MultiGPU.pdf">OpenGL Scalability for
-      Multi-GPU Systems</a> shows one use of Equalizer on workstations with
-      multiple graphics cards.</li>
-  <li><a href="/documents/WhitePapers/ProjectEqualizer.pdf">Project 
-      Equalizer</a> is a project description of Equalizer.</li>
-  <li><a href="/documents/WhitePapers/ParallelRenderingSystems.pdf">An
-    Analysis of Parallel Rendering Systems</a> reviews, analyzes and
-    classifies approaches to multi-pipe rendering, and outlines our motivation
-    for developing Equalizer.</li>
-  <li><a href="/documents/user/crComparison.html">Chromium vs Equalizer
-      Comparison</a></li>
-</ul>
-
-<h2>Research Papers</h2>
-<h3>Core Team</h3>
-<ul>
-  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/CSLB.pdf">Cross-Segment
-      Load Balancing in Parallel Rendering</a>. Fatih Erol, Stefan Eilemann,
-    Renato Pajarola. In Proceedings Eurographics Symposium on Parallel
-    Graphics and Visualization 2011.</li>
-  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/FastCompositing.pdf">Fast compositing for cluster-parallel rendering</a>. Maxim Makhinya, Stefan
-    Eilemann, and Renato Pajarola. In Proceedings Eurographics Symposium on
-    Parallel Graphics and Visualization, pp. 111-120, May 2010. (Presentation:
-    <a href="/documents/EGPGV10_compositing.html">html</a>
-    <a href="/documents/EGPGV10_compositing.pdf">pdf</a>)</li>
-  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/ParallelRASTeR.pdf">Scalable parallel out-of-core terrain rendering</a>. Prashant Goswami, Maxim
-    Makhinya, Jonas Bosch, and Renato Pajarola. In Proceedings Eurographics
-    Symposium on Parallel Graphics and Visualization, pp. 63-71, May 2010.
-    (Presentation: <a href="/documents/EGPGV10_raster.html">html</a>
-    <a href="/documents/EGPGV10_raster.pdf">pdf</a>)</li>
-  <li><a href="http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.104">Equalizer:
-      A Scalable Parallel Rendering Framework</a>, IEEE Transactions on
-    Visualization and Computer Graphics, vol. 15, no. 3, pp. 436-452, May/June
-    2009.</li>
-  <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
-      Framework</a>, technical report 2007/06.</li>
-  <li><a href="/documents/directSend.pdf">Direct Send Compositing for
-      Parallel Sort-Last Rendering</a>, 
-    <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
-      Graphics and Visualization 2007</a>.</li>
-  <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
-      OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
-      implemented for
-      v0.4, <a href="/documents/Developer/eqPlyPresentation.pdf">Slides in
-      English</a>, 2007/09.</li>
-</ul>
-<h3>Third Party</h3>
-<ul>
-  <li><a href="http://www.cs.vu.nl/complexhpc2011/slides/complexHPC2011-Challenge-Mocan.pdf">Remote
-      Graphical Visualization of Large Interactive Spatial Data</a>. Cristinel
-      Mihai Mocan. ComplexHPC Spring School 2011.</li>
-  <li><a href="http://www.mcs.csueastbay.edu/~tebo/papers/SIGGRAPH2010.pdf">Camera-based
-      Calibration for Scalable Immersive Rendering</a>. William
-    C. Thibault. Siggraph 2010 Poster,
-    <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral 
-      video</a>.
-  </li>
-<li><a href="http://users.utcluj.ro/~cristimocan/Pages/Publications/Master%20Thesis/Master%20Thesis.pdf">A
-    Cluster-ready Viewer Application for building scalable High-Performance 3D
-    virtual geographical Space Scenarios using Graphics Cluster
-    Architectures</a>. Cristinel Mihai Mocan. Master Thesis in Computer Science,
-    Technical University of Cluj-Napoca, Romania.</li>
-  <li><a href="http://blog.blackhc.net/wp-content/uploads/2009/10/BachelorThesisOnline.pdf">Multi-Tile
-      Terrain Rendering with OGL/Equalizer</a>. Andreas Kirsch. Bachelor Thesis
-    in Computer Science, TU M&uuml;nchen.</li>
-  <li><a href="http://ieeexplore.ieee.org/iel5/5227796/5234374/05234831.pdf?arnumber=5234831">A
-      dynamic load balancing algorithm for sort-first rendering
-      clusters</a>. Chang Hui, Lei Xiaoyong, Dai Shuling. 2nd IEEE International
-    Conference on Computer Science and Information Technology, 2009. ICCSIT
-    2009.</li>
-  <li><a href="http://www.cg.informatik.uni-siegen.de/data/Publications/2009/kolb-IEEE-VR-summary.pdf">Immersive
-      Rear Projection on Curved Screens</a>, Poster, IEEE Virtual Reality
-    Conference 2009</li>
-  <li><a href="http://www.cg.informatik.uni-siegen.de/data/Publications/2009/lambers09distributed.pdf">GPU-Based
-      Framework for Distributed Interactive 3D Visualization of Multimodal
-      Remote Sensing Data</a>, IEEE Geoscience and Remote Sensing Symposium
-      (IGARSS), 2009</li>
-  <li><a href="http://github.com/bhulliger/CRF/raw/master/doc/ThesisReport/ThesisReport.pdf">CAVE
-      Rendering Framework</a>, Thesis Report, 2009</li>
-  <li><a href="http://ieeexplore.ieee.org/iel5/4668336/4675314/04675373.pdf?arnumber=4675373">Equalizer-based
-      parallel rendering framework for multi-projector tiled display
-      system</a>. Hui Chang, Xiaoyong Lei, Shuling Dai. 7th International
-    Conference on System Simulation and Scientific Computing, 2008.</li>
 </ul>
 
 <h2>Tools</h2>

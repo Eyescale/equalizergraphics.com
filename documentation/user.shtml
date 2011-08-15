@@ -1,0 +1,107 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_User
+#define PAGE User Documentation
+
+#include "header.shtml"
+
+<h2>Programming and User Guide</h2>
+<div class="float_right">
+  <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide/10352563">
+    <img src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
+         border="0" 
+         alt="Support independent publishing: buy this book on Lulu.">
+  </a>
+</div>
+<p>
+  The Programming and User Guide is the official reference for the Equalizer
+  parallel rendering framework. You can obtain it using one of the following
+  options:
+</p>
+<ul>
+  <li>As a direct download, after filling out our <a href="/survey.html">online
+      survey</a>. This survey helps us to understand where and how Equalizer is
+      used, and to set priorities for the development.</li>
+  <li>As a 
+    <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide/10352563">full-color</a>  
+      or <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide-%28bw%29/10352763">black
+      and white</a> paperback book from Lulu.com.</li>
+  <li>As a 
+    <a href="http://www.lulu.com/product/paperback/equalizer-10-programming-and-user-guide/15165632">high-resolution
+      download</a>.</li>
+</ul>
+
+<h2>Presentations</h2>
+<h3>Generic Presentations</h3>
+<ul>
+  <li><a href="/documents/EqualizerTeaser.html">Teaser</a> is a three 
+    slide abstract of Equalizer,
+    <a href="/documents/EqualizerTeaser.pdf">pdf</a> or
+    <a href="/documents/EqualizerTeaser.html">html</a>.</li>
+
+  <li><a href="/documents/Equalizer.html">Overview</a> is a presentation
+    to provide a background to high-performance visualization, Equalizer
+    components and features,
+    <a href="/documents/Equalizer.pdf">pdf</a> or
+    <a href="/documents/Equalizer.html">html</a>.</li>
+
+  <li><a href="/documents/EqualizerGuide.pdf">Quickstart and Demo
+        Guide</a> guides through running and understanding a few Equalizer
+    configurations,
+    <a href="/documents/EqualizerGuide.pdf">pdf</a> or
+    <a href="/documents/EqualizerGuide.html">html</a>,  
+    <a href="/documents/EqualizerGuide-0.4.pdf">Guide for 0.4 and
+      earlier</a>.</li>
+
+  <li><a href="/documents/FlyerWeb.pdf">Flyer</a> is a folded, two-sided
+    brochure for the Equalizer project.
+  </li>
+</ul>
+<h3>Event Presentations</h3>
+<ul>
+  <li>The <a href="/news/EgBof.html">Birds-Of-a-Feather meeting 2009</a> took
+    place during <a href="http://www.eurographics2009.de/">Eurographics'09</a>.
+    The page contains the presentations given during the BOF.
+  </li>
+
+  <li><a href="/documents/EGPGV07.html">Direct Send Compositing
+      for Parallel Sort-Last Rendering</a> is the paper presentation for the
+    Equalizer paper with the same name at EGPGV07,
+    <a href="/documents/EGPGV07.pdf">pdf</a>,   
+    <a href="http://www.youtube.com/watch?v=8XQ0M8ZMDyw&fmt=18">collateral 
+      video</a>.
+  </li>
+
+  <li><a href="/documents/EqualizerVizSIG06.html">VizSIG Meeting 2006</a>
+    is a presentation given at the VizSIG Meeting 2006 in Woking, UK. It is
+    based on the overview presentation but features more technical content about
+    the programming interface and configuration,
+    <a href="/documents/EqualizerVizSIG06.pdf">pdf</a> or
+    <a href="/documents/EqualizerVizSIG06.html">html</a>.</li>
+</ul>
+
+<h2>White Papers</h2>
+<ul>
+  <li><a href="/documents/WhitePapers/OpenSceneGraphClustering.pdf">Parallel
+      Rendering for OpenSceneGraph</a> introduces osgScaleViewer, a scalable 3D
+    rendering foundation for large-scale GPU clusters.</li>
+  <li><a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two Methods for
+      driving OpenGL Display Walls</a> compares and benchmarks Chromium and
+    Equalizer on a 12-node display wall.</li>
+  <li><a href="/documents/WhitePapers/OpenMP_ICC.pdf">Performance of ICC, GCC
+      and OpenMP</a> benchmarks OpenMP and different compilers on Mac OS X to
+    optimize scalable rendering.</li>
+  <li><a href="/documents/WhitePapers/MultiGPU.pdf">OpenGL Scalability for
+      Multi-GPU Systems</a> shows one use of Equalizer on workstations with
+      multiple graphics cards.</li>
+  <li><a href="/documents/WhitePapers/ProjectEqualizer.pdf">Project 
+      Equalizer</a> is a project description of Equalizer.</li>
+  <li><a href="/documents/WhitePapers/ParallelRenderingSystems.pdf">An
+    Analysis of Parallel Rendering Systems</a> reviews, analyzes and
+    classifies approaches to multi-pipe rendering, and outlines our motivation
+    for developing Equalizer.</li>
+  <li><a href="/documents/user/crComparison.html">Chromium vs Equalizer
+      Comparison</a></li>
+</ul>
+
+<div class="flush_float"></div>
+#include "footer.shtml"

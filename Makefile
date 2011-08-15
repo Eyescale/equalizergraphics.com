@@ -11,8 +11,10 @@ FILES = \
 	compatibility.html \
 	configuration.html \
 	contributions.html \
-	doc_developer.html \
 	documentation.html \
+	documentation/developer.html \
+	documentation/user.html \
+	documentation/research.html \
 	downloads.html \
 	$(wildcard downloads/*.gz) \
 	$(wildcard downloads/*.exe) \

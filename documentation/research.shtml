@@ -1,0 +1,80 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_RESEARCH
+#define PAGE Research
+
+#include "header.shtml"
+
+<h2>Core Team</h2>
+<ul>
+  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/CSLB.pdf">Cross-Segment
+      Load Balancing in Parallel Rendering</a>. Fatih Erol, Stefan Eilemann,
+    Renato Pajarola. In Proceedings Eurographics Symposium on Parallel
+    Graphics and Visualization 2011.</li>
+  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/FastCompositing.pdf">Fast compositing for cluster-parallel rendering</a>. Maxim Makhinya, Stefan
+    Eilemann, and Renato Pajarola. In Proceedings Eurographics Symposium on
+    Parallel Graphics and Visualization, pp. 111-120, May 2010. (Presentation:
+    <a href="/documents/EGPGV10_compositing.html">html</a>
+    <a href="/documents/EGPGV10_compositing.pdf">pdf</a>)</li>
+  <li><a href="http://vmml.ifi.uzh.ch/files/pdf/publications/ParallelRASTeR.pdf">Scalable parallel out-of-core terrain rendering</a>. Prashant Goswami, Maxim
+    Makhinya, Jonas Bosch, and Renato Pajarola. In Proceedings Eurographics
+    Symposium on Parallel Graphics and Visualization, pp. 63-71, May 2010.
+    (Presentation: <a href="/documents/EGPGV10_raster.html">html</a>
+    <a href="/documents/EGPGV10_raster.pdf">pdf</a>)</li>
+  <li><a href="http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.104">Equalizer:
+      A Scalable Parallel Rendering Framework</a>, IEEE Transactions on
+    Visualization and Computer Graphics, vol. 15, no. 3, pp. 436-452, May/June
+    2009.</li>
+  <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
+      Framework</a>, technical report 2007/06.</li>
+  <li><a href="/documents/directSend.pdf">Direct Send Compositing for
+      Parallel Sort-Last Rendering</a>, 
+    <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
+      Graphics and Visualization 2007</a>.</li>
+  <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+      OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
+      implemented for
+      v0.4, <a href="/documents/Developer/eqPlyPresentation.pdf">Slides in
+      English</a>, 2007/09.</li>
+</ul>
+
+<h2>Third Party</h2>
+<ul>
+  <li><a href="http://www.cs.vu.nl/complexhpc2011/slides/complexHPC2011-Challenge-Mocan.pdf">Remote
+      Graphical Visualization of Large Interactive Spatial Data</a>. Cristinel
+      Mihai Mocan. ComplexHPC Spring School 2011.</li>
+  <li><a href="http://www.mcs.csueastbay.edu/~tebo/papers/SIGGRAPH2010.pdf">Camera-based
+      Calibration for Scalable Immersive Rendering</a>. William
+    C. Thibault. Siggraph 2010 Poster,
+    <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral 
+      video</a>.
+  </li>
+<li><a href="http://users.utcluj.ro/~cristimocan/Pages/Publications/Master%20Thesis/Master%20Thesis.pdf">A
+    Cluster-ready Viewer Application for building scalable High-Performance 3D
+    virtual geographical Space Scenarios using Graphics Cluster
+    Architectures</a>. Cristinel Mihai Mocan. Master Thesis in Computer Science,
+    Technical University of Cluj-Napoca, Romania.</li>
+  <li><a href="http://blog.blackhc.net/wp-content/uploads/2009/10/BachelorThesisOnline.pdf">Multi-Tile
+      Terrain Rendering with OGL/Equalizer</a>. Andreas Kirsch. Bachelor Thesis
+    in Computer Science, TU M&uuml;nchen.</li>
+  <li><a href="http://ieeexplore.ieee.org/iel5/5227796/5234374/05234831.pdf?arnumber=5234831">A
+      dynamic load balancing algorithm for sort-first rendering
+      clusters</a>. Chang Hui, Lei Xiaoyong, Dai Shuling. 2nd IEEE International
+    Conference on Computer Science and Information Technology, 2009. ICCSIT
+    2009.</li>
+  <li><a href="http://www.cg.informatik.uni-siegen.de/data/Publications/2009/kolb-IEEE-VR-summary.pdf">Immersive
+      Rear Projection on Curved Screens</a>, Poster, IEEE Virtual Reality
+    Conference 2009</li>
+  <li><a href="http://www.cg.informatik.uni-siegen.de/data/Publications/2009/lambers09distributed.pdf">GPU-Based
+      Framework for Distributed Interactive 3D Visualization of Multimodal
+      Remote Sensing Data</a>, IEEE Geoscience and Remote Sensing Symposium
+      (IGARSS), 2009</li>
+  <li><a href="http://github.com/bhulliger/CRF/raw/master/doc/ThesisReport/ThesisReport.pdf">CAVE
+      Rendering Framework</a>, Thesis Report, 2009</li>
+  <li><a href="http://ieeexplore.ieee.org/iel5/4668336/4675314/04675373.pdf?arnumber=4675373">Equalizer-based
+      parallel rendering framework for multi-projector tiled display
+      system</a>. Hui Chang, Xiaoyong Lei, Shuling Dai. 7th International
+    Conference on System Simulation and Scientific Computing, 2008.</li>
+</ul>
+
+<div class="flush_float"></div>
+#include "footer.shtml"

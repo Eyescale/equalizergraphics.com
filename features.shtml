@@ -1,7 +1,5 @@
-#define S_DOCUMENTATION
-#define S_DOCUMENTATION_FEATURES
-#define PAGE Documentation
-#define SUBPAGE Feature List
+#define S_FEATURES
+#define PAGE Features
 
 #include "header.shtml"
 
@@ -17,8 +15,8 @@
 
 <p>
   The version label references the Equalizer version introducing the feature.
-  Features labeled 'git' are in the git master repository and will most likely
-  be released in the next version.
+  Features labeled 'git' are in the git development repository and will most
+  likely be released in the next version.
 </p>
 
 

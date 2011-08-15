@@ -42,6 +42,12 @@
       </div>
 #endif  // S_HOME
 
+      <p><a href="/features.html"
+#ifdef S_FEATURES
+            class="used"
+#endif
+            >Features</a></p>
+
 
       <p><a href="/applications.html"
 #ifdef S_APPLICATIONS_MAIN
@@ -96,35 +102,41 @@
       <!-- Documentation sub-navigation-->
 #ifdef S_DOCUMENTATION
       <div class="subnavigation">
-        <p><a href="/documentation/performance.html"
-#ifdef S_DOCUMENTATION_PERFORMANCE
+        <p><a href="/documentation/user.html"
+#ifdef S_DOCUMENTATION_USER
               class="used"
 #endif
-              >Performance Studies</a></p>
+              >User</a></p>
 
-        <p><a href="/doc_developer.html"
+        <p><a href="/documentation/developer.html"
 #ifdef S_DOCUMENTATION_DEVELOPER
               class="used"
 #endif
               >Developer</a></p>
 
-        <p><a href="/features.html"
-#ifdef S_DOCUMENTATION_FEATURES
+        <p><a href="/documentation/research.html"
+#ifdef S_DOCUMENTATION_RESEARCH
               class="used"
 #endif
-              >Feature List</a></p>
-
-        <p><a href="/compatibility.html"
-#ifdef S_DOCUMENTATION_COMPATIBILITY
-              class="used"
-#endif
-              >Compatibility Matrix</a></p>
+              >Research</a></p>
 
         <p><a href="/relnotes.html"
 #ifdef S_DOCUMENTATION_RELNOTES
               class="used"
 #endif
               >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+#ifdef S_DOCUMENTATION_PERFORMANCE
+              class="used"
+#endif
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+#ifdef S_DOCUMENTATION_COMPATIBILITY
+              class="used"
+#endif
+              >Compatibility Matrix</a></p>
 
         <p><a href="/documentation/parallelOpenGLFAQ.html"
 #ifdef S_DOCUMENTATION_FAQ
