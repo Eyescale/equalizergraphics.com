@@ -13,6 +13,7 @@ State:
   <li>Software swapbarrier implemented in 0.1</li>
   <li>Hardware swapbarrier (G-Sync) implemented in 0.9</li> 
   <li>Multiple-windows-per-pipe software swapbarrier implemented in 0.9</li>
+  <li>Canvas swapbarriers: design</li>
 </ul>
 
 <h2>Overview</h2>
@@ -69,16 +70,39 @@ State:
   warning is printed and no barrier is joined.
 </p>
 
+<h2>Configuration</h2>
+<p>
+  Up to Equalizer 1.0, swap barriers are configured per compound. The
+  swap barrier description is really a display-related feature, to be configured
+  in the canvas or segment.
+</p>
+<p>
+  The canvas may have a swap barriers, which is set on each segment with no swap
+  barrier, when the segment is added to the canvas. Existing segment swap
+  barriers are not overwritten. A segment may hav a swap barrier, which is set
+  to all its destination channel compounds when the canvas is
+  activated. Existing compound swap barriers are overwritten. The compound keeps
+  the swapbarrier configuration and logics as in Equalizer 1.0.
+</p>
+
 <h2>File Format</h2>
 <!-- /* --><pre>
+  canvas
+  {
+      swapbarrier // default for all segments
+      { 
+          name "barrier-name" // sync's compound's window swap buffers
+          NV_group    OFF | ON (1) | unsigned // use HW group n (NV_swap_group)
+          NV_barrier  OFF | ON (1) | unsigned // use HW barrier n
+      }
+      segment
+      {
+          swapbarrier { ..as above.. }
+      }
+  }
   compound
   {
-       swapbarrier 
-       { 
-           name "barrier-name" // sync's compound's window swap buffers
-           NV_group    OFF | ON (1) | unsigned
-           NV_barrier  OFF | ON (1) | unsigned
-       }
+      swapbarrier { ..as above.. }
   }
 </pre><!-- */ -->
 
