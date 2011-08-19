@@ -20,9 +20,9 @@
       <a href="/documents/Developer/API-1.0/index.html">API documentation</a>
     </td>
     <td>
-      <center>1.0.1</center><hr>
-      <center>1.0</center><br>
+      <center>1.0.1</center>
       <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
+      <hr><center>1.0</center><br>
       <a href="/downloads/Equalizer-1.0.0-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
       <a href="/downloads/Equalizer-1.0.0-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
       <a href="/downloads/Equalizer-1.0.0-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
