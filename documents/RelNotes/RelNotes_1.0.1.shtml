@@ -1,22 +1,21 @@
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_RELNOTES
 #define PAGE Release Notes
-#define SUBPAGE Release Notes for Equalizer 1.0
+#define SUBPAGE Release Notes for Equalizer 1.0.1
 
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [ ] src/Doxyfile.*, src/CMakeLists.txt src/libs/collage/CMakeLists.txt
-     [ ] src/AUTHORS, src/ACKNOWLEDGMENTS
-     [ ] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
-     [ ] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
-     [ ] Copy API documentation on website
-     [ ] doc/Developer/ProgrammingGuide
-     [ ] lulu.com, Google Books
-     [ ] Bug tracker group
-     [ ] Switch default to release build
+     [x] src/Doxyfile.*, src/CMakeLists.txt src/libs/collage/CMakeLists.txt
+     [x] src/AUTHORS, src/ACKNOWLEDGMENTS
+     [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
+     [x] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
+     [x] Copy API documentation on website
+     [x] doc/Developer/ProgrammingGuide
+     [x] lulu.com, Google Books
+     [x] Switch default to release build
   -->
 
-#include "../../../eq-svn/tags/release-1.0.1/libs/RelNotes.dox"
+#include "../../../eq-svn/branches/1.0/libs/RelNotes.dox"
 
 #include "footer.shtml"

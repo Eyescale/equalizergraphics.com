@@ -77,12 +77,18 @@ State:
   in the canvas or segment.
 </p>
 <p>
-  The canvas may have a swap barriers, which is set on each segment with no swap
-  barrier, when the segment is added to the canvas. Existing segment swap
-  barriers are not overwritten. A segment may hav a swap barrier, which is set
-  to all its destination channel compounds when the canvas is
-  activated. Existing compound swap barriers are overwritten. The compound keeps
-  the swapbarrier configuration and logics as in Equalizer 1.0.
+  The canvas may have a swap barriers, which is the default swap barrier for
+  each segment. Existing segments are not modified. A segment may have a swap
+  barrier, which is set to all its destination channel compounds when the canvas
+  is activated. Existing compound swap barriers are overwritten. The compound
+  keeps the swapbarrier configuration and logics as in Equalizer 1.0.
+</p>
+
+<h3>Stereo-Selective Configuration</h3>
+<p>
+  In Equalizer 1.0, one can use different swap barrier settings for different
+  stereo-mode compounds. The same can be achieved with per-segment barriers, in
+  have different segments per eye using the same output channel.
 </p>
 
 <h2>File Format</h2>

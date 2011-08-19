@@ -27,6 +27,15 @@
     31. October 2006</li>
 </ul>
 
+<h2>Bugfix Releases</h2>
+<p>
+  Patch releases fix bugs found in the last major release:
+</p>
+<ul>
+  <li><a href="/documents/RelNotes/RelNotes_1.0.1.html"><b>Version 1.0.1</b></a>,
+    19. August 2011</li>
+</ul>
+
 <h2>Developer Releases</h2>
 <p>
   Developer releases are regular, minor versions in-between major
