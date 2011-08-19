@@ -5,7 +5,7 @@
 
 <p>
   Developers actively developing Equalizer-based applications should either use
-  the <a href="/downloads/source.html">subversion</a> source code tree,
+  the <a href="/downloads/source.html">source code tree</a>,
   a <a href="/downloads/nightly">nightly build</a> or the
   latest <a href="/downloads/developer.html">developer release</a>.
 </p>
@@ -62,7 +62,9 @@
 
 <h2>Ubuntu Packages</h2>
 <p>
-  Ubuntu packages are available through PPA:
+  Ubuntu packages are available through a
+  <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/">launchpad
+    PPA</a>:
 </p>
 <pre>
   sudo add-apt-repository ppa:eilemann/equalizer/ubuntu
