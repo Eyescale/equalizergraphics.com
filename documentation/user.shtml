@@ -34,7 +34,7 @@
 <ul>
   <li><a href="/documents/design/fileFormat.html">File Format</a> is the
     reference documentation for the configuration files.</li>
-  <li><a href="/documents/user/synchronization.html">Video and Swap
+  <li><a href="/documentation/user/synchronization.html">Video and Swap
       Synchronization</a> explains how to configure different options to produce
     coherent images on multi-display systems.</li>
 </ul>
