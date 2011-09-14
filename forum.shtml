@@ -4,8 +4,9 @@
 #define NO_POLL
 #include "header.shtml"
 
-<a id="nabblelink" href="http://n2.nabble.com/Equalizer---Parallel-Rendering-f7405.html">Equalizer - Parallel Rendering</a>
-<script src="http://n2.nabble.com/embed/f7405"></script>
+<a id="nabblelink"
+   href="http://software.1713.n2.nabble.com/Equalizer-Parallel-Rendering-f7405.html">Equalizer - Parallel Rendering</a>
+<script src="http://software.1713.n2.nabble.com/embed/f7405"></script>
 
 #include "footer.shtml"
 <!-- $Id$ -->
