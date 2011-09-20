@@ -6,7 +6,7 @@
 #include "header.shtml"
 
 <!-- Release Checklist:
-     [x] src/Doxyfile.*, src/CMakeLists.txt src/libs/collage/CMakeLists.txt
+     [x] doc/Doxyfile.*, CMakeLists.txt CMake/FindEqualizer.cmake
      [x] src/AUTHORS, src/ACKNOWLEDGMENTS
      [x] features.shtml, doc_developer.shtml, documents/design/, downloads/developers.shtml
      [x] downloads/source.shtml, relnotes.shtml, news.shtml, sitemap_config.xml
