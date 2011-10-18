@@ -13,7 +13,7 @@ State:
   <li>Software swapbarrier implemented in 0.1</li>
   <li>Hardware swapbarrier (G-Sync) implemented in 0.9</li> 
   <li>Multiple-windows-per-pipe software swapbarrier implemented in 0.9</li>
-  <li>Canvas swapbarriers: design</li>
+  <li>Canvas swapbarriers: implemented in git</li>
 </ul>
 
 <h2>Overview</h2>
@@ -79,9 +79,9 @@ State:
 <p>
   The canvas may have a swap barriers, which is the default swap barrier for
   each segment. Existing segments are not modified. A segment may have a swap
-  barrier, which is set to all its destination channel compounds when the canvas
-  is activated. Existing compound swap barriers are overwritten. The compound
-  keeps the swapbarrier configuration and logics as in Equalizer 1.0.
+  barrier, which becomes the compound's swap barrier when the destination
+  channel is set on the compount. The compound keeps the swapbarrier
+  configuration and logics as in Equalizer 1.0.
 </p>
 
 <h3>Stereo-Selective Configuration</h3>

@@ -222,6 +222,12 @@ State: Implemented
                      fov          [ float float ]
                      hpr          [ float float float ]
              }
+             swapbarrier  # default swap barrier for all segments of canvas
+             {
+                 name string
+                 NV_group OFF | ON | unsigned
+                 NV_barrier OFF | ON | unsigned
+             }
              
              segment # 1...n times
              {
@@ -244,7 +250,7 @@ State: Implemented
                      fov          [ float float ]
                      hpr          [ float float float ]
                  }
-             }
+                 swapbarrier {...}  # set as barrier on all dest compounds
          }
          
          compound # 1-n times
@@ -304,14 +310,10 @@ State: Implemented
                  hpr          [ float float float ]
              }
              
+             swapbarrier {...}  # compounds with the same name sync swap
+
              child-compounds
  
-             swapbarrier  # compounds with the same barriername sync swap
-             {
-                 name string
-                 NV_group OFF | ON | unsigned
-                 NV_barrier OFF | ON | unsigned
-             }
              outputframe
              {
                  name   string
@@ -337,6 +339,26 @@ observer-ref: 'string' | 'index'
 
 <a name="changes"></a>
 <h2>Changes</h2>
+<ul>
+  <li>Per-segment <a href="/documents/design/swapBarrier.html">swap barriers</a>
+    added:
+    <!-- /* --><pre>
+      canvas
+      {
+          swapbarrier // default for all segments
+          { 
+              name "barrier-name" // sync's compound's window swap buffers
+              // NV_swap_group (G-Sync) support
+              NV_group    OFF | ON (1) | unsigned // use HW group n
+              NV_barrier  OFF | ON (1) | unsigned // use HW barrier n
+          }
+          segment
+          {
+              swapbarrier { ..as above.. }
+          }
+      }
+    </pre><!-- */ -->
+  </li>
 <ul>
   <li>Render nodes without listening connections added:
     <!-- /* --><pre>
