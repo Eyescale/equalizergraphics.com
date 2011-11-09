@@ -16,6 +16,6 @@
      [x] Switch default to release build
   -->
 
-#include "../../../eq-svn/branches/1.0/libs/RelNotes.dox"
+#include "../Equalizer-1.0.1/libs/RelNotes.dox"
 
 #include "footer.shtml"

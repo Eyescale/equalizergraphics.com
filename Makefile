@@ -2,6 +2,7 @@
 .SUFFIXES: .html .css
 
 TARGET = build
+TAR ?= tar
 
 FILES = \
 	print.css \
@@ -115,6 +116,7 @@ FILES = \
 	documents/RelNotes/RelNotes_0.9.3.html \
 	documents/RelNotes/RelNotes_1.0.html \
 	documents/RelNotes/RelNotes_1.0.1.html \
+	documents/RelNotes/RelNotes_1.0.2.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \
@@ -277,6 +279,13 @@ docset:
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)
 	$(CPP_HTML) $< | sed 's/^#.*//' > $@
+
+$(TARGET)/documents/RelNotes/RelNotes_%.html : documents/RelNotes/RelNotes-%.shtml $(INCLUDES) Equalizer-%/libs/RelNotes.dox
+	@mkdir -p $(@D)
+	$(CPP_HTML) $< | sed 's/^#.*//' > $@
+
+Equalizer-%/libs/RelNotes.dox: downloads/Equalizer-%.tar.gz
+	@tar xvzf $< $@
 
 documents/design/%.shtml: Equalizer.wiki/%.md
 	@mkdir -p $(@D)
