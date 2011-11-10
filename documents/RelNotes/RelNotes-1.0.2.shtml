@@ -14,9 +14,9 @@
      [x] doc/Developer/ProgrammingGuide
      [x] lulu.com, Google Books
      [x] Switch default to release build
-  -->
 
-//#include "../../../Equalizer/libs/RelNotes.dox"
- #include "../Equalizer-1.0.2/libs/RelNotes.dox"
+// #include "../../../Equalizer/libs/RelNotes.dox"
+  -->
+#include "../Equalizer-1.0.2/libs/RelNotes.dox"
 
 #include "footer.shtml"
