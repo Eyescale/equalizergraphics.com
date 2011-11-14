@@ -150,6 +150,7 @@ FILES = \
 	downloads/plugins.html \
 	downloads/tools.html \
 	downloads/source.html \
+	gpu-sd/index.html \
 	news/EgBof.html \
 	news/EqualizerNewsJuly07.html \
 	news/EqualizerNewsDecember07.html \
@@ -290,6 +291,14 @@ Equalizer-%/libs/RelNotes.dox: downloads/Equalizer-%.tar.gz
 documents/design/%.shtml: Equalizer.wiki/%.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
+	@cat include/mdHeader.shtml >> $@
+	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
+	@cat include/mdFooter.shtml >> $@
+
+gpu-sd/index.shtml: ../Equalizer/gpu-sd/README.rst
+	@mkdir -p $(@D)
+	@head -1 $< | sed 's/# /#define TITLE /' > $@
+	@echo "#ldefine S_GPUSD" > $@
 	@cat include/mdHeader.shtml >> $@
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@

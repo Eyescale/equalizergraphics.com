@@ -4,6 +4,3 @@
 #define SUBPAGE Developer
 
 #include "header.shtml"
-
-<p>Contribute to this document on the <a href=QUOTE( WIKIURL )>GitHub
-Wiki</a></p>
