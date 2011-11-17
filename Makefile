@@ -15,6 +15,7 @@ FILES = \
 	documentation.html \
 	documentation/developer.html \
 	documentation/user.html \
+	documentation/user/configuration.html \
 	documentation/user/configTool.html \
 	documentation/user/synchronization.html \
 	documentation/research.html \

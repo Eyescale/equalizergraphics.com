@@ -55,25 +55,25 @@
     <div class="poll">
         <a href="http://www.equalizergraphics.com/">
 #ifdef S_EQUALIZER
-          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active">
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
 #else
-          <img src="/images/Equalizer_g.png" alt="Equalizer logo">
+          <img src="/images/Equalizer_g.png" alt="Equalizer logo"></a>
 #endif
-        </a><br>
+        <br>
         <a href="http://www.libcollage.net">
 #ifdef S_COLLAGE
-          <img src="/images/Collage.png" alt="Collage logo" class="active">
+          <img src="/images/Collage.png" alt="Collage logo" class="active"></a>
 #else
-          <img src="/images/Collage_g.png" alt="Collage logo">
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
 #endif
-        </a><br>
+        <br>
         <a href="http://www.equalizergraphics.com/gpu-sd">
 #ifdef S_GPUSD
-          <img src="/images/gpu-sd.png" alt="GPU-SD logo" class="active">
+          <img src="/images/gpu-sd.png" alt="GPU-SD logo" class="active"></a>
 #else
-          <img src="/images/gpu-sd_g.png" alt="GPU-SD logo">
+          <img src="/images/gpu-sd_g.png" alt="GPU-SD logo"></a>
 #endif
-        </a><br>
+        <br>
 
 #ifndef NO_POLL
 #if 0

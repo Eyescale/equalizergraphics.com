@@ -40,6 +40,8 @@
 
 <h2>Generic Information</h2>
 <ul>
+  <li><a href="/documents/user/configuration.html">Configuration</a> explains
+    automatic and static configuration.</li>
   <li><a href="/documents/design/fileFormat.html">File Format</a> is the
     reference documentation for the configuration files.</li>
   <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics

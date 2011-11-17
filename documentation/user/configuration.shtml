@@ -1,0 +1,53 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_MAIN
+#define PAGE Documentation
+#define SUBPAGE End User
+#define TITLE Configuration
+
+#include "header.shtml"
+
+<h2>Overview</h2>
+<p>
+  Equalizer uses the <a href="/gpu-sd/">GPU-SD</a> library for discovering local
+  and remote GPUs. Based on this information a typical configuration is
+  dynamically compiled. The auto-configuration uses the same format as the
+  <a href="/documents/design/fileFormat.html">static configuration files</a>,
+  and can therefore be used to create template configurations.
+</p>
+
+<h2>Usage</h2>
+<p>
+  The command-line parameter <code>--eq-config</code> determines which
+  configuration is used:
+  <ul>
+    <li>The default value is <code>local</code> which uses all local GPUs
+      queried using the cgl, glx or wgl GPU-SD module.</a> 
+    <li><code>--eq-config filename.eqc</code> loads a static configuration from
+      the given ascii file.</li>
+    <li><code>--eq-config sessionname</code> uses the dns_sd ZeroConf module of
+      GPU-SD to query all GPUs in the subnet for the given session. The default
+      session of the GPU-SD daemon is <code>default</code>. The ZeroConf
+      hostname is used to connect the nodes.</li>
+  </ul>
+</p>
+
+<h2>Auto-configuration</h2>
+<p>
+  The auto-configuration creates one display window on the local machine, and
+  one off-screen channel for each GPU. The display window has one full-window
+  channel used as an output channel for a single segment. It combines all GPU
+  into a scalability config with different layouts for each of the following
+  scalability modes:
+  <ul>
+    <li><b>2D</b> A dynamically load-balanced sort-first configuration using all
+      GPUs as sources</li>
+    <li><b>Simple</b> A no-scalability configuration using only the display GPU
+      for rendering</li>
+    <li><b>Static DB</b> A static sort-last configuration distributing the range
+      evenly across all GPUs</li>
+    <li><b>Dynamic DB</b> A dynamically load-balanced sort-last configuration
+      using all GPUs as sources</li>
+  </ul>
+</p>
+
+#include "footer.shtml"
