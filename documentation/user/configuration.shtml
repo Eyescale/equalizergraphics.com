@@ -32,6 +32,10 @@
 </p>
 
 <h2>Auto-configuration</h2>
+<div class="float_right">
+  <img src="/images/autoconfig.png" alt="Automatic Configuration"></a>
+  <div class="label">An auto-configuration session</div>
+</div>
 <p>
   The auto-configuration creates one display window on the local machine, and
   one off-screen channel for each GPU. The display window has one full-window
@@ -48,6 +52,9 @@
     <li><b>Dynamic DB</b> A dynamically load-balanced sort-last configuration
       using all GPUs as sources</li>
   </ul>
+  The picture on the right shows an auto-configuration between a Mac OS X
+  machine running the application and an additional Linux host providing a
+  second GPU.
 </p>
 
 #include "footer.shtml"
