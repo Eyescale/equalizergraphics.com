@@ -295,10 +295,10 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@
 
-gpu-sd/index.shtml: ../Equalizer/gpu-sd/README.rst
+gpu-sd/index.shtml: ../Equalizer/gpu-sd/README.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
-	@echo "#ldefine S_GPUSD" > $@
+	@echo "#define S_GPUSD" >> $@
 	@cat include/mdHeader.shtml >> $@
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@

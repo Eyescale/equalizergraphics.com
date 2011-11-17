@@ -88,7 +88,7 @@
       ASCII file</a></li>
   <li><div class="box">git</div>
     Automatic configuration of Multi-GPU workstations</a></li>
-  <li><div class="box">TBD</div>
+  <li><div class="box">git</div>
     Automatic configuration and discovery of remote scalability GPUs</a></li>
   <li><div class="box">TBD</div>
     Automatic configuration and discovery of remote display surfaces</a></li>
