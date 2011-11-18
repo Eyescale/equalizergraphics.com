@@ -9,12 +9,11 @@
 #include "header.shtml"
 
 <p>
-  Equalizer uses a configuration server to optimally allocate and balance the
-  available resources on the visualization system. The server is configured
-  using a hierarchically structured configuration file to describe the available
-  resources, and the combination of these resources for rendering. Equalizer
-  applications can also run without a server, using a configuration file
-  provided at launch time.
+  Equalizer applications are configured at run-time using a hierarchically
+  structured configuration to describe the available resources, display
+  environment and the combination of the resources for rendering. Equalizer
+  applications can either be configured automatically or using a static
+  configuration file provided at launch time.
 </p>
 <div class="float_right"><a href="images/sampleConfig.png">
     <img src="images/sampleConfig-small.jpg" 
@@ -32,18 +31,17 @@
   swapbarrier to synchronize their output.
 </p>
 <p>
+  <a href="documentation/user/configuration.html">More information about
+  configuration</a>
+</p><p>
   <a href="useCases.html">See more use case examples</a>
 </p><p>
-  <a href="documents/design/fileFormat.html">See the configuration file format 
-    specification</a>
-</p>
-<p>
-<a href="http://chromium.sourceforge.net">Chromium</a> will be integrated with
-the Equalizer framework to provide a transparent execution layer. The
-Equalizer server will drive customized Chromium SPUs according to the selected
-configuration, just as any other Equalizer application. This transparent layer
-enables the execution and load-balancing of legacy and performance-uncritical
-applications alongside with scalable Equalizer applications.
+  <a href="http://chromium.sourceforge.net">Chromium</a> will be integrated with
+  the Equalizer framework to provide a transparent execution layer. The
+  Equalizer server will drive customized Chromium SPUs according to the selected
+  configuration, just as any other Equalizer application. This transparent layer
+  enables the execution and load-balancing of legacy and performance-uncritical
+  applications alongside with scalable Equalizer applications.
 </p>
 
 #include "footer.shtml"
