@@ -25,6 +25,11 @@
   clustered multi-GPU applications.
 </p>
 <p>
+  <a href="/gpu-sd">GPU-SD</a> is a daemon and library for the discovery and
+  announcement of graphics processing units using ZeroConf. It is used for
+  auto-configuration of Equalizer applications.
+</p>
+<p>
   <a href="http://www.libcollage.net/">Collage</a> is a cross-platform C++
   library for building heterogenous, distributed applications. It is the
   multi-threaded cluster backend for Equalizer.
