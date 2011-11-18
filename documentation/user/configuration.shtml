@@ -9,7 +9,7 @@
 <h2>Overview</h2>
 <p>
   Equalizer uses the <a href="/gpu-sd/">GPU-SD</a> library for discovering local
-  and remote GPUs. Based on this information a typical configuration is
+  and remote GPUs. Based on this information, a typical configuration is
   dynamically compiled. The auto-configuration uses the same format as the
   <a href="/documents/design/fileFormat.html">static configuration files</a>,
   and can therefore be used to create template configurations.
@@ -39,7 +39,7 @@
 <p>
   The auto-configuration creates one display window on the local machine, and
   one off-screen channel for each GPU. The display window has one full-window
-  channel used as an output channel for a single segment. It combines all GPU
+  channel used as an output channel for a single segment. It combines all GPUs
   into a scalability config with different layouts for each of the following
   scalability modes:
   <ul>
