@@ -24,6 +24,10 @@ FILES = \
 	$(wildcard downloads/*.exe) \
 	$(wildcard downloads/*.zip) \
 	$(wildcard downloads/*.dmg) \
+	$(wildcard gpu-sd/downloads/*.gz) \
+	$(wildcard gpu-sd/downloads/*.exe) \
+	$(wildcard gpu-sd/downloads/*.zip) \
+	$(wildcard gpu-sd/downloads/*.dmg) \
 	events.html \
 	equalizer.rdf \
 	favicon.ico \
@@ -234,6 +238,7 @@ clean:
 install: $(SITEMAP) package
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/gpu-sd/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
 
 install_web: $(SITEMAP)
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
