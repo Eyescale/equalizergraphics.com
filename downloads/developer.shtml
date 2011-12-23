@@ -22,32 +22,13 @@
 <table>
   <tr><th>Version</th><th>Release Notes and Date</th><th>Source Code</th><th>Precompiled Packages</th></tr>
   <tr>
-    <td>1.0-beta</td>
-    <td><a href="/documents/RelNotes/RelNotes_0.9.3.html">01. March
+    <td>1.2-beta</td>
+    <td><a href="/documents/RelNotes/RelNotes_1.1.7.html">23. December
         2011</a></td>
-    <td><a href="/downloads/Equalizer-1.0-beta.tar.gz">tar.gz</a></td>
+    <td><a href="/downloads/Equalizer-1.1.7.tar.gz">tar.gz</a></td>
     <td>
-      32 bit:<br>
-      <a href="/downloads/Equalizer-1.0-beta-win32.exe"><img src="/images/windows.png" alt="Windows 32 bit"></a>
-      <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293180"><img src="/images/ubuntu.png" alt="Ubuntu 10.10 32 bit"></a>
-      <a href="/downloads/nightly/Equalizer-0.9.3-i386-Darwin.dmg"><img src="/images/mac.png" alt="Mac OS X 32 bit"></a>
-      <br>
-      64 bit:<br>
-      <a href="/downloads/Equalizer-1.0-beta-win64.exe"><img src="/images/windows.png" alt="Windows 64 bit"></a>
-      <a href="https://launchpad.net/~eilemann/+archive/equalizer/+buildjob/2293179"><img src="/images/ubuntu.png" alt="Ubuntu 10.10 64 bit"></a>
+      <a href="https://launchpad.net/~eilemann/+archive/equalizer-dev"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
     </td>
-  </tr>
-  <tr>
-    <td>1.0-alpha</td>
-    <td><a href="/documents/RelNotes/RelNotes_0.9.2.html">07. January
-        2011</a></td>
-    <td><a href="/downloads/Equalizer-1.0-alpha.tar.gz">tar.gz</a></td>
-  </tr>
-  <tr>
-    <td>0.9.1</td>
-    <td><a href="/documents/RelNotes/RelNotes_0.9.1.html">05. February
-        2010</a></td>
-    <td><a href="/downloads/Equalizer-0.9.1.tar.gz">tar.gz</a></td>
   </tr>
 </table>
 

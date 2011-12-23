@@ -8,8 +8,7 @@
 #include "header.shtml"
  
 <p>
-  Author: AUTHOR<br>
-  State: Design
+  State: Implemented in eVolve example
 </p>
   
 <h2>Overview</h2>
@@ -30,12 +29,12 @@
   bricks is done using back-to front compositing.  The number of frames to
   composite equals the data bricks number, the data bricks are in strong
   correspondence to each other. We only need to transfer RGBA information, and
-  we can ignore depth values on the final compositing stage, which save a network
-  bandwidth.  The correct sequences of the RGBA frames for compositing is fixed,
-  but Equalizer's current compositing implementation assumes that frames can be
-  composed in arbitrary way. For the volume render, we will implement a user
-  defined sequence of frame compositing.  This technique could be used in future
-  for arbitrary semitransparent objects compositing.
+  we can ignore depth values on the final compositing stage, which save a
+  network bandwidth.  The correct sequences of the RGBA frames for compositing
+  is fixed, but Equalizer's current compositing implementation assumes that
+  frames can be composed in arbitrary way. For the volume render, we will
+  implement a user defined sequence of frame compositing.  This technique could
+  be used in future for arbitrary semitransparent objects compositing.
 </p><div class="flush_float"></div>
 
 

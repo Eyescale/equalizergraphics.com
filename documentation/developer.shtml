@@ -100,6 +100,13 @@
 </p>
 #endif
 
+<h3>Version 1.2</h3>
+<ul>
+  <li><a href="/documents/design/tileCompounds.html">Tile compounds</a>
+    using a pull-based task distribution for volume rendering and interactive
+    raytracing.</li>
+</ul>
+
 <h3>Version 1.0</h3>
 <ul>
   <li><a href="/documents/Developer/API-0.9.3">1.0-beta API

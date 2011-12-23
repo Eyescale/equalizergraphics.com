@@ -86,10 +86,10 @@
   <li><div class="box">0.1</div>
     <a href="/documents/design/fileFormat.html">Static configuration using an
       ASCII file</a></li>
-  <li><div class="box">git</div>
+  <li><div class="box">1.1.7</div>
     <a href="/documentation/user/configuration.html">Automatic configuration</a>
     of Multi-GPU workstations</a></li>
-  <li><div class="box">git</div>
+  <li><div class="box">1.1.7</div>
     <a href="/documentation/user/configuration.html">Automatic configuration</a>
     and discovery of remote scalability GPUs</a></li>
   <li><div class="box">TBD</div>
@@ -217,16 +217,16 @@
       clients</a></li>
   <li><div class="box">0.3</div>
     <a href="/documents/design/infiniBand.html">InfiniBand networking</a></li>
-  <li><div class="box">git</div>
+  <li><div class="box">1.1.7</div>
     RDMA (native InfiniBand) connection</li>
   <ul>
-    <li><div class="box">git</div>Linux</li>
+    <li><div class="box">1.1.7</div>Linux</li>
     <li><div class="box">TBD</div>Windows</li>
   </ul>
   <li><div class="box">0.9.2</div>
     <a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
      initialization</li>
-  <li><div class="box">git</div>
+  <li><div class="box">1.1.7</div>
     <a href="/documents/design/nodeFailure.html">Runtime failure
       tolerance</a></li>
 </ul>

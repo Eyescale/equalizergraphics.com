@@ -16,9 +16,13 @@
   version.
 </p>
 <p>
-  Versions up to and including 1.0 were developed using
-  a <a href="https://equalizer.svn.sourceforge.net/svnroot/equalizer">Subversion
-  repository</a>.
+  We encourage you to fork the repository on github, code away and push the
+  changes to your fork. If we don't pick them up automatically within a week,
+  please send us a pull request.
+</p>
+<p>
+  Versions up to and including 1.0 were developed using a Subversion repository
+  hosted by sourceforge</a>.
 </p>
 <p>
   <!-- A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,

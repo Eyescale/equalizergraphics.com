@@ -1,0 +1,22 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_RELNOTES
+#define PAGE Release Notes
+#define SUBPAGE Release Notes for Equalizer 1.2 Beta
+
+#include "header.shtml"
+
+<!-- Release Checklist:
+     [x] CMakeLists.txt CMake/FindEqualizer.cmake
+     [x] src/AUTHORS, src/ACKNOWLEDGMENTS
+     [x] features.shtml, documentation/developer.shtml, documents/design/
+     [x] downloads/, relnotes.shtml, news.shtml, sitemap_config.xml
+     [x] Copy API documentation on website
+     [ ] doc/Developer/ProgrammingGuide
+     [ ] lulu.com, Google Books
+     [x] Switch default to release build
+
+// #include "../../../Equalizer/libs/RelNotes.dox"
+  -->
+#include "../Equalizer-1.1.7/libs/RelNotes.dox"
+
+#include "footer.shtml"
