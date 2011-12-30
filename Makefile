@@ -238,7 +238,7 @@ clean:
 install: $(SITEMAP) package
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/gpu-sd/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../gpu-sd/release/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
 
 install_web: $(SITEMAP)
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
@@ -246,7 +246,7 @@ install_web: $(SITEMAP)
 install_only: all
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/Equalizer*.dmg 80.74.159.177:var/www/www.equalizergraphics.com/downloads/nightly/
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../Equalizer/release/gpu-sd/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
+	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../gpu-sd/release/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
 
 auxinst: all
 	rsync -avz --exclude=".git" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
@@ -302,7 +302,7 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@
 
-gpu-sd/index.shtml: ../Equalizer/gpu-sd/README.md
+gpu-sd/index.shtml: ../gpu-sd/README.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
 	@echo "#define S_GPUSD" >> $@
