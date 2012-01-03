@@ -22,8 +22,15 @@
   
 <a name="Implementation"></a>
 <h2>Implementation</h2>
+
+<div class="float_right">
+  <a href="/documents/design/images/asyncCompositing.png">
+    <img src="/documents/design/images/asyncCompositing-small.jpg" 
+         alt="Asynchronous Compositing"></a>
+  <div class="label">Asynchronous Compositing</div>
+</div>
 <p>
-  Asynchronous downloads are started from the render thread and completed on
+  Asynchronous downloads are started from the render thread and completed in
   another thread (the current transmit thread), freeing the render thread to
   start with the next frame earlier. Asynchronous uploads are started on
   reception of the FrameData, and completed by the render thread(s), freeing the
@@ -34,10 +41,10 @@
 <p>
   The download implementation is relatively
   straight-forward: <code>eq::Channel::frameReadback</code> starts the download
-  operation, using an extension flag with the current download
-  call <code>EqCompressorDownload</code>, schedules a command on the pipe
-  download thread, which will finish the operation and set the ready flag on the
-  frame data. The download thread is created lazy on the first use.
+  operation using <code>EqCompressorStartDownload</code>, schedules a command on
+  the pipe download thread, which will finish the operation
+  using <code>EqCompressorFinishDownload</code> and set the ready
+  flag on the frame data. The download thread is created lazy on first use.
 </p>
 <p>
   Most of the asynchronous download plugins will need a shared OpenGL context
