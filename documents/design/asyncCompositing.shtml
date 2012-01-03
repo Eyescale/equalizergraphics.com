@@ -70,8 +70,8 @@
 <a name="Implementation"></a>
 <h2>Programming Interface</h2>
 <!-- /* --><pre>
-  SystemWindow* eq::Window::createSystemWindow( SystemWindow* shareWindow );
-  bool eq::Window::releaseSystemWindow( SystemWindow* window );
+  SystemWindow* eq::WindowSystem::createWindow( const WindowSettings& settings );
+  //? bool eq::WindowSystem::releaseWindow( SystemWindow* window );
 </pre><!-- */ -->
 
 <a name="Issues"></a>
