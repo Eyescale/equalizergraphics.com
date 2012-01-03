@@ -1,0 +1,118 @@
+#define S_DOCUMENTATION
+#define S_DOCUMENTATION_DEVELOPER
+#define PAGE Documentation
+#define SUBPAGE Developer
+#define TITLE Asynchronous Compositing
+
+#include "header.shtml"
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  Equalizer 1.2 implements synchronous pixel download and upload from the render
+  threads using an external plugin API. This documents describes the extension
+  of the plugin API and Equalizer to support asynchronous download and uploads,
+  as per <a href="https://github.com/Eyescale/Equalizer/issues/64">issue 64</a>
+  and other issues referencing it.
+</p>
+  
+<a name="Implementation"></a>
+<h2>Implementation</h2>
+<p>
+  Asynchronous downloads are started from the render thread and completed on
+  another thread (the current transmit thread), freeing the render thread to
+  start with the next frame earlier. Asynchronous uploads are started on
+  reception of the FrameData, and completed by the render thread(s), freeing the
+  render thread from the actual upload time.
+</p>
+
+<h3>Download</h3>
+<p>
+  The download implementation is relatively
+  straight-forward: <code>eq::Channel::frameReadback</code> starts the download
+  operation, using an extension flag with the current download
+  call <code>EqCompressorDownload</code>, schedules a command on the pipe
+  download thread, which will finish the operation and set the ready flag on the
+  frame data. The download thread is created lazy on the first use.
+</p>
+<p>
+  Most of the asynchronous download plugins will need a shared OpenGL context
+  with the main render window. Other implementations may use a similar concept,
+  e.g., a separate CUDA context for the finish operation. The download and
+  upload threads will manage auxilary SystemWindows which share the context
+  with the main window.
+</p>
+
+<h3>Upload</h3>
+<p>
+  Asynchronous uploads will always need to go to a temporary buffer instead of
+  directly to the framebuffer, since the upload needs to be started before the
+  window is ready to receive the data.
+</p>
+<p>
+  TBD: Add destination pipe/window/channel information to FrameData
+</p>
+<p>
+  TBD: Impact on Image and Compositor code
+</p>
+
+<a name="Implementation"></a>
+<h2>Programming Interface</h2>
+<!-- /* --><pre>
+  SystemWindow* eq::Window::createSystemWindow( SystemWindow* shareWindow );
+  bool eq::Window::releaseSystemWindow( SystemWindow* window );
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<h3>1. How does the receiver node know which pipes need the received data?</h3>
+<p>
+  The FrameData is received by the receiver thread and uncompressed by the
+  command thread. The upload should then be started immediately, most likely by
+  the command thread. Therefore it needs to know which GPUs will use the
+  FrameData.
+</p>
+
+<h3>2. Who is responsible for the shared OpenGL context in the auxilary
+  threads?</h3>
+<p>
+  Resolution: The download and upload threads (cf. Issue 3) manage an auxilary
+  eq::SystemWindow sharing with the main window.
+</p>
+<p>
+  The read finish operation in the transmit thread and the start upload
+  operation in the command thread optionally need a shared OpenGL context with
+  the corresponding render thread. The most consistent way is to have one
+  additional <code>SystemWindow</code> instance for each auxilary thread and
+  window, sharing with the main window.
+</p>
+
+<h3>3. Do we keep the model of having one transmit thread per node?</h3>
+<p>
+  Resolution: Yes, but lazily create additional download and upload threads for
+  each pipe thread.
+</p>
+<p>
+  Using one compression and decompression thread per node seems like the natural
+  model to optimize CPU resources. Having one upload and download thread per
+  render thread seems the natural model to optimize uploads and downloads.
+</p>
+
+<h3>4. How is the lifetime of the auxilary SystemWindows managed?</h3>
+<p>
+  Resolution: Introduce create/destroy methods (see API changes above)
+</p>
+<p>
+  The 'owner' of the SystemWindows is the corresponding
+  eq::Window. Consequently, it is responsible for their lifetime. The main
+  system window is managed using configInit/ExitSystemWindow(). Due to
+  historical reasons this is inconsistent with the NodeFactory create/release
+  methods. New create/destroy methods will be used to create all system windows
+  of a given eq::Window. The shareWindow parameter may be 0.
+</p>
+
+#include "footer.shtml"

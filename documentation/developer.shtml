@@ -91,14 +91,16 @@
   the <a href="/features.html">Feature List</a>.
 </p>
 
-#if 0
 <h3>SVN 'trunk' version</h3>
 <p>
   This information contains specification for features currently under
   development in the subversion source code repository. Most likely, these
   features will be release in the next version.
 </p>
-#endif
+<ul>
+  <li><a href="/documents/design/asyncCompositing.html">Asynchronous
+      compositing</a> optimizing pixel data downloads and uploads.</li>
+</ul>
 
 <h3>Version 1.2</h3>
 <ul>
