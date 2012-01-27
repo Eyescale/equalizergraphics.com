@@ -110,7 +110,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2011-11-22 19:30:46 +0000</string>
+	<string>2012-01-04 16:04:43 +0000</string>
 	<key>Modifier</key>
 	<string>Stefan Eilemann</string>
 	<key>NotesVisible</key>
@@ -2445,7 +2445,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{212.59843, 121.05904}, {85.039383, 28}}</string>
+					<string>{{184.25198, 121.05904}, {99.212601, 28}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2488,7 +2488,7 @@ _gpu-sd}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{402.09732, 24.15847}, {53.737354, 56.692909}}</string>
+					<string>{{345.40445, 24.15847}, {53.737354, 56.692909}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -2523,8 +2523,8 @@ _gpu-sd}</string>
 					<integer>1176</integer>
 					<key>Points</key>
 					<array>
-						<string>{287.56204, 77.94957}</string>
-						<string>{368.50391, 127.55905}</string>
+						<string>{256.44431, 81.821396}</string>
+						<string>{311.81104, 127.55905}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2546,7 +2546,7 @@ _gpu-sd}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{368.50391, 127.55903}, {56.692917, 14.173264}}</string>
+					<string>{{311.81104, 127.55903}, {56.692917, 14.173264}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2633,7 +2633,7 @@ _gpu-sd}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{425.19678, 127.55904}, {42.519714, 14.173264}}</string>
+					<string>{{368.50391, 127.55904}, {42.519714, 14.173264}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2720,7 +2720,7 @@ _gpu-sd}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{368.50391, 113.38582}, {99.212616, 28.3465}}</string>
+					<string>{{311.81104, 113.38582}, {99.212616, 28.3465}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2809,7 +2809,7 @@ _gpu-sd}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{368.50391, 99.21257}, {113.38584, 42.519714}}</string>
+					<string>{{311.81104, 99.21257}, {113.38584, 42.519714}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2905,7 +2905,7 @@ _gpu-sd}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{368.50391, 14.173226}, {141.73228, 85.039368}}</string>
+					<string>{{311.81104, 14.173226}, {141.73228, 85.039368}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -2965,8 +2965,8 @@ _gpu-sd}</string>
 					<integer>1160</integer>
 					<key>Points</key>
 					<array>
-						<string>{156.20953, 87.72332}</string>
-						<string>{225.92381, 69.019463}</string>
+						<string>{154.51987, 85.501251}</string>
+						<string>{198.15741, 70.955376}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2998,8 +2998,8 @@ _gpu-sd}</string>
 					<integer>1158</integer>
 					<key>Points</key>
 					<array>
-						<string>{156.39389, 37.787277}</string>
-						<string>{225.55565, 52.969131}</string>
+						<string>{156.15129, 40.009792}</string>
+						<string>{197.61378, 51.317757}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3825,9 +3825,9 @@ _gpu-sd}</string>
 							<integer>1162</integer>
 							<key>Points</key>
 							<array>
-								<string>{255.11804, 14.173233}</string>
-								<string>{248.03137, 14.173233}</string>
-								<string>{248.03137, 49.606277}</string>
+								<string>{226.77158, 14.173233}</string>
+								<string>{219.68491, 14.173233}</string>
+								<string>{219.68491, 49.606277}</string>
 							</array>
 							<key>Style</key>
 							<dict>
@@ -3844,7 +3844,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{212.5981, 21.259842}, {35.433254, 21.259836}}</string>
+							<string>{{184.25163, 21.259842}, {35.433254, 21.259836}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3931,9 +3931,9 @@ _gpu-sd}</string>
 							<integer>1164</integer>
 							<key>Points</key>
 							<array>
-								<string>{311.81104, 35.43309}</string>
-								<string>{304.72449, 35.43309}</string>
-								<string>{304.72449, 70.866135}</string>
+								<string>{283.4646, 35.43309}</string>
+								<string>{276.37805, 35.43309}</string>
+								<string>{276.37805, 70.866135}</string>
 							</array>
 							<key>Style</key>
 							<dict>
@@ -3950,7 +3950,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{269.29126, 42.519699}, {35.43325, 21.259855}}</string>
+							<string>{{240.94482, 42.519699}, {35.43325, 21.259855}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -4037,9 +4037,9 @@ _gpu-sd}</string>
 							<integer>1166</integer>
 							<key>Points</key>
 							<array>
-								<string>{269.29132, 77.952805}</string>
-								<string>{262.20471, 77.952805}</string>
-								<string>{262.20471, 113.38581}</string>
+								<string>{240.94485, 77.952805}</string>
+								<string>{233.85825, 77.952805}</string>
+								<string>{233.85825, 113.38581}</string>
 							</array>
 							<key>Style</key>
 							<dict>
@@ -4056,7 +4056,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{226.7715, 85.039398}, {35.433254, 21.259834}}</string>
+							<string>{{198.42503, 85.039398}, {35.433254, 21.259834}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -4143,7 +4143,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{269.29126, 42.519691}, {35.433228, 21.259836}}</string>
+							<string>{{240.94482, 42.519691}, {35.433228, 21.259836}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -4180,7 +4180,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{226.77148, 85.039383}, {35.433228, 21.259836}}</string>
+							<string>{{198.42502, 85.039383}, {35.433228, 21.259836}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -4215,7 +4215,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{212.59808, 21.259872}, {35.433228, 21.259836}}</string>
+							<string>{{184.25162, 21.259872}, {35.433228, 21.259836}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -4252,7 +4252,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{226.77173, 85.039383}, {35.433228, 21.259836}}</string>
+							<string>{{198.42526, 85.039383}, {35.433228, 21.259836}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -4289,7 +4289,7 @@ _gpu-sd}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{226.77136, 28.346466}, {63.779839, 63.779518}}</string>
+							<string>{{198.4249, 28.346466}, {63.779839, 63.779518}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -4379,7 +4379,7 @@ _gpu-sd}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>DrawerTab</key>
 		<string>Outline</string>
 		<key>DrawerWidth</key>
@@ -4387,11 +4387,11 @@ _gpu-sd}</string>
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{367, 546}, {540, 462}}</string>
+		<string>{{367, 54}, {1034, 954}}</string>
 		<key>VisibleRegion</key>
-		<string>{{-3, 0}, {1029.8076, 713.99994}}</string>
+		<string>{{0, -72.000015}, {1022.9999, 858.35626}}</string>
 		<key>Zoom</key>
-		<real>0.63725495338439941</real>
+		<real>1.245112419128418</real>
 	</dict>
 </dict>
 </plist>

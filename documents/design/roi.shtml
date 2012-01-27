@@ -8,7 +8,7 @@
 
 <p>
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
-  State: Design Brainstorming
+  State: Implemented in git
 </p>
 
 <h2>Overview</h2>
@@ -23,28 +23,22 @@
 
 <h2>Implementation</h2>
 <p>
-  The <code>Channel::draw</code> operation declares the region of interest. The
-  ROI is a fractional viewport with respect to the channel viewport. The initial
-  ROI is the full, i.e., <code>[ 0 0 1 1 ]</code>. The ROI is retained over all
-  operations and will not be changed by Equalizer. It is the responsibility of
-  the application to keep the ROI up to date, or to reset it to the full channel
-  area.
-</p><p>
-  The ROI is relative to the context in which it was set. Subsequent operations
-  on the same channel might use a different pixel viewport. Internally we will
-  therefore save the pixel viewport for which the ROI was set, and adapt the ROI
-  returned by <code>Channel::getROI</code> accordingly.
+  The <code>Channel::frameDraw</code> and <code>frameAssemble</code> operations
+  declare the region of interest updated during their execution. The ROI is a
+  fractional viewport with respect to the channel viewport. The default ROI is
+  the full, i.e., <code>[ 0 0 1 1 ]</code>. The ROI is retained over all
+  operations of a frame. Multiple declared regions are handled by handling the
+  union of all declarations.
 </p>
 
 <h2>API</h2>
 <!-- /* --><pre>
-  void Channel::setROI( const eq::Viewport& roi );
+  void Channel::resetRegions();
+  void Channel::declareRegion( const Viewport& roi );
+  void Channel::declareRegion( const PixelViewport& roi );
+  const Viewport& Channel::getRegion() const;
+  const Viewports& Channel::getRegions() const;
 </pre><!-- */ -->
-
-<h2>Open Issues</h2>
-<p>
-  Can be used for automatic load balancing.
-</p>
 
 #include "footer.shtml"
 <!-- $Id$ -->
