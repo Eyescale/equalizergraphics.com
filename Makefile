@@ -184,6 +184,7 @@ FILES = \
 	scalability/pixel.html \
 	scalability/stereo.html \
 	scalability/subpixel.html \
+	scalability/tile.html \
 	scalability/viewEqualizer.html \
 	$(wildcard documents/WhitePapers/*.pdf) \
 	$(IMAGES) \

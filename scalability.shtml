@@ -59,6 +59,12 @@
   <div>Subpixel Compound</div></a>
 </div>
 <div class="image">
+  <a href="/scalability/tile.html">
+    <img src="/scalability/images/tile-small.jpg" 
+         alt="Tile">
+  <div>Tile Compound</div></a>
+</div>
+<div class="image">
   <a href="/scalability/mixed.html">
     <img src="/scalability/images/mixed-small.jpg" 
          alt="Mixed">
