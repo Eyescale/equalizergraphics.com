@@ -1,0 +1,62 @@
+#define S_HOME
+#define S_HOME_SCALABILITY
+#define PAGE About
+#define SUBPAGE Scalability: 2D
+
+#define KEYWORDS "2D, sort-first, scalability"
+
+#include "header.shtml"
+
+<p>
+  <b>2D</b>, also called sort-first or SFR, decomposes the rendering in
+  screen-space, that is, each contributing rendering unit processes a tile of
+  the final view. Equalizer composites the tiles side-by-side on the
+  destination view.
+</p>
+<div class="center">
+  <a href="http://www.youtube.com/watch?v=DtnSRlZnbrQ&fmt=18">Watch a 
+    video<br>
+  <img src="/scalability/images/2D.png" alt="2D or sort-first"></a>
+</div>
+<p> 
+  This mode has a low, constant IO overhead for the image transfers and
+  can provide good scalability when combined with view frustum
+  culling. Depending on the application data structure, the overlap of some
+  primitives between individual tiles limits the scalability of this mode,
+  typically to around eight graphic cards.
+</p>
+<p>
+  2D decomposition works transparently for all Equalizer-based applications. It
+  is often combined with a <a href="/scalability/loadEqualizer.html">load
+  equalizer</a>, which adapts the tiling automatically each frame.
+</p>
+<p>
+  For typical OpenGL applications, 2D compounds provide good scalability up to
+  four to eight GPU's per display. The scalability depends on the effectiveness
+  of the application's view frustum culling and per-pixel load. Some
+  applications, e.g., volume rendering, provide much better scalability to tens
+  of GPU's.
+</p>
+<p>
+  2D compounds are often used with other features to increase overall
+  scalability, such as <a href="/scalability/stereo.html">stereo</a>,
+  <a href="/scalability/DB.html">DB</a>
+  or <a href="/scalability/DPlex.html">DPlex</a> compounds
+  and <a href="/scalability/loadEqualizer.html">load</a>
+  or <a href="/scalability/viewEqualizer.html">view equalizers</a>.
+</p>
+<p>
+  The compositing overhead does not typically limit the performance for 2D
+  compounds. Network transfer on a gigabit ethernet limits the peak framerate in
+  the worst case to around 15 FPS for a 1920x1200 resolution per display. For
+  typical scenes, the built-in compression in Equalizer allows 20-30 FPS. On
+  fast networks, such as InfiniBand, or lower resolutions, the network is not a
+  limiting factor.
+</p>
+
+<div class="flush_float"></div>
+<div class="footnote">
+  <p>3D model courtesy of <a href="http://www.cyberware.com">Cyberware</a>.</p>
+</div>
+
+#include "footer.shtml"
