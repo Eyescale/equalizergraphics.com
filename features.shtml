@@ -114,7 +114,7 @@
   <li><div class="box">0.2</div>
     <a href="/scalability/mixed.html">Hierarchical, multi-level</a>
     compounds</li>
-  <li><div class="box">TBD</div>Tile compounds</a></li>
+  <li><div class="box">1.2</div>Tile compounds</a></li>
   <li><div class="box">TBD</div>
     <a href="/documents/design/compounds.html">Cull compounds</a></li>
 </ul>
@@ -140,10 +140,8 @@
   <li><div class="box">TBD</div> Fast node-local composition using NV_copy_image
     extension</li>
   <li><div class="box">TBD</div> nVidia CompleX compositing backend</li>
-  <li><div class="box">TBD</div> Hardware-based recomposition (Crossfire,
-    SLI)</li>
   <li><div class="box">TBD</div> Asynchronous framebuffer readback</li>
-  <li><div class="box">TBD</div> ROI readback interface</li>
+  <li><div class="box">git</div> ROI readback interface</li>
 </ul>
 
 <h3>Load-Balancing</h3>
@@ -182,18 +180,14 @@
     FBO support</li>
   <li><div class="box">0.9.1</div>
     Support for applications not using OpenGL for rendering</li>
-  <li><div class="box">TBD</div>
-    OpenGL 3 compositing and example</li>
-  <li><div class="box">TBD</div>
-    Runtime mono/stereo switching</li>
-  <li><div class="box">TBD</div>
-    Advanced support for
+  <li><div class="box">1.0</div> Runtime mono/stereo switching</li>
+  <li><div class="box">TBD</div> OpenGL 3 compositing and example</li>
+  <li><div class="box">TBD</div> Advanced support for
     <a href="/documents/design/transparency.html">transparency and sort-last
       (DB) compounds</a></li>
-  <li><div class="box">TBD</div>
-    Transparent OpenGL library (Chromium?)</li>
-  <li><div class="box">TBD</div>
-    Remote visualization (VNC, SAGE?)</li>
+  <li><div class="box">TBD</div> Transparent OpenGL library (Chromium?)</li>
+  <li><div class="box">TBD</div> Remote visualization (VirtualGL, VNC,
+    SAGE?)</li>
   <li><div class="box">TBD</div>
     Distributed scene graph: OpenSceneGraph, OpenSG, Coin</li>
 </ul>
