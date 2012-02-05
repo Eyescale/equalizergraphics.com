@@ -12,6 +12,12 @@
 </p>
 
 <h2>Overview</h2>
+<div class="float_right">
+  <a href="/documents/design/images/asyncCompositing.png">
+    <img src="/documents/design/images/asyncCompositing-small.jpg" 
+         alt="Asynchronous Compositing"></a>
+  <div class="label">Asynchronous Compositing</div>
+</div>
 <p>
   Equalizer 1.2 implements synchronous pixel download and upload from the render
   threads using an external plugin API. This documents describes the extension
@@ -20,14 +26,14 @@
   and other issues referencing it.
 </p>
   
-<a name="Implementation"></a>
+<div class="flush_float"></div><a name="Implementation"></a>
 <h2>Implementation</h2>
 
 <div class="float_right">
-  <a href="/documents/design/images/asyncCompositing.png">
-    <img src="/documents/design/images/asyncCompositing-small.jpg" 
-         alt="Asynchronous Compositing"></a>
-  <div class="label">Asynchronous Compositing</div>
+  <a href="/documents/design/images/asyncCompositingImpl.png">
+    <img src="/documents/design/images/asyncCompositingImpl-small.jpg" 
+         alt="Sequence diagram for Asynchronous Compositing"></a>
+  <div class="label">Sequence Diagram Asynchronous Compositing</div>
 </div>
 <p>
   Asynchronous downloads are started from the render thread and completed in
@@ -35,6 +41,17 @@
   start with the next frame earlier. Asynchronous uploads are started on
   reception of the FrameData, and completed by the render thread(s), freeing the
   render thread from the actual upload time.
+</p><p>
+  Each asynchronous operations causes a referencing of the rendering frame,
+  which will be unreferenced after the operation has been completed. The last
+  unreferencing will cause the frame to be released on the server.
+</p><p>
+  When synchronous downloads are used, the asynchronous readback thread is not
+  used. Setting ready of the frame and scheduling of the transmit operations is
+  either effected by the render pipe thread when only synchronous readbacks are
+  used, or by the readback thread after the last readback operation has been
+  finished. The sequence diagram on the right shows a high-level overview of the
+  operations.
 </p>
 
 <h3>Download</h3>
