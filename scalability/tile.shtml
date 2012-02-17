@@ -8,9 +8,9 @@
 #include "header.shtml"
 
 <p>
-  <b>Tile</b> compounds are similar to 2D compounds. The decompose the rendering
-  in screen-space, where each rendering unit pulls and processes regular tiles
-  of the final view. Tile compounds are ideal for purely
+  <b>Tile</b> compounds are similar to 2D compounds. They decompose the
+  rendering in screen-space, where each rendering unit pulls and processes
+  regular tiles of the final view. Tile compounds are ideal for purely
   fill-limited applications such as volume rendering and raytracing.
 </p>
 <div class="center">
