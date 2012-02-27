@@ -123,6 +123,7 @@ FILES = \
 	documents/RelNotes/RelNotes_1.0.1.html \
 	documents/RelNotes/RelNotes_1.0.2.html \
 	documents/RelNotes/RelNotes_1.1.7.html \
+	documents/RelNotes/RelNotes_1.2.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \
