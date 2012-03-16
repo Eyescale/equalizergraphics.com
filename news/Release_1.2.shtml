@@ -46,17 +46,19 @@
     href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_1.2.html">release
     notes</a> on the Equalizer website for a comprehensive list of new features,
   enhancements, optimizations and bug fixes. A paperback book of the
-  <a href="http://www.lulu.com/product/paperback/equalizer-10-programming-and-user-guide/15165632">Programming and User Guide</a> is available from Lulu.com</a>.
+  <a href="https://www.createspace.com/3800793">Programming and User Guide</a>
+  is available.</a>.
 </p>
 <p>
   We would like to thank all individuals and parties who have contributed to the
-  development of Equalizer 1.0.
+  development of Equalizer 1.2.
 </p>
 
 <div class="footnote">
-  Left image copyright Realtime Technology AG, 2008. Right image courtesy
+  Left image courtesy of <a href="http://cajalbbp.cesvima.upm.es">Cajal Blue
+  Brain/</a> / <a href="http://bluebrain.epfl.ch">Blue Brain Project. Second
+  from left copyright Realtime Technology AG, 2008. Right image courtesy
   University of Siegen, 2008.
 </div>
 
 #include "footer.shtml"
-<!-- $Id: Release_0.6.shtml 2388 2008-12-01 16:03:52Z eile $ -->
