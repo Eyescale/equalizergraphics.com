@@ -17,6 +17,6 @@
 
 // #include "../../../Equalizer/libs/RelNotes.dox"
   -->
-#include "../Equalizer-1.1.7/libs/RelNotes.dox"
+#include "../Equalizer-1.2/libs/RelNotes.dox"
 
 #include "footer.shtml"
