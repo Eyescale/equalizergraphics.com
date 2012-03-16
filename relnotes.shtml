@@ -7,17 +7,16 @@
 
 <h2>Bugfix Releases</h2>
 <p>
-  Patch releases based on the last major release:
+  Patch releases based on the last major release: none
 </p>
+<!--
 <ul>
   <li><a href="/documents/RelNotes/RelNotes_1.0.2.html"><b>Version 1.0.2</b></a>,
     10. November 2011</li>
-  <li><a href="/documents/RelNotes/RelNotes_1.0.1.html"><b>Version 1.0.1</b></a>,
-    19. August 2011</li>
 </ul>
+-->
 
 <h2>Major Releases</h2>
-<p>For 1.2 beta, please see developer versions below.</p>
 <ul>
   <li><a href="/documents/RelNotes/RelNotes_1.2.html"><b>Version 1.2</b></a>,
     16. March 2012</li>
