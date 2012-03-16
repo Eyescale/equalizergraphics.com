@@ -9,6 +9,29 @@
   <tr><th>Version</th><th>Links</th><th>Precompiled Binary Packages</th><th>Major Feature(s)</th></tr>
 
   <tr>
+    <a name="1.2"></a>
+    <td><b>1.2</b></td>
+    <td nowrap>
+      Release Notes
+      <a href="/documents/RelNotes/RelNotes_1.2.html">1.2</a><br>
+      Source tar.gz
+      <a href="/downloads/Equalizer-1.2.tar.gz">1.2</a>,
+      <a href="/documents/Developer/API-1.2/index.html">API documentation</a>
+    </td>
+    <td>
+      <hr><center>1.2</center><br>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
+    <!--
+      <a href="/downloads/Equalizer-1.2.0-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
+      <a href="/downloads/Equalizer-1.2.0-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
+      <a href="/downloads/Equalizer-1.2.0-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
+      -->
+    </td>
+    <td>Stable API, Collage library, download and upload plugins, runtime stereo
+    switch.</td>
+  </tr>
+
+  <tr>
     <a name="1.0"></a>
     <td><b>1.0.2</b><br>1.0.1<br>1.0</td>
     <td nowrap>
