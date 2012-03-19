@@ -16,16 +16,13 @@
   applications. Both development toolkits are available for free for commercial
   and non-commercial use under the LGPL open source license.
 </p><p>
-  This release culminates seven years of development and decades of experience
-  into a feature-rich, high-performance and mature parallel rendering framework
-  and an object-oriented, high-level network library. Equalizer and Collage are
-  widely used by research laboratories, industrial applications and by
-  enthusiast all over the world.
-</p>
-<p>
-  Equalizer 1.2 is a feature release extending the 1.0 API. This release
-  introduces major new features, most notably automatic configuration, the
-  Sequel library, runtime reliability and tile compounds.
+  Equalizer 1.2 is a feature release extending the 1.0 API, introducing major
+  new features, most notably automatic configuration, the Sequel library,
+  runtime reliability and tile compounds. It culminates seven years of
+  development and decades of experience into a feature-rich, high-performance
+  and mature parallel rendering framework and an object-oriented, high-level
+  network library. Equalizer and Collage are widely used by research
+  laboratories, industrial applications and by enthusiast all over the world.
 </p>
 <p>
   Equalizer enables software developers to easily build interactive and scalable

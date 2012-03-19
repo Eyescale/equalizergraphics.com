@@ -12,29 +12,26 @@
 </ul>
 
 <h2>Programming and User Guide</h2>
-<div class="float_right">
+<!--<div class="float_right">
   <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide/10352563">
-    <img src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
-         border="0" 
-         alt="Support independent publishing: buy this book on Lulu.">
+    <img
+       src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif" 
+       border="0" 
+       alt="Support independent publishing: buy this book on Lulu.">
   </a>
-</div>
+</div>-->
 <p>
   The Programming and User Guide is the official reference for the Equalizer
-  parallel rendering framework. You can obtain it using one of the following
-  options:
+  parallel rendering framework, similar to the OpenGL Red Book. You can obtain
+  it using one of the following options:
 </p>
 <ul>
   <li>As a direct download, after filling out our <a href="/survey.html">online
       survey</a>. This survey helps us to understand where and how Equalizer is
       used, and to set priorities for the development.</li>
   <li>As a 
-    <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide/10352563">full-color</a>  
-      or <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide-%28bw%29/10352763">black
-      and white</a> paperback book from Lulu.com.</li>
-  <li>As a 
-    <a href="http://www.lulu.com/product/paperback/equalizer-10-programming-and-user-guide/15165632">high-resolution
-      download</a>.</li>
+    <a href="https://www.createspace.com/3800793">full-color paperback book</a>
+    from CreateSpace.</li>
 </ul>
 
 <div class="flush_float"></div>
