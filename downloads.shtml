@@ -13,16 +13,9 @@
   End users or programs not in active development should use the
   latest <a href="/downloads/major.html">major release</a>.
 </p>
-<div class="float_right">
-  <a href="http://sourceforge.net/projects/equalizer">
-    <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=170962&type=15"
-         width="150" height="40" border="0"
-         alt="Get Equalizer - Parallel Rendering at SourceForge.net. Fast, secure and Free Open Source software downloads" />
-  </a>
-</div>
 <p>
   The project is hosted on 
-  <a href="http://sourceforge.net/projects/equalizer/">sourceforge.net</a>. If
+  <a href="https://github.com/Eyescale/Equalizer">github</a>. If
   you are using Equalizer, please fill out our <a href="/survey.html">survey</a>
   and receive a free download of the latest Equalizer programming guide, also
   available as a <a href="https://www.createspace.com/3800793">book</a>!
