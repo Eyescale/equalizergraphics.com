@@ -7,12 +7,7 @@
 
 #include "header.shtml"
 
-<p>
-  Equalizer provides a distributed, scalable, multipipe,
-  multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
-  <a href="/documents/Developer/API/namespaceeq.html#_details">programming
-  interface</a>.
-</p>
+<h2>Sequel</h2>
 <p>
   <a href="/documents/Developer/API/sequel/namespaceseq.html">Sequel</a>
   provides an abstraction to the Equalizer parallel rendering framework which
@@ -22,6 +17,14 @@
   and <a href="/documents/Developer/API/sequel/classseq_1_1Renderer.html">Renderer</a>
   which provide a streamlined interface for parallel rendering applications.
 </p>
+
+<h2>Equalizer</h2>
+<p>
+  Equalizer provides a distributed, scalable, multipipe,
+  multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
+  <a href="/documents/Developer/API/namespaceeq.html#_details">programming
+  interface</a>.
+</p>
 <p>
   Equalizer abstracts the application code from the actual configuration of the
   execution environment. Compared to other cluster-rendering software, it does
@@ -29,13 +32,13 @@
   application's rendering code for optimal performance.
 </p>
 <p>
-  The API is <em>minimally invasive</em> and allows to retain almost all of the
-  application's OpenGL rendering code. Equalizer provides the natural execution
+  The API is <em>minimally invasive</em> and allows to retain nearly all of the
+  application's rendering code. Equalizer provides the natural execution
   framework for any multi-GPU application and does not impose any specific
-  rendering framework, such as a scenegraph, to the application. It follows the
-  natural execution model of any multi-GPU application, thus making it as easy
-  as possible to modify existing applications for parallel rendering on
-  visualization clusters.
+  rendering framework, such as a scenegraph or graphics library, to the
+  application. It follows the natural execution model of any multi-GPU
+  application, thus making it as easy as possible to modify existing
+  applications for parallel rendering on visualization clusters.
 </p>
 <div class="float_right"><a href="/images/executionFlow.png">
     <img src="images/executionFlow-small.jpg" 
@@ -51,7 +54,7 @@
 <p>
   To port an application to run in a multi-GPU environment, the rendering code
   is separated from the core application logic. The Equalizer framework will
-  then take care of the multiprocessing and synchronization and call the
+  then take care of the multiprocessing and synchronization and calls the
   application-provided rendering methods in parallel. The basic execution flow
   of a singlepipe and a multi-GPU application is show on the right (click on
   picture to enlarge).
@@ -88,15 +91,24 @@
         <b>Node::configInit</b></a> - initialize per node application data</li>
   </ul>
 </p>
+
+<h2>Collage</h2>
 <p>
-Equalizer provides an API to build network-distributed applications. In contrast
-to other cluster API's, such as MPI or PVM, this API is designed for the
+<a href="www.libcollage.net">Collage</a> is the network backend library used by
+Equalizer. It is used to build network-distributed applications. In contrast to
+other cluster API's, such as MPI or PVM, this API is designed for the
 development of interactive applications. Certain characteristics of
 visualization software, e.g. the frame-driven rendering, are exploited for
 better performance and simpler programming interface.
-</p><p>
-API documentation for specific features, and other technical information is
-available under <a href="/doc_developer.html">developer documentation</a>.
+</p>
+
+<h2>Lunchbox</h2>
+<p>
+  Lunchbox is the foundation for both Collage and Equalizer. It provides common
+  functionality for the development of high-performance multi-threaded
+  applications. It has the same scope as Boost, but goes beyond in the support
+  for multi-threaded applications by providing utilities tuned for for common
+  concurrency use cases.
 </p>
 
 #include "footer.shtml"
