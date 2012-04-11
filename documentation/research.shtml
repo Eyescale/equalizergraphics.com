@@ -6,6 +6,10 @@
 
 <h2>Core Team</h2>
 <ul>
+  <li>Parallel Rendering on Hybrid Multi-GPU Clusters. Stefan Eilemann, Renato
+    Pajarola, Juan Hernando, Ahmet Bilgili, Marwan Abdellah, Felix Schurmann,
+    Maxim Makhinya. In Proceedings Eurographics Symposium on Parallel Graphics
+    and Visualization 2012.</li>
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/cslb/CSLB.pdf">Cross-Segment
       Load Balancing in Parallel Rendering</a>. Fatih Erol, Stefan Eilemann,
     Renato Pajarola. In Proceedings Eurographics Symposium on Parallel

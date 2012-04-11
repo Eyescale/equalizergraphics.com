@@ -72,7 +72,7 @@ global
     EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
     EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
-    EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO
+    EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO | OFF
     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
@@ -150,7 +150,7 @@ server
                         hint_decoration     OFF | ON
                         hint_fullscreen     OFF | ON
                         hint_swapsync       OFF | ON         # AGL, WGL only
-                        hint_drawable       window | pbuffer | FBO
+                        hint_drawable       window | pbuffer | FBO | OFF
                         hint_statistics     OFF | FASTEST [ON] | NICEST
                         planes_color        unsigned | RGBA16F | RGBA32F
                         planes_alpha        unsigned
