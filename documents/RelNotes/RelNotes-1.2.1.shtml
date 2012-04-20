@@ -9,14 +9,14 @@
      [x] CMakeLists.txt CMake/FindEqualizer.cmake
      [x] src/AUTHORS, src/ACKNOWLEDGMENTS
      [x] features.shtml, documentation/developer.shtml, documents/design/
-     [ ] downloads/, relnotes.shtml, news.shtml, sitemap_config.xml
-     [ ] Copy API documentation on website
+     [x] downloads/, relnotes.shtml, news.shtml, sitemap_config.xml
+     [x] Copy API documentation on website
      [x] doc/Developer/ProgrammingGuide
      [x] lulu.com, Google Books
      [x] Switch default to release build
 
 // #include "../../../Equalizer/libs/RelNotes.dox"
   -->
-#include "../Equalizer-1.2/libs/RelNotes.dox"
+#include "../Equalizer-1.2.1/libs/RelNotes.dox"
 
 #include "footer.shtml"

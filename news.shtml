@@ -4,6 +4,8 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>20. April 2012</b> <a href="/news/Release_1.2.1.html">Released Version
+      1.2.1</a>.</li>
   <li><b>16. March 2012</b> <a href="/news/Release_1.2.html">Released Version
       1.2</a>.</li>
   <li><b>29. December 2012</b> <a href="/documents/RelNotes/RelNotes_1.1.7.html">Released Version

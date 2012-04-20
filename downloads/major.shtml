@@ -13,14 +13,17 @@
     <td><b>1.2</b></td>
     <td nowrap>
       Release Notes
+      <a href="/documents/RelNotes/RelNotes_1.2.1.html">1.2.1</a>,
       <a href="/documents/RelNotes/RelNotes_1.2.html">1.2</a><br>
       Source tar.gz
-      <a href="/downloads/Equalizer-1.2.tar.gz">1.2</a>,
+      <a href="/downloads/Equalizer-1.2.1.tar.gz">1.2.1</a>,
+      <a href="/downloads/Equalizer-1.2.tar.gz">1.2</a><br>
       <a href="/documents/Developer/API-1.2/index.html">API documentation</a>
     </td>
     <td>
-      <hr><center>1.2</center><br>
+      <hr><center>1.2.1</center><br>
       <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
+      <hr><center>1.2</center><br>
       <a href="/downloads/Equalizer-1.2.0-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
       <a href="/downloads/Equalizer-1.2.0-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
       <a href="/downloads/Equalizer-1.2.0-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
