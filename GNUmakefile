@@ -91,6 +91,8 @@ FILES = \
 	documents/EGPGV10_raster.html \
 	documents/EGPGV10_raster.html_files \
 	documents/EGPGV10_raster.pdf \
+	documents/EGPGV12 \
+	documents/EGPGV12.pdf \
 	documents/Presentations/EqualizerBOF2009.pdf \
 	documents/Presentations/EqualizerBOF2009.html \
 	documents/Presentations/EqualizerBOF2009.html_files \
