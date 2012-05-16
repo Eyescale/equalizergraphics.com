@@ -25,6 +25,18 @@
   the hardware setup. These benchmarks provide snapshots of a typical setup, and
   constant improvements in Equalizer deliver even better performance.
 </p>
+<h2>Related Presentations</h2>
+<ul>
+  <li>Parallel rendering on hybrid multi-GPU clusters:
+    <a href="/documents/EGPGV12/index.html">html</a>
+    <a href="/documents/EGPGV12.pdf">pdf</a></li>
+  <li>Fast compositing for cluster-parallel rendering:
+    <a href="/documents/EGPGV10_compositing.html">html</a>
+    <a href="/documents/EGPGV10_compositing.pdf">pdf</a></li>
+  <li>Scalable parallel out-of-core terrain rendering:
+    <a href="/documents/EGPGV10_raster.html">html</a>
+    <a href="/documents/EGPGV10_raster.pdf">pdf</a></li>
+</ul>
 
 <a name="mgpu"></a>
 <h2>Multi-GPU Workstations</h2>
