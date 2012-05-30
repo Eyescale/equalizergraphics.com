@@ -6,7 +6,7 @@
 
 <h2>Core Team</h2>
 <ul>
-  <li>Parallel Rendering on Hybrid Multi-GPU Clusters. Stefan Eilemann, Renato
+  <li><a href="http://www.ifi.uzh.ch/vmml/publications/Parallel-rendering-hybrid-GPU/HybridMultiGPU.pdf">Parallel Rendering on Hybrid Multi-GPU Clusters</a>. Stefan Eilemann, Renato
     Pajarola, Juan Hernando, Ahmet Bilgili, Marwan Abdellah, Felix Schurmann,
     Maxim Makhinya. In Proceedings Eurographics Symposium on Parallel Graphics
     and Visualization 2012. (Presentation:
