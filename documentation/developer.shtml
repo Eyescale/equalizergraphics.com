@@ -87,7 +87,7 @@
   the <a href="/features.html">Feature List</a>.
 </p>
 
-<h3>SVN 'trunk' version</h3>
+<h3>Github 'master' version</h3>
 <p>
   This information contains specification for features currently under
   development in the subversion source code repository. Most likely, these
@@ -96,6 +96,10 @@
 <ul>
   <li><a href="/documents/design/asyncCompositing.html">Asynchronous
       compositing</a> optimizing pixel data downloads and uploads.</li>
+  <li><a href="/documents/design/roi.html">Region of interest</a> optimization
+    for scalable rendering and load-balancing.</li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues?labels=feature&milestone=8&page=1&state=closed">Feature
+  list on github</a>.</li>
 </ul>
 
 <h3>Version 1.2</h3>
@@ -126,8 +130,6 @@
     initialization and runtime.</li>
   <li><a href="/documents/design/frameLoops.html">Independent frame loops</a>
     for different views.</li>
-  <li><a href="/documents/design/roi.html">Region of interest</a> optimization
-    for scalable rendering and load-balancing.</li>
 </ul>
 
 <h3>Version 0.9.1</h3>
