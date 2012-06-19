@@ -229,7 +229,14 @@
 
 <h2>API</h2>
 <!-- /* --><pre>
-  void Config::setHeadMatrix( const vmml::Matrix4f& matrix );
+    void Observer::setHeadMatrix( const Matrix4f& matrix );
+    const Matrix4f& Observer::getHeadMatrix() const;
+    void Observer::setEyeBase( const float eyeBase );
+    float Observer::getEyeBase() const;
+    void Observer::setFocusDistance( const float focusDistance );
+    float Observer::getFocusDistance() const;
+    void Observer::setFocusMode( const FocusMode focusMode );
+    FocusMode Observer::getFocusMode() const;
 </pre><!-- */ -->
 
 <h2>File Format</h2>
