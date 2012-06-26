@@ -67,6 +67,7 @@ global
     EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
     EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
     EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
+    EQ_PIPE_HINT_AFFINITY           AUTO | OFF | CORE unsigned | SOCKET unsigned
     EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
     EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
     EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
@@ -136,6 +137,7 @@ server
                 attributes
                 {
                     hint_thread   OFF | ON   # default ON
+                    hint_affinity AUTO | OFF | CORE unsigned | SOCKET unsigned
                 }
 
                 window # 1-n times
@@ -346,6 +348,22 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/57">Automatic thread
+      placement</a> added:
+    <!-- /* --><pre>
+global
+{
+    EQ_PIPE_HINT_AFFINITY           AUTO | OFF | CORE unsigned | SOCKET unsigned
+}
+            pipe # 1-n times
+            {
+                attributes
+                {
+                    hint_affinity AUTO | OFF | CORE unsigned | SOCKET unsigned
+                }
+            }
+    </pre><!-- */ -->
+  </li>
   <li>Per-segment <a href="/documents/design/swapBarrier.html">swap barriers</a>
     added:
     <!-- /* --><pre>
