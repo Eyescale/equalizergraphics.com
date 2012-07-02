@@ -26,16 +26,6 @@
 </p>
 
 <h2>Features</h2>
-<h3>Parallel Programming</h3>
-<ul>
-  <li>Threads</li>
-  <li>Locks, optimized spin locks, timed locks and scoped mutexes</li>
-  <li>Condition variables</li>
-  <li>Atomic variables</li>
-  <li>Lock-free queues</li>
-  <li>Blocking thread-safe queues</li>
-  <li>Blocking monitor variables</li>
-</ul>
 <h3>Network Protocols</h3>
 <ul>
   <li>TCP/IP unicast sockets</li>
@@ -43,17 +33,18 @@
   <li>UDP-based reliable multicast (RSP)</li>
   <li>Unidirectional anonymous pipes</li>
   <li>Bidirectional named pipes (Windows only)</li>
-  <li>Native InfiniBand unicast (RDMA-based, experimental)</li>
+  <li>Native InfiniBand unicast (RDMA-based, Linux only)</li>
 </ul>
 <h3>Peer-to-Peer Communication</h3>
 <ul>
   <li>Network connection de-multiplexer</li>
   <li>Node-based process abstraction</li>
+  <li>Zeroconf-based discovery</li>
   <li>Multiple connections per node</li>
   <li>Message-oriented packet communication</li>
   <li>High-performance packet allocation and thread dispatch</li>
   <li>Object-oriented command handler registration</li>
-  <li>Distributed Barriers</li>
+  <li>Distributed barriers</li>
 </ul>
 <h3>Object-Oriented Serialization</h3>
 <ul>
