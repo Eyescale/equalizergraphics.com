@@ -13,8 +13,8 @@
   provides an abstraction to the Equalizer parallel rendering framework which
   allows rapid development of clustered multi-GPU applications. The central
   interface of Sequel is provided by the two
-  classes <a href="/documents/Developer/API/sequel/classseq_1_1Application.html">Application</a>
-  and <a href="/documents/Developer/API/sequel/classseq_1_1Renderer.html">Renderer</a>
+  classes <a href="/documents/Developer/API/Sequel-1.3.5/classseq_1_1Application.html">Application</a>
+  and <a href="/documents/Developer/API/Sequel-1.3.5/classseq_1_1Renderer.html">Renderer</a>
   which provide a streamlined interface for parallel rendering applications.
 </p>
 
@@ -94,10 +94,10 @@
 
 <h2>Collage</h2>
 <p>
-<a href="www.libcollage.net">Collage</a> is the network backend library used by
-Equalizer. It is used to build network-distributed applications. In contrast to
-other cluster API's, such as MPI or PVM, this API is designed for the
-development of interactive applications. Certain characteristics of
+<a href="http://www.libcollage.net">Collage</a> is the network backend library
+used by Equalizer. It is used to build network-distributed applications. In
+contrast to other cluster API's, such as MPI or PVM, this API is designed for
+the development of interactive applications. Certain characteristics of
 visualization software, e.g. the frame-driven rendering, are exploited for
 better performance and simpler programming interface.
 </p>
