@@ -61,7 +61,7 @@
 </p>
 <pre>
   sudo add-apt-repository ppa:eilemann/equalizer/ubuntu
-  sudo apt-get install equalizer120
+  sudo apt-get install equalizer140
 </pre>
 
 #include "footer.shtml"
