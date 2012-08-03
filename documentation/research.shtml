@@ -45,6 +45,9 @@
 
 <h2>Third Party</h2>
 <ul>
+  <li><a href="http://hal.archives-ouvertes.fr/docs/00/70/17/53/PDF/gridscape_avi2012.pdf">Looking
+      behind Bezels: French Windows for Wall Displays</a>. Rodrigo A. de
+    Almeida, Clement Pillias, Emmanuel Pietriga, Pierre Cubaud, 2011.</li>
   <li><a href="http://www.cs.vu.nl/complexhpc2011/slides/complexHPC2011-Challenge-Mocan.pdf">Remote
       Graphical Visualization of Large Interactive Spatial Data</a>. Cristinel
       Mihai Mocan. ComplexHPC Spring School 2011.</li>
@@ -76,6 +79,12 @@
       (IGARSS), 2009</li>
   <li><a href="http://github.com/bhulliger/CRF/raw/master/doc/ThesisReport/ThesisReport.pdf">CAVE
       Rendering Framework</a>, Thesis Report, 2009</li>
+  <li><a href="http://www.cct.lsu.edu/uploads/trs/CCT-TR-2008-10/CCT-TR-2008-10.pdf">Distributed
+      Visualization Using Optical Networks: Demonstration at Supercomputing
+      2008</a>. Andrei Hutanu, Jinghua Ge, Cornelius Toole, Ravi Paruchuri, Adam
+    Yates, Gabrielle Allen, Center for Computation & Technology and Department
+    of Computer Science, Louisiana State University, Baton Rouge, LA USA,
+    2008</li>
   <li><a href="http://ieeexplore.ieee.org/iel5/4668336/4675314/04675373.pdf?arnumber=4675373">Equalizer-based
       parallel rendering framework for multi-projector tiled display
       system</a>. Hui Chang, Xiaoyong Lei, Shuling Dai. 7th International
