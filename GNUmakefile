@@ -246,16 +246,12 @@ clean:
 
 install: $(SITEMAP) srcbuild
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../../Debug/gpu-sd/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
-	rsync -avz --exclude "*.docset" -e ssh ../../Debug/Lunchbox/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/Lunchbox/API
 
 install_web: $(SITEMAP)
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 install_only: all
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh ../../Debug/gpu-sd/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/gpu-sd/API
-	rsync -avz --exclude "*.docset" -e ssh ../../Debug/Lunchbox/doc/html/ 80.74.159.177:var/www/www.equalizergraphics.com/Lunchbox/API
 
 auxinst: all
 	rsync -avz --exclude=".git" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
