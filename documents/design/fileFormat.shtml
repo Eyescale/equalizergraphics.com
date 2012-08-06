@@ -75,6 +75,7 @@ global
     EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO | OFF
     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
+    EQ_WINDOW_IATTR_HINT_GRAB_POINTER        OFF | [ON]
     EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
@@ -154,6 +155,7 @@ server
                         hint_swapsync       OFF | ON         # AGL, WGL only
                         hint_drawable       window | pbuffer | FBO | OFF
                         hint_statistics     OFF | FASTEST [ON] | NICEST
+                        hint_grab_pointer   OFF | [ON]
                         planes_color        unsigned | RGBA16F | RGBA32F
                         planes_alpha        unsigned
                         planes_depth        unsigned
@@ -348,6 +350,22 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/151">Mouse
+      capture/grab</a> added:
+    <!-- /* --><pre>
+global
+{
+    EQ_WINDOW_IATTR_HINT_GRAB_POINTER        OFF | [ON]
+}
+                window # 1-n times
+                {
+                    attributes
+                    {
+                        hint_grab_pointer   OFF | [ON]
+                    }
+                }
+    </pre><!-- */ -->
+  </li>
   <li><a href="https://github.com/Eyescale/Equalizer/issues/57">Automatic thread
       placement</a> added:
     <!-- /* --><pre>
