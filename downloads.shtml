@@ -64,5 +64,10 @@
   sudo apt-get install equalizer140
 </pre>
 
+<h2>MacPorts Packages</h2>
+<p>
+  Macports package files are available on <a href="https://github.com/Eyescale/portfiles#readme">github</a>.
+</p>
+
 #include "footer.shtml"
 <!-- $Id$ -->

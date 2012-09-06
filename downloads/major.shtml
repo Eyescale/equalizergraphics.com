@@ -9,6 +9,24 @@
   <tr><th>Version</th><th>Links</th><th>Precompiled Binary Packages</th><th>Major Feature(s)</th></tr>
 
   <tr>
+    <a name="1.4"></a>
+    <td><b>1.4</b></td>
+    <td nowrap>
+      Release Notes
+      <a href="/documents/RelNotes/RelNotes_1.4.0.html">1.4</a><br>
+      Source tar.gz
+      <a href="/downloads/Equalizer-1.4.0.tar.gz">1.4</a><br>
+      <a href="/documents/Developer/API-1.4.0/index.html">API documentation</a>
+    </td>
+    <td>
+      <hr><center>1.4</center><br>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
+      <a href="https://github.com/Eyescale/portfiles#readme"><img src="/images/mac.png" alt="Mac OS X"></a>
+    </td>
+    <td>Asynchronous readbacks, region of interest, zeroconf support.</td>
+  </tr>
+
+  <tr>
     <a name="1.2"></a>
     <td><b>1.2</b></td>
     <td nowrap>

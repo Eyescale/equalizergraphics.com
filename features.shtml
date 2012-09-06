@@ -72,8 +72,11 @@
     <a href="/documents/design/swapBarrier.html#gsync">Hardware swapbarrier</a>
       for synchronization of multiple displays</li>
   <li><div class="box">0.9.2</div>
-    <a href="/documents/design/stereoSwitch.html">Runtime
-      stereo switching</a></li>
+    <a href="/documents/design/stereoSwitch.html">Runtime stereo
+      switching</a></li>
+    <li><div class="box">1.4</div>
+      <a href="https://github.com/Eyescale/Equalizer/issues/63">Application-specific
+        scaling</a> to visualize data in a scale different to 1:1</li>
   <li><div class="box">TBD</div>
     <a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">Software
       edge blending</a></li>
@@ -134,14 +137,14 @@
     <li><div class="box">0.9.2</div>
       <a href="/documents/Developer/API/compressor_8h.html">GPU Compression
         plugin API</a></li>
+    <li><div class="box">1.4</div> Asynchronous framebuffer readback</li>
   </ul>
+  <li><div class="box">1.4</div> ROI readback interface</li>
   <li><div class="box">0.6</div> <a href="http://paracomp.sf.net">Paracomp</a>
     compositing backend</li>
   <li><div class="box">TBD</div> Fast node-local composition using NV_copy_image
     extension</li>
   <li><div class="box">TBD</div> nVidia CompleX compositing backend</li>
-  <li><div class="box">TBD</div> Asynchronous framebuffer readback</li>
-  <li><div class="box">git</div> ROI readback interface</li>
 </ul>
 
 <h3>Load-Balancing</h3>
@@ -223,6 +226,9 @@
   <li><div class="box">1.1.7</div>
     <a href="/documents/design/nodeFailure.html">Runtime failure
       tolerance</a></li>
+  <li><div class="box">1.4</div>
+    <a href="https://github.com/Eyescale/Equalizer/issues/122">Zeroconf
+      support and node discovery</a></li>
 </ul>
 
 <a name="examples"></a>

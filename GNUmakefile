@@ -129,6 +129,7 @@ FILES = \
 	documents/RelNotes/RelNotes_1.2.1.html \
 	documents/RelNotes/RelNotes_1.3.5.html \
 	documents/RelNotes/RelNotes_1.3.6.html \
+	documents/RelNotes/RelNotes_1.4.0.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \
@@ -309,7 +310,7 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@
 
-gpu-sd/index.shtml: ../gpu-sd/README.md
+gpu-sd/index.shtml: ../gpusd/README.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
 	@echo "#define S_GPUSD" >> $@
