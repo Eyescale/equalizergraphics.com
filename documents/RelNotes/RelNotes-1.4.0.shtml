@@ -1,7 +1,7 @@
 #define S_DOCUMENTATION
 #define S_DOCUMENTATION_RELNOTES
 #define PAGE Release Notes
-#define SUBPAGE Release Notes for Equalizer 1.4 RC1
+#define SUBPAGE Release Notes for Equalizer 1.4
 
 #include "header.shtml"
 
@@ -9,13 +9,13 @@
      [x] CMakeLists.txt CMake/FindEqualizer.cmake
      [x] src/AUTHORS, src/ACKNOWLEDGMENTS
      [x] features.shtml, documentation/developer.shtml, documents/design/
-     [ ] downloads/, relnotes.shtml, news.shtml, sitemap_config.xml
+     [ ] downloads/, relnotes.shtml, news.shtml
      [ ] doc/Developer/ProgrammingGuide
      [ ] createspace.com, Google Books
      [x] Switch default to release build
 
 // #include "../../../Equalizer/libs/RelNotes.dox"
   -->
-#include "../Equalizer-1.3.6/libs/RelNotes.dox"
+#include "../Equalizer-1.4.0/libs/RelNotes.dox"
 
 #include "footer.shtml"
