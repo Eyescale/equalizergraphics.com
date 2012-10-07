@@ -231,7 +231,7 @@ PAGES    = $(HTML_SRC:%.shtml=%.html)
 SITEMAP  = $(TARGET)/sitemap.xml.gz
 
 GIT ?= git
-MD2HTML ?= markdown-2.6 -x toc -x fenced_code
+MD2HTML ?= markdown_py-2.6 -x toc -x fenced_code
 CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
            -DUPDATE="`$(GIT) log -1 $< | grep 'Date:' | sed 's/Date:   //'`" \
            -DCHANGEURL=\"https://github.com/Eyescale/equalizergraphics.com/commits/master/$<\" \

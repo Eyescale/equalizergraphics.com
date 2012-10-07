@@ -5,63 +5,30 @@
 #include "header.shtml"
 
 <p>
-  <strong>Neuchatel, Switzerland - September 7, 2012 -
-  <a href="http://www.eyescale.ch">Eyescale</a> is pleased to announce the
-  release of <a href="http://www.equalizergraphics.com">Equalizer
-  1.4</a>.</strong>
+  <strong>Neuchatel, Switzerland - September 7, 2012 - <a href="http://www.eyescale.ch">Eyescale</a> is pleased to announce the release of <a href="http://www.equalizergraphics.com">Equalizer 1.4</a>.</strong>
 </p>
 <p>
-  Equalizer is the standard framework to create and deploy parallel, scalable 3D
-  applications. This modular release includes
-  <a href="http://libcollage.net/">Collage 0.6</a>, a cross-platform C++ library
-  for building heterogenous, distributed applications, 
-  <a href="http://www.equalizergraphics.com/gpu-sd/">GPU-SD 1.4</a>, a C++
-  library and daemon for the discovery and announcement of graphics processing
-  units using zeroconf networking and
-  <a href="https://github.com/Eyescale/Lunchbox">Lunchbox 1.4</a>, a C++ library
-  for multi-threaded programming. All software packages are available for free
-  for commercial and non-commercial use under the LGPL open source license.
+  Equalizer is the standard framework to create and deploy parallel, scalable 3D applications. This modular release includes <a href="http://libcollage.net/">Collage 0.6</a>, a cross-platform C++ library for building heterogenous, distributed applications, <a href="http://www.equalizergraphics.com/gpu-sd/">GPU-SD 1.4</a>, a C++ library and daemon for the discovery and announcement of graphics processing units using zeroconf networking and <a href="https://github.com/Eyescale/Lunchbox">Lunchbox 1.4</a>, a C++ library for multi-threaded programming. All software packages are available for free for commercial and non-commercial use under the LGPL open source license.
 </p>
 <p>
-  Equalizer 1.4 is a feature release extending the 1.0 API, introducing major
-  new features, most notably asynchronous readbacks, region of interest and
-  thread affinity for increased performance during scalable rendering. It
-  culminates over seven years of development and decades of experience into a
-  feature-rich, high-performance and mature parallel rendering framework and
-  related high-performance C++ libraries.
+  Equalizer 1.4 is a feature release extending the 1.0 API, introducing major new features, most notably asynchronous readbacks, region of interest and thread affinity for increased performance during scalable rendering. It culminates over seven years of development and decades of experience into a feature-rich, high-performance and mature parallel rendering framework and related high-performance C++ libraries.
 </p>
 <p>
-  Equalizer enables software developers to easily build interactive and scalable
-  visualization applications, which optimally combine multiple graphics cards,
-  processors and computers to scale the rendering performance, visual quality
-  and display size.
+  Equalizer enables software developers to easily build interactive and scalable visualization applications, which optimally combine multiple graphics cards, processors and computers to scale the rendering performance, visual quality and display size.
 </p>
-  <img src="/images/release-1.2.png" alt="Equalizer Applications"></img>
+  <img src="http://www.equalizergraphics.com/images/release-1.2.png" alt="Equalizer Applications"></img>
 <p>
-  <a href="http://www.eyescale.ch">Eyescale</a> provides software consulting and
-  development services for parallel 3D visualization software and GPU computing
-  applications, based on the Eyescale software products or other open and closed
-  source solutions.
+  <a href="http://www.eyescale.ch">Eyescale</a> provides software consulting and development services for parallel 3D visualization software and GPU computing applications, based on the Eyescale software products or other open and closed source solutions.
 </p>
 <p>
-  Please check the
-  <a
-    href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_1.4.0.html">release
-    notes</a> on the Equalizer website for a comprehensive list of new features,
-  enhancements, optimizations and bug fixes. A paperback book of the
-  <a href="https://www.createspace.com/3943261">Programming and User Guide</a>
-  is available.
+  Please check the <a href="http://www.equalizergraphics.com/documents/RelNotes/RelNotes_1.4.0.html">release notes</a> on the Equalizer website for a comprehensive list of new features, enhancements, optimizations and bug fixes. A paperback book of the <a href="https://www.createspace.com/3943261">Programming and User Guide</a> is available.
 </p>
 <p>
-  We would like to thank all individuals and parties who have contributed to the
-  development of Equalizer 1.4.
+  We would like to thank all individuals and parties who have contributed to the development of Equalizer 1.4.
 </p>
 
 <div class="footnote">
-  Left image courtesy of <a href="http://cajalbbp.cesvima.upm.es">Cajal Blue
-  Brain/</a> / <a href="http://bluebrain.epfl.ch">Blue Brain Project</a>. Second
-  from left copyright Realtime Technology AG, 2008. Right image courtesy
-  University of Siegen, 2008.
+  Left image courtesy of <a href="http://cajalbbp.cesvima.upm.es">Cajal Blue Brain/</a> / <a href="http://bluebrain.epfl.ch">Blue Brain Project</a>. Second from left copyright Realtime Technology AG, 2008. Right image courtesy University of Siegen, 2008.
 </div>
 
 #include "footer.shtml"
