@@ -64,11 +64,31 @@
 <div class="flush_float"></div>
 <a name="omegalib"></a>
 <h2>Omegalib</h2>
+<div class="float_right">
+  <a href="/applications/images/omegalib.jpg">
+    <img src="/applications/images/omegalib-small.jpg" 
+         alt=""></a>
+  <div class="label">An omegalib application rendering a<br>structural
+  model of a bridge in the CAVE2.</div>
+</div>
 <p>
   <a href="http://code.google.com/p/omegalib">Omegalib</a> is a middleware
   designed to ease the development of applications on virtual reality and
-  immersive systems.
+  immersive systems. Among other things, it is used to run applications in the
+  CAVE2., which is approximately 24 feet in diameter and 8 feet tall, and
+  consists of 72 near-seamless passive stereo 3D LCD panels, a 36-node
+  high-performance computer cluster, a 20-speaker surround audio system, a
+  10-camera optical tracking system Its main features are:
 </p>
+<ul>
+  <li>Support for hybrid systems, presenting high definition 2D and 3D content
+    on the same display surface</li>
+  <li>Display system scalability</li>
+  <li>Support for a wide range of input peripherals (controllers, motion capture
+    systems, touch surfaces), through the Omicron toolkit</li>
+  <li>Integration with third party higher level toolkits like Unity, vtk,
+    OpenSceneGraph, Qt.</li>
+</ul>
 
 <div class="flush_float"></div>
 <a name="hase3d"></a>

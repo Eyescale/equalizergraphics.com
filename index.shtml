@@ -20,6 +20,12 @@
   clusters, multi-GPU workstations and Virtual Reality installations.
 </p>
 <p>
+  Equalizer drives the world's most advanced visualization systems, for example
+  an ultra-high resolution CAVE driven by 16 4k projectors, a 72-tile stereo
+  display walls as well as scalability clusters for interactive raytracing using
+  hundreds of nodes.
+</p>
+<p>
   <a href="/api.html">Sequel</a> is an easily accessible interface to the
   Equalizer parallel rendering framework, and allows rapid development of
   clustered multi-GPU applications.
@@ -33,6 +39,12 @@
   <a href="http://www.libcollage.net/">Collage</a> is a cross-platform C++
   library for building heterogenous, distributed applications. It is the
   multi-threaded cluster backend for Equalizer.
+</p>
+<p>
+  <a href="https://github.com/Eyescale/Lunchbox">Lunchbox</a> is a C++ library
+  for multi-threaded programming, providing OS abstraction, utility classes and
+  high-performance primitives, such as atomic variables, spin locks and
+  lock-free containers. It is used as a base library for Collage and Equalizer.
 </p>
 
 <h2>Benefits</h2>
