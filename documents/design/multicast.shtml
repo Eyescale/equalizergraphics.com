@@ -100,7 +100,7 @@
 <p>
   Each member of the multicast groups call <code>listen</code> on its RSP
   connection
-  (<a href="/documents/Developer/API/classeq_1_1net_1_1RSPConnection.html">API
+  (<a href="/documents/Developer/API/internal/classco_1_1RSPConnection.html">API
   documentation</a>). This creates an I/O thread for this multicast
   connection. The connection discovers all other members in the multicast group
   during the initialization and creates one <code>connected</code> RSPConnection
