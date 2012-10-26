@@ -6,6 +6,11 @@
 
 <h2>Core Team</h2>
 <ul>
+  <li><a href="http://www.ifi.uzh.ch/vmml/publications/Multiresolution-framework-kdtrees/efficientkd.pdf">An
+      efficient multi-resolution framework for high quality interactive
+      rendering of massive point clouds using multi-way kd-trees</a>. Prashant
+    Goswami, Fatih Erol, Rahul Mukhi, Renato Pajarola, Enrico Gobbetti. The
+    Visual Computer, 28: 1-15, 2012.</li>
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/Parallel-rendering-hybrid-GPU/HybridMultiGPU.pdf">Parallel Rendering on Hybrid Multi-GPU Clusters</a>. Stefan Eilemann, Renato
     Pajarola, Juan Hernando, Ahmet Bilgili, Marwan Abdellah, Felix Schurmann,
     Maxim Makhinya. In Proceedings Eurographics Symposium on Parallel Graphics
@@ -33,7 +38,7 @@
   <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report 2007/06.</li>
   <li><a href="/documents/directSend.pdf">Direct Send Compositing for
-      Parallel Sort-Last Rendering</a>, 
+      Parallel Sort-Last Rendering</a>,
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a>.</li>
   <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
@@ -45,6 +50,10 @@
 
 <h2>Third Party</h2>
 <ul>
+  <li><a href="http://www.evl.uic.edu/files/pdf/IEEE-ScalableWalls-May2012.pdf">Scalable
+      Resolution Display Walls</a>. Jason Leigh, Andrew Johnson, Luc Renambot,
+    Tom Peterka, Byungil Jeong, Daniel J. Sandin, Jonas Talandis, Ratko
+    Jagodic, Sungwon Nam, Hyejung Hur, Yiwen Sun. IEEE Proceedings, 2011.</li>
   <li><a href="http://ecar2012.hpclatam.org/files/Applications_Visualization_Clase4.pdf">Parallel
       Rendering</a>. Juan Hernando Vieites, ECAR 2012.</li>
   <li><a href="http://hal.archives-ouvertes.fr/docs/00/70/17/53/PDF/gridscape_avi2012.pdf">Looking
@@ -56,7 +65,7 @@
   <li><a href="http://www.mcs.csueastbay.edu/~tebo/papers/SIGGRAPH2010.pdf">Camera-based
       Calibration for Scalable Immersive Rendering</a>. William
     C. Thibault. Siggraph 2010 Poster,
-    <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral 
+    <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral
       video</a>.
   </li>
 <li><a href="http://users.utcluj.ro/~cristimocan/Pages/Publications/Master%20Thesis/Master%20Thesis.pdf">A
