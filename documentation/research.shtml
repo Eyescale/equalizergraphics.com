@@ -4,6 +4,8 @@
 
 #include "header.shtml"
 
+<p><center><a href="/downloads/Equalizer.bib">BibTex file</a></center></p>
+
 <h2>Core Team</h2>
 <ul>
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/Multiresolution-framework-kdtrees/efficientkd.pdf">An
