@@ -50,6 +50,10 @@
 
 <h2>Third Party</h2>
 <ul>
+  <li><a href="http://hal.inria.fr/docs/00/65/79/28/PDF/duchene-sda2012.pdf">A
+      stereoscopic movie player with real-time content adaptation to the display
+      geometry</a>. Sylvain Duchene, Martin Lambers, Frederic
+    Devernay. Stereoscopic Displays and Applications 8288 (2012).</li>
   <li><a href="http://www.evl.uic.edu/files/pdf/IEEE-ScalableWalls-May2012.pdf">Scalable
       Resolution Display Walls</a>. Jason Leigh, Andrew Johnson, Luc Renambot,
     Tom Peterka, Byungil Jeong, Daniel J. Sandin, Jonas Talandis, Ratko
@@ -68,11 +72,11 @@
     <a href="http://www.youtube.com/watch?v=dlH-zNAXlQU&fmt=18">collateral
       video</a>.
   </li>
-<li><a href="http://users.utcluj.ro/~cristimocan/Pages/Publications/Master%20Thesis/Master%20Thesis.pdf">A
-    Cluster-ready Viewer Application for building scalable High-Performance 3D
-    virtual geographical Space Scenarios using Graphics Cluster
-    Architectures</a>. Cristinel Mihai Mocan. Master Thesis in Computer Science,
-    Technical University of Cluj-Napoca, Romania.</li>
+  <li><a href="http://users.utcluj.ro/~cristimocan/Pages/Publications/Master%20Thesis/Master%20Thesis.pdf">A
+      Cluster-ready Viewer Application for building scalable High-Performance 3D
+      virtual geographical Space Scenarios using Graphics Cluster
+      Architectures</a>. Cristinel Mihai Mocan. Master Thesis in Computer
+    Science, Technical University of Cluj-Napoca, Romania.</li>
   <li><a href="http://blog.blackhc.net/wp-content/uploads/2009/10/BachelorThesisOnline.pdf">Multi-Tile
       Terrain Rendering with OGL/Equalizer</a>. Andreas Kirsch. Bachelor Thesis
     in Computer Science, TU M&uuml;nchen.</li>
