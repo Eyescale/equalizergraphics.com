@@ -24,6 +24,7 @@ FILES = \
 	$(wildcard downloads/*.exe) \
 	$(wildcard downloads/*.zip) \
 	$(wildcard downloads/*.dmg) \
+	$(wildcard downloads/*.bib) \
 	$(wildcard gpu-sd/downloads/*.gz) \
 	$(wildcard gpu-sd/downloads/*.exe) \
 	$(wildcard gpu-sd/downloads/*.zip) \
