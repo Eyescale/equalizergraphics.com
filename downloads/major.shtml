@@ -12,11 +12,13 @@
     <a name="1.4"></a>
     <td><b>1.4</b></td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_1.4.0.html">Release Notes</a><br>
+      Release Notes
+      <a href="/documents/RelNotes/RelNotes_1.4.1.html">1.4.1</a>,
+      <a href="/documents/RelNotes/RelNotes_1.4.0.html">1.4.0</a><br>
       <a href="/documents/Developer/doxies/Equalizer-1.4.0/index.html">API
         documentation</a><br>
       <a href="/downloads/Buildyard-1.4.0.tar.gz">Buildyard</a><br>
-      <a href="/downloads/Equalizer-1.4.0.tar.gz">Equalizer</a><br>
+      <a href="/downloads/Equalizer-1.4.1.tar.gz">Equalizer</a><br>
       <a href="/downloads/Lunchbox-1.4.0.tar.gz">Lunchbox</a><br>
       <a href="/gpu-sd/downloads/gpusd-1.4.0.tar.gz">gpu-sd</a><br>
       <a href="/downloads/VMMLib-1.4.0.tar.gz">vmmlib</a>
@@ -66,7 +68,7 @@
       Source tar.gz
       <a href="/downloads/Equalizer-1.0.2.tar.gz">1.0.2</a>,
       <a href="/downloads/Equalizer-1.0.1.tar.gz">1.0.1</a>,
-      <a href="/downloads/Equalizer-1.0.tar.gz">1.0</a><br> 
+      <a href="/downloads/Equalizer-1.0.tar.gz">1.0</a><br>
       <a href="/documents/Developer/API-1.0/index.html">API documentation</a>
     </td>
     <td>
@@ -91,9 +93,9 @@
   <tr>
     <td>0.9</td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_0.9.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.9.html">Release
         Notes</a><br>
-      <a href="/downloads/Equalizer-0.9.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.9.tar.gz">Source tar.gz</a><br>
       <a href="/documents/Developer/API-0.9/index.html">API documentation</a>
     </td>
     <td></td>
@@ -104,7 +106,7 @@
   <tr>
     <td>0.6</td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_0.6.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.6.html">Release
         Notes</a><br>
       <a href="/downloads/Equalizer-0.6.tar.gz">Source tar.gz</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=640364">SourceForge</a><br>
@@ -120,9 +122,9 @@
   <tr>
     <td>0.5</td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_0.5.0.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.5.0.html">Release
         Notes</a><br>
-      <a href="/downloads/Equalizer-0.5.0.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.5.0.tar.gz">Source tar.gz</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=592910">SourceForge</a><br>
     </td>
     <td></td>
@@ -132,9 +134,9 @@
   <tr>
     <td>0.4.1</td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_0.4.1.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.4.1.html">Release
         Notes</a><br>
-      <a href="/downloads/Equalizer-0.4.1.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.4.1.tar.gz">Source tar.gz</a><br>
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
     <td></td>
@@ -144,10 +146,10 @@
   <tr>
     <td>0.4</td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_0.4.0.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.4.0.html">Release
         Notes</a><br>
       <a href="/downloads/ProgrammingGuide-1.0.pdf">Programming Guide</a><br>
-      <a href="/downloads/Equalizer-0.4.0.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.4.0.tar.gz">Source tar.gz</a><br>
       <a href="https://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=550126">SourceForge</a><br>
     </td>
     <td></td>
@@ -157,22 +159,22 @@
   <tr>
     <td>0.3</td>
     <td nowrap>
-      <a href="/documents/RelNotes/RelNotes_0.3.0.html">Release 
+      <a href="/documents/RelNotes/RelNotes_0.3.0.html">Release
         Notes</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=505909">SourceForge</a><br>
-      <a href="/downloads/Equalizer-0.3.0.tar.gz">Source tar.gz</a><br> 
+      <a href="/downloads/Equalizer-0.3.0.tar.gz">Source tar.gz</a><br>
     </td>
     <td>
       <a href="/downloads/Equalizer-0.3.0-0.x86_64.rpm">RHEL4 x64 rpm</a><br>
     </td>
     <td>Windows XP support.</td>
   </tr>
-  
+
   <tr>
     <td>0.2</td>
     <td nowrap>
       <a href="/documents/RelNotes/RelNotes_0.2.0.html">Release Notes</a><br>
-      <a href="/downloads/Equalizer-0.2.tar.gz">Local source tarball</a><br> 
+      <a href="/downloads/Equalizer-0.2.tar.gz">Local source tarball</a><br>
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.2.tar.gz?download">SourceForge mirror</a>
     </td>
     <td></td>
@@ -184,7 +186,7 @@
     <td>0.1</td>
     <td nowrap>
       <a href="/documents/RelNotes/RelNotes_0.1.0.html">Release Notes</a><br>
-      <a href="/downloads/Equalizer-0.1.tar.gz">Local source tarball</a><br> 
+      <a href="/downloads/Equalizer-0.1.tar.gz">Local source tarball</a><br>
       <a href="http://prdownloads.sourceforge.net/equalizer/Equalizer-0.1.tar.gz?download">SourceForge mirror</a><br>
     </td>
     <td></td>

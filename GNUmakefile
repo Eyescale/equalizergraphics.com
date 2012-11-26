@@ -131,6 +131,7 @@ FILES = \
 	documents/RelNotes/RelNotes_1.3.5.html \
 	documents/RelNotes/RelNotes_1.3.6.html \
 	documents/RelNotes/RelNotes_1.4.0.html \
+	documents/RelNotes/RelNotes_1.4.1.html \
 	documents/glAsync/CHANGELOG \
 	documents/glAsync/annotated.html \
 	documents/glAsync/classglAsync_1_1Thread-members.html \

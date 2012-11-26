@@ -4,6 +4,8 @@
 #include "header.shtml"
 
 <ul>
+  <li><b>27. November 2012</b> <a href="/documents/RelNotes/RelNotes_1.4.1.html">Released Version
+      1.4.1</a>.</li>
   <li><b>7. September 2012</b> <a href="/news/Release_1.4.html">Released Version
       1.4</a>.</li>
   <li><b>20. April 2012</b> <a href="/documents/RelNotes/RelNotes_1.2.1.html">Released Version
@@ -44,7 +46,7 @@
     the <a href="http://www.ifi.uzh.ch/vmml/">VMML</a></li>
   <li><b>17. April 2008</b> <a href="/news/Release_0.5.html">Released Version
       0.5</a>.</li>
-  <li><b>18. December 2007</b> 
+  <li><b>18. December 2007</b>
     <a href="/news/EqualizerNewsDecember07.html">Newsletter December'07</a></li>
   <li><b>28. October 2007</b> <a href="/news/Release_0.4.html">Released Version
       0.4</a>.</li>
@@ -74,10 +76,10 @@
   <li><b>6. July 2006</b> Added a
     a <a href="/documents/ProjectEqualizer.pdf">project description</a></li>
   <li><b>30. June 2006</b> Imported the existing Equalizer source code (and this
-    website) to the sourceforge 
+    website) to the sourceforge
     <a href="http://sourceforge.net/svn/?group_id=170962">subversion
       repository</a>.
-  <li><b>26. June 2006</b> Created and linked the sourceforge project 
+  <li><b>26. June 2006</b> Created and linked the sourceforge project
     page.</li>
   <li><b>19. May 2006</b> Added
     a <a href="/documents/ParallelRenderingSystems.pdf">white
@@ -85,7 +87,7 @@
   <li><b>19. May 2006</b> Released glAsync 0.11</li>
   <li><b>22. December 2005</b> Added a first version of the glAsync library</li>
   <li><b>29. November 2005</b> Added
-    an <a href="/documents/Equalizer.pdf">Equalizer overview 
+    an <a href="/documents/Equalizer.pdf">Equalizer overview
       presentation</a></li>
   <li><b>14. June 2005</b> Created developer mailing list</li>
   <li><b>7. June 2005</b> Created first version of this website</li>
