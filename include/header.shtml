@@ -69,9 +69,9 @@
         <br>
         <a href="http://www.equalizergraphics.com/gpu-sd">
 #ifdef S_GPUSD
-          <img src="/images/gpu-sd.png" alt="GPU-SD logo" class="active"></a>
+          <img src="/images/gpusd.png" alt="GPU-SD logo" class="active"></a>
 #else
-          <img src="/images/gpu-sd_g.png" alt="GPU-SD logo"></a>
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
 #endif
         <br>
 
