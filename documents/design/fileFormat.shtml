@@ -76,7 +76,7 @@ global
     EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO | OFF
     EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
     EQ_WINDOW_IATTR_HINT_GRAB_POINTER        OFF | [ON]
-    EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F 
+    EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F
     EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
     EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
     EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
@@ -177,7 +177,7 @@ server
                 }
             }
         }
-        
+
         observer # 0...n times
         {
             name     string
@@ -218,7 +218,7 @@ server
             name    string
             layout  layout-ref | OFF   # 1...n times
 
-            wall       
+            wall
             {
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
@@ -238,12 +238,12 @@ server
                 NV_group OFF | ON | unsigned
                 NV_barrier OFF | ON | unsigned
             }
-            
+
             segment # 1...n times
             {
                 channel  string
                 name     string
-                viewport [ viewport ] 
+                viewport [ viewport ]
                 eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
 
                 wall       # frustum description
@@ -262,7 +262,7 @@ server
                 }
                 swapbarrier {...}  # set as barrier on all dest compounds
         }
-        
+
         compound # 1-n times
         {
             name     string
@@ -288,6 +288,8 @@ server
                 damping float # 0: no damping, 1: no changes
                 boundary [ x y ]          # 2D tile boundary
                 boundary float            # DB range granularity
+                resistance [ x y ]        # 2D tile pixel delta
+                resistance float          # DB range delta
                 assemble_only_limit float # limit for using dest as src
             }
             DFR_equalizer # adapt ZOOM to achieve constant framerate
@@ -319,7 +321,7 @@ server
                 fov          [ float float ]
                 hpr          [ float float float ]
             }
-            
+
             swapbarrier {...}  # compounds with the same name sync swap
 
             child-compounds
@@ -337,7 +339,7 @@ server
         }
     }
 }
- 
+
 channel-ref:  'string' | '(' channel-segment-ref ')'
 channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
 canvas-ref:   'string' | 'index'
@@ -388,7 +390,7 @@ global
       canvas
       {
           swapbarrier // default for all segments
-          { 
+          {
               name "barrier-name" // sync's compound's window swap buffers
               // NV_swap_group (G-Sync) support
               NV_group    OFF | ON (1) | unsigned // use HW group n
@@ -484,7 +486,7 @@ global
       {
           type RSP
           interface "10.1.1.1"
-      } 
+      }
     </pre><!-- */ -->
   </li>
   <li><a href="/documents/design/subpixelCompound.html">Subpixel compounds:</a>
@@ -506,7 +508,19 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/186">Resistance:</a>
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer
+          {
+              mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+              resistance [ x y ] | float  # x,y: minimum pixel delta for 2D, float: range
+          }
+      }
+    </pre><!-- */ -->
+  </li>
   <li>Launch parameter cleanup after 0.9 changed launch parameters to:
     <!-- /* --><pre>
       global
@@ -525,7 +539,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
    <li>Local named pipe communcation support added:
     <!-- /* --><pre>
       global
@@ -641,7 +655,7 @@ global
             name   string
             layout string
 
-            wall       
+            wall
             {
                     bottom_left  [ float float float ]
                     bottom_right [ float float float ]
@@ -654,12 +668,12 @@ global
                     fov          [ float float ]
                     hpr          [ float float float ]
             }
-            
+
             segment # 1...n times
             {
                 channel  string
                 name     string
-                viewport [ viewport ] 
+                viewport [ viewport ]
 
                 wall       # frustum description
                 {
@@ -690,7 +704,7 @@ global
   <li><a href="/documents/design/swapBarrier.html">NV_swap_group (G-Sync)
       support</a> added:
     <!-- /* --><pre>
-      swapbarrier 
+      swapbarrier
       {
          NV_group   OFF | ON | unsigned
          NV_barrier OFF | ON | unsigned
@@ -703,7 +717,7 @@ global
       compound
       {
           zoom     [ float float ]         # up/downscale of parent pvp
-          loadBalancer 
+          loadBalancer
           {
              mode DFR
              framerate float
@@ -714,7 +728,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
   <li>FBO Support added:
     <!-- /* --><pre>
       global
@@ -734,7 +748,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
   <li>Easier thread model selection added:
     <!-- /* --><pre>
       global
@@ -768,18 +782,18 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
   <li>Load-Balancing added:
     <!-- /* --><pre>
       compound
       {
-          loadBalancer 
+          loadBalancer
           {
                mode [ 2D | DB | VERTICAL | HORIZONTAL ]
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
   <li>Added during implementation of
     the <a href="/documents/design/statisticsOverlay.html">Statistics
       Overlay</a>:
@@ -796,7 +810,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
   <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> added:
     <!-- /* --><pre>
       global
@@ -812,7 +826,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
 
   <li>Configurable launch command argument quotes were added after v0.4.1:
     <!-- /* --><pre>
@@ -834,7 +848,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
 
   <li><a href="/documents/design/pixelCompound.html">Pixel Decompositions</a>
     added:
@@ -844,7 +858,7 @@ global
           pixel    [ int int int int ]     # pixel decomposition (x y w h)
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
 
   <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
     added:
@@ -853,7 +867,7 @@ global
       {
           EQ_PIPE_IATTR_HINT_THREAD   off | on
       }
-    
+
       pipe
       {
           attributes
@@ -862,7 +876,7 @@ global
           }
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
 
   <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
     <!-- /* --><pre>
@@ -912,7 +926,7 @@ global
           eye      [ CYCLOP LEFT RIGHT ]   # monoscopic or stereo view
       }
     </pre><!-- */ -->
-  </li>  
+  </li>
 
   <li><a href="/documents/design/statistics.html">Statistics Interface</a>
     added:
@@ -942,8 +956,8 @@ global
           ...
       }
     </pre><!-- */ -->
-  </li>  
-  
+  </li>
+
   <li><a href="/documents/design/subpixelCompound.html">Subpixel Decompositions</a>
     added:
     <!-- /* --><pre>
@@ -952,8 +966,8 @@ global
           subpixel    [ int int ]     # subpixel decomposition (index size)
       }
     </pre><!-- */ -->
-  </li>  
-  
+  </li>
+
 </ul>
 
 #include "footer.shtml"
