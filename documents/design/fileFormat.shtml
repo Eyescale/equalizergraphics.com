@@ -352,6 +352,19 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/186">Resistance for
+    2D load-balancers</a> added:
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer
+          {
+              mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+              resistance [ x y ] | float  # x,y: minimum pixel delta for 2D, float: range
+          }
+      }
+    </pre><!-- */ -->
+  </li>
   <li><a href="https://github.com/Eyescale/Equalizer/issues/151">Mouse
       capture/grab</a> added:
     <!-- /* --><pre>
@@ -505,18 +518,6 @@ global
           {
               mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
               boundary [ x y ] | float  # x,y: tile boundary for 2D, float: range
-          }
-      }
-    </pre><!-- */ -->
-  </li>
-  <li><a href="https://github.com/Eyescale/Equalizer/issues/186">Resistance:</a>
-    <!-- /* --><pre>
-      compound
-      {
-          load_equalizer
-          {
-              mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
-              resistance [ x y ] | float  # x,y: minimum pixel delta for 2D, float: range
           }
       }
     </pre><!-- */ -->
