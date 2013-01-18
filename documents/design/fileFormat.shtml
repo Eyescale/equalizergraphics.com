@@ -181,7 +181,10 @@ server
         observer # 0...n times
         {
             name     string
-            eye_base float
+            eye_base float   # convenience
+            eye_left   [ float float float ]
+            eye_cyclop [ float float float ]
+            eye_right  [ float float float ]
             focus_distance float
             focus_mode     fixed | relative_to_origin | relative_to_observer
         }
@@ -352,6 +355,16 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/196">Asymmetric eye position</a> added:
+    <!-- /* --><pre>
+        observer # 0...n times
+        {
+            eye_left   [ float float float ]
+            eye_cyclop [ float float float ]
+            eye_right  [ float float float ]
+        }
+    </pre><!-- */ -->
+  </li>
   <li><a href="https://github.com/Eyescale/Equalizer/issues/186">Resistance for
     2D load-balancers</a> added:
     <!-- /* --><pre>
