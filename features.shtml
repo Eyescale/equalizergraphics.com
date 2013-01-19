@@ -54,17 +54,25 @@
   <li><div class="box">0.1</div>
     <a href="/documents/design/immersive.html">Active and passive stereo
       rendering</a></li>
-  <li><div class="box">0.3</div>
-    <a href="/documents/design/anaglyph.html">Anaglyphic stereo
-      rendering</a></li>
-  <li><div class="box">0.1</div>
-    <a href="/documents/design/immersive.html">Head tracking</a> for immersive
-    installations</li>
-  <li><div class="box">0.9</div>
-    <a href="/documents/design/immersive.html#HMD">HMD support</a><li>
-  <li><div class="box">0.9</div>
-    <a href="/documents/design/immersive.html#observers">Multiple 
-      observers</a> in immersive environments</li>
+  <ul class="none">
+    <li><div class="box">0.3</div>
+      <a href="/documents/design/anaglyph.html">Anaglyphic stereo
+        rendering</a></li>
+    <li><div class="box">0.1</div>
+      <a href="/documents/design/immersive.html">Head tracking</a> for immersive
+      installations</li>
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/immersive.html#HMD">HMD support</a><li>
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/immersive.html#observers">Multiple
+        observers</a> in immersive environments</li>
+    <li><div class="box">1.2</div>
+      <a href="/documents/design/immersive.html#focal">Dynamic focus
+        distance</a> for arbitrary focal plane.</li>
+    <li><div class="box">git</div>
+      <a href="https://github.com/Eyescale/Equalizer/issues/196">Asymmetric eye
+      position</a></li>
+  </ul>
   <li><div class="box">0.1</div>
     <a href="/documents/design/swapBarrier.html">Software swapbarrier</a> for
     synchronization of multiple displays</li>
@@ -171,9 +179,14 @@
     Orthographic frustum support</li>
   <li><div class="box">0.9</div>
     <a href="/documents/design/view.html">Canvas and layout API</a></li>
-  <li><div class="box">0.9</div>
-    <a href="/documents/design/view.html">Application-specified frusta</a> for
+  <ul class="none">
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/view.html">Application-specified frusta</a> for
       destination views</li>
+    <li><div class="box">git</div>
+      <a href="https://github.com/Eyescale/Equalizer/issues/194">Application-specified
+        frusta</a> for segments</li>
+  </ul>
   <li><div class="box">0.3</div>
     <a href="/documents/design/nonthreaded.html">Nonthreaded rendering</a> for
     non-threadsafe UI toolkits</li>
@@ -218,7 +231,7 @@
     RDMA (native InfiniBand) connection</li>
   <ul>
     <li><div class="box">1.1.7</div>Linux</li>
-    <li><div class="box">TBD</div>Windows</li>
+    <li><div class="box">git</div>Windows</li>
   </ul>
   <li><div class="box">0.9.2</div>
     <a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
