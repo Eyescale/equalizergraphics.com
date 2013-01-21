@@ -52,6 +52,12 @@
 
 <h2>Third Party</h2>
 <ul>
+  <li><a href="http://febretpository.googlecode.com/svn/site/publications/SPIE13Paper-revised.pdf">CAVE2:
+      A Hybrid Reality Environment for Immersive Simulation and Information
+      Analysis</a>. Alessandro Febretti, Arthur Nishimoto, Terrance Thigpen,
+    Jonas Talandis, Lance Long, JD Pirtle, Tom Peterka, Alan Verlo, Maxine
+    Brown, Dana Plepys, Dan Sandin, Luc Renambot, Andrew Johnson, Jason
+    Leigh. SPIE 2013.</li>
   <li><a href="http://hal.inria.fr/docs/00/65/79/28/PDF/duchene-sda2012.pdf">A
       stereoscopic movie player with real-time content adaptation to the display
       geometry</a>. Sylvain Duchene, Martin Lambers, Frederic
