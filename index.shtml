@@ -7,7 +7,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg" 
+  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg"
                                          alt="Cross-Segment Load-Balancing"></a>
   <div class="label">Cross-Segment Load-Balancing</div>
 </div>
@@ -21,7 +21,7 @@
 </p>
 <p>
   Equalizer drives the world's most advanced visualization systems, for example
-  an ultra-high resolution CAVE driven by 16 4k projectors, a 72-tile stereo
+  an ultra-high resolution CAVE driven by 24 4k projectors, a 72-tile stereo
   display walls as well as scalability clusters for interactive raytracing using
   hundreds of nodes.
 </p>

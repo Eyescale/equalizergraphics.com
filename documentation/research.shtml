@@ -8,6 +8,9 @@
 
 <h2>Core Team</h2>
 <ul>
+  <li><a href="http://www.zora.uzh.ch/62015/1/Makhinya.pdf">Performance
+      Challenges in Distributed Rendering Systems</a>. Maxim
+    Makhinya. Dissertation.</li>
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/Multiresolution-framework-kdtrees/efficientkd.pdf">An
       efficient multi-resolution framework for high quality interactive
       rendering of massive point clouds using multi-way kd-trees</a>. Prashant
