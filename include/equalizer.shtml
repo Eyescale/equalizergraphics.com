@@ -114,11 +114,11 @@
 #endif
               >Developer</a></p>
 
-        <p><a href="/documentation/research.html"
-#ifdef S_DOCUMENTATION_RESEARCH
+        <p><a href="/documentation/publications.html"
+#ifdef S_DOCUMENTATION_PUBLICATIONS
               class="used"
 #endif
-              >Research</a></p>
+              >Publications</a></p>
 
         <p><a href="/relnotes.html"
 #ifdef S_DOCUMENTATION_RELNOTES

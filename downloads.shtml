@@ -14,7 +14,7 @@
   latest <a href="/downloads/major.html">major release</a>.
 </p>
 <p>
-  The project is hosted on 
+  The project is hosted on
   <a href="https://github.com/Eyescale/Equalizer">github</a>. If
   you are using Equalizer, please fill out our <a href="/survey.html">survey</a>
   and receive a free download of the latest Equalizer programming guide, also
@@ -60,7 +60,7 @@
     PPA</a>:
 </p>
 <pre>
-  sudo add-apt-repository ppa:eilemann/equalizer/ubuntu
+  sudo add-apt-repository ppa:eilemann/equalizer
   sudo apt-get install equalizer140
 </pre>
 

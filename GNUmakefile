@@ -18,7 +18,7 @@ FILES = \
 	documentation/user/configuration.html \
 	documentation/user/configTool.html \
 	documentation/user/synchronization.html \
-	documentation/research.html \
+	documentation/publications.html \
 	downloads.html \
 	$(wildcard downloads/*.gz) \
 	$(wildcard downloads/*.exe) \

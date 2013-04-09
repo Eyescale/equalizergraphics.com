@@ -1,6 +1,6 @@
 #define S_DOCUMENTATION
-#define S_DOCUMENTATION_RESEARCH
-#define PAGE Research
+#define S_DOCUMENTATION_PUBLICATIONS
+#define PAGE Publications
 
 #include "header.shtml"
 

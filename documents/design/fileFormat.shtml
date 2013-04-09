@@ -187,6 +187,7 @@ server
             eye_right  [ float float float ]
             focus_distance float
             focus_mode     fixed | relative_to_origin | relative_to_observer
+            opencv_camera [AUTO] | OFF | ON | integer  # head tracker
         }
 
         layout  # 0...n times
