@@ -303,6 +303,11 @@ server
             }
             framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
             monitor_equalizer {}   # set frame zoom when monitoring other views
+            tile_equalizer
+            {
+                name string
+                size [ int int ]     # tile size
+            }
 
             attributes
             {
@@ -340,6 +345,15 @@ server
             {
                 name string # corresponding output frame
             }
+            outputtiles
+            {
+                name   string
+                size [ int int ]     # tile size
+            }
+            inputtiles
+            {
+                name string # corresponding output tiles
+            }
         }
     }
 }
@@ -356,6 +370,26 @@ observer-ref: 'string' | 'index'
 <a name="changes"></a>
 <h2>Changes</h2>
 <ul>
+  <li>Tile compounds added:
+    <!-- /* --><pre>
+      compound
+      {
+          tile_equalizer
+          {
+              name string
+              size [ int int ]     # tile size
+          }
+          outputtiles
+          {
+              name   string
+              size [ int int ]     # tile size
+          }
+          inputtiles
+          {
+              name string # corresponding output tiles
+          }
+      }
+    </pre><!-- */ -->
   <li><a href="https://github.com/Eyescale/Equalizer/issues/196">Asymmetric eye position</a> added:
     <!-- /* --><pre>
         observer # 0...n times
