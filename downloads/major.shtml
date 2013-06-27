@@ -6,24 +6,29 @@
 #include "header.shtml"
 
 <table>
-  <tr><th>Version</th><th>Links</th><th>Precompiled Binary Packages</th><th>Major Feature(s)</th></tr>
+  <tr><th>Version</th><th>Links</th><th>Precompiled Binary Packages</th><th>Major Features</th></tr>
 
   <tr>
     <a name="1.6"></a>
     <td><b>1.6</b></td>
     <td nowrap>
+      Sources:
+      <ul>
+        <li><a href="/downloads/Buildyard-2013.6.0.tar.gz">Buildyard</a></li>
+        <li><a href="/downloads/Equalizer-1.6.0.tar.gz">Equalizer</a></li>
+        <li><a href="/downloads/Collage-1.0.0.tar.gz">Collage</a></li>
+        <li><a href="/downloads/Lunchbox-1.8.0.tar.gz">Lunchbox</a></li>
+        <li><a href="/downloads/hwsd-1.0.0.tar.gz">hwsd</a></li>
+        <li><a href="/downloads/GLStats-0.1.0.tar.gz">GLStats</a></li>
+        <li><a href="/downloads/VMMLib-1.6.1.tar.gz">vmmlib</a>
+      </ul>
       Release Notes:
-      <a href="http://eyescale.github.io/Equalizer-1.6/index.html">Equalizer</a>,
-      <a href="http://eyescale.github.io/Collage-1.0/index.html">Collage</a>,
-      <a href="http://eyescale.github.io/Lunchbox-1.8/RelNotes.html">Lunchbox</a>,
-      <a href="http://eyescale.github.io/hwsd-1.0/index.html">hwsd</a><br>
-      <a href="/downloads/Buildyard-2013.6.0.tar.gz">Buildyard</a><br>
-      <a href="/downloads/Equalizer-1.6.0.tar.gz">Equalizer</a><br>
-      <a href="/downloads/Collage-1.0.0.tar.gz">Collage</a><br>
-      <a href="/downloads/Lunchbox-1.8.0.tar.gz">Lunchbox</a><br>
-      <a href="/downloads/hwsd-1.0.0.tar.gz">hwsd</a><br>
-      <a href="/downloads/GLStats-0.1.0.tar.gz">GLStats</a><br>
-      <a href="/downloads/VMMLib-1.6.1.tar.gz">vmmlib</a>
+      <ul>
+        <li><a href="http://eyescale.github.io/Equalizer-1.6/index.html">Equalizer</a>
+        <li><a href="http://eyescale.github.io/Collage-1.0/index.html">Collage</a>
+        <li><a href="http://eyescale.github.io/Lunchbox-1.8/RelNotes.html">Lunchbox</a>
+        <li><a href="http://eyescale.github.io/hwsd-1.0/index.html">hwsd</a></li>
+      </ul>
     </td>
     <td>
       <hr><center>1.6</center><br>
