@@ -14,11 +14,11 @@ FILES = \
 	contributions.html \
 	documentation.html \
 	documentation/developer.html \
-	documentation/user.html \
-	documentation/user/configuration.html \
-	documentation/user/configTool.html \
-	documentation/user/synchronization.html \
 	documentation/publications.html \
+	documentation/user.html \
+	documentation/user/configTool.html \
+	documentation/user/configuration.html \
+	documentation/user/synchronization.html \
 	downloads.html \
 	$(wildcard downloads/*.gz) \
 	$(wildcard downloads/*.exe) \
