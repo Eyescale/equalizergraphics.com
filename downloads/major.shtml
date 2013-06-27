@@ -9,6 +9,32 @@
   <tr><th>Version</th><th>Links</th><th>Precompiled Binary Packages</th><th>Major Feature(s)</th></tr>
 
   <tr>
+    <a name="1.6"></a>
+    <td><b>1.6</b></td>
+    <td nowrap>
+      Release Notes:
+      <a href="http://eyescale.github.io/Equalizer-1.6/index.html">Equalizer</a>,
+      <a href="http://eyescale.github.io/Collage-1.0/index.html">Collage</a>,
+      <a href="http://eyescale.github.io/Lunchbox-1.8/RelNotes.html">Lunchbox</a>,
+      <a href="http://eyescale.github.io/hwsd-1.0/index.html">hwsd</a><br>
+      <a href="/downloads/Buildyard-2013.6.0.tar.gz">Buildyard</a><br>
+      <a href="/downloads/Equalizer-1.6.0.tar.gz">Equalizer</a><br>
+      <a href="/downloads/Collage-1.0.0.tar.gz">Collage</a><br>
+      <a href="/downloads/Lunchbox-1.8.0.tar.gz">Lunchbox</a><br>
+      <a href="/downloads/hwsd-1.0.0.tar.gz">hwsd</a><br>
+      <a href="/downloads/GLStats-0.1.0.tar.gz">GLStats</a><br>
+      <a href="/downloads/VMMLib-1.6.1.tar.gz">vmmlib</a>
+    </td>
+    <td>
+      <hr><center>1.6</center><br>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
+      <a href="https://github.com/Eyescale/portfiles#readme"><img src="/images/mac.png" alt="Mac OS X"></a>
+    </td>
+    <td>Separate Collage library, VRPN and OpenCV head tracking, network device
+      discovery.</td>
+  </tr>
+
+  <tr>
     <a name="1.4"></a>
     <td><b>1.4</b></td>
     <td nowrap>
