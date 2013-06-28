@@ -6,34 +6,20 @@
 #include "header.shtml"
 
 <h2>Git Repository</h2>
-
+<p><img src="https://travis-ci.org/Eyescale/Equalizer.png"></p>
 <p>
   The git repository gives access to the latest source code, and should be used
   by developers modifying the Equalizer source code or interested in the latest
-  features. The tree can be checked out from
-  <a href="https://github.com/Eyescale/Equalizer">github</a>. We try to keep the
-  git master stable and encourage developers to use git, or at least a developer
-  version.
+  features. The easiest way is to build using Buildyard, as described in
+  the <a href="https://github.com/Eyescale/Equalizer#readme">Readme</a>. We try
+  to keep the git master stable and encourage developers to use git, or at least
+  a developer version.
 </p>
 <p>
   We encourage you to fork the repository on github, code away and push the
   changes to your fork. If we don't pick them up automatically within a week,
   please send us a pull request.
 </p>
-<p>
-  Versions up to and including 1.0 were developed using a Subversion repository
-  hosted by sourceforge</a>.
-</p>
-<p>
-  <!-- A <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/">local,
-       read-only copy</a> is available for browsing the source code.--> The
-  repository has the following layout and clone size:
-</p>
-<!-- /* --><pre>
-49M Equalizer
-272M EqDocs
-939M equalizergraphics.com
-</pre><!-- */ -->
 
 <h2>Source Code Analysis</h2>
 <div class="float_left">
@@ -52,13 +38,6 @@
   </script>
 </div>
 <div class="flush_float"></div>
-
-<h2>Build Dashboard</h2>
-<iframe src="http://my.cdash.org/index.php?project=Equalizer"
-        frameborder="0" width="100%" height="1400"
-        style="overflow:hidden">
-</iframe>
-
 
 #include "footer.shtml"
 <!-- $Id$ -->
