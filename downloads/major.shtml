@@ -5,6 +5,11 @@
 
 #include "header.shtml"
 
+<p>
+  The fastest way to build all the dependent projects from source is to download
+  the appropriate Buildyard snapshot below, unpack it and run 'make Equalizer'
+  from the unpacked folder.
+</p>
 <table>
   <tr><th>Version</th><th>Links</th><th>Precompiled Binary Packages</th><th>Major Features</th></tr>
 
