@@ -169,6 +169,7 @@ server
                         attributes
                         {
                             hint_statistics     OFF | FASTEST [ON] | NICEST
+                            dump_image          string
                         }
                     }
                 }
