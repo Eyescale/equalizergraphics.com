@@ -248,7 +248,7 @@ $(TARGETS):
 clean:
 	rm -rf $(TARGETS)
 
-install: $(SITEMAP) srcbuild
+install: $(SITEMAP)
 	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 install_web: $(SITEMAP)
@@ -266,28 +266,8 @@ $(SITEMAP): update_and_targets
 update_and_targets: update
 	 @$(MAKE) all
 
-update: srcupdate nightlyupdate
+update:
 	rm -f changes_log.html
-
-srcupdate: this_up src_up docs_up wiki_up
-
-this_up:
-	-$(GIT) pull
-src_up:
-	-cd ../Equalizer; $(GIT) pull
-docs_up:
-	-cd ../EqDocs; $(GIT) pull
-wiki_up:
-	-cd Equalizer.wiki; $(GIT) pull
-
-nightlyupdate:
-	@mkdir -p $(TARGET)/downloads/nightly
-	-rsync -avx eyescale.local:Software/equalizer/release/Equalizer-\* $(TARGET)/downloads/nightly
-
-srcbuild:
-	$(MAKE) BUILD=Release -C ../.. Lunchbox-doxygen
-	$(MAKE) BUILD=Release -C ../.. gpu-sd-doxygen
-	$(MAKE) BUILD=Release -C ../.. Equalizer-package
 
 docset:
 	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
