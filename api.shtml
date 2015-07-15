@@ -2,19 +2,19 @@
 #define S_HOME_API
 #define PAGE About
 #define SUBPAGE Parallel Programming Interface
- 
+
 #define KEYWORDS "Parallel Programming Interface, multithreaded GLUT, parallel OpenGL"
 
 #include "header.shtml"
 
 <h2>Sequel</h2>
 <p>
-  <a href="/documents/Developer/API/sequel/namespaceseq.html">Sequel</a>
+  <a href="http://eyescale.github.io/Equalizer-1.10/namespaceseq.html#details">Sequel</a>
   provides an abstraction to the Equalizer parallel rendering framework which
   allows rapid development of clustered multi-GPU applications. The central
   interface of Sequel is provided by the two
-  classes <a href="/documents/Developer/API/Sequel-1.3.5/classseq_1_1Application.html">Application</a>
-  and <a href="/documents/Developer/API/Sequel-1.3.5/classseq_1_1Renderer.html">Renderer</a>
+  classes <a href="http://eyescale.github.io/Equalizer-1.10/classseq_1_1_application.html">Application</a>
+  and <a href="http://eyescale.github.io/Equalizer-1.10/classseq_1_1_renderer.html">Renderer</a>
   which provide a streamlined interface for parallel rendering applications.
 </p>
 
@@ -22,7 +22,7 @@
 <p>
   Equalizer provides a distributed, scalable, multipipe,
   multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
-  <a href="/documents/Developer/API/namespaceeq.html#_details">programming
+  <a href="http://eyescale.github.io/Equalizer-1.10/namespaceeq.html#details">programming
   interface</a>.
 </p>
 <p>
@@ -41,7 +41,7 @@
   applications for parallel rendering on visualization clusters.
 </p>
 <div class="float_right"><a href="/images/executionFlow.png">
-    <img src="images/executionFlow-small.jpg" 
+    <img src="images/executionFlow-small.jpg"
          alt="Execution flow of a single-threaded and a multi-GPU application">
 </a></div>
 <p>

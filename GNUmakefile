@@ -234,7 +234,7 @@ SITEMAP  = $(TARGET)/sitemap.xml.gz
 
 GIT ?= git
 MD2HTML ?= markdown_py-2.6 -x toc -x fenced_code
-CPP_HTML = gcc -xc -ansi -E -C -Iinclude \
+CPP_HTML = gcc -xc -ansi -E -C -Iinclude -Wno-extra-tokes -Wno-invalid-pp-token\
            -DUPDATE="`$(GIT) log -1 $< | grep 'Date:' | sed 's/Date:   //'`" \
            -DCHANGEURL=\"https://github.com/Eyescale/equalizergraphics.com/commits/master/$<\" \
            -DFULLURL=$(@:$(TARGET)%=http://www.equalizergraphics.com%) \
@@ -313,7 +313,7 @@ documents/design/%.shtml: Equalizer.wiki/%.md
 	$(MD2HTML) $< | sed 's/\<h1 .*//' | sed 's/label{[a-zA-Z]*}//'>> $@
 	@cat include/mdFooter.shtml >> $@
 
-gpu-sd/index.shtml: ../gpusd/README.md
+gpu-sd/index.shtml: ../hwsd/README.md
 	@mkdir -p $(@D)
 	@head -1 $< | sed 's/# /#define TITLE /' > $@
 	@echo "#define S_GPUSD" >> $@
