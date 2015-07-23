@@ -7,7 +7,7 @@
 <p>
   If you are working on an application based on Equalizer,
   please
-  <a href="mailto:eile@equalizergraphics.com?subject=New Equalizer Application">drop us an email</a> 
+  <a href="mailto:eile@equalizergraphics.com?subject=New Equalizer Application">drop us an email</a>
   and we will add your program to the list.
 </p>
 
@@ -16,7 +16,7 @@
 
 <div class="float_right">
   <a href="/applications/images/RTTScale.png">
-    <img src="/applications/images/RTTScale-small.jpg" 
+    <img src="/applications/images/RTTScale-small.jpg"
          alt="RTT Scale"></a>
   <div class="label">RTT Scale</div>
   <div class="label">
@@ -38,7 +38,7 @@
 
 <div class="float_right">
   <a href="/applications/images/bino.jpg">
-    <img src="/applications/images/bino-small.jpg" 
+    <img src="/applications/images/bino-small.jpg"
          alt="Bino video player"></a>
   <div class="label">Bino video player<br><br>Film (c) copyright 2008<br>Blender
     Foundation<br>www.bigbuckbunny.org</div>
@@ -66,7 +66,7 @@
 <h2>Omegalib</h2>
 <div class="float_right">
   <a href="/applications/images/omegalib.jpg">
-    <img src="/applications/images/omegalib-small.jpg" 
+    <img src="/applications/images/omegalib-small.jpg"
          alt=""></a>
   <div class="label">An omegalib application rendering a<br>structural
   model of a bridge in the CAVE2.</div>
@@ -102,7 +102,7 @@
 
 <div class="float_right">
   <a href="/applications/images/gpu_flow_001.png">
-    <img src="/applications/images/gpu_flow_001-small.jpg" 
+    <img src="/applications/images/gpu_flow_001-small.jpg"
          alt="GPU-based Dynamic Flow Visualization"></a>
   <div class="label">GPU-based Flow Visualization</div>
 </div>
@@ -115,7 +115,7 @@
 </p>
 <div class="float_left">
   <a href="/applications/images/clay_bunny.png">
-    <img src="/applications/images/clay_bunny-small.jpg" 
+    <img src="/applications/images/clay_bunny-small.jpg"
          alt="Surface Evolution"></a>
   <div class="label">Surface Evolution</div>
 </div>
@@ -125,7 +125,7 @@
   introducing head and object tracking to the user interface.
 </p>
 <p>
-  The 
+  The
   <a href="http://www.cg.informatik.uni-siegen.de/Research/15_Particles/04_Flow">flow-vis</a>
   module visualizes a typhoon simulated by
   the <a href="http://www.dkrz.de/dkrz/intro_s">DKRZ Hamburg</a>. Direct
@@ -157,7 +157,7 @@
 <h2>eqSmart: Terrain rendering</h2>
 <div class="float_right">
   <a href="/screenshots/wall.png">
-    <img src="/screenshots/wall-small.jpg" 
+    <img src="/screenshots/wall-small.jpg"
          alt="eqSmart"></a>
   <div class="label">eqSmart</div>
 </div>
@@ -175,29 +175,26 @@
 <h2>eqOgre and eqOgreBullet: Ogre/Equalizer/Bullet integration</h2>
 <div class="float_right">
   <a href="/applications/images/eqOgre.png">
-    <img src="/applications/images/eqOgre.png" 
+    <img src="/applications/images/eqOgre-small.jpg"
          alt="eqOgre"></a>
   <div class="label">eqOgre</div>
 </div>
 <div class="float_right">
-  <a href="/applications/images/eqOgreBullet.png">
-    <img src="/applications/images/eqOgreBullet.png" 
-         alt="eqOgreBullet"></a>
-  <div class="label">eqOgreBullet</div>
-</div>
-<div class="float_right">
   <a href="/applications/images/vrCrazyMachines.png">
-    <img src="/applications/images/vrCrazyMachines.png" 
+    <img src="/applications/images/vrCrazyMachines-small.jpg"
          alt="vrCrazyMachines"></a>
+  <a href="/applications/images/eqOgreBullet.png">
+    <img src="/applications/images/eqOgreBullet-small.jpg"
+         alt="eqOgreBullet"></a>
   <div class="label">eqOgreBullet used to build a game at the virtual reality cave at the University of Siegen. </div>
 </div>
 <p>
   <a href="https://github.com/kepakiano/eqOgre/">eqOgre</a> is a fully functional integration of the <a href="http://www.ogre3d.org/">Ogre3D
-  graphics engine</a> with Equalizer. 
+  graphics engine</a> with Equalizer.
 </p>
 <p>
-  <a href="https://github.com/kepakiano/eqOgreBullet/">eqOgreBullet</a> adds 
-  the <a href="http://bulletphysics.org"> Bullet physics library to eqOgre
+  <a href="https://github.com/kepakiano/eqOgreBullet/">eqOgreBullet</a> adds
+  the <a href="http://bulletphysics.org">Bullet physics library</a> to eqOgre
   making it useful as basis for a game engine.
 </p>
 
