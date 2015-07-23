@@ -172,25 +172,35 @@
 </p>
 
 <a name="eqOgre"></a>
-<h2>eqOgre: Ogre/Equalizer integration</h2>
+<h2>eqOgre and eqOgreBullet: Ogre/Equalizer/Bullet integration</h2>
 <div class="float_right">
-  <a href="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s1600-h/1-window.jpg">
-    <img src="http://bp1.blogger.com/_rKQaU2GWxzQ/R0go6L7reeI/AAAAAAAAABM/XIPh2L4c10I/s400/1-window.jpg" 
-         alt="eqOgre" width="200"></a>
+  <a href="/applications/images/eqOgre.png">
+    <img src="/applications/images/eqOgre.png" 
+         alt="eqOgre"></a>
   <div class="label">eqOgre</div>
 </div>
+<div class="float_right">
+  <a href="/applications/images/eqOgreBullet.png">
+    <img src="/applications/images/eqOgreBullet.png" 
+         alt="eqOgreBullet"></a>
+  <div class="label">eqOgreBullet</div>
+</div>
+<div class="float_right">
+  <a href="/applications/images/vrCrazyMachines.png">
+    <img src="/applications/images/vrCrazyMachines.png" 
+         alt="vrCrazyMachines"></a>
+  <div class="label">eqOgreBullet used to build a game at the virtual reality cave at the University of Siegen. </div>
+</div>
 <p>
-  <a href="http://rickarkin.blogspot.com/">eqOgre</a> is an integration of the <a href="http://www.ogre3d.org/">Ogre3D
-  graphics engine</a> with Equalizer. It is a first version of such an
-  integration, and does not yet support database decomposition or data updates.
+  <a href="https://github.com/kepakiano/eqOgre/">eqOgre</a> is a fully functional integration of the <a href="http://www.ogre3d.org/">Ogre3D
+  graphics engine</a> with Equalizer. 
 </p>
 <p>
-  eqOgre is looking for a new owner! The latest version can be found
-  <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6-rc1/contrib/eqOgre/">here</a>.
-  If you are willing to maintain this example, please 
-  <a href="mailto:info@equalizergraphics.com?subject=eqOgre">drop us an
-  email</a>.
+  <a href="https://github.com/kepakiano/eqOgreBullet/">eqOgreBullet</a> adds 
+  the <a href="http://bulletphysics.org"> Bullet physics library to eqOgre
+  making it useful as basis for a game engine.
 </p>
+
 <div class="flush_float"></div>
 
 #include "footer.shtml"
