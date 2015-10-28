@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1MTQueue.html#a27fa4ddc2765f65509668e0dd7e16a21" title="Retrieve and pop the front element from the queue, may block." alt="" coords="255,5,540,35"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1MTQueue.html#a962dee177ee3c50ecee1f487b310eb4d" title="Push a new element to the back of the queue." alt="" coords="251,59,543,90"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1MTQueue.html#a6ab68c77d53d6dc7fe266749218eb734" title="Push a new element to the front of the queue." alt="" coords="234,114,560,145"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1Monitor.html#ac0b3abc6902b8248d561e325d9dd6eba" title="Block until the monitor has the given value." alt="" coords="273,169,521,199"/>
+<area shape="rect" id="node11" href="$classco_1_1base_1_1Monitor.html#a0165a8fc38f3a52c0cc4fda1ccd987c0" title="Block until the monitor has a value greater or equal to the given value." alt="" coords="274,223,521,254"/>
+<area shape="rect" id="node13" href="$classco_1_1base_1_1Monitor.html#abe246cf486ac7e345e6cad284871c7de" title="Block until the monitor has a value less or equal to the given value." alt="" coords="275,278,520,309"/>
+<area shape="rect" id="node15" href="$classco_1_1base_1_1Monitor.html#a697692e0458da6081bf3e7141c4ee918" title="Block until the monitor has not the given value." alt="" coords="274,333,521,363"/>
+<area shape="rect" id="node17" href="$classco_1_1base_1_1MTQueue.html#a1655536c9f2bf7db76dde9f26c938346" title="Wait for the size to be at least the number of given elements." alt="" coords="241,387,554,418"/>
+</map>

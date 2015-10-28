@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1Buffer.html#af11b17b0addbd13ff11f1b9ff711f4aa" title="Append elements to the buffer, increasing the size." alt="" coords="230,5,415,35"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1Buffer.html#ab394923fd663070ec104a642877cfaee" title="Ensure that the buffer contains at least newSize elements." alt="" coords="238,59,407,90"/>
+</map>

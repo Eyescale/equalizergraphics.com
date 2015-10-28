@@ -1,0 +1,15 @@
+
+# Contact info submission
+
+url: equalizergraphics.com/
+site_owner: Stefan Eilemann
+address1: 
+address2: 
+city: 
+state: 
+country: 
+postal_code: 
+phone_number: 
+display_email: eile@equalizergraphics.com
+site_name: 
+site_description: 

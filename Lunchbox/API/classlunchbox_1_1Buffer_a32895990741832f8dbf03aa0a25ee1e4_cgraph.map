@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1Buffer.html#a34125269bc80caa851afbb816f180931" title="Set the buffer size and malloc enough memory." alt="" coords="230,33,399,63"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1Buffer.html#a004d37da826ecee982a5fdf958e949f6" title="Ensure that the buffer contains at least newSize elements." alt="" coords="448,5,632,35"/>
+<area shape="rect" id="node7" href="$classlunchbox_1_1Buffer.html#ab344aba82be7d2ab62ccbe6df3b9b9a9" title="Set the size of the buffer without changing its allocation." alt="" coords="449,59,631,90"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1MTQueue.html#a120faa05f832034cb5b8c50283e0284d" title="Assign the values of another queue." alt="" coords="249,5,575,35"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1MTQueue.html#a27fa4ddc2765f65509668e0dd7e16a21" title="Retrieve and pop the front element from the queue, may block." alt="" coords="270,59,554,90"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1MTQueue.html#a962dee177ee3c50ecee1f487b310eb4d" title="Push a new element to the back of the queue." alt="" coords="266,114,558,145"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1MTQueue.html#a6ab68c77d53d6dc7fe266749218eb734" title="Push a new element to the front of the queue." alt="" coords="249,169,575,199"/>
+<area shape="rect" id="node11" href="$classco_1_1base_1_1MTQueue.html#ae5682dca8f74b346686074f7334dc600" title="Retrieve and pop the front element from the queue." alt="" coords="251,223,573,254"/>
+<area shape="rect" id="node13" href="$classco_1_1base_1_1MTQueue.html#aee5afddef6ce2ea5e4a4a1e66ca6c51e" title="Retrieve and pop the front element from the queue if it is not empty." alt="" coords="261,278,563,309"/>
+</map>

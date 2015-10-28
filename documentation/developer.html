@@ -1,0 +1,573 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>Developer</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documentation/developer.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documentation/developer.shtml" class="rule">Changed Wed Jul 15 13:32:30 2015 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<h2>Reference Documentation</h2>
+<!--<div class="float_right">
+  <a href="http://www.lulu.com/content/paperback-book/equalizer-10-programming-and-user-guide/10352563">
+    <img
+       src="http://www.lulu.com/services/buy_now_buttons/images/book_blue2.gif"
+       border="0"
+       alt="Support independent publishing: buy this book on Lulu.">
+  </a>
+</div>-->
+<p>
+  The Programming and User Guide is the official reference for the Equalizer
+  parallel rendering framework, similar to the OpenGL Red Book. You can obtain
+  it using one of the following options:
+</p>
+<ul>
+  <li>As a direct download, after filling out our <a href="/survey.html">online
+      survey</a>. This survey helps us to understand where and how Equalizer is
+      used, and to set priorities for the development.</li>
+  <li>As a
+    <a href="https://www.createspace.com/3943261">full-color paperback book</a>
+    from CreateSpace.</li>
+</ul>
+
+<p>
+  The <a href="http://eyescale.github.io">API Documentation</a> is the
+    reference guide for the official programming interface, similar to the
+    OpenGL Blue Book.
+</p>
+
+<h2>Generic Information</h2>
+<ul>
+  <li><a href="/documentation/user/configuration.html">Configuration</a>
+    explains automatic and static configuration.</li>
+  <li><a href="/documents/design/fileFormat.html">File Format</a> is the
+    reference documentation for the configuration files.</li>
+  <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
+    Programming</a> is a presentation explaining the concepts and scope of
+    the Equalizer API,
+    <a href="/documents/ParallelGraphicsProgramming.pdf">pdf</a> or
+    <a href="/documents/ParallelGraphicsProgramming.html">html</a>.</li>
+  <li><a href="/documents/Howtos/glutToEqualizer.html">Equalizer for GLUT
+      Developers</a> provides a mapping of commonly used GLUT functions to
+      their Equalizer counterparts</li>
+  <li><a href="/documents/design/environment.html">Environment
+        Variables</a> lists the variables used by Equalizer.</li>
+  <li><a href="/documents/design/taskMethods.html">Task Methods</a> lists
+    all task methods ('callbacks') and explains their purpose.</li>
+  <li><a href="/documents/design/configInit.html">Config Initialization
+      Sequence</a> shows the order in which the init and exit task methods are
+      executed during initialization and exit.</li>
+  <li><a href="/documents/design/objects.html">Distributed Objects</a>
+    provides an overview on how to implement static and versioned objects, which
+    can be instantiated on multiple nodes.</li>
+  <li><a href="/documents/design/images/codingStyle.png">codingStyle.png</a>
+    illustrates the C++ coding style used in Equalizer, to ensure a consistent
+    appearance for better readability.</li>
+  <li><a href="/documents/design/threads.html">Threads</a> is a description of
+    the individual threads in Equalizer and explains some thread synchronization
+    concepts.</li>
+</ul>
+
+<div class="flush_float"></div>
+<div class="float_right">
+  <img src="/images/teapots.png"
+       alt="2D, DB, DPlex, stereo and pixel decomposition">
+</div>
+<h2>Design Documentation</h2>
+<p>
+  The design documentation is technical documentation, specifications or other
+  information, typically for a specific, isolated feature. It is intended for
+  software developers, and generally not understandable without a technical
+  background of Equalizer. They are often moving targets, and the actual
+  implementation will diverge from the version-specific specification over time.
+</p>
+<p>
+  The documents are listed in the version they were last updated. For the
+  version they were first implemented please refer to
+  the <a href="/features.html">Feature List</a>.
+</p>
+
+<h3>Github 'master' version</h3>
+<p>
+  This information contains specification for features currently under
+  development in the subversion source code repository. Most likely, these
+  features will be release in the next version.
+</p>
+<ul>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues?labels=feature&milestone=12&page=1&state=closed">Feature
+      list on github</a>.</li>
+</ul>
+
+<h3>Version 1.4</h3>
+<ul>
+  <li><a href="/documents/Developer/API/Equalizer-1.4.0/index.html">1.4
+      API documentation</a></li>
+  <li><a href="/documents/design/asyncCompositing.html">Asynchronous
+      compositing</a> optimizing pixel data downloads and uploads.</li>
+  <li><a href="/documents/design/roi.html">Region of interest</a> optimization
+    for scalable rendering and load-balancing.</li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues?labels=feature&milestone=8&page=1&state=closed">Feature
+  list on github</a>.</li>
+</ul>
+
+<h3>Version 1.2</h3>
+<ul>
+  <li><a href="/documents/Developer/API/Equalizer-1.2/index.html">1.2
+      API documentation</a></li>
+  <li><a href="/documents/design/tileCompounds.html">Tile compounds</a>
+    using a pull-based task distribution for volume rendering and interactive
+    raytracing.</li>
+</ul>
+
+<h3>Version 1.0</h3>
+<ul>
+  <li><a href="/documents/Developer/API-0.9.3">1.0-beta API
+      documentation</a></li>
+  <li><a href="/documents/Developer/API-0.9.2">1.0-alpha API
+      documentation</a></li>
+  <li><a href="/documents/design/errorHandling.html">Error handling</a>
+      structures error reporting, mostly during initialization.</li>
+  <li><a href="/documents/design/stopFrames.html">Interruptible rendering</a>
+      allows applications to stop rendering on all pending frames.</li>
+  <li><a href="/documents/design/Capabilities.html">Rendering capabilities</a>
+      allow application-dependent deactivation of channels.</li>
+  <li><a href="/documents/design/admin.html">Administrative API</a>
+      for runtime configuration changes.</li>
+  <li><a href="/documents/design/stereoSwitch.html">Runtime stereo switching</a>
+    allows to change the rendering between mono and stereo at runtime, with
+    different scalability compounds.</li>
+  <li><a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
+    initialization and runtime.</li>
+  <li><a href="/documents/design/frameLoops.html">Independent frame loops</a>
+    for different views.</li>
+</ul>
+
+<h3>Version 0.9.1</h3>
+<ul>
+  <li><a href="/documents/Developer/API-0.9.1">0.9.1 API documentation</a></li>
+  <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
+      for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
+  <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range
+      Boundaries</a> for load-balancing.</li>
+  <li><a href="/documents/design/multicast.html">Data distribution and data
+      updates using reliable UDP multicast</a>.</li>
+  <li><a href="/documents/design/computeExtensions.html">CUDA and OpenCL
+      integration</a>.</li>
+</ul>
+
+<h3>Version 0.9</h3>
+<ul>
+  <li><a href="/documents/Developer/API-0.9">0.9 API documentation</a></li>
+  <li><a href="/documents/design/viewEqualizer.html">View Equalizer</a>
+    for cross-segment load balancing.</li>
+  <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
+      swapbarrier</a> for synchronization of multipipe displays.</li>
+  <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
+    the official interface to create binary plugins for data compression.</li>
+  <li><a href="/documents/design/view.html">Layout API</a>
+    provides a way to configure projection surfaces with logical layouts and
+    multiple observers.</li>
+  <li><a href="/documents/design/dynamicFrameResolution.html">Dynamic Frame
+    Resolution (DFR)</a> provides a constant framerate at the expense of visual
+    quality.</li>
+  <li><a href="/documents/design/floatingPointPipeline.html">Floating-point
+      pipeline</a> adds support for float16 and float32 visuals.</li>
+</ul>
+
+<h3>Version 0.6</h3>
+<ul>
+  <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a>
+    explains the statistics overlay.</li>
+</ul>
+
+<h3>Version 0.5</h3>
+<ul>
+  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> adds the
+    capability for off-screen rendering buffers.</li>
+  <li><a href="/documents/design/glExtensions.html">OpenGL Extension
+      Handling</a> explains how GLEW is used for OpenGL extensions.</li>
+  <li><a href="/documents/design/pixelCompound.html">Pixel Compounds</a>
+    divide the screen-space column-wise to all sources, and therefore have a
+    near-perfect load-balancing for fill-rate-bound applications.</li>
+  <li><a href="/documents/design/eventHandling.html">Event Handling</a>
+    explains the event handling model and implementation.</li>
+</ul>
+
+<h3>Version 0.4</h3>
+<ul>
+  <li><a href="/documents/design/volumeRendering.html">Volume Rendering</a>
+    application overview.</li>
+  <li><a href="/documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
+    adds support for keeping the aspect ratio during channel resizing.</li>
+  <li><a href="/documents/design/dataTransmission.html">Data Transmission</a>
+    provides a simple way to send data to all render client nodes.</li>
+  <li><a href="/documents/design/transparency.html">Transparency and sort-last
+      (DB) compounds</a> explores the options for better transparent geometry
+    support.</li>
+  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+    allows an easier porting path for existing, non-threadsafe software.</li>
+</ul>
+
+<h3>Version 0.3</h3>
+<ul>
+  <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a>
+    specifies the implementation and changes for anaglyphic stereo
+    rendering.</li>
+  <li><a href="/documents/design/infiniBand.html">InfiniBand</a>
+    describes how to setup and use IB hardware with Equalizer.</li>
+  <li><a href="/documents/design/residentNodes.html">Resident Render
+    Clients</a> describes how to implement and configure pre-started,
+    resident render client nodes.</li>
+  <li><a href="/documents/design/depthTransferOpt.html">Depth Buffer Pixel
+      Transfer Optimization</a> using the GL_EXT_packed_depth_stencil or
+    GL_NV_packed_depth_stencil extension.</li>
+  <li><a href="/documents/design/standalone.html">Standalone Application
+      Support</a> allows applications to run without a resource server.</li>
+  <li><a href="/documents/design/nodeConnect.html">Node Connection Setup</a>
+    explains the initial connection handshake between two nodes.</li>
+  <li><a href="/documents/design/objectManager.html">OpenGL Object Manager</a>
+    allows the allocation and sharing of OpenGL objects, e.g., textures, in
+    multipipe applications.</li>
+</ul>
+
+<h3>Version 0.2</h3>
+<ul>
+  <li><a href="/documents/design/compounds.html">Compounds</a> is the
+    initial design documentation on the API and config file interface for the
+    configuration of scalable rendering.</li>
+  <li><a href="/documents/design/frames.html">Compound frames</a> details the
+    inputframe and outputframe logics .</li>
+  <li><a href="/documents/design/immersive.html">Stereo and Head
+      Tracking</a> gives an overview how stereo rendering, head tracking
+    and eye compounds are implemented.</li>
+  <li><a href="/documents/design/dynamicNearFar.html">Dynamic Near and
+        Far Plane Support</a> explains the API for adjusting the near and
+    far plane from the channel's rendering methods.</li>
+  <li><a href="/documents/design/imageCompression.html">Image
+        Compression</a> is used to compress output frames for network
+    transfers.</li>
+  <li><a href="/documents/design/statistics.html">Statistics Interface</a>
+    is the initial design documentation on the API and config file interface for
+    statistics gathering.</li>
+</ul>
+<h3>Version 0.1</h3>
+<ul>
+  <li><a href="/documents/design/packets.html">Packet Handling</a>
+    explains the basic concept and mechanism of the Equalizer networking
+    layer.</li>
+</ul>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

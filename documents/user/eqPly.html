@@ -1,0 +1,309 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+     <base href="http://www.equalizergraphics.com/">
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+
+    <title>Equalizer: Documentation: End User: Parallel Polygonal Renderer</title>
+  </head>
+
+  <body>
+
+  <div class="content">
+    <a name="top"></a>
+
+
+    <h1>Parallel Polygonal Renderer</h1>
+
+
+<h2>Overview</h2>
+<p>
+  The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/eqPly">eqPly example</a>
+  is the reference implementation of an Equalizer application. It does render
+  polygonal data, read from a ply file. It supports all Equalizer compound
+  features, namely 2D (sort-first), DB (sort-last) and Eye (stereo)
+  decompositions. In DB mode, each contributor renders it's part of a model in a
+  different color to illustrate the database decomposition.
+</p>
+<p>
+  The <a href="documents/Developer/ProgrammingGuide.pdf">Programming Guide</a>
+  covers the application structure of eqPly extensively.
+</p>
+
+<h2>Application Structure</h2>
+<p>
+  As with any Equalizer application, eqPly consists of the main application and
+  the rendering clients. In this simple example, they are both contained in the
+  same executable. The executable can also be run as
+  a <a href="documents/design/residentNodes.html">resident render client</a>,
+  which is used to pre-launch rendering clients manually.
+</p>
+
+<h3>Application Main Loop</h3>
+<p>
+  The main application is driving the rendering, that is, it controls the
+  execution flow by receiving events from the render nodes, acting on these
+  events and by issuing the rendering of new frames. It does not execute any
+  rendering code.
+</p>
+
+<h3>Render Nodes</h3>
+<p>
+  The main function executes first eq::init(), which will not return when the
+  program is launched by the server as a render client. The Equalizer library
+  connects the render client to the server, and receives commands from this
+  server. The individual rendering entities --nodes, pipes, windows, channels--
+  are created using the NodeFactory. On these entities, various functions,
+  e.g. init, update and exit, are called based on the commands received from the
+  server. These callback functions typically receive an identifier defined by
+  the application to provide contextual information. For example, the node's
+  init method receives the identifier of the InitData object, as defined by the
+  application. It instanciates the object and loads the polygonal model named by
+  the InitData. A seperate document describes
+  all <a href="documents/design/taskMethods.html">task methods</a>.
+</p>
+
+<h3>Event Processing</h3>
+<p>
+  Equalizer collects events for all windows asynchronously and sends them to the
+  application thread, where they are processed at the end of the frame by
+  Config::handleEvent. This example implements a trackball, move and zoom mouse
+  interaction, as well as some keystroke commands. A separate document describes
+  the <a href="documents/design/eventHandling.html">event handling</a>.
+</p>
+
+
+
+<h2>Usage</h2>
+<p>
+  <!-- /* --><pre>
+USAGE: 
+
+   ./examples/eqPly/eqPly  [-g] [-v] [-w <string>] [-n <unsigned>] [-r]
+                           [-b] [-p <string>] [-m <string>] [--]
+                           [--version] [-h]
+
+
+Where: 
+
+   -g,  --glsl
+     Enable GLSL shaders
+
+   -v,  --vbo
+     Use the new VBO rendering
+
+   -w <string>,  --windowSystem <string>
+     Window System API ( one of: AGL glX )
+
+   -n <unsigned>,  --numFrames <unsigned>
+     Maximum number of rendered frames
+
+   -r,  --resident
+     Keep client resident (see resident node documentation on website)
+
+   -b,  --bw
+     Don't use colors from ply file
+
+   -p <string>,  --port <string>
+     tracking device port
+
+   -m <string>,  --model <string>
+     ply model file name
+
+   --,  --ignore_rest
+     Ignores the rest of the labeled arguments following this flag.
+
+   --version
+     Displays version information and exits.
+
+   -h,  --help
+     Displays usage information and exits.
+  </pre><!-- */ -->
+</p>
+
+
+
+
+
+</div> <!-- div content -->
+
+<!-- Navigation -->
+<div class="navigation">
+  <a href="index.html">
+    <img src="images/Equalizer.png" alt="Equalizer logo">
+  </a>
+  <p><a href="index.html"
+
+
+
+        >About</a></p>
+
+  <!-- About sub-navigation-->
+
+  <p><a href="applications.html"
+
+
+
+        >Applications</a></p>
+
+  <!-- Applications sub-navigation-->
+
+  <p><a href="documentation.html"
+
+        class="used"
+
+        >Documentation</a></p>
+
+  <!-- Documentation sub-navigation-->
+
+  <div class="subnavigation">
+
+    <p><a href="doc_developer.html"
+
+
+
+          >Developer</a></p>
+
+    <p><a href="features.html"
+
+
+
+          >Feature List</a></p>
+
+    <p><a href="compatibility.html"
+
+
+
+          >Compatibility Matrix</a></p>
+
+    <p><a href="relnotes.html"
+
+
+
+          >Release Notes</a></p>
+    </div>
+
+
+
+  <p><a href="screenshots.html"
+
+
+
+        >Screenshots</a></p>
+
+
+  <p><a href="news.html"
+
+
+
+        >News</a></p>
+
+
+  <p><a href="events.html"
+
+
+
+        >Events</a></p>
+
+
+  <p><a href="downloads.html"
+
+
+
+        >Downloads</a></p>
+
+  <p><a href="lists.html"
+
+
+
+        >Mailing Lists</a></p>
+
+  <p><a href="contact.html"
+
+
+
+        >Contact</a></p>
+
+  <p><a href="contributors.html"
+
+
+
+        >Contributors</a></p>
+
+  <p><a href="http://pogl.wordpress.com/">Blog (off-site)</a></p>
+
+
+
+
+
+
+  <!-- Google CSE Search Box Begins -->
+  <form id="searchbox_003884678311182543665:v1o4knw6fuq" action="http://www.equalizergraphics.com/search.html">
+    <input type="hidden" name="cx" value="003884678311182543665:v1o4knw6fuq" />
+    <input name="q" type="text" size="20" />
+    <input type="submit" name="sa" value="Equalizer Search" />
+    <input type="hidden" name="cof" value="FORID:9" />
+  </form>
+  <script type="text/javascript" src="http://google.com/coop/cse/brand?form=searchbox_003884678311182543665%3Av1o4knw6fuq"></script>
+  <!-- Google CSE Search Box Ends -->
+
+
+  <p>
+    <iframe src="http://polls.blogflux.com/poll.php?poll=16014&width=173&fontsize=11&height=250&fontface=Verdana&padding=2&textcolor=%23000000&bgcolor=%23aaaaaa&doublespace=0&borderwidth=1&linkmap=0&bordercolor=%23bbbbbb" width="179" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"><a href="http://polls.blogflux.com/poll-16014.html">Take the poll</a><br /><br /><a href="http://polls.blogflux.com/">Free Poll by Blog Flux</a></iframe>
+  </p>
+  <p>
+    <a href="http://www.ifi.unizh.ch/vmml/">
+      <img src="images/VMML_logo_150_grey.png"
+           alt="Visualization and MultiMedia Lab, University of Z&uuml;rich">
+    </a>
+  </p>
+</div>
+
+<div class="footer">
+  <a href="/documents/user/eqPly.html#top">Back to top</a>
+  <a href="mailto:eile@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: End User: Parallel Polygonal Renderer">Ask a Question</a>
+  <a href="impressum.html"
+
+
+
+     >Impressum</a>
+
+  Last changed: <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/documents/user/eqPly.shtml">19 Oct 2007</a>
+  <a href="changes.html">What's new?</a>
+
+</div>
+</body>
+
+</html>
+
+<!-- $Id: eqPly.shtml 1430 2007-10-19 08:03:24Z eile $ -->

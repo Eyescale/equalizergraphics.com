@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1Node.html" title="Manages a node." alt="" coords="27,83,104,112"/>
+<area shape="rect" id="node7" href="$classco_1_1Object.html" title="A generic, distributed object." alt="" coords="137,83,223,112"/>
+<area shape="rect" id="node5" href="$classco_1_1LocalNode.html" title="Specialization of a local node." alt="" coords="5,160,117,189"/>
+<area shape="rect" id="node9" href="$classco_1_1Barrier.html" title="A networked, versioned barrier." alt="" coords="141,160,229,189"/>
+</map>

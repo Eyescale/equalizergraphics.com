@@ -1,0 +1,404 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+    <meta name="description" content="Equalizer implements a wide range of task decomposition algorithms to parallelize the rendering of large data sets.">
+
+
+    <meta name="keywords" content="scalability, Equalizer, OpenGL, 2D, DB, DPlex, sort-first, sort-last, parallel, direct send, binary swap">
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: About: Scalability</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>Scalability</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/scalability.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: About: Scalability" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/scalability.shtml" class="rule">Changed Tue Jan 31 08:26:45 2012 +0100</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <div class="subnavigation">
+
+        <p><a href="/useCases.html"
+
+
+
+              >Use Cases</a></p>
+
+        <p><a href="/configuration.html"
+
+
+
+              >Flexibility</a></p>
+
+        <p><a href="/scalability.html"
+
+              class="used"
+
+              >Scalability</a></p>
+
+        <p><a href="/api.html"
+
+
+
+              >Framework</a></p>
+
+      </div>
+
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+
+<p>
+  Applications build with Equalizer are inherently scalable, aggregating
+  multiple graphics cards, processors and computers to render a single or
+  multiple views. The application's rendering code is parallelized, in contrast
+  to most other solutions which distribute the OpenGL command stream produced by
+  a single application thread.
+</p>
+<p>
+  Equalizer provides a comprehensive set of algorithms to parallelize,
+  balance and optimize the rendering of demanding data sets:
+</p>
+<div class="flush_float"></div>
+<div class="image">
+  <a href="/scalability/multiview.html">
+    <img src="/scalability/images/wall-small.jpg" alt="Multi-View">
+  <div>Multi-View</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/DB.html">
+    <img src="/scalability/images/DB-small.jpg" alt="DB or sort-last">
+  <div>DB or sort-last</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/2D.html">
+    <img src="/scalability/images/2D-small.jpg" alt="2D or sort-first">
+  <div>2D or sort-first</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/stereo.html">
+    <img src="/scalability/images/stereo-small.jpg" alt="Stereo or Eye">
+  <div>Stereo or Eye</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/DPlex.html">
+    <img src="/scalability/images/DPlex-small.jpg" alt="DPlex or AFR">
+  <div>DPlex or AFR</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/pixel.html">
+    <img src="/scalability/images/pixel-small.jpg"
+         alt="Pixel">
+  <div>Pixel</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/subpixel.html">
+    <img src="/scalability/images/subpixel_s.png"
+         alt="Subpixel">
+  <div>Subpixel Compound</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/tile.html">
+    <img src="/scalability/images/tile-small.jpg"
+         alt="Tile">
+  <div>Tile Compound</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/mixed.html">
+    <img src="/scalability/images/mixed-small.jpg"
+         alt="Mixed">
+  <div>Multi-level</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/paracomp.html">
+    <img src="/scalability/images/directSend-small.jpg"
+         alt="Parallel Compositing">
+  <div>Parallel Compositing</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/loadEqualizer.html">
+    <img src="/scalability/images/loadEqualizer-small.jpg"
+         alt="Load Equalizer">
+  <div>Load Equalizer</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/viewEqualizer.html">
+    <img src="/scalability/images/viewEqualizer-small.jpg"
+         alt="View Equalizer">
+  <div>View Equalizer</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/dfrEqualizer.html">
+    <img src="/scalability/images/dfrEqualizer-small.jpg"
+         alt="DFR Equalizer">
+  <div>DFR Equalizer</div></a>
+</div>
+<div class="image">
+  <a href="/scalability/monitorEqualizer.html">
+    <img src="/scalability/images/monitorEqualizer-small.jpg"
+         alt="Monitor Equalizer">
+  <div>Monitor Equalizer</div></a>
+</div>
+
+<div class="flush_float"></div>
+<div class="footnote">
+<p>
+  3D models courtesy of <a href="http://www.cyberware.com">Cyberware</a>
+  , <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford University
+  Computer Graphics Laboratory</a>, Stereolithography Archive at Clemson
+  University and AVS, USA. Image Copyright <a href="http://www.rtt.ag">Realtime
+  Technology AG</a>, 2008.
+</p>
+</div>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

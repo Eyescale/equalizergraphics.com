@@ -1,0 +1,352 @@
+/*
+ * Copyright (c) 2005-2010 Stefan Eilemann. All rights reserved.
+ */
+
+body {
+    font-family: Georgia, Garamond, Palatino, Times, Arial;
+    background-color: white;
+    margin: 0;
+}
+
+code {
+    font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+}
+
+pre {
+    font-family: Lucida Sans Typewriter, Courier New, Courier, monospace;
+    font-size: small;
+}
+
+p.quote
+{ 
+    font-family: Helvetica Neue, Arial, Futura;
+    font-size: small;
+    font-weight: bold;
+    margin-left: 2em;
+}
+
+h1 { 
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.7em;
+}
+
+h2 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+p, dd
+{ 
+    text-align: justify;
+}
+
+dt
+{ 
+  margin-left: 0.5em;
+  font-weight: bold;
+}
+
+td
+{
+    text-align: left;
+    vertical-align: top;
+    padding: .5ex;
+}
+
+th
+{ 
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: .5ex;
+}
+
+a
+{ 
+  color: #003366;
+  font-weight: bold;
+}
+
+a:hover
+{ 
+  color: black;
+}
+
+a:visited, a:active
+{ 
+  color: #336699;
+}
+
+img
+{ 
+  padding: 10px;
+  border:  0px;
+}
+
+img.active
+{ 
+  padding: 10px;
+  border:  0px;
+  background-color: #6699cc;
+}
+
+a img:hover
+{ 
+  padding: 4px;
+  margin: 4px;
+  border: 2px;
+  border-color: blue;
+  border-style: solid;
+}
+
+img.inline, img.inline:hover, a img.inline, a img.inline:hover
+{ 
+  padding: 0;
+  border: 0;
+  margin: 0;
+  text-align: center;
+}
+
+div.image {
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 2px;
+    margin: 2px;
+    border-collapse: collapse;
+    float:   left;
+    font-size: small;
+}
+
+div.gallery {
+    background-color: #bbbbbb;
+    font-size: small;
+    text-align: left;
+    text-decoration: none;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+    padding: 5px 0 5px 0;
+    clear: left;
+}
+
+div.gallery img, div.gallery object { 
+    padding: 0 5px 5px 5px;
+    float:   left;
+}
+
+div.gallery img:hover
+{ 
+    padding: 0 5px 5px 5px;
+    margin: 0;
+    border:  0;
+}
+
+div.box
+{
+    background-color: #bbbbbb;
+    font-size: x-small;
+    text-align: center;
+    vertical-align: middle;
+    float:   left;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 1px;
+    margin: 0 1em 0 -3em;
+    width: 3em;
+}
+
+ul.none li
+{
+    list-style-type: none;
+}
+
+div.header
+{ 
+    text-align: center;
+    vertical-align: middle;
+    background-color: #aaaaaa;
+    border: 0;
+    padding: .5em;
+    padding-left: 10px;
+    margin-top: 0;
+    margin-left: 10em;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+div.header img, div.header a img:hover
+{ 
+    vertical-align: middle;
+    border: 0;
+    padding: 0;
+    padding-left: 2em;
+    margin: 2px;
+}
+
+div.header h1
+{ 
+    padding: 0;
+    margin: 0;
+}
+
+div.poll { 
+    float:right;
+    text-align: center;
+    background-color: #aaaaaa;
+    border: 2px; 
+    padding: 2px; 
+    margin-left: 5px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+div.navigation { 
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #aaaaaa;
+    float: left;
+    width: 10em;
+    height: 100%;
+    padding: 3px;
+}
+
+div.navigation a:hover { 
+    background-color: #6699cc;
+}
+
+div.subnavigation { 
+    background-color: #bbbbbb;
+    padding: 2px;
+    font-size: small;
+    border: 1px solid #cccccc;
+}
+
+div.subnavigation a:hover { 
+    background-color: #99ccff;
+}
+
+div.content { 
+    margin-top: 0px;
+    margin-left: 10em;
+    margin-right: 10px;
+    margin-bottom: 4ex;
+    padding-left: 10px;
+    background-color: #ffffff;
+}
+
+div.social { 
+    text-align: center;
+}
+div.center { 
+    text-align: center;
+}
+
+div.social a:hover { 
+    background-color: #aaaaaa;
+}
+
+div.social img, div.social img:hover, div.social a img:hover { 
+    padding: 15px 0 0 0;
+    border:  0;
+    margin:  0;
+}
+
+div.footer { 
+    text-align: left;
+    position: fixed;
+    left: 0;
+    padding: 0 0 0 16px;
+    margin-left: 10em;
+    bottom: 0;
+    border-top: 1px solid black;
+    background-color: white;
+    width: 100%;
+}
+
+div.footer a { 
+    font-size: small;
+}
+
+div.footer a.rule { 
+    padding-right: 6px;
+    border-right: 1px solid black;
+    margin-right: 4px;       
+}
+
+div.navigation p {
+    margin: 2px 0px 2px 0px;
+}
+div.navigation a, div.subnavigation a
+{ 
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+    padding: 2px;
+}
+
+div.navigation a.used { 
+    background-color: #6699cc;
+}
+div.subnavigation a.used { 
+    background-color: #99ccff;
+}
+
+div.footnote 
+{ 
+    background-image: url("images/footnote.png");
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    font-size: x-small;
+}
+
+ul.toc1
+{ 
+    list-style-type: none;
+}
+
+ul.toc2
+{ 
+    list-style-type: none;
+    font-size:       small;
+}
+
+.float_right
+{
+    float:right; 
+}
+.float_left
+{
+    float:left; 
+}
+.label
+{  
+    font-size: x-small;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.flush_float
+{ 
+    clear: both;
+}
+.flush_left
+{ 
+    clear: left;
+}
+
+hr
+{ 
+    clear: both;
+}

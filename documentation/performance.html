@@ -1,0 +1,502 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+    <meta name="keywords" content="parallel OpenGL, performance">
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Performance Studies</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>Performance Studies</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documentation/performance.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Performance Studies" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documentation/performance.shtml" class="rule">Changed Wed May 16 11:46:18 2012 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+              class="used"
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<h2>Table of Contents</h2>
+<p>
+  <a href="/documentation/performance.html#overview">Overview</a><br>
+  <a href="/documentation/performance.html#mgpu">Multi-GPU Workstations</a><br>
+  <a href="/documentation/performance.html#powerwall">Powerwalls and Display
+    Walls</a><br>
+  <a href="/documentation/performance.html#cluster">Visualization
+    Clusters</a><br>
+</p>
+
+<a name="overview"></a>
+<h2>Overview</h2>
+<p>
+  This page documents scalability studies conducted on various hardware
+  setups. Scalability dependends on the application's rendering code as well as
+  the hardware setup. These benchmarks provide snapshots of a typical setup, and
+  constant improvements in Equalizer deliver even better performance.
+</p>
+<h2>Related Presentations</h2>
+<ul>
+  <li>Parallel rendering on hybrid multi-GPU clusters:
+    <a href="/documents/EGPGV12/index.html">html</a>
+    <a href="/documents/EGPGV12.pdf">pdf</a></li>
+  <li>Fast compositing for cluster-parallel rendering:
+    <a href="/documents/EGPGV10_compositing.html">html</a>
+    <a href="/documents/EGPGV10_compositing.pdf">pdf</a></li>
+  <li>Scalable parallel out-of-core terrain rendering:
+    <a href="/documents/EGPGV10_raster.html">html</a>
+    <a href="/documents/EGPGV10_raster.pdf">pdf</a></li>
+</ul>
+
+<a name="mgpu"></a>
+<h2>Multi-GPU Workstations</h2>
+<p>
+  Multi-GPU systems, such as dual-SLI or quad-SLI workstations or the Apple Mac
+  Pro are becoming more commonplace. Equalizer provides the natural framework to
+  fully exploit the parallelism of such hardware. Equalizer applications are
+  capable of optimally using the graphics cards as well as multiple CPU cores
+  typically present in multi-GPU workstations. Application-transparent solutions
+  such as SLI or Crossfire provide less scalability, since the application's
+  rendering is still single-threaded and not optimized for the individual cards.
+</p>
+
+<h3>Example 1: HP xw9300 workstation</h3>
+<div class="float_right"><a href="/images/perf.png">
+    <img src="/images/perf-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Performance for a dual-GPU HP workstation</div>
+</div>
+<p>
+  The example on the right shows the performance benefit of Equalizer compared
+  to the default application-transparent SLI mode. The first configuration
+  measures the baseline performance using only a single GPU. The second one uses
+  the same Equalizer configuration, but transparently distributed across the two
+  GPUs by SLI. The two remaining configurations are using two rendering threads
+  with a database (sort-last) decomposition and a screen-space (sort-first)
+  decomposition. These decompositions scale the rendering performance of a
+  single view, similar to SLI mode but using two processor cores for rendering
+  to optimize the data sent to each GPU. The pixel transfer does not use the SLI
+  hardware, but is executed through main memory, the slowest possible path. The
+  example used is the stock Equalizer polygon rendering application, using a
+  data set of 12.6 million triangles.
+</p>
+
+<h3>Example 2: Apple Mac Pro</h3>
+<div class="float_right"><a href="/images/perfMac.png">
+    <img src="/images/perfMac-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Performance for a dual-GPU Mac Pro</div>
+</div>
+<p>
+  The performance speedup of a dual-GPU Mac Pro is similar to the HP
+  workstation. The benchmarks shows in addition to a medium-sized model also a
+  small model, which naturally does not scale. The test machine is a quad-core
+  Mac Pro with 12 GB memory and two ATI x1900 graphics cards.
+</p>
+<div class="flush_float"></div>
+
+<a name="powerwall"></a>
+<h2>Powerwalls and Display Walls</h2>
+<div class="float_right"><a href="/images/Chromium_Equalizer.png">
+    <img src="/images/Chromium_Equalizer-small.jpg"
+         alt="Display wall performance"></a>
+  <div class="label">Performance for a Display Wall</div>
+</div>
+<p>
+  Large-scale display systems, such as display walls and multi-projector
+  systems, are often driven by a number of rendering nodes. A planar display
+  wall can be driven by using an OpenGL interceptor, for example Chromium. Since
+  these solutions are transparent to the application, they provide a
+  cost-effective solution.
+</p>
+<p>
+  Transparency comes however at a price, even for a simple setup such as a
+  planar projection. Using a parallel Equalizer application, much better
+  performance and scalability can be achieved. Furthermore, an Equalizer-based
+  application does not have any compatibility issues for certain OpenGL features
+  or extensions, since the rendering code directly accesses the GPU on each
+  backend node.
+</p>
+<p>
+  The white paper <a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two
+    Methods for driving OpenGL Display Walls</a> describes this performance
+  study.
+</p>
+<div class="flush_float"></div>
+
+<a name="cluster"></a>
+<h2>Visualization Clusters</h2>
+<p>
+  Graphic clusters are virtually unlimited in the number of possible processors
+  and graphics cards. The software scalability on such cluster is a relatively
+  new field, compared to compute clusters. Equalizer is pushing the boundaries
+  on what is possible by bringing more applications to this environment.
+</p>
+
+<h3>Example 1: Volume Rendering</h3>
+<p>
+  Volume rendering is a prime candidate for scalable rendering. A database
+  decomposition is easily done by bricking the volume, and the recomposition
+  uses less pixel data, since even for a database recomposition only RGBA data
+  is needed. Furthermore, the decomposition is easy to load-balance and scales
+  nicely all aspects of the rendering pipeline.
+</p>
+
+<div class="float_right"><a href="/images/perf512.png">
+    <img src="/images/perf512-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Scalability of a 512<sup>3</sup> volume data set.</div>
+</div>
+<p>
+  Database (sort-last) volume rendering allows to visualize data sets which do
+  not fit on a single GPU, since the individual graphics cards only need to
+  render a sub-volume of the whole data set. The benchmark on the right shows
+  this effect clearly. Up to four rendering nodes the volume brick does not fit
+  on the the GPU. Afterwards, it gets small enough that it can be completely
+  cached on the GPU, and performance immediately jumps by an order of
+  magnitude. The screen-space decomposition always has to hold the full volume
+  texture and can therefore only scale sub-linearly.
+</p>
+
+<div class="flush_float"></div>
+<div class="float_right"><a href="/images/perf256.png">
+    <img src="/images/perf256-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Scalability of a 256<sup>3</sup> volume data set.</div>
+</div>
+<p>
+  The same data set at a lower resolution always fits into GPU memory. The
+  benchmark on the right shows nicely the scalability limits of the used
+  graphics cluster. The readback, transfer and compositing pipeline limits the
+  performance to 25 fps at a resolution of 1280x1024. When using a database
+  decomposition, twice the amount of data has to be handled by each node, thus
+  limiting the performance to 12.5 fps.
+</p>
+<p>
+  This performance limitation is a mostly hardware bottleneck, mostly caused by
+  the slow interconnect on the cluster. Framerates of up to 60 Hertz are
+  possible with a properly tuned system.
+</p>
+<div class="flush_float"></div>
+
+
+<h3>Example 2: Polygonal Rendering</h3>
+<div class="float_right"><a href="/images/perfPoly.png">
+    <img src="/images/perfPoly-small.jpg" alt="Performance comparison"></a>
+  <div class="label">Scalability of a polygonal data set.</div>
+</div>
+<p>
+  Polygonal data sets have the disadvantage that the database recomposition is
+  twice as expensive, since both color and depth information is
+  processed. Furthermore, load balancing is harder compared to volume rendering
+  since the data is less uniform. The benchmark results therefore show that the
+  hardware limits the rendering to 7.25 fps, half of the volume rendering
+  performance. Screen-space decomposition again suffers performance due to the
+  fact that the whole model has to be loaded on each node. This polygonal
+  rendering benchmark is much less fill-bound than the volume rendering
+  benchmark.
+</p>
+
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

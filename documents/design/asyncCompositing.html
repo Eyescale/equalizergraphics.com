@@ -1,0 +1,457 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Asynchronous Compositing</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Asynchronous Compositing</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/asyncCompositing.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Asynchronous Compositing" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/asyncCompositing.shtml" class="rule">Changed Tue Jun 26 18:46:26 2012 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State: asynchronous readbacks implemented in 1.4 beta
+</p>
+
+<h2>Overview</h2>
+<div class="float_right">
+  <a href="/documents/design/images/asyncCompositing.png">
+    <img src="/documents/design/images/asyncCompositing-small.jpg"
+         alt="Asynchronous Compositing"></a>
+  <div class="label">Asynchronous Compositing</div>
+</div>
+<p>
+  Equalizer 1.2 implements synchronous pixel download and upload from the render
+  threads using an external plugin API. This documents describes the extension
+  of the plugin API and Equalizer to support asynchronous download and uploads,
+  as per <a href="https://github.com/Eyescale/Equalizer/issues/64">issue 64</a>
+  and other issues referencing it.
+</p>
+
+<div class="flush_float"></div><a name="Implementation"></a>
+<h2>Implementation</h2>
+
+<div class="float_right">
+  <a href="/documents/design/images/asyncCompositingImpl.png">
+    <img src="/documents/design/images/asyncCompositingImpl-small.jpg"
+         alt="Sequence diagram for Asynchronous Compositing"></a>
+  <div class="label">Sequence Diagram Asynchronous Compositing</div>
+</div>
+<p>
+  Asynchronous downloads are started from the render thread and completed in
+  another thread (the current transmit thread), freeing the render thread to
+  start with the next frame earlier. Asynchronous uploads are started on
+  reception of the FrameData, and completed by the render thread(s), freeing the
+  render thread from the actual upload time.
+</p><p>
+  Each asynchronous operations causes a referencing of the rendering frame,
+  which will be unreferenced after the operation has been completed. The last
+  unreferencing will cause the frame to be released on the server.
+</p><p>
+  When synchronous downloads are used, the asynchronous readback thread is not
+  used. Setting ready of the frame and scheduling of the transmit operations is
+  either effected by the render pipe thread when only synchronous readbacks are
+  used, or by the readback thread after the last readback operation has been
+  finished. The sequence diagram on the right shows a high-level overview of the
+  operations.
+</p>
+
+<h3>Download</h3>
+<p>
+  The download implementation is relatively
+  straight-forward: <code>eq::Channel::frameReadback</code> starts the download
+  operation using <code>EqCompressorStartDownload</code>, schedules a command on
+  the pipe download thread, which will finish the operation
+  using <code>EqCompressorFinishDownload</code> and set the ready
+  flag on the frame data. The download thread is created lazy on first use.
+</p>
+<p>
+  Most of the asynchronous download plugins will need a shared OpenGL context
+  with the main render window. Other implementations may use a similar concept,
+  e.g., a separate CUDA context for the finish operation. The download and
+  upload threads will manage auxilary SystemWindows which share the context
+  with the main window.
+</p>
+
+<h3>Upload</h3>
+<p>
+  Asynchronous uploads will always need to go to a temporary buffer instead of
+  directly to the framebuffer, since the upload needs to be started before the
+  window is ready to receive the data.
+</p>
+<p>
+  TBD: Add destination pipe/window/channel information to FrameData
+</p>
+<p>
+  TBD: Impact on Image and Compositor code
+</p>
+
+<a name="Implementation"></a>
+<h2>Programming Interface</h2>
+<!-- /* --><pre>
+  SystemWindow* eq::WindowSystem::createWindow( const WindowSettings& settings );
+  //? bool eq::WindowSystem::releaseWindow( SystemWindow* window );
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<h3>1. How does the receiver node know which pipes need the received data?</h3>
+<p>
+  The FrameData is received by the receiver thread and uncompressed by the
+  command thread. The upload should then be started immediately, most likely by
+  the command thread. Therefore it needs to know which GPUs will use the
+  FrameData.
+</p>
+
+<h3>2. Who is responsible for the shared OpenGL context in the auxilary
+  threads?</h3>
+<p>
+  Resolution: The download and upload threads (cf. Issue 3) manage an auxilary
+  eq::SystemWindow sharing with the main window.
+</p>
+<p>
+  The read finish operation in the transmit thread and the start upload
+  operation in the command thread optionally need a shared OpenGL context with
+  the corresponding render thread. The most consistent way is to have one
+  additional <code>SystemWindow</code> instance for each auxilary thread and
+  window, sharing with the main window.
+</p>
+
+<h3>3. Do we keep the model of having one transmit thread per node?</h3>
+<p>
+  Resolution: Yes, but lazily create additional download and upload threads for
+  each pipe thread.
+</p>
+<p>
+  Using one compression and decompression thread per node seems like the natural
+  model to optimize CPU resources. Having one upload and download thread per
+  render thread seems the natural model to optimize uploads and downloads.
+</p>
+
+<h3>4. How is the lifetime of the auxilary SystemWindows managed?</h3>
+<p>
+  Resolution: Introduce create/destroy methods (see API changes above)
+</p>
+<p>
+  The 'owner' of the SystemWindows is the corresponding
+  eq::Window. Consequently, it is responsible for their lifetime. The main
+  system window is managed using configInit/ExitSystemWindow(). Due to
+  historical reasons this is inconsistent with the NodeFactory create/release
+  methods. New create/destroy methods will be used to create all system windows
+  of a given eq::Window. The shareWindow parameter may be 0.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Equalizer Parallel OpenGL Application Framework Latest version at http://www.equalizergraphics.com/documents/Equalizer.pdf  Outline Overview High-Performance Visualization Equalizer Competitive Environment Equalizer Features Scalability Outlook  HPV High-Performance Visualization: HPC for interactive 3D applications  Address the demand to visualize huge data sets using COTS clusters Issue is to scale rendering performance using multiple GPU’s and CPU’s  HPC Analogy HPC	HPV What?	Parallel computation across multiple CPU’s	Parallel 3D rendering across multiple GPU’s and CPU’s How?	Mostly non-interactive batch processing	Highly interactive, real-time rendering Hardware	Cluster or Supercomputers typically using fast interconnects	Graphics Cluster, Supercomputers, display hardware, input devices  Equalizer “GLUT for multi-GPU systems and visualization clusters”  History  Selected Use Cases  Competitive Environment Transparent solutions Based on OpenGL interception Programming interfaces Distributed Scene Graphs Middleware  HPV Transparent Solutions Chromium, TechViz, OMP, ... Operate on OpenGL command stream (HPC analogy: auto-parallelizing compilers) Provide programming extensions to improve performance and scalability (semi-transparent) Performance and compatibility issues  HPV Transparent Solutions Transparent Semi-Transparent  HPV Programming Interfaces ScaleViz, Vega Prime, OpenSG Impose invasive programming model and data structure (HPC analogy: CFD codes) Best for developing from scratch Equalizer, Cavelib, VRJuggler, MPK Limited to HPV-critical areas of the code (HPC analogy: MPI, PVM) Best for porting existing applications  Compositing Libraries Paracomp, nvScale Address the backend part of an HPV application Equalizer makes use of these libraries  GPGPU Frameworks CUDA, RMDP, CTM HPC tools to use GPUs for data processing Do not address parallel rendering Can be integrated with OpenGL and Equalizer  Equalizer Minimally invasive Runtime configuration Runtime scalability Asynchronous execution Clusters and SSI Open Source  Minimally Invasive “Make everything as simple as possible, but not simpler.&quot; --  Albert Einstein  Porting is as easy as possible Work is limited to visualization-relevant parts Read Programming Guide or Parallel Graphics Programming presentation  Equalizer Application Typical OpenGL application structure  Separate rendering and application code  Equalizer Application Instantiate rendering multiple times  Optional: data distribution for clusters  Runtime Configuration Hierarchical resource description: Node→Pipe→Window→Channel Node: single system of the cluster Pipe: graphic card Window: drawable and context Channel: view Resource usage: compound tree  Runtime Configuration  Runtime Scalability Parallel execution of the application’s rendering code One thread per graphics card, one process per node Decomposition of rendering for one view  Runtime Scalability 2D, DB, Stereo, DPlex, Pixel compounds Flexible configuration of decomposition and recomposition Compatible with compositing hardware Hardware-specific optimizations  2D/Sort-First Scales fillrate Scales vertex processing if view frustum culling is efficient Parallel overhead due to primitive overlap limits scalability  DB/Sort-Last Scales all aspects of rendering pipeline Application needs to be adapted to render subrange of data Recomposition relatively expensive  Parallel Compositing Compositing cost grows linearly for DB Parallelize compositing Flexible configuration Constant per-node cost Details in EGPGV’07 presentation  Eye/Stereo Stereo rendering Active, passive and anaglyphic stereo quasi-linear scalability and loadbalancing  Limited by number of eye views   DPlex/Time-Multiplex quasi-linear scalability and loadbalancing Increased latency may be an issue Increased framerate often compensates for latency  Pixel Scales fillrate perfectly Similar to 2D Raytracing, Volume Rendering  Multilevel Compounds Compounds allow any combination of modes Combine different algorithm to address and balance bottlenecks Example: use DB to fit data on GPU, then use 2D to scale further  Compounds 2D: low IO overhead, limited scalability DB: high IO overhead, great scalability Eye, DPlex: quasi-linear scalability Pixel: linear fill-rate scalability Combine modes DB: use parallel compositing   Asynchronous Execution Improves scalability on bigger clusters  Latency between last draw and main Hides imbalance in load distribution Optional per-node synchronization  Asynchronous Execution Example: 5-node sort-last, direct-send 15% speedup DB 0 1 2 3 4 latency 6 FPS  Multi-GPU and Clusters Equalizer runs on both architectures Execution model is the same Shared memory systems allow additional optimisations Porting for SSI simpler than full port  Near Future Scalability features and optimizations Examples, demos, applications Server extensions Failure robustness  Open Source LGPL license: commercial use welcome Open standard for scalable graphics Minimally invasive: easy porting Clusters and shared memory systems Linux, Windows, Mac OS X More on: www.equalizergraphics.com"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (34);
+            images[0] = "Equalizer.html_files/Equalizer.001.jpg";
+            images[1] = "Equalizer.html_files/Equalizer.002.jpg";
+            images[2] = "Equalizer.html_files/Equalizer.003.jpg";
+            images[3] = "Equalizer.html_files/Equalizer.004.jpg";
+            images[4] = "Equalizer.html_files/Equalizer.005.jpg";
+            images[5] = "Equalizer.html_files/Equalizer.006.jpg";
+            images[6] = "Equalizer.html_files/Equalizer.007.jpg";
+            images[7] = "Equalizer.html_files/Equalizer.008.jpg";
+            images[8] = "Equalizer.html_files/Equalizer.009.jpg";
+            images[9] = "Equalizer.html_files/Equalizer.010.jpg";
+            images[10] = "Equalizer.html_files/Equalizer.011.jpg";
+            images[11] = "Equalizer.html_files/Equalizer.012.jpg";
+            images[12] = "Equalizer.html_files/Equalizer.013.jpg";
+            images[13] = "Equalizer.html_files/Equalizer.014.jpg";
+            images[14] = "Equalizer.html_files/Equalizer.015.jpg";
+            images[15] = "Equalizer.html_files/Equalizer.016.jpg";
+            images[16] = "Equalizer.html_files/Equalizer.017.jpg";
+            images[17] = "Equalizer.html_files/Equalizer.018.jpg";
+            images[18] = "Equalizer.html_files/Equalizer.019.jpg";
+            images[19] = "Equalizer.html_files/Equalizer.020.jpg";
+            images[20] = "Equalizer.html_files/Equalizer.021.jpg";
+            images[21] = "Equalizer.html_files/Equalizer.022.jpg";
+            images[22] = "Equalizer.html_files/Equalizer.023.jpg";
+            images[23] = "Equalizer.html_files/Equalizer.024.jpg";
+            images[24] = "Equalizer.html_files/Equalizer.025.jpg";
+            images[25] = "Equalizer.html_files/Equalizer.026.jpg";
+            images[26] = "Equalizer.html_files/Equalizer.027.jpg";
+            images[27] = "Equalizer.html_files/Equalizer.028.jpg";
+            images[28] = "Equalizer.html_files/Equalizer.029.jpg";
+            images[29] = "Equalizer.html_files/Equalizer.030.jpg";
+            images[30] = "Equalizer.html_files/Equalizer.031.jpg";
+            images[31] = "Equalizer.html_files/Equalizer.032.jpg";
+            images[32] = "Equalizer.html_files/Equalizer.033.jpg";
+            images[33] = "Equalizer.html_files/Equalizer.034.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="Equalizer.html_files/Equalizer.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="Equalizer.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="Equalizer.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="Equalizer.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

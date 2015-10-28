@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classgpusd_1_1Filter.html" title="Base class for all discovery filters." alt="" coords="6,56,106,83"/>
+<area shape="rect" id="node3" href="$classgpusd_1_1DuplicateFilter.html" title="Filters all duplicates during discovery." alt="" coords="155,5,315,32"/>
+<area shape="rect" id="node5" href="$classgpusd_1_1MirrorFilter.html" title="Filter overlapping duplicates with different GPU types." alt="" coords="166,56,303,83"/>
+<area shape="rect" id="node7" href="$classgpusd_1_1SessionFilter.html" title="Filters for a specific session." alt="" coords="159,107,310,133"/>
+</map>

@@ -1,0 +1,162 @@
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- Copyright (c) 2005 Stefan Eilemann. All rights reserved. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+    <meta name="author" content="Stefan Eilemann"/>
+
+    <meta name="keywords" content="overview architecture Equalizer OpenGL scalable cluster visualization"/>
+
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann"/>
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page"/>
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+
+
+    <title>Equalizer: About: Architecture</title>
+
+
+
+
+
+
+
+  </head>
+
+  <body class="index">
+    <a name="top">
+    <div class="image">
+      <center><table>
+        <tr>
+          <td><img src="images/bg_left.png"/></td>
+          <td background="images/bg_middle.png">
+            <a href="index.html"><h1>Equalizer</h1></a>
+          </td>
+          <td><img src="images/bg_right.png"/></td>
+        </tr>
+      </table></center>
+</a>
+    </div>
+
+  <!-- Navigation -->
+
+  <div class="navigation">
+    <a href="index.html"
+
+       class="used"
+
+    >About</a>
+
+    <a href="news.html"
+
+
+
+    >News</a>
+
+    <a href="documentation.html"
+
+
+
+    >Documentation</a>
+
+    <a href="downloads.html"
+
+
+
+    >Downloads</a>
+
+    <a href="lists.html"
+
+
+
+    >Mailing Lists</a>
+
+    <a href="contact.html"
+
+
+
+    >Contact</a>
+  </div>
+
+  <!-- About sub-navigation-->
+
+  <div class="subnavigation">
+
+    <a href="index.html"
+
+
+
+    >Overview</a>
+
+    <a href="configuration.html"
+
+
+
+    >Resource Management</a>
+
+    <a href="scalability.html"
+
+
+
+    >Scalability</a>
+
+    <a href="api.html"
+
+
+
+    >API</a>
+  </div>
+
+
+<h2>Equalizer Architecture</h2>
+
+<h3>Equalizer Server</h3>
+<p>
+The Equalizer server is managing the resources of a visualization system. It is
+configured to be aware of the system's compute and graphics resources,
+projection systems and hardware topology. Based on this information, it
+dynamically allocates the resources for the clients and deploys these resources
+optimally based on the current load of the system.
+</p>
+<h3>Equalizer Client Library</h3>
+<p>
+The Equalizer client library is the applications interface to the
+server. An Equalizer application declares the desired views. Available views on
+the visualization system can be queried from the server. Fullscreen views are
+reserved for exclusive usage.
+declare the desired views, describe their rendering
+characteristics and provide the rendering client.
+</p>
+<h3>Equalizer Tools</h3>
+<p>
+Configuration tools aid during the development of the Equalizer server
+configuration. They automatically discover parts of the visualization system's
+resources and their topology.
+Server maintenance tools modify the server's state at runtime, e.g., to setup a
+new view configuration.
+Analysis and statistics tools
+</p>
+
+    <div class="footer">
+        <table class="image" width="100%">
+          <tr>
+            <td align="left"><font size=-1>14. May 2006</font></td>
+            <td align="right">
+              <font size=-1><a href="impressum.html">
+                  Impressum</a></font>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </body>
+
+</html>
+

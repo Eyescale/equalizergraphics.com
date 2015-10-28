@@ -1,0 +1,503 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+    <meta name="description" content="Equalizer is the standard middleware to create and deploy parallel OpenGL-based applications.">
+
+
+    <meta name="keywords" content="parallel rendering, parallel OpenGL, Equalizer, OpenGL, scalable graphics, graphics cluster, graphics clusters, visualization, multi-GPU">
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Parallel Rendering</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+
+
+      <h1>Parallel Rendering</h1>
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/index.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Parallel Rendering" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/index.shtml" class="rule">Changed Fri Mar 8 15:45:37 2013 +0100</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+            class="used"
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <div class="subnavigation">
+
+        <p><a href="/useCases.html"
+
+
+
+              >Use Cases</a></p>
+
+        <p><a href="/configuration.html"
+
+
+
+              >Flexibility</a></p>
+
+        <p><a href="/scalability.html"
+
+
+
+              >Scalability</a></p>
+
+        <p><a href="/api.html"
+
+
+
+              >Framework</a></p>
+
+      </div>
+
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<div class="float_right">
+  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg"
+                                         alt="Cross-Segment Load-Balancing"></a>
+  <div class="label">Cross-Segment Load-Balancing</div>
+</div>
+<p>
+  Equalizer is the standard middleware to create and deploy parallel
+  OpenGL-based applications. It enables applications to benefit from multiple
+  graphics cards, processors and computers to scale the rendering performance,
+  visual quality and display size. An Equalizer application runs unmodified on
+  any visualization system, from a simple workstation to large scale graphics
+  clusters, multi-GPU workstations and Virtual Reality installations.
+</p>
+<p>
+  Equalizer drives the world's most advanced visualization systems, for example
+  an ultra-high resolution CAVE driven by 24 4k projectors, a 72-tile stereo
+  display walls as well as scalability clusters for interactive raytracing using
+  hundreds of nodes.
+</p>
+<p>
+  <a href="/api.html">Sequel</a> is an easily accessible interface to the
+  Equalizer parallel rendering framework, and allows rapid development of
+  clustered multi-GPU applications.
+</p>
+<p>
+  <a href="/gpu-sd">GPU-SD</a> is a daemon and library for the discovery and
+  announcement of graphics processing units using ZeroConf. It is used for
+  auto-configuration of Equalizer applications.
+</p>
+<p>
+  <a href="http://www.libcollage.net/">Collage</a> is a cross-platform C++
+  library for building heterogenous, distributed applications. It is the
+  multi-threaded cluster backend for Equalizer.
+</p>
+<p>
+  <a href="https://github.com/Eyescale/Lunchbox">Lunchbox</a> is a C++ library
+  for multi-threaded programming, providing OS abstraction, utility classes and
+  high-performance primitives, such as atomic variables, spin locks and
+  lock-free containers. It is used as a base library for Collage and Equalizer.
+</p>
+
+<h2>Benefits</h2>
+<ul>
+  <li><b>Increased Performance, Visual Quality and Display Size:</b> Equalizer
+    contains the essence of 10+ years of experience in parallel and scalable
+    rendering, easily integrated into your application.</li>
+  <li><b>Fast Path for Parallel OpenGL Applications:</b> Equalizer is minimally
+    invasive and provides the natural parallel execution model to exploit the
+    parallelism of multicore, multi-GPU workstations and graphics clusters.</li>
+  <li><b>Feature-Rich Framework:</b> Equalizer contains state-of-the-art
+    scalable rendering algorithms, and its open development model ensures
+    constant improvement. Equalizer applications are flexible and deployable in
+    many, rapidly changing environments.</li>
+  <li><b>Future-Proof:</b> An active development community and a liberal open
+    source license provide cutting-edge features and ensure the safety of your
+    investment.</li>
+</ul>
+
+<h2>Features</h2>
+<p>
+  Applications written using the <a href="/api.html">Equalizer framework</a>
+  benefit from the following features:
+</p>
+<ul>
+  <li><a href="/configuration.html">Flexibility</a>: An Equalizer application is
+    configured at run-time, allowing the same executable to run optimally on any
+    configuration -- from laptops to large scale visualization clusters, driving
+    a single window or a six-sided CAVE while using one or multiple graphics
+    cards to render each view.</li>
+  <li><a href="/scalability.html">Large Data Visualization</a>: An Equalizer
+    application can aggregate the power of multiple processors, graphics cards
+    and computers to scale the rendering performance, visual quality and display
+    size. This allows virtually any data set to be rendered at any resolution at
+    interactive framerates, given sufficient hardware resources.</li>
+  <li><a href="/documents/design/immersive.html">Virtual Reality:</a> Equalizer
+    applications can run seamlessly in Virtual Reality installations using
+    active and passive stereo rendering, as well as head tracking for one or
+    multiple observers.</li>
+  <li><a href="http://www.libcollage.net/">Distributed Execution:</a> Equalizer
+    includes Collage, an advanced library for distributed applications. The data
+    distribution needed for cluster-based is made simple through versioned,
+    distributed objects. Features like reliable multicast, InfiniBand support
+    and data compression enable optimal performance on large-scale visualization
+    clusters.</li>
+</ul>
+
+<h2>Project Mission</h2>
+<p>
+  Equalizer is an open platform for high-performance visualization:
+</p>
+<ul>
+  <li><b>Vendor Independence:</b> The development is not governed by a single
+    company. We work with several industry-leading hardware and software vendors
+    as well as research institutions on improving Equalizer.</li>
+  <li><b>Open Source:</b> Equalizer uses a liberal license which allows usage in
+    both open source and commercial products. The license ensures progress on
+    the core framework and protects the ISV's investment in the future.</li>
+  <li><b>Open Community:</b> We encourage the usage in custom projects and
+    welcome contributions to Equalizer by the community. We contribute our
+    experience in parallel rendering back to the OpenGL community.</li>
+</ul>
+
+<h2>Compatibility</h2>
+<div class="float_right">
+  <a href="http://www.opengl.org"><img src="images/ogl.jpg"
+                                       alt="OpenGL logo"></a>
+</div>
+<p>
+  Equalizer is a cross-platform toolkit, available for Linux, Windows and Mac
+  OS X and supports both 32-bit and 64-bit execution.
+</p>
+<p>
+  Equalizer does not interfere with the application's OpenGL rendering
+  code. Equalizer requires at a minimum OpenGL version 1.1 in order to run, but
+  uses later OpenGL features and extensions where available.
+</p>
+<p>
+  The Equalizer framework is licensed under the
+  <a href="http://www.gnu.org/licenses/lgpl.html">LGPL open source license</a>,
+  which allows free usage in commercial and open source projects. Only changes
+  to the framework itself have to be contributed back to open source.
+</p>
+<p>
+  Consulting, software development service and support are available
+  from <a href="http://www.eyescale.ch">Eyescale Software GmbH</a>.
+</p>
+
+<h2>Testimonials</h2>
+<p>
+  Please send us your <a href="mailto:info@equalizergraphics.com?subject=Feedback regarding Equalizer">feedback</a>.
+</p>
+
+<p class="quote">
+  September 2012, Alessandro Febretti, Research Assistant
+  and <a href="http://code.google.com/p/omegalib/">omegalib</a> developer,
+  Ph.D. Student, Electronic Visualization Laboratory, University of Illinois at
+  Chicago:
+</p>
+<p>
+  I have been working with Equalizer for more than a year now and overall it has
+  been a fantastic experience. Equalizer simplified my development work a whole
+  lot.
+</p>
+
+<p class="quote">
+  February 2009, Brian Gianforcarom, Computer Science at Rochester Institute of
+  Technology:
+</p>
+<p>
+  I've worked on projects trying to do similar things without Equalizer, and I
+  can honestly say it was pretty bad. We only got it barely working. After
+  finding Equalizer later, I can't imagine how much easier it would have been
+  with such a tool.
+  (<a href="http://stackoverflow.com/questions/513114/multi-headed-display-system">source</a>)
+</p>
+
+<p class="quote">
+  November 2008, Dan Wilcox, developer at <a href="http://www.aec.at/futurelab_about_en.php">Ars Electronica Futurelab</a>:
+</p>
+<p>
+  Equalizer abstracts the windowing and distribution of shared objects which,
+  trust me, is well worth the overhead of learning it. It's one thing to have
+  each machine running the same rendering thread and it's quite another to send
+  control and input dynamically between them. Plus it runs on Mac, Windows, and
+  Linux.
+  (<a href="http://www.openframeworks.cc/forum/viewtopic.php?p=24110#p24110">source</a>)
+</p>
+
+<p class="quote">
+  April 2008, Nicolas Cuntz, researcher at
+    the <a href="http://www.cg.informatik.uni-siegen.de/">University of
+    Siegen</a>:
+</p>
+<p>
+  Equalizer bundles multi-node rendering and synchronization tools into an
+  easy-to-use and well-structured object-oriented framework. Porting to
+  Equalizer can be achieved without completely restructuring the application.
+  However, one has to deal with data synchronization and possible problems
+  related to threading and parallelism, which is a problem that cannot
+  completely be delegated to a library.
+</p>
+
+<div class="footnote">
+<p>
+ Image copyright Realtime Technology AG, 2008.
+</p>
+<p>
+  Linux&reg; is a trademark of Linus Torvalds. Mac OS&reg; is a trademark of
+  Apple Computer, Inc. OpenGL&reg; is a trademark of Silicon Graphics,
+  Inc. Windows&reg; is a trademark of Microsoft Corporation. The CAVE is a
+  registered Trademark of the Board of Trustees of the University of Illinois at
+  Chicago. All other products named are trademarks of their respective owners.
+</p>
+</div>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

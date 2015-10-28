@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classlunchbox_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="5,333,181,363"/>
+<area shape="rect" id="node3" href="$classlunchbox_1_1DSO.html" title="Helper to access dynamic shared objects (DSO)" alt="" coords="287,5,404,35"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1LFQueue.html" title="A thread&#45;safe, lock&#45;free queue with non&#45;blocking access." alt="" coords="253,59,437,90"/>
+<area shape="rect" id="node7" href="$classlunchbox_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="285,114,405,145"/>
+<area shape="rect" id="node9" href="$classlunchbox_1_1Lockable.html" title="A convenience structure to hold data together with a lock for access." alt="" coords="244,169,446,199"/>
+<area shape="rect" id="node11" href="$classlunchbox_1_1MemoryMap.html" title="Helper to map a file to a memory address (mmap)" alt="" coords="261,223,430,254"/>
+<area shape="rect" id="node13" href="$classlunchbox_1_1PerThread.html" title="Implements thread&#45;specific storage for C++ objects." alt="" coords="239,278,451,309"/>
+<area shape="rect" id="node15" href="$classlunchbox_1_1PerThreadRef.html" title="Thread&#45;specific storage for a RefPtr." alt="" coords="238,333,453,363"/>
+<area shape="rect" id="node17" href="$classlunchbox_1_1Pool.html" title="An object allocation pool." alt="" coords="242,387,449,418"/>
+<area shape="rect" id="node19" href="$classlunchbox_1_1RequestHandler.html" title="A thread&#45;safe request handler." alt="" coords="249,442,442,473"/>
+<area shape="rect" id="node21" href="$classlunchbox_1_1RNG.html" title="A random number generator." alt="" coords="286,497,404,527"/>
+<area shape="rect" id="node23" href="$classlunchbox_1_1ScopedMutex.html" title="A scoped mutex." alt="" coords="230,551,461,582"/>
+<area shape="rect" id="node25" href="$classlunchbox_1_1SpinLock.html" title="A fast lock for uncontended memory access." alt="" coords="272,606,419,637"/>
+<area shape="rect" id="node27" href="$classlunchbox_1_1TimedLock.html" title="A mutex with timeout capabilities." alt="" coords="265,661,426,691"/>
+</map>

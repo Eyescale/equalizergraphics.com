@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structco_1_1NodePacket.html" title="Packet sent to and handled by an co::Node." alt="" coords="5,85,128,115"/>
+<area shape="rect" id="node4" href="$structco_1_1Packet.html" title="A packet send over the network." alt="" coords="23,5,111,35"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1UUID.html" title="Provides a universally unique identifier." alt="" coords="152,85,269,115"/>
+<area shape="rect" id="node8" href="$classco_1_1base_1_1uint128__t.html" title="A base type for 128 bit unsigned integer values." alt="" coords="139,5,283,35"/>
+</map>

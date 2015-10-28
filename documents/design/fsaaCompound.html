@@ -1,0 +1,459 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+
+    <title>Equalizer: Documentation: Developer: Subpixel Compounds</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <img src="/images/Equalizer.png" alt="Equalizer logo">
+
+        <!-- Search Box -->
+        <form action="http://www.google.com/cse" id="cse-search-box">
+          <div>
+            <input type="hidden" name="cx"
+                   value="003884678311182543665:v1o4knw6fuq" />
+            <input type="hidden" name="ie" value="UTF-8" />
+            <input type="text" name="q" size="25" />
+            <input type="submit" name="sa" value="Search" />
+          </div>
+        </form>
+        <script type="text/javascript"
+                src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en">
+        </script>
+      <!-- Jobs -->
+      <div class="subnavigation"><center>
+          <a href="/contributions.html#packagers"><b>Packagers
+              Wanted!</b></a><br>
+      </center></div>
+
+
+
+
+
+
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="/changes.html">Latest Website Changes</a><br>
+          <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/?view=log">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+      <!-- Poll -->
+      <script type="text/javascript" language="javascript"
+              src="http://static.polldaddy.com/p/1822666.js"></script>
+      <noscript>
+        <a href="http://answers.polldaddy.com/poll/1822666/">Which Equalizer
+          version do you use?</a><br/>
+        <span style="font:9px;">(<a href="http://www.polldaddy.com">polls</a>)
+        </span>
+      </noscript>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Subpixel Compounds</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/fsaaCompound.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Subpixel Compounds" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/documents/design/fsaaCompound.shtml?view=log">Changed 21 Oct 2009</a>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/doc_developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/features.html"
+
+
+
+              >Feature List</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+      <!-- social bookmark sites -->
+      <div class="social">
+        <script type="text/javascript">addthis_pub = 'eile';</script>
+        <a href="http://www.addthis.com/bookmark.php"
+           onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+           onmouseout="addthis_close()"
+           onclick="return addthis_sendto()">
+          <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+               border="0" alt="" />
+        </a>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/152/addthis_widget.js">
+        </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Design
+</p>
+
+<h2>Overview</h2>
+<p>
+  This features adds support for a new type of decomposition and recomposition,
+  whereby each contributing channel renders one or multiple subsamples for
+  full-scene anti-aliasing (FSAA) or depth-of-field (DOF).
+</p>
+<p>
+  Applications might already do multi-pass software FSAA/DOF, either during
+  rendering or when the application is idle. Equalizer does not yet have a
+  notion of idle/non-idle rendering.
+</p>
+
+<h2>Design</h2>
+<p>
+  The application will do the adding of the frustum jitter, since it is the one
+  which knows how many FSAA and/or DOF samples are desired. Therefore it needs
+  to know in Channel::frameDraw which sample out of how many it should render.
+</p>
+<p>
+  The default implementation of Channel::applyFrustum will use the subpixel
+  sample description to compute an FSAA jitter using a pre-defined lookup
+  table. It will add this jitter to the frustum supplied by getFrustum.
+</p>
+<p>
+  Applications which have their own SWAA settings will use the subpixel sample
+  description to calculate how many passes with which samples have to be
+  rendered, e.g., if it desires to render 16 samples on a 4-time decomposition,
+  the application will render 4 passes out of a 16-value jitter lookup table on
+  each channel.
+</p>
+<p>
+  It is the application's responsibility to provide a blended result of the
+  sub-passes on each channel. This should not be an overhead, since the
+  application could already compute the accumulation and averaging before.
+</p>
+<p>
+  Compositing
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  vmml::Vector2f Channel::getJitter() const;
+  vmml::Vector2i Channel::getSubpixel() const;
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+    compound
+    {
+        subpixel [ index size ]
+    }
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+<!-- /* --><pre>
+Modify eqPly to do idle SWAA:
+
+  EqPly
+    static const uint32_t sampleSize
+
+  FrameData
+    uint32_t _idleStep
+    bool     _idleMode
+  
+  Channel
+    FBO*     _accumBuffer
+    uint32_t _primeNumberTable
+
+  Config::startFrame
+    if view is idle
+      idleMode = true
+      idleStep++
+    else
+      idleMode = false
+    commit frame data
+
+  Channel::frameViewFinish
+    frameAssemble is done and back buffer is ready
+    if view is idle
+      if first idle step
+        reset accum buffer
+      accumulate back buffer to accum buffer
+      compute average in back buffer
+
+  Channel::applyFrustum
+    frustum = getFrustum()
+    jitter = getJitter();
+    frustum += jitter;
+    glFrustum( ... );
+  Compositor?
+
+  Channel::_lookupPrimeNumberTable( channel ID )
+
+  Channel::_generateFloatRand( begin, end )
+
+  Channel::_computeJitterStep
+    subset_size = ( sample_size * sample_size ) / nb_channels
+    idx =  ( idle_step * getPrimeNumber()) % subset_size
+    global_jitter = ( id_channel * subset_size ) + idx
+
+  Channel::_computeJitter
+    Compute normalized jitter area (idle step, channel index)
+    Compute pixel size on near plane (frustum)
+    Compute random sample position in normalized coordinates
+    jitter = jitter area * pixel size * random position
+    Attn: Floating point rounding errors!
+
+--------------------------------------------------
+Current idle AA in Eq application:
+
+  Channel::frameAssemble()
+    assemble input frames into back buffer
+    if view is idle
+      if first idle step
+        reset accum buffer
+      accumulate back buffer to accum buffer
+      compute average in back buffer
+    
+      
+  Channel::frameDraw()
+    if view is idle
+      get idle step # and jitter frustum
+    render
+
+Idle AA with AA compounds:
+  Channel::frameAssemble
+    if first idle step
+      reset accum buffer
+    if has more than one jitter step or view is idle
+      for each jitter step in input frames
+        assemble input frames with jitter step in back buffer
+        accumulate back buffer in accum buffer
+        ++n
+      compute average in back buffer
+      increase application idle steps done by n
+      
+  Channel::frameDraw()
+    jitter step = f(application idle step, Channel jitter param)
+      jitter step = idle_step * jitter_grp_size + jitter_offset
+    render
+
+
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+
+<h3>1. Do we need a one-dimensional or two-dimensional subpixel description for
+  each source channel?</h3>
+<p>
+  This depends on Q2. My feeling is a one-dimensional attribute is easier.
+</p>
+
+<h3>2. How do I compute my current jitter area?</h3>
+<p>
+  The number of jitter areas, i.e, the number of FSAA or DOF samples, is an
+  application parameter. The current jitter area within each Channel::frameDraw
+  is a function of the current idle step and the channel's subpixel description.
+</p>
+<p>
+  Open Issue: the function itself. The jitter values for all channels in the
+  first pass should be evenly distributed over the total subpixel grid.
+</p>
+<p>
+  Idea: Divide the sample grid into the number of channels to get a subset of pixels for each channel. For each pass, compute (pass_number * rnd_prime_number) % size to get kind of a randomized distribution. The size parameter is the size of the pixel subset for the current channel.
+</p>
+
+
+
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+
+</div> <!-- div content -->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id: fsaaCompound.shtml 3493 2009-10-21 16:14:59Z samsellem $ -->

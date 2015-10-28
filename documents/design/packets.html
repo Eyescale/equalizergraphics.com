@@ -1,0 +1,440 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Packet Handling</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Packet Handling</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/packets.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Packet Handling" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/packets.shtml" class="rule">Changed Mon Aug 15 08:12:00 2011 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State: Implemented in 0.1
+</p>
+
+<h2>Background</h2>
+<p>
+  The packet handling code in Equalizer is the core piece of the networking
+  layer. This document describes the packet dispatch mechanism used by the
+  Equalizer network layer (<code>namespace eq::net</code>). The implementation
+  matches this document at the time of writing (Mon Aug 15 08:12:00 2011 +0200), but may diverge over
+  time.
+</p>
+
+<h2>Packets</h2>
+<div class="float_right">
+  <a href="/documents/design/images/packets.png">
+    <img src="/documents/design/images/packets-small.jpg"
+         alt="Flow chart of the eq::net packet handling"/></a>
+  <div class="label">Equalizer Packet Handling</div>
+</div>
+<p>
+  <code>Packet</code>s are the base piece of information exchanged
+  between <code>Node</code>s. A packet has a data type to identify the object it
+  is addressed to, and a command number to identify the purpose of the
+  packet. Packets contain additional data depending on the data type and
+  command, as explained below.
+</p>
+
+<h2>Nodes</h2>
+<p>
+  <code>Node</code>s are the basic entity in the network layer. They communicate
+  with each other using <code>Connection</code>s. During initialization, a node
+  typically opens a listening connection, and starts the receiver thread. The
+  receiver thread listens on all connections of the node. When a new node
+  connects, he calls <code>handleConnect</code>, which accepts the connection,
+  creates a new Node and adds this connected node to the set of
+  connections. Nodes send each other <code>Packet</code>s. The receiving node
+  reads the packet from the connection and calls <code>dispatchCommand</code>.
+</p>
+
+<h2>Commands</h2>
+<p>
+  Packets read by the node are wrapped in a <code>Command</code>, which holds
+  the packet and node. The <code>Command</code> manages the ownership of the
+  packet and provides convenience functions to access the packet. The ownership
+  management is a lightweight mechanism similar to reference counting, except
+  that the allocated packet can be transferred from one command to another,
+  which is used when the packets are not handled immediately (see redispatch and
+  push cases below). This mechanism allows reuse of handled commands, and avoids
+  copies when the command will be handled later.
+</p>
+
+<h2>The eq::net Base Class</h2>
+<p>
+  <code>co::Dispatcher</code> provides packet dispatching using a command
+  handler table. During construction, sub classes provide command handlers for
+  each command using <code>registerCommand</code>. The method
+  <code>invokeCommand</code> calls the registered command handler for the
+  provided packet. The command handler may return one of the following command
+  result codes, which is returned by <code>invokeCommand</code>:
+  <dl>
+    <dt>COMMAND_HANDLED</dt><dd>The command was handled correctly.</dd>
+    <dt>COMMAND_REDISPATCH</dt><dd>The command can not be handled at the moment,
+      and should be redispatched later. </dd>
+    <dt>COMMAND_PUSH</dt><dd>The command can not be handled from the command
+      handler, and should be pushed to another entity, typically to another
+      thread.</dd>
+    <dt>COMMAND_PUSH_FRONT</dt><dd>Like COMMAND_PUSH, except that the command
+      has a high priority, e.g., it bypasses other commands queued for execution
+      by another thread.</dd>
+    <dt>COMMAND_ERROR</dt><dd>A critical error occured during command
+        processing.</dd>
+  </dl>
+</p>
+
+<h2>Node Packet Dispatch</h2>
+<p>
+  Depending on the packet's data type, <code>dispatchPacket</code> decides how
+  the packet is handled. For node packets, <code>invokeCommand</code> is
+  called. The result is handled accordingly, that is, COMMAND_REDISPATCH causes
+  the packet to be added to the list of redispatch packets, and for COMMAND_PUSH
+  and COMMAND_PUSH_FRONT <code>pushCommand</code> or
+  <code>pushCommandFront</code> is called, respectively. For
+  <code>Session</code> and <code>Object</code> packets,
+  <code>Session::dispatchPacket</code> is invoked. The session is identified by
+  the sessionID contained in the <code>SessionPacket</code>. For all other data
+  types, <code>handleCommand</code> is called.
+</p><p>
+  <B>Note:</b> Any command handler called directly or indirectly
+  from <code>dispatchPacket</code> is not allowed to block, since it is executed
+  from within the receiver thread and would therefore block the packet handling.
+</p>
+
+<h2>Session Packet Dispatch</h2>
+<p>
+  The <code>Session</code> inherits, like the node, from
+  <code>co::Dispatcher</code>. The session dispatch works similar to the node
+  dispatch. For session packets, <code>invokeCommand</code> is called, and the
+  result is returned to the node, which handles it accordingly. For object
+  packets, <code>Object::invokeCommand</code> is called and the result is
+  returned. The object is retrieved using the objectID, and possibly instanceID,
+  contained in the <code>ObjectPacket</code>.
+</p>
+
+<h2>Asynchronous Handling of Packets</h2>
+<p>
+  Several commands for Equalizer entities, for example window initialisation
+  requests, have to be handled by another thread. A
+  thread-safe <code>CommandQueue</code> is used to transfer the packet from the
+  receiver to the consumer thread. This is either done by a special command
+  handler, or by overriding <code>Node::pushCommand</code>
+  or <code>Node::pushCommandFront</code>, depending on the object, command and
+  destination thread.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

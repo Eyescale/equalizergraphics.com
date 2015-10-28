@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1Connection.html" title="An interface definition for communication between hosts." alt="" coords="24,80,141,107"/>
+<area shape="rect" id="node7" href="$classco_1_1ConnectionDescription.html" title="Describes Connection parameters." alt="" coords="165,80,355,107"/>
+<area shape="rect" id="node9" href="$classco_1_1Node.html" title="Manages a node." alt="" coords="379,80,457,107"/>
+<area shape="rect" id="node5" href="$classco_1_1BufferConnection.html" title="A proxy connection buffering outgoing data into a memory region." alt="" coords="5,155,160,181"/>
+<area shape="rect" id="node11" href="$classco_1_1LocalNode.html" title="Specialization of a local node." alt="" coords="363,155,475,181"/>
+</map>

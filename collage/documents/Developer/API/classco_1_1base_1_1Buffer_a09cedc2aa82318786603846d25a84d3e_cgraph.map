@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1Buffer.html#addfabfb7f22260355103d592b0514bb0" title="Ensure that the buffer contains at least newSize elements." alt="" coords="216,5,395,32"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1Buffer.html#a05f9a3b32dcf7b958c4219381b87e40f" title="Set the size of the buffer without changing its allocation." alt="" coords="217,56,394,83"/>
+</map>

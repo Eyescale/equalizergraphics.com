@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1Buffer.html#ab76c09eaf723245d92f0fda130d2a465" title="Replace the existing data with new data." alt="" coords="238,5,421,35"/>
+<area shape="rect" id="node7" href="$classlunchbox_1_1Buffer.html#a34125269bc80caa851afbb816f180931" title="Set the buffer size and malloc enough memory." alt="" coords="245,59,414,90"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1Buffer.html#a37d801bcb8308849daa4393336f03c82" title="Assignment operator, copies data from Buffer." alt="" coords="469,5,672,35"/>
+<area shape="rect" id="node9" href="$classlunchbox_1_1Buffer.html#a32895990741832f8dbf03aa0a25ee1e4" title="Construct a new buffer of the given size." alt="" coords="483,59,658,90"/>
+</map>

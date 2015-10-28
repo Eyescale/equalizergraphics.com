@@ -1,0 +1,446 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Cross-Segment Load Balancing</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Cross-Segment Load Balancing</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/viewEqualizer.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Cross-Segment Load Balancing" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/viewEqualizer.shtml" class="rule">Changed Fri Jan 21 16:31:06 2011 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State:
+  <ul>
+    <li>Implemented in 0.9</li>
+  </ul>
+</p>
+
+<h2>Overview</h2>
+<p>
+  Cross-segment load balancing allocates resources (GPUs) dynamically to a set
+  of destination channels. Normally all destination channels managed by a view
+  equalizer belong to multiple segments (displays) of a single view.
+</p>
+<p>
+  A configuration with cross-segment load balancing is hierarchical. The
+  top-level compound has a view equalizer. Each child of this root compound has
+  one destination channel and a load equalizer. Each destination channel
+  compound has the potential leaf nodes executing the rendering. One resource is
+  normally used in multiple leaf nodes of different destination compounds.
+</p>
+<p>
+  For each frame, the view equalizer sets the usage of each leaf compound to
+  activate or deactivate it for
+  rendering. The <a href="/documents/design/loadBalancing.html">load
+  equalizer</a> assigns work to each leaf compound according to its allowed
+  usage.
+</p>
+
+<div class="float_right">
+  <a href="/documents/design/images/viewEqualizer.png">
+    <img src="/documents/design/images/viewEqualizer-small.jpg"
+         alt="Cross-segment load balancing"/></a>
+  <div class="label">Cross-segment load balancing</div>
+</div>
+<p>
+  The Figure on the right depicts a snapshot of a simple cross-segment load
+  balancing setup. Two destination channel, each connected to a projector,
+  create the final output. Each projector is driven be a distinct GPU. Each GPU
+  can potentially contribute to the rendering of the other segment (and GPU)
+  through the channels Source 1 and 2.
+</p>
+<p>
+  The left segment has a lower load than the right segment. Consequently, the
+  view equalizer assigns 80% of the 'left' GPU to the left segment, and 20% to
+  the right segment. The 'right' GPU is fully assigned to the right segment,
+  assigning 0.8 resources to the right segment and 1.2 to the left. The load
+  balancing within a segment is performed by the load equalizer assigned to each
+  segment and not described here.
+</p>
+<p>
+  Cross-segment load balancing allows for optimal resource usage of multiple
+  GPUs used for display output and additional source GPUs. It combines
+  multi-display parallel rendering with scalable rendering for optimal
+  performance.
+</p>
+
+<h2>Algorithm</h2>
+<ul>
+  <li>Initialization:</li>
+  <ul>
+    <li>Set up statistic load listeners on all leaf channels</li>
+    <li>Calculate total number of GPUs available</li>
+  </ul>
+  <li>For each frame:</li>
+  <ul>
+    <li>Find newest frame with complete load data</li>
+    <li>Compute time needed to redraw each destination channel:<br>
+      <code>t_dest = sum( max( t_source_render, t_source_transmit ))</code></li>
+    <ul>
+      <li>Time to update a source is maximum of render or transmit, since these
+        two operations run concurrently in two different threads</li>
+      <li>Actually used is:<br>
+        <code>t_dest = t_source_average * sqrt( n_sources )</code>.<br>
+        This is a heuristical calculation accounting for the non-linear
+        relationship between number of resources and performance.</li>
+    </ul>
+    <li><code>t_total = sum( t_dest )</code></li>
+    <li><code>t_GPU = t_total / n_GPU</code></li>
+    <li>For each destination compound:</li>
+    <ul>
+      <li><code>n_dest_GPU = t_dest / t_GPU</code></li>
+      <li>Assign usage 'self' GPU: <code>min( 1.0, n_dest_GPU )</code> if GPU is
+        used for segment</li>
+      <li><code>n_dest_remaining = n_dest_GPU - n_self_usage</code></li>
+    </ul>
+    <li>For each destination compound:</li>
+    <ul>
+      <li>Assign GPUs used in last frame (up to n_dest_remaining)</li>
+      <li>Update n_dest_remaining</li>
+    </ul>
+    <li>For each destination compound:</li>
+    <ul>
+      <li>Assign unused GPUs (up to n_dest_remaining)</li>
+    </ul>
+  </ul>
+</ul>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+      view_equalizer {}
+      compound
+      {
+          channel "destination1"
+          load_equalizer{}
+          compound {} # self
+          compound { channel "source1" outputframe {} }
+          inputframe{}
+          ...
+      }
+      compound
+      {
+          channel "destination2"
+          load_equalizer{}
+          ...
+      }
+      ...
+  }
+</pre><!-- */ -->
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id: loadBalancing.shtml 3704 2009-11-22 14:46:56Z eile $ -->

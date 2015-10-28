@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$structco_1_1Packet.html" title="A packet send over the network." alt="" coords="6,59,93,90"/>
+<area shape="rect" id="node3" href="$structco_1_1NodePacket.html" title="Packet sent to and handled by an co::Node." alt="" coords="141,59,262,90"/>
+<area shape="rect" id="node5" href="$structco_1_1ObjectPacket.html" title="Packet sent to and handled by an co::Object." alt="" coords="309,59,438,90"/>
+<area shape="rect" id="node7" href="$structco_1_1QueueEmptyPacket.html" title="co::QueueEmptyPacket" alt="" coords="490,5,659,35"/>
+<area shape="rect" id="node9" href="$structco_1_1QueueGetItemPacket.html" title="co::QueueGetItemPacket" alt="" coords="485,59,664,90"/>
+<area shape="rect" id="node11" href="$structco_1_1QueueItemPacket.html" title="co::QueueItemPacket" alt="" coords="496,114,653,145"/>
+</map>

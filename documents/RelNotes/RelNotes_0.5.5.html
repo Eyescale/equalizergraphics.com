@@ -1,0 +1,589 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Release Notes: Release Notes for Equalizer 0.5.5</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>Release Notes for Equalizer 0.5.5</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/RelNotes/RelNotes_0.5.5.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Release Notes: Release Notes for Equalizer 0.5.5" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/RelNotes/RelNotes_0.5.5.shtml" class="rule">Changed Wed Oct 8 06:55:23 2008 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+              class="used"
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<!-- Release Checklist:
+     [x] src/lib/client/version.h, src/Makefile, src/RELNOTES, src/Doxyfile
+     [x] downloads/developers.shtml, downloads/source.shtml, features.shtml,
+         relnotes.shtml
+     [x] doc/Developer/ProgrammingGuide
+  -->
+
+<p>
+  Welcome to Equalizer 0.5.5, a framework for the development and deployment of
+  parallel, scalable OpenGL applications. Equalizer 0.5.5 introduces pixel
+  compounds using 2D kernels and facilitates window system integration.
+</p>
+<p>
+  Equalizer 0.5.5 is a developer release, representing a stable snapshot of the
+  development tree after the 0.5 release. Equalizer 0.5.5 can be retrieved by
+  updating the subversion trunk to revision 2214 (<code>svn up -r 2214</code>)
+  or by using:<br>
+  <code>svn co https://equalizer.svn.sourceforge.net/svnroot/equalizer/tags/release-0.5.5</code>
+</p>
+
+<h3>Features</h3>
+<p>
+  Equalizer provides the following major features to facilitate the development
+  and deployment of scalable OpenGL applications. A
+  <a href="/features.html">detailed feature list</a> can be found on the
+  Equalizer website.
+</p>
+<ul>
+  <li><b>Runtime Configurability:</b> An Equalizer application can run on any
+    configuration, from laptops to large scale visualization clusters, without
+    recompilation. The runtime configuration is externalized from the
+    application to a systemwide resource server.</li>
+  <li><b>Runtime Scalability:</b> An Equalizer application can use multiple
+    CPU's, GPU's and computers to scale the rendering performance of a single
+    view.</li>
+  <li><b>Distributed Execution:</b> Equalizer applications can be written to
+    support cluster-based execution. The task of distributing the application
+    data is facilitated by support for versioned, distributed objects.</li>
+  <li><b>Support for Stereo and Immersive Environments:</b> Equalizer supports
+    both active and passive stereo rendering, as well as the head tracking,
+    which is required for immersive Virtual Reality installations.</li>
+</ul>
+
+<h3>New in this release</h3>
+<p>
+  The following features, bug fixes and documentation changes where introduced
+  since the 0.5 release:
+</p>
+
+<h4>New Features</h4>
+<p>0.5.5:</p>
+<ul>
+  <li>Initial support for 2D pixel compound kernels</li>
+  <li>New OSWindow interface to simplify window system integration</li>
+  <li>Add <code>eq::util::BitmapFont</code> as a simple helper to draw 2D bitmap
+    fonts</li>
+</ul>
+<p>0.5.4:</p>
+<ul>
+  <li>Added window attributes for accumulation buffer and AA samples</li>
+  <li>Automatic 2D and DB load-balancing (initial support)</li>
+  <li>Automatic image compression for 'slow' (< 2GBit) connections</li>
+  <li>Improved statistics overlay appearance (auto-scaling, compression
+    time)</li>
+</ul>
+<p>0.5.3:</p>
+<ul>
+  <li>Support for orthographic projections</li>
+</ul>
+<p>0.5.2:</p>
+<ul>
+  <li>Improved statistics overlay appearance</li>
+  <li>Support for using Paracomp for alpha-blending compositing (eVolve)</li>
+  <li>Support for using multiple clients with the netperf benchmark tool</li>
+</ul>
+<p>0.5.1:</p>
+<ul>
+  <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a>
+    to understand and eliminate bottlenecks in the rendering pipeline</li>
+  <li>Support for using <a href="http://paracomp.sourceforge.net/">Paracomp</a>
+    as a compositing backend, see
+    <a href="/cgi-bin/viewvc.cgi/trunk/src/README.paracomp?view=markup">README.paracomp</a></li>
+  <li>Network-based instead of file-based model distribution in eqPly</li>
+  <li>Support for the window swapsync hint on WGL</li>
+</ul>
+
+<h4>Performance Improvements</h4>
+<p>0.5.5:</p>
+<ul>
+  <li>Assertions are disabled in release builds</li>
+  <li>Switch to CriticalSection for Win32 locks</li>
+</ul>
+<p>0.5.3:</p>
+<ul>
+  <li>Improved overall performance by using atomic operations for reference
+    counted objects</li>
+  <li>Improved performance when using non-threaded pipes</li>
+</ul>
+<p>0.5.1:</p>
+<ul>
+  <li>Alpha-blending support in the CPU-based compositor</li>
+  <li>Improved performance when using non-threaded pipes</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<p>
+  Equalizer 0.5.5 includes various bugfixes over the 0.5 release, including the
+  following:
+</p>
+<p>0.5.5:</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2032631&group_id=170962&atid=856209">2032631</a>:
+    Nullpointer exception and crash</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2032643&group_id=170962&atid=856209">2032643</a>:
+    process-local server object gets not deleted</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2033860&group_id=170962&atid=856209">2033860</a>:
+    frameDrawFinish called too early and too often</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2149563&group_id=170962&atid=856209">2149563</a>:
+    WGL: Update region is reset by event handler</li>
+</ul>
+<p>0.5.4:</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2026837&group_id=170962&atid=856209">2026837</a>:
+    swapbarrier calls increase with single-buffered windows</li>
+</ul>
+<p>0.5.3:</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997751&group_id=170962&atid=856209">1997751</a>:
+    defines for EQ_BIT17 - EQ_BIT20 are wrong</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1996988&group_id=170962&atid=856209">1996988</a>:
+    AGL reports key press twice</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997579&group_id=170962&atid=856209">1997579</a>:
+    Important WGL key events not reported</li>
+</ul>
+<p>0.5.2:</p>
+<ul>
+  <li>Fixed a big memory leak in the packet handling code, as well as numerous
+    small bug fixes and code cleanups</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1994798&group_id=170962&atid=856209">1994798</a>:
+    Compound::getNode null pointer read</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1981854&group_id=170962&atid=856209">1981854</a>:
+    AGL: PBuffer with Fullscreen broken</li>
+</ul>
+<p>0.5.1:</p>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1960225&group_id=170962&atid=856209">1960225</a>:
+    Problems with windows getting focus on mac</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1960225&group_id=170962&atid=856209">1960098</a>:
+    eqPly crashes during rendering</li>
+</ul>
+
+<h4>Documentation</h4>
+<p>
+  The <a href="/survey.html">Programming Guide</a> has been extended to 59
+    pages. In addition, the following documentation has been added:
+</p>
+<p>0.5.1:</p>
+<ul>
+  <li><a href="/documents/design/statisticsOverlay.html">Statistics
+      Overlay</a></li>
+</ul>
+
+<h3>API Changes</h3>
+<p>0.5.5:</p>
+<p>
+  The new <code>OSWindow</code> interface moved window system depend
+  functionality from the <code>eq::Window</code> to different subclasses
+  of <code>OSWindow</code>. Applications integrating with their own windowing
+  code have to implement an <code>OSWindow</code> containing all the window
+  system code, and instantiate this <code>OSWindow</code>
+  in <code>Window::configInitOSWindow</code>. Please refer to the Programming
+  Guide for a detailed description of the Window System Interface.
+</p>
+<p>
+  The <code>OSWindow</code> interface also caused some cleanups in the event
+  handling. Most notably, the classes <code>ChannelEvent</code>
+  and <code>WindowEvent</code> are now unneeded and have been removed. The
+  former base class <code>Event</code> is now used in the appropriate places.
+</p>
+
+<p>0.5.4:</p>
+<p>
+  The <code>eqBase</code>, <code>eqNet</code> and <code>eqServer</code>
+  namespaces have been renamed to <code>eq::base</code>, <code>eq::net</code>
+  and <code>eq::server</code>, respectively. Application developers are
+  encouraged to make the necessary changes, but can
+  define <code>EQ_USE_DEPRECATED</code> if these changes are not feasible.
+</p>
+
+<h3>Removed Features</h3>
+<p>
+  None
+</p>
+
+<h3>Known Bugs</h3>
+<ul>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2151376&group_id=170962&atid=856209">2151376</a>:
+    Irregular Pixel kernels do not work</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003195&group_id=170962&atid=856209">2003195</a>:
+    Ortho frustra ignores eye offset</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=2003132&group_id=170962&atid=856209">2003132</a>:
+    3-wnd.DB.ds is broken on some ppc machines for eqPly</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1997583&group_id=170962&atid=856209">1997583</a>:
+    eqPly: ortho frustum culling broken</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1959418&group_id=170962&atid=856209">1959418</a>:
+    DB Compositing fails on MacBook with GMA X3100</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854948&group_id=170962&atid=856209">1854948</a>:
+    eVolve: lighting ignores head transformation</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1854929&group_id=170962&atid=856209">1854929</a>:
+    eqPly GLSL shader has artefacts</li>
+  <li><a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1816670&group_id=170962&atid=856209">1816670</a>:
+    eVolve: binary swap configs don't work</li>
+</ul>
+
+<h3>Supported Platforms</h3>
+<p>
+  Equalizer is a cross-platform toolkit, designed to run on any modern operating
+  system, including all Unix variants and the Windows operating system. A
+  <a href="/compatibility.html">compatibility matrix</a> can be found on the
+  Equalizer website.
+</p>
+<p>
+  Equalizer requires at least <a href="http://www.opengl.org">OpenGL 1.1</a>,
+  but uses newer OpenGL features when available. Version 0.5.0 has been tested
+  on:
+</p>
+<h4>Operating System Support</h4>
+<ul>
+  <li><b>Linux:</b> Ubuntu 6.10 (x64, i386), RHEL4 (x64, i386)</li>
+  <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64) and
+    Cygwin (i386)</li>
+  <li><b>Mac OS X:</b> 10.5 (PowerPC, i386)</li>
+</ul>
+<h4>Window System Support</h4>
+<ul>
+  <li><b>X11:</b> Full support for all documented features.</li>
+  <li><b>WGL:</b> Full support for all documented features.</li>
+  <li><b>AGL:</b> Full support for all documented features.</li>
+</ul>
+
+<h3>Documentation</h3>
+<p>
+  The Programming Guide is available as a
+  <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">hard-copy</a>
+  (0.5.0 only) and <a href="/survey.html">online</a>. Equalizer does not yet
+  have an Users Guide. The shipped
+  <a href="/cgi-bin/viewvc.cgi/tags/release-0.5.5/examples/">examples</a> provides a reference for developing or porting
+  applications. The <a href="/doc_developer.html">Developer Documentation</a>
+  on the website provides further design documents for specific features. The
+  source code is a last resort for information.
+</p>
+<h3>Support</h3>
+<p>
+  Technical questions can be posted to the
+  <a href="/cgi-bin/mailman/listinfo/eq-dev">
+    Developer Mailing List</a>, or directly to
+  <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">
+    info@equalizergraphics.com</a>.
+</p>
+<p>
+  Commercial support, custom software development and porting services are
+  available from <a href="http://www.eyescale.ch">Eyescale</a>. Please contact
+  <a href="mailto:info@eyescale.ch?subject=Equalizer%20support">info@eyescale.ch</a>
+  for further information.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id: RelNotes_0.5.5.shtml 1538 2007-11-19 13:10:33Z eile $ -->

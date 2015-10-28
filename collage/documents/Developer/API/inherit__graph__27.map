@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$structco_1_1Packet.html" title="A packet send over the network." alt="" coords="5,5,93,35"/>
+<area shape="rect" id="node3" href="$structco_1_1NodePacket.html" title="Packet sent to and handled by an co::Node." alt="" coords="141,5,264,35"/>
+<area shape="rect" id="node5" href="$structco_1_1ObjectPacket.html" title="Packet sent to and handled by an co::Object." alt="" coords="313,5,441,35"/>
+</map>

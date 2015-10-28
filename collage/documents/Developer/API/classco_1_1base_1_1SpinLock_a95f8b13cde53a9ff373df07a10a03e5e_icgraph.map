@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1SpinLock.html#aa61924bb44ce67a4989824b38786e9f1" title="Attempt to acquire the lock shared with other readers." alt="" coords="267,5,487,32"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1SpinLock.html#a573dfa4118b8baed558d76b8b08fe8ed" title="Acquire the lock shared with other readers." alt="" coords="537,5,738,32"/>
+</map>

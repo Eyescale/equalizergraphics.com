@@ -1,0 +1,1345 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Configuration File Format</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Configuration File Format</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/fileFormat.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Configuration File Format" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/fileFormat.shtml" class="rule">Changed Sun Mar 9 17:21:53 2014 +0100</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Implemented
+</p>
+
+<p>
+  The configuration file format for the Equalizer server is described below. The
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/configs/">examples
+  directory</a> does contain some example configuration
+  files. The <a href="/documentation/user/configTool.html">configuration
+  tool</a> automatically creates some standard configuration files.
+</p>
+<p>
+  The file format is not described in detail here. Please refer to
+  the <a href="/survey.html">Programming Guide</a> in general, and to
+  the <a href="/documents/design/fileFormat.html#changes">changes</a> section
+  below for individual feature specifications. The actual implementation may
+  differ slightly from this specification, but we try to keep it up to date. The
+  loader implementation is the reference for the file format, look at
+  <a href="/cgi-bin/viewvc.cgi/trunk/src/server/loader.y?view=markup">src/server/loader.y</a>,
+  if you understand lex/yacc code.
+</p>
+<p>
+  Note that this format is the representation for the server's low-level
+  scalable rendering engine. Eventually this file format will be replaced by a
+  higher-level format or API, and may even be partially hidden from the
+  user. Automatic configuration and load balancing are not yet implemented,
+  hence the need to have these low-level configuration files.
+</p>
+<p>
+  All Equalizer units are in meters. This applies currently to the wall
+  coordinates and the eye base, as well as the head matrix supplied
+  programmatically.
+</p>
+<p>
+  Global values have useful default parameters, which can be overriden with
+  environment variables of the same name. For enumeration values,
+  e.g., <code>EQ_COMPOUND_IATTR_STEREO_MODE</code>, the corresponding integer
+  value has to be used. The global values in the config file override these
+  defaults, and are in turn overriden by the corresponding attributes sections
+  of the associated entities.
+</p>
+
+<a name="global"></a>
+<!-- /* --><pre>
+
+global
+{
+    EQ_CONNECTION_SATTR_HOSTNAME             string
+    EQ_CONNECTION_IATTR_TYPE                 TCPIP | SDP | RDMA | PIPE
+    EQ_CONNECTION_IATTR_PORT                 unsigned
+    EQ_CONNECTION_SATTR_PIPE_FILENAME        string
+    EQ_CONFIG_FATTR_EYE_BASE                 float
+    EQ_CONFIG_IATTR_ROBUSTNESS               OFF | ON
+    EQ_NODE_SATTR_LAUNCH_COMMAND             string
+    EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
+    EQ_NODE_IATTR_THREAD_MODEL               ASYNC | DRAW_SYNC | LOCAL_SYNC
+    EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
+    EQ_PIPE_IATTR_HINT_THREAD                OFF | ON
+    EQ_PIPE_IATTR_HINT_AFFINITY     AUTO | OFF | CORE unsigned | SOCKET unsigned
+    EQ_WINDOW_IATTR_HINT_STEREO              OFF | ON | AUTO
+    EQ_WINDOW_IATTR_HINT_DOUBLEBUFFER        OFF | ON | AUTO
+    EQ_WINDOW_IATTR_HINT_DECORATION          OFF | ON
+    EQ_WINDOW_IATTR_HINT_FULLSCREEN          OFF | ON
+    EQ_WINDOW_IATTR_HINT_SWAPSYNC            OFF | ON   # AGL, WGL only
+    EQ_WINDOW_IATTR_HINT_DRAWABLE            window | pbuffer | FBO | OFF
+    EQ_WINDOW_IATTR_HINT_STATISTICS          OFF | FASTEST [ON] | NICEST
+    EQ_WINDOW_IATTR_HINT_GRAB_POINTER        OFF | [ON]
+    EQ_WINDOW_IATTR_PLANES_COLOR             unsigned | RGBA16F | RGBA32F
+    EQ_WINDOW_IATTR_PLANES_ALPHA             unsigned
+    EQ_WINDOW_IATTR_PLANES_DEPTH             unsigned
+    EQ_WINDOW_IATTR_PLANES_STENCIL           unsigned
+    EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
+    EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
+    EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
+    EQ_CHANNEL_IATTR_HINT_STATISTICS         OFF | FASTEST [ ON ] | NICEST
+    EQ_CHANNEL_SATTR_DUMP_IMAGE              string
+    EQ_COMPOUND_IATTR_STEREO_MODE            AUTO | QUAD | ANAGLYPH | PASSIVE
+    EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
+    EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
+}
+server
+{
+    connection # 0-n times, listening connections of the server
+    {
+        type       TCPIP | SDP | RDMA | PIPE | RSP
+        port       unsigned # TCPIP, SDP
+        filename   string   # PIPE
+        hostname   string
+        interface  string   # RSP
+    }
+
+    config # 1-n times, currently only the first one is used by the server
+    {
+        latency int    # Number of frames nodes may fall behind app, default 1
+        attributes
+        {
+            eye_base     float     # distance between left and right eye
+            robustness   OFF | ON  # tolerate resource failures (init only)
+        }
+
+        (node|appNode) # 1-n times, a system in the cluster
+                       # 0|1 appNode: launches render thread within app process
+        {
+            name     string
+            host     string  # Used to auto-launch render nodes
+            connection # 0-n times, possible connections to this node
+            {
+                type          TCPIP | SDP | PIPE
+                port          unsigned
+                hostname      string
+                filename      string
+            }
+            attributes
+            {
+                thread_model ASYNC | DRAW_SYNC | LOCAL_SYNC
+                launch_command       string      # render client launch command
+                launch_command_quote 'character' # command argument quote char
+                launch_timeout       unsigned    # timeout in milliseconds
+            }
+            pipe # 1-n times
+            {
+                name     string
+                port     unsigned     # X server number or ignored
+                device   unsigned     # graphics adapter number
+                viewport [ viewport ] # default: autodetect
+                attributes
+                {
+                    hint_thread   OFF | ON   # default ON
+                    hint_affinity AUTO | OFF | CORE unsigned | SOCKET unsigned
+                }
+
+                window # 1-n times
+                {
+                    name     string
+                    viewport [ viewport ] # wrt pipe, default full screen
+
+                    attributes
+                    {
+                        hint_stereo         OFF | ON | AUTO
+                        hint_doublebuffer   OFF | ON | AUTO
+                        hint_decoration     OFF | ON
+                        hint_fullscreen     OFF | ON
+                        hint_swapsync       OFF | ON         # AGL, WGL only
+                        hint_drawable       window | pbuffer | FBO | OFF
+                        hint_statistics     OFF | FASTEST [ON] | NICEST
+                        hint_grab_pointer   OFF | [ON]
+                        planes_color        unsigned | RGBA16F | RGBA32F
+                        planes_alpha        unsigned
+                        planes_depth        unsigned
+                        planes_stencil      unsigned
+                        planes_accum        unsigned
+                        planes_accum_alpha  unsigned
+                        planes_samples      unsigned
+                    }
+                    channel # 1-n times
+                    {
+                        name     string
+                        viewport [ viewport ] #wrt window, default full window
+                        drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
+                        attributes
+                        {
+                            hint_statistics     OFF | FASTEST [ON] | NICEST
+                            dump_image          string
+                        }
+                    }
+                }
+            }
+        }
+
+        observer # 0...n times
+        {
+            name     string
+            eye_base float   # convenience
+            eye_left   [ float float float ]
+            eye_cyclop [ float float float ]
+            eye_right  [ float float float ]
+            focus_distance float
+            focus_mode     fixed | relative_to_origin | relative_to_observer
+            opencv_camera [OFF] | AUTO | ON | integer  # head tracker
+            vrpn_tracker string                      # head tracker device name
+        }
+
+        layout  # 0...n times
+        {
+            name string
+            view  # 1...n times
+            {
+                name     string
+                observer observer-ref
+                viewport [ viewport ]
+                mode MONO | STEREO
+
+                wall       # frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                    type         fixed | HMD
+                }
+                projection # alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+
+        canvas  # 0...n times
+        {
+            name    string
+            layout  layout-ref | OFF   # 1...n times
+
+            wall
+            {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                    type         fixed | HMD
+            }
+            projection
+            {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+            }
+            swapbarrier  # default swap barrier for all segments of canvas
+            {
+                name string
+                NV_group OFF | ON | unsigned
+                NV_barrier OFF | ON | unsigned
+            }
+
+            segment # 1...n times
+            {
+                channel  string
+                name     string
+                viewport [ viewport ]
+                eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
+
+                wall       # frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                    type         fixed | HMD
+                }
+                projection # alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+                swapbarrier {...}  # set as barrier on all dest compounds
+        }
+
+        compound # 1-n times
+        {
+            name     string
+            channel  channel-ref           # see below
+
+            task     [ CLEAR DRAW READBACK ASSEMBLE ] # CULL later
+            buffer   [ COLOR DEPTH ]       # default COLOR
+
+            eye      [ CYCLOP LEFT RIGHT ] # eyes handled, default all
+
+            viewport [ viewport ]         # wrt parent compound, sort-first
+            range    [ float float ]      # DB-range for sort-last
+            pixel    [ int int int int ]  # pixel decomposition (x y w h)
+            subpixel [ int int ]          # subpixel decomposition (index size)
+            zoom     [ float float ]      # up/downscale of parent pvp
+            period   int                  # DPlex period
+            phase    int                  # DPlex phase
+
+            view_equalizer {} # assign resources to child load_equalizers
+            load_equalizer # adapt 2D tiling or DB range of children
+            {
+                mode 2D | DB | VERTICAL | HORIZONTAL
+                damping float # 0: no damping, 1: no changes
+                boundary [ x y ]          # 2D tile boundary
+                boundary float            # DB range granularity
+                resistance [ x y ]        # 2D tile pixel delta
+                resistance float          # DB range delta
+                assemble_only_limit float # limit for using dest as src
+            }
+            DFR_equalizer # adapt ZOOM to achieve constant framerate
+            {
+                framerate float # target framerate
+                damping float   # 0: no damping, 1: no changes
+            }
+            framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
+            monitor_equalizer {}   # set frame zoom when monitoring other views
+            tile_equalizer
+            {
+                name string
+                size [ int int ]     # tile size
+            }
+
+            attributes
+            {
+                stereo_mode    AUTO | QUAD | ANAGLYPH | PASSIVE # default AUTO
+                stereo_anaglyph_left_mask    [ RED GREEN BLUE ] # default red
+                stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
+            }
+
+            wall  # frustum description, deprecated by view and segment frustum
+            {
+                bottom_left  [ float float float ]
+                bottom_right [ float float float ]
+                top_left     [ float float float ]
+                type         fixed | HMD
+            }
+            projection # alternate frustum description, last one wins
+            {
+                origin       [ float float float ]
+                distance     float
+                fov          [ float float ]
+                hpr          [ float float float ]
+            }
+
+            swapbarrier {...}  # compounds with the same name sync swap
+
+            child-compounds
+
+            outputframe
+            {
+                name   string
+                buffer [ COLOR DEPTH ]
+                type texture | memory
+            }
+            inputframe
+            {
+                name string # corresponding output frame
+            }
+            outputtiles
+            {
+                name   string
+                size [ int int ]     # tile size
+            }
+            inputtiles
+            {
+                name string # corresponding output tiles
+            }
+        }
+    }
+}
+
+channel-ref:  'string' | '(' channel-segment-ref ')'
+channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
+canvas-ref:   'string' | 'index'
+segment-ref:  'string' | 'index'
+layout-ref:   'string' | 'index'
+view-ref:     'string' | 'index'
+observer-ref: 'string' | 'index'
+</pre><!-- */ -->
+
+<a name="changes"></a>
+<h2>Changes</h2>
+<ul>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/133">VRPN head
+      tracking</a> added:
+    <!-- /* --><pre>
+        observer # 0...n times
+        {
+            vrpn_tracker string                      # head tracker device name
+        }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/204">Camera-based
+    head tracking using OpenCV</a> added:
+    <!-- /* --><pre>
+        observer # 0...n times
+        {
+            opencv_camera [AUTO] | OFF | ON | integer  # head tracker
+        }
+    </pre><!-- */ -->
+  </li>
+  <li>Tile compounds added:
+    <!-- /* --><pre>
+      compound
+      {
+          tile_equalizer
+          {
+              name string
+              size [ int int ]     # tile size
+          }
+          outputtiles
+          {
+              name   string
+              size [ int int ]     # tile size
+          }
+          inputtiles
+          {
+              name string # corresponding output tiles
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/196">Asymmetric eye position</a> added:
+    <!-- /* --><pre>
+        observer # 0...n times
+        {
+            eye_left   [ float float float ]
+            eye_cyclop [ float float float ]
+            eye_right  [ float float float ]
+        }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/186">Resistance for
+    2D load-balancers</a> added:
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer
+          {
+              mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+              resistance [ x y ] | float  # x,y: minimum pixel delta for 2D, float: range
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/151">Mouse
+      capture/grab</a> added:
+    <!-- /* --><pre>
+global
+{
+    EQ_WINDOW_IATTR_HINT_GRAB_POINTER        OFF | [ON]
+}
+                window # 1-n times
+                {
+                    attributes
+                    {
+                        hint_grab_pointer   OFF | [ON]
+                    }
+                }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="https://github.com/Eyescale/Equalizer/issues/57">Automatic thread
+      placement</a> added:
+    <!-- /* --><pre>
+global
+{
+    EQ_PIPE_IATTR_HINT_AFFINITY     AUTO | OFF | CORE unsigned | SOCKET unsigned
+}
+            pipe # 1-n times
+            {
+                attributes
+                {
+                    hint_affinity AUTO | OFF | CORE unsigned | SOCKET unsigned
+                }
+            }
+    </pre><!-- */ -->
+  </li>
+  <li>Per-segment <a href="/documents/design/swapBarrier.html">swap barriers</a>
+    added:
+    <!-- /* --><pre>
+      canvas
+      {
+          swapbarrier // default for all segments
+          {
+              name "barrier-name" // sync's compound's window swap buffers
+              // NV_swap_group (G-Sync) support
+              NV_group    OFF | ON (1) | unsigned // use HW group n
+              NV_barrier  OFF | ON (1) | unsigned // use HW barrier n
+          }
+          segment
+          {
+              swapbarrier { ..as above.. }
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/immersive.html">Focus distance</a> support
+    added:
+    <!-- /* --><pre>
+    config // 1-n times, currently only the first one is used by the server
+    {
+        observer
+        {
+             focus_distance float
+             focus_mode     fixed | relative_to_origin | relative_to_observer
+        }
+    }
+  </pre><!-- */ -->
+  </li>
+  <li>Render nodes without listening connections added:
+    <!-- /* --><pre>
+      #Equalizer 1.2 ascii
+      node
+      {
+          host     string  # Used to auto-launch render nodes
+          ...
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/stereoSwitch.html">Runtime Stereo Switch added:</a>
+    <!-- /* --><pre>
+      #Equalizer 1.1 ascii
+      view
+      {
+          mode MONO | STEREO
+      }
+      segment
+      {
+          ...
+          eye [ CYCLOP LEFT RIGHT ] # eye passes, default all
+      }
+      compound
+      {
+          attributes
+          {
+              stereo_mode QUAD | ANAGLYPH | AUTO # new AUTO, also new default
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>RFE 3132979 added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_COMPOUND_IATTR_STEREO_MODE      AUTO | QUAD | ANAGLYPH | PASSIVE
+      }
+      compound # 1-n times
+      {
+          attributes
+          {
+              stereo_mode        AUTO | QUAD | ANAGLYPH | PASSIVE # default AUTO
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>load equalizer: auto-disable of dest channel added:
+    <!-- /* --><pre>
+      load_equalizer # adapt 2D tiling or DB range of children
+      {
+           assemble_only_limit float # resource limit for using dest as src
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/multicast.html">Multicast data transfer:</a>
+    <!-- /* --><pre>
+      connection
+      {
+          type RSP
+          interface "10.1.1.1"
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/subpixelCompound.html">Subpixel compounds:</a>
+    <!-- /* --><pre>
+      compound
+      {
+          subpixel [ int int ]           # subpixel decomposition (index size)
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer
+          {
+              mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+              boundary [ x y ] | float  # x,y: tile boundary for 2D, float: range
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>Launch parameter cleanup after 0.9 changed launch parameters to:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_NODE_SATTR_LAUNCH_COMMAND             string
+          EQ_NODE_CATTR_LAUNCH_COMMAND_QUOTE       'character'
+          EQ_NODE_IATTR_LAUNCH_TIMEOUT             unsigned
+      }
+      node
+      {
+          attributes
+          {
+              launch_command       string      # render client launch command
+              launch_command_quote 'character' # command argument quote char
+              launch_timeout       unsigned    # timeout in milliseconds
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+   <li>Local named pipe communcation support added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_CONNECTION_IATTR_TYPE            PIPE
+          EQ_CONNECTION_SATTR_FILENAME        string
+      }
+
+      connection
+      {
+        type     PIPE
+        filename string
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>Equalizer cleanup deprecated loadBalancer {} section and added:
+    <!-- /* --><pre>
+      compound
+      {
+          load_equalizer # adapt 2D tiling or DB range of children
+          {
+              mode 2D | DB | VERTICAL | HORIZONTAL
+              damping float # 0: no damping, 1: no changes
+          }
+          DFR_equalizer # adapt ZOOM to achieve constant framerate
+          {
+              framerate float # target framerate
+              damping float   # 0: no damping, 1: no changes
+          }
+          framerate_equalizer {} # smoothen window swapbuffer rate (DPlex)
+          monitor_equalizer {}   # set frame zoom when monitoring other views
+      }
+    </pre><!-- */ -->
+  <li><a href="/documents/design/viewEqualizer.html">Cross-Segment Load Balancing</a>
+    added:
+    <!-- /* --><pre>
+    compound
+    {
+        view_equalizer{}
+    }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/view.html">Support for multiple observers</a>
+    added:
+    <!-- /* --><pre>
+    observer # 0...n times
+    {
+        name    string
+        eyeBase float
+    }
+
+    view  # 1...n times
+    {
+        observer observer-ref
+        ...
+    }
+    </pre><!-- */ -->
+    </li>
+  <li><a href="/documents/design/floatingPointPipeline.html">Floating
+    point pipeline support</a> added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_PLANES_COLOR   unsigned | RGBA16F | RGBA32F
+      }
+
+      window
+      {
+          attributes
+          {
+              planes_color    unsigned | RGBA16F | RGBA32F
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+    <li><a href="/documents/design/immersive.html#HMD">HMD support</a> added:
+    <!-- /* --><pre>
+    wall
+    {
+        ...
+        type fixed | HMD
+    }
+    </pre><!-- */ -->
+    </li>
+    <li><a href="/documents/design/view.html">Layout API</a> added:
+    <!-- /* --><pre>
+       layout  # 1...n times
+       {
+            name string
+            view  # 1...n times
+            {
+                name     string
+                viewport [ viewport ]
+
+                wall       # frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                }
+                projection # alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+
+        canvas  # 1...n times
+        {
+            name   string
+            layout string
+
+            wall
+            {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+            }
+            projection
+            {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+            }
+
+            segment # 1...n times
+            {
+                channel  string
+                name     string
+                viewport [ viewport ]
+
+                wall       # frustum description
+                {
+                    bottom_left  [ float float float ]
+                    bottom_right [ float float float ]
+                    top_left     [ float float float ]
+                }
+                projection # alternate frustum description, last one wins
+                {
+                    origin       [ float float float ]
+                    distance     float
+                    fov          [ float float ]
+                    hpr          [ float float float ]
+                }
+            }
+        }
+
+
+        }
+        compound
+        {
+            channel channel-ref
+            ...
+        }
+
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/swapBarrier.html">NV_swap_group (G-Sync)
+      support</a> added:
+    <!-- /* --><pre>
+      swapbarrier
+      {
+         NV_group   OFF | ON | unsigned
+         NV_barrier OFF | ON | unsigned
+      }
+    </pre><!-- */ -->
+  </li>
+  </li>
+  <li>Dynamic frame resolution added:
+    <!-- /* --><pre>
+      compound
+      {
+          zoom     [ float float ]         # up/downscale of parent pvp
+          loadBalancer
+          {
+             mode DFR
+             framerate float
+          }
+          outputframe
+          {
+              type texture | memory
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>FBO Support added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer | FBO
+      }
+
+      window
+      {
+          attributes
+          {
+              hint_drawable    window | pbuffer | FBO
+          }
+          channel
+          {
+              drawable [ FBO_COLOR FBO_DEPTH FBO_STENCIL ]
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>Easier thread model selection added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_NODE_IATTR_THREAD_MODEL    ASYNC | DRAW_SYNC | LOCAL_SYNC
+      }
+      node
+      {
+          attributes
+          {
+              thread_model    async | draw_sync | local_sync
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>Support for accumulation buffer and multisampling added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_PLANES_ACCUM             unsigned
+          EQ_WINDOW_IATTR_PLANES_ACCUM_ALPHA       unsigned
+          EQ_WINDOW_IATTR_PLANES_SAMPLES           unsigned
+      }
+      window
+      {
+          attributes
+          {
+              planes_accum        unsigned
+              planes_accum_alpha  unsigned
+              planes_samples      unsigned
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>Load-Balancing added:
+    <!-- /* --><pre>
+      compound
+      {
+          loadBalancer
+          {
+               mode [ 2D | DB | VERTICAL | HORIZONTAL ]
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li>Added during implementation of
+    the <a href="/documents/design/statisticsOverlay.html">Statistics
+      Overlay</a>:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_HINT_STATISTICS    off | fastest [on] | nicest
+      }
+      window
+      {
+          attributes
+          {
+              hint_statistics     off | fastest [on] | nicest
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_WINDOW_IATTR_HINT_DRAWABLE    window | pbuffer
+      }
+
+      window
+      {
+          attributes
+          {
+              hint_drawable    window | pbuffer
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li>Configurable launch command argument quotes were added after v0.4.1:
+    <!-- /* --><pre>
+      global
+      {
+           EQ_CONNECTION_CATTR_LAUNCH_COMMAND_QUOTE 'character'
+      }
+
+      node
+      {
+          connection # 0-n times, possible connections to this node
+          {
+              type          TCPIP | SDP
+              port          unsigned
+              hostname      string
+              command       string      # render client launch command
+              command_quote 'character' # launch command argument quote char
+              timeout       unsigned    # timeout in milliseconds for launch
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/pixelCompound.html">Pixel Decompositions</a>
+    added:
+    <!-- /* --><pre>
+      compound
+      {
+          pixel    [ int int int int ]     # pixel decomposition (x y w h)
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+    added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_PIPE_IATTR_HINT_THREAD   off | on
+      }
+
+      pipe
+      {
+          attributes
+          {
+              hint_thread   off | on
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_COMPOUND_IATTR_STEREO_MODE                 QUAD | ANAGLYPH
+          EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_LEFT_MASK   [ RED GREEN BLUE ]
+          EQ_COMPOUND_IATTR_STEREO_ANAGLYPH_RIGHT_MASK  [ RED GREEN BLUE ]
+      }
+      compound # 1-n times
+      {
+          attributes
+          {
+              stereo_mode                  QUAD | ANAGLYPH    # default QUAD
+              # enable visible color components
+              stereo_anaglyph_left_mask    [ RED GREEN BLUE ] # default red
+              stereo_anaglyph_right_mask   [ RED GREEN BLUE ] # df green blue
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/immersive.html">Stereo and Head Tracking</a>
+    added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_CONFIG_FATTR_EYE_BASE            float
+          EQ_WINDOW_IATTR_HINT_STEREO         OFF | ON | AUTO
+      }
+      config # 1-n times, currently only the first one is used by the server
+      {
+          attributes
+          {
+               eye_base float # distance between left and right eye
+          }
+      }
+      window
+      {
+          attributes
+          {
+              hint_stereo         off | on | auto
+          }
+      }
+      compound
+      {
+          eye      [ CYCLOP LEFT RIGHT ]   # monoscopic or stereo view
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/statistics.html">Statistics Interface</a>
+    added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_CHANNEL_IATTR_HINT_STATISTICS    off | fastest [on] | nicest
+      }
+      channel
+      {
+          attributes
+          {
+              hint_statistics     off | fastest [on] | nicest
+          }
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/compounds.html">Compounds</a> added:
+    <!-- /* --><pre>
+      global
+      {
+          EQ_COMPOUND_*
+      }
+      compound # 1-n times
+      {
+          ...
+      }
+    </pre><!-- */ -->
+  </li>
+
+  <li><a href="/documents/design/subpixelCompound.html">Subpixel Decompositions</a>
+    added:
+    <!-- /* --><pre>
+      compound
+      {
+          subpixel    [ int int ]     # subpixel decomposition (index size)
+      }
+    </pre><!-- */ -->
+  </li>
+
+</ul>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

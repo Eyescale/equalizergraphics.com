@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Performance Optimizations Prof. Dr. Renato Pajarola Maxim Makhynia, Fatih Erol http://www.ifi.uzh.ch/vmml/ Equalizer BOF EG 2009  Publications Stefan Eilemann, Maxim Makhinya, and Renato Pajarola. Equalizer: A scalable parallel rendering framework. IEEE Transactions on Visualization and Computer Graphics, 15(3):436–452, May/June 2009. Stefan Eilemann and Renato Pajarola. Direct send compositing for parallel sort-last rendering. In Proceedings Eurographics Symposium on Parallel Graphics and Visualization, pages 29–36, 2007. Parallel Rendering with EQ Compositing Performance Major issues:  Image transmission compression variable viewports Read-back overhead data formats fast-path Compositing algorithm synchronization points message load RLE Removes empty space, not much more; very fast   Fast Compression  Current Work Per-component RLE Better compression Short Marker  Fast Path Read Back Use fast path on GPU to read back frame data BGRA for color; packed depth-stencil for depth  Use Parallel PBO download (no success so far)  Reduce Compositing to ROI Use bounding box? Regions  Cover all data No overlapping Smallest total area Multiple ROIs  Current Work 2-Pipes.DB.PBuffer Dynamic Load Balancing Distribute work load among available resources Optimize resource utilization Maximize throughput and performance Concerns Task partitioning / resource allocation Locality / synchronization / communication Dependency  Control loop feedback mechanism to control output of a system Use (P)roportional, (I)ntegral and (D)erivative of errors to drive the system to approach target Error = Set Target - Actual Measured Output  PID Controller Current Load Balancing Hierarchical load balancing Current implementation modes 2D/DB/DPLEX/DFR Current Work What to balance? Rendering - GPUs Processing for de/composition, de/compression - CPUs&amp;GPUs I/O for network/data readback/streaming How to balance? Modes - 2D/DB/DPLEX/DFR, etc... Accurate estimations Resource&lt;-&gt;Task matching power, topology, content, locality Current Work What to achieve? Interface to provide/collect data API for application, or functionality in eqServer Statistics, cost querying for tasks, estimation mechanisms (PID) Config file Hints about data Balancing algorithms Dynamically plug-able methods, heuristics, data filters Configurable      "/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (17);
+            images[0] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.001.jpg";
+            images[1] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.002.jpg";
+            images[2] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.003.jpg";
+            images[3] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.004.jpg";
+            images[4] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.005.jpg";
+            images[5] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.006.jpg";
+            images[6] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.007.jpg";
+            images[7] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.008.jpg";
+            images[8] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.009.jpg";
+            images[9] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.010.jpg";
+            images[10] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.011.jpg";
+            images[11] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.012.jpg";
+            images[12] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.013.jpg";
+            images[13] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.014.jpg";
+            images[14] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.015.jpg";
+            images[15] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.016.jpg";
+            images[16] = "EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.017.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EqualizerBOF2009_UZH.html_files/EqualizerBOF2009_UZH.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EqualizerBOF2009_UZH.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EqualizerBOF2009_UZH.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EqualizerBOF2009_UZH.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

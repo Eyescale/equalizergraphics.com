@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classeq_1_1net_1_1DataIStream.html#acf87dc92307ef9575a1371719edd2069" title="Advance the current buffer by a number of bytes." alt="" coords="328,5,584,35"/>
+<area shape="rect" id="node5" href="$classeq_1_1net_1_1DataIStream.html#afa9ca7b14b388d97fec4353c980dda9a" title="Get the pointer to the remaining data in the current buffer." alt="" coords="311,59,601,88"/>
+<area shape="rect" id="node7" href="$classeq_1_1net_1_1DataIStream.html#a7c21edcb35701808c38452036839eb09" title="Get the size of the remaining data in the current buffer." alt="" coords="297,112,615,141"/>
+<area shape="rect" id="node9" href="$classeq_1_1net_1_1DataIStream.html#a676427b7de3526e7c4c28ee77a2301c2" title="Read a number of bytes from the stream into a buffer." alt="" coords="359,165,553,195"/>
+</map>

@@ -1,0 +1,464 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Applications: eqPly: Parallel Polygonal Renderer</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>eqPly: Parallel Polygonal Renderer</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/applications/eqPly.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Applications: eqPly: Parallel Polygonal Renderer" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/applications/eqPly.shtml" class="rule">Changed Tue Jul 28 14:00:49 2009 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <div class="subnavigation">
+
+        <p><a href="/applications/eqHello.html"
+
+
+
+              >eqHello</a></p>
+
+        <p><a href="/applications/eqPly.html"
+
+              class="used"
+
+              >eqPly</a></p>
+
+        <p><a href="/applications/eVolve.html"
+
+
+
+              >eVolve</a></p>
+
+        <p><a href="/applications/osgScaleViewer.html"
+
+
+
+              >OSGScaleViewer</a></p>
+
+        <p><a href="/applications/thirdParty.html"
+
+
+
+              >Third Party</a></p>
+
+      </div>
+
+
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<h2>Overview</h2>
+<div class="float_right">
+  <a href="/applications/images/eqPly.png">
+    <img src="/applications/images/eqPly-small.jpg"
+         alt="eqPly polygonal renderer"></a>
+  <div class="label">eqPly</div>
+</div>
+<p>
+  The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/eqPly">eqPly example</a>
+  is the reference implementation of an Equalizer application. It does render
+  polygonal data, read from a ply file. It supports all Equalizer scalability
+  features.
+</p>
+<p>
+  The <a href="/survey.html">Programming Guide</a> covers the application
+  structure of eqPly extensively. A semester thesis in German
+  (<a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen OpenGL
+  Polygon-Renderers</a>) covers the kd-tree implementation for Equalizer 0.4.
+</p>
+
+<h2>Application Structure</h2>
+<p>
+  As with any Equalizer application, eqPly consists of the main application and
+  the rendering clients. In this simple example, they are both contained in the
+  same executable. The executable can also be run as
+  a <a href="/documents/design/residentNodes.html">resident render client</a>,
+  which is used to pre-launch rendering clients manually.
+</p>
+
+<h3>Application Main Loop</h3>
+<p>
+  The main application is driving the rendering, that is, it controls the
+  execution flow by receiving events from the render nodes, acting on these
+  events and by issuing the rendering of new frames. It does not execute any
+  rendering code.
+</p>
+
+<h3>Render Nodes</h3>
+<p>
+  The main function executes first eq::init(), which will not return when the
+  program is launched by the server as a render client. The Equalizer library
+  connects the render client to the server, and receives commands from this
+  server. The individual rendering entities --nodes, pipes, windows, channels--
+  are created using the NodeFactory. On these entities, various functions,
+  e.g. init, update and exit, are called based on the commands received from the
+  server. These callback functions typically receive an identifier defined by
+  the application to provide contextual information. For example, the node's
+  init method receives the identifier of the InitData object, as defined by the
+  application. It instantiates the object and loads the polygonal model named by
+  the InitData. A seperate document describes
+  all <a href="/documents/design/taskMethods.html">task methods</a>.
+</p>
+
+<h3>Event Processing</h3>
+<p>
+  Equalizer collects events for all windows asynchronously and sends them to the
+  application thread, where they are processed at the end of the frame by
+  Config::handleEvent. This example implements a trackball, move and zoom mouse
+  interaction, as well as some keystroke commands. A separate document describes
+  the <a href="/documents/design/eventHandling.html">event handling</a>.
+</p>
+
+
+
+<h2>Usage</h2>
+<p>
+  <!-- /* --><pre>
+USAGE: 
+
+   ./build/Darwin/bin/eqPly.app/Contents/MacOS/eqPly  [-o] [-a &lt;string&gt;]
+                                        [-l &lt;string&gt;] [-i] [-g] [-c
+                                        &lt;string&gt;] [-w &lt;string&gt;] [-n
+                                        &lt;unsigned&gt;] [-r] [-b] [-p &lt;string&gt;]
+                                        [-m &lt;string&gt;] ...  [--] [--version]
+                                        [-h]
+
+
+Where: 
+
+   -o,  --noOverlay
+     Disable overlay logo
+
+   -a &lt;string&gt;,  --cameraPath &lt;string&gt;
+     File containing camera path animation
+
+   -l &lt;string&gt;,  --log &lt;string&gt;
+     output log file
+
+   -i,  --invertFaces
+     Invert faces (valid during binary file creation)
+
+   -g,  --glsl
+     Enable GLSL shaders
+
+   -c &lt;string&gt;,  --renderMode &lt;string&gt;
+     Rendering Mode (immediate, displayList, VBO)
+
+   -w &lt;string&gt;,  --windowSystem &lt;string&gt;
+     Window System API ( one of: AGL glX )
+
+   -n &lt;unsigned&gt;,  --numFrames &lt;unsigned&gt;
+     Maximum number of rendered frames
+
+   -r,  --resident
+     Keep client resident (see resident node documentation on website)
+
+   -b,  --blackAndWhite
+     Don't use colors from ply file
+
+   -p &lt;string&gt;,  --port &lt;string&gt;
+     tracking device port
+
+   -m &lt;string&gt;,  --model &lt;string&gt;  (accepted multiple times)
+     ply model file name or directory
+
+   --,  --ignore_rest
+     Ignores the rest of the labeled arguments following this flag.
+
+   --version
+     Displays version information and exits.
+
+   -h,  --help
+     Displays usage information and exits.
+
+
+   eqPly - Equalizer polygonal rendering example
+
+        Run-time commands:
+                Left Mouse Button:         Rotate model
+                Middle Mouse Button:       Move model in X, Y
+                Right Mouse Button:        Move model in Z
+                &lt;Cursor Keys&gt;:             Move head in X,Y plane
+                &lt;Page Up,Down&gt;:            Move head in Z
+                &lt;Esc&gt;, All Mouse Buttons:  Exit program
+                &lt;Space&gt;:                   Reset camera
+                F1, h:                     Toggle help overlay
+                i:                         Reset camera for Immersive Setups
+                o:                         Toggle perspective/orthographic
+                s:                         Toggle statistics overlay
+                w:                         Toggle wireframe mode
+                d:                         Toggle color demo mode
+                p:                         Toggle navigation mode (trackball, walk)
+                r:                         Switch rendering mode (display list, VBO,   immediate)
+                v:                         Switch active canvas
+                v:                         Switch active view
+                m:                         Switch model for active view
+                l:                         Switch layout for active canvas
+  </pre><!-- */ -->
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

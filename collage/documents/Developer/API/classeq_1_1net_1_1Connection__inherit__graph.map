@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classeq_1_1net_1_1BufferConnection.html" title="A proxy connection buffering outgoing data into a memory region." alt="" coords="5,83,189,112"/>
+<area shape="rect" id="node5" href="$classeq_1_1net_1_1PairConnection.html" title="A meta connection consisting of two (unidirectional) connections providing bidirectional communicatio..." alt="" coords="213,83,384,112"/>
+</map>

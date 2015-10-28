@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1Buffer.html#a8822e4d6f172fbc191dfadff6f746522" title="Append elements to the buffer, increasing the size." alt="" coords="221,5,464,35"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1Buffer.html#ae51357251be1cecf9ee8de9631785018" title="Construct a new buffer of the given size." alt="" coords="227,59,459,88"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1Buffer.html#a22f46879d735b99b0729801c83c21aca" title="Ensure that the buffer contains at least newSize elements." alt="" coords="231,112,455,141"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1Buffer.html#a004d37da826ecee982a5fdf958e949f6" title="Ensure that the buffer contains at least newSize elements." alt="" coords="224,5,408,35"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1Buffer.html#ab344aba82be7d2ab62ccbe6df3b9b9a9" title="Set the size of the buffer without changing its allocation." alt="" coords="225,59,407,90"/>
+</map>

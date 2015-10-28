@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Equalizer Quickstart and Demonstration Guide Latest version at http://www.equalizergraphics.com/documents/EqualizerGuide.pdf  Building Equalizer Linux, Mac OS X: cd src; make [debug|release|xcode] Windows: Create VS Solution using CMake Open and build solution file  Running the eqPly Example Linux: src# ./debug/Linux/bin/eqPly Mac OS X: src# ./debug/Darwin/bin/eqPly.app/Contents/MacOS/eqPly Windows: debug ‘eqPly Example’ OR: [BuildDir]\bin\Debug\eqPly.exe  Press F1 for help If another configuration is running, use --eq-config &lt;path&gt;/4-window.all.eqc Running the Example Application  Exploring Equalizer Switch layout using ‘l’ to show a different feature New layout name is shown for two seconds Load multiple models with ‘--model &lt;filename|dirname&gt;’ Sample Models at www.cyberware.com  Layout Wall Four windows, four pipes To be deployed on four separate GPU’s Software swap synchronization  MultiView Three views on four windows  Click in view to activate Use ‘m’ to change model of active view  Layout Stereo Two render passes per channel Use ‘d’ twice to switch to B&amp;W mode Use cursor keys to move observer  2D Screen-space decomposition with automatic load-balancing Use ‘d’ to switch to demo color mode  Database decomposition Each window renders ¼ of the data Data is combined using Z-Buffer DB  Eye Each window renders one eye pass Use ‘d’ to switch to black&amp;white Active, passive and anaglyph stereo  DPlex Time-multiplex Each window renders every 3rd frame Excellent load-balancing  Pixel ‘Interlaced’ distribution of pixels Ideal for purely fill-limited applications Volume Rendering, Raytracing  SubPixel Multisampling Decomposition  e.g. Anti-aliasing or Depth-of-Field Combined with ‘idle multisampling’  WallLB Cross-segment load-balancing Underused segments render for others Per-segment 2D compound  Stream, DirectSend, BinarySwap Parallel compositing for DB compounds Each channel renders and composites See website for algorithm details  MultiLevel Combined 2D/DB compound Address different bottleneck Any other combination possible  Layout HMD Head-Mounted Display Different frustum calculation when moving observer  Next Steps Cluster example configurations are named n-node.*.eqc Password-less ssh setup needed Change hostnames to reflect your setup ConfigTool creates some configurations Active stereo requires stereo visuals Read User Guide"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (19);
+            images[0] = "EqualizerGuide.html_files/EqualizerGuide.001.jpg";
+            images[1] = "EqualizerGuide.html_files/EqualizerGuide.002.jpg";
+            images[2] = "EqualizerGuide.html_files/EqualizerGuide.003.jpg";
+            images[3] = "EqualizerGuide.html_files/EqualizerGuide.004.jpg";
+            images[4] = "EqualizerGuide.html_files/EqualizerGuide.005.jpg";
+            images[5] = "EqualizerGuide.html_files/EqualizerGuide.006.jpg";
+            images[6] = "EqualizerGuide.html_files/EqualizerGuide.007.jpg";
+            images[7] = "EqualizerGuide.html_files/EqualizerGuide.008.jpg";
+            images[8] = "EqualizerGuide.html_files/EqualizerGuide.009.jpg";
+            images[9] = "EqualizerGuide.html_files/EqualizerGuide.010.jpg";
+            images[10] = "EqualizerGuide.html_files/EqualizerGuide.011.jpg";
+            images[11] = "EqualizerGuide.html_files/EqualizerGuide.012.jpg";
+            images[12] = "EqualizerGuide.html_files/EqualizerGuide.013.jpg";
+            images[13] = "EqualizerGuide.html_files/EqualizerGuide.014.jpg";
+            images[14] = "EqualizerGuide.html_files/EqualizerGuide.015.jpg";
+            images[15] = "EqualizerGuide.html_files/EqualizerGuide.016.jpg";
+            images[16] = "EqualizerGuide.html_files/EqualizerGuide.017.jpg";
+            images[17] = "EqualizerGuide.html_files/EqualizerGuide.018.jpg";
+            images[18] = "EqualizerGuide.html_files/EqualizerGuide.019.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EqualizerGuide.html_files/EqualizerGuide.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EqualizerGuide.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EqualizerGuide.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EqualizerGuide.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

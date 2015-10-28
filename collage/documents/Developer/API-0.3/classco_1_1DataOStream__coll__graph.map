@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classco_1_1base_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="5,5,173,35"/>
+<area shape="rect" id="node8" href="$classco_1_1Connection.html" title="An interface definition for communication between hosts." alt="" coords="105,85,223,115"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; Connection \&gt;" alt="" coords="92,181,316,211"/>
+</map>

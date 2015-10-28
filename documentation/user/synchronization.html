@@ -1,0 +1,432 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: User: Video and Swap Synchronization</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Video and Swap Synchronization</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documentation/user/synchronization.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: User: Video and Swap Synchronization" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documentation/user/synchronization.shtml" class="rule">Changed Mon Aug 15 16:22:30 2011 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+              class="used"
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<h2>Overview</h2>
+<p>
+  Equalizer provides hardware and software swap barriers to synchronize buffer
+  swaps of multiple windows, potentially residing on different nodes. Together
+  with video synchronization provided by the GPU they ensure a coherent image
+  generation.
+</p>
+
+<h3>Definitions</h3>
+<p>
+  The following defines the various synchronization terms, since they are often
+  confused in the literature:
+</p>
+<ul>
+  <li><strong>Genlock</strong> is the strongest form of synchronization, where
+    the video signal of multiple video outputs is synchronized at the beginning
+    of each line. To our knowledge, this is no longer implemented on current
+    GPUs.</li>
+  <li><strong>Frame synchronization</strong> synchronizes the video signal of
+    multiple video outputs at the beginning of each frame. By definition, it
+    happens with the video refresh rate. This is implemented by some
+    professional-grade GPUs.</li>
+  <li><strong>Swap synchronization</strong> synchronizes the buffer swap of
+    multiple windows, potentially on multiple video outputs. By definition, this
+    happens at the application's rendering frame rate.</li>
+  <li><strong>Hardware swap synchronization</strong> uses a electrical signal on
+    the GPU as a very fast and precise barrier for swap synchronization.</li>
+  <li><strong>Software swap synchronization</strong> provides swap
+    synchronization using a software construct, typically a network-based
+    barrier. Software swap synchronization might fail to synchronize a window
+    for one video frame very occasionally, which is only noticable by very
+    skilled observers.</li>
+</ul>
+
+<h3>What do I need?</h3>
+<ul>
+  <li><strong>Single-display system</strong> do not need any of the above,
+    regardless of the stereo mode</li>
+  <li><strong>Monoscopic display walls</strong> need a software swap
+    synchronization. Due to the space imposed by the bezels between displays, a
+    frame synchronization is typically not needed.</li>
+  <li><strong>Projector-based monoscopic or passive stereo systems</strong>
+    need at least a software swap synchronization. Frame synchronization is
+    recommended since the video outputs overlap and some people might notice
+    tearing.</li>
+  <li><strong>Active stereo systems</strong> need frame synchronization and at
+  least software swap synchronization, otherwise the per-eye images of the
+  various projectors do not match. Hardware swap synchronization is recommended
+  for demanding high-performance use cases, e.g., flight simulators.</li>
+</ul>
+
+<h2>Software Swap Synchronization</h2>
+<p>
+  The software swap barrier uses the network connection between the nodes to
+  synchronize the buffer swap of multiple windows. Additionally, all OpenGL
+  commands are finished to ensure that the buffer swaps happen immediately and
+  without any delay. The software swap barrier does not need any special
+  hardware support.
+</p>
+<p>
+  Multiple windows on the same GPU (pipe) can join the same software swap
+  barrier. A single actual networked barrier operation is used to synchronize
+  all windows of a single GPU, and the windows will all swap buffers
+  immediately.
+</p>
+<p>
+  Software swap synchronization does not perform frame synchronization, but can
+  work with frame synchronization provided by the driver, e.g., using an NVidia
+  G-Syn board. Furthermore a swap command may very occasionally be executed on
+  video too late, because it just missed its turn due to timing issues.
+</p>
+<p>
+  To configure software swap synchronization, define a <code>swapbarrier</code>
+  for each window in the configuration, potentially using giving it a name. All
+  swapbarriers in a single compound tree using the same barrier name will swap
+  together.
+</p>
+
+<a name="gsync"></a>
+<h2>Hardware Synchronization</h2>
+<p>
+  On GPUs which support the NV_swap_group extension, e.g., NVidia Quadro with
+  G-Sync boards, hardware-based swap synchronization is supported by
+  Equalizer. On a single node, all windows join a swap group, which ensures that
+  the buffer swaps happen synchronously. Between systems, all swap groups join
+  the same swap barrier for synchronization.
+</p>
+<p>
+  To configure hardware swap synchronization, define a <code>NV_group</code>
+  and potentially a <code>NV_barrier</code>. All swapbarrier definition using
+  the same group and barrier will be synchronized. Since almost all
+  implementations only support a single group and barrier, the value ON (=1) can
+  be used as a synonym in the configuration file.
+</p>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+       swapbarrier 
+       { 
+           name "barrier-name" // sync's compound's window swap buffers
+           NV_group    OFF | ON (1) | unsigned
+           NV_barrier  OFF | ON (1) | unsigned
+       }
+  }
+</pre><!-- */ -->
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

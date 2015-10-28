@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structeq_1_1net_1_1NodePacket.html" title="Packet sent to and handled by an eq::net::Node." alt="" coords="8,83,160,112"/>
+<area shape="rect" id="node4" href="$structeq_1_1net_1_1Packet.html" title="A packet send over the network." alt="" coords="25,5,143,35"/>
+</map>

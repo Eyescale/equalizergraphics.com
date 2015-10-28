@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1Atomic.html#af3d5714e04a31e6742f2b93f9884dc55" title="Perform a compare&#45;and&#45;swap atomic operation." alt="" coords="243,5,496,32"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1SpinLock.html#a2f8950e6b63c65ba981ad18c0dc79ad8" title="Test if the lock is set exclusively." alt="" coords="263,56,476,83"/>
+</map>

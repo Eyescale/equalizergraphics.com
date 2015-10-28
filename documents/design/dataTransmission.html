@@ -1,0 +1,453 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Application Data Transmission</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Application Data Transmission</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/dataTransmission.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Application Data Transmission" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/dataTransmission.shtml" class="rule">Changed Mon Mar 2 08:20:41 2009 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State: Design/Abandoned
+</p>
+
+<h2>Overview</h2>
+<p>
+  The data transmission API is a simple interface to send data from the
+  application to the render clients. It sends unstructured data directly to
+  running nodes. The main purpose is to efficiently transmit the model database
+  during initialization.
+</p>
+<p>
+  The implementation has been deferred, since most of its use can be implemented
+  using distributed objects.
+</p>
+
+<h2>Design</h2>
+<p>
+  The API has to provide an efficient way to send data. The data is not
+  frame-synchronized, that is, latency is not accounted for. For frame-specific
+  data the usage of versioned <code>eq::net::Object</code>s is highly
+  recommended. Synchronization of data to config frames can also be implemented
+  by the application, using the current frame number.
+</p>
+<p>
+  One approach is not to provide a new API, but to use the command packet
+  API. This requires getting a list of nodes from the 'client' API in order to
+  know where to send it to. The proposed API is easier to use and can implement
+  optimizations later on.
+</p>
+<p>
+  The local (app) node also receives the broadcasted data. This allows for
+  the same code to be deployed on the app node. Furthermore, when initializing
+  the model, the application node might want to initialize a copy of the model
+  as well. If not, it can always discard the received data.
+</p>
+<p>
+  The received data is enqueued by the receiver thread in a separate
+  CommandQueue. The CommandQueue transfers the received packet, thus avoiding a
+  data copy. To access the data from the enqueued Commands, a wrapper API around
+  the CommandQueue is provided. Handling in the receiver thread without queueing
+  can be implemented by overwriting the command handler (advanced usage).
+</p>
+<p>
+  Potential overlap with the to-be-defined frame data API (a.k.a. cull queues)
+  exists. The frame data API will most likely require objects to provide
+  additional information for frustum and range culling. It also requires frame
+  synchronization and therefore queueing.
+</p>
+
+<h2>Usability during Config::init</h2>
+<p>
+  As is, the data transmission API can not be used during
+  <code>Config::init</code>, because the application is blocked until all
+  initialization task methods have returned.
+</p>
+<p>
+  In order to allow data transmission during initialization,
+  <code>Config::init</code> is split into <code>startInit</code> and
+  <code>finishInit</code>, similar to the config's frame functions. The start
+  method returns as soon as all the nodes have been constructed. The finish
+  function blocks until all initialization functions have returned, and returns
+  the success value of the config initialization. <code>Config::init</code>
+  becomes a convenience function calling the start and finish method.
+</p>
+<p>
+  The pseudo-code for sending data during initialization is:
+</p>
+<pre>
+[Application:]
+    config->startInit();
+    for each init data
+        config->broadcastData( data, size );
+    config->finishInit();
+
+[Render Clients]
+    bool Node::configInit(...)
+    {
+        ...
+        while not all init data received
+            data = receiveData(...);
+            process data
+        ...
+    }
+</pre>
+
+<h2>Implementation</h2>
+<ul>
+  <li>Sender Implementation
+    <ul>
+      <li>config init reply returns list of node IDs</li>
+      <li>broadcast connects all nodes and caches list of nodes</li>
+      <li>broadcast sends ConfigDataPacket to all connected nodes</li>
+    </ul>
+  </li>
+  <li>Receiver Implementation
+    <ul>
+      <li>subclass CommandQueue into DataQueue</li>
+      <li>push Commands into DataQueue from receiver thread</li>
+      <li>return pointer and size of current Command from DataQueue</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  void eq::Config::broadcastData( const void* data, uint64_t size );
+  [void eq::Node::sendData( const void* data, uint64_t size );]
+  const void* eq::Node::receiveData( uint64_t* size );
+  const void* eq::Node::tryReceiveData( uint64_t* size );
+  bool  eq::Node::hasData() const;
+
+  virtual bool Config::startInit( const uint32_t initID );
+  virtual bool Config::finishInit();
+</pre><!-- */ -->
+
+<h2>Restrictions</h2>
+<p>
+  Sending data is only supported from the application node. If a reasonable use
+  case for sending data from a render node is presented, this can be relaxed.
+</p>
+
+<h2>Open Issues</h2>
+<p>
+  Late inits will require resend of the data.
+</p>
+
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

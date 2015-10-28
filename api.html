@@ -1,0 +1,413 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+    <meta name="keywords" content="Parallel Programming Interface, multithreaded GLUT, parallel OpenGL">
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: About: Parallel Programming Interface</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>Parallel Programming Interface</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/api.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: About: Parallel Programming Interface" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/api.shtml" class="rule">Changed Wed Jul 15 13:32:30 2015 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <div class="subnavigation">
+
+        <p><a href="/useCases.html"
+
+
+
+              >Use Cases</a></p>
+
+        <p><a href="/configuration.html"
+
+
+
+              >Flexibility</a></p>
+
+        <p><a href="/scalability.html"
+
+
+
+              >Scalability</a></p>
+
+        <p><a href="/api.html"
+
+              class="used"
+
+              >Framework</a></p>
+
+      </div>
+
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<h2>Sequel</h2>
+<p>
+  <a href="http://eyescale.github.io/Equalizer-1.10/namespaceseq.html#details">Sequel</a>
+  provides an abstraction to the Equalizer parallel rendering framework which
+  allows rapid development of clustered multi-GPU applications. The central
+  interface of Sequel is provided by the two
+  classes <a href="http://eyescale.github.io/Equalizer-1.10/classseq_1_1_application.html">Application</a>
+  and <a href="http://eyescale.github.io/Equalizer-1.10/classseq_1_1_renderer.html">Renderer</a>
+  which provide a streamlined interface for parallel rendering applications.
+</p>
+
+<h2>Equalizer</h2>
+<p>
+  Equalizer provides a distributed, scalable, multipipe,
+  multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
+  <a href="http://eyescale.github.io/Equalizer-1.10/namespaceeq.html#details">programming
+  interface</a>.
+</p>
+<p>
+  Equalizer abstracts the application code from the actual configuration of the
+  execution environment. Compared to other cluster-rendering software, it does
+  not replace the OpenGL library but parallelizes and distributes the
+  application's rendering code for optimal performance.
+</p>
+<p>
+  The API is <em>minimally invasive</em> and allows to retain nearly all of the
+  application's rendering code. Equalizer provides the natural execution
+  framework for any multi-GPU application and does not impose any specific
+  rendering framework, such as a scenegraph or graphics library, to the
+  application. It follows the natural execution model of any multi-GPU
+  application, thus making it as easy as possible to modify existing
+  applications for parallel rendering on visualization clusters.
+</p>
+<div class="float_right"><a href="/images/executionFlow.png">
+    <img src="images/executionFlow-small.jpg"
+         alt="Execution flow of a single-threaded and a multi-GPU application">
+</a></div>
+<p>
+  Equalizer uses a callback-driven interface. Applications provide their
+  rendering methods, which are called by the Equalizer framework according to
+  the current configuration and system load. Process and thread creation, task
+  synchronization and network connections are externalized from the application
+  and handled by the Equalizer framework.
+</p>
+<p>
+  To port an application to run in a multi-GPU environment, the rendering code
+  is separated from the core application logic. The Equalizer framework will
+  then take care of the multiprocessing and synchronization and calls the
+  application-provided rendering methods in parallel. The basic execution flow
+  of a singlepipe and a multi-GPU application is show on the right (click on
+  picture to enlarge).
+</p>
+<p>
+  Equalizer abstracts common graphic entities into C++ classes, for example:
+</p>
+<ul>
+  <li><b>Node</b> - a single computer in the cluster</li>
+  <li><b>Pipe</b> - a graphics card and rendering thread</li>
+  <li><b>Window</b> - an OpenGL drawable</li>
+  <li><b>Channel</b> - a viewport within a window</li>
+</ul>
+<p>
+  The application subclasses these entities, and
+  overrides <a href="/documents/design/taskMethods.html">task methods</a> to
+  provide the application's rendering code. Each method corresponds to a task,
+  and for all of them Equalizer provides a default method which implements the
+  typical use case. This allows a quick start for the developer, which can
+  replace the defaults gradually with his own
+  code. The <a href="/documents/design/taskMethods.html">full list of task
+  methods</a> is part of the <a href="/doc_developer.html">developer
+  documentation</a>. Some of the most important methods are:
+  <ul>
+    <li><a href="/documents/design/taskMethods.html#channeldraw">
+        <b>Channel::frameDraw</b></a> - render using the provided frustum,
+      viewport and range</li>
+    <li><a href="/documents/design/taskMethods.html#windowinit">
+        <b>Window::configInit</b></a> - initialize OpenGL drawable and
+      state</li>
+    <li><a href="/documents/design/taskMethods.html#pipestartframe">
+        <b>Pipe::frameStart</b></a> - update frame-specific data</li>
+    <li><a href="/documents/design/taskMethods.html#nodeinit">
+        <b>Node::configInit</b></a> - initialize per node application data</li>
+  </ul>
+</p>
+
+<h2>Collage</h2>
+<p>
+<a href="http://www.libcollage.net">Collage</a> is the network backend library
+used by Equalizer. It is used to build network-distributed applications. In
+contrast to other cluster API's, such as MPI or PVM, this API is designed for
+the development of interactive applications. Certain characteristics of
+visualization software, e.g. the frame-driven rendering, are exploited for
+better performance and simpler programming interface.
+</p>
+
+<h2>Lunchbox</h2>
+<p>
+  Lunchbox is the foundation for both Collage and Equalizer. It provides common
+  functionality for the development of high-performance multi-threaded
+  applications. It has the same scope as Boost, but goes beyond in the support
+  for multi-threaded applications by providing utilities tuned for for common
+  concurrency use cases.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

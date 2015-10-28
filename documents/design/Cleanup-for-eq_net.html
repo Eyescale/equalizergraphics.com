@@ -1,0 +1,461 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+
+    <title>Equalizer: Documentation: Developer: Cleanup of the network API</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <img src="/images/Equalizer.png" alt="Equalizer logo">
+
+      <!-- Jobs -->
+      <div class="subnavigation"><center>
+          <a href="/contributions.html#packagers"><b>Packagers
+              Wanted!</b></a><br>
+      </center></div>
+
+
+
+
+
+
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="/changes.html">Latest Website Changes</a><br>
+          <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/?view=log">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Cleanup of the network API</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/Cleanup-for-eq_net.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Cleanup of the network API" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/documents/design/Cleanup-for-eq_net.shtml?view=log" class="rule">Changed </a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/doc_developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/features.html"
+
+
+
+              >Feature List</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+      <!-- social bookmark sites -->
+      <div class="social">
+        <script type="text/javascript">addthis_pub = 'eile';</script>
+        <a href="http://www.addthis.com/bookmark.php"
+           onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+           onmouseout="addthis_close()"
+           onclick="return addthis_sendto()">
+          <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+               border="0" alt="" />
+        </a>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/152/addthis_widget.js">
+        </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>Contribute to this document on the <a href="http://github.com/Eyescale/Equalizer/wiki/Cleanup-for-eq_net">GitHub
+Wiki</a></p>
+
+<p>Author: <a href="mailto:eile@eyescale.ch">Stefan Eilemann</a></p>
+<p>State: Design</p>
+<h2 id="overview">Overview</h2>
+<p>Replace 32-bit Object identifiers by 128-bit UUID's. Move object
+registration to net::Node. Remove net::Session.</p>
+<h2 id="api">API</h2>
+<ul>
+<li>New type uint128_t<ul>
+<li>Check with system availability (Windows/Linux)</li>
+<li>If not available, define as struct{ uint64_t high; uint64_t low; }</li>
+<li>Create operators to convert from/to UUID</li>
+</ul>
+</li>
+<li>
+<p>net::Node:</p>
+<ul>
+<li>Remove:<ul>
+<li>registerSession, deregisterSession, mapSession, unmapSession,
+  getSession, hasSessions</li>
+</ul>
+</li>
+<li>See below for new functions from net::Session</li>
+<li>Refactor local[listening] and remote[connected] node functionality
+  into private impl</li>
+</ul>
+</li>
+<li>
+<p>net::Session:</p>
+<ul>
+<li>Class disappears</li>
+<li>Remove without replacement:<ul>
+<li>genIDs, freeIDs, setIDMaster, unsetIDMaster, getIDMaster, </li>
+</ul>
+</li>
+<li>Move to net::Node:<ul>
+<li>registerObject, deregisterObject, mapObject, unmapObject,
+  attachObject, detachObject, InstanceDataCache</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>net::Object:</p>
+<ul>
+<li>Version will be UUID:<ul>
+<li>Master version are continous, starting at 0:1</li>
+<li>Slave versions are random and have never 0 as high-order value</li>
+<li>[new] Master objects can sync to concrete slave commit version</li>
+</ul>
+</li>
+<li>Method signature changes from uint32_t -&gt; UUID:<ul>
+<li>getID, commit, commitSync, sync, getHeadVersion, getVersion,
+  getOldestVersion, notifyNewHeadVersion, notifyNewVersion</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>eq::Config:</p>
+<ul>
+<li>subclasses from fabric::Object instead of net::Session</li>
+<li>ConfigProxy disappears</li>
+<li>method signature changes from uint32_t -&gt; uint128_t:<ul>
+<li>init, startFrame, find&lt; Object &gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>eq::Node, Pipe, Window, Channel:</p>
+<ul>
+<li>method signature changes from uint32_t -&gt; uint128_t:<ul>
+<li>configInit, all frameFoo task methods</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="tasks">Tasks</h2>
+<h3 id="create-collage-eqnet-library">Create Collage (eq::net) library</h3>
+<ul>
+<li>Move to 'namespace co' and libCollage.so/dylib/dll</li>
+<li>Rename all namespaces accordingly</li>
+<li>Link library from Equalizer</li>
+<li>Use namespace alias to keep eq::net name in Equalizer</li>
+<li>Modify CMake</li>
+<li>Include only necessary eq::base class.</li>
+</ul>
+<p>3-5 days</p>
+<h3 id="new-type-uint128_t">New type uint128_t</h3>
+<ul>
+<li>create class uint128_t</li>
+<li>move field and base function from UUID to uint128_t</li>
+<li>UUID is now a subclass from uint128_t</li>
+<li>add Convertion operator =, ++, --, +, etc.</li>
+<li>add unit test in UUID test application</li>
+<li>make all field uint32_t version = UUID version</li>
+<li>make all field uint32_t frameID = uint128_t frameID </li>
+</ul>
+<p>2 - 3 day</p>
+<h3 id="separate-netnode-implementation">Separate net::Node implementation</h3>
+<ul>
+<li>Use net::Node as a base class / function with recvThread <br />
+</li>
+<li>Create two private implementation classes: LocalNode and RemoteNode. <br />
+</li>
+</ul>
+<p>1 week</p>
+<h3 id="uint128_t-object-ids-and-versions">uint128_t object IDs and versions</h3>
+<ul>
+<li>Remove ObjectVersion</li>
+<li>change Objects methode signature from uint32_t -&gt; UUID</li>
+<li>Change net::Object, net::Session</li>
+<li>Change eq::Config</li>
+<li>Change node, pipe, window</li>
+<li>Change Channel</li>
+<li>Slave object commit returns version now! <br />
+</li>
+</ul>
+<p>3 - 4 days</p>
+<h3 id="remove-id-generation-from-session">Remove ID generation from session</h3>
+<h3 id="remove-master-node-lookup-hash-from-session">Remove master node lookup hash from session</h3>
+<h3 id="remove-netsession">Remove net::Session</h3>
+<ul>
+<li>Move to net::Node: registerObject, deregisterObject, mapObject, unmapObject, attachObject, detachObject, InstanceDataCache.</li>
+<li>fabric::Config subclasses from fabric::Object instead of net::Session</li>
+<li>
+<p>remove fabric::ConfigProxy</p>
+<p>2 - 3 days works</p>
+</li>
+</ul>
+<h2 id="design">DESIGN</h2>
+<h3 id="remove-nodeidhash-and-implement-new-system-nodeid-finder">remove NodeIDHash and implement new system NodeID finder</h3>
+<pre><code>modify Session::MapObject
+ - remove NodeIDHash definition and function which serve to find the ID
+ - add new system research corresponding to the following algorithm
+
+    Nodes nodes = _local-&gt;getNodes()
+    for each node in the nodes vector
+        send Packet findNode
+        wait request
+        if nodeID != ZERO
+            break;
+</code></pre>
+<p>_cmdFindNodeID( Command&amp; command )
+     const UUID&amp; id = packet.id;
+     Object* object = _objects.find( id )
+     if object
+        send reply packet with the NodeID
+     else
+       send reply packet with id ZERO</p>
+<p>_cmdReplyFindNode( Command&amp; command )
+     serveRequest( NodeID )</p>
+<h2 id="issues">Issues</h2>
+<h3 id="1-do-we-need-to-keep-compatibility-methods-for-uint32_t-client-api">1. Do we need to keep compatibility methods for uint32_t client API?</h3>
+<p>The compatibility methods would wrap/unwrap the 32 bit value from/to an
+UUID. How to handle unwrap if the 12 high-order bytes are not 0?</p>
+<p>eile: imo not needed.</p>
+<h3 id="2-do-we-need-to-keep-compatibility-methods-for-config-object-mapping">2. Do we need to keep compatibility methods for Config object mapping?</h3>
+<p>In the new API, Objects are registered with the local net::Node, which
+is the eq::Client. The compatibility methods in eq::Config would forward
+the local client.</p>
+<p>eile: imo not needed.</p>
+<h3 id="3-who-keeps-the-id-master-mapping">3. Who keeps the id-&gt;master mapping?</h3>
+<p>Nobody: The mapping node queries all connected nodes for the master node
+of the object. This requires the master node to be connected. The client
+library will connect the application node early in the
+initialization. Versioned slave objects, which know the master node ID,
+will be used to accelerate the master node lookup.</p>
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+  <div class="center">
+    <img src="http://www.equalizergraphics.com/documents/design/Cleanup-for-eq_net.html.png" alt="QR code for this website">
+    <div class="label">QR Code linking to this website, to be read with a mobile
+      device.</div>
+  </div>
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,551 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Features</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+
+
+      <h1>Features</h1>
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/features.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Features" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/features.shtml" class="rule">Changed Thu Jun 27 16:35:49 2013 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+            class="used"
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<h2>Table of Contents</h2>
+<p>
+<a href="/features.html#platforms">Platform Support</a><br>
+<a href="/features.html#vr">Virtual Reality Features</a><br>
+<a href="/features.html#scalability">Scalable Rendering Features</a><br>
+<a href="/features.html#rendering">3D Rendering Features</a><br>
+<a href="/features.html#examples">Examples</a><br>
+<a href="/features.html#tools">Tools and Utility Functions</a><br>
+</p>
+
+<p>
+  The version label references the Equalizer version introducing the feature.
+  Features labeled 'git' are in the git development repository and will most
+  likely be released in the next version.
+</p>
+
+
+<a name="platforms"></a>
+<h2>Platform Support</h2>
+<ul class="none">
+  <li><div class="box">0.3</div> Windows 7 and XP, ia32 and x86_64</li>
+  <ul>
+    <li><div class="box">0.9.2</div> Introduced Windows 7 support</li>
+  </ul>
+  <li><div class="box">0.1</div> Linux ia32, x86_64, X11/glX</li>
+  <ul>
+    <li><div class="box">0.4</div> Discontinued Linux ia64 support</li>
+  </ul>
+  <li><div class="box">0.9.1</div> Mac OS X 10.6, 10.5 Universal, X11/glX,
+    Carbon/AGL support</li>
+  <ul>
+    <li><div class="box">TBD</div> Mac OS X Universal, Cocoa/NSGL</li>
+    <li><div class="box">0.9.1</div> Introduced Mac OS X 10.6 support</li>
+    <li><div class="box">0.5</div> Discontinued Mac OS X 10.4 support</li>
+    <li><div class="box">0.4</div> Introduced Mac OS X Carbon/AGL support</li>
+    <li><div class="box">0.4</div> Discontinued Mac OS X CGL support</li>
+    <li><div class="box">0.1</div> Introduced Max OS X 10.4, 10.5, X11/glX, CGL
+      (partial)</li>
+  </ul>
+</ul>
+
+<a name="vr"></a>
+<h2>Virtual Reality Features</h2>
+<ul class="none">
+  <li><div class="box">0.1</div>
+    Support for shared memory multi-GPU systems</li>
+  <li><div class="box">0.1</div>
+    Support for distributed memory GPU clusters</li>
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/immersive.html">Active and passive stereo
+      rendering</a></li>
+  <ul class="none">
+    <li><div class="box">0.3</div>
+      <a href="/documents/design/anaglyph.html">Anaglyphic stereo
+        rendering</a></li>
+    <li><div class="box">0.1</div>
+      <a href="/documents/design/immersive.html">Head tracking</a> for immersive
+      installations</li>
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/immersive.html#HMD">HMD support</a><li>
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/immersive.html#observers">Multiple
+        observers</a> in immersive environments</li>
+    <li><div class="box">1.2</div>
+      <a href="/documents/design/immersive.html#focal">Dynamic focus
+        distance</a> for arbitrary focal plane.</li>
+    <li><div class="box">1.6</div>
+      <a href="https://github.com/Eyescale/Equalizer/issues/196">Asymmetric eye
+      position</a></li>
+  </ul>
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/swapBarrier.html">Software swapbarrier</a> for
+    synchronization of multiple displays</li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/swapBarrier.html#gsync">Hardware swapbarrier</a>
+      for synchronization of multiple displays</li>
+  <li><div class="box">0.9.2</div>
+    <a href="/documents/design/stereoSwitch.html">Runtime stereo
+      switching</a></li>
+    <li><div class="box">1.4</div>
+      <a href="https://github.com/Eyescale/Equalizer/issues/63">Application-specific
+        scaling</a> to visualize data in a scale different to 1:1</li>
+  <li><div class="box">TBD</div>
+    <a href="http://local.wasp.uwa.edu.au/~pbourke/texture_colour/edgeblend/">Software
+      edge blending</a></li>
+</ul>
+
+<a name="scalability"></a>
+<h2>Scalable Rendering Features</h2>
+<h3>Configuration</h3>
+<ul class="none">
+  <li><div class="box">0.1</div>
+    <a href="/documents/design/fileFormat.html">Static configuration using an
+      ASCII file</a></li>
+  <li><div class="box">1.1.7</div>
+    <a href="/documentation/user/configuration.html">Automatic configuration</a>
+    of Multi-GPU workstations</a></li>
+  <li><div class="box">1.1.7</div>
+    <a href="/documentation/user/configuration.html">Automatic configuration</a>
+    and discovery of remote scalability GPUs</a></li>
+  <li><div class="box">TBD</div>
+    Automatic configuration and discovery of remote display surfaces</a></li>
+</ul>
+
+<h3>Decomposition Modes</h3>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/scalability/2D.html">Sort-first (2D)
+      compounds</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/scalability/DB.html">Sort-last (DB) compounds</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/scalability/stereo.html">Eye (stereo) compounds</a></li>
+  <li><div class="box">0.5</div>
+    <a href="/scalability/pixel.html">Pixel compounds</a></li>
+  <li><div class="box">0.6</div>
+    <a href="/scalability/DPlex.html">DPlex (time-multiplex) compounds</a></li>
+  <li><div class="box">0.9.1</div>
+    <a href="/scalability/subpixel.html">Subpixel (FSAA, DOF) compounds</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/scalability/mixed.html">Hierarchical, multi-level</a>
+    compounds</li>
+  <li><div class="box">1.2</div>Tile compounds</a></li>
+  <li><div class="box">TBD</div>
+    <a href="/documents/design/compounds.html">Cull compounds</a></li>
+</ul>
+
+<h3>Compositing Features</h3>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/compounds.html">Flexible, parallel compositing
+      engine</a></li>
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/imageCompression.html">Image compression</a>
+    for network transfers</li>
+  <ul>
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/compression.html">CPU Compression plugin
+        API</a></li>
+    <li><div class="box">0.9.2</div>
+      <a href="/documents/Developer/API/compressor_8h.html">GPU Compression
+        plugin API</a></li>
+    <li><div class="box">1.4</div> Asynchronous framebuffer readback</li>
+  </ul>
+  <li><div class="box">1.4</div> ROI readback interface</li>
+  <li><div class="box">0.6</div> <a href="http://paracomp.sf.net">Paracomp</a>
+    compositing backend</li>
+  <li><div class="box">TBD</div> Fast node-local composition using NV_copy_image
+    extension</li>
+  <li><div class="box">TBD</div> nVidia CompleX compositing backend</li>
+</ul>
+
+<h3>Load-Balancing</h3>
+<ul class="none">
+  <li><div class="box">0.6</div>
+    <a href="/scalability/loadEqualizer.html">Per-segment 2D and DB
+      load-balancing</a></li>
+  <li><div class="box">0.9</div>
+    <a href="/scalability/viewEqualizer.html">Cross-segment
+      load-balancing</a></li>
+  <li><div class="box">TBD</div>
+    Cross-view resource load-balancing</li>
+  <li><div class="box">TBD</div>
+    Cross-application resource load-balancing</li>
+</ul>
+
+<a name="rendering"></a>
+<h2>3D Rendering Features</h2>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/dynamicNearFar.html">Dynamic near and far plane
+      support</a></li>
+  <li><div class="box">0.6</div>
+    Orthographic frustum support</li>
+  <li><div class="box">0.9</div>
+    <a href="/documents/design/view.html">Canvas and layout API</a></li>
+  <ul class="none">
+    <li><div class="box">0.9</div>
+      <a href="/documents/design/view.html">Application-specified frusta</a> for
+      destination views</li>
+    <li><div class="box">1.6</div>
+      <a href="https://github.com/Eyescale/Equalizer/issues/194">Application-specified
+        frusta</a> for segments</li>
+  </ul>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/nonthreaded.html">Nonthreaded rendering</a> for
+    non-threadsafe UI toolkits</li>
+  <li><div class="box">0.5</div>
+    <a href="/documents/design/PBuffer.html">PBuffer support</a></li>
+  <li><div class="box">0.9</div>
+    FBO support</li>
+  <li><div class="box">0.9.1</div>
+    Support for applications not using OpenGL for rendering</li>
+  <li><div class="box">1.0</div> Runtime mono/stereo switching</li>
+  <li><div class="box">TBD</div> OpenGL 3 compositing and example</li>
+  <li><div class="box">TBD</div> Advanced support for
+    <a href="/documents/design/transparency.html">transparency and sort-last
+      (DB) compounds</a></li>
+  <li><div class="box">TBD</div> Transparent OpenGL library (Chromium?)</li>
+  <li><div class="box">TBD</div> Remote visualization (VirtualGL, VNC,
+    SAGE?)</li>
+  <li><div class="box">TBD</div>
+    Distributed scene graph: OpenSceneGraph, OpenSG, Coin</li>
+</ul>
+
+<h2>Cluster Features</h2>
+<ul class="none">
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/objects.html">Distributed object API</a></li>
+  <ul>
+    <li><div class="box">0.9.1</div>
+      <a href="/documents/design/multicast.html">Multicast data distribution and
+        synchronization</a></li>
+    <li><div class="box">0.9.2</div>
+      <a href="/documents/design/admin.html#slaveWrite">Slave object
+        commits</a></li>
+    <li><div class="box">0.9.2</div>Automatic compression of distributed object
+      data</li>
+  </ul>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/residentNodes.html">Resident render
+      clients</a></li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/infiniBand.html">InfiniBand networking</a></li>
+  <li><div class="box">1.1.7</div>
+    RDMA (native InfiniBand) connection</li>
+  <ul>
+    <li><div class="box">1.1.7</div>Linux</li>
+    <li><div class="box">1.6</div>Windows</li>
+  </ul>
+  <li><div class="box">0.9.2</div>
+    <a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
+     initialization</li>
+  <li><div class="box">1.1.7</div>
+    <a href="/documents/design/nodeFailure.html">Runtime failure
+      tolerance</a></li>
+  <li><div class="box">1.4</div>
+    <a href="https://github.com/Eyescale/Equalizer/issues/122">Zeroconf
+      support and node discovery</a></li>
+</ul>
+
+<a name="examples"></a>
+<h2>Examples</h2>
+<ul class="none">
+  <li><div class="box">0.1</div>
+    <a href="/applications/eqPly.html">eqPly</a> polygonal rendering demo</li>
+  <li><div class="box">0.4</div>
+    <a href="/applications/eVolve.html">eVolve</a> volume renderer</li>
+  <li><div class="box">0.4</div>
+    <a href="/applications/eqHello.html">eqHello</a> Hello, World! example</li>
+  <li><div class="box">0.9</div>
+    OpenSceneGraph rendering application</li>
+  <li><div class="box">TBD</div>
+    Molecular viewer (<a href="http://www.cscs.ch/molekel/">Molekel</a>,
+    <a href="http://www.ks.uiuc.edu/Research/vmd/">VMD</a>?)
+  </li>
+  <li><div class="box">TBD</div>
+    Medical viewer (<a href="http://www.osirix-viewer.com/">Osirix</a>?)
+  </li>
+</ul>
+
+<a name="tools"></a>
+<h2>Tools and Utility Functions</h2>
+<ul class="none">
+  <li><div class="box">0.2</div>
+    <a href="/documents/design/statistics.html">Statistics overlay</a> for
+    performance analysis</li>
+  <li><div class="box">0.3</div>
+    <a href="/documents/design/objectManager.html">OpenGL object
+      manager</a></li>
+  <li><div class="box">0.9.2</div>
+    <a href="/documents/design/admin.html">Administrative API</a></li>
+</ul>
+
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

@@ -1,0 +1,489 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Compound Load Balancing</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Compound Load Balancing</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/loadBalancing.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Compound Load Balancing" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/loadBalancing.shtml" class="rule">Changed Mon Jan 17 15:27:41 2011 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State:
+  <ul>
+    <li>Implemented in 0.6</li>
+    <li>view_equalizer in 0.9
+      (<a href="/documents/design/viewEqualizer.html">described here</a>)</li>
+    <li>Boundaries: implemented in 0.9.1</li>
+  </ul>
+</p>
+
+<h2>Overview</h2>
+<p>
+  Compound load balancing tries to optimally use all child resources assigned
+  to a compound. Higher-level load balancing will dynamically change the
+  resource assigned to a compound, based on the overall system load.
+</p>
+<p>
+  Compound load balancing either adapts the viewport or the range of the
+  children to make sure all resource are busy all the time, so that optimal
+  scalability can be achieved.
+</p>
+<p>
+  The implementation is fully transparent to the applicatoin and uses the timing
+  values from the last finished frame. Later versions may introduce an API to
+  get load information for the current frame from the application, to allow a
+  more accurate approach.
+</p>
+
+<h2>Implementation</h2>
+<div class="float_right">
+  <a href="/documents/design/images/loadEqualizer.png">
+    <img src="/documents/design/images/loadEqualizer-small.jpg"
+         alt="Load Balancing Grid"/></a>
+  <div class="label">Load Balancing Grid</div>
+</div>
+<p>
+  The <a href="/documents/design/statistics.html">statistics interface</a> does
+  provide us with the timing values from the last finished frame. This timing
+  values, together with the 2D viewport or DB range give us a load
+  distribution. The ROI readback interface will be used to refine the load
+  distribution.
+</p>
+<p>
+  The goal of the load balancer is that all channels use the same time for
+  rendering. The basic assumption is that the new frame will take the same time
+  as the last finished frame and that is has roughly the same load distribution.
+</p>
+<p>
+  Using the statistics from the last finished frame, a 2D load grid is
+  generated. Each grid cell containst the area and load for this cell. The load
+  is time per normalized viewport, i.e., assuming an even work distribution
+  within the call. The Figure on the right shows a load grid for a three-way 2D
+  decomposition.
+</p>
+<div class="float_left">
+  <a href="/documents/design/images/loadEqualizer-tree.png">
+    <img src="/documents/design/images/loadEqualizer-tree-small.jpg"
+         alt="Load Balancing Grid"/></a>
+  <div class="label">Load Balancing Split Tree</div>
+</div>
+<p>
+  The viewport distribution is calculated using a binary split tree. The leaf
+  nodes of the tree represent the child compounds performing the
+  rendering. Intermediate nodes define the split direction at this level. The
+  Figure on the left shows the split tree for the example load grid. Unless
+  a <a href="/documents/design/viewEqualizer.html">view equalizer</a> is used,
+  each child counts as a full resource.
+</p>
+<p>
+  The load equalizer computes the split position using a top-down traversal on
+  each level of the split tree, based on the resources and total rendering time
+  of the given node. In the given example, the target time for the root node is
+  180 ms with a 60/120 ms split, and a 60/60 ms split on the right sub-node.
+</p>
+<div class="float_right">
+  <a href="/documents/design/images/loadEqualizer-new.png">
+    <img src="/documents/design/images/loadEqualizer-new-small.jpg"
+         alt="Load Balancing Grid"/></a>
+  <div class="label">New Split Computation</div>
+</div>
+<p>
+  To find the y split position on the root node, the load equalizer iterates
+  over the 2D grid until 60ms have been accumulated. In the given example, this
+  is reached at split position 0.4, giving the first source channel a viewport
+  of [ 0 0 1 0.4 ].
+</p>
+<p>
+  On the intermediate node, the 60/60 ms split leads to a split at X position
+  0.62. Note that the yellow and grid cells do only partially contribute to the
+  new split due to the new split position, in this case about 92 percent
+  (0.6/0.65), i.e., about 55ms for the yellow grid cell.
+</p>
+<p>
+  Note that the new split reduced the size of the red source channel, which had
+  the longest render time.
+</p>
+<p>
+  The calculation for database decomposition uses the same algorithm, except
+  that it is simplified to a one-dimensional integration across the range.
+</p>
+<p>
+  In addition to the simplified algorithm explained above, the load equalizer
+  implements the following additional features:
+  <ul>
+    <li>Dampening the per-frame adaptation by interpolating between the old and
+      new value using a configurable damping factor</li>
+    <li>Restrict a source viewport to be not bigger than the underlying source
+      channel</li>
+    <li>Restrict a source viewport to fall on a pre-defined pixel boundary,
+      e.g., to balance for tiles with a size modulo 8</li>
+    <li>Remove the time needed to assemble the results from the destination
+      channel's budget</li>
+    <li>Do not create zero-sized tiles</li>
+  </ul>
+</p>
+<a name="boundaries"></a>
+<h2>RFE: Tile and Range Boundaries</h2>
+<p>
+  See also
+  <a href="https://sourceforge.net/tracker/?func=detail&aid=2894535&group_id=170962&atid=856212">RFE
+    2894535: Restrict 2D loadbalancer to tile boundaries</a>
+</p>
+
+<h3>Implementation</h3>
+<!-- /* --><pre>
+  Implement file format as below
+  Add:
+    void LoadEqualizer::setBoundary( const Vector2i& boundary );
+    void LoadEqualizer::setBoundary( const float boundary );
+    const Vector2i& LoadEqualizer::getBoundary2i() const;
+    float LoadEqualizer::getBoundaryf() const;
+    Vector2i _boundary2i;  // default: 1 1
+    float _boundaryf       // default: numeric_limits&lt;float&gt;::epsilon
+  Add 'Vector2i boundary' to LoadEqualizer::Node
+  In _assignTargetTimes
+    set boundary on leaf nodes
+    compute boundaries on non-leaf on up traversal
+      Note: add values for split axis, max values for non-split axis
+  In _computeSplit
+    replace current epsilon/MIN_PIXELS code with boundary computation
+</pre><!-- */ -->
+
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+      load_equalizer
+      {
+          mode     [ 2D | VERTICAL | HORIZONTAL | DB ]
+          boundary [ x y ] | float    # x,y: tile boundary for 2D, float: range
+      }
+  }
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+</pre><!-- */ -->
+
+<h2>Open Issues</h2>
+<p>
+  Channels within the same thread.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

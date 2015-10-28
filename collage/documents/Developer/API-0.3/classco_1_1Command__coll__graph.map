@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; LocalNode \&gt;" alt="" coords="1595,108,1813,137"/>
+<area shape="rect" id="node4" href="$classco_1_1LocalNode.html" title="Specialization of a local node." alt="" coords="1331,195,1443,224"/>
+<area shape="rect" id="node18" title="The receiver thread." alt="" coords="1595,184,1813,213"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1RequestHandler.html" title="A thread&#45;safe request handler." alt="" coords="859,107,1045,136"/>
+<area shape="rect" id="node8" href="$classco_1_1Node.html" title="Manages a node." alt="" coords="7,295,84,324"/>
+<area shape="rect" id="node25" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; Node \&gt;" alt="" coords="188,71,375,100"/>
+<area shape="rect" id="node10" href="$classco_1_1CommandQueue.html" title="A CommandQueue is a thread&#45;safe queue for command packets." alt="" coords="875,225,1029,255"/>
+<area shape="rect" id="node12" href="$classco_1_1base_1_1Lockable.html" title="co::base::Lockable\&lt; NodeHash, base::SpinLock \&gt;" alt="" coords="781,279,1123,308"/>
+<area shape="rect" id="node14" href="$classco_1_1ConnectionSet.html" title="A set of connections." alt="" coords="883,332,1021,361"/>
+<area shape="rect" id="node16" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="559,247,671,276"/>
+<area shape="rect" id="node28" href="$classco_1_1base_1_1Atomic.html" title="co::base::Atomic\&lt; long \&gt;" alt="" coords="188,136,375,165"/>
+<area shape="rect" id="node30" href="$structco_1_1Packet.html" title="A packet send over the network." alt="" coords="237,201,325,231"/>
+<area shape="rect" id="node32" href="$classco_1_1CommandFunc.html" title="co::CommandFunc\&lt; Dispatcher \&gt;" alt="" coords="161,5,401,35"/>
+</map>

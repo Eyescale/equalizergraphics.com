@@ -1,0 +1,495 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+
+    <title>Equalizer: Documentation: Developer: Runtime Failure Handling</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <img src="/images/Equalizer.png" alt="Equalizer logo">
+
+      <!-- Jobs -->
+      <div class="subnavigation"><center>
+          <a href="/contributions.html#packagers"><b>Packagers
+              Wanted!</b></a><br>
+      </center></div>
+
+
+
+
+
+
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="/changes.html">Latest Website Changes</a><br>
+          <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/?view=log">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Runtime Failure Handling</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/Reliability.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Runtime Failure Handling" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="http://equalizer.svn.sourceforge.net/viewvc/equalizer/trunk/website/documents/design/Reliability.shtml?view=log" class="rule">Changed </a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/doc_developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/features.html"
+
+
+
+              >Feature List</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+      <!-- social bookmark sites -->
+      <div class="social">
+        <script type="text/javascript">addthis_pub = 'eile';</script>
+        <a href="http://www.addthis.com/bookmark.php"
+           onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+           onmouseout="addthis_close()"
+           onclick="return addthis_sendto()">
+          <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+               border="0" alt="" />
+        </a>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/152/addthis_widget.js">
+        </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>Contribute to this document on the <a href="http://github.com/Eyescale/Equalizer/wiki/Reliability">GitHub
+Wiki</a></p>
+
+<p>Author: <a href="mailto:eile@eyescale.ch">Stefan Eilemann</a></p>
+<p>State: Design</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<div class="toc">
+<ul>
+<li><a href="#runtime-failure-handling">Runtime Failure Handling</a><ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#blocking-operations">Blocking operations</a><ul>
+<li><a href="#eqbase">eq::base</a></li>
+<li><a href="#collage-was-eqnet">Collage (was eq::net)</a><ul>
+<li><a href="#incomplete-receives">Incomplete receives</a></li>
+<li><a href="#all-send-operations">All send operations</a></li>
+<li><a href="#barrier">Barrier</a></li>
+<li><a href="#rsp-implementation">RSP implementation</a></li>
+<li><a href="#connectionset-threads-win32">ConnectionSet threads (Win32)</a></li>
+<li><a href="#dataistreamwaitready">DataIStream::waitReady</a></li>
+<li><a href="#nodeconnect">Node::connect</a></li>
+<li><a href="#nodedisconnect">Node::disconnect</a></li>
+<li><a href="#nodeacquiresendtoken">Node::acquireSendToken</a></li>
+<li><a href="#object-mapping">Object Mapping</a></li>
+<li><a href="#objectsync-commit">Object::sync, commit</a></li>
+</ul>
+</li>
+<li><a href="#eq">eq</a><ul>
+<li><a href="#input-frames">Input frames</a></li>
+<li><a href="#swapbarrier">Swapbarrier</a></li>
+<li><a href="#node-pipe-state-and-frame-synchronization">Node, pipe state and frame synchronization</a></li>
+<li><a href="#blocking-application-methods">Blocking application methods</a></li>
+</ul>
+</li>
+<li><a href="#eqserver">eq::server</a><ul>
+<li><a href="#appnode-failure">appNode failure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#api">API</a></li>
+<li><a href="#issues">Issues:</a><ul>
+<li><a href="#1-timeout-accumulation">1. Timeout accumulation</a></li>
+<li><a href="#2-hardware-swapbarrier">2. Hardware swapbarrier</a></li>
+</ul>
+</li>
+<li><a href="#example-deadlocks">Example deadlocks</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="overview">Overview</h2>
+<p>The goal of this feature is to extend Equalizer to handle the failure of
+resources at runtime. The most common cause is the failure of a node
+process, either due to a hardware or programming failure.</p>
+<p>All blocking operations in Equalizer will throw a
+<code>eq::base::timeoutError</code> exception. The client and server library
+will catch the appropriate exceptions and handle them as needed. The
+timeout time is a global parameter.</p>
+<h2 id="blocking-operations">Blocking operations</h2>
+<p>The following subsections list the blocking operations in various parts
+of the Equalizer code and the necessary changes to handle timeout
+situations.</p>
+<h3 id="eqbase">eq::base</h3>
+<p>The <code>RequestHandler::waitRequest</code> and <code>Monitor::wait</code> methods
+throw a timeout exception. This is a prerequisite for many of the
+higher-level operations listed below. Locks will keep blocking
+indefinitely. A TimedLock should be used for operations which may time
+out, as opposed to the traditional lock usage for mutual exclusion.</p>
+<p>The request handler already uses a timed lock for blocking operations. A
+new value <code>EQ_TIMEOUT_DEFAULT</code> will be the new default value for
+timeout parameters. The default timeout value is a global parameter. The
+request is deregistered upon timeout.</p>
+<p>The monitor wait operations shall use <code>pthread_cond_timedwait</code> with
+the given timeout. Attn: the timeout is an absolute time (cf. TimedLock).</p>
+<h3 id="collage-was-eqnet">Collage (was eq::net)</h3>
+<p>On most timeout errors, the corresponding Node has to be
+disconnected. The individual operations mentioned below qualify how this
+disconnect is affected.</p>
+<h4 id="incomplete-receives">Incomplete receives</h4>
+<p>All connections perform blocking reads (<code>readSync</code>) use a timeout
+and throw a timeout exception. The timeout applies to an atomic read,
+that is, a full packet read may take longer than the timeout, as long as
+reading an individual chunk happens within the timeout.</p>
+<p>When <code>Node::handleData</code> detects an incomplete receive or catches a
+timeout exception, it drops the packet and disconnects the node. The
+timeout is not rethrown, since the ReceiverThread is an internal
+thread. The same applies to disconnect events from the <code>ConnectionSet</code>.</p>
+<h4 id="all-send-operations">All send operations</h4>
+<p>All <code>Connection::write</code> operations use a timeout and throw a timeout
+exception or return false on a closed connection (to be checked what is
+more feasible). All sends have to pass through the appropriate node to be
+able to handle the timeout exception in the proper place, i.e., no
+direct call to <code>Connection::send</code> is made. The <code>Node::send</code>
+catches the timout exception and disconnects the node.</p>
+<p>The timeout is rethrown and caught by all internal threads, i.e, the
+CommandThread. Note that the ReceiverThread should never send
+data. Methods writing data should catch the exception and </p>
+<h4 id="barrier">Barrier</h4>
+<p>The <code>enter</code> function catches the timeout exception from its wait
+operation, disconnects the master node and rethrows the exception. The
+barrier code has to handle late enter requests.</p>
+<h4 id="rsp-implementation">RSP implementation</h4>
+<p>Currently the RSP implementation closes the multicast group when a
+timeout during send operations is exceeded. The new implementation shall
+simply disconnect the peers from which acknowledgements are missing. The
+exit of the node will be announced on the multicast group for a faster
+disconnect on other nodes.</p>
+<h4 id="connectionset-threads-win32">ConnectionSet threads (Win32)</h4>
+<p>When using more than 63 connections in a Windows cluster, the
+<code>ConnectionSet</code> spawns worker threads, each operating on a subset of
+63 connections each. When signalling data to the main thread, they wait
+for the main thread to process the event. Since this wait does not block
+the application, they will retry the operation indefinitely upon timeout
+and consume the exception.</p>
+<h4 id="dataistreamwaitready">DataIStream::waitReady</h4>
+<p>The session waits during during mapping for the initial data. The
+exception is passed through, and handled by <code>mapObject</code>.</p>
+<h4 id="nodeconnect">Node::connect</h4>
+<p>Rollback connection in progress. Rethrow exception.</p>
+<h4 id="nodedisconnect">Node::disconnect</h4>
+<p>Local operation, can't fail. Remote node will detect closed connection.</p>
+<h4 id="nodeacquiresendtoken">Node::acquireSendToken</h4>
+<p>Catch the exception, disconnect the node and rethrow it.</p>
+<h4 id="object-mapping">Object Mapping</h4>
+<div class="float_right">
+  <a href="http://www.equalizergraphics.com/documents/design/images/mapObject.png"><img src="http://www.equalizergraphics.com/documents/design/images/mapObject-small.jpg"
+alt="Object Mapping Sequence"></a>
+  <div class="label">Object Mapping Sequence</div>
+</div>
+
+<p>A number of operations are blocking during <code>mapObject</code>, i.e., object
+master query and connect as well as the map request. </p>
+<p>Write timeout-aware master query when <a href="Cleanup-for-eq_net.html">refactoring</a>.
+Catch the timeout exception from the waitRequest on map, handle it by
+detaching the object if needed, and adapt the command handlers to handle
+commands for timeout/cancelled map requests.</p>
+<h4 id="objectsync-commit">Object::sync, commit</h4>
+<p>Commit is local operation and can't fail.</p>
+<h3 id="eq">eq</h3>
+<p>The thread main loops will catch all non-caught exceptions and output a
+warning for each. This allows the application to catch and act on the
+exception by overwriting the appropriate task methods, while providing a
+sensible default behaviour.</p>
+<p>Equalizer should not need to find and disconnect dead nodes, since
+Collage shall perform all necessary actions.</p>
+<p>One main issue is timeout accumulation. Multiple blocking operations
+served by a single node each have a separate timeout, which causes the
+application to block multiple times before the rendering will be
+interactive again.</p>
+<h4 id="input-frames">Input frames</h4>
+<p>The <code>FrameData</code> ready <code>Lock</code> will be replaced by a
+<code>TimedLock</code>. Both the monitor used for waiting on a group of frames
+and the lock used to wait on a single frame will let the timeout
+exception through to the callee. The compositor will catch these
+exceptions, ignore the failed images and rethrow it.</p>
+<h4 id="swapbarrier">Swapbarrier</h4>
+<p>Ignore the exception and let it be caught by the thread main loop.</p>
+<h4 id="node-pipe-state-and-frame-synchronization">Node, pipe state and frame synchronization</h4>
+<p>These are local operations which do not fail.</p>
+<h4 id="blocking-application-methods">Blocking application methods</h4>
+<pre><code>Server::chooseConfig, releaseConfig
+Config::init, exit, update, finishFrame
+</code></pre>
+<p>These functions catch the timeout exception of their waitRequest, clean
+up pending data and rethrow the exception.</p>
+<h3 id="eqserver">eq::server</h3>
+<p>The <code>server::Node</code> needs to check its <code>co::Node</code> state at the
+beginning of each operation. If the network node has failed, it is set in the
+failed state. All actions should already perform the appropriate actions
+based on the init reliability feature.</p>
+<h4 id="appnode-failure">appNode failure</h4>
+<p>Failure of the application node has to cause a <code>Config::exit</code> and
+release of the configuration for further application runs.</p>
+<h2 id="api">API</h2>
+<p>TBD</p>
+<h2 id="issues">Issues:</h2>
+<h3 id="1-timeout-accumulation">1. Timeout accumulation</h3>
+<p>Multiple operations served by the same failed node will have to time out
+independently. In the worst typical use case this multiplication is <code>2
+* numGPUS * latency</code> (one input frame and one swap barrier per GPU,
+latency render frames queued).</p>
+<p>Both the swap barrier and input frames do not know which node will
+provide the necessary data to finish the operation.</p>
+<h3 id="2-hardware-swapbarrier">2. Hardware swapbarrier</h3>
+<p>Hardware swapbarrier timeout support is not part of this feature. Node
+failures in a HW sync group may cause deadlocks (to be tested).</p>
+<h2 id="example-deadlocks">Example deadlocks</h2>
+<pre><code>...
+4 in eq::Pipe::waitFrameFinished (this=0x2805c00, frameNumber=520) at client/pipe.cpp:453
+5 in eq::Node::_finishFrame (this=0x36023a0, frameNumber=520) at client/node.cpp:232
+6 in eq::Node::_cmdFrameFinish (this=0x36023a0, command=@0x3624800) at client/node.cpp:559
+..
+13 in eq::fabric::Client::processCommand (this=0x2801000) at fabric/client.cpp:100
+14 in eq::Config::finishFrame (this=0x2006000) at client/config.cpp:286
+..
+16 in main (argc=5, argv=0xbffff11c) at /Users/eile/Software/eq-git/src/examples/eqPly/main.cpp:90
+
+..
+3 in eq::base::Monitor&lt;unsigned int&gt;::waitGE (this=0xb0490934, value=@0xb0490950) at monitor.h:348
+4 in eq::Compositor::assembleFramesUnsorted (frames=@0x186ab1c, channel=0x186a800, accum=0x3206b80) at client/compositor.cpp:423
+5 in eq::Compositor::assembleFrames (frames=@0x186ab1c, channel=0x186a800, accum=0x3206b80) at client/compositor.cpp:217
+6 in eqPly::Channel::frameAssemble (this=0x186a800, frameID=521) at /Users/eile/Software/eq-git/src/examples/eqPly/channel.cpp:228
+..
+13 in eq::Pipe::PipeThread::run (this=0x3203df0) at pipe.h:428
+</code></pre>
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+  <div class="center">
+    <img src="http://www.equalizergraphics.com/documents/design/Reliability.html.png" alt="QR code for this website">
+    <div class="label">QR Code linking to this website, to be read with a mobile
+      device.</div>
+  </div>
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+

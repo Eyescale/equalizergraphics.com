@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1DSO.html" title="Helper to access dynamic shared objects (DSO)" alt="" coords="279,5,393,32"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1ErrorRegistry.html" title="A registry translating error codes to strings." alt="" coords="253,56,419,83"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1LFQueue.html" title="A thread&#45;safe, lock&#45;free queue with non&#45;blocking access." alt="" coords="247,107,425,133"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="279,157,393,184"/>
+<area shape="rect" id="node11" href="$classco_1_1base_1_1Lockable.html" title="A convenience structure to hold data together with a lock for access." alt="" coords="239,208,433,235"/>
+<area shape="rect" id="node13" href="$classco_1_1base_1_1MemoryMap.html" title="Helper to map a file to a memory address (mmap)" alt="" coords="255,259,417,285"/>
+<area shape="rect" id="node15" href="$classco_1_1base_1_1PerThread.html" title="Implements thread&#45;specific storage for C++ objects." alt="" coords="234,309,438,336"/>
+<area shape="rect" id="node17" href="$classco_1_1base_1_1PerThreadRef.html" title="Thread&#45;specific storage for a RefPtr." alt="" coords="233,360,439,387"/>
+<area shape="rect" id="node19" href="$classco_1_1base_1_1Pool.html" title="An object allocation pool." alt="" coords="237,411,435,437"/>
+<area shape="rect" id="node21" href="$classco_1_1base_1_1RequestHandler.html" title="A thread&#45;safe request handler." alt="" coords="243,461,429,488"/>
+<area shape="rect" id="node23" href="$classco_1_1base_1_1RNG.html" title="A random number generator." alt="" coords="280,512,392,539"/>
+<area shape="rect" id="node25" href="$classco_1_1base_1_1ScopedMutex.html" title="A scoped mutex." alt="" coords="225,563,447,589"/>
+<area shape="rect" id="node27" href="$classco_1_1base_1_1SpinLock.html" title="A fast lock for uncontended memory access." alt="" coords="265,613,407,640"/>
+</map>

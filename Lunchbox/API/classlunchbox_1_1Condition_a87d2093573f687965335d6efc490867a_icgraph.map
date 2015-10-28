@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1MTQueue.html#a1aa4378f4a855b49bb7dc7a3505c7bb1" title="Reset (empty) the queue." alt="" coords="274,5,465,35"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1MTQueue.html#a24404824800ef291633257163a4be7e4" title="Assign the values of another queue." alt="" coords="256,59,482,90"/>
+<area shape="rect" id="node7" href="$classlunchbox_1_1MTQueue.html#a91510c2c9390818ff86806e5242b8401" title="Retrieve and pop the front element from the queue, may block." alt="" coords="277,114,462,145"/>
+<area shape="rect" id="node9" href="$classlunchbox_1_1MTQueue.html#a25b6d6a42aede1adc7fc185a3b8be736" title="Push a new element to the back of the queue." alt="" coords="273,169,465,199"/>
+<area shape="rect" id="node11" href="$classlunchbox_1_1MTQueue.html#ad2c93b3f23c5e1ec44095dce24ca4727" title="Push a new element to the front of the queue." alt="" coords="256,223,482,254"/>
+<area shape="rect" id="node13" href="$classlunchbox_1_1MTQueue.html#a87171a084e02bb30d79ed0e99cedfc00" title="Set the new maximum size of the queue." alt="" coords="253,278,486,309"/>
+<area shape="rect" id="node15" href="$classlunchbox_1_1MTQueue.html#a8ceb8ef85211373130b2310bc5f29934" title="Retrieve and pop the front element from the queue." alt="" coords="259,333,480,363"/>
+<area shape="rect" id="node17" href="$classlunchbox_1_1MTQueue.html#a4e13eceabbd50c12f935c7a898302221" title="Retrieve and pop the front element from the queue if it is not empty." alt="" coords="269,387,470,418"/>
+</map>

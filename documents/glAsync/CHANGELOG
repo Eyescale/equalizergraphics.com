@@ -1,0 +1,37 @@
+
+Version 0.12
+Change email address in the LICENSE file, tweak documentation, auto-generate CHANGELOG from subversion
+
+Version 0.11
+Added correct finish semantics, added support for GL_APPLE_fence extension
+
+Version 0.10
+some code cleanup and optimisations
+
+Version 0.9
+remove google analytics
+
+Version 0.8
+remove Id from glAsync.h
+
+Version 0.7
+added custom html header
+
+Version 0.6
+enable revision on glAsync.cpp
+
+Version 0.5
+add revision to glAsync.cpp
+
+Version 0.4
+refactored to allow multithreaded use
+
+Version 0.3
+doc update
+
+Version 0.2
+first version of OpenGL async library
+
+Version 0.1
+stub repository
+

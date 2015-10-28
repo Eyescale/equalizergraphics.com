@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classco_1_1base_1_1Lockable.html" title="co::base::Lockable\&lt; ItemHash \&gt;" alt="" coords="5,181,237,211"/>
+<area shape="rect" id="node4" href="$classco_1_1base_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="47,5,215,35"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="137,85,249,115"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1Clock.html" title="A class for time measurements." alt="" coords="261,181,379,211"/>
+</map>

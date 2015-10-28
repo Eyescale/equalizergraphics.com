@@ -1,0 +1,642 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+    <meta name="keywords" content="parallel OpenGL, OpenGL, multi-GPU, multicore, parallel">
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Parallel OpenGL FAQ</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+      <div class="subnavigation">
+        <script type="text/javascript"><!--
+               google_ad_client = "pub-1533483071170061";
+               /* 250x250, created 4/26/10 */
+               google_ad_slot = "4079149628";
+               google_ad_width = 250;
+               google_ad_height = 250;
+               //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+      </div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+
+
+      <h1>Parallel OpenGL FAQ</h1>
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documentation/parallelOpenGLFAQ.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Parallel OpenGL FAQ" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documentation/parallelOpenGLFAQ.shtml" class="rule">Changed Mon Jun 18 13:49:25 2012 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+              class="used"
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  If this FAQ does not answer your question, please
+  <a href="mailto:info@equalizergraphics.com?subject=Parallel OpenGL Question">send it to us</a>.
+</p>
+
+<h2>Table of Contents</h2>
+<p>
+  <a href="/documentation/parallelOpenGLFAQ.html#one">Using one Context from
+    multiple Threads</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multicore">Using Multiple Cores
+    with OpenGL</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multicontext">Using Multiple
+    OpenGL contexts with one Graphics Card</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multigpu">Using Multiple
+    Graphics Cards with OpenGL</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#multiprocess">Using one
+  Context from multiple Processes</a><br>
+  <a href="/documentation/parallelOpenGLFAQ.html#links">Further
+    Information</a><br>
+</p>
+
+<a name="one"></a>
+<h2>1. Using one Context from multiple Threads</h2>
+<ul>
+  <li><b>Q: </b>Why does my OpenGL application crash/not work when I am
+    rendering from another thread?</li>
+  <li><b>A: </b>The OpenGL context is thread-specific. You have to make it
+    current in the thread using
+    <a href="http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/glx/xmakecurrent.html">glXMakeCurrent</a>,
+    <a href="http://msdn.microsoft.com/en-us/library/ms537558(VS.85).aspx">wglMakeCurrent</a> or
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/AGL_OpenGL/Reference/reference.html#//apple_ref/c/func/aglSetCurrentContext">aglSetCurrentContext</a>,
+ depending on your operating system.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does it not work if I make my context current in another
+    thread?</li>
+  <li><b>A: </b>One OpenGL context can only be current in one thread. You have
+    to release the context in the the other thread first, by making another or
+    no context current.</li>
+</ul><ul>
+  <li><b>Q: </b>So how can I then make use of multiple processors with
+    OpenGL?</li>
+  <li><b>A: </b>See
+    <a href="/documentation/parallelOpenGLFAQ.html#multicore">Section
+      2</a>.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does my X11 application still crash, even though I am
+    handling the context correctly?</li>
+  <li><b>A: </b>X11 is also not thread safe by default. You either have to call
+    <a href="http://www.x.org/archive/X11R6.8.2/doc/XInitThreads.3.html">XInitThreads</a>
+    during initialization, or to use one Display connection per thread. In the
+    second case you can't use the glXContext from one Display connection with
+    another connection.
+</ul>
+
+<a name="multicore"></a>
+<h2>2. Using Multiple Cores with OpenGL</h2>
+<ul>
+  <li><b>Q: </b>How can I use multiple threads with one OpenGL context?</li>
+  <li><b>A: </b>The preferred way is to dedicate one thread to dispatch the
+    OpenGL commands, and offload the CPU-intensive operations to worker
+    threads.</li>
+</ul><ul>
+  <li><b>Q: </b>What operations can I perform in parallel to an OpenGL dispatch
+    thread?</li>
+  <li><b>A: </b>A typical approach is to decouple the application thread from
+    the draw thread. The application thread implements the application logic and
+    event processing, while the draw thread renders the database. The database
+    has not to be modified during rendering, either by multibuffering data or
+    deferring the data update. An extension of this model is to have a separate
+    culling thread pipelined between the application and dispatch thread
+    ('app-cull-draw').</li>
+</ul><ul>
+  <li><b>Q: </b>How does the multithreaded OpenGL in OS X work?</li>
+  <li><b>A: </b>It offloads CPU-intensive operations, for example pixel format
+    conversions, to a second thread. A lot of OpenGL commands do not benefit
+    from it, since they are passed mostly unmodified to the graphics
+    card. Multithreaded OpenGL is not enabled by default.</li>
+</ul><ul>
+  <li><b>Q: </b>Can I use multithreaded OpenGL on Window or Linux?</li>
+  <li><b>A: </b>We are not aware of other drivers implementing this feature. It
+    can be emulated by performing the CPU-intensive operations from a second
+    thread with a second, shared context.</li>
+</ul>
+
+<a name="multicontext"></a>
+<h2>3. Using Multiple OpenGL contexts with one Graphics Card</h2>
+<ul>
+  <li><b>Q: </b>How should I update multiple windows on one graphics card?</li>
+  <li><b>A: </b>It is advisable to minimize switching between different
+    contexts. If the draw operation is not CPU-bound, the windows should be
+    updated sequentially. If the draw operation is CPU-bound, the CPU-intensive
+    part should be pipelined with the draw thread
+    (see <a href="/documentation/parallelOpenGLFAQ.html#multicore">Section
+    2</a>) while still updating the windows sequentially from the draw
+    thread. If that is not feasible, updating the windows from multiple threads
+    might be faster on a multicore machine.</li>
+</ul><ul>
+  <li><b>Q: </b>Why is my application so slow when rendering from multiple
+    threads?</li>
+  <li><b>A: </b>The OpenGL driver has to schedule the threads on a single
+    hardware resource. This causes a lot of context switching, which is
+    particularly slow when each context uses a lot of GPU memory. Try updating
+    your windows sequentially.</li>
+</ul><ul>
+  <li><b>Q: </b>How can I minimize the memory used by multiple OpenGL
+    contexts?</li>
+  <li><b>A: </b>Share the context by using the appropriate option to
+    <a href="http://www.opengl.org/documentation/specs/man_pages/hardcopy/GL/html/glx/xcreatecontext.html">glXCreateContext</a>,
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/AGL_OpenGL/Reference/reference.html#//apple_ref/c/func/aglCreateContext">aglCreateContext</a> or
+    <a href="http://msdn.microsoft.com/en-us/library/ms537565(VS.85).aspx">wglShareLists</a>.
+    Create your OpenGL objects (textures, VBO's, etc.) in one context and then
+    use them in all the other contexts.</li>
+</ul>
+
+<a name="multigpu"></a>
+<h2>4. Using Multiple Graphics Cards with OpenGL</h2>
+<ul>
+  <li><b>Q: </b>How do the data types in my program relate to my hardware on
+    the different operating systems?</li>
+  <li><b>A: </b> The following table is a high-level overview:
+    <table>
+      <tr>
+        <th></th>
+        <th>GLX</th>
+        <th>WGL</th>
+        <th>AGL</th>
+      </tr>
+      <tr>
+        <th>GPU</th>
+        <td>Display* and Screen<sup>1</sup></td>
+        <td>(affinity) HDC<sup>2</sup></td>
+        <td>CGDirectDisplayID or CGOpenGLDisplayMask</td>
+      </tr>
+      <tr>
+        <th>OpenGL Context</th>
+        <td>GLXContext</td>
+        <td>HGLRC</td>
+        <td>AGLContext</td>
+      </tr>
+      <tr>
+        <th>Window</th>
+        <td>XID</td>
+        <td>HWND</td>
+        <td>WindowRef</td>
+      </tr>
+      <tr>
+        <th>PBuffer</th>
+        <td>XID</td>
+        <td>HPBUFFERARB</td>
+        <td>AGLPbuffer</td>
+      </tr>
+      <tr>
+        <th>Pixel Format</th>
+        <td>int (Visual ID)</td>
+        <td>int</td>
+        <td>AGLPixelFormat</td>
+      </tr>
+      <tr>
+        <th>Pixel Format Info</th>
+        <td>XVisualInfo or GLXFBConfig</td>
+        <td>PIXELFORMATDESCRIPTOR</td>
+        <td>AGLPixelFormat</td>
+      </tr>
+    </table>
+    <sup>1</sup> The display identifies the X Server, and the screen the GPU
+    handled by this X Server. Typically <code>DefaultScreen( display )</code> is
+    used to determine the screen given by the the display string (see
+    below).<br>
+    <sup>2</sup> The core WGL implementation does not select a specific GPU --
+    see below for details.
+  </li>
+</ul><ul>
+  <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
+    Linux (X11)?</li>
+  <li><b>A: </b>Normally, the OpenGL commands are only send to the card
+      belonging to the screen used to open the display connection to the X
+      server. That means that when Xinerama is used to virtualize the graphics
+      cards, the window will only display OpenGL content on one card.</li>
+</ul><ul>
+  <li><b>Q: </b>How to I address a specific graphics card on Linux (X11)?</li>
+  <li><b>A: </b>The graphics card is selected using
+    <a href="http://www.x.org/archive/X11R6.8.2/doc/XOpenDisplay.3.html">XOpenDisplay</a>.
+      Typically one
+    X server is used for all cards, and the card is addressed using the screen
+    number, i.e. the number after the dot in the display name
+    (":0.[screen]"). Sometimes one X server is used for each card, in which case
+    the GPU's can be addresses using the server number in the display name
+    (":[server].0").</li>
+</ul><ul>
+  <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
+    Windows 2000/XP?</li>
+  <li><b>A1: </b>nVidia: The driver dispatches the OpenGL commands to all
+    cards. This allows to move the window across cards, but incurs a small
+    performance overhead.</li>
+  <li><b>A1: </b>ATI: The driver dispatches the OpenGL commands to card the
+    window was created on.</li>
+</ul><ul>
+  <li><b>Q: </b>How do I address a specific nVidia graphics card on Windows
+    2000/XP?</li>
+  <li><b>A: </b>The
+    <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
+    extension, available on nVidia Quadro cards, can be used to restrict the
+    OpenGL calls to certain cards for optimal performance.</li>
+</ul><ul>
+  <li><b>Q: </b>How do I address a specific ATI graphics card on Windows
+    2000/XP?</li>
+  <li><b>A: </b>For an on-screen window, just create it on the right position
+    for your GPU. For off-screen drawables, use the
+    <a href="http://www.opengl.org/registry/specs/AMD/wgl_gpu_association.txt">WGL_AMD_gpu_association</a>
+    extension.</li>
+</ul><ul>
+  <li><b>Q: </b>How do I address a specific nVidia graphics card on Windows
+    7/Vista?</li>
+  <li><b>A: </b>The
+    <a href="http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt">WGL_NV_gpu_affinity</a>
+    extension currently only supports FBO-based rendering. NVIdia release 256
+    and later drivers to exhibit the same limitation on Windows XP and 2000. It
+    is not possible to select a specific GPU to render into a window or
+    PBuffer.</li>
+</ul><ul>
+  <li><b>Q: </b>How do OpenGL programs behave with multiple graphics cards on
+    Mac OS X?</li>
+  <li><b>A: </b>The OpenGL rendering happens on the card where most of the
+    pixels of the window are located. Areas of the window located on other
+    graphics cards are copied from the main renderer.</li>
+</ul><ul>
+  <li><b>Q: </b>How to I address a specific graphics card on Mac OS X
+    (AGL)?</li>
+  <li><b>A: </b>OS X 10.4 and earlier: Use the handle obtained by
+    DMGetGDeviceByDisplayID for
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/AGL_OpenGL/Reference/reference.html#//apple_ref/c/func/aglChoosePixelFormat"aglChoosePixelFormat</a>.</li>
+  <li><b>A: </b>OS X 10.5: Use the display mask returned by
+    <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/Quartz_Services_Ref/Reference/reference.html#//apple_ref/c/func/CGDisplayIDToOpenGLDisplayMask">CGDisplayIDToOpenGLDisplayMask</a>
+    as the value for the AGL_DISPLAY_MASK pixel
+    format attribute.</li>
+</ul><ul>
+  <li><b>Q: </b>Why can my application only address one of my graphics
+  cards?</li>
+  <li><b>A: </b>Disable SLI or Crossfire. When it is enabled, the driver
+    virtualizes the GPUs and presents them as one GPU to the applicatoin.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does my SLI/Crossfire setup only use one CPU?</li>
+  <li><b>A: </b>Applications using SLI or Crossfire use one OpenGL rendering
+    thread, the same way as any other OpenGL application. The driver sends the
+    OpenGL commands to the underlying graphics cards. This whole process is
+    single-threaded, the parallel processing happens only later on the
+    individual graphics cards.</li>
+</ul><ul>
+  <li><b>Q: </b>Why does my application not work when I am sharing the context
+    between the pipes?</li>
+  <li><b>A: </b>Context sharing is only supported on a single pipe. The OpenGL
+    objects are created only on one card and are therefore not usable on any
+    other.</li>
+</ul><ul>
+  <li><b>Q: </b>What other problems might arise when using multiple graphics
+    cards?</li>
+  <li><b>A: </b>When using different cards the OpenGL implementation might be
+    different, and the available OpenGL extension and entry points might
+    differ. It is also not possible to share the contexts between graphics
+    cards (see above).</li>
+</ul><ul>
+  <li><b>Q: </b>How do I synchronize the output of multiple monitors?</li>
+  <li><b>A: </b>If the synchronization has to be perfect, a hardware solution
+    like nVidia GSync has to be used to synchronize the video signal and buffer
+    swap. When using monitors for display, a software synchronization is often
+    good enough.</li>
+</ul><ul>
+  <li><b>Q: </b>Why do I still have a significant delay between the buffer swap
+    of multiple displays, even when using a software barrier before my swap
+    buffers call?</li>
+  <li><b>A: </b>OpenGL commands are buffered before execution. When using a
+    software swap synchronization, call glFinish before entering the swap
+    barrier to complete all outstanding OpenGL commands. Note that glFinish is
+    bad for the performance, consider using a hardware synchronization
+    mechanism if this is an issue.</li>
+</ul>
+
+<a name="multiprocess"></a>
+<h2>5. Using one Context from multiple Processes</h2>
+<ul>
+  <li><b>Q: </b>Can I use a context created in one process in another
+    Process?</li>
+  <li><b>A: </b> No, with the exception noted in the next question.</li>
+</ul><ul>
+  <li><b>Q: </b>So what about
+    <a href="http://oss.sgi.com/projects/ogl-sample/registry/EXT/import_context.txt">EXT_import_context</a>?</li>
+  <li><b>A: </b> This extension lets you indeed share an <b>indirect</b>
+    context between processes. Indirect means that all OpenGL commands are
+    send through the glX wire protocol, instead of directly to the GPU. This
+    results in very slow performance, and often in less functionality.</li>
+</ul>
+
+<a name="links"></a>
+<h2>Appendix: Further Information</h2>
+<ul>
+  <li><a href="http://developer.download.nvidia.com/GTC/PDF/GTC2012/PresentationPDF/S0353-GTC2012-Multi-GPU-Rendering.pdf">Programming
+      Multi-GPUs for Scalable Rendering</a>, NVidia GTC 2012 presentation</li>
+  <li><a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_threading/opengl_threading.html">OpenGL Programming Guide for Mac OS X, Multithreading and OpenGL</a></li>
+  <li><a href="http://developer.apple.com/qa/qa2001/qa1248.html">Apple Technical
+      Q&amp;A QA1248: Context Sharing Tips</a>
+</ul>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

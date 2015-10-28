@@ -1,0 +1,680 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Subpixel Compounds</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Subpixel Compounds</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/subpixelCompound.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Subpixel Compounds" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/subpixelCompound.shtml" class="rule">Changed Fri Dec 23 11:39:22 2011 +0100</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State: Implemented in 0.9.1
+</p>
+
+<h2>Overview</h2>
+<p>
+  This features adds support for a new type of decomposition and recomposition,
+  whereby each contributing channel renders one or multiple subsamples for
+  full-scene anti-aliasing (FSAA) or depth-of-field (DOF).
+</p>
+<p>
+  Applications might already do multi-pass software FSAA/DOF, either during
+  rendering or when the application is idle. Equalizer does not yet have a
+  notion of idle/non-idle rendering.
+</p>
+
+<h2>Design</h2>
+<p>
+  The application will do the adding of the frustum jitter, since it is the one
+  which knows how many FSAA and/or DOF samples are desired. Therefore it needs
+  to know in Channel::frameDraw which sample out of how many it should render.
+</p>
+<p>
+  The default implementation of Channel::applyFrustum will use the subpixel
+  sample description to compute an FSAA jitter using a pre-defined lookup
+  table. It will add this jitter to the frustum supplied by getFrustum.
+</p>
+<p>
+  Applications which have their own SWAA settings will use the subpixel sample
+  description to calculate how many passes with which samples have to be
+  rendered, e.g., if it desires to render 16 samples on a 4-time decomposition,
+  the application will render 4 passes out of a 16-value jitter lookup table on
+  each channel.
+</p>
+<p>
+  It is the application's responsibility to provide a blended result of the
+  sub-passes on each channel. This should not be an overhead, since the
+  application could already compute the accumulation and averaging before.
+</p>
+<p>
+  Compositing
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  class SubPixel
+  {
+  public:
+    uint32_t index;
+    uint32_t size;
+  }
+  
+  vmml::Vector2f Channel::getJitter() const;
+  vmml::Vector2i Channel::getSubpixel() const;
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+    compound
+    {
+        subpixel [ index size ]
+    }
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+
+<h3>Idle SWAA in eqPly</h3>
+
+<!-- /* --><pre>
+  class FrameData
+    bool _idleMode         // idle AA mode
+
+  class Config
+    uint32_t _nbFramesAA   // number of frames left
+  	
+  class Channel
+    Accum* _accum          // accumulation buffer
+    uint32_t _jitterStep   // current jitter step decrementing
+    uint32_t _totalSteps   // total steps to be done
+    uint32_t _subpixelStep // number of ressources (subpixel.size)
+
+    bool _needsTransfer    // combining idle AA with AA compound
+    PixelViewport _currentPVP // current saved pvp
+
+-------------------------------------------------------------------
+
+  Config::startFrame
+    if view is idle AA
+      assert( nbFramesAA > 0 )
+      --nbFramesAA
+      set idleMode
+    else
+      nbFrames = 0
+      clear idleMode
+    commit frame data
+    
+  Config::handleEvent
+    event = get IDLE_AA event
+    nbFramesAA = MAX( nbFramesAA, event->jitter )
+
+  Channel::frameStart
+    if view is not in idle AA mode
+      clear accum
+      reset idle AA
+
+  Channel::frameViewStart
+    save _currentPVP
+
+  Channel::frameDraw
+    [...]
+    _subpixelStep = MAX( _subpixelStep, getSubPixel().size )
+    set _needsTransfer
+
+  Channel::frameAssemble
+    if getPVP != _currentPVP
+      if accum doesn't use an FBO
+        warning, idle AA not implemented
+        stop idle AA
+      do normal assembly
+      set _needsTransfer
+    else
+      if all input frames have SubPixel::ALL
+        do normal assembly
+        set _needsTransfer
+      else
+        for each input frame
+          assemble each frame with subpixel decomp
+          accumulate
+        clear _needsTransfer
+
+  Channel::frameViewFinish
+    if PVP has changed
+      resize accum buffer
+      clear accum
+      reset idle AA
+    else if idle mode && _needsTransfer
+      if first idle step
+        reset accum buffer
+      accumulate back buffer to accum buffer
+      display average result in back buffer
+
+  Channel::frameFinish
+    if idle mode && _jitterStep > 0
+      _jitterStep -= subpixelStep
+
+    create IDLE_AA event
+    send event to the config
+
+  Channel::applyFrustum
+    if idle mode && _jitterStep > 0
+      jitter = _getJitter();
+      apply jitter vector to frustum
+    else
+      do normal apply frustum
+
+  Channel::_getJitterStep
+    idx = channelID * _totalSteps;
+    idx += ( _jitterStep * primeNumber[channelID] ) % subset_size
+    return ( idx % sampleSize, idx / sampleSize )
+
+  Channel::_getJitter
+    compute pixel size and subpixel size on near plane (frustum)
+    generate random sample position in _getJitterStep() subpixel
+</pre><!-- */ -->
+
+<h3>AA compound in Equalizer</h3>
+
+<!-- /* --><pre>
+AA compounds without idle AA:
+  eq::Channel::applyFrustum / applyOrtho
+    -> add jitter
+  eq::Channel::frameAssemble
+    Step 1: Do accumulation using GPU:
+      for each jitter decomp in input frames
+        assemble all input frames with jitter decomp
+        accumulate result
+      return result
+    Step 2: Opt: Do accumulate using CPU (later)
+
+AA compounds with idle AA:
+  See also Issue 6.
+  -> extend compositor functions so the accumulation buffer (and state?) can be
+  given as parameter
+</pre><!-- /* -->
+
+<h4>Server</h4>
+
+<!-- /* --><pre>
+loader
+  add subpixel token
+
+Compound::InheritData
+  add subpixel param
+
+Compound::updateInheritData
+  update subpixel
+
+CompoundUpdateOutput::_updateOutput
+  update subpixel
+
+ChannelUpdateVisitor::_setupRenderContext
+  update subpixel
+
+FrameData::setSubPixel
+</pre><!-- */ -->
+
+<h4>Client</h4>
+
+<!-- /* --><pre>
+FrameData::Data
+  add subpixel param
+
+Channel::getSubPixel
+
+Channel::applyFrustum
+  if subpixel decomp
+    lookup on precomputed jitter tables
+    if no table is found
+      compute the sample randomly
+    apply the jitter vector
+
+Compositor::obtainAcum
+  get accum object from ObjectManager
+  if accum doesn't exist
+    create new accum object
+  else
+    resize accum
+
+Compositor::assembleFramesSorted/Unsorted
+  if input frames have different subpixel decomp
+    if accum doesn't exist
+      obtain accum from compositor
+      clear accum
+    extract similar subpixel decomp
+    assemble frames (recursion on assembleFramesSorted/Unsorted)
+    accumulate frames
+    display result
+  [...]
+</pre><!-- /* -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+
+<h3>1. Do we need a one-dimensional or two-dimensional subpixel description for
+  each source channel?</h3>
+<p>
+  This depends on Q2. My feeling is a one-dimensional attribute is easier.
+</p>
+
+<h3>2. How do I compute my current jitter area?</h3>
+<p>
+  The number of jitter areas, i.e, the number of FSAA or DOF samples, is an
+  application parameter. The current jitter area within each Channel::frameDraw
+  is a function of the current idle step and the channel's subpixel description.
+</p>
+<p>
+  Open Issue: the function itself. The jitter values for all channels in the
+  first pass should be evenly distributed over the total subpixel grid.
+</p>
+<p>
+  Idea: Divide the sample grid into the number of channels to get a subset of 
+  pixels for each channel. 
+  For each pass, compute (pass_number * rnd_prime_number) % size to get kind 
+  of a randomized distribution. The size parameter is the size of the pixel 
+  subset for the current channel.
+</p>
+
+<h3>3. How do I disable FSAA when it's not supported?</h3>
+<p>
+  Depending on the OpenGL version, we run either the glAccum method either the FBO's one.
+  On MacOSX, a different implementation of glAccum is needed.
+</p>
+
+<h3>4. How do I compute the jitter steps for FSAA compound?</h3>
+<p>
+  The destination channel asks for a new frame instead that the config starts a 
+  new frame itself. Each destination channel sends an event to the config which 
+  takes the maximum number of steps needed and enables to start a new frame.
+</p>
+
+<h3>5. How do I decrement the jitter steps done in the current frame?</h3>
+<p>
+  The destination channel might render 0..n jitter steps and receive 0..n jitter
+  steps as input frames during compositing.
+</p>
+<p>
+  We could assume that a subpixel decomposition parameter is set for the
+  destination channel. If the destination channel does a frameDraw, he will
+  decrement the jitter step by the subpixel decomposition size in frameDraw,
+  otherwise he will decrement it by the subpixel decomposition size of the input
+  frames in frameAssemble:
+</p>
+<!-- /* --><pre>
+  Channel::frameStart
+    _subpixelSteps = 0;
+  Channel::frameDraw
+    _subpixelSteps = EQ_MAX( _subpixelSteps, subpixel.size );
+  Channel::frameAssemble
+    for each input frame
+      _subpixelSteps = EQ_MAX( _subpixelSteps, frame.subpixel.size );
+  Channel::frameFinish
+    _jitterSteps -= _subpixelSteps;
+    send event
+</pre><!-- */ -->
+
+<h3>6. How does the accumulation in frameAssemble work together with the one in
+  frameViewFinish?</h3>
+<p>
+  Without any scalability, each destination channel accumulates in idle mode the
+  results of different frames into an accumulation buffer. With scalability,
+  frameAssemble might accumulate the results of different, jittered input
+  frames.
+</p>
+<p>
+  A simple, but non-optimal solution is to assemble and average all jitter steps
+  in frameAssemble, and to transfer the result into the accumulation buffer n
+  times in frameViewFinish:
+</p>
+<!-- /* --><pre>
+  Channel::frameAssemble
+    accumulate all input frames in separate accum buffer
+    return accum buffer to frame buffer
+  Channel::frameViewFinish
+    copy frame buffer _subpixelSteps times into accum buffer
+    _stepsDone += _subpixelSteps;
+    return accum buffer
+</pre><!-- */ -->
+<p>
+  In the optimal case, frameAssemble and frameViewFinish should share the
+  accumulation buffer:
+</p>
+<!-- /* --><pre>
+  Channel::frameDraw
+    set _needsTransfer
+  Channel::frameViewStart
+    save current pvp
+  Channel::frameAssemble
+    if( current pvp != saved pvp )
+      use separate accum buffer
+      return accum buffer after assembly
+      set _needsTransfer
+      Q: what if glAccum is used? Disable idle AA for this channel?
+    if( all input frames have Subpixel::ALL )
+      do normal assembly
+      set _needsTransfer
+    else if for each jitter decomp in input frames
+      assemble all input frames with jitter decomp
+      accumulate result
+      clear _needsTransfer
+  Channel::frameViewFinish
+    if _needsTransfer
+      accumulate FB into accum buffer
+    return accum buffer
+</pre><!-- */ -->
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

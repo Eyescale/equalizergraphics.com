@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classeq_1_1base_1_1UUID.html#abf852b2fa6a6effe056627a15a59ec2b" title="eq::base::UUID::isGenerated" alt="" coords="236,5,439,35"/>
+<area shape="rect" id="node5" href="$namespaceeq_1_1base.html#a781295c2c5e0f95783417a71e797601c" title="Add a 64 bit value to a 128 bit value." alt="" coords="263,59,412,88"/>
+<area shape="rect" id="node7" href="$namespaceeq_1_1base.html#a14b70d58f11cfb3574c7d62f972b8fc4" title="Substract a 64 bit value from a 128 bit value." alt="" coords="265,112,409,141"/>
+<area shape="rect" id="node9" href="$classeq_1_1base_1_1UUID.html#aed37f4be18dbea5e3be4a74101a0a126" title="Assign another UUID from a string representation." alt="" coords="241,165,433,195"/>
+<area shape="rect" id="node11" href="$classeq_1_1base_1_1UUID.html#aa2d6fd96ddc12eae166d2bba03ae6ba1" title="Construct a new universally unique identifier." alt="" coords="259,219,416,248"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1PtrHash.html" title="A hash for pointer keys." alt="" coords="156,5,524,35"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1RefPtrHash.html" title="A hash for RefPtr keys." alt="" coords="145,59,535,88"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1UUIDHash.html" title="A hash for UUID keys." alt="" coords="195,112,485,141"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1RefPtrHash.html" title="RefPtrHash\&lt; Connection, NodePtr \&gt;" alt="" coords="213,165,467,195"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classco_1_1base_1_1Referenced.html" title="Base class for referenced objects." alt="" coords="297,5,453,32"/>
+<area shape="rect" id="node4" href="$classco_1_1base_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="6,77,175,104"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="318,107,431,133"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; ConnectionDescription \&gt;" alt="" coords="227,157,523,184"/>
+</map>

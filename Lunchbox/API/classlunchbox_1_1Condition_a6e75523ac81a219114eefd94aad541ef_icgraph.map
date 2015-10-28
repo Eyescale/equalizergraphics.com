@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1MTQueue.html#a603c893cd3d305366315e035b232e18f" title="Retrieve the requested element from the queue, may block." alt="" coords="247,5,471,35"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1MTQueue.html#a91510c2c9390818ff86806e5242b8401" title="Retrieve and pop the front element from the queue, may block." alt="" coords="266,59,451,90"/>
+<area shape="rect" id="node7" href="$classlunchbox_1_1MTQueue.html#a25b6d6a42aede1adc7fc185a3b8be736" title="Push a new element to the back of the queue." alt="" coords="263,114,455,145"/>
+<area shape="rect" id="node9" href="$classlunchbox_1_1MTQueue.html#ad2c93b3f23c5e1ec44095dce24ca4727" title="Push a new element to the front of the queue." alt="" coords="246,169,472,199"/>
+<area shape="rect" id="node11" href="$classlunchbox_1_1MTQueue.html#a87171a084e02bb30d79ed0e99cedfc00" title="Set the new maximum size of the queue." alt="" coords="242,223,475,254"/>
+<area shape="rect" id="node13" href="$classlunchbox_1_1Monitor.html#a1dffafa32a85fb29ac47004fd418279d" title="Block until the monitor has the given value." alt="" coords="262,278,455,309"/>
+<area shape="rect" id="node15" href="$classlunchbox_1_1Monitor.html#a3174b097cd0d5586791c2595337e6774" title="Block until the monitor has a value greater or equal to the given value." alt="" coords="263,333,455,363"/>
+<area shape="rect" id="node17" href="$classlunchbox_1_1Monitor.html#a9801fc5798c6d4efaf26d9d21402ce5d" title="Block until the monitor has a value less or equal to the given value." alt="" coords="264,387,454,418"/>
+<area shape="rect" id="node19" href="$classlunchbox_1_1Monitor.html#a27e55a47658258031ee6af2b5a5417fc" title="Block until the monitor has not the given value." alt="" coords="262,442,455,473"/>
+<area shape="rect" id="node21" href="$classlunchbox_1_1MTQueue.html#a81335dadfabdd5d5941406a1ae74306e" title="Wait for the size to be at least the number of given elements." alt="" coords="252,497,465,527"/>
+</map>

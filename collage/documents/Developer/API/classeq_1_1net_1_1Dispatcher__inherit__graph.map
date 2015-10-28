@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classeq_1_1net_1_1Node.html" title="Manages a node." alt="" coords="25,83,135,112"/>
+<area shape="rect" id="node7" href="$classeq_1_1net_1_1Object.html" title="A generic, distributed object." alt="" coords="167,83,281,112"/>
+<area shape="rect" id="node11" href="$classeq_1_1net_1_1ObjectCM.html" title="The object change manager base class." alt="" coords="305,83,441,112"/>
+<area shape="rect" id="node5" href="$classeq_1_1net_1_1LocalNode.html" title="Specialization of a local node." alt="" coords="5,160,147,189"/>
+<area shape="rect" id="node9" href="$classeq_1_1net_1_1Barrier.html" title="A networked, versioned barrier." alt="" coords="171,160,288,189"/>
+</map>

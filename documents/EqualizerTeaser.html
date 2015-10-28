@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Equalizer – Scalable Rendering Parallel OpenGL rendering framework Multi-Display: planar &amp; curved wall, VR Stereo: active, passive, anaglyphic Scalable Rendering: combine multiple GPUs Build for scalability: Core is a generic, parallel rendering API System-wide resource management Equalizer – Scalable Rendering 2D, DB, Stereo, DPlex and Pixel compounds, any combination possible Parallel compositing Swap synchronization where needed Asynchronous execution Automatic 2D and DB load-balancing Equalizer LGPL license: commercial use welcome Open standard for scalable graphics Minimally invasive: easy porting Clusters and shared memory systems Linux, Windows, Mac OS X More on: www.equalizergraphics.com"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (3);
+            images[0] = "EqualizerTeaser.html_files/EqualizerTeaser.001.jpg";
+            images[1] = "EqualizerTeaser.html_files/EqualizerTeaser.002.jpg";
+            images[2] = "EqualizerTeaser.html_files/EqualizerTeaser.003.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EqualizerTeaser.html_files/EqualizerTeaser.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EqualizerTeaser.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EqualizerTeaser.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EqualizerTeaser.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

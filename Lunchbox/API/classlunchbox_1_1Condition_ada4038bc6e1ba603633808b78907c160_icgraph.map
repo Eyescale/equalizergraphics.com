@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classlunchbox_1_1MTQueue.html#a8ceb8ef85211373130b2310bc5f29934" title="Retrieve and pop the front element from the queue." alt="" coords="285,5,507,35"/>
+<area shape="rect" id="node5" href="$classlunchbox_1_1Monitor.html#ac86a4412245731f5e8b11fdaf9d0ab4a" title="Block until the monitor has the given value." alt="" coords="280,59,512,90"/>
+<area shape="rect" id="node7" href="$classlunchbox_1_1Monitor.html#a2a8b5c1fc9b3cfdd917a2955aa555b53" title="Block until the monitor has a value greater or equal to the given value." alt="" coords="281,114,511,145"/>
+<area shape="rect" id="node9" href="$classlunchbox_1_1Monitor.html#a233c15fbd650abbce70a7546636f5527" title="Block until the monitor has not the given value." alt="" coords="281,169,511,199"/>
+</map>

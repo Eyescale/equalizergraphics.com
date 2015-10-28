@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1Node.html" title="Manages a node." alt="" coords="98,80,176,107"/>
+<area shape="rect" id="node7" href="$classco_1_1Object.html" title="A generic, distributed object." alt="" coords="275,80,361,107"/>
+<area shape="rect" id="node5" href="$classco_1_1LocalNode.html" title="Specialization of a local node." alt="" coords="5,155,117,181"/>
+<area shape="rect" id="node9" href="$classco_1_1Barrier.html" title="A networked, versioned barrier." alt="" coords="141,155,229,181"/>
+<area shape="rect" id="node11" href="$classco_1_1QueueMaster.html" title="The producer end of a distributed queue." alt="" coords="253,155,384,181"/>
+<area shape="rect" id="node13" href="$classco_1_1QueueSlave.html" title="The consumer end of a distributed queue." alt="" coords="408,155,531,181"/>
+<area shape="rect" id="node15" href="$classco_1_1Serializable.html" title="Base class for distributed, inheritable objects." alt="" coords="555,155,673,181"/>
+<area shape="rect" id="node17" href="$classco_1_1ObjectMap.html" title="Central distributed object registry." alt="" coords="558,229,671,256"/>
+</map>

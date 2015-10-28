@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classco_1_1ConnectionListener.html" title="A listener interface to connection changes." alt="" coords="7,19,175,49"/>
+<area shape="rect" id="node4" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; EventConnection \&gt;" alt="" coords="1279,46,1537,75"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1Buffer.html" title="co::base::Buffer\&lt; pollfd \&gt;" alt="" coords="1315,102,1501,131"/>
+<area shape="rect" id="node8" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; Connection \&gt;" alt="" coords="944,209,1168,238"/>
+<area shape="rect" id="node10" href="$classco_1_1Connection.html" title="An interface definition for communication between hosts." alt="" coords="707,170,824,199"/>
+<area shape="rect" id="node12" href="$classco_1_1base_1_1Referenced.html" title="Base class for referenced objects." alt="" coords="356,118,511,147"/>
+<area shape="rect" id="node14" href="$classco_1_1base_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="7,205,175,234"/>
+<area shape="rect" id="node19" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="377,275,489,305"/>
+<area shape="rect" id="node22" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; ConnectionDescription \&gt;" alt="" coords="285,222,581,251"/>
+<area shape="rect" id="node28" href="$classco_1_1base_1_1Buffer.html" title="co::base::Buffer\&lt; Result \&gt;" alt="" coords="1313,155,1503,185"/>
+</map>

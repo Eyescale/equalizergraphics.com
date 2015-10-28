@@ -1,0 +1,573 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Runtime Stereo Switch</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Runtime Stereo Switch</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/stereoSwitch.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Runtime Stereo Switch" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/stereoSwitch.shtml" class="rule">Changed Fri Jan 7 12:59:22 2011 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State:
+  <ul>
+    <li>Implemented in 1.0-alpha</li>
+  </ul>
+</p>
+
+<h2>Overview</h2>
+<p>
+  This documents specifies how to switch between stereo and mono rendering in a
+  running config. The application has to be able to switch between mono and
+  stereo rendering selectively for each view. The configurations file shall be
+  able to specify different segments for each eye pass to mix passive stereo and
+  mono, as well as contain different (scalability) compounds for stereo and
+  mono.
+</p>
+
+<h2>Specification</h2>
+<p>
+  Each segment is stereo-aware, that is, its destination compounds are only
+  activated for the eye passes activated by the active views. For example, a
+  segment rendering the left and cyclop eye with a view in mono mode will only
+  activate the cyclop rendering on the compounds using its destination channels.
+</p>
+<p>
+  Each view has a stereo mode (mono / stereo). Switching the stereo mode
+  activates different compound eye traversals and potentially different
+  compounds and dependent entities.
+</p>
+<p>
+  The semantics of the compound eye attribute changes from describing the eye
+  passes to be rendered to the eye passes this compound can render. The actual
+  selection of the eye passes will be done by the view of the destination
+  channel(s). That is, a compound using <code>eye [ LEFT RIGHT CYCPLOP ]</code>
+  will render all three eye passes in Equalizer 0.9.1, but only the cyclop (view
+  is in mono mode) or left and right (view is in stereo) passes in the new
+  implementation. Consequently, the default setting shall change from <code>eye
+  [ CYCLOP ]</code> to <code>eye [ LEFT RIGHT CYCPLOP ]</code>.
+</p>
+<p>
+  For convenience, the compound attribute <code>stereo_mode</code> will also
+  support the new value <code>AUTO</code>, which will become the new default
+  value. Auto selects quad-buffered stereo if the destination channel has a
+  quad-buffered visual, otherwise anaglyphic stereo.
+</p>
+
+<a name="implementation"></a>
+<h2>Implementation</h2>
+<ul>
+  <li>Implement file format, including converter</li>
+  <li>Implement compound auto stereo mode</li>
+  <li>Implement View::changeMode</li>
+  <ul>
+    <li>Make compound activation eye-aware</li>
+    <li>Make compound update and task generation eye-aware</li>
+    <li>Move compound activation from canvas to view:</li>
+<!-- /* --><pre>
+ChannelUpdateVisitor:
+ - skip compound if not activated for current eye
+   -> need per-eye activation count for each compound
+      Compounds are activated globally right now
+
+server::View:
+  new member _currentMode; // NONE, MONO or STEREO
+
+server::View::activateMode:
+   Activate destination compounds for new eye(s)
+     for each destination channel of view:
+       if channel's canvas uses our layout and segment supports new eye
+          find and activate destination compound for eye(s)
+   Deactivate destination compounds for old eye(s)
+     for each destination channel of view:
+       if channel's canvas uses our layout and segment supports old eye
+          find and deactivate destination compound for eye(s)
+   _currentMode = mode;
+
+Refactor server::Canvas::activateLayout to use server::View::activateMode:
+  activateMode( MODE_NONE ) on old layout views
+  set new layout
+  activateMode( getMode( )) on new layout views
+</pre><!-- */ -->
+  </ul>
+</ul>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  View::changeMode( EQ_MONO | EQ_STEREO );
+
+  Also setter/getter for file format additions.
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  #Equalizer 1.1 ascii
+  view
+  {
+      mode MONO | STEREO
+  }
+  segment
+  {
+      ...
+      eye [ CYCLOP LEFT RIGHT ] # eye passes rendered by segment, default all
+  }
+  compound
+  {
+      attributes
+      {
+          stereo_mode QUAD | ANAGLYPH | AUTO # new AUTO, also new default
+      }
+  }
+</pre><!-- */ -->
+
+<h2>Examples</h2>
+<!-- /* --><pre>
+Passive stereo powerwall:
+  layout { view { }}
+  canvas
+  {
+      layout 1
+      wall {}
+      segment
+      {
+          eye [ LEFT CYCLOP ]
+          channel "left-projector"
+      }
+      segment
+      {
+          eye [ RIGHT ]
+          channel "right-projector"
+      }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+      eye [ CYCLOP ]
+      load_equalizer{}
+
+      compound {}
+      compound
+      {
+          channel "right-PBuffer"
+          outputframe{}
+      }  
+      inputframe{ name "frame.right-PBuffer" }
+  }
+  compound
+  {
+      compound
+      {
+          channel ( view 0 segment 0 )
+          eye [ LEFT ]
+          swapbarrier{}
+      }
+      compound
+      {
+          channel ( view 0 segment 1 )
+          eye [ RIGHT ]
+          swapbarrier{}
+      }
+  }
+
+Active stereo powerwall:
+  layout { view { }}
+  canvas
+  {
+      layout 1
+      wall {}
+      segment
+      {
+          eye [ LEFT RIGHT CYCLOP ]
+          channel "projector"
+      }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+  }
+
+Active stereo powerwall with second source GPU:
+  layout { view { }}
+  canvas
+  {
+      layout 1
+      wall {}
+      segment
+      {
+          eye [ LEFT RIGHT CYCLOP ]
+          channel "projector"
+      }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+      eye [ CYCLOP ]
+      load_equalizer{}
+
+      compound {}
+      compound
+      {
+          channel "source"
+          outputframe{}
+      }  
+      inputframe{ name "frame.source" }
+  }
+  compound
+  {
+      channel ( view 0 segment 0 )
+      eye [ LEFT RIGHT ]
+
+      compound { eye [ LEFT ] }
+      compound
+      {
+          eye [ RIGHT ]
+          compound
+          {
+              channel "source"
+              outputframe{}
+          }
+          inputframe{ name "frame.source" }
+      }
+  }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<h3>Q1: Is the stereo switch per view or per observer?</h3>
+<p>
+  Resolved: per view, implementing a convenience method Observer::setEyePasses
+  is possible.
+</p>
+<p>
+  The eye separation and head matrix, affecting stereo rendering, are on the
+  observer. It should however be possible to observe one view in stereo and one
+  in mono with one observer.
+</p>
+
+<h3>Q2: Shall one view be able to render mono and stereo concurrently?</h3>
+<p>
+  Resolved: No.
+</p>
+<p>
+  The benefit of rendering mono and stereo concurrently, presumably to different
+  segments, is marginal but makes writing different compounds for stereo and
+  mono difficult. Typically the mono config assumes that the resources used for
+  stereo rendering can be used for scalability, since stereo and mono are rarely
+  active at the same time.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id: immersive.shtml 3520 2009-10-26 16:00:08Z eile $ -->

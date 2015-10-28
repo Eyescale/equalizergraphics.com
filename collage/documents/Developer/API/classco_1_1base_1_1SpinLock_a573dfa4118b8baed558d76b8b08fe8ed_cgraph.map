@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1SpinLock.html#aa61924bb44ce67a4989824b38786e9f1" title="Attempt to acquire the lock shared with other readers." alt="" coords="257,56,477,83"/>
+<area shape="rect" id="node5" href="$namespaceco_1_1base.html#ac619de1f69ddd29e03bb143baf5acd8f" title="Perform a full memory barrier." alt="" coords="561,5,743,32"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1Atomic.html#af3d5714e04a31e6742f2b93f9884dc55" title="Perform a compare&#45;and&#45;swap atomic operation." alt="" coords="525,56,779,83"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1SpinLock.html#a95f8b13cde53a9ff373df07a10a03e5e" title="Test if the lock is set shared." alt="" coords="545,107,759,133"/>
+</map>

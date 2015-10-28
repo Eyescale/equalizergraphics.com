@@ -1,0 +1,928 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: View Management</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>View Management</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/view.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: View Management" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/view.shtml" class="rule">Changed Mon Aug 15 08:12:00 2011 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State:
+</p>
+<ul>
+  <li>Layout API implemented in 0.9</li>
+  <li>0.6 Implementation below</li>
+</ul>
+
+<h2>Overview</h2>
+<p>
+  The purpose of the management layer is to provide a programming interface and
+  file format for describing the visible content of an application, i.e., what
+  are my projection surfaces, which data is visible in which part of the
+  projection surface and how are the views updated.
+</p>
+<div class="float_left">
+  <a href="/documents/design/images/view.png">
+    <img src="/documents/design/images/view-small.jpg"
+         alt="View Entities"/></a>
+  <div class="label">Relationship of View Entities</div>
+</div>
+<p>
+  A typical system setup consists of one or more
+  projection <b>canvas</b>es. Desktop windows are considered a projection
+  canvas in this context.
+</p>
+<p>
+  Each canvas is made of one or more <b>segment</b>s. Segments can
+  be planar or non-planar to each other, and can overlap or have gaps between
+  each other. A segment is referencing a <b>channel</b>, which defines the
+  output area of this segment, e.g., on a DVI connector connected to a
+  projector.
+</p>
+<p>
+  A canvas can define a frustum, which will create default, planar
+  sub-frusta for its segments. A segment can also define a frustum, which
+  overrides the canvas frustum, e.g., for non-planar setups (CAVE, curved
+  screen). These frusta typically describe a physically-correct display setup
+  for Virtual Reality installations.
+<p>
+  On each canvas, the application can display one or more <b>view</b>s. A view
+  is a view on a model, in the sense used by the MVC pattern. It can be a scene,
+  viewing mode, viewing position, or any other representation of the
+  application's data.
+</p>
+<p>
+  A <b>layout</b> groups one or more views which logically belong together. A
+  layout is applied to a canvas. If no layout is applied to a canvas, nothing is
+  rendered on this canvas, i.e, the canvas is inactive. The layout assignment
+  can be changed at run-time by the application. The intersection between views
+  and segments defines which output (sub-)channels are available. These output
+  channels are typically used as <b>destination channels</b> in
+  a <b>compound</b>. They are automatically created during configuration loading
+  or creation.
+</p>
+<p>
+  The Canvas has a list of allowed layouts, to restrict the set of possible
+  destination channels and to allow the restiction of layouts to certain
+  canvases. One of the allowed layouts can be 0 (OFF in the file format) to
+  deactivate the canvas. The first specified layout on a canvas is the default
+  layout.
+<p>
+  Each view can have a frustum description. The view's frustum overrides frusta
+  specified at the canvas or segment level. This is typically used for
+  non-physically correct rendering, e.g., to compare two models side-by-side. If
+  the view does not specify a frustum, the corresponding destination channels
+  will use the sub-frustum resulting from the view/segment intersection.
+</p>
+<p>
+  A configuration file has to specify compounds (rendering instructions) for all
+  destination channels. The currently used (active) layouts on the canvas(es)
+  define which compounds are active, that is, for which compound channels
+  rendering tasks are generated.
+</p>
+<p>
+  Switching a layout at run-time will cause the deletion, creation, exit and
+  initialization of channels, and potentially windows...nodes on the affected
+  render clients.
+</p>
+<p>
+  An <b>observer</b> looks at one or more views. It is described by the observer
+  position in the world and its eye separation. Each observer will have its own
+  stereo mode, focus distance and frame loop (framerate).
+</p>
+
+<h2>File Format</h2>
+<h3>Referencing channels</h3>
+<p>
+  Traditionally, channels are referenced by name. This API requires channels to
+  be used by compounds which not in the config file, but created by the
+  view/segment combinations. Since the name is an arbitrary,
+  application-specified field, it can't be used for channel references.
+</p>
+<p>
+  Channels can be referenced by name, position or view and segment. The full
+  grammar for referencing is:
+</p>
+<!-- /* --><pre>
+  channel-ref: 'string' | '(' channel-segment-ref ')' | '(' channel-node-ref ')'
+
+  channel-segment-ref: ( canvas-ref ) segment-ref ( layout-ref ) view-ref
+  canvas-ref:  'string' | 'index'
+  segment-ref: 'string' | 'index'
+  layout-ref:  'string' | 'index'
+  view-ref:    'string' | 'index'
+
+  channel-node-ref: ( window-ref ) 'index'
+  window-ref: ( pipe-ref ) 'string' | 'index'
+  pipe-ref: ( node-ref ) 'string' | 'index'
+  node-ref: 'string' | 'index'
+</pre><!-- */ -->
+<p>
+  Referencing using the entities by index might be implemented later.
+</p>
+
+<!-- /* --><pre>
+config
+{
+    node { pipe { window { channel { ...output and source channels... }}}}
+
+    observer
+    {
+        name    "observer1"
+        eyeBase float
+    }
+
+    layout  # 1...n times
+    {
+        name "layout1"
+        view  # 1...n times
+        {
+            name     "view1"
+            viewport [ x y w h ]
+            wall/projection {...}
+            observer "observer1"
+        }
+    }
+
+    canvas  # 1...n times
+    {
+        name   "display_wall"
+        layout OFF | "layout1" | int  # 1...n times, allowed layouts for canvas
+
+        wall/projection {...}
+        
+        segment # 1...n times
+        {
+            channel  "output-channel"
+            name     "segment1"
+            viewport [ x y w h ]
+            wall/projection {...}
+        }
+    }
+
+    compound
+    {
+        channel ( canvas "display_wall" segment 0 view "view1" )
+        ...
+    }
+    compound  # inactive (incl. all children)
+    {
+        channel ( canvas "display_wall" segment 0 layout 1 view 0 )
+        ...
+    }
+}
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+     class Config
+     {
+         const ObserverVector& getObservers() const;
+         const LayoutVector& getLayouts() const;
+         const CanvasVector& getCanvases() const;
+     };
+
+     class Observer
+     {
+         void setEyeBase( const float eyeBase );
+         float getEyeBase() const;
+         void setHeadMatrix( const vmml::Matrix4f& matrix );
+         const vmml::Matrix4f& getHeadMatrix() const;
+     }
+
+     class Layout
+     {
+         const std::string& getName() const;
+         const ViewVector& getViews() const;
+         const CanvasVector& getCanvases() const;
+     };
+
+     class View
+     {
+         const std::string& getName() const;
+         const eq::Viewport& getViewport() const;
+         const Layout& getLayout() const;
+
+         void setWall( const Wall& wall );
+         const Wall& getWall() const;
+         void setProjection( const Projection& projection );
+         const Projection& getProjection() const;
+         View::Type getLatestView() const;
+     };
+
+     class Canvas
+     {
+         const std::string& getName() const;
+
+         void useLayout( const Layout* layout );
+         const Layout* getActiveLayout() const;
+         const LayoutVector& getLayouts() const;
+     };
+
+     class Channel
+     {
+         const View& getView() const; // valid only in frameFoo()
+     };
+</pre><!-- */ -->
+
+<h2>Backward-Compatibility</h2>
+<h3>Views</h3>
+<p>
+  One canvas, layout and view are used for each group of compounds. A group of
+  compounds is defined by all the siblings that have a destination channel. Each
+  sibling uses one segment. The frustum and viewport of each segment is given by
+  the sibling. The frustum of the view is set to the frustum of the compound, if
+  it is the root compound. The compound channels are exchanged with the newly
+  created destination channels.
+</p>
+<p>
+  There are three different types of legacy configs: standalone (root compound
+  has channel and frustum), planar wall (root compound has no channel but
+  frustum) and non-planar projection (root compound has neither channel nor
+  frustum).
+</p>
+<p>
+  By the above specification, for a standalone config one canvas, segment,
+  layout and view is created. The frustum is set on the view and will therefore
+  track aspect ratio (window resize) updates. A planar wall will create one
+  canvas with n segments, one layout and view. The frustum is set on the canvas,
+  and inherited by the segments using the segment viewport. A non-planar
+  configuration is handled similarly, except that each frustum and viewport is
+  specified by the sibling compound. Planar and non-planar configurations define
+  the frustum on the canvas or segment, which will cause aspect ratio changes
+  not to be tracked, since they configure immutable physical installations.
+</p>
+
+<h3>Observer</h3>
+<p>
+  The loader will create one default observer and assign it to all views for
+  legacy configurations with no observer. Config::setHeadMatrix will be
+  deprecated and will set the head matrix on all
+  observers. Config::getHeadMatrix will return the head matrix of the first
+  observer.
+</p>
+
+<h2>Implementation</h2>
+<h3>View/Segment Intersection</h3>
+<p>
+  Layouts have to be specified before canvases. Setting a canvas on a config
+  will generate destination channels for all existing layouts:
+</p>
+<!-- /* --><pre>
+Config::addCanvas( canvas )
+    for each layout
+        for each view of layout
+            for each segment of canvas
+                if segment intersects view
+                    create copy of segment channel
+                    set viewport to sub-viewport of segment channel
+                    decrement channel activation count [inactivates channel]
+                    set view on channel, add channel to view
+                    set segment on channel
+</pre><!-- */ -->
+
+<h3>Config Initialization</h3>
+<p>
+  All resouce entities are by default activated, that is, they are created with
+  activation count of 1. When a resource is used as a destination channel of a
+  view/segment intersection, it's activation count is decreased, that is, it isi
+  deactivated. Using a layout (re-)activates the entities used in by this
+  layout.
+</p>
+<!-- /* --><pre>
+    modify Compound::accept
+       Don't traverse compounds with inactive channels if activeOnly is set
+
+    for each canvas
+        if canvas uses layout
+            for each segment
+                for each channel using segment and layout
+                    increase channel, window, pipe, node activation count
+     -> use ConfigVisitor!
+
+  Existing init:
+    for each root compound
+        init compound
+            for each compound in tree
+                reference channel (reference window, pipe, node)
+                update (init) inherit data
+
+   for each node, pipe, window, channel
+       if entity is referenced [new: and activated]
+           send entity's config init task
+</pre><!-- */ -->
+
+
+
+<h3>Frustum Calculation</h3>
+<p>
+  The frustum priority is View, Segment, Canvas, i.e., a frustum defined on a
+  view overrides segment frustum definitions, which in turn override canvas
+  segment definitions.
+</p>
+<p>
+  View frusta define projections which are by definition independent of the
+  physical projection system. Layouts with frusta are typically not used for
+  immersive installations.
+</p>
+<p>
+  Segment and canvas frusta define the characteristics of a physical projection
+  system. They are given by the real-world setup, and are therefore immutable
+  resource descriptions which cannot be changed by the application at run-time.
+</p>
+<!-- /* --><pre>
+  Canvas::addSegment
+      if segment has no frustum and canvas has frustum
+          set segment frustum = canvas frustum X segment viewport
+
+  in CanvasInitVisitor
+      ...
+      for each channel using segment and layout
+      ...
+      find compounds where channel is a destination channel
+          if segment has frustum
+             set compound frustum = segment frustum X channel/segment coverage
+
+  after CanvasInitVisitor
+      for each view
+          for each channel of view (set in intersection)
+              for each compound using channel as destination channel
+                  set compound frustum = view frustum X channel/view coverage
+</pre><!-- */ -->
+
+
+<h3>Channel Activation</h3>
+<p>
+  Channels are activated when the layout of a canvas changes. Inactive channels
+  are not traversed during frame update.
+</p>
+<!-- /* --><pre>
+Canvas::useLayout
+    for each segment
+        for each channel using segment and new layout
+            for each channel
+                increase channel, window, pipe, node activation count
+                create and init entities which got activated
+        for each channel using segment and old layout
+            for each channel
+                decrease channel, window, pipe, node activation count
+                exit and release entities with 0 activation count
+</pre><!-- */ -->
+
+<h3>Frustum Updates</h3>
+<p>
+  Frusta can only be changed through the view class. Setting a frustum on a View
+  overrides existing canvas or segment frusta, bypassing physical descriptions
+  of the display setup:
+</p>
+<!-- /* --><pre>
+View::setFrustum
+    for each channel of view (set in intersection)
+        for each compound using channel as destination channel
+            compute and set sub-frustum on compound
+View::clear
+    for each channel of view (set in intersection)
+        for each compound using channel as destination channel
+            compute sub-frustum from segment and set on compound
+</pre><!-- */ -->
+<p>
+  The same calculations are to be done on Compound::init for all compounds.
+</p>
+
+<h3>Everything Else</h3>
+<p>
+  Remove 0.6 screen interface (replaced by View::getViewport).
+</p>
+
+<h2>Issues</h2>
+<h3>1. Do we need to create canvases and layouts for
+  backward-compatibility?</h3>
+<p>
+  The fixed aspect ratio support modifies the wall/projection of an 0.6-style
+  view. In the new API this would be done through modification of the view
+  frustum - which would get the current frustum from where? Resolved: The loader
+  creates views and segments by analyzing the configuration.
+</p>
+
+<h3>2. Are Views intended to be subclassed?</h3>
+<p>
+  Yes (0.9): Subclassing allows to attach application-specific data to a view,
+  e.g., a model. eqPly will provide an example implementation of co::Object
+  data distribution. Open Issue: The server receives the application's view data
+  on deserialization, but ignores it.
+</p>
+<p>
+  No (0.9.2): The server has to maintain the master instance of a view. It can
+  not deserialize application-specific data, since it does not run application
+  code. Therefore a <code>UserData</code> object can be attached to a view, of
+  which the application maintains the master version.
+</p>
+
+<h3>3. Are hierarchical layouts needed?</h3>
+<p>
+  Seems that app can implement hierarchical layout and flatten it for Equalizer?
+</p>
+
+<h3>4. How are observers handled for legacy configurations?</h3>
+<p>
+  The config is the one and only observer in 0.6. For legacy configurations,
+  which have no observer, the loader will create one default observer and assign
+  it to all views. Config::setHeadMatrix will be deprecated and will set the
+  head matrix on all observers. Config::getHeadMatrix will return the head
+  matrix of the first observer.
+</p>
+
+<h2>Unimplemented</h2>
+<p>
+  Observer interface will be extended later to support independent frame loops
+  and stereo mode.
+</p>
+<p>
+  When one layout is applied to multiple canvases, and the views of the layout
+  use frusta, the frusta might have the wrong aspect ratio on one of the
+  canvases. Can be solved by adding the capability of specifying frusta
+  aspect-ratio-aware, or by copying the layout for each canvas.
+</p>
+
+<hr></hr>
+<h1>Equalizer 0.6 Implementation</h1>
+<h2>Overview</h2>
+<p>
+  The purpose of this API is to give read and write access to the views of a
+  configuration. A view is one coherent image seen by the user of an Equalizer
+  application. Most commonly changed views are windowed views, i.e., views not
+  belonging to a projection system.
+</p>
+<p>
+  A configuration has one or more views. A view is determined by the frustum
+  (wall or projection description), eye separation and stereo mode (on/off). A
+  view is uniquely assigned to one compound and possibly one destination
+  channel.
+</p>
+<p>
+  The config's view vector is immutable. Each view is mutable, and changes take
+  effect for the next frame. Changing a view makes only sense for views which
+  are not linked to a physical projection system, typically views of appNode
+  channels.
+</p>
+
+<h2>Implementation</h2>
+
+<p>
+  Create new eq::View class. Use this in compound for the wall, projection
+  and eye base. Move eye computations to view. View is only valid if
+  either wall or projection was set. The eye base is inherited from parents or
+  config, and set in valid views during Compound::init.
+</p>
+<p>
+  The eye positions are updated when the head matrix changes or the view is
+  sync'ed to a new version.
+</p>
+<p>
+  A view is a distributed object registered by the application node, which will
+  modify the data at run-time. Views track their dirty status and are committed
+  at the beginning of each frame. The view data has to be send to the appNode
+  during config creation by the server.
+</p>
+
+
+<h3>Field-of-View Updates</h3>
+<p>
+  Currently, the wall or projection is updated by the server when a destination
+  channel is resized. This update should be done by the application, since it is
+  owning the view now.
+</p>
+<!-- /* --><pre>
+  Window::processEvent receives WINDOW_RESIZE event
+  window PVP is set
+  channel PVP's are updated, channel RESIZE event is send
+
+  Channel::processEvent receives CHANNEL_RESIZE event
+  transforms event into VIEW_RESIZE event, containing view id
+  sends event to config
+
+  Config::processEvent receives VIEW_RESIZE event
+  if base view is unknown
+      create and save new base view (using view data and size)
+  else
+      update view using base view and new channel pvp
+</pre><!-- */ -->
+<p>
+  Compound FOV update hint does no longer exist.
+</p>
+
+<h3>Origin for 2D Operations</h3>
+<p>
+  Often 3D applications perform additional 2D drawing, for example a HUD,
+  statistics or a GUI. These operations are to be performed not per view, but on
+  the logical view, i.e., the whole projection area. Often even non-planar
+  projection systems, e.g., a curved screen, are considered as one 'flat' 2D
+  view in this context.
+</p>
+<p>
+  The origin is an arbitrary (for 3D rendering) offset of the channel with
+  respect to the virtual 2D origin. Multiple channels may 'overlap' one another,
+  e.g., they might have the same origin in the case of a configuration with two
+  powerwalls. Each channel can query the absolute origin in pixels.
+</p>
+<p>
+  The total size of the virtual 2D space is needed for some 2D operations. One
+  configuration might have multiple 2D areas (screens), e.g., a display wall
+  driven from a master (application) node. The size of a screen is automatically
+  determined by Equalizer.
+</p>
+<p>
+  The origin is configured using the origin parameter of a compound. The origin
+  is the absolute position with respect to the 2D origin.
+</p>
+<p>
+  A planar wall can be configured by using a wall description for the entire
+  wall and viewports for each destination channel (segment). In this case, the
+  origin can be computed automatically from the channel's pixel viewport and the
+  compound's inherit viewport. A configuration might overwrite this value using
+  the origin parameter, if the 2D coordinate system is not consistent with the
+  planar wall coordinates.
+</p>
+<p>
+  Although the origin is a view parameter, stored in
+  <code>eq::server::View</code>, it is not yet part of the
+  <code>eq::View</code>. The main reason is that there is currently no use case
+  for setting or getting the view's origin, thus it is left out until a use case
+  is presented.
+</p>
+
+<h2>API</h2>
+<!-- /* --><pre>
+  const ViewVector& Config::getViews();
+  const View*       Channel::getView() const;
+  
+  class View : public net::Object
+  {
+  public:
+      void setWall( const Wall& wall );
+      const Wall& getWall() const;
+      // same for Projection
+
+      void setEyeBase( const float eyeBase );
+      float getEyeBase() const;
+  };
+
+  const vmml::Vector2i& Channel::getScreenOrigin() const;
+  vmml::Vector2i        Channel::getScreenSize() const;
+  void                  Channel::applyScreenFrustum() const;
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<p>
+  Additional file format:
+</p>
+<!-- /* --><pre>
+      compound
+      {
+          ...
+          eye_base   float   // inherit from config
+          screen     [ ID xOffset yOffset ] // absolute, default 1 AUTO AUTO
+          ...
+      }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+<p>
+  The eye base and head matrix describe the observer and belong together. One
+  observer is using multiple views. API needs cleanup to model this
+  correctly. Stereo mode not implemented. Might belong to view, observer/user,
+  config or compound.
+</p>
+<p>
+  Identification of views, i.e., which view do I want to modify and which not?
+</p>
+<p>
+  Per-view head matrix? How to group multiple views with a single head matrix
+  (i.e. Cave)?
+</p>
+<p>
+  Camera assignment? App wants to use multiple cameras. Each camera is
+  'attached' to one or more views. Solution could be to allow sub-classing of
+  eq::View, which is problematic since the server has a non-subclassed slave
+  instance. Another solution is to have an ObjectVersion (aka userdata) per
+  view. Problem of view identication (which camera for which view) remains.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

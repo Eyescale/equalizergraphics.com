@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$classco_1_1base_1_1Referenced.html" title="Base class for referenced objects." alt="" coords="305,99,460,128"/>
+<area shape="rect" id="node17" href="$classco_1_1ConnectionDescription.html" title="Describes Connection parameters." alt="" coords="584,59,773,88"/>
+<area shape="rect" id="node4" href="$classco_1_1base_1_1Atomic.html" title="co::base::Atomic\&lt; long \&gt;" alt="" coords="5,99,192,128"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="595,188,763,217"/>
+<area shape="rect" id="node12" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="975,213,1087,243"/>
+<area shape="rect" id="node10" href="$classco_1_1ConnectionListener.html" title="A listener interface to connection changes." alt="" coords="595,267,763,296"/>
+<area shape="rect" id="node15" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; ConnectionDescription \&gt;" alt="" coords="883,59,1179,88"/>
+<area shape="rect" id="node20" title="STL class." alt="" coords="340,33,425,63"/>
+</map>

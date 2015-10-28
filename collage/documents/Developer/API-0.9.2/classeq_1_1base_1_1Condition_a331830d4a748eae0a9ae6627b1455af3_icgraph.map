@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classeq_1_1base_1_1Monitor.html#a54d956ac1be62e59c205f5bb7c61d256" title="Increment the monitored value, prefix only." alt="" coords="272,5,555,35"/>
+<area shape="rect" id="node5" href="$classeq_1_1base_1_1Monitor.html#a76c7b47f2c4cbd48dfc041ad2b91f0b9" title="Decrement the monitored value, prefix only." alt="" coords="279,59,548,88"/>
+<area shape="rect" id="node7" href="$classeq_1_1base_1_1Monitor.html#a9d332cb8c2a14fc56c0444558fd8ae2f" title="Perform an or operation on the value." alt="" coords="276,112,551,141"/>
+<area shape="rect" id="node9" href="$classeq_1_1base_1_1Monitor.html#ac1723d46bd28ba2ab5be8bd4b4de5193" title="Set a new value." alt="" coords="300,165,527,195"/>
+</map>

@@ -1,0 +1,465 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Threads</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Threads</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/threads.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Threads" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/threads.shtml" class="rule">Changed Mon Aug 15 08:12:00 2011 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  <ul>
+    <li>Implemented in 0.3</li>
+    <li>0.4: Added thread synchronization to reflect changes from per-node
+      thread synchronization</li>
+    <li>0.6-rc1: Added easier threading model selection</li>
+  </ul>
+</p>
+
+<h2>Threads</h2>
+
+<h3>Application (app/node) Main Thread</h3>
+<p>
+  The app thread is the main execution thread of an Equalizer application,
+  typically the one running main(). It drives the application's rendering and
+  executes <a href="/documents/design/taskMethods.html#node">node tasks</a>
+  and <a href="/documents/design/nonthreaded.html">nonthreaded rendering</a>
+  tasks.
+</p>
+
+<h3>Render Client (node) Main Thread</h3>
+<p>
+  The render client main thread is very similar to the application thread, in
+  that it executes <a href="/documents/design/taskMethods.html#node">node
+  tasks</a> and <a href="/documents/design/nonthreaded.html">nonthreaded
+  rendering</a> tasks. The only difference is that it does not drive the
+  application's, and that the main loop is controlled by the Equalizer client
+  library.
+</p>
+
+<h3>Receiver (recv) Thread</h3>
+<p>
+  Each Equalizer network node has a receiver thread, created during
+  Node::initLocal(). It listens on all connections and reads the data into
+  packets. The packets are <a href="/documents/design/packets.html">dispatched
+    to the command handler functions</a>. The command handler functions in the
+  receiver thread should never block to avoid deadlocks.
+</p>
+
+<h3>Command (cmd) Thread</h3>
+<p>
+  Each Equalizer network node has a command thread, created during
+  Node::initLocal(). It executes internal Equalizer commands, for example to
+  execute <code>co::Object</code> mapping requests by a slave node.
+</p>
+
+<h3>Node Transmit Thread</h3>
+<p>
+  Each <code>eq::LocalNode</code> has a transmit thread, created during
+  intialization. It executes the compression and network transmission of output
+  frames to the nodes using them as input frames.
+</p>
+
+<h3>Pipe Thread(s)</h3>
+<p>
+  All commands for a pipe and its siblings (windows, channels) are executed in a
+  separate thread for optimal performance. The commands are dispatched from the
+  receiver thread to the node thread using a fifo. Therefore, the pipe thread
+  may block its execution. An exception are nonthreaded pipes, which are
+  executed from the main thread.
+</p>
+
+<a name="sync"></a>
+<h2>Thread Synchronization</h2>
+
+<h3>Threading Models</h3>
+<p>
+  Equalizer provides simplified threading models to configure common thread
+  synchronization strategies. The threading model is a node attribute
+  (<code>thread_model</code>) and can have the following values:
+</p>
+<ul>
+  <li><code>async</code>: No synchronization between render threads. Only the
+    finishing of frame <code>n-latency</code> is synchronized. Most Equalizer
+    examples use this threading model.
+  <li><code>draw_sync</code>: In addition to async, all local render threads are
+    synchronized, so that the draw operations happen synchronously with the
+    node main loop. This is the default threading model.
+  <li><code>local_sync</code>: In addition to draw_sync, all local frame
+    operations, including readback, assemble and swap buffer are synchronized
+    with the node main loop.
+  <li><code>sync</code>: The execution across all nodes is synchronous. Not yet
+    implemented.
+</ul>
+<p>
+  The threading model can be configured using the file format, or
+  programmatically. Applications typically hard-code their threading model. The
+  file format is commonly used to change the threading model for benchmarking
+  and experimentation.
+</p>
+
+<h3>Implementation</h3>
+<div class="float_right">
+  <a href="/documents/design/images/mainloop.png">
+    <img src="/documents/design/images/mainloop-small.jpg"
+         alt="Application and render client main loops"/></a>
+  <div class="label">Application and render client main loops</div>
+</div>
+<p>
+  The default thread synchronization synchronizes
+  all <code>Channel::frameDraw</code> operations on a single node with the
+  node's main thread. This facilitates porting, since the scene database does
+  not have to be multi-buffered. Advanced applications can remove per-node frame
+  synchronization.
+</p>
+<p>
+  The per-node frame synchronization is achieved through
+  the <code>startFrame, waitFrameStarted</code>
+  and <code>releaseFrameLocal, waitFrameLocal</code> synchronization
+  points. Note that this synchronization is only per-node, different nodes in
+  the cluster still run asynchronously.
+</p>
+<p>
+  The first one ensures that the application (node) thread is done modifiying
+  the data. The pipe threads call <code>Node::waitFrameStarted</code> which
+  blocks until the node calls <code>startFrame</code>
+  in <code>Node::frameStart</code>.
+</p>
+<p>
+  The second pair ensures that after <code>Config::finishFrame</code> all pipe
+  threads are done rendering the current frame. The
+  node's <code>frameDrawFinish</code> waits for all local pipes to release the
+  synchronization by calling <code>Pipe::releaseFrameLocal</code>, which happens
+  by default
+  in <code>Pipe::frameDrawFinish</code>. The <code>frameDrawFinish</code>
+  methods are called after all <code>Channel::frameDraw</code> of the
+  corresponding thread have been executed.
+</p>
+<p>
+  Applications which multi-buffer all dynamic data can completely remove frame
+  synchronization by:
+</p>
+<ul>
+  <li>releasing the local synchronization in <code>Node::frameStart</code></li>
+  <li>not calling <code>Node::waitFrameStarted</code>
+    in <code>Pipe::frameStart</code></li>
+  <li>not waiting for the pipe synchronization
+    in <code>Node::frameDrawFinish</code></li>
+</ul>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

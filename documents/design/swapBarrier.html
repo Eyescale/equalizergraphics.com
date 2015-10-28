@@ -1,0 +1,465 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Swap Barriers</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Swap Barriers</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/swapBarrier.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Swap Barriers" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/swapBarrier.shtml" class="rule">Changed Fri Dec 23 11:39:22 2011 +0100</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+State:
+<ul>
+  <li>Software swapbarrier implemented in 0.1</li>
+  <li>Hardware swapbarrier (G-Sync) implemented in 0.9</li>
+  <li>Multiple-windows-per-pipe software swapbarrier implemented in 0.9</li>
+  <li>Segment/Canvas swapbarriers: implemented in 1.1.7</li>
+</ul>
+
+<h2>Overview</h2>
+<p>
+  The purpose of a swap barrier is to synchronize buffer swaps of multiple
+  windows, potentially residing on different nodes. More information is to in
+  the <a href="/documentation/user/synchronization.html">user documentation</a>.
+</p>
+
+<h2>Software Swap Synchronization</h2>
+<p>
+  The software swapbarrier uses a <code>co::Barrier</code> together with
+  a <code>Window::finish</code> to synchronize the buffer swaps without special
+  hardware support. The finish ensures that all GL commands for the window have
+  been executed prior to entering the barrier. When leaving the barrier, the
+  buffer swap is the next command and will be executed immediately, which is
+  ensured using a second finish.
+</p>
+<p>
+  Software swap synchronization does not perform frame synchronization, but can
+  work with frame synchronization provided by the driver, e.g., using an NVidia
+  G-Syn board. Furthermore a swap command may very occasionally be executed on
+  video too late, because it just missed its turn due to timing issues.
+</p>
+<p>
+  The server creates one <code>co::Barrier</code> with the appropriate height
+  for all swap barriers with the same name.
+</p>
+<p>
+  Multiple windows on the same pipe can join the same software swap barrier. All
+  windows will execute a finish, but the barrier will only be executed by the
+  first window of each pipe. Since all windows have finished before swapBuffers,
+  the first window will block in the barrier, and all subsequent windows will
+  swap immediately afterwards since all commands have been finished
+  already. Each window will flush at the end of a frame to ensure timely
+  execution of the swap command.
+</p>
+
+<a name="gsync"></a>
+<h2>Hardware Swap Synchronization (NV_swap_group)</h2>
+<p>
+  The WGL and GLX swap group extensions use a two-tiered strategy to provide
+  hardware-based swap synchronization. On a single system, all windows join a
+  swap group, which ensures that the buffer swaps happen synchronously. Between
+  systems, swap groups join the same swap barrier for synchronization.
+</p>
+<p>
+  If a swap barrier defines a <code>NV_group</code> or <code>NV_barrier</code>,
+  the appropriate NV_swap_group extension (GLX or WGL) is used. Setting a
+  barrier number implies a valid group number.
+</p>
+<p>
+  If the extension is not supported by the driver of window system (AGL), a
+  warning is printed and no barrier is joined.
+</p>
+
+<h2>Configuration</h2>
+<p>
+  Up to Equalizer 1.0, swap barriers are configured per compound. The
+  swap barrier description is really a display-related feature, to be configured
+  in the canvas or segment.
+</p>
+<p>
+  The canvas may have a swap barriers, which is the default swap barrier for
+  each segment. Existing segments are not modified. A segment may have a swap
+  barrier, which becomes the compound's swap barrier when the destination
+  channel is set on the compount. The compound keeps the swapbarrier
+  configuration and logics as in Equalizer 1.0.
+</p>
+
+<h3>Stereo-Selective Configuration</h3>
+<p>
+  In Equalizer 1.0, one can use different swap barrier settings for different
+  stereo-mode compounds. The same can be achieved with per-segment barriers, in
+  have different segments per eye using the same output channel.
+</p>
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  canvas
+  {
+      swapbarrier // default for all segments
+      { 
+          name "barrier-name" // sync's compound's window swap buffers
+          NV_group    OFF | ON (1) | unsigned // use HW group n (NV_swap_group)
+          NV_barrier  OFF | ON (1) | unsigned // use HW barrier n
+      }
+      segment
+      {
+          swapbarrier { ..as above.. }
+      }
+  }
+  compound
+  {
+      swapbarrier { ..as above.. }
+  }
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+  class SystemWindow
+  {
+      virtual bool joinNVSwapBarrier( const uint32_t group, 
+          const uint32_t barrier ) { return false; }
+  };
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+<h3>NV_swap_group synchronization</h3>
+<p>
+  Implement GLXWindow, WGLWindow joinNVSwapBarrier. Check if extension is
+  available, if not warn and return false. Do check for max barriers and
+  groups. Barrier and group can be 0 to un-join.
+</p>
+<p>
+  Server sends swap group and barrier as part of the window's config init
+  packet, which are saved on the eq::Window. The SystemWindow implementation
+  queries the values in configInit and configExit and calls joinNVSwapBarrier.
+</p>
+<p>
+  Compound::init sets eq::server::Window swap group and barrier. Check that
+  there is only one per window, otherwise warn and overwrite values.
+</p>
+<p>
+  Ignore swap barriers with NV settings in software swapbarrier implementation.
+</p>
+
+<h2>Issues</h2>
+<p>
+  Only one window per swap group, and therefore system, is supported for current
+  nVidia hardware.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

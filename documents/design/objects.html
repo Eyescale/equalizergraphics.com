@@ -1,0 +1,490 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Distributed Objects</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Distributed Objects</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/objects.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Distributed Objects" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/objects.shtml" class="rule">Changed Mon Aug 15 08:12:00 2011 +0200</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br/>
+  State:
+  <ul>
+    <li>Implemented in 0.3 alpha</li>
+    <li>Serialization using streams implemented in 0.4</li>
+    <li>getChangeType introduced in 0.5</li>
+  </ul>
+</p>
+
+<p>
+  Equalizer provides facilities to ease the data distribution of an
+  application. The central piece is
+  the <a href="/documents/Developer/API/classco_1_1Object.html">co::Object</a>
+  base class, from which distributed objects are derived. Objects become
+  accessable by making them known to a session. The example code shipped with
+  Equalizer contains examples of distributed objects. The Programming Guide
+  explains distributed objects in more detail, including the easier to use
+  variant <a href="/documents/Developer/API/classeq_1_1Object.html">eq::Object</a>.
+</p>
+
+<h2>Classification</h2>
+<p>
+  Equalizer can manage static and versioned objects.
+</p><p>
+  Static objects can be instantiated on multiple nodes. Upon instantiation,
+  the data from the master version is replicated to the 'slave' node. Static
+  objects do not retain object data, since this data is assumed to be
+  immutable.
+</p><p>
+  Versioned objects work like a simplified version control system. One
+  master copy of the object creates a new version whenever the application
+  calls <code>Object::commit</code>. This version is pushed to all subscribers,
+  that is, to all nodes which have mapped the object. The version data is queued
+  on the object, and will be applied when the application
+  calls <code>Object::sync</code> to synchronize a specific version, or the head
+  version.
+</p><p>
+  A simplified type of versioned objects are objects where the instance data is
+  equal to the delta data, i.e., objects which sync their full data on each
+  commit.
+</p>
+
+<h2>Object Mapping</h2>
+<p>
+  To make objects distributable, they have to be known by the session. During
+  this process the change type of object is determined.
+</p><p>
+  The master instance of an object is registered
+  using <code>Session::registerObject</code>. Upon registration, a
+  session-unique identifier is assigned, which can be used to map slave
+  instances using <code>Session::mapObject</code>. Mapped slave instance are
+  instantiated with the oldest known version from the master instance, and can
+  be synchronized to the head version using <code>Object::sync</code>.
+</p><p>
+  Additionally, the object identifier can be used to send
+  an <code>ObjectPacket</code> to another node. Each object instance has a
+  node-unique instance identifier to address single instances of an object on a
+  remote node.
+</p>
+
+<h2>Change Handling</h2>
+<p>
+  During the registration of the master version of a distributed object, the way
+  changes are to be handled is determined by
+  calling <code>Object::getChangeType</code>. The change type determines the
+  memory footprint and the contract for calling the serialization methods. The
+  following change types are possible:
+</p>
+<ul>
+  <li><b>STATIC</b> The object is not versioned. The instance data is serialized
+    whenever a new slave instance is mapped. No additional data is stored.</li>
+  <li><b>INSTANCE</b> The object is versioned, and the instance and delta data
+    is identical, that is, only instance data is serialized. Previous instance
+    data is saved to be able to map old versions.</li>
+  <li><b>DELTA</b> The object is versioned, and the delta data is typically
+    smaller than the instance data. Previous instance data is saved to be able
+    to map old versions.</li>
+  <li><b>UNBUFFERED</b> The object is versioned, and delta data is used to
+    update slave instances. No data is stored, and no previous versions can be
+    mapped. The instance data is serialized whenever a new slave instance is
+    mapped.</li>
+</ul>
+
+<h2>Static Objects</h2>
+<p>
+  The implementation of unversioned objects is straight-forward and requires the
+  application to implement <code>Object::getInstanceData</code>.
+</p>
+
+<h2>Versioned Objects</h2>
+<p>
+  Versioned objects override the method <code>Object::getChangeType</code> to
+  indicate how changes are to be handled. They possibly have to implement, in
+  addition to unversioned objects, the methods <code>Object::pack</code>
+  and <code>Object::unpack</code> to create or apply a diff from the last
+  version.
+</p><p>
+  Objects with the same instance and delta data only distribute instance data
+  for each new version, and do not have to implement pack and unpack.
+</p>
+
+<h2>Serialization</h2>
+<p>
+  The object serialization and deserialization methods use
+  an <code>DataOStream</code> and <code>DataIStream</code>, respectively. These
+  streams behave like iostreams, but transfer the data in a binary format. They
+  do no type-checking on the data, that is, it is the application's
+  responsibility to <strong>match the order and variables during serialization
+  and deserialization exactly</strong>. Currently they implement streaming
+  operators for basic data types (int, float, etc.), std::strings and
+  std::vectors of basic data types.
+</p>
+
+<h2>Object Typing</h2>
+<p>Object typing can easily be done by the application. So far no use case has
+  emerged where Equalizer should do object typing, as described below:</p>
+<pre>
+  Provide type with objects:
+      virtual uint32_t Object::getTypeID() const { return EQ_ID_INVALID; }
+  Session::instantiateObject( const uint32_t objectID ):
+      if( !get object type id from master )
+          return 0
+     Session::createObject( type );
+     map object to objectID
+     return object
+</pre>
+
+<h2>Multi-Buffered Objects</h2>
+<p>Multi-buffering of objects provides each thread with a potentially different
+  version of the object, while optimizing memory requirements when two threads
+  happen to use the same version of an object. Below is the current design:</p>
+<h3>Requirements</h3>
+<pre>
+  - each thread has its own version.
+  - only one write thread per object across all nodes
+  - sync and getVersion are thread-specific, that is, sync synchronizes this
+    object to the given version for this thread only, and getVersion return the
+    current version for this thread.
+</pre>
+<h3>API</h3>
+<pre>
+  class ???
+  {
+      ObjectHandle getObject( const uint32_t id, const uint32_t version );
+
+  };
+  // ObjectHandle releases object/version for reuse when it goes out of scope
+</pre>
+
+<h2>Implementation</h2>
+<p>
+  Each object has a change manager, which depends on the type of the object and
+  its master/slave status. Equalizer implements a change manager for static
+  objects, versioned objects with delta data and versioned objects with only
+  instance data. Externalizing the implementation of change handling allows for
+  optimisations in the implementation and the memory usage for storing the
+  version data.
+</p>
+
+<h2>Open Issues</h2>
+<p>
+  Document <code>Session::attachObject</code> for unmanaged
+  objects. Document object version obsoletion.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id$ -->

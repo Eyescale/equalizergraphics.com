@@ -1,0 +1,648 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Compute Extensions</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Compute Extensions</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/computeExtensions.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Compute Extensions" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/computeExtensions.shtml" class="rule">Changed Fri Oct 1 12:41:52 2010 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+Author: <a href="mailto:philippe.robert@gmail.com">philippe.robert@gmail.com</a><br/>
+Status: Request for discussion<BR>
+Dependencies: CUDA (libcuda, libcudart)[, OpenCL]<BR>
+</p>
+
+<h2>Overview</h2>
+<p
+This extension proposes some modifications to Equalizer which enable the
+integration of GPU computing tasks into the programming and execution model
+of Equalizer.
+</p>
+<i>
+One step further would be the integration of generic compute tasks, not
+limited to GPU computing ("throughput computing"). For example to support
+software based rendering on both CPUs and GPUs or compute intensive HPC
+tasks in a supercomputing centre.
+</i>
+<h3>Requirements</h3>
+<p>
+<ul>
+<li>Optional usage of CUDA [OpenCL] in Equalizer</li>
+<li>Scalability of compute tasks on multi-GPU and cluster systems</li>
+<li>Efficient shared GPU memory management</li>
+<li>Optimised node-to-node communication</li>
+</ul>
+</p>
+<h3>Design Aspects</h3>
+<p>
+Equalizer uses <b>Compounds</b> to describe the execution of the rendering
+operations. The rendering is performed by <b>Channels</b> which are
+referenced by the compounds -- a channel belongs to a <b>Window</b> which
+again manages the GL context.
+Windows in turn are managed by a <b>Pipe</b> object which provides the
+threading logic. Usually, only one window is used per pipe. Internally, each
+Window uses an <b>SystemWindow</b> object which abstracts window-system specific
+functionality; i.e., using WGL, glX, or AGL. Similarly, an <b>SystemPipe</b>
+object is used by each pipe to handle the backend specific device
+implementation.
+</p>
+<p>
+<center>
+<img src="images/computeClasses.png"><BR><BR>
+Figure 1: Overview class diagram (aside from AGL we currently also support
+glX and WGL)
+</center>
+</p>
+<p>
+When using CUDA one host thread can execute device code on exactly one GPU
+device; i.e., a host thread may have only one CUDA device context current
+at a time. To support multiple devices multiple host threads are thus
+required. This is a perfect match to the pipe abstraction of Equalizer.
+On the other hand, since GPU computing does not perform any rendering and
+as such does not rely on a drawable, the window abstraction does not fit
+(software based rendering is the exception here, since this requires some
+soft of framebuffer abstraction).
+Instead we use the pipe itself to execute the COMPUTE tasks defined in the
+compound description. This fits naturally to the design approach of both
+CUDA and OpenCL, and moreover we can avoid introducing another object
+hierarchy in parallel to the current pipe - window - channel model.
+As a consequence, we can simply use specific attributes on the pipe to set
+up the <b>ComputeContext</b> that provides the interface to either CUDA or
+OpenCL; see Figure 1.
+</p>
+<p>
+<i>
+In this context it would make sense to change the notion of a pipe into a
+more generic device abstraction which can represent a GPU, a CPU, or any
+other accelerator.
+Furthermore, a natural extension would then be to allow an arbitrary
+number of threads per device - imagine a multi-core CPU w/ hyperthreading,
+for example.
+</i>
+</p>
+
+<h2>Internal Changes</h2>
+
+<p>
+In the first phase we target C for CUDA, later we will add support for
+OpenCL. The proposed changes are related to
+<ul>
+  <li>the proper initialisation of each participating pipe for GPU
+      computing purposes, </li>
+  <li>the synchronisation of shared (GPU) memory, </li>
+  <li>the execution of CUDA kernels.</li>
+</ul>
+Moreover, the file format is extended to support COMPUTE tasks. There exist
+two different use-cases:
+<ul>
+  <li> Compute tasks are executed on a pipe which also performs OpenGL draw
+       operations; i.e. interoperability with OpenGL is enabled.</li>
+  <li> Compute tasks are executed on a compute-only device, such as a Tesla
+       GPU or a designated GPU.</li>
+</ul>
+</p>
+
+<h3>Initialisation</h3>
+<p>
+CUDA initialisation is handled by a <b>cudaComputeContext</b> object. In the
+future, other contexts might be used, such as <b>clComputeContext</b> for
+OpenCL.
+The context uses the specified <b>cuda_device</b> to select the appropriate
+compute device, or 0 if none is specified explicitely. Internally, the CUDA
+device is then selected by calling cudaSetDevice().
+If OpenGL interoperability is required the specified CUDA device has to be
+set up accordingly. This mode can be selected using the attribute
+<b>cuda_gl_interop</b> which results in a call to cudaGLSetGLDevice() using
+the appropriate device identifier. Thus, the compute context is set up
+after the window (OpenGL context) initialisation.
+</p>
+<p>
+To select the behaviour of synchronous CUDA function calls, either choose
+<b>yield</b>, <b>block</b> or <b>spin</b> for the attribute
+<b>cuda_sync_mode</b>.
+Internally this results in a call to cudaSetDeviceFlags() prior to any other
+runtime calls.
+</p>
+
+<h3>Execution Model</h3>
+
+<p>
+The execution model is based on a special-purpose COMPUTE task, analogous to
+the common rendering tasks. To integrate the compute tasks into the
+Equalizer execution model, pipes are referenced from the compound structure
+just as channels are used for rendering.
+</p>
+<p><i>
+In the common case the COMPUTE tasks are part of the Equalizer rendering
+loop. To decouple the task execution from the rendering we might introduce
+special-purpose task queues on each compute device (pipe) to schedule
+asynchronous tasks (following the OpenCL design approach). In this model,
+synchronisation between tasks can be achieved using fence events, for
+example.
+</i></p>
+
+<p>
+Equalizer provides the information required to launch a CUDA kernel as it is
+done with other, rendering specific parameters, such as the viewport for
+example. In the context of CUDA based GPU computing this is the range of the
+input domain to be processed by the particular GPU. It is left to the
+developer to manage data distribution and kernel-specific launch parameters:
+
+<ul>
+<li>The correct offsets based on the compute range</li>
+<li>The number of blocks (grid dimension)</li>
+<li>The block parameters (block size)</li>
+<li>The shared memory size</li>
+</ul>
+
+These parameters can be distributed using the common framedata mechanism.
+Furthermore, we do not have to provide additional synchronisation
+functionality because <i>__syncthreads()</i> only operates on GPU threads
+within a particular block to coordinate shared memory access on the GPU.
+</p>
+<p><i>
+Note that when the glinterop hint is specified, compute tasks can be
+scheduled before and/or after the common rendering tasks.
+</i></p>
+<h3>Shared Memory</h3>
+<p>
+Data can either be replicated or partitioned on the participating nodes. In
+case of (full or partial) data replication Equalizer provides a solution to
+synchronise memory changes between participating nodes; i.e., to quickly
+transfer memory changes from the (GPU-) memory of one node to the (GPU-)
+memory of another node.
+</p>
+<p><i>
+In case of partitioned global data message passing functionality is needed
+to enable the communication between different nodes. This can be achieved
+using a more generalised event system. This is not part of this extension,
+though.
+</i></p>
+<p>
+If data is replicated on multiple nodes, a subset of the data might
+subsequently have to be synchronised at runtime. To guarantee an optimal
+memory transfer performance a direct node-to-node communication model is
+established through <b>shared memory proxy objects</b> which handle the
+mapping and synchronisation of a specific memory range (see Figure 2).
+The memory transfer from/to the GPU is performed implicitly by the proxy
+objects as part of the map/sync/dirty/commit cycle.
+</p>
+<p>
+<center>
+<img src="images/memproxy.png"><BR><BR>
+Figure 2: Data replication using proxy objects.
+</center>
+</p>
+<p>
+To simplify the initialisation of the proxy objects a global naming
+directory is used which links custom proxy names to system defined
+shared memory IDs. This directory is part of the shared data and thus can
+be used by all nodes with only little overhead.
+In case where the same memory range is modified by more than one node it is
+up to the application to handle the synchronisation.
+Please note that even though it is possible to map multiple proxies to the
+same memory range it is not actually recommended.
+</p>
+<p><i>
+The memory update process could be further optimised using a RMA based
+network implementation.
+</i></p>
+
+<h2>API</h2>
+<h3>Data Distribution</h3>
+<!-- /* --><pre>
+    class ComputeContext
+    {
+    };
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<h3>Extension</h3>
+<h3>Example</h3>
+In this example 2 compute units are used, one on a compute-only device, the
+other interoperating with the rendering:
+<!-- /* --><pre>
+  pipe
+  {
+      name "gpu1"
+
+      window
+      {
+          name "window"
+          channel
+          {
+              name "channel1"
+          }
+      }
+      attributes
+      { 
+          cuda_gl_interop on 
+          cuda_sync_mode block
+          cuda_device 0
+      }
+  }
+  pipe
+  {
+      name "gpu2"
+
+      attributes
+      { 
+          cuda_sync_mode block
+          cuda_device 1
+      }
+  }
+  compound
+  {
+      channel "channel1"
+
+      compound
+      {
+          name "mixed-mode compound"
+      }
+
+      compound
+      {
+          name "compute compound"
+      }
+  }
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Open Issues</h2>
+
+<ol>
+<li><b>CUDA Implementation:</b>
+    Do we use the CUDA driver API or the CUDA runtime API for the
+    implementation? These APIs are mutually exclusive.
+    <BR><BR>
+    For now we use the CUDA runtime API. It eases device code management by
+    providing implicit initialization, context and module management. The
+    host code generated by nvcc is based on the CUDA runtime API, so
+    applications that link to this code must use the CUDA runtime API.
+    Finally, device emulation only works for code written for the runtime
+    API.
+    <BR><BR>
+</li>
+
+<li><b>Equalizer Integration:</b>
+    Do we have to introduce new abstractions as equivalent to Windows and
+    Channels?
+    <BR><BR>
+    No. GPU compute tasks can be implemented on pipes (devices).
+    <BR><BR>
+</li>
+
+<li><b>Generic Compositing:</b>
+    Can we provide a generic compositing solution for arbitrary chunks of
+    memory (think of software based rendering)?
+    <BR><BR>
+</li>
+
+<li><b>Compound Definition:</b>
+    How are generic devices/pipes integrated into the compound description?
+    <BR><BR>
+</li>
+
+<li><b>Dynamic Workload Balancing:</b>
+    Do we provide separate timing values to balance the compute tasks, or
+    should they be integrated into the normal loadbalancing?
+    <BR><BR>
+</li>
+
+<li><b>Kernel Launch Parameters:</b>
+    Should the grid and block parameters be transported by Equalizer, or
+    should this be done by the programmer using regular frame data? What if
+    multiple kernels are used in one compute task, do they use the same
+    launch configuration?
+    <BR><BR>
+</li>
+
+<li><b>Memory Proxies:</b>
+    Should we provide special-purpose implementations of shared memory
+    proxy objects or just one abstract base class? E.g., a global array?
+    <BR><BR>
+</li>
+
+<li><b>Asynchronous Memory Transfer:</b>
+    How can we use asynchronous communication to hide the latency of the
+    host-device transfer?
+    <BR><BR>
+</li>
+</ol>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+

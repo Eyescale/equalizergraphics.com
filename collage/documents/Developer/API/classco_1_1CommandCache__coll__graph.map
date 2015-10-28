@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="$classco_1_1Command.html" title="co::Command" alt="" coords="403,139,515,165"/>
+<area shape="rect" id="node6" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; LocalNode \&gt;" alt="" coords="17,5,236,32"/>
+<area shape="rect" id="node8" href="$classco_1_1base_1_1RefPtr.html" title="co::base::RefPtr\&lt; Node \&gt;" alt="" coords="33,56,220,83"/>
+<area shape="rect" id="node10" href="$structco_1_1Packet.html" title="A packet send over the network." alt="" coords="83,113,171,140"/>
+<area shape="rect" id="node12" href="$classco_1_1CommandFunc.html" title="co::CommandFunc\&lt; Dispatcher \&gt;" alt="" coords="6,164,247,191"/>
+<area shape="rect" id="node14" href="$classco_1_1base_1_1Atomic.html" title="co::base::Atomic\&lt; int32_t \&gt;" alt="" coords="25,257,228,284"/>
+</map>

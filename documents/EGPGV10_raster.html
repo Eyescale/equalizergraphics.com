@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Scalable Parallel Out-of-core Terrain Rendering Prashant Goswami     Maxim Makhinya     Jonas Boesch Renato Pajarola Organization of  Talk Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion  Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion Introduction Interactive visualization of huge terrain data Advancement of hardware (CPU/GPU) Increasing precision of data acquisition Level-of-detail (LOD) based solutions GPU-oriented Parallel rendering solutions Parallel + LOD rendering? LOD - Single Machine Data Size : 32 k X 32 k Pixel Error : 6 LOD - Single Machine Pixel Error : 4 LOD - Single Machine Pixel Error : 2 LOD - Single Machine Pixel Error : 1 Introduction Parallelizing LOD based algorithms Division strategy Choice of algorithm Performance comparison  Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion Related Work LOD based terrain rendering Pajarola[PG07] Realistic terrain images rendering in parallel Vezina[VR91], Agranov[AG95] Not interactive, cant handle large datasets Rendering on PC cluster Yin[YJSZ06] Related Work Shared resources from community Johnson[JLMVK06] Remote visualization parallel streaming Hu[HTMS07] What we address ? Parallel task decomposition strategies Comparative analysis of performance  Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion RASTeR : Preview RASTeR uses two units[BGP09]: K-Patches : Triangulation unit M-Blocks : Data unit RASTeR : Preview K-Patch One of 8 isosceles                                     right triangles K vertices along each edge Triangles within K-Patch                             arranged as a triangle strip Macro triangles of bintree  RASTeR : Preview M-Block Square block of terrain                                  height data All M-Blocks have                               same size M x M M = 2m + 1 Forms quadtree hierarchy RASTeR : Preview  K-Patch and M-Block relation      RASTeR : Preview View dependent saturated error metric Error per K-Patch Textures for M-Blocks Asynchronous fetching for M-Blocks and their textures  Why RASTeR? GPU-oriented efficient rendering Asynchronous fetching Complete disentanglement of Height data Triangulation data Easy to parallelize  Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion Parallel Terrain Rendering Parallelized using Equalizer[EMP09] Framework for parallel rendering Driven by Server-Client approach         RASTeR Equalizer Parallel Terrain  Renderer (eqRASTeR) RASTeR on Equalizer Each machine runs an independent application RASTeR modified to obtain from Equalizer Task division parameters  Frustum Database range Mouse, keyboard controls, pixel error Same across all nodes RASTeR on Equalizer RASTeR is multithreaded OpenGL context handling via Equalizer Task division managed by Equalizer server Double-click to edit Machine 1 Machine 2 Machine 3 Machine n     eqRASTeR eqRASTeR eqRASTeR eqRASTeR . . .      Destination Machine eqRASTeR Task Division Modes Sort-Last / Database Decomposition Sort-First / Screen Decomposition Task Division Modes   Task Division Modes Sort-Last / Database Decomposition Sort-First / Screen Decomposition Optimal Parallelization Requires Task is almost equally divided among rendering machines Per-frame inter communication between machines is kept minimal Sort-Last Decomposition Given  N machines  A range between R = [0,1] to each of them (Ri = [ i/N, (i+1)/N ] ) Divide the visible rendering data as equally as possible in database domain All machines obtain same frustum from Equalizer Linear Enumeration Each machine in parallel : Gets range Ri = [l, r] Traverses bintree Selects K-Patches with             M-Blocks having origin OM          l*Xmax &lt;= OM(x) &lt;= r*Xmax                                                  (Xmax = Max X coordinate)  Linear Enumeration Double-click to edit Linear Enumeration Drawbacks Traversal coherence lost Division follows M-Blocks, not K-Patches Susceptible to changes on translation and rotation Data distribution among machines unequal  Quadtree Enumeration Enumerate nodes of quadtree Assign intervals [L,R] to each node in bottom-up fashion Range of a node covers that of all its descendants Given range Ri = [l, r], select M-Blocks  l * nmax &lt;= [L, R] &lt;= r * nmax         nmax : maximum number of leaf nodes  Quadtree Enumeration Double-click to edit Quadtree Enumeration Evaluation: More coherence in tree traversal Less susceptible to changes upon rotation, translation More uniformly distributed data Can’t ensure that each machine gets similar amount of rendering data Optimal Task Distribution In both Linear Enumeration and Quadtree Enumeration Machine with no data visible will be idle x y Machine 1 Machine 2 Machine 3 Machine 4 Active K-Patch Enumeration This is where RASTeR helps! Each K-Patch has same number of triangles K-Patch list for a given frame similar on all machines Post K-Patch list selection, divide them equally among all machines Range Ri used for mapping  No inter-machine communication needed Active K-Patch Enumeration  Active K-Patch Enumeration Double-click to edit Active K-Patch Enumeration Evaluation: Coherence in tree traversal Less susceptible to changes upon rotation, translation Uniformly distributed data Ensures that each machine gets similar amount of rendering data Automatic load balancing  Task Division Modes Sort-Last / Database Decomposition Sort-First / Screen Decomposition Sort-First Decomposition Task division in screen space Each machine updates its frustum to the one its obtains from Equalizer server Different machines render mutually exclusive part of terrain Final image assembly does not require z-depth or alpha-compositing Load balancing through Equalizer server Sort-First Decomposition Double-click to edit  Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion Results Equalizer and RASTeR : C++ / GLSL 10 Linux Machines in Cluster: 2 Gbit/s Myrinet for Image Compositing 1 Gbit/s network for data-retrieval Dual 2.2 GHz AMD Opteron CPU 4 GB RAM GeForce 9800 GX2 graphics Results - DB Decomposition Linear Block and Quadtree Enumeration Need load balancing from Equalizer server Do not provide scalable sort-last rendering Active K-Patch enumeration Provides automatic load-balancing Performance scales with # of machines Movie Results - 2D Decomposition 2 kinds of 2D decomposition Vertical Tiling Uneven distribution of data per tile Horizontal Tiling More even distribution of data per tile Puget Sound : 16 k X 16 k SRTM : 32 k X 32 k Performance Analysis Pure rendering scales at least linearly  Pure rendering scales better in Sort-Last  Performance Analysis Overall rendering performance also depends on compositing Reading partial images Transmission over network Assembling at destination machine Sort-last transmits twice the amount of data per frame than sort-first Results - 2D Decomposition Display Wall Configuration  Introduction Related Work Preview to Terrain Renderer Parallelizing Terrain Renderer Results Conclusion Conclusion We have presented: Parallel solution for real-time multi-resolution out-of-core terrain visualization Efficient LOD based adaptive solution for automatic load balancing We have addressed: Challenges in distributed environment Thank You!"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (56);
+            images[0] = "EGPGV10_raster.html_files/EGPGV10_raster.001.jpg";
+            images[1] = "EGPGV10_raster.html_files/EGPGV10_raster.002.jpg";
+            images[2] = "EGPGV10_raster.html_files/EGPGV10_raster.003.jpg";
+            images[3] = "EGPGV10_raster.html_files/EGPGV10_raster.004.jpg";
+            images[4] = "EGPGV10_raster.html_files/EGPGV10_raster.005.jpg";
+            images[5] = "EGPGV10_raster.html_files/EGPGV10_raster.006.jpg";
+            images[6] = "EGPGV10_raster.html_files/EGPGV10_raster.007.jpg";
+            images[7] = "EGPGV10_raster.html_files/EGPGV10_raster.008.jpg";
+            images[8] = "EGPGV10_raster.html_files/EGPGV10_raster.009.jpg";
+            images[9] = "EGPGV10_raster.html_files/EGPGV10_raster.010.jpg";
+            images[10] = "EGPGV10_raster.html_files/EGPGV10_raster.011.jpg";
+            images[11] = "EGPGV10_raster.html_files/EGPGV10_raster.012.jpg";
+            images[12] = "EGPGV10_raster.html_files/EGPGV10_raster.013.jpg";
+            images[13] = "EGPGV10_raster.html_files/EGPGV10_raster.014.jpg";
+            images[14] = "EGPGV10_raster.html_files/EGPGV10_raster.015.jpg";
+            images[15] = "EGPGV10_raster.html_files/EGPGV10_raster.016.jpg";
+            images[16] = "EGPGV10_raster.html_files/EGPGV10_raster.017.jpg";
+            images[17] = "EGPGV10_raster.html_files/EGPGV10_raster.018.jpg";
+            images[18] = "EGPGV10_raster.html_files/EGPGV10_raster.019.jpg";
+            images[19] = "EGPGV10_raster.html_files/EGPGV10_raster.020.jpg";
+            images[20] = "EGPGV10_raster.html_files/EGPGV10_raster.021.jpg";
+            images[21] = "EGPGV10_raster.html_files/EGPGV10_raster.022.jpg";
+            images[22] = "EGPGV10_raster.html_files/EGPGV10_raster.023.jpg";
+            images[23] = "EGPGV10_raster.html_files/EGPGV10_raster.024.jpg";
+            images[24] = "EGPGV10_raster.html_files/EGPGV10_raster.025.jpg";
+            images[25] = "EGPGV10_raster.html_files/EGPGV10_raster.026.jpg";
+            images[26] = "EGPGV10_raster.html_files/EGPGV10_raster.027.jpg";
+            images[27] = "EGPGV10_raster.html_files/EGPGV10_raster.028.jpg";
+            images[28] = "EGPGV10_raster.html_files/EGPGV10_raster.029.jpg";
+            images[29] = "EGPGV10_raster.html_files/EGPGV10_raster.030.jpg";
+            images[30] = "EGPGV10_raster.html_files/EGPGV10_raster.031.jpg";
+            images[31] = "EGPGV10_raster.html_files/EGPGV10_raster.032.jpg";
+            images[32] = "EGPGV10_raster.html_files/EGPGV10_raster.033.jpg";
+            images[33] = "EGPGV10_raster.html_files/EGPGV10_raster.034.jpg";
+            images[34] = "EGPGV10_raster.html_files/EGPGV10_raster.035.jpg";
+            images[35] = "EGPGV10_raster.html_files/EGPGV10_raster.036.jpg";
+            images[36] = "EGPGV10_raster.html_files/EGPGV10_raster.037.jpg";
+            images[37] = "EGPGV10_raster.html_files/EGPGV10_raster.038.jpg";
+            images[38] = "EGPGV10_raster.html_files/EGPGV10_raster.039.jpg";
+            images[39] = "EGPGV10_raster.html_files/EGPGV10_raster.040.jpg";
+            images[40] = "EGPGV10_raster.html_files/EGPGV10_raster.041.jpg";
+            images[41] = "EGPGV10_raster.html_files/EGPGV10_raster.042.jpg";
+            images[42] = "EGPGV10_raster.html_files/EGPGV10_raster.043.jpg";
+            images[43] = "EGPGV10_raster.html_files/EGPGV10_raster.044.jpg";
+            images[44] = "EGPGV10_raster.html_files/EGPGV10_raster.045.jpg";
+            images[45] = "EGPGV10_raster.html_files/EGPGV10_raster.046.jpg";
+            images[46] = "EGPGV10_raster.html_files/EGPGV10_raster.047.jpg";
+            images[47] = "EGPGV10_raster.html_files/EGPGV10_raster.048.jpg";
+            images[48] = "EGPGV10_raster.html_files/EGPGV10_raster.049.jpg";
+            images[49] = "EGPGV10_raster.html_files/EGPGV10_raster.050.jpg";
+            images[50] = "EGPGV10_raster.html_files/EGPGV10_raster.051.jpg";
+            images[51] = "EGPGV10_raster.html_files/EGPGV10_raster.052.jpg";
+            images[52] = "EGPGV10_raster.html_files/EGPGV10_raster.053.jpg";
+            images[53] = "EGPGV10_raster.html_files/EGPGV10_raster.054.jpg";
+            images[54] = "EGPGV10_raster.html_files/EGPGV10_raster.055.jpg";
+            images[55] = "EGPGV10_raster.html_files/EGPGV10_raster.056.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="EGPGV10_raster.html_files/EGPGV10_raster.001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="EGPGV10_raster.html_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="EGPGV10_raster.html_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="EGPGV10_raster.html_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classco_1_1base_1_1MTQueue.html#a0bd26612c8f61beb604709105a8ec38d" title="Assign the values of another queue." alt="" coords="244,5,569,35"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1MTQueue.html#ad2e6274238d625204e74938f6bae6251" title="Push a new element to the back of the queue." alt="" coords="261,59,552,88"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1MTQueue.html#adfd833a0fe2b29693430321f4875dfc8" title="Push a new element to the front of the queue." alt="" coords="245,112,568,141"/>
+</map>

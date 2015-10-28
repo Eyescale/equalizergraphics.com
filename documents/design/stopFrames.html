@@ -1,0 +1,417 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Interruptible Rendering</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Interruptible Rendering</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/stopFrames.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Interruptible Rendering" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/stopFrames.shtml" class="rule">Changed </a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>Author: <a href="mailto:eile@eyescale.ch">Stefan Eilemann</a></p>
+<p>State: Design</p>
+<h2 id="overview">Overview</h2>
+<p>This feature adds the capability for an application to interrupt its
+current rendering operations, without waiting for them to be finished.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>The application process can request the interruption at any time from
+  any application thread.</li>
+<li>The rendering operations, e.g., <code>Channel::frameDraw</code> and others
+  are not interrupted by Equalizer but can query a flag or receive a
+  notification.</li>
+</ul>
+<h2 id="api">API</h2>
+<pre><code>void Config::stopFrames(); // callable from any application thread
+
+/** called from command thread */
+virtual void Channel::notifyStopFrame( const uint32_t lastFrameNumber )
+</code></pre>
+<h2 id="implementation">Implementation</h2>
+<h3 id="modification-library-and-server">Modification Library and Server</h3>
+<p>The application decide to do a frames stop. The Config send the command
+  to the config server.</p>
+<pre><code> Add new Command CMD_CONFIG_STOP_FRAMES
+
+  Add new PACKET ConfigStopFramesPacket
+       uint32_t lastFrameNumber
+
+  void Config::stopFrames
+       send stopFrames Packet to the config server
+</code></pre>
+<p>The server receive a command to stop the current working frame.
+  Each activated channel must be send to all node the stop Frame.</p>
+<pre><code> void server::Config::_cmdStopFrames
+  for Each Compound
+     if it's destination compound
+       if compound-&gt;channel-&gt;isActive()
+          send packet stopFrame
+
+  Add new Command CMD_CHANNEL_STOP_FRAME
+  Add new PACKET ChannelStopFramePacket
+</code></pre>
+<p>All node Channel receive the command to stop the current working frame. </p>
+<pre><code>Add client::channel::_cmdStopFrames
+   call channel::notifyStopFrame( lastFrameNumber );
+
+virtual channel::notifyStopFrame( const uint32_t lastFrameNumber )
+   do nothing;
+</code></pre>
+<h3 id="eqply">EqPly</h3>
+<p>modify eqPly::Channel for stop the current rendering until the frame id = lastFrameNumber</p>
+<pre><code>init frameStartRendering = 0;
+
+Add virtual channel::notifyStopFrames( const uint32_t lastFrameNumber )
+   set frameStartRendering = lastFrameNumber + 1
+
+Add bool _stopRendering( const uint32_t frameID ) const
+    return frameID &lt; frameStartRendering
+
+In frameClear, frameDraw, frameAssemble, frameStart, frameViewStart,
+   frameFinsh and frameViewFinish we start with the following test code
+     if( _stopRendering( ))
+        return;
+
+In _drawModel:
+   Add new method VertexBufferState::stopRendering
+   Implement in VertexBufferStateSimple (true) and
+   VertexBufferStateEq( ask channel)
+   use stopRendering in VertexBufferNode/Leaf::render()
+</code></pre>
+<p>in eqPly::config add the trigger with the space bar command</p>
+<h2 id="issues">Issues</h2>
+<h3 id="q1-is-the-stop-on-the-channel-side-done-using-a-flag-or-a-notification">Q1: Is the stop on the Channel side done using a flag or a notification?</h3>
+<p>Resolved: Use a notification:</p>
+<p>A flag forces a poll-based implementation where the application
+regularly polls the state of the flag. A notification leaves this to the
+application, which can set a flag if it wishes this type of
+implementation, or use another mechanism, e.g., a signal.</p>
+<p>The reset of the flag is difficult for the application to implement,
+since it should be reset by the next frame started from the
+application. The client can't distinguish between queued frames (before
+the stop) and new frames (after the stop). This is solved by passing the
+last frame already started (before the stop) as a parameter for the
+notification.</p>
+<h3 id="q2-what-happens-to-blocked-tasks-eg-frameassemble-or-swapbarrier">Q2: What happens to blocked tasks, e.g., frameAssemble or swapBarrier?</h3>
+<p>Resolved: All pending tasks are executed.</p>
+<p>The frameReadback on the sources will either readback and transmit a
+partial result, or preferably transmit no image data (application
+dependent). This unblocks the destination after the transmit (typically
+&lt;100ms) or immediately.</p>
+<p>The application has to make sure to not render in queued but stopped frames.</p>
+<p>The swap task will be executed by Equalizer, but has little runtime
+overhead.</p>
+<h3 id="q3-is-the-rendering-pipeline-flushed-by-stopframes">Q3: Is the rendering pipeline flushed by stopFrames?</h3>
+<p>Resolved: No.</p>
+<p>The application calls interrupt from any thread, and can call
+finishAllFrames when it regains control of its main loop. Even if
+finishAllFrames is not called operations will function properly.</p>
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+

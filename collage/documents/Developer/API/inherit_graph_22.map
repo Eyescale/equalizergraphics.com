@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$classco_1_1base_1_1NonCopyable.html" title="Base class to make objects non&#45;copyable." alt="" coords="6,442,175,473"/>
+<area shape="rect" id="node3" href="$classco_1_1base_1_1DSO.html" title="Helper to access dynamic shared objects (DSO)" alt="" coords="281,551,391,582"/>
+<area shape="rect" id="node5" href="$classco_1_1base_1_1ErrorRegistry.html" title="A registry translating error codes to strings." alt="" coords="252,606,420,637"/>
+<area shape="rect" id="node7" href="$classco_1_1base_1_1LFQueue.html" title="A thread&#45;safe, lock&#45;free queue with non&#45;blocking access." alt="" coords="247,661,425,691"/>
+<area shape="rect" id="node9" href="$classco_1_1base_1_1Lock.html" title="A lock (mutex) primitive." alt="" coords="279,715,393,746"/>
+<area shape="rect" id="node11" href="$classco_1_1base_1_1Lockable.html" title="A convenience structure to hold data together with a lock for access." alt="" coords="238,770,434,801"/>
+<area shape="rect" id="node13" href="$classco_1_1base_1_1MemoryMap.html" title="Helper to map a file to a memory address (mmap)" alt="" coords="255,5,417,35"/>
+<area shape="rect" id="node15" href="$classco_1_1base_1_1PerThread.html" title="Implements thread&#45;specific storage for C++ objects." alt="" coords="233,59,439,90"/>
+<area shape="rect" id="node17" href="$classco_1_1base_1_1PerThreadRef.html" title="Thread&#45;specific storage for a RefPtr." alt="" coords="232,114,440,145"/>
+<area shape="rect" id="node19" href="$classco_1_1base_1_1Pool.html" title="An object allocation pool." alt="" coords="236,169,436,199"/>
+<area shape="rect" id="node21" href="$classco_1_1base_1_1RequestHandler.html" title="A thread&#45;safe request handler." alt="" coords="243,825,429,855"/>
+<area shape="rect" id="node25" href="$classco_1_1base_1_1RNG.html" title="A random number generator." alt="" coords="280,223,392,254"/>
+<area shape="rect" id="node27" href="$classco_1_1base_1_1ScopedMutex.html" title="A scoped mutex." alt="" coords="224,278,448,309"/>
+<area shape="rect" id="node29" href="$classco_1_1base_1_1SpinLock.html" title="A fast lock for uncontended memory access." alt="" coords="266,333,406,363"/>
+<area shape="rect" id="node31" href="$classco_1_1base_1_1TimedLock.html" title="A mutex with timeout capabilities." alt="" coords="259,387,413,418"/>
+<area shape="rect" id="node33" href="$classco_1_1CommandQueue.html" title="A CommandQueue is a thread&#45;safe queue for command packets." alt="" coords="260,442,412,473"/>
+<area shape="rect" id="node35" href="$classco_1_1Connection.html" title="An interface definition for communication between hosts." alt="" coords="277,879,395,910"/>
+<area shape="rect" id="node39" href="$classco_1_1DataOStream.html" title="A std::ostream buffering and/or retaining data in a binary format." alt="" coords="271,497,401,527"/>
+<area shape="rect" id="node23" href="$classco_1_1LocalNode.html" title="Specialization of a local node." alt="" coords="519,825,631,855"/>
+<area shape="rect" id="node37" href="$classco_1_1BufferConnection.html" title="A proxy connection buffering outgoing data into a memory region." alt="" coords="496,879,653,910"/>
+<area shape="rect" id="node40" href="$classco_1_1base_1_1Referenced.html" title="Base class for referenced objects." alt="" coords="13,934,168,965"/>
+<area shape="rect" id="node43" href="$classco_1_1ConnectionDescription.html" title="Describes Connection parameters." alt="" coords="240,934,432,965"/>
+<area shape="rect" id="node45" href="$classco_1_1Node.html" title="Manages a node." alt="" coords="297,989,375,1019"/>
+<area shape="rect" id="node47" href="$classco_1_1Dispatcher.html" title="A helper class providing command packet dispatch functionality to networked objects." alt="" coords="34,1017,148,1047"/>
+<area shape="rect" id="node50" href="$classco_1_1Object.html" title="A generic, distributed object." alt="" coords="293,1043,379,1074"/>
+<area shape="rect" id="node52" href="$classco_1_1Barrier.html" title="A networked, versioned barrier." alt="" coords="531,1070,618,1101"/>
+<area shape="rect" id="node54" href="$classco_1_1QueueMaster.html" title="The producer end of a distributed queue." alt="" coords="510,1125,640,1155"/>
+<area shape="rect" id="node56" href="$classco_1_1QueueSlave.html" title="The consumer end of a distributed queue." alt="" coords="515,961,634,991"/>
+<area shape="rect" id="node58" href="$classco_1_1Serializable.html" title="Base class for distributed, inheritable objects." alt="" coords="515,1015,634,1046"/>
+<area shape="rect" id="node60" href="$classco_1_1ObjectMap.html" title="Central distributed object registry." alt="" coords="702,1015,816,1046"/>
+</map>

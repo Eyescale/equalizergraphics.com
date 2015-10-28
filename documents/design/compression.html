@@ -1,0 +1,639 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Compression Plugin API</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Compression Plugin API</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/compression.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Compression Plugin API" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/compression.shtml" class="rule">Changed Fri Jan 7 12:59:22 2011 +0000</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">Stefan Eilemann</a><br>
+  State:
+  <ul>
+    <li>CPU compressors implemented in 0.9</li>
+    <li>GPU transfer compressors implemented in 0.9.2</li>
+  </ul>
+  <a href="/documents/Developer/API/compressor_8h.html">API Documentation</a><br>
+</p>
+
+<h2>Overview</h2>
+<p>
+  The compression plugin API is an interface to create binary compression
+  modules which are loaded at runtime ('plugins'), allowing third-party
+  developers to implement new compression schemes. Initially the plugins are
+  used for eq::Image and eq::net::Object data transmission.
+</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>Backward and forward binary compatibility</li>
+  <li>Runtime load and init of plugins</li>
+  <li>Runtime query of the following parameters:</li>
+  <ul>
+    <li>Supported data type:</li>
+    <ul>
+      <li>RGB8, RGBA8, DEPTH, DEPTH_STENCIL image data</li>
+      <li>RGB16f, RGBA16f, RGB32f, RGBA32f image data</li>
+      <li>Unstructured binary data</li>
+    </ul>
+    <li>Quality (Lossy, lossless)</li>
+    <li>Speed</li>
+    <li>Compression Ratio</li>
+  </ul>
+  <li>Re-usability of compressors for different tasks</li>
+  <li>No performance penalty over current 'inline' implementation</li>
+  <ul>
+    <li>Ability to write multiple outputs, as used by the component-wise RLE
+      compressor.</li>
+    <li>Ability to re-use memory</li>
+    <li>Ability to compress in-place</li>
+  </ul>
+</ul>
+
+<h2>Design</h2>
+<p>
+  Image compressors are implemented as shared libraries (.so/.dll). Equalizer
+  loads all plugins from a given directory matching a given pattern. The plugin
+  API is a versioned C API in order to allow backward compatibility and avoid
+  C++ name mangling issues.
+</p>
+<p>
+  One compressor instance is only used from one thread at a given time, that is,
+  compress or decompress can be called from different threads, but never at the
+  same time. A compress call invalidates the previous result and internal data
+  structures can be reused. Equalizer will try to reuse compressor instances.
+</p>
+<p>
+  (cf. Issue 6) The input data is structured. One compressor can support
+  multiple dimensionalities of data, which it declares as part of its
+  capabilities. The number of dimensions in the input and output data is given
+  as a flag. The input dimensions give an offset and a size for each
+  dimension in the format
+  <code>dim0_offset, dim0_size, dim1_offset, ..., dimN_size</code>. The offset
+  does not apply to the input pointer, it is merely a hint on where the data is
+  positioned, e.g., where a 2D image is positioned in a virtual framebuffer. The
+  size of the input data is
+  <code>mul( inDims[1,3,...,n] ) * sizeof( info->dataType )</code>.
+</p>
+
+<h2>API</h2>
+<h3>Plugin API (eq/plugin/compressor.h)</h3>
+<p>
+  See <a href="/documents/Developer/API/plugins_2compressor_8h.html">API
+    Documentation</a>
+</p>
+
+<h3>Equalizer API</h3>
+<!-- /* --><pre>
+  // initialized by EQ_PLUGIN_PATH:
+  EQ_EXPORT const StringVector& Global::getPluginDirectories() const;
+  EQ_EXPORT void Global::addPluginDirectory( const std::string& path );
+  EQ_EXPORT void Global::removePluginDirectory( const std::string& path );
+
+  PluginRegistry& Global::getPluginRegistry();
+  class PluginRegistry
+  {
+  public:
+      void init();
+      void exit();
+
+      const Compressors& getCompressors() const;
+  };
+
+  class Compressor
+  {
+  public:
+      bool init( const std::string& filename );
+      void exit();
+
+      const EqCompressorInfoVector& getInfos() const;
+
+      // resolved function pointers mirroring C API
+      typedef ... FooFunc; // see C API
+      CompressFunc compress;
+      GetNumResultsFunc getNumResults;
+      GetResultFunc getResult;
+      DecompressFunc decompress;
+
+  private:
+      EqCompressorInfoVector _infos;
+      base::DSO _dso;
+  };
+</pre><!-- */ -->
+
+<h2>Example Plugin</h2>
+<!-- /* --><pre>
+  #include eq/plugin/compressor.h
+
+  size_t EqCompressorGetNumCompressors()
+  {
+      return 1;
+  }
+
+  void EqCompressorGetInfo( const size_t n, EqCompressorInfo* const info )
+  {
+      assert( n == 0 );
+      info->version = EQ_COMPRESSOR_VERSION;
+      info->type = EQ_COMPRESSOR_RLE_4_BYTE;
+      info->tokenType = EQ_COMPRESSOR_DATA_4_BYTE;
+      info->capabilities = EQ_COMPRESSOR_DATA_1D | EQ_COMPRESSOR_DATA_2D | 
+                           EQ_COMPRESSOR_IGNORE_MSE;
+      info->quality = 1.f;
+      info->ratio = .8f;
+      info->speed = 0.95f;
+  }
+
+  void* EqCompressorNewCompressor( const unsigned name )
+  {
+      return new eq::plugin::RLE4BCompressor;
+  }
+  void EqCompressorDeleteCompressor( const unsigned name, 
+                                     void* const compressor )
+  {
+      delete (eq::plugin::RLE4BCompressor*)( compressor );
+  }
+
+  void* EqCompressorNewDecompressor( const unsigned name ) { return 0; }
+  void EqCompressorDeleteDecompressor( const unsigned name,
+                                       void* const decompressor ) { /* nop */ }
+
+  void EqCompressorCompress( const unsigned name,
+                             void* const compressor,
+                             void* const in, const uint64_t* inDims,
+                             const uint64_t flags )
+  {
+      const bool ignoreAlpha = (flags & EQ_COMPRESSOR_IGNORE_MSE);
+      const uint64_t inSize = (flags & EQ_COMPRESSOR_DATA_1D) ?
+                                  inDims[1] * 4 : inDims[1] * inDims[3] * 4;
+      (eq::plugin::RLE4BCompressor*)( compressor )->compress( in, inSize,
+                                                              ignoreAlpha );
+  }
+
+  uint32_t EqCompressorGetNumResults( const unsigned name,
+                                      void* const compressor )
+  {
+      return (eq::plugin::RLE4BCompressor*)( compressor )->getChunks().size();
+  }
+  void EqCompressorGetResult( const unsigned name, void* const compressor,
+                              const uint32_t i,
+                              void** const out, uint64_t* const outSize )
+  {
+      const eq::plugin::RLE4BCompressor::Chunk* chunk =
+          (eq::plugin::RLE4BCompressor*)( compressor )->getChunks()[ i ];
+      *out = chunk->data;
+      *outSize = chunk->size;
+  }
+
+  void EqCompressorDecompress( const unsigned name, void* const decompressor,
+                               const void** const in,
+                               const uint64_t* const inSizes,
+                               const uint32_t numInputs,
+                               void* const out, const uint64_t* outDims,
+                               const uint64_t flags )
+  {
+      const uint64_t outSize = (flags & EQ_COMPRESSOR_DATA_1D) ?
+                                  outDims[1] * 4 : outDims[1] * outDims[3] * 4;
+      eq::plugin::RLE4BCompressor::decompress( in, inSizes, out, outSize );
+  }
+</pre><!-- */ -->
+
+<h2>Implementation</h2>
+<!-- /* --><pre>
+  PluginRegistry::init (called by eq::init)
+      for each plugin directory // need new eq::base helper to read directories
+          for each file libeqCompressor*(.dll|.so)
+              init Compressor dll:
+                  open DSO
+                  resolve function pointers based on version
+
+  PluginRegistry::exit (called by eq::exit)
+      for each compressor
+          exit compressor (closes DSO)
+          delete compressor         
+
+  File structure:
+      src/plugins/interface/compressor.h (installs to eq/plugin/compressor.h)
+      src/plugins/examples/compressors.h (does not link against libeq!) 
+      src/plugins/examples/compressors.cpp   resolves name -> algorithm
+      src/plugins/examples/compressorBase.h/cpp  
+      src/plugins/examples/compressorRLE1.h/cpp  
+      src/plugins/examples/compressorRLE4.h/cpp  
+</pre><!-- */ -->
+
+<h2>Restrictions</h2>
+<p>
+</p>
+
+<h2>Issues</h2>
+<h3>1. How does Equalizer select the Compressor at runtime?</h3>
+<p>
+  Certain parameters exclude some compressors up-front, such as lossy
+  compression and supported formats. After this exclusion a number of potential
+  candidates are available. The goal is to select automatically the compressor
+  which provides the best overall system performance.
+</p>
+<p>
+  For image compression, the compressor can be dynamically adapted based on past
+  performances. The compression should always save time, that is, the time to
+  transmit 'uncompressed - compressed' bytes should be longer than the time to
+  compress. If that is not the case, a faster compressor is selected. If the
+  compressor is substantially faster, a slower compressor is chosen. We assume
+  that decompression is faster than compression.
+</p>
+<p>
+  For object data compression automatic selection of the compressor is harder,
+  since the structure of the data varies from object to object. <b>OPEN
+    ISSUE</b>
+</p>
+
+<h3>2. How is the quality set for algorithms which support varying quality?</h3>
+<p>
+</p>
+
+<h3>3. Is in-place compression supported?</h3>
+<p>Resolved: yes</p>
+<p>
+  In-Place compression refers to the usage of the input data memory for
+  output.
+</p>
+<p>
+  Image data can not be compressed in-place, since the uncompressed data is
+  needed along the compressed data, if the image is used locally as
+  input. Object data can be compressed in-place, since it is only retained for
+  transmission by the DataOStream.
+</p>
+<p>
+  The compression call has a flag set (INPLACE) if in-place compression is
+  allowed. The compressor can then write into the input data, and will return
+  one result pointer to the input data.
+</p>
+
+<h3>4. Should the compressor parameters be mutable?</h3>
+<p>Resolved: yes</p>
+<p>
+  Certain compressor parameters, e.g., the compression ratio, are
+  application-specific. The value given by the compressor is an
+  estimate. Equalizer might update these values at run-time, based on the
+  current data. This will allow a better selection of the compressor.
+</p>
+
+<h3>5. How can GPU-assisted compression be supported?</h3>
+<p>Resolved: Through a new API version</p>
+<p>
+  On-GPU compression uses the current framebuffer or a texture as data source. A
+  new compression entry point has to be defined which transmits the necessary
+  parameters, e.g., PixelViewport or texture ID. New data types will be added to
+  define the GPU source types.
+</p>
+
+<h3>6. How can inter-frame compression be implemented?</h3>
+<p>Resolved: Compressor saves previous frame(s)</p>
+<p>
+  The compressor maintains a copy of the previous data, based on the input
+  dimensions. Based on that copy, inter-frame compression algorithms can be
+  applied. A compressor declares the dimensionalities it supports. The
+  compression routine is called with the current dimensionality of the data.
+</p>
+
+<h3>7. How to support Image::ignoreAlpha?</h3>
+<p>Resolved: through a flag</p>
+<p>
+  The application can tell the image to ignore the alpha channel, even though it
+  is used during readback for performance reasons. The compressor input and
+  output data is GL_RGBA, but the alpha channel is compressed away.
+</p>
+<p>
+  The caller will pass the flag <code>EQ_COMPRESSOR_IGNORE_MSE</code> to the
+  compression routine. This tells the compressor that it can ignore the most
+  significant element. The flag is invalid for non-vector formats. The
+  decompressor will not get passed this flag, it is the compressors
+  responsibility to create valid output for both cases (flag set, not set).
+</p>
+
+<h3>8. Can compressors be chained?</h3>
+<p>Resolved: Not in version 1</p>
+<p>
+  The use case for chaining compressors is to combine multiple compression
+  algorithms, e.g., RLE + Huffman. The main issue is that the output of a
+  compressor is unstructured data, that is, it can only be processed by a
+  EQ_COMPRESSOR_DATATYPE_BYTE compressor. Later Equalizer versions could
+  automatically try out compressor chains. Often it is desirable for performance
+  reasons to combine the algorithms in one compressor, e.g., the RLE compression
+  can produce the histogram for Huffman compression as a side product.
+</p>
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+

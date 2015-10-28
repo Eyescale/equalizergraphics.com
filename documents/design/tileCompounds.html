@@ -1,0 +1,672 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+
+
+
+    <meta name="author" content="Stefan Eilemann">
+
+
+
+
+
+
+
+    <meta name="robots" content="index,follow">
+    <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
+    <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
+    <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="alternate" title="Equalizer RSS"
+          href="http://www.equalizergraphics.com/equalizer.rdf"
+          type="application/rss+xml">
+    <script type="text/javascript"
+            src="http://apis.google.com/js/plusone.js"></script>
+
+    <title>Equalizer: Documentation: Developer: Tile Compounds</title>
+  </head>
+
+  <body>
+    <div class="poll">
+        <a href="http://www.equalizergraphics.com/">
+
+          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+
+
+
+        <br>
+        <a href="http://www.libcollage.net">
+
+
+
+          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+
+        <br>
+        <a href="http://www.equalizergraphics.com/gpu-sd">
+
+
+
+          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+
+        <br>
+
+      <!-- What is new? -->
+      <div class="subnavigation"><center>
+          <b>What is new?</b><br>
+          <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/">Latest Website Changes</a><br>
+          <a href="https://github.com/Eyescale/Equalizer/commits/master/">Latest
+            Source Code Changes</a><br>
+          <a href="http://pogl.wordpress.com/">Developer Blog</a><br>
+          <b>New:</b><a href="http://twitter.com/EqualizerTricks">Tips &amp; Tricks on Twitter</a>
+      </center></div>
+
+    </div>
+    <div class="header">
+      <a name="top"></a>
+
+      <h1>Tile Compounds</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Footer line -->
+    <div class="footer">
+      <a href="/documents/design/tileCompounds.html#top" class="rule">Back to top</a>
+      <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: Documentation: Developer: Tile Compounds" class="rule">Questions?</a>
+      <a href="/impressum.html" class="rule">Impressum</a>
+
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/documents/design/tileCompounds.shtml" class="rule">Changed Fri Dec 23 11:39:22 2011 +0100</a>
+
+      <a href="#search">Search</a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+
+
+
+
+      <p><a href="/index.html"
+
+
+
+            >About</a></p>
+
+      <!-- About sub-navigation-->
+
+      <p><a href="/features.html"
+
+
+
+            >Features</a></p>
+
+
+      <p><a href="/applications.html"
+
+
+
+            >Applications</a></p>
+
+      <!-- Applications sub-navigation-->
+
+      <p><a href="/documentation.html"
+
+
+
+            >Documentation</a></p>
+
+      <!-- Documentation sub-navigation-->
+
+      <div class="subnavigation">
+        <p><a href="/documentation/user.html"
+
+
+
+              >User</a></p>
+
+        <p><a href="/documentation/developer.html"
+
+              class="used"
+
+              >Developer</a></p>
+
+        <p><a href="/documentation/publications.html"
+
+
+
+              >Publications</a></p>
+
+        <p><a href="/relnotes.html"
+
+
+
+              >Release Notes</a></p>
+
+        <p><a href="/documentation/performance.html"
+
+
+
+              >Performance Studies</a></p>
+
+        <p><a href="/compatibility.html"
+
+
+
+              >Compatibility Matrix</a></p>
+
+        <p><a href="/documentation/parallelOpenGLFAQ.html"
+
+
+
+              >Parallel GL FAQ</a></p>
+      </div>
+
+
+      <p><a href="/support.html"
+
+
+
+            >Support</a></p>
+
+      <!-- Support sub-navigation-->
+
+      <p><a href="/gallery.html"
+
+
+
+            >Gallery</a></p>
+
+
+      <p><a href="/downloads.html"
+
+
+
+            >Downloads</a></p>
+
+      <!-- Downloads sub-navigation-->
+
+      <p><a href="/news.html"
+
+
+
+            >News</a></p>
+
+
+      <p><a href="/events.html"
+
+
+
+            >Events</a></p>
+
+
+      <p><a href="/contributions.html"
+
+
+
+            >Contributions</a></p>
+
+      <p><a href="/survey.html"
+
+
+
+            >Survey</a></p>
+
+
+
+
+      <div class="float_right"><g:plusone></g:plusone></div>
+      <div class="flush_float"></div
+      <!-- social bookmark sites -->
+      <div class="social">
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config =
+          {"data_track_addressbar":true};</script>
+        <script type="text/javascript"
+                src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=eile">
+        </script>
+        <script type="text/javascript">
+          var addthis_config = {
+          data_track_clickback: false
+          }
+      </script>
+      </div>
+
+    </div>
+    <div class="content">
+
+
+<p>
+  Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
+  State: Implemented in 1.1.7
+</p>
+
+<h2>Overview</h2>
+<p>
+  Tile compounds decompose the view into regular-sized 2D tiles. Each
+  contributing resources renders tiles, until all tiles have been
+  processed. This provides a natural way of balancing the load. Similarly to
+  tile compounds, chunk compounds decompose a database range into DB chunks. For
+  the most part in this document we will consider chunk compounds as a special
+  case for tile compounds.
+</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li><b>Tile Affinity</b>: A given tile should preferably be processed by the
+    same resource. This is even more important for chunks where the resource
+    has to map the data into its address space and upload it to a GPU.</li>
+  <li><b>Configurability</b>: The tile size and chunk granularity has to be
+    configurable in the config file and programmatically on a frame-by-frame
+    basis.</li>
+</ul>
+
+<h2>Specification</h2>
+<p>
+  There are two approaches of distributing the tasks to all resources: a central
+  queue or a per-resource queue with task stealing.
+</p>
+<p>
+  The central queue requires:
+  <ul>
+    <li>Client-side prefetching for performance</li>
+    <li>Server-side pre-distribution for affinity</li>
+    <li>Inter-frame knowledge for affinity</li>
+    <li>Per-frame queue, keeping #latency queues</li>
+  </ul>
+</p>
+<p>
+  The per-resource queue requires:
+  <ul>
+    <li>Pre-distribution of tasks</li>
+    <li>Client-to-client communication for work stealing</li>
+    <li>Client-to-server feedback for pre-distribution of next frame</li>
+  </ul>
+</p>
+<p>
+  The second implementation is more complex without gaining any feature or
+  performance improvement. We will focus on the first implementation.
+</p>
+<p>
+</p>
+
+<a name="implementation"></a>
+<h2>Implementation</h2>
+<!-- /* --><pre>
+                              Collage Task Queues
+                              -------------------
+
+  Similar to co::Barrier
+  Master instance does push() and pop() items
+  Slave instances do pop() items
+
+class QueueMaster // can only be registered
+{
+public:
+    void push( const QueuePacket& packet )
+        Command* command = _cache.alloc( packet.size( ));
+        copy packet -> command;
+        command->command = CMD_QUEUE_ITEM;
+        command->objectID = getID();
+        _queue.push_back( command );
+
+    Command& pop(); // release()d by callee
+
+protected:
+    getChangeType() { return TYPE_STATIC; }
+
+private:
+    typedef std::deque< Command* > PacketQueue;
+    PacketQueue _queue;
+    CommandCache _cache;
+
+    _cmdGetItem( Command& command )
+        while( !_queue.empty() && --itemsRequested )
+            packet->instanceID = slaveInstanceID;
+            send( command.getNode(), _queue.front( ));
+            _queue.pop_front();
+        if( _queue.empty( ))
+            send( command.getNode(), QueueEmptyPacket );
+};
+
+class QueueSlave // can only be mapped
+{
+public:
+    void attach()
+    {
+        registerCommand( CMD_QUEUE_ITEM, 0, _queue );
+        registerCommand( CMD_QUEUE_EMPTY, 0, _queue );
+    }
+
+    Command* pop(); // release()d by callee
+       if( _queue.getSize() < _prefetchLow )
+           GetItemPacket packet;
+           packet.num = _prefetchSize;
+           send( master, packet );
+       Command* command = _queue.pop();
+       if( command->command == CMD_QUEUE_ITEM )
+           return command;
+       command->release();
+       return 0;
+
+protected:
+    getChangeType() { return TYPE_STATIC; }
+
+private:
+    CommandQueue _queue;
+
+    uint32_t _prefetchLow;
+    uint32_t _prefetchSize;
+
+};
+
+Fabric Task Queues Specializations
+
+                           Server-Side Implementation
+                           --------------------------
+
+  - Implement loader and API
+  in Compound::update:
+  - in CompoundUpdateOutputVisitor:
+    o get co::QueueMaster [member of outputtiles/chunks]
+      - TBD: one per eye and latency, cf. Frame::cycleData
+    o generate all tasks packets[1] and push them to queue
+      - fill in all non-source dependent data, e.g., PVP but not drawbuffer
+      - cf. ChannelUpdateVisitor for task generation code
+        o for chunks: only draw
+
+  - in CompoundUpdateInputVisitor:
+    o set QueueMaster id on inputtiles/chunks
+  - register queues (cf. Barriers)
+  - TBD output frame links for tile queues
+    o Issue: one per tile, but only one frame per leaf in config
+    o start with chunk queue impl which only has one output frame per leaf
+
+  in ChannelUpdateVisitor:
+  - if compound has input queue
+    do generate tasks:
+      o chunks: clear, chunks, readback
+      o tiles: tiles [+output frame IDs]
+      o contains queueID [cf. input frames]
+      o all others, including transmit, do not change
+      o pay attention that frameReadback does not set ready the frame
+
+  - CLEANUP!
+
+  - in CommandQueue::_cmdGetItem
+    o TBD add compound-specific data
+
+[1]
+TileTaskPacket : public QueuePacket
+{
+    TileTaskPacket()
+    {
+        size = ...;
+    }
+
+    uint32_t tasks;
+    PixelViewport pvp;
+    Viewport vp;
+    Frustum, ...
+}
+
+ChunkTaskPacket : public QueuePacket
+{
+    ChunkTaskPacket()
+    {
+        size = ...;
+    }
+
+    uint32_t tasks;
+    Range range;
+}
+[...]
+
+                           Client-Side Implementation
+                           --------------------------
+ Channel::_cmdFrameTiles()
+    map QueueSlave to packet->queueID; [see Channel::getView() ]
+    while( packet = queue.pop( ))
+       set tile data in current context
+       call frameClear, frameDraw, frameReadback [if task is set in tasks]
+
+ Channel::_cmdFrameTasks()
+    map QueueSlave to packet->queueID; [see Channel::getView() ]
+    getNextRange()
+    call frameDraw
+
+ Channel::getNextRange()
+    get packet = queue.pop();
+    if !packet
+      return false
+
+    set range in current context
+    release packet
+    return true
+
+
+</pre><!-- */ -->
+
+<h2>API</h2>
+<!-- /* --><pre>
+  2D tiles:
+    void eq::View::setTileSize( const Vector2i& tile );
+
+  DB chunks:
+    void eq::View::setChunkSize( const float range );
+    const Range& eq::Channel::getNextRange() const;
+    - fetches and returns the next range to be rendered
+    - returns Range::INVALID (to be created) when all chunks are done
+    - initially the first range is set
+    - getRange always returns the last fetched range
+
+</pre><!-- */ -->
+
+<h2>File Format</h2>
+<!-- /* --><pre>
+  compound
+  {
+      channel "destination"
+      outputtiles { name "queue" size [ int int ] }
+
+      compound
+      {
+          channel "source1..n"
+          inputtiles { name "queue" }
+          outputframe {}
+      }
+      inputframe { name "frame.source1..n" }
+  }
+
+  compound
+  {
+      channel "destination"
+      outputchunks { name "queue" divisor int }
+
+      compound
+      {
+          channel "source1..n"
+          inputchunks { name "queue" }
+          outputframe {}
+      }
+      inputframe { name "frame.source1..n" }
+  }
+
+  compound
+  {
+      channel "destination"
+      outputtiles { name "tiles" size [ int int ] }
+      buffer [ COLOR DEPTH ]
+
+      compound
+      {
+          inputtiles { name "tiles" }
+          outputchunks { name "chunks1" granularity float }
+          compound
+          {
+              channel "source1..n"
+              inputchunks { name "chunks1" }
+              outputframe {}
+          }
+      }
+      compound
+      {
+          buffer [ COLOR DEPTH ]
+          inputtiles { name "tiles" }
+          outputchunks { name "chunks2" granularity float }
+          compound
+          {
+              channel "source1..m"
+              inputchunks { name "chunks2" }
+              outputframe {}
+          }
+      }
+      inputframe { name "frame.source1..n" }
+      inputframe { name "frame.source1..m" }
+  }
+</pre><!-- */ -->
+
+<h2>Examples</h2>
+<!-- /* --><pre>
+Collage queue usage:
+  Producer:
+    QueueMaster queue;
+    localNode->registerObject( queue );
+    for each task
+        queue.push( task );
+    send( queue->getID( ));
+
+  Consumer:
+    const uint128_t queueID = recv();
+    QueueSlave queue;
+    localNode->mapObject( queue, queueID );
+    while( task = queue.pop( ))
+        execute task
+        task->release()
+
+  Channel::frameDraw()
+     setup
+     Range range = getRange();
+     while( range != INVALID )
+         draw( range );
+         range = getNextRange();
+</pre><!-- */ -->
+
+<a name="Issues"></a>
+<h2>Issues</h2>
+<h3>Q1: Do we have one draw call per tile, or does one draw call render multiple
+  tiles?</h3>
+<p>
+  Resolved: Have one draw call per tile. This is transparent to the
+  application. The static setup can be amortized by caching the relevant state
+  information on the channel itself, and resetting it in
+  each <code>frameStart</code>
+</p>
+<p>
+  Having one <code>Channel::frameClear, frameDraw, frameReadback</code> per tile
+  has the advantage of exposing this feature completely transparent to the
+  application. Having one call for all tiles has the advantage that the
+  application may amortize certain static setup calls, e.g., loading a shader or
+  texture, over all tiles.
+</p>
+
+<h3>Q2: Do we have one draw call per chunk, or does one draw call render
+  multiple chunks?</h3>
+<p>
+  Resolved: For DB chunks, the application has to get all chunks to render in a
+  single <code>Channel::frameDraw</code> invokation.
+</p>
+<p>
+  The same logic applies as for tiles, with the exception that we want to have
+  one clear and readback for all chunks. This does not exclude using multiple
+  draw calls, but reusing the same framebuffer does. Often applications adapt
+  the near and far based on the current data, thus changing the meaning of the
+  existing, reused depth buffer.
+</p>
+
+
+
+
+  <!-- Search Results -->
+  <div class="flush_float"></div>
+  <div class="search"><a name="search"></a>
+    <div id="cse"></div>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1', {language : 'en'});
+      google.setOnLoadCallback(function(){
+      var customSearchControl = new
+      google.search.CustomSearchControl('003884678311182543665:v1o4knw6fuq');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+      }, true);
+    </script>
+    <link rel="stylesheet"
+          href="http://www.google.com/cse/style/look/default.css"
+          type="text/css" />
+  </div>
+
+  <!-- social bookmark sites, added here again for convenience and to WAR
+       ignored bottom margin on IE7 -->
+  <div class="social">
+    <script type="text/javascript">addthis_pub = 'eile';</script>
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
+       onclick="return addthis_sendto()">
+      <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
+           border="0" alt="" />
+    </a>
+    <script type="text/javascript"
+            src="http://s7.addthis.com/js/152/addthis_widget.js">
+    </script>
+  </div>
+
+</div> <!-- div content -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-63007-1");
+  pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+</body>
+
+</html>
+
+<!-- $Id: immersive.shtml 3520 2009-10-26 16:00:08Z eile $ -->
