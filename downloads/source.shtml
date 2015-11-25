@@ -10,7 +10,8 @@
 <p>
   The git repository gives access to the latest source code, and should be used
   by developers modifying the Equalizer source code or interested in the latest
-  features. The easiest way is to build using Buildyard, as described in
+  features. The easiest way is to build using the CMake superproject, as
+  described in
   the <a href="https://github.com/Eyescale/Equalizer#readme">Readme</a>. We try
   to keep the git master stable and encourage developers to use git, or at least
   a developer version.
