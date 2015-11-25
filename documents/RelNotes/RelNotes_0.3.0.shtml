@@ -18,7 +18,7 @@
 <h3>Features</h3>
 <p>
   Equalizer provides the following major features to facilitate the development
-  and deployment of scalable OpenGL applications. A 
+  and deployment of scalable OpenGL applications. A
   <a href="/features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
@@ -55,7 +55,7 @@
     extension</li>
   <li>Support for explicit SDP connections</li>
   <li>New tool to create typical configuration files</li>
-  <li>New Equalizer-based benchmark tool for pixel readback and draw 
+  <li>New Equalizer-based benchmark tool for pixel readback and draw
     operations</li>
   <li>New Equalizer-based benchmark tool for network bandwidth</li>
   <li>Support and example code for resident (pre-started) render clients</li>
@@ -75,7 +75,7 @@
       Configuration</a></li>
   <li><a href="/documents/design/residentNodes.html">Resident Render
       Clients</a></li>
-  <li><a href="/documents/design/standalone.html">Standalone Application 
+  <li><a href="/documents/design/standalone.html">Standalone Application
       Support</a></li>
   <li><a href="/documents/design/nodeConnect.html">Node Connection Setup</a></li>
   <li><a href="/documentation/user/configTool.html">Configuration Tool</a></li>
@@ -92,7 +92,7 @@
 <ul>
   <li><b>Linux:</b> Ubuntu 6.10 (x64, i386), RedHat Enterprise Linux 4 (x64,
     i386)</li>
-  <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64)</li>  
+  <li><b>Windows:</b> XP with Visual Studio 2005 (i386, x64)</li>
   <li><b>Mac OS X:</b> 10.4 (PowerPC, i386)</li>
 </ul>
 <h4>Window System Support</h4>
@@ -112,7 +112,7 @@
 </p>
 <h3>Support</h3>
 <p>
-  Technical questions can be posted to the 
+  Technical questions can be posted to the
   <a href="http://www.equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">
     Developer Mailing List</a>, or directly to
   <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">

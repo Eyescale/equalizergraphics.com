@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /restricted
 Disallow: /cgi-bin/viewvc.cgi
-Disallow: /downloads/DBCAAF49A0C0

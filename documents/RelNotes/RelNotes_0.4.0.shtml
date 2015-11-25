@@ -92,7 +92,7 @@
 <h3>Supported Platforms</h3>
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
-  system, including all Unix variants and the Windows operating system.  A 
+  system, including all Unix variants and the Windows operating system.  A
   <a href="/compatibility.html">compatibility matrix</a> can be found on the
   Equalizer website. Version 0.4 has been tested on:
 </p>
@@ -124,7 +124,7 @@
 </p>
 <h3>Support</h3>
 <p>
-  Technical questions can be posted to the 
+  Technical questions can be posted to the
   <a href="http://www.equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">
     Developer Mailing List</a>, or directly to
   <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">

@@ -1,4 +1,4 @@
-.PHONY: update srcupdate docset update_and_targets
+.PHONY: update srcupdate update_and_targets
 .SUFFIXES: .html .css
 
 TARGET = build
@@ -249,16 +249,11 @@ clean:
 	rm -rf $(TARGETS)
 
 install: $(SITEMAP)
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-
-install_web: $(SITEMAP)
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	git checkout gh-pages
+	rsync -avx --exclude=".git" --delete build/ .
 
 install_only: all
-	rsync -avz --exclude=".git" --exclude "*.docset" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
-
-auxinst: all
-	rsync -avz --exclude=".git" --exclude "*.docset" --exclude "*.html" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avz --exclude=".git" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
 
 $(SITEMAP): update_and_targets
 	@sitemap_gen --config=sitemap_config.xml
@@ -268,12 +263,6 @@ update_and_targets: update
 
 update:
 	rm -f changes_log.html
-
-docset:
-	$(MAKE) -C $(TARGET)/documents/Developer/API > 2&>1 > /dev/null
-	@rm -f $(TARGET)/documents/Developer/API/ch.eyescale.Equalizer.docset.zip
-	cd $(TARGET)/documents/Developer/API; \
-	  zip -qr ch.eyescale.Equalizer.docset.zip ch.eyescale.Equalizer.docset
 
 $(TARGET)/%.html : %.shtml $(INCLUDES)
 	@mkdir -p $(@D)

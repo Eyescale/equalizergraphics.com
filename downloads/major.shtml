@@ -50,7 +50,7 @@
       Release Notes
       <a href="/documents/RelNotes/RelNotes_1.4.1.html">1.4.1</a>,
       <a href="/documents/RelNotes/RelNotes_1.4.0.html">1.4.0</a><br>
-      <a href="/documents/Developer/doxies/Equalizer-1.4.0/index.html">API
+      <a href="http://eyescale.github.io/Equalizer-1.4/index.html">API
         documentation</a><br>
       <a href="/downloads/Buildyard-1.4.0.tar.gz">Buildyard</a><br>
       <a href="/downloads/Equalizer-1.4.1.tar.gz">Equalizer</a><br>
@@ -75,7 +75,7 @@
       Source tar.gz
       <a href="/downloads/Equalizer-1.2.1.tar.gz">1.2.1</a>,
       <a href="/downloads/Equalizer-1.2.tar.gz">1.2</a><br>
-      <a href="/documents/Developer/doxies/Equalizer-1.2/index.html">API
+      <a href="http://eyescale.github.io/Equalizer-1.2/index.html">API
         documentation</a>
     </td>
     <td>
@@ -103,7 +103,7 @@
       <a href="/downloads/Equalizer-1.0.2.tar.gz">1.0.2</a>,
       <a href="/downloads/Equalizer-1.0.1.tar.gz">1.0.1</a>,
       <a href="/downloads/Equalizer-1.0.tar.gz">1.0</a><br>
-      <a href="/documents/Developer/API-1.0/index.html">API documentation</a>
+      <a href="http://eyescale.github.io/Equalizer-1.0/index.html">API documentation</a>
     </td>
     <td>
       <center>1.0.2</center>
@@ -130,7 +130,6 @@
       <a href="/documents/RelNotes/RelNotes_0.9.html">Release
         Notes</a><br>
       <a href="/downloads/Equalizer-0.9.tar.gz">Source tar.gz</a><br>
-      <a href="/documents/Developer/API-0.9/index.html">API documentation</a>
     </td>
     <td></td>
     <td>Cross-segment load-balancing, dynamic frame resolution, compression
@@ -144,7 +143,6 @@
         Notes</a><br>
       <a href="/downloads/Equalizer-0.6.tar.gz">Source tar.gz</a><br>
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=640364">SourceForge</a><br>
-      <a href="/documents/Developer/API/0.6/index.html">API documentation</a>
     </td>
     <td>
       <a href="/downloads/Equalizer-0.6-win32.zip"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
