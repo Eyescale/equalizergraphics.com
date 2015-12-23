@@ -251,7 +251,8 @@ clean:
 install: $(SITEMAP)
 	git clean -fdx
 	git checkout gh-pages
-	rsync -avx --exclude=".git" --delete /tmp/build/ .
+	rsync -avx --exclude=".git" /tmp/build/ .
+	git add .
 
 $(SITEMAP): update_and_targets
 	@sitemap_gen --config=sitemap_config.xml
