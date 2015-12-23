@@ -4,25 +4,25 @@
 #include "header.shtml"
 
 <ul>
-  <li><b>27. November 2012</b> <a href="/documents/RelNotes/RelNotes_1.4.1.html">Released Version
+  <li><b>27. November 2012</b> <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_1.4.1.html">Released Version
       1.4.1</a>.</li>
-  <li><b>7. September 2012</b> <a href="/news/Release_1.4.html">Released Version
+  <li><b>7. September 2012</b> <a href="/equalizergraphics.com/news/Release_1.4.html">Released Version
       1.4</a>.</li>
-  <li><b>20. April 2012</b> <a href="/documents/RelNotes/RelNotes_1.2.1.html">Released Version
+  <li><b>20. April 2012</b> <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_1.2.1.html">Released Version
       1.2.1</a>.</li>
-  <li><b>16. March 2012</b> <a href="/news/Release_1.2.html">Released Version
+  <li><b>16. March 2012</b> <a href="/equalizergraphics.com/news/Release_1.2.html">Released Version
       1.2</a>.</li>
-  <li><b>29. December 2011</b> <a href="/documents/RelNotes/RelNotes_1.1.7.html">Released Version
+  <li><b>29. December 2011</b> <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_1.1.7.html">Released Version
       1.2-beta</a>.</li>
-  <li><b>10. November 2011</b> <a href="/documents/RelNotes/RelNotes_1.0.2.html">Released Version
+  <li><b>10. November 2011</b> <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_1.0.2.html">Released Version
       1.0.2</a>.</li>
-  <li><b>19. August 2011</b> <a href="/documents/RelNotes/RelNotes_1.0.1.html">Released Version
+  <li><b>19. August 2011</b> <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_1.0.1.html">Released Version
       1.0.1</a>.</li>
-  <li><b>08. May 2011</b> <a href="/news/Release_1.0.html">Released Version
+  <li><b>08. May 2011</b> <a href="/equalizergraphics.com/news/Release_1.0.html">Released Version
       1.0</a>.</li>
-  <li><b>01. March 2011</b> <a href="/documents/RelNotes/RelNotes_0.9.3.html">Released
+  <li><b>01. March 2011</b> <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.9.3.html">Released
       Version 1.0-beta</a>.</li>
-  <li><b>09. January 2011</b> <a href="/news/Release_0.9.2.html">Released
+  <li><b>09. January 2011</b> <a href="/equalizergraphics.com/news/Release_0.9.2.html">Released
       Version 1.0-alpha</a>.</li>
   <li><b>19. May 2010</b>
     <a href="http://vizstack.sourceforge.net/">VizStack</a>, a management
@@ -33,48 +33,48 @@
     DeltaGen 9.5 Press Release</a>, including a paragraph on RTT Scale which is
     based on Equalizer 0.9.1.</li>
   <li><b>05. February 2010</b>
-    <a href="/documents/RelNotes/RelNotes_0.9.1.html">Released Developer Version
+    <a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.9.1.html">Released Developer Version
       0.9.1</a>.</li>
-  <li><b>10. August 2009</b> <a href="/news/Release_0.9.html">Released Version
+  <li><b>10. August 2009</b> <a href="/equalizergraphics.com/news/Release_0.9.html">Released Version
       0.9</a>.</li>
-  <li><b>7. February 2009</b> <a href="/news/EgBof.html">Equalizer BOF at
+  <li><b>7. February 2009</b> <a href="/equalizergraphics.com/news/EgBof.html">Equalizer BOF at
       Eurographics'09</a>.</li>
-  <li><b>1. December 2008</b> <a href="/news/Release_0.6.html">Released Version
+  <li><b>1. December 2008</b> <a href="/equalizergraphics.com/news/Release_0.6.html">Released Version
       0.6</a>.</li>
   <li><b>21. November 2007</b> The research project 'Efficient load balancing
     for cluster-based parallel real-time rendering' starts at
     the <a href="http://www.ifi.uzh.ch/vmml/">VMML</a></li>
-  <li><b>17. April 2008</b> <a href="/news/Release_0.5.html">Released Version
+  <li><b>17. April 2008</b> <a href="/equalizergraphics.com/news/Release_0.5.html">Released Version
       0.5</a>.</li>
   <li><b>18. December 2007</b>
-    <a href="/news/EqualizerNewsDecember07.html">Newsletter December'07</a></li>
-  <li><b>28. October 2007</b> <a href="/news/Release_0.4.html">Released Version
+    <a href="/equalizergraphics.com/news/EqualizerNewsDecember07.html">Newsletter December'07</a></li>
+  <li><b>28. October 2007</b> <a href="/equalizergraphics.com/news/Release_0.4.html">Released Version
       0.4</a>.</li>
-  <li><b>3. July 2007</b> <a href="/news/EqualizerNewsJuly07.html">Newsletter
+  <li><b>3. July 2007</b> <a href="/equalizergraphics.com/news/EqualizerNewsJuly07.html">Newsletter
       July'07</a></li>
   <li><b>11. May 2007</b> A three-year research grant titled
     <a href="http://www.projectdb.snf.ch/webforms/ProjectDetail.aspx?ID=9ae807a8-906b-4f4c-8fe4-a4d7d9b14a0e">VISS:
       Visualization Infrastructures for Scalable Scientific Computing</a> for
     further research around Equalizer has been granted by the Swiss National
     Science Foundation.</li>
-  <li><b>4. May 2007</b> <a href="/news/Release_0.3.html">Released Version
+  <li><b>4. May 2007</b> <a href="/equalizergraphics.com/news/Release_0.3.html">Released Version
       0.3</a>.</li>
   <li><b>20./21. May 2007</b> Equalizer demonstration (21. at 5pm) and
-    <a href="/documents/EGPGV07.pdf">presentation</a> of
-    the <a href="/restricted/directSend.pdf">Direct Send Compositing for Parallel
+    <a href="/equalizergraphics.com/documents/EGPGV07.pdf">presentation</a> of
+    the <a href="/equalizergraphics.com/restricted/directSend.pdf">Direct Send Compositing for Parallel
     Sort-Last Rendering</a> paper at the
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a> in Lugano, Switzerland.</li>
-  <li><b>30. December 2006</b> <a href="/news/Release_0.2.html">Released Version
+  <li><b>30. December 2006</b> <a href="/equalizergraphics.com/news/Release_0.2.html">Released Version
       0.2</a>.</li>
-  <li><b>15. December 2006</b> <a href="/news/tungsten.html">Employment News:</a>
+  <li><b>15. December 2006</b> <a href="/equalizergraphics.com/news/tungsten.html">Employment News:</a>
   Stefan Eilemann to work for Tungsten Graphics.</li>
-  <li><b>31. October 2006</b> <a href="/news/Release_0.1.html">Released Version
+  <li><b>31. October 2006</b> <a href="/equalizergraphics.com/news/Release_0.1.html">Released Version
       0.1</a>.</li>
   <li><b>22. September 2006</b> Added
-    a <a href="/useCases.html">use cases page</a> for Equalizer.</li>
+    a <a href="/equalizergraphics.com/useCases.html">use cases page</a> for Equalizer.</li>
   <li><b>6. July 2006</b> Added a
-    a <a href="/documents/ProjectEqualizer.pdf">project description</a></li>
+    a <a href="/equalizergraphics.com/documents/ProjectEqualizer.pdf">project description</a></li>
   <li><b>30. June 2006</b> Imported the existing Equalizer source code (and this
     website) to the sourceforge
     <a href="http://sourceforge.net/svn/?group_id=170962">subversion
@@ -82,12 +82,12 @@
   <li><b>26. June 2006</b> Created and linked the sourceforge project
     page.</li>
   <li><b>19. May 2006</b> Added
-    a <a href="/documents/ParallelRenderingSystems.pdf">white
+    a <a href="/equalizergraphics.com/documents/ParallelRenderingSystems.pdf">white
       paper analysing parallel rendering systems</a></li>
   <li><b>19. May 2006</b> Released glAsync 0.11</li>
   <li><b>22. December 2005</b> Added a first version of the glAsync library</li>
   <li><b>29. November 2005</b> Added
-    an <a href="/documents/Equalizer.pdf">Equalizer overview
+    an <a href="/equalizergraphics.com/documents/Equalizer.pdf">Equalizer overview
       presentation</a></li>
   <li><b>14. June 2005</b> Created developer mailing list</li>
   <li><b>7. June 2005</b> Created first version of this website</li>

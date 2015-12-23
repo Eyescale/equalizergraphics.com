@@ -10,7 +10,7 @@
   Author: <a href="mailto:eilemann@gmail.com">eilemann@gmail.com</a><br>
   State: 
   <ul>
-    <li>Made a <a href="/documents/design/compression.html">plugin</a> in
+    <li>Made a <a href="/equalizergraphics.com/documents/design/compression.html">plugin</a> in
       0.9</li>
     <li>Updated in 0.4 to use 8-byte token size</li>
     <li>Implemented in 0.2</li>

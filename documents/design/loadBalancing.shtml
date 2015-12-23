@@ -12,7 +12,7 @@
   <ul>
     <li>Implemented in 0.6</li>
     <li>view_equalizer in 0.9
-      (<a href="/documents/design/viewEqualizer.html">described here</a>)</li>
+      (<a href="/equalizergraphics.com/documents/design/viewEqualizer.html">described here</a>)</li>
     <li>Boundaries: implemented in 0.9.1</li>
   </ul>
 </p>
@@ -37,13 +37,13 @@
 
 <h2>Implementation</h2>
 <div class="float_right">
-  <a href="/documents/design/images/loadEqualizer.png">
+  <a href="/equalizergraphics.com/documents/design/images/loadEqualizer.png">
     <img src="/documents/design/images/loadEqualizer-small.jpg" 
          alt="Load Balancing Grid"/></a>
   <div class="label">Load Balancing Grid</div>
 </div>
 <p>
-  The <a href="/documents/design/statistics.html">statistics interface</a> does
+  The <a href="/equalizergraphics.com/documents/design/statistics.html">statistics interface</a> does
   provide us with the timing values from the last finished frame. This timing
   values, together with the 2D viewport or DB range give us a load
   distribution. The ROI readback interface will be used to refine the load
@@ -62,7 +62,7 @@
   decomposition.
 </p>
 <div class="float_left">
-  <a href="/documents/design/images/loadEqualizer-tree.png">
+  <a href="/equalizergraphics.com/documents/design/images/loadEqualizer-tree.png">
     <img src="/documents/design/images/loadEqualizer-tree-small.jpg" 
          alt="Load Balancing Grid"/></a>
   <div class="label">Load Balancing Split Tree</div>
@@ -72,7 +72,7 @@
   nodes of the tree represent the child compounds performing the
   rendering. Intermediate nodes define the split direction at this level. The
   Figure on the left shows the split tree for the example load grid. Unless
-  a <a href="/documents/design/viewEqualizer.html">view equalizer</a> is used,
+  a <a href="/equalizergraphics.com/documents/design/viewEqualizer.html">view equalizer</a> is used,
   each child counts as a full resource.
 </p>
 <p>
@@ -82,7 +82,7 @@
   180 ms with a 60/120 ms split, and a 60/60 ms split on the right sub-node.
 </p>
 <div class="float_right">
-  <a href="/documents/design/images/loadEqualizer-new.png">
+  <a href="/equalizergraphics.com/documents/design/images/loadEqualizer-new.png">
     <img src="/documents/design/images/loadEqualizer-new-small.jpg" 
          alt="Load Balancing Grid"/></a>
   <div class="label">New Split Computation</div>

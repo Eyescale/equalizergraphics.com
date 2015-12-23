@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.5.png"><img src="/images/release-0.5-small.jpg" 
+  <a href="/equalizergraphics.com/images/release-0.5.png"><img src="/images/release-0.5-small.jpg" 
                                      alt="A Pixel Compound"></a>
   <div class="label">A Three-to-One Pixel Decomposition</div>
 </div>

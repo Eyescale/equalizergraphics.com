@@ -80,8 +80,8 @@
   application process. The applications have to explicitly specify the socket
   type, which allows mixing of TCP and SDP sockets. Please refer to the Mellanox
   documentation on how to activate the 'mixed SDP applications' mode. Revisions
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1001">1001</a> to 
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1010">1010</a> implement
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1001">1001</a> to 
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1010">1010</a> implement
   support for multiple node connections, which means that if a node (or the
   server) has multiple connections specified in the configuration file, they
   now listen to <em>all</em> of them, allowing to use mixed connection
@@ -117,7 +117,7 @@
   The current (1.3.0) Mellanox Windows SDP implementation only supports a subset
   of the Windows socket interface. Most notably, the eq::net socket connection was
   rewritten to use overlapped (asynchronous) IO with 
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=951">svn
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=951">svn
     revision 951</a>. TCP/IP connections also exhibit a performance increase due
   to the use of overlapped IO.
 </p>
@@ -142,22 +142,22 @@
 
 <p>
   Related SVN changes:
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=951">951</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=952">952</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=953">953</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1001">1001</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1002">1002</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1006">1006</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1007">1007</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1009">1009</a>
-  <a href="/cgi-bin/viewvc.cgi?view=rev&revision=1010">1010</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=951">951</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=952">952</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=953">953</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1001">1001</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1002">1002</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1006">1006</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1007">1007</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1009">1009</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi?view=rev&revision=1010">1010</a>
 </p>
 
 <h3>Known Bugs</h3>
 <p>
   When using SDP, the client process hangs upon exit. We are investigating this
   issue. Defining EQ_WIN32_SDP_JOIN_WAR in
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/base/definesWin32.h?view=markup">definesWin32.h</a> enables a workaround.
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/lib/base/definesWin32.h?view=markup">definesWin32.h</a> enables a workaround.
 </p>
 
 <h2>Linux</h2>

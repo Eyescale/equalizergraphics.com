@@ -13,7 +13,7 @@
     <li>CPU compressors implemented in 0.9</li>
     <li>GPU transfer compressors implemented in 0.9.2</li>
   </ul>
-  <a href="/documents/Developer/API/compressor_8h.html">API Documentation</a><br>
+  <a href="/equalizergraphics.com/documents/Developer/API/compressor_8h.html">API Documentation</a><br>
 </p>
 
 <h2>Overview</h2>
@@ -79,7 +79,7 @@
 <h2>API</h2>
 <h3>Plugin API (eq/plugin/compressor.h)</h3>
 <p>
-  See <a href="/documents/Developer/API/plugins_2compressor_8h.html">API
+  See <a href="/equalizergraphics.com/documents/Developer/API/plugins_2compressor_8h.html">API
     Documentation</a>
 </p>
 

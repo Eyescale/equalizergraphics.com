@@ -10,7 +10,7 @@
 <p>
   <b>Parallel compositing</b> distributes the work of assembling the final image
   over multiple resources. It is typically used
-  with <a href="/scalability/DB.html">database decomposition</a>, where the
+  with <a href="/equalizergraphics.com/scalability/DB.html">database decomposition</a>, where the
   compositing work increases linearly with the number of resources.
 </p>
 <div class="center">

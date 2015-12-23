@@ -21,7 +21,7 @@
 <h2>Equalizer</h2>
 <p>
   Equalizer provides a distributed, scalable, multipipe,
-  multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
+  multithreaded <a href="/equalizergraphics.com/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
   <a href="http://eyescale.github.io/Equalizer-1.10/namespaceeq.html#details">programming
   interface</a>.
 </p>
@@ -40,7 +40,7 @@
   application, thus making it as easy as possible to modify existing
   applications for parallel rendering on visualization clusters.
 </p>
-<div class="float_right"><a href="/images/executionFlow.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/executionFlow.png">
     <img src="images/executionFlow-small.jpg"
          alt="Execution flow of a single-threaded and a multi-GPU application">
 </a></div>
@@ -70,24 +70,24 @@
 </ul>
 <p>
   The application subclasses these entities, and
-  overrides <a href="/documents/design/taskMethods.html">task methods</a> to
+  overrides <a href="/equalizergraphics.com/documents/design/taskMethods.html">task methods</a> to
   provide the application's rendering code. Each method corresponds to a task,
   and for all of them Equalizer provides a default method which implements the
   typical use case. This allows a quick start for the developer, which can
   replace the defaults gradually with his own
-  code. The <a href="/documents/design/taskMethods.html">full list of task
-  methods</a> is part of the <a href="/doc_developer.html">developer
+  code. The <a href="/equalizergraphics.com/documents/design/taskMethods.html">full list of task
+  methods</a> is part of the <a href="/equalizergraphics.com/doc_developer.html">developer
   documentation</a>.  Some of the most important methods are:
   <ul>
-    <li><a href="/documents/design/taskMethods.html#channeldraw">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#channeldraw">
         <b>Channel::frameDraw</b></a> - render using the provided frustum,
       viewport and range</li>
-    <li><a href="/documents/design/taskMethods.html#windowinit">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#windowinit">
         <b>Window::configInit</b></a> - initialize OpenGL drawable and
       state</li>
-    <li><a href="/documents/design/taskMethods.html#pipestartframe">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#pipestartframe">
         <b>Pipe::frameStart</b></a> - update frame-specific data</li>
-    <li><a href="/documents/design/taskMethods.html#nodeinit">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#nodeinit">
         <b>Node::configInit</b></a> - initialize per node application data</li>
   </ul>
 </p>

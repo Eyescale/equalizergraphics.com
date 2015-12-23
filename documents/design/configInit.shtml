@@ -21,7 +21,7 @@
   are executed in parallel.
 </p>
 <p>
-  Operations for <a href="/documents/design/nonthreaded.html">non-threaded
+  Operations for <a href="/equalizergraphics.com/documents/design/nonthreaded.html">non-threaded
   pipes</a> are executed in the node thread immediately and in the app thread
   during <code>Config::finishInit</code>. The children for an entity are
   initialized before the next sibling of the entity is initialized, e.g,

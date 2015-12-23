@@ -15,8 +15,8 @@
 <p>
   The tool is automatically build when using the Visual Studio 2005 solution. A
   precompiled executable can be found 
-  <a href="/downloads/affinityCheck.exe">here</a>, and the source in
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/tools/affinityCheck/affinityCheck.cpp?view=markup">tools/affinityCheck/affinityCheck.cpp</a>.
+  <a href="/equalizergraphics.com/downloads/affinityCheck.exe">here</a>, and the source in
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/tools/affinityCheck/affinityCheck.cpp?view=markup">tools/affinityCheck/affinityCheck.cpp</a>.
 </p>
 
 <h3>Example Output</h3>
@@ -30,7 +30,7 @@ GPU 1: NVIDIA Quadro FX 5600 used on [1600 0 1600 1200]
   Equalizer provides <code>netperf</code>, a command line tool to benchmark
   network throughput of all supported protocols. It is automatically compiled
   during the build process, and the source code is in
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/tools/netperf/netperf.cpp?view=markup">tools/netperf/netperf.cpp</a>.
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/tools/netperf/netperf.cpp?view=markup">tools/netperf/netperf.cpp</a>.
 </p>
 <p>
   Netperf differs from other similar tools in that it uses the Equalizer source
@@ -89,9 +89,9 @@ Send perf: 494.175MB/s (63254.4pps)
 </p>
 <p>
   Links: 
-  <a href="/documents/glAsync/namespaceglAsync.html">Documentation</a>, 
-  <a href="/documents/glAsync/CHANGELOG">Changelog</a>, 
-  <a href="/downloads/glAsync_0.12.tar.gz">Latest Version</a>.
+  <a href="/equalizergraphics.com/documents/glAsync/namespaceglAsync.html">Documentation</a>, 
+  <a href="/equalizergraphics.com/documents/glAsync/CHANGELOG">Changelog</a>, 
+  <a href="/equalizergraphics.com/downloads/glAsync_0.12.tar.gz">Latest Version</a>.
 </p>
 
 <div class="footnote">

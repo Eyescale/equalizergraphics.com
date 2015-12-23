@@ -7,21 +7,21 @@
 
 <h2>Overview</h2>
 <div class="float_right">
-  <a href="/applications/images/OmniTerra.png">
+  <a href="/equalizergraphics.com/applications/images/OmniTerra.png">
     <img src="/applications/images/OmniTerra-small.jpg" 
          alt="OmniTerra"></a>
   <div class="label"><a href="http://www.omniterra.ch">OmniTerra</a><br>An
     Equalizer-based OSG application</div>
 </div>
 <p>
-  The <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/osgScaleViewer">osgScaleViewer</a>
+  The <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/examples/osgScaleViewer">osgScaleViewer</a>
    is a scalable, cluster-ready viewer application based on OpenSceneGraph and
    Equalizer. It demonstrates how to integrate OSG and Equalizer optimally to
    exploit the power of multi-GPU systems and visualization clusters.
 </p>
 <p>
   Further details about osgScaleViewer can be found in this
-  <a href="/documents/WhitePapers/OpenSceneGraphClustering.pdf">White Paper</a>.
+  <a href="/equalizergraphics.com/documents/WhitePapers/OpenSceneGraphClustering.pdf">White Paper</a>.
 </p>
 
 #include "footer.shtml"

@@ -19,8 +19,8 @@
 </div>
 <p>
   While pixel and stereo compounds are naturally
-  load-balanced, the performance of <a href="/scalability/2D.html">2D</a>
-  and <a href="/scalability/DB.html">DB</a> compounds can often be improved by
+  load-balanced, the performance of <a href="/equalizergraphics.com/scalability/2D.html">2D</a>
+  and <a href="/equalizergraphics.com/scalability/DB.html">DB</a> compounds can often be improved by
   using load-balancing.
 </p>
 <p>
@@ -47,8 +47,8 @@
   and a static DB decomposition typically results in a better performance.
 </p>
 <p>
-  For <a href="/scalability/multiview.html">multi-view</a> setups using 2D or DB
-  compounds, a <a href="/scalability/viewEqualizer.html">view equalizer</a> will
+  For <a href="/equalizergraphics.com/scalability/multiview.html">multi-view</a> setups using 2D or DB
+  compounds, a <a href="/equalizergraphics.com/scalability/viewEqualizer.html">view equalizer</a> will
   assign resources to each segment, and each segment uses a load equalizer to
   balance the rendering within the segment.
 </p>

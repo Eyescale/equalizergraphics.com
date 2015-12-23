@@ -27,7 +27,7 @@
 </p>
 <p>
   2D decomposition works transparently for all Equalizer-based applications. It
-  is often combined with a <a href="/scalability/loadEqualizer.html">load
+  is often combined with a <a href="/equalizergraphics.com/scalability/loadEqualizer.html">load
   equalizer</a>, which adapts the tiling automatically each frame.
 </p>
 <p>
@@ -39,11 +39,11 @@
 </p>
 <p>
   2D compounds are often used with other features to increase overall
-  scalability, such as <a href="/scalability/stereo.html">stereo</a>,
-  <a href="/scalability/DB.html">DB</a>
-  or <a href="/scalability/DPlex.html">DPlex</a> compounds
-  and <a href="/scalability/loadEqualizer.html">load</a>
-  or <a href="/scalability/viewEqualizer.html">view equalizers</a>.
+  scalability, such as <a href="/equalizergraphics.com/scalability/stereo.html">stereo</a>,
+  <a href="/equalizergraphics.com/scalability/DB.html">DB</a>
+  or <a href="/equalizergraphics.com/scalability/DPlex.html">DPlex</a> compounds
+  and <a href="/equalizergraphics.com/scalability/loadEqualizer.html">load</a>
+  or <a href="/equalizergraphics.com/scalability/viewEqualizer.html">view equalizers</a>.
 </p>
 <p>
   The compositing overhead does not typically limit the performance for 2D

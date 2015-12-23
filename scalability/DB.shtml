@@ -25,7 +25,7 @@
   The task decomposition for sort-last rendering provides near-linear
   scalability. The recomposition has linear increasing IO requirements, and is
   often the factor limiting scalability. This increasing recomposition work can
-  be addressed by using <a href="/scalability/paracomp.html">parallel
+  be addressed by using <a href="/equalizergraphics.com/scalability/paracomp.html">parallel
   compositing</a>.
 </p>
 <p>
@@ -38,11 +38,11 @@
   DB compounds are often used to break down the data size to fit onto GPU
   memory, which provides super-linear scalability. For further scalability, it
   is advisable to combine it with other scalability modes, such as
-  <a href="/scalability/2D.html">2D compounds</a>.
+  <a href="/equalizergraphics.com/scalability/2D.html">2D compounds</a>.
 </p>
 <p>
   Applications visualizing irregular data should use
-  a <a href="/scalability/loadEqualizer.html">DB load equalizer</a>, which will
+  a <a href="/equalizergraphics.com/scalability/loadEqualizer.html">DB load equalizer</a>, which will
   adapt the database range each frame based on the current load.
 </p>
 

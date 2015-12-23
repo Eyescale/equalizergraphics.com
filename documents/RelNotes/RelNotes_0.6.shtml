@@ -14,41 +14,41 @@
   -->
 
 <ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.6.html#introduction">1.
+  <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#introduction">1.
       Introduction</a></li>
   <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#features">1.1.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#features">1.1.
         Features</a></li>
   </ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.6.html#new">2. New in this
+  <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#new">2. New in this
       release</a></li>
   <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#newFeatures">2.1. New
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#newFeatures">2.1. New
         Features</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#enhancements">2.2.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#enhancements">2.2.
         Enhancements</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#optimizations">2.3.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#optimizations">2.3.
         Optimizations</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#examples">2.4.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#examples">2.4.
         Examples</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#changes">2.5. API
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#changes">2.5. API
         Changes</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#documentation">2.6.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#documentation">2.6.
         Documentation</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#bugfixes">2.7. Bug
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#bugfixes">2.7. Bug
         Fixes</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#knownbugs">2.8. Known
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#knownbugs">2.8. Known
         Bugs</a></li>
   </ul>
-  <li><a href="/documents/RelNotes/RelNotes_0.6.html#about">3. About</a></li>
+  <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#about">3. About</a></li>
   <ul>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#os">3.1. Operating
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#os">3.1. Operating
         System Support</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#ws">3.2. Window
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#ws">3.2. Window
         System Support</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#documentation">3.3.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#documentation">3.3.
         Documentation</a></li>
-    <li><a href="/documents/RelNotes/RelNotes_0.6.html#support">3.4.
+    <li><a href="/equalizergraphics.com/documents/RelNotes/RelNotes_0.6.html#support">3.4.
         Support</a></li>
   </ul>
 </ul>
@@ -73,7 +73,7 @@
 <p>
   Equalizer provides the following major features to facilitate the development
   and deployment of scalable OpenGL applications. A
-  <a href="/features.html">detailed feature list</a> can be found on the
+  <a href="/equalizergraphics.com/features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
 <ul>
@@ -102,14 +102,14 @@
 <a name="newFeatures"></a>
 <h3>2.1. New Features</h3>
 <ul>
-  <li>Automatic <a href="/scalability.html#lb">2D and DB
+  <li>Automatic <a href="/equalizergraphics.com/scalability.html#lb">2D and DB
       load-balancing</a></li>
-  <li>Support for <a href="/scalability.html#DPlex">DPlex</a> (time-multiplex,
+  <li>Support for <a href="/equalizergraphics.com/scalability.html#DPlex">DPlex</a> (time-multiplex,
     SFR) compounds</li>
-  <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a> 
+  <li><a href="/equalizergraphics.com/documents/design/statisticsOverlay.html">Statistics Overlay</a> 
     to understand and eliminate bottlenecks in the rendering pipeline</li>
   <li>Easy configuration of 
-    <a href="/documents/design/threads.html#sync">thread synchronization
+    <a href="/equalizergraphics.com/documents/design/threads.html#sync">thread synchronization
       model</a></li>
   <li><a href="http://www.equalizergraphics.com/documents/design/view.html">View
       API</a> to modify the view parameters during rendering</li>
@@ -119,7 +119,7 @@
   <li>Support for OpenGL accumulation buffer and multisample setup</li>
   <li>Support for using <a href="http://paracomp.sourceforge.net/">Paracomp</a>
     as a
-    <a href="/cgi-bin/viewvc.cgi/trunk/src/README.paracomp?view=markup">compositing
+    <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/README.paracomp?view=markup">compositing
       backend</a></li>
 </ul>
 
@@ -185,10 +185,10 @@
 <a name="documentation"></a>
 <h3>2.6. Documentation</h3>
 <ul>
-  <li>The <a href="/survey.html">Programming Guide</a> has been extended to 62
+  <li>The <a href="/equalizergraphics.com/survey.html">Programming Guide</a> has been extended to 62
     pages and 37 figures.</li>
-  <li><a href="/documents/design/view.html">View API</a></li>
-  <li><a href="/documents/design/statisticsOverlay.html">Statistics
+  <li><a href="/equalizergraphics.com/documents/design/view.html">View API</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/statisticsOverlay.html">Statistics
       Overlay</a></li>
 </ul>
 
@@ -272,7 +272,7 @@
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
   system, including all Unix variants and the Windows operating system. A 
-  <a href="/compatibility.html">compatibility matrix</a> can be found on the
+  <a href="/equalizergraphics.com/compatibility.html">compatibility matrix</a> can be found on the
   Equalizer website.
 </p>
 <p>
@@ -303,15 +303,15 @@
 <p>
   The Programming Guide is available as a 
   <a href="http://www.lulu.com/browse/book_view.php?fCID=5006510">hard-copy</a>
-  and <a href="/survey.html">online</a>. <a href="http://www.equalizergraphics.com/documents/Developer/API/index.html">API documentation</a> can be
+  and <a href="/equalizergraphics.com/survey.html">online</a>. <a href="http://www.equalizergraphics.com/documents/Developer/API/index.html">API documentation</a> can be
   found on the Equalizer website. Equalizer does not yet have an Users Guide.
 </p>
 <p>
   As with any open source project, the available source code, in particular the
   shipped
-  <a href="/cgi-bin/viewvc.cgi/tags/release-0.6/examples/">examples</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.6/examples/">examples</a>
   provide a reference for developing or porting applications. The
-  <a href="/doc_developer.html">Developer Documentation</a> on the website
+  <a href="/equalizergraphics.com/doc_developer.html">Developer Documentation</a> on the website
   provides further design documents for specific features.
 </p>
 
@@ -319,7 +319,7 @@
 <h3>3.4. Support</h3>
 <p>
   Technical questions can be posted to the 
-  <a href="/cgi-bin/mailman/listinfo/eq-dev">
+  <a href="/equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">
     Developer Mailing List</a>, or directly to
   <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">
     info@equalizergraphics.com</a>.

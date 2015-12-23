@@ -28,7 +28,7 @@
 </p>
 <p>
   The compositing overhead of stereo compounds is similar
-  to <a href="/scalability/2D.html">2D compounds</a>, with the exception that
+  to <a href="/equalizergraphics.com/scalability/2D.html">2D compounds</a>, with the exception that
   twice the data might be copied due to the stereo rendering.
 </p>
 <p>

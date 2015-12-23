@@ -92,7 +92,7 @@
     subnet</li>
 </ul>
 <div class="float_right">
-      <a href="/documents/design/images/rspPackets.png">
+      <a href="/equalizergraphics.com/documents/design/images/rspPackets.png">
         <img src="/documents/design/images/rspPackets-small.jpg" 
          alt="RSP Packet Flow"></a>
   <div class="label">RSP packet control flow</div>
@@ -100,7 +100,7 @@
 <p>
   Each member of the multicast groups call <code>listen</code> on its RSP
   connection
-  (<a href="/documents/Developer/API/internal/classco_1_1RSPConnection.html">API
+  (<a href="/equalizergraphics.com/documents/Developer/API/internal/classco_1_1RSPConnection.html">API
   documentation</a>). This creates an I/O thread for this multicast
   connection. The connection discovers all other members in the multicast group
   during the initialization and creates one <code>connected</code> RSPConnection
@@ -212,7 +212,7 @@
 
 <h3>Object Mapping</h3>
 <div class="float_right">
-  <a href="/documents/design/images/objectSync.png">
+  <a href="/equalizergraphics.com/documents/design/images/objectSync.png">
     <img src="/documents/design/images/objectSync-small.jpg" 
          alt="Object Synchronization Diagram (0.9)"/></a>
   <div class="label">Object Synchronization Diagram (0.9)</div>
@@ -244,7 +244,7 @@
 
 <h4>Instance Cache</h4>
 <div class="float_right">
-  <a href="/documents/design/images/objectSyncCache.png">
+  <a href="/equalizergraphics.com/documents/design/images/objectSyncCache.png">
     <img src="/documents/design/images/objectSyncCache-small.jpg" 
          alt="Object Synchronization Diagram using Caching"/></a>
   <div class="label">Object Synchronization Diagram using Caching</div>

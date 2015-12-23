@@ -20,7 +20,7 @@
   it using one of the following options:
 </p>
 <ul>
-  <li>As a direct download, after filling out our <a href="/survey.html">online
+  <li>As a direct download, after filling out our <a href="/equalizergraphics.com/survey.html">online
       survey</a>. This survey helps us to understand where and how Equalizer is
       used, and to set priorities for the development.</li>
   <li>As a
@@ -36,32 +36,32 @@
 
 <h2>Generic Information</h2>
 <ul>
-  <li><a href="/documentation/user/configuration.html">Configuration</a>
+  <li><a href="/equalizergraphics.com/documentation/user/configuration.html">Configuration</a>
     explains automatic and static configuration.</li>
-  <li><a href="/documents/design/fileFormat.html">File Format</a> is the
+  <li><a href="/equalizergraphics.com/documents/design/fileFormat.html">File Format</a> is the
     reference documentation for the configuration files.</li>
-  <li><a href="/documents/ParallelGraphicsProgramming.html">Parallel Graphics
+  <li><a href="/equalizergraphics.com/documents/ParallelGraphicsProgramming.html">Parallel Graphics
     Programming</a> is a presentation explaining the concepts and scope of
     the Equalizer API,
-    <a href="/documents/ParallelGraphicsProgramming.pdf">pdf</a> or
-    <a href="/documents/ParallelGraphicsProgramming.html">html</a>.</li>
-  <li><a href="/documents/Howtos/glutToEqualizer.html">Equalizer for GLUT
+    <a href="/equalizergraphics.com/documents/ParallelGraphicsProgramming.pdf">pdf</a> or
+    <a href="/equalizergraphics.com/documents/ParallelGraphicsProgramming.html">html</a>.</li>
+  <li><a href="/equalizergraphics.com/documents/Howtos/glutToEqualizer.html">Equalizer for GLUT
       Developers</a> provides a mapping of commonly used GLUT functions to
       their Equalizer counterparts</li>
-  <li><a href="/documents/design/environment.html">Environment
+  <li><a href="/equalizergraphics.com/documents/design/environment.html">Environment
         Variables</a> lists the variables used by Equalizer.</li>
-  <li><a href="/documents/design/taskMethods.html">Task Methods</a> lists
+  <li><a href="/equalizergraphics.com/documents/design/taskMethods.html">Task Methods</a> lists
     all task methods ('callbacks') and explains their purpose.</li>
-  <li><a href="/documents/design/configInit.html">Config Initialization
+  <li><a href="/equalizergraphics.com/documents/design/configInit.html">Config Initialization
       Sequence</a> shows the order in which the init and exit task methods are
       executed during initialization and exit.</li>
-  <li><a href="/documents/design/objects.html">Distributed Objects</a>
+  <li><a href="/equalizergraphics.com/documents/design/objects.html">Distributed Objects</a>
     provides an overview on how to implement static and versioned objects, which
     can be instantiated on multiple nodes.</li>
-  <li><a href="/documents/design/images/codingStyle.png">codingStyle.png</a>
+  <li><a href="/equalizergraphics.com/documents/design/images/codingStyle.png">codingStyle.png</a>
     illustrates the C++ coding style used in Equalizer, to ensure a consistent
     appearance for better readability.</li>
-  <li><a href="/documents/design/threads.html">Threads</a> is a description of
+  <li><a href="/equalizergraphics.com/documents/design/threads.html">Threads</a> is a description of
     the individual threads in Equalizer and explains some thread synchronization
     concepts.</li>
 </ul>
@@ -82,7 +82,7 @@
 <p>
   The documents are listed in the version they were last updated. For the
   version they were first implemented please refer to
-  the <a href="/features.html">Feature List</a>.
+  the <a href="/equalizergraphics.com/features.html">Feature List</a>.
 </p>
 
 <h3>Github 'master' version</h3>
@@ -98,11 +98,11 @@
 
 <h3>Version 1.4</h3>
 <ul>
-  <li><a href="/documents/Developer/API/Equalizer-1.4.0/index.html">1.4
+  <li><a href="/equalizergraphics.com/documents/Developer/API/Equalizer-1.4.0/index.html">1.4
       API documentation</a></li>
-  <li><a href="/documents/design/asyncCompositing.html">Asynchronous
+  <li><a href="/equalizergraphics.com/documents/design/asyncCompositing.html">Asynchronous
       compositing</a> optimizing pixel data downloads and uploads.</li>
-  <li><a href="/documents/design/roi.html">Region of interest</a> optimization
+  <li><a href="/equalizergraphics.com/documents/design/roi.html">Region of interest</a> optimization
     for scalable rendering and load-balancing.</li>
   <li><a href="https://github.com/Eyescale/Equalizer/issues?labels=feature&milestone=8&page=1&state=closed">Feature
   list on github</a>.</li>
@@ -110,141 +110,141 @@
 
 <h3>Version 1.2</h3>
 <ul>
-  <li><a href="/documents/Developer/API/Equalizer-1.2/index.html">1.2
+  <li><a href="/equalizergraphics.com/documents/Developer/API/Equalizer-1.2/index.html">1.2
       API documentation</a></li>
-  <li><a href="/documents/design/tileCompounds.html">Tile compounds</a>
+  <li><a href="/equalizergraphics.com/documents/design/tileCompounds.html">Tile compounds</a>
     using a pull-based task distribution for volume rendering and interactive
     raytracing.</li>
 </ul>
 
 <h3>Version 1.0</h3>
 <ul>
-  <li><a href="/documents/design/errorHandling.html">Error handling</a>
+  <li><a href="/equalizergraphics.com/documents/design/errorHandling.html">Error handling</a>
       structures error reporting, mostly during initialization.</li>
-  <li><a href="/documents/design/stopFrames.html">Interruptible rendering</a>
+  <li><a href="/equalizergraphics.com/documents/design/stopFrames.html">Interruptible rendering</a>
       allows applications to stop rendering on all pending frames.</li>
-  <li><a href="/documents/design/Capabilities.html">Rendering capabilities</a>
+  <li><a href="/equalizergraphics.com/documents/design/Capabilities.html">Rendering capabilities</a>
       allow application-dependent deactivation of channels.</li>
-  <li><a href="/documents/design/admin.html">Administrative API</a>
+  <li><a href="/equalizergraphics.com/documents/design/admin.html">Administrative API</a>
       for runtime configuration changes.</li>
-  <li><a href="/documents/design/stereoSwitch.html">Runtime stereo switching</a>
+  <li><a href="/equalizergraphics.com/documents/design/stereoSwitch.html">Runtime stereo switching</a>
     allows to change the rendering between mono and stereo at runtime, with
     different scalability compounds.</li>
-  <li><a href="/documents/design/nodeFailure.html">Failure tolerance</a> during
+  <li><a href="/equalizergraphics.com/documents/design/nodeFailure.html">Failure tolerance</a> during
     initialization and runtime.</li>
-  <li><a href="/documents/design/frameLoops.html">Independent frame loops</a>
+  <li><a href="/equalizergraphics.com/documents/design/frameLoops.html">Independent frame loops</a>
     for different views.</li>
 </ul>
 
 <h3>Version 0.9.1</h3>
 <ul>
-  <li><a href="/documents/design/subpixelCompound.html">Subpixel Compound</a>
+  <li><a href="/equalizergraphics.com/documents/design/subpixelCompound.html">Subpixel Compound</a>
       for full-scene anti-aliasing (FSAA) or depth-of-field (DOF).</li>
-  <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range
+  <li><a href="/equalizergraphics.com/documents/design/loadBalancing.html#boundaries">Tile and Range
       Boundaries</a> for load-balancing.</li>
-  <li><a href="/documents/design/multicast.html">Data distribution and data
+  <li><a href="/equalizergraphics.com/documents/design/multicast.html">Data distribution and data
       updates using reliable UDP multicast</a>.</li>
-  <li><a href="/documents/design/computeExtensions.html">CUDA and OpenCL
+  <li><a href="/equalizergraphics.com/documents/design/computeExtensions.html">CUDA and OpenCL
       integration</a>.</li>
 </ul>
 
 <h3>Version 0.9</h3>
 <ul>
-  <li><a href="/documents/design/viewEqualizer.html">View Equalizer</a>
+  <li><a href="/equalizergraphics.com/documents/design/viewEqualizer.html">View Equalizer</a>
     for cross-segment load balancing.</li>
-  <li><a href="/documents/design/swapBarrier.html#gsync">Hardware
+  <li><a href="/equalizergraphics.com/documents/design/swapBarrier.html#gsync">Hardware
       swapbarrier</a> for synchronization of multipipe displays.</li>
-  <li><a href="/documents/design/compression.html">Compression Plugin API</a> is
+  <li><a href="/equalizergraphics.com/documents/design/compression.html">Compression Plugin API</a> is
     the official interface to create binary plugins for data compression.</li>
-  <li><a href="/documents/design/view.html">Layout API</a>
+  <li><a href="/equalizergraphics.com/documents/design/view.html">Layout API</a>
     provides a way to configure projection surfaces with logical layouts and
     multiple observers.</li>
-  <li><a href="/documents/design/dynamicFrameResolution.html">Dynamic Frame
+  <li><a href="/equalizergraphics.com/documents/design/dynamicFrameResolution.html">Dynamic Frame
     Resolution (DFR)</a> provides a constant framerate at the expense of visual
     quality.</li>
-  <li><a href="/documents/design/floatingPointPipeline.html">Floating-point
+  <li><a href="/equalizergraphics.com/documents/design/floatingPointPipeline.html">Floating-point
       pipeline</a> adds support for float16 and float32 visuals.</li>
 </ul>
 
 <h3>Version 0.6</h3>
 <ul>
-  <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a>
+  <li><a href="/equalizergraphics.com/documents/design/statisticsOverlay.html">Statistics Overlay</a>
     explains the statistics overlay.</li>
 </ul>
 
 <h3>Version 0.5</h3>
 <ul>
-  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> adds the
+  <li><a href="/equalizergraphics.com/documents/design/PBuffer.html">PBuffer Support</a> adds the
     capability for off-screen rendering buffers.</li>
-  <li><a href="/documents/design/glExtensions.html">OpenGL Extension
+  <li><a href="/equalizergraphics.com/documents/design/glExtensions.html">OpenGL Extension
       Handling</a> explains how GLEW is used for OpenGL extensions.</li>
-  <li><a href="/documents/design/pixelCompound.html">Pixel Compounds</a>
+  <li><a href="/equalizergraphics.com/documents/design/pixelCompound.html">Pixel Compounds</a>
     divide the screen-space column-wise to all sources, and therefore have a
     near-perfect load-balancing for fill-rate-bound applications.</li>
-  <li><a href="/documents/design/eventHandling.html">Event Handling</a>
+  <li><a href="/equalizergraphics.com/documents/design/eventHandling.html">Event Handling</a>
     explains the event handling model and implementation.</li>
 </ul>
 
 <h3>Version 0.4</h3>
 <ul>
-  <li><a href="/documents/design/volumeRendering.html">Volume Rendering</a>
+  <li><a href="/equalizergraphics.com/documents/design/volumeRendering.html">Volume Rendering</a>
     application overview.</li>
-  <li><a href="/documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
+  <li><a href="/equalizergraphics.com/documents/design/aspectRatio.html">Fixed Aspect Ratio</a>
     adds support for keeping the aspect ratio during channel resizing.</li>
-  <li><a href="/documents/design/dataTransmission.html">Data Transmission</a>
+  <li><a href="/equalizergraphics.com/documents/design/dataTransmission.html">Data Transmission</a>
     provides a simple way to send data to all render client nodes.</li>
-  <li><a href="/documents/design/transparency.html">Transparency and sort-last
+  <li><a href="/equalizergraphics.com/documents/design/transparency.html">Transparency and sort-last
       (DB) compounds</a> explores the options for better transparent geometry
     support.</li>
-  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+  <li><a href="/equalizergraphics.com/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
     allows an easier porting path for existing, non-threadsafe software.</li>
 </ul>
 
 <h3>Version 0.3</h3>
 <ul>
-  <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a>
+  <li><a href="/equalizergraphics.com/documents/design/anaglyph.html">Anaglyphic Stereo</a>
     specifies the implementation and changes for anaglyphic stereo
     rendering.</li>
-  <li><a href="/documents/design/infiniBand.html">InfiniBand</a>
+  <li><a href="/equalizergraphics.com/documents/design/infiniBand.html">InfiniBand</a>
     describes how to setup and use IB hardware with Equalizer.</li>
-  <li><a href="/documents/design/residentNodes.html">Resident Render
+  <li><a href="/equalizergraphics.com/documents/design/residentNodes.html">Resident Render
     Clients</a> describes how to implement and configure pre-started,
     resident render client nodes.</li>
-  <li><a href="/documents/design/depthTransferOpt.html">Depth Buffer Pixel
+  <li><a href="/equalizergraphics.com/documents/design/depthTransferOpt.html">Depth Buffer Pixel
       Transfer Optimization</a> using the GL_EXT_packed_depth_stencil or
     GL_NV_packed_depth_stencil extension.</li>
-  <li><a href="/documents/design/standalone.html">Standalone Application
+  <li><a href="/equalizergraphics.com/documents/design/standalone.html">Standalone Application
       Support</a> allows applications to run without a resource server.</li>
-  <li><a href="/documents/design/nodeConnect.html">Node Connection Setup</a>
+  <li><a href="/equalizergraphics.com/documents/design/nodeConnect.html">Node Connection Setup</a>
     explains the initial connection handshake between two nodes.</li>
-  <li><a href="/documents/design/objectManager.html">OpenGL Object Manager</a>
+  <li><a href="/equalizergraphics.com/documents/design/objectManager.html">OpenGL Object Manager</a>
     allows the allocation and sharing of OpenGL objects, e.g., textures, in
     multipipe applications.</li>
 </ul>
 
 <h3>Version 0.2</h3>
 <ul>
-  <li><a href="/documents/design/compounds.html">Compounds</a> is the
+  <li><a href="/equalizergraphics.com/documents/design/compounds.html">Compounds</a> is the
     initial design documentation on the API and config file interface for the
     configuration of scalable rendering.</li>
-  <li><a href="/documents/design/frames.html">Compound frames</a> details the
+  <li><a href="/equalizergraphics.com/documents/design/frames.html">Compound frames</a> details the
     inputframe and outputframe logics .</li>
-  <li><a href="/documents/design/immersive.html">Stereo and Head
+  <li><a href="/equalizergraphics.com/documents/design/immersive.html">Stereo and Head
       Tracking</a> gives an overview how stereo rendering, head tracking
     and eye compounds are implemented.</li>
-  <li><a href="/documents/design/dynamicNearFar.html">Dynamic Near and
+  <li><a href="/equalizergraphics.com/documents/design/dynamicNearFar.html">Dynamic Near and
         Far Plane Support</a> explains the API for adjusting the near and
     far plane from the channel's rendering methods.</li>
-  <li><a href="/documents/design/imageCompression.html">Image
+  <li><a href="/equalizergraphics.com/documents/design/imageCompression.html">Image
         Compression</a> is used to compress output frames for network
     transfers.</li>
-  <li><a href="/documents/design/statistics.html">Statistics Interface</a>
+  <li><a href="/equalizergraphics.com/documents/design/statistics.html">Statistics Interface</a>
     is the initial design documentation on the API and config file interface for
     statistics gathering.</li>
 </ul>
 <h3>Version 0.1</h3>
 <ul>
-  <li><a href="/documents/design/packets.html">Packet Handling</a>
+  <li><a href="/equalizergraphics.com/documents/design/packets.html">Packet Handling</a>
     explains the basic concept and mechanism of the Equalizer networking
     layer.</li>
 </ul>

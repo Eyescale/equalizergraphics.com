@@ -28,7 +28,7 @@ State:
 <p>
   The API will be created as needed. Possible object types are: display lists,
   textures, GLSL shaders, VBO's, etc. See the 
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/util/objectManager.h?view=markup">header file</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/lib/util/objectManager.h?view=markup">header file</a>
  (src/lib/util/objectManager.h) for the currently implemented types.
 </p>
 

@@ -13,19 +13,19 @@ State: Implemented
 
 <p>
   The configuration file format for the Equalizer server is described below. The
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/examples/configs/">examples
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/examples/configs/">examples
   directory</a> does contain some example configuration
-  files. The <a href="/documentation/user/configTool.html">configuration
+  files. The <a href="/equalizergraphics.com/documentation/user/configTool.html">configuration
   tool</a> automatically creates some standard configuration files.
 </p>
 <p>
   The file format is not described in detail here. Please refer to
-  the <a href="/survey.html">Programming Guide</a> in general, and to
-  the <a href="/documents/design/fileFormat.html#changes">changes</a> section
+  the <a href="/equalizergraphics.com/survey.html">Programming Guide</a> in general, and to
+  the <a href="/equalizergraphics.com/documents/design/fileFormat.html#changes">changes</a> section
   below for individual feature specifications. The actual implementation may
   differ slightly from this specification, but we try to keep it up to date. The
   loader implementation is the reference for the file format, look at
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/server/loader.y?view=markup">src/server/loader.y</a>,
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/server/loader.y?view=markup">src/server/loader.y</a>,
   if you understand lex/yacc code.
 </p>
 <p>
@@ -463,7 +463,7 @@ global
             }
     </pre><!-- */ -->
   </li>
-  <li>Per-segment <a href="/documents/design/swapBarrier.html">swap barriers</a>
+  <li>Per-segment <a href="/equalizergraphics.com/documents/design/swapBarrier.html">swap barriers</a>
     added:
     <!-- /* --><pre>
       canvas
@@ -482,7 +482,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/immersive.html">Focus distance</a> support
+  <li><a href="/equalizergraphics.com/documents/design/immersive.html">Focus distance</a> support
     added:
     <!-- /* --><pre>
     config // 1-n times, currently only the first one is used by the server
@@ -505,7 +505,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/stereoSwitch.html">Runtime Stereo Switch added:</a>
+  <li><a href="/equalizergraphics.com/documents/design/stereoSwitch.html">Runtime Stereo Switch added:</a>
     <!-- /* --><pre>
       #Equalizer 1.1 ascii
       view
@@ -549,7 +549,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/multicast.html">Multicast data transfer:</a>
+  <li><a href="/equalizergraphics.com/documents/design/multicast.html">Multicast data transfer:</a>
     <!-- /* --><pre>
       connection
       {
@@ -558,7 +558,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/subpixelCompound.html">Subpixel compounds:</a>
+  <li><a href="/equalizergraphics.com/documents/design/subpixelCompound.html">Subpixel compounds:</a>
     <!-- /* --><pre>
       compound
       {
@@ -566,7 +566,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
+  <li><a href="/equalizergraphics.com/documents/design/loadBalancing.html#boundaries">Tile and Range Boundaries:</a>
     <!-- /* --><pre>
       compound
       {
@@ -630,7 +630,7 @@ global
           monitor_equalizer {}   # set frame zoom when monitoring other views
       }
     </pre><!-- */ -->
-  <li><a href="/documents/design/viewEqualizer.html">Cross-Segment Load Balancing</a>
+  <li><a href="/equalizergraphics.com/documents/design/viewEqualizer.html">Cross-Segment Load Balancing</a>
     added:
     <!-- /* --><pre>
     compound
@@ -639,7 +639,7 @@ global
     }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/view.html">Support for multiple observers</a>
+  <li><a href="/equalizergraphics.com/documents/design/view.html">Support for multiple observers</a>
     added:
     <!-- /* --><pre>
     observer # 0...n times
@@ -655,7 +655,7 @@ global
     }
     </pre><!-- */ -->
     </li>
-  <li><a href="/documents/design/floatingPointPipeline.html">Floating
+  <li><a href="/equalizergraphics.com/documents/design/floatingPointPipeline.html">Floating
     point pipeline support</a> added:
     <!-- /* --><pre>
       global
@@ -672,7 +672,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-    <li><a href="/documents/design/immersive.html#HMD">HMD support</a> added:
+    <li><a href="/equalizergraphics.com/documents/design/immersive.html#HMD">HMD support</a> added:
     <!-- /* --><pre>
     wall
     {
@@ -681,7 +681,7 @@ global
     }
     </pre><!-- */ -->
     </li>
-    <li><a href="/documents/design/view.html">Layout API</a> added:
+    <li><a href="/equalizergraphics.com/documents/design/view.html">Layout API</a> added:
     <!-- /* --><pre>
        layout  # 1...n times
        {
@@ -758,7 +758,7 @@ global
 
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/swapBarrier.html">NV_swap_group (G-Sync)
+  <li><a href="/equalizergraphics.com/documents/design/swapBarrier.html">NV_swap_group (G-Sync)
       support</a> added:
     <!-- /* --><pre>
       swapbarrier
@@ -852,7 +852,7 @@ global
     </pre><!-- */ -->
   </li>
   <li>Added during implementation of
-    the <a href="/documents/design/statisticsOverlay.html">Statistics
+    the <a href="/equalizergraphics.com/documents/design/statisticsOverlay.html">Statistics
       Overlay</a>:
     <!-- /* --><pre>
       global
@@ -868,7 +868,7 @@ global
       }
     </pre><!-- */ -->
   </li>
-  <li><a href="/documents/design/PBuffer.html">PBuffer Support</a> added:
+  <li><a href="/equalizergraphics.com/documents/design/PBuffer.html">PBuffer Support</a> added:
     <!-- /* --><pre>
       global
       {
@@ -907,7 +907,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/pixelCompound.html">Pixel Decompositions</a>
+  <li><a href="/equalizergraphics.com/documents/design/pixelCompound.html">Pixel Decompositions</a>
     added:
     <!-- /* --><pre>
       compound
@@ -917,7 +917,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
+  <li><a href="/equalizergraphics.com/documents/design/nonthreaded.html">Nonthreaded Rendering</a>
     added:
     <!-- /* --><pre>
       global
@@ -935,7 +935,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
+  <li><a href="/equalizergraphics.com/documents/design/anaglyph.html">Anaglyphic Stereo</a> added:
     <!-- /* --><pre>
       global
       {
@@ -956,7 +956,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/immersive.html">Stereo and Head Tracking</a>
+  <li><a href="/equalizergraphics.com/documents/design/immersive.html">Stereo and Head Tracking</a>
     added:
     <!-- /* --><pre>
       global
@@ -985,7 +985,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/statistics.html">Statistics Interface</a>
+  <li><a href="/equalizergraphics.com/documents/design/statistics.html">Statistics Interface</a>
     added:
     <!-- /* --><pre>
       global
@@ -1002,7 +1002,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/compounds.html">Compounds</a> added:
+  <li><a href="/equalizergraphics.com/documents/design/compounds.html">Compounds</a> added:
     <!-- /* --><pre>
       global
       {
@@ -1015,7 +1015,7 @@ global
     </pre><!-- */ -->
   </li>
 
-  <li><a href="/documents/design/subpixelCompound.html">Subpixel Decompositions</a>
+  <li><a href="/equalizergraphics.com/documents/design/subpixelCompound.html">Subpixel Decompositions</a>
     added:
     <!-- /* --><pre>
       compound

@@ -12,7 +12,7 @@
 </p>
 
 <div class="float_right">
-  <a href="/documents/design/images/nodeConnect.png">
+  <a href="/equalizergraphics.com/documents/design/images/nodeConnect.png">
     <img src="/documents/design/images/nodeConnect-small.jpg" 
          alt="Node connection setup"/></a>
   <div class="label">Node connection setup</div>
@@ -20,7 +20,7 @@
 <p>
   The initial node connection handshake, as described below, is fully
   implemented by the
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/net/node.cpp?view=markup">co::Node</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/lib/net/node.cpp?view=markup">co::Node</a>
   class.
 </p>
 <p>

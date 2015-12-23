@@ -19,7 +19,7 @@
 <p>
   Applications can also be modified to support any multi-sampling algorithm with
   an arbitrary number of samples. One use case is implemented in the
-  <a href="/applications/eqPly.html">eqPly</a> example, which performs idle
+  <a href="/equalizergraphics.com/applications/eqPly.html">eqPly</a> example, which performs idle
   software anti-aliasing, regardless of the configured compounds. When used with
   a subpixel compound, the idle AA algorithm converges much faster to the final
   result.

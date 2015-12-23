@@ -4,7 +4,7 @@
 
 #include "header.shtml"
 
-<p><center><a href="/downloads/Equalizer.bib">BibTex file</a></center></p>
+<p><center><a href="/equalizergraphics.com/downloads/Equalizer.bib">BibTex file</a></center></p>
 
 <h2>Core Team</h2>
 <ul>
@@ -20,8 +20,8 @@
     Pajarola, Juan Hernando, Ahmet Bilgili, Marwan Abdellah, Felix Schurmann,
     Maxim Makhinya. In Proceedings Eurographics Symposium on Parallel Graphics
     and Visualization 2012. (Presentation:
-    <a href="/documents/EGPGV12/index.html">html</a>
-    <a href="/documents/EGPGV12.pdf">pdf</a>)</li>
+    <a href="/equalizergraphics.com/documents/EGPGV12/index.html">html</a>
+    <a href="/equalizergraphics.com/documents/EGPGV12.pdf">pdf</a>)</li>
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/cslb/CSLB.pdf">Cross-Segment
       Load Balancing in Parallel Rendering</a>. Fatih Erol, Stefan Eilemann,
     Renato Pajarola. In Proceedings Eurographics Symposium on Parallel
@@ -29,27 +29,27 @@
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/fast-compositing/FastCompositing.pdf">Fast compositing for cluster-parallel rendering</a>. Maxim Makhinya, Stefan
     Eilemann, and Renato Pajarola. In Proceedings Eurographics Symposium on
     Parallel Graphics and Visualization, pp. 111-120, May 2010. (Presentation:
-    <a href="/documents/EGPGV10_compositing.html">html</a>
-    <a href="/documents/EGPGV10_compositing.pdf">pdf</a>)</li>
+    <a href="/equalizergraphics.com/documents/EGPGV10_compositing.html">html</a>
+    <a href="/equalizergraphics.com/documents/EGPGV10_compositing.pdf">pdf</a>)</li>
   <li><a href="http://www.ifi.uzh.ch/vmml/publications/parallel-raster/ParallelRASTeR.pdf">Scalable parallel out-of-core terrain rendering</a>. Prashant Goswami, Maxim
     Makhinya, Jonas Bosch, and Renato Pajarola. In Proceedings Eurographics
     Symposium on Parallel Graphics and Visualization, pp. 63-71, May 2010.
-    (Presentation: <a href="/documents/EGPGV10_raster.html">html</a>
-    <a href="/documents/EGPGV10_raster.pdf">pdf</a>)</li>
+    (Presentation: <a href="/equalizergraphics.com/documents/EGPGV10_raster.html">html</a>
+    <a href="/equalizergraphics.com/documents/EGPGV10_raster.pdf">pdf</a>)</li>
   <li><a href="http://doi.ieeecomputersociety.org/10.1109/TVCG.2008.104">Equalizer:
       A Scalable Parallel Rendering Framework</a>, IEEE Transactions on
     Visualization and Computer Graphics, vol. 15, no. 3, pp. 436-452, May/June
     2009.</li>
-  <li><a href="/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
+  <li><a href="/equalizergraphics.com/documents/EqualizerTR.pdf">The Equalizer Parallel Rendering
       Framework</a>, technical report 2007/06.</li>
-  <li><a href="/documents/directSend.pdf">Direct Send Compositing for
+  <li><a href="/equalizergraphics.com/documents/directSend.pdf">Direct Send Compositing for
       Parallel Sort-Last Rendering</a>,
     <a href="http://web.cscs.ch/EGPGV07/">Eurographics Symposium on Parallel
       Graphics and Visualization 2007</a>.</li>
-  <li><a href="/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
+  <li><a href="/equalizergraphics.com/documents/Developer/eqPly.pdf">Entwicklung eines parallelen
       OpenGL Polygon-Renderers</a>, semester thesis about the eqPly example
       implemented for
-      v0.4, <a href="/documents/Developer/eqPlyPresentation.pdf">Slides in
+      v0.4, <a href="/equalizergraphics.com/documents/Developer/eqPlyPresentation.pdf">Slides in
       English</a>, 2007/09.</li>
 </ul>
 

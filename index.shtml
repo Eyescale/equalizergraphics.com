@@ -7,7 +7,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg"
+  <a href="/equalizergraphics.com/images/release-0.9.png"><img src="/images/release-0.9-small.jpg"
                                          alt="Cross-Segment Load-Balancing"></a>
   <div class="label">Cross-Segment Load-Balancing</div>
 </div>
@@ -26,12 +26,12 @@
   hundreds of nodes.
 </p>
 <p>
-  <a href="/api.html">Sequel</a> is an easily accessible interface to the
+  <a href="/equalizergraphics.com/api.html">Sequel</a> is an easily accessible interface to the
   Equalizer parallel rendering framework, and allows rapid development of
   clustered multi-GPU applications.
 </p>
 <p>
-  <a href="/gpu-sd">GPU-SD</a> is a daemon and library for the discovery and
+  <a href="/equalizergraphics.com/gpu-sd">GPU-SD</a> is a daemon and library for the discovery and
   announcement of graphics processing units using ZeroConf. It is used for
   auto-configuration of Equalizer applications.
 </p>
@@ -66,21 +66,21 @@
 
 <h2>Features</h2>
 <p>
-  Applications written using the <a href="/api.html">Equalizer framework</a>
+  Applications written using the <a href="/equalizergraphics.com/api.html">Equalizer framework</a>
   benefit from the following features:
 </p>
 <ul>
-  <li><a href="/configuration.html">Flexibility</a>: An Equalizer application is
+  <li><a href="/equalizergraphics.com/configuration.html">Flexibility</a>: An Equalizer application is
     configured at run-time, allowing the same executable to run optimally on any
     configuration -- from laptops to large scale visualization clusters, driving
     a single window or a six-sided CAVE while using one or multiple graphics
     cards to render each view.</li>
-  <li><a href="/scalability.html">Large Data Visualization</a>: An Equalizer
+  <li><a href="/equalizergraphics.com/scalability.html">Large Data Visualization</a>: An Equalizer
     application can aggregate the power of multiple processors, graphics cards
     and computers to scale the rendering performance, visual quality and display
     size. This allows virtually any data set to be rendered at any resolution at
     interactive framerates, given sufficient hardware resources.</li>
-  <li><a href="/documents/design/immersive.html">Virtual Reality:</a> Equalizer
+  <li><a href="/equalizergraphics.com/documents/design/immersive.html">Virtual Reality:</a> Equalizer
     applications can run seamlessly in Virtual Reality installations using
     active and passive stereo rendering, as well as head tracking for one or
     multiple observers.</li>

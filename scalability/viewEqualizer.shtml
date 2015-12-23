@@ -44,7 +44,7 @@
   Cross-segment load-balancing is configured hierarchically. On the top compound
   level, a view equalizer assigns resources to each of its children, so that the
   optimal number of resources is used for each segment. On the next level,
-  a <a href="/scalability/loadEqualizer.html">load equalizer</a> on each child
+  a <a href="/equalizergraphics.com/scalability/loadEqualizer.html">load equalizer</a> on each child
   computes the resource distribution within the segment, taking the resource
   usage given by the view equalizer into account.
 </p>

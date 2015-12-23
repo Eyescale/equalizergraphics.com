@@ -13,19 +13,19 @@
 
 <p>Table of Contents</p>
 <ul>
-  <li><a href="/documents/design/frames.html#Background">Background</a></li>
-  <li><a href="/documents/design/frames.html#Overview">Overview</a></li>
-  <li><a href="/documents/design/frames.html#Requirements">Requirements</a></li>
-  <li><a href="/documents/design/frames.html#Implementation">Implementation</a></li>
-  <li><a href="/documents/design/frames.html#Issues">Open Issues</a></li>
-  <li><a href="/documents/design/frames.html#Restrictions">Restrictions</a></li>
-  <li><a href="/documents/design/frames.html#FileFormat">File Format</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#Background">Background</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#Overview">Overview</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#Requirements">Requirements</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#Implementation">Implementation</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#Issues">Open Issues</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#Restrictions">Restrictions</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/frames.html#FileFormat">File Format</a></li>
 </ul>
 
 <a name="Background"></a>
 <h2>Background</h2>
 <p>
-  Frames are used by <a href="/documents/design/compounds.html">compounds</a>
+  Frames are used by <a href="/equalizergraphics.com/documents/design/compounds.html">compounds</a>
   during the recomposition phase. This document discusses the implementation
   details of this part of the compound spec.
 </p>
@@ -249,7 +249,7 @@
 <a name="FileFormat"></a>
 <h2>File Format</h2>
  <p>
-   See <a href="/documents/design/compounds.html#FileFormat">compound file
+   See <a href="/equalizergraphics.com/documents/design/compounds.html#FileFormat">compound file
      format spec</a>.
  </p>
        

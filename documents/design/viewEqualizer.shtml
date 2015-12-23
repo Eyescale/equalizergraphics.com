@@ -30,13 +30,13 @@
 <p>
   For each frame, the view equalizer sets the usage of each leaf compound to
   activate or deactivate it for
-  rendering. The <a href="/documents/design/loadBalancing.html">load
+  rendering. The <a href="/equalizergraphics.com/documents/design/loadBalancing.html">load
   equalizer</a> assigns work to each leaf compound according to its allowed
   usage.
 </p>
 
 <div class="float_right">
-  <a href="/documents/design/images/viewEqualizer.png">
+  <a href="/equalizergraphics.com/documents/design/images/viewEqualizer.png">
     <img src="/documents/design/images/viewEqualizer-small.jpg" 
          alt="Cross-segment load balancing"/></a>
   <div class="label">Cross-segment load balancing</div>

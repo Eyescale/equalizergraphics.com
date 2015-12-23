@@ -15,7 +15,7 @@
 <h2>RTT Scale</h2>
 
 <div class="float_right">
-  <a href="/applications/images/RTTScale.png">
+  <a href="/equalizergraphics.com/applications/images/RTTScale.png">
     <img src="/applications/images/RTTScale-small.jpg"
          alt="RTT Scale"></a>
   <div class="label">RTT Scale</div>
@@ -37,7 +37,7 @@
 <h2>Bino: a 3D video player with multi-display support</h2>
 
 <div class="float_right">
-  <a href="/applications/images/bino.jpg">
+  <a href="/equalizergraphics.com/applications/images/bino.jpg">
     <img src="/applications/images/bino-small.jpg"
          alt="Bino video player"></a>
   <div class="label">Bino video player<br><br>Film (c) copyright 2008<br>Blender
@@ -65,7 +65,7 @@
 <a name="omegalib"></a>
 <h2>Omegalib</h2>
 <div class="float_right">
-  <a href="/applications/images/omegalib.jpg">
+  <a href="/equalizergraphics.com/applications/images/omegalib.jpg">
     <img src="/applications/images/omegalib-small.jpg"
          alt=""></a>
   <div class="label">An omegalib application rendering a<br>structural
@@ -95,13 +95,13 @@
 <h2>Computer Graphics and Multimedia Systems, University of Siegen</h2>
 
 <p><center>
-    <a href="/applications/UniSiegen.html">VR Lab Image Gallery</a>
+    <a href="/equalizergraphics.com/applications/UniSiegen.html">VR Lab Image Gallery</a>
 </center></p>
 
 <h3>Hase3d: Hardware accelerated flow visualization</h3>
 
 <div class="float_right">
-  <a href="/applications/images/gpu_flow_001.png">
+  <a href="/equalizergraphics.com/applications/images/gpu_flow_001.png">
     <img src="/applications/images/gpu_flow_001-small.jpg"
          alt="GPU-based Dynamic Flow Visualization"></a>
   <div class="label">GPU-based Flow Visualization</div>
@@ -114,7 +114,7 @@
   reality cave at the University of Siegen.
 </p>
 <div class="float_left">
-  <a href="/applications/images/clay_bunny.png">
+  <a href="/equalizergraphics.com/applications/images/clay_bunny.png">
     <img src="/applications/images/clay_bunny-small.jpg"
          alt="Surface Evolution"></a>
   <div class="label">Surface Evolution</div>
@@ -156,7 +156,7 @@
 <a name="eqSmart"></a>
 <h2>eqSmart: Terrain rendering</h2>
 <div class="float_right">
-  <a href="/screenshots/wall.png">
+  <a href="/equalizergraphics.com/screenshots/wall.png">
     <img src="/screenshots/wall-small.jpg"
          alt="eqSmart"></a>
   <div class="label">eqSmart</div>
@@ -174,16 +174,16 @@
 <a name="eqOgre"></a>
 <h2>eqOgre and eqOgreBullet: Ogre/Equalizer/Bullet integration</h2>
 <div class="float_right">
-  <a href="/applications/images/eqOgre.png">
+  <a href="/equalizergraphics.com/applications/images/eqOgre.png">
     <img src="/applications/images/eqOgre-small.jpg"
          alt="eqOgre"></a>
   <div class="label">eqOgre</div>
 </div>
 <div class="float_right">
-  <a href="/applications/images/vrCrazyMachines.png">
+  <a href="/equalizergraphics.com/applications/images/vrCrazyMachines.png">
     <img src="/applications/images/vrCrazyMachines-small.jpg"
          alt="vrCrazyMachines"></a>
-  <a href="/applications/images/eqOgreBullet.png">
+  <a href="/equalizergraphics.com/applications/images/eqOgreBullet.png">
     <img src="/applications/images/eqOgreBullet-small.jpg"
          alt="eqOgreBullet"></a>
   <div class="label">eqOgreBullet used to build a game at the virtual reality cave at the University of Siegen. </div>

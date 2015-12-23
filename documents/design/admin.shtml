@@ -46,7 +46,7 @@
   copy and <code>commit</code> the modification. The server will apply the
   change and activate when possible, i.e., before the beginning of a new frame
   for a running config. A sample update sequence can be
-  found <a href="/documents/design/images/adminUpdate.png">here</a>. The
+  found <a href="/equalizergraphics.com/documents/design/images/adminUpdate.png">here</a>. The
   modification of data on a mapped object is detailed
   in <a href="#slaveWrite">Slave Object Commit</a>.
 </p>
@@ -58,7 +58,7 @@
   to communicate the few allowed modifications.
 </p>
 <div class="float_right">
-  <a href="/documents/design/images/admin.png">
+  <a href="/equalizergraphics.com/documents/design/images/admin.png">
     <img src="/documents/design/images/admin-small.jpg" 
          alt="New eq::admin namespace layering"/></a>
   <div class="label">New eq::admin namespace layering</div>
@@ -88,7 +88,7 @@
 <a name="slaveWrite"></a>
 <h3>Slave Object Commit</h3>
 <div class="float_right">
-  <a href="/documents/design/images/slaveWrites.png">
+  <a href="/equalizergraphics.com/documents/design/images/slaveWrites.png">
     <img src="/documents/design/images/slaveWrites-small.jpg" 
          alt="Modifying an co::Object from a slave instance"/></a>
   <div class="label">Modifying an co::Object from a slave instance</div>

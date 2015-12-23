@@ -7,7 +7,7 @@
 <p>
   The following is a list of the major contributing institutions. Contributing
   individuals are mentioned in
-  the <a href="/cgi-bin/viewvc.cgi/trunk/src/AUTHORS?view=markup">AUTHORS</a>
+  the <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/AUTHORS?view=markup">AUTHORS</a>
   file distributed with Equalizer.
 </p>
 
@@ -72,7 +72,7 @@
     <li><a href="http://bzflag.org/">BZFlag</a> Wouldn't it be fun to play
       BZFlag in an immersive environment?</li>
   </ul>
-  <li><b>New Features:</b> Head over to the <a href="/features.html">Feature
+  <li><b>New Features:</b> Head over to the <a href="/equalizergraphics.com/features.html">Feature
       List</a> or suggest your own feature which is missing from Equalizer. We
     are happy to give you guidance on the design and implementation, if
     needed.</li>

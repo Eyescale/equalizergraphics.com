@@ -13,25 +13,25 @@
 
 <h2>Table of Contents</h2>
 <ul>
-  <li><a href="/documents/design/compounds.html#Background">Background</a></li>
-  <li><a href="/documents/design/compounds.html#Glossary">Glossary</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/compounds.html#Background">Background</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/compounds.html#Glossary">Glossary</a></li>
   <li>
-    <a href="/documents/design/compounds.html#Requirements">Requirements</a>
+    <a href="/equalizergraphics.com/documents/design/compounds.html#Requirements">Requirements</a>
   </li>
   <li>
-    <a href="/documents/design/compounds.html#Specification">Specification</a>
+    <a href="/equalizergraphics.com/documents/design/compounds.html#Specification">Specification</a>
   </li>
   <ul>
-    <li><a href="/documents/design/compounds.html#Attributes">Attributes</a></li>
-    <li><a href="/documents/design/compounds.html#IO">Input and Output</a></li>
-    <li><a href="/documents/design/compounds.html#Images">Images</a></li>
-    <li><a href="/documents/design/compounds.html#Stereo">Stereo</a></li>
+    <li><a href="/equalizergraphics.com/documents/design/compounds.html#Attributes">Attributes</a></li>
+    <li><a href="/equalizergraphics.com/documents/design/compounds.html#IO">Input and Output</a></li>
+    <li><a href="/equalizergraphics.com/documents/design/compounds.html#Images">Images</a></li>
+    <li><a href="/equalizergraphics.com/documents/design/compounds.html#Stereo">Stereo</a></li>
   </ul>
   <li>
-    <a href="/documents/design/compounds.html#Restrictions">Restrictions</a>
+    <a href="/equalizergraphics.com/documents/design/compounds.html#Restrictions">Restrictions</a>
   </li>
-  <li><a href="/documents/design/compounds.html#FileFormat">File Format</a></li>
-  <li><a href="/documents/design/compounds.html#Examples">Config File 
+  <li><a href="/equalizergraphics.com/documents/design/compounds.html#FileFormat">File Format</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/compounds.html#Examples">Config File 
       Examples</a></li>
 </ul>
 
@@ -261,7 +261,7 @@
 <a name="Images"></a>
 <h3>Images</h3>
 <p>
-  Outsourced to a separate <a href="/documents/design/frames.html">frames
+  Outsourced to a separate <a href="/equalizergraphics.com/documents/design/frames.html">frames
   specification</a> document.
 </p>
 

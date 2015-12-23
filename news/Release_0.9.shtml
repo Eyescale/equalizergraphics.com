@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.9.png"><img src="/images/release-0.9-small.jpg" 
+  <a href="/equalizergraphics.com/images/release-0.9.png"><img src="/images/release-0.9-small.jpg" 
                                      alt="Cross-Segment Load-Balancing"></a>
   <div class="label">Cross-Segment Load-Balancing</div>
 </div>

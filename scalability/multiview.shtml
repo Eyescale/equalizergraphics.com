@@ -33,7 +33,7 @@
 <p>
   Equalizer applications parallelize the rendering, each GPU has its own local
   rendering thread. This parallel execution and per-segment view frustum culling
-  results in much <a href="/documents/WhitePapers/Chromium_Equalizer.pdf">better
+  results in much <a href="/equalizergraphics.com/documents/WhitePapers/Chromium_Equalizer.pdf">better
   performance</a> and compatibility compared to transparent approaches.
 </p>
 <p>

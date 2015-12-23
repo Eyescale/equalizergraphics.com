@@ -30,7 +30,7 @@
   all events from the main thread.
 </p>
 <div class="float_right">
-  <a href="/documents/design/images/eventFilter.png">
+  <a href="/equalizergraphics.com/documents/design/images/eventFilter.png">
     <img src="/documents/design/images/eventFilter-small.jpg" 
          alt="Event Handling Data Flow"/></a>
   <div class="label">Event Handling Data Flow</div>
@@ -53,9 +53,9 @@
 </p>
 <p>
   The event dispatch is implemented by subclassing
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/libs/co/commandQueue.cpp?view=markup">co::CommandQueue</a> 
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/libs/co/commandQueue.cpp?view=markup">co::CommandQueue</a> 
   into a 
-  <a href="/cgi-bin/viewvc.cgi/trunk/src/lib/eq/commandQueue.cpp?view=markup">eq::CommandQueue</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/lib/eq/commandQueue.cpp?view=markup">eq::CommandQueue</a>
   which 'pumps' events on every pop operation. The CommandQueue is used between
   the receiver and the rendering threads to dispatch the received
   commands. Consequently, events are only processed in between task

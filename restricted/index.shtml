@@ -8,17 +8,17 @@
   permission.
 </p>
 <ul>
-  <li>Patch: <a href="/restricted/ibsdp.dll">SDP dll for concurrent TCP and SDP
+  <li>Patch: <a href="/equalizergraphics.com/restricted/ibsdp.dll">SDP dll for concurrent TCP and SDP
       sockets</a>. Win32, to be used with Mellanox WinIB 1.3.0. To use this
       feature, install the 1.3.0 WinIB distribution and place the dll
       into <code>windows\system32</code>. The 
-    <a href="/documents/design/infiniBand.html#explicit">InfiniBand
+    <a href="/equalizergraphics.com/documents/design/infiniBand.html#explicit">InfiniBand
       documentation</a> describes the Equalizer setup.</li>
 </ul>
 <ul>
-  <li>Paper: <a href="/restricted/directSend.pdf">Direct Send Compositing for
+  <li>Paper: <a href="/equalizergraphics.com/restricted/directSend.pdf">Direct Send Compositing for
       Parallel Sort-Last Rendering</a> -- Accepted for EGPGV07</li>
-  <li>Paper: <a href="/restricted/systemsPaper.pdf">Equalizer: A Scalable
+  <li>Paper: <a href="/equalizergraphics.com/restricted/systemsPaper.pdf">Equalizer: A Scalable
       Parallel Rendering Framework</a> -- submitted to IEEE Visualization
     2007</li>
 </ul>

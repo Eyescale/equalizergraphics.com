@@ -11,33 +11,33 @@
   application developers:
 </p>
 <ul>
-  <li><a href="/applications/eqHello.html">eqHello - Hello, World!</a></li>
-  <li><a href="/applications/eqPly.html">eqPly - Polygonal Renderer</a></li>
-  <li><a href="/applications/eVolve.html">eVolve - Volume Renderer</a></li>
-  <li><a href="/applications/osgScaleViewer.html">osgScaleViewer - Scalable
+  <li><a href="/equalizergraphics.com/applications/eqHello.html">eqHello - Hello, World!</a></li>
+  <li><a href="/equalizergraphics.com/applications/eqPly.html">eqPly - Polygonal Renderer</a></li>
+  <li><a href="/equalizergraphics.com/applications/eVolve.html">eVolve - Volume Renderer</a></li>
+  <li><a href="/equalizergraphics.com/applications/osgScaleViewer.html">osgScaleViewer - Scalable
       OpenSceneGraph Viewer</a></li>
 </ul>
 
 <h2>Third Party Applications</h2>
 <p>
-  Various <a href="/applications/thirdParty.html">other commercial and open
+  Various <a href="/equalizergraphics.com/applications/thirdParty.html">other commercial and open
   source applications</a> use Equalizer as the foundation for parallel
   rendering:
 </p>
 <ul>
-  <li><a href="/applications/thirdParty.html#rttscale">RTT Scale -
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#rttscale">RTT Scale -
       Highly Realistic Rendering</a></li>
-  <li><a href="/applications/thirdParty.html#hase3d">Hase3D - Flow
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#hase3d">Hase3D - Flow
       Visualization</a></li>
   <li><a href="http://purplekarrot.net/doc/libMaoni/">LibMaoni</a>, a 3D
     rendering framework for graphics and visualization projects.</li>
-  <li><a href="/applications/thirdParty.html#compcore">CompCore visualization
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#compcore">CompCore visualization
       lab</a> at CSU East Bay</li>
   <li><a href="http://www.tinysg.de/index.html">Tiny Scene Graph</a></li>
   <li><a href="http://vizstack.sourceforge.net/">VizStack</a></li>
-  <li><a href="/applications/thirdParty.html#eqSmart">eqSmart - Terrain
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#eqSmart">eqSmart - Terrain
       Rendering</a></li>
-  <li><a href="/applications/thirdParty.html#eqOgre">eqOgre - Ogre3D
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#eqOgre">eqOgre - Ogre3D
       Integration</a></li>
 </ul>
 <p>

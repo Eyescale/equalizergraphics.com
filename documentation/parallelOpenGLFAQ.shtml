@@ -15,17 +15,17 @@
 
 <h2>Table of Contents</h2>
 <p>
-  <a href="/documentation/parallelOpenGLFAQ.html#one">Using one Context from
+  <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#one">Using one Context from
     multiple Threads</a><br>
-  <a href="/documentation/parallelOpenGLFAQ.html#multicore">Using Multiple Cores
+  <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#multicore">Using Multiple Cores
     with OpenGL</a><br>
-  <a href="/documentation/parallelOpenGLFAQ.html#multicontext">Using Multiple
+  <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#multicontext">Using Multiple
     OpenGL contexts with one Graphics Card</a><br>
-  <a href="/documentation/parallelOpenGLFAQ.html#multigpu">Using Multiple
+  <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#multigpu">Using Multiple
     Graphics Cards with OpenGL</a><br>
-  <a href="/documentation/parallelOpenGLFAQ.html#multiprocess">Using one
+  <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#multiprocess">Using one
   Context from multiple Processes</a><br>
-  <a href="/documentation/parallelOpenGLFAQ.html#links">Further
+  <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#links">Further
     Information</a><br>
 </p>
 
@@ -50,7 +50,7 @@
   <li><b>Q: </b>So how can I then make use of multiple processors with
     OpenGL?</li>
   <li><b>A: </b>See 
-    <a href="/documentation/parallelOpenGLFAQ.html#multicore">Section
+    <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#multicore">Section
       2</a>.</li>
 </ul><ul>
   <li><b>Q: </b>Why does my X11 application still crash, even though I am
@@ -100,7 +100,7 @@
     contexts. If the draw operation is not CPU-bound, the windows should be
     updated sequentially. If the draw operation is CPU-bound, the CPU-intensive
     part should be pipelined with the draw thread
-    (see <a href="/documentation/parallelOpenGLFAQ.html#multicore">Section
+    (see <a href="/equalizergraphics.com/documentation/parallelOpenGLFAQ.html#multicore">Section
     2</a>) while still updating the windows sequentially from the draw
     thread. If that is not feasible, updating the windows from multiple threads
     might be faster on a multicore machine.</li>

@@ -21,7 +21,7 @@
 <p>
   Equalizer provides the following major features to facilitate the development
   and deployment of scalable OpenGL applications. A
-  <a href="/features.html">detailed feature list</a> can be found on the
+  <a href="/equalizergraphics.com/features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
 <ul>
@@ -67,11 +67,11 @@
 </ul>
 <p>0.5.1:</p>
 <ul>
-  <li><a href="/documents/design/statisticsOverlay.html">Statistics Overlay</a> 
+  <li><a href="/equalizergraphics.com/documents/design/statisticsOverlay.html">Statistics Overlay</a> 
     to understand and eliminate bottlenecks in the rendering pipeline</li>
   <li>Support for using <a href="http://paracomp.sourceforge.net/">Paracomp</a>
     as a compositing backend, see 
-    <a href="/cgi-bin/viewvc.cgi/trunk/src/README.paracomp?view=markup">README.paracomp</a></li>
+    <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/README.paracomp?view=markup">README.paracomp</a></li>
   <li>Network-based instead of file-based model distribution in eqPly</li>
   <li>Support for the window swapsync hint on WGL</li>
 </ul>
@@ -127,12 +127,12 @@
 
 <h4>Documentation</h4>
 <p>
-  The <a href="/survey.html">Programming Guide</a> has been extended to 57
+  The <a href="/equalizergraphics.com/survey.html">Programming Guide</a> has been extended to 57
     pages. In addition, the following documentation has been added:
 </p>
 <p>0.5.1:</p>
 <ul>
-  <li><a href="/documents/design/statisticsOverlay.html">Statistics
+  <li><a href="/equalizergraphics.com/documents/design/statisticsOverlay.html">Statistics
       Overlay</a></li>
 </ul>
 
@@ -173,7 +173,7 @@
 <p>
   Equalizer is a cross-platform toolkit, designed to run on any modern operating
   system, including all Unix variants and the Windows operating system.  A 
-  <a href="/compatibility.html">compatibility matrix</a> can be found on the
+  <a href="/equalizergraphics.com/compatibility.html">compatibility matrix</a> can be found on the
   Equalizer website. Version 0.5 has been tested on:
 </p>
 <h4>Operating System Support</h4>
@@ -195,17 +195,17 @@
   The
   <a href="http://www.lulu.com/browse/book_view.php?fCID=2184039">Programming
     Guide</a> is part of the Equalizer and can be found
-  <a href="/survey.html">online</a>. Equalizer
+  <a href="/equalizergraphics.com/survey.html">online</a>. Equalizer
   does not yet have an Users Guide. The shipped
-  <a href="/cgi-bin/viewvc.cgi/tags/release-0.5.4/examples/">examples</a> provides a reference for developing or porting
-  applications. The <a href="/doc_developer.html">Developer Documentation</a>
+  <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.5.4/examples/">examples</a> provides a reference for developing or porting
+  applications. The <a href="/equalizergraphics.com/doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
   source code is a last resort for information.
 </p>
 <h3>Support</h3>
 <p>
   Technical questions can be posted to the 
-  <a href="/cgi-bin/mailman/listinfo/eq-dev">
+  <a href="/equalizergraphics.com/cgi-bin/mailman/listinfo/eq-dev">
     Developer Mailing List</a>, or directly to
   <a href="mailto:info@equalizergraphics.com?subject=Equalizer%20question">
     info@equalizergraphics.com</a>.

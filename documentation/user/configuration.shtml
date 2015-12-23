@@ -8,10 +8,10 @@
 
 <h2>Overview</h2>
 <p>
-  Equalizer uses the <a href="/gpu-sd/">GPU-SD</a> library for discovering local
+  Equalizer uses the <a href="/equalizergraphics.com/gpu-sd/">GPU-SD</a> library for discovering local
   and remote GPUs. Based on this information, a typical configuration is
   dynamically compiled. The auto-configuration uses the same format as the
-  <a href="/documents/design/fileFormat.html">static configuration files</a>,
+  <a href="/equalizergraphics.com/documents/design/fileFormat.html">static configuration files</a>,
   and can therefore be used to create template configurations.
 </p>
 

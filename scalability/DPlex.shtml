@@ -32,7 +32,7 @@
 </p>
 <p>
   The compositing overhead of DPlex compounds is similar
-  to <a href="/scalability/2D.html">2D compounds</a>. DPlex is often combined
+  to <a href="/equalizergraphics.com/scalability/2D.html">2D compounds</a>. DPlex is often combined
   with other modes to keep the latency reasonable while profiting from the
   linear scalability of DPlex compounds. DPlex is not recommended for immersive
   installations due to VR sickness caused by the increased latency.

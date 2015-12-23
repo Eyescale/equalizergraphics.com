@@ -9,11 +9,11 @@
 
 <h2>Table of Contents</h2>
 <p>
-  <a href="/documentation/performance.html#overview">Overview</a><br>
-  <a href="/documentation/performance.html#mgpu">Multi-GPU Workstations</a><br>
-  <a href="/documentation/performance.html#powerwall">Powerwalls and Display
+  <a href="/equalizergraphics.com/documentation/performance.html#overview">Overview</a><br>
+  <a href="/equalizergraphics.com/documentation/performance.html#mgpu">Multi-GPU Workstations</a><br>
+  <a href="/equalizergraphics.com/documentation/performance.html#powerwall">Powerwalls and Display
     Walls</a><br>
-  <a href="/documentation/performance.html#cluster">Visualization
+  <a href="/equalizergraphics.com/documentation/performance.html#cluster">Visualization
     Clusters</a><br>
 </p>
 
@@ -28,14 +28,14 @@
 <h2>Related Presentations</h2>
 <ul>
   <li>Parallel rendering on hybrid multi-GPU clusters:
-    <a href="/documents/EGPGV12/index.html">html</a>
-    <a href="/documents/EGPGV12.pdf">pdf</a></li>
+    <a href="/equalizergraphics.com/documents/EGPGV12/index.html">html</a>
+    <a href="/equalizergraphics.com/documents/EGPGV12.pdf">pdf</a></li>
   <li>Fast compositing for cluster-parallel rendering:
-    <a href="/documents/EGPGV10_compositing.html">html</a>
-    <a href="/documents/EGPGV10_compositing.pdf">pdf</a></li>
+    <a href="/equalizergraphics.com/documents/EGPGV10_compositing.html">html</a>
+    <a href="/equalizergraphics.com/documents/EGPGV10_compositing.pdf">pdf</a></li>
   <li>Scalable parallel out-of-core terrain rendering:
-    <a href="/documents/EGPGV10_raster.html">html</a>
-    <a href="/documents/EGPGV10_raster.pdf">pdf</a></li>
+    <a href="/equalizergraphics.com/documents/EGPGV10_raster.html">html</a>
+    <a href="/equalizergraphics.com/documents/EGPGV10_raster.pdf">pdf</a></li>
 </ul>
 
 <a name="mgpu"></a>
@@ -51,7 +51,7 @@
 </p>
 
 <h3>Example 1: HP xw9300 workstation</h3>
-<div class="float_right"><a href="/images/perf.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/perf.png">
     <img src="/images/perf-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU HP workstation</div>
 </div>
@@ -71,7 +71,7 @@
 </p>
 
 <h3>Example 2: Apple Mac Pro</h3>
-<div class="float_right"><a href="/images/perfMac.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/perfMac.png">
     <img src="/images/perfMac-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU Mac Pro</div>
 </div>
@@ -85,7 +85,7 @@
 
 <a name="powerwall"></a>
 <h2>Powerwalls and Display Walls</h2>
-<div class="float_right"><a href="/images/Chromium_Equalizer.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/Chromium_Equalizer.png">
     <img src="/images/Chromium_Equalizer-small.jpg"
          alt="Display wall performance"></a>
   <div class="label">Performance for a Display Wall</div>
@@ -106,7 +106,7 @@
   backend node.
 </p>
 <p>
-  The white paper <a href="/documents/WhitePapers/Chromium_Equalizer.pdf">Two
+  The white paper <a href="/equalizergraphics.com/documents/WhitePapers/Chromium_Equalizer.pdf">Two
     Methods for driving OpenGL Display Walls</a> describes this performance
   study.
 </p>
@@ -130,7 +130,7 @@
   nicely all aspects of the rendering pipeline.
 </p>
 
-<div class="float_right"><a href="/images/perf512.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/perf512.png">
     <img src="/images/perf512-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 512<sup>3</sup> volume data set.</div>
 </div>
@@ -146,7 +146,7 @@
 </p>
 
 <div class="flush_float"></div>
-<div class="float_right"><a href="/images/perf256.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/perf256.png">
     <img src="/images/perf256-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 256<sup>3</sup> volume data set.</div>
 </div>
@@ -167,7 +167,7 @@
 
 
 <h3>Example 2: Polygonal Rendering</h3>
-<div class="float_right"><a href="/images/perfPoly.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/perfPoly.png">
     <img src="/images/perfPoly-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a polygonal data set.</div>
 </div>

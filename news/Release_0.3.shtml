@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/images/release-0.3.png">
+  <a href="/equalizergraphics.com/images/release-0.3.png">
     <img src="/images/release-0.3-small.jpg" 
          alt="Scalable Rendering on Windows XP">
   </a>

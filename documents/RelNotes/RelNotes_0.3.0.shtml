@@ -19,7 +19,7 @@
 <p>
   Equalizer provides the following major features to facilitate the development
   and deployment of scalable OpenGL applications. A
-  <a href="/features.html">detailed feature list</a> can be found on the
+  <a href="/equalizergraphics.com/features.html">detailed feature list</a> can be found on the
   Equalizer website.
 </p>
 <ul>
@@ -69,16 +69,16 @@
 
 <h4>New Documentation</h4>
 <ul>
-  <li><a href="/documents/design/anaglyph.html">Anaglyphic Stereo</a></li>
-  <li><a href="/documents/design/nonthreaded.html">Nonthreaded Rendering</a></li>
-  <li><a href="/documents/design/infiniBand.html">Infiniband Setup and
+  <li><a href="/equalizergraphics.com/documents/design/anaglyph.html">Anaglyphic Stereo</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/nonthreaded.html">Nonthreaded Rendering</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/infiniBand.html">Infiniband Setup and
       Configuration</a></li>
-  <li><a href="/documents/design/residentNodes.html">Resident Render
+  <li><a href="/equalizergraphics.com/documents/design/residentNodes.html">Resident Render
       Clients</a></li>
-  <li><a href="/documents/design/standalone.html">Standalone Application
+  <li><a href="/equalizergraphics.com/documents/design/standalone.html">Standalone Application
       Support</a></li>
-  <li><a href="/documents/design/nodeConnect.html">Node Connection Setup</a></li>
-  <li><a href="/documentation/user/configTool.html">Configuration Tool</a></li>
+  <li><a href="/equalizergraphics.com/documents/design/nodeConnect.html">Node Connection Setup</a></li>
+  <li><a href="/equalizergraphics.com/documentation/user/configTool.html">Configuration Tool</a></li>
 </ul>
 <h4>Known Bugs</h4>
 
@@ -106,7 +106,7 @@
 <p>
   Equalizer does not yet have a formal Users or Programmers Guide. The shipped
   <a href="http://www.equalizergraphics.com/cgi-bin/viewvc.cgi/tags/release-0.3/src/examples/eqPly/">eqPly example</a> provides a reference for developing or porting
-  applications. The <a href="/doc_developer.html">Developer Documentation</a>
+  applications. The <a href="/equalizergraphics.com/doc_developer.html">Developer Documentation</a>
   on the website provides further design documents for specific features. The
   source code is a last resort for information.
 </p>

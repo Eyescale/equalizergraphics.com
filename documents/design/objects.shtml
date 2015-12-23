@@ -19,12 +19,12 @@
 <p>
   Equalizer provides facilities to ease the data distribution of an
   application. The central piece is
-  the <a href="/documents/Developer/API/classco_1_1Object.html">co::Object</a>
+  the <a href="/equalizergraphics.com/documents/Developer/API/classco_1_1Object.html">co::Object</a>
   base class, from which distributed objects are derived. Objects become
   accessable by making them known to a session. The example code shipped with
   Equalizer contains examples of distributed objects. The Programming Guide
   explains distributed objects in more detail, including the easier to use
-  variant <a href="/documents/Developer/API/classeq_1_1Object.html">eq::Object</a>.
+  variant <a href="/equalizergraphics.com/documents/Developer/API/classeq_1_1Object.html">eq::Object</a>.
 </p>
 
 <h2>Classification</h2>

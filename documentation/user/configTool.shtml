@@ -10,7 +10,7 @@
 <p>
   The configuration tool is useful for automatically creating standard
   configuration files. It is located in
-  the <a href="/cgi-bin/viewvc.cgi/trunk/src/tools/configTool">tools</a>
+  the <a href="/equalizergraphics.com/cgi-bin/viewvc.cgi/trunk/src/tools/configTool">tools</a>
   subdirectory. Note that the config tool only exploits a subset of the
   Equalizer functionality.
 </p>

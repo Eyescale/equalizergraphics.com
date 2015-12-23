@@ -20,7 +20,7 @@ State:
 <p>
   The purpose of a swap barrier is to synchronize buffer swaps of multiple
   windows, potentially residing on different nodes. More information is to in
-  the <a href="/documentation/user/synchronization.html">user documentation</a>.
+  the <a href="/equalizergraphics.com/documentation/user/synchronization.html">user documentation</a>.
 </p>
 
 <h2>Software Swap Synchronization</h2>

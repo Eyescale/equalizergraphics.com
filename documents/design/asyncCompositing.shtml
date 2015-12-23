@@ -13,7 +13,7 @@
 
 <h2>Overview</h2>
 <div class="float_right">
-  <a href="/documents/design/images/asyncCompositing.png">
+  <a href="/equalizergraphics.com/documents/design/images/asyncCompositing.png">
     <img src="/documents/design/images/asyncCompositing-small.jpg" 
          alt="Asynchronous Compositing"></a>
   <div class="label">Asynchronous Compositing</div>
@@ -30,7 +30,7 @@
 <h2>Implementation</h2>
 
 <div class="float_right">
-  <a href="/documents/design/images/asyncCompositingImpl.png">
+  <a href="/equalizergraphics.com/documents/design/images/asyncCompositingImpl.png">
     <img src="/documents/design/images/asyncCompositingImpl-small.jpg" 
          alt="Sequence diagram for Asynchronous Compositing"></a>
   <div class="label">Sequence Diagram Asynchronous Compositing</div>

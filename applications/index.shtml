@@ -1,1 +1,51 @@
-../applications.shtml
+#define S_APPLICATIONS
+#define S_APPLICATIONS_MAIN
+#define PAGE Parallel Rendering Applications
+
+#include "header.shtml"
+
+<h2>Equalizer Example Applications</h2>
+<p>
+  The Equalizer distribution contains several example applications to
+  demonstrate the capabilities of Equalizer and to provide a reference for
+  application developers:
+</p>
+<ul>
+  <li><a href="/equalizergraphics.com/applications/eqHello.html">eqHello - Hello, World!</a></li>
+  <li><a href="/equalizergraphics.com/applications/eqPly.html">eqPly - Polygonal Renderer</a></li>
+  <li><a href="/equalizergraphics.com/applications/eVolve.html">eVolve - Volume Renderer</a></li>
+  <li><a href="/equalizergraphics.com/applications/osgScaleViewer.html">osgScaleViewer - Scalable
+      OpenSceneGraph Viewer</a></li>
+</ul>
+
+<h2>Third Party Applications</h2>
+<p>
+  Various <a href="/equalizergraphics.com/applications/thirdParty.html">other commercial and open
+  source applications</a> use Equalizer as the foundation for parallel
+  rendering:
+</p>
+<ul>
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#rttscale">RTT Scale -
+      Highly Realistic Rendering</a></li>
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#hase3d">Hase3D - Flow
+      Visualization</a></li>
+  <li><a href="http://purplekarrot.net/doc/libMaoni/">LibMaoni</a>, a 3D
+    rendering framework for graphics and visualization projects.</li>
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#compcore">CompCore visualization
+      lab</a> at CSU East Bay</li>
+  <li><a href="http://www.tinysg.de/index.html">Tiny Scene Graph</a></li>
+  <li><a href="http://vizstack.sourceforge.net/">VizStack</a></li>
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#eqSmart">eqSmart - Terrain
+      Rendering</a></li>
+  <li><a href="/equalizergraphics.com/applications/thirdParty.html#eqOgre">eqOgre - Ogre3D
+      Integration</a></li>
+</ul>
+<p>
+  If you are working on an application based on Equalizer,
+  please
+  <a href="mailto:eile@equalizergraphics.com?subject=New Equalizer Application">drop us an email</a> 
+  and we will add your program to the list.
+</p>
+
+#include "footer.shtml"
+<!-- $Id$ -->

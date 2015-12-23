@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/applications/images/eqHello.png">
+  <a href="/equalizergraphics.com/applications/images/eqHello.png">
     <img src="/applications/images/eqHello-small.jpg" 
          alt="Hello, World!"></a>
   <div class="label">Hello, World!</div>
