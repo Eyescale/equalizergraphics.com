@@ -1,7 +1,7 @@
 .PHONY: update srcupdate update_and_targets
 .SUFFIXES: .html .css
 
-TARGET = build
+TARGET = /tmp/build
 TAR ?= tar
 
 FILES = \
@@ -249,11 +249,9 @@ clean:
 	rm -rf $(TARGETS)
 
 install: $(SITEMAP)
+	git clean -fdx
 	git checkout gh-pages
-	rsync -avx --exclude=".git" --delete build/ .
-
-install_only: all
-	rsync -avz --exclude=".git" -e ssh $(TARGET)/ 80.74.159.177:var/www/www.equalizergraphics.com
+	rsync -avx --exclude=".git" --delete /tmp/build/ .
 
 $(SITEMAP): update_and_targets
 	@sitemap_gen --config=sitemap_config.xml
