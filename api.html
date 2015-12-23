@@ -32,8 +32,8 @@
     <link rev="made" href="mailto:webmaster@equalizergraphics.com" title="Stefan Eilemann">
     <link rel="home" href="http://www.equalizergraphics.com/" title="Home Page">
     <link rel="icon" href="http://www.equalizergraphics.com/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="/print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="/equalizergraphics.com/stylesheet.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/equalizergraphics.com/print.css" type="text/css" media="print">
     <link rel="alternate" title="Equalizer RSS"
           href="http://www.equalizergraphics.com/equalizer.rdf"
           type="application/rss+xml">
@@ -95,9 +95,9 @@
     <div class="footer">
       <a href="/api.html#top" class="rule">Back to top</a>
       <a href="mailto:info@equalizergraphics.com?subject=Question regarding Equalizer: About: Parallel Programming Interface" class="rule">Questions?</a>
-      <a href="/impressum.html" class="rule">Impressum</a>
+      <a href="/equalizergraphics.com/impressum.html" class="rule">Impressum</a>
 
-      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/api.shtml" class="rule">Changed Wed Jul 15 13:32:30 2015 +0200</a>
+      <a href="https://github.com/Eyescale/equalizergraphics.com/commits/master/api.shtml" class="rule">Changed Wed Dec 23 10:39:22 2015 +0100</a>
 
       <a href="#search">Search</a>
     </div>
@@ -109,7 +109,7 @@
 
 
 
-      <p><a href="/index.html"
+      <p><a href="/equalizergraphics.com/index.html"
 
 
 
@@ -119,25 +119,25 @@
 
       <div class="subnavigation">
 
-        <p><a href="/useCases.html"
+        <p><a href="/equalizergraphics.com/useCases.html"
 
 
 
               >Use Cases</a></p>
 
-        <p><a href="/configuration.html"
+        <p><a href="/equalizergraphics.com/configuration.html"
 
 
 
               >Flexibility</a></p>
 
-        <p><a href="/scalability.html"
+        <p><a href="/equalizergraphics.com/scalability.html"
 
 
 
               >Scalability</a></p>
 
-        <p><a href="/api.html"
+        <p><a href="/equalizergraphics.com/api.html"
 
               class="used"
 
@@ -146,14 +146,14 @@
       </div>
 
 
-      <p><a href="/features.html"
+      <p><a href="/equalizergraphics.com/features.html"
 
 
 
             >Features</a></p>
 
 
-      <p><a href="/applications.html"
+      <p><a href="/equalizergraphics.com/applications.html"
 
 
 
@@ -161,7 +161,7 @@
 
       <!-- Applications sub-navigation-->
 
-      <p><a href="/documentation.html"
+      <p><a href="/equalizergraphics.com/documentation.html"
 
 
 
@@ -169,7 +169,7 @@
 
       <!-- Documentation sub-navigation-->
 
-      <p><a href="/support.html"
+      <p><a href="/equalizergraphics.com/support.html"
 
 
 
@@ -177,14 +177,14 @@
 
       <!-- Support sub-navigation-->
 
-      <p><a href="/gallery.html"
+      <p><a href="/equalizergraphics.com/gallery.html"
 
 
 
             >Gallery</a></p>
 
 
-      <p><a href="/downloads.html"
+      <p><a href="/equalizergraphics.com/downloads.html"
 
 
 
@@ -192,27 +192,27 @@
 
       <!-- Downloads sub-navigation-->
 
-      <p><a href="/news.html"
+      <p><a href="/equalizergraphics.com/news.html"
 
 
 
             >News</a></p>
 
 
-      <p><a href="/events.html"
+      <p><a href="/equalizergraphics.com/events.html"
 
 
 
             >Events</a></p>
 
 
-      <p><a href="/contributions.html"
+      <p><a href="/equalizergraphics.com/contributions.html"
 
 
 
             >Contributions</a></p>
 
-      <p><a href="/survey.html"
+      <p><a href="/equalizergraphics.com/survey.html"
 
 
 
@@ -263,7 +263,7 @@
 <h2>Equalizer</h2>
 <p>
   Equalizer provides a distributed, scalable, multipipe,
-  multithreaded <a href="/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
+  multithreaded <a href="/equalizergraphics.com/documents/Howtos/glutToEqualizer.html">GLUT-like</a>
   <a href="http://eyescale.github.io/Equalizer-1.10/namespaceeq.html#details">programming
   interface</a>.
 </p>
@@ -282,7 +282,7 @@
   application, thus making it as easy as possible to modify existing
   applications for parallel rendering on visualization clusters.
 </p>
-<div class="float_right"><a href="/images/executionFlow.png">
+<div class="float_right"><a href="/equalizergraphics.com/images/executionFlow.png">
     <img src="images/executionFlow-small.jpg"
          alt="Execution flow of a single-threaded and a multi-GPU application">
 </a></div>
@@ -312,24 +312,24 @@
 </ul>
 <p>
   The application subclasses these entities, and
-  overrides <a href="/documents/design/taskMethods.html">task methods</a> to
+  overrides <a href="/equalizergraphics.com/documents/design/taskMethods.html">task methods</a> to
   provide the application's rendering code. Each method corresponds to a task,
   and for all of them Equalizer provides a default method which implements the
   typical use case. This allows a quick start for the developer, which can
   replace the defaults gradually with his own
-  code. The <a href="/documents/design/taskMethods.html">full list of task
-  methods</a> is part of the <a href="/doc_developer.html">developer
+  code. The <a href="/equalizergraphics.com/documents/design/taskMethods.html">full list of task
+  methods</a> is part of the <a href="/equalizergraphics.com/doc_developer.html">developer
   documentation</a>. Some of the most important methods are:
   <ul>
-    <li><a href="/documents/design/taskMethods.html#channeldraw">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#channeldraw">
         <b>Channel::frameDraw</b></a> - render using the provided frustum,
       viewport and range</li>
-    <li><a href="/documents/design/taskMethods.html#windowinit">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#windowinit">
         <b>Window::configInit</b></a> - initialize OpenGL drawable and
       state</li>
-    <li><a href="/documents/design/taskMethods.html#pipestartframe">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#pipestartframe">
         <b>Pipe::frameStart</b></a> - update frame-specific data</li>
-    <li><a href="/documents/design/taskMethods.html#nodeinit">
+    <li><a href="/equalizergraphics.com/documents/design/taskMethods.html#nodeinit">
         <b>Node::configInit</b></a> - initialize per node application data</li>
   </ul>
 </p>
