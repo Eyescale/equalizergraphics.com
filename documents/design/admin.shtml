@@ -59,7 +59,7 @@
 </p>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/admin.png">
-    <img src="/documents/design/images/admin-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/admin-small.jpg" 
          alt="New eq::admin namespace layering"/></a>
   <div class="label">New eq::admin namespace layering</div>
 </div>
@@ -89,7 +89,7 @@
 <h3>Slave Object Commit</h3>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/slaveWrites.png">
-    <img src="/documents/design/images/slaveWrites-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/slaveWrites-small.jpg" 
          alt="Modifying an co::Object from a slave instance"/></a>
   <div class="label">Modifying an co::Object from a slave instance</div>
 </div>

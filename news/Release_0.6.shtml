@@ -5,7 +5,7 @@
 #include "header.shtml"
 
 <div class="float_right">
-  <a href="/equalizergraphics.com/images/release-0.6.png"><img src="/images/release-0.6-small.jpg" 
+  <a href="/equalizergraphics.com/images/release-0.6.png"><img src="/equalizergraphics.com/images/release-0.6-small.jpg" 
                                      alt="Scalable Display System"></a>
   <div class="label">Scalability for large-scale displays</div>
 </div>

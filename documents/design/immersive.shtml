@@ -33,7 +33,7 @@
   
 <h2>Stereo Rendering</h2>
 <div class="float_left"><a href="/equalizergraphics.com/documents/design/images/mono.png">
-    <img src="/documents/design/images/mono-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/mono-small.jpg" 
          alt="View frustum for monoscopic rendering"></a>
   <div class="label">Monoscopic View Frustum</div>
 </div>
@@ -45,7 +45,7 @@
   are inherited to children, unless the children overwrite the eye field.
 </p>
 <div class="float_right"><a href="/equalizergraphics.com/documents/design/images/stereo.png">
-    <img src="/documents/design/images/stereo-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/stereo-small.jpg" 
          alt="View frusta for stereo rendering"></a>
   <div class="label">Stereoscopic View Frusta</div>
 </div>
@@ -67,7 +67,7 @@
 
 <h2>Immersive Visualization</h2>
 <div class="float_right"><a href="/equalizergraphics.com/documents/design/images/immersive.png">
-    <img src="/documents/design/images/immersive-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/immersive-small.jpg" 
          alt="Head Tracking with stereo frusta"></a>
   <div class="label">Stereo Frusta with Head Tracking</div>
 </div>
@@ -86,7 +86,7 @@
 <a name="HMD"></a>
 <h2>Head-Mounted Displays (HMD)</h2>
 <div class="float_left"><a href="/equalizergraphics.com/documents/design/images/HMD.png">
-    <img src="/documents/design/images/HMD-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/HMD-small.jpg" 
          alt="View frusta for head-mounted displays"></a>
   <div class="label">View Frusta for Head-Mounted Displays</div>
 </div>
@@ -115,7 +115,7 @@
 <h2>Focal Distance</h2>
 
 <div class="float_right"><a href="/equalizergraphics.com/documents/design/images/focalFixed.png">
-    <img src="/documents/design/images/focalFixed-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/focalFixed-small.jpg" 
          alt="Fixed focal distance"></a>
   <div class="label">Fixed focal distance</div>
 </div>
@@ -142,7 +142,7 @@
 <div class="flush_float"></div>
 
 <div class="float_right"><a href="/equalizergraphics.com/documents/design/images/focalOrigin.png">
-    <img src="/documents/design/images/focalOrigin-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/focalOrigin-small.jpg" 
          alt="Focal distance relative to the origin"></a>
   <div class="label">Focal distance relative to the origin</div>
 </div>
@@ -161,7 +161,7 @@
 <div class="flush_float"></div>
 
 <div class="float_right"><a href="/equalizergraphics.com/documents/design/images/focalObserver.png">
-    <img src="/documents/design/images/focalObserver-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/focalObserver-small.jpg" 
          alt="Focal distance relative to the observer"></a>
   <div class="label">Focal distance relative to the observer</div>
 </div>
@@ -188,7 +188,7 @@
 </p>
 <div class="flush_float"></div>
 
-<div class="float_right"><img src="/documents/design/images/focalRatio.png" 
+<div class="float_right"><img src="/equalizergraphics.com/documents/design/images/focalRatio.png" 
                               alt="Calculating the focus ratio">
   <div class="label">Calculating the focus ratio</div>
 </div>

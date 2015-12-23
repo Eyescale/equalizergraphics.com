@@ -23,7 +23,7 @@
 <h2>Overview</h2>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/mainloop.png">
-    <img src="/documents/design/images/mainloop-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/mainloop-small.jpg" 
          alt="Application and render client main loops"/></a>
   <div class="label">Application and render client main loops</div>
 </div>

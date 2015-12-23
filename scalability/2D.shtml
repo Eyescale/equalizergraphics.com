@@ -16,7 +16,7 @@
 <div class="center">
   <a href="http://www.youtube.com/watch?v=DtnSRlZnbrQ&fmt=18">Watch a 
     video<br>
-  <img src="/scalability/images/2D.png" alt="2D or sort-first"></a>
+  <img src="/equalizergraphics.com/scalability/images/2D.png" alt="2D or sort-first"></a>
 </div>
 <p> 
   This mode has a low, constant IO overhead for the image transfers and

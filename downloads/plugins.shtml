@@ -25,14 +25,14 @@
 <table>
   <tr>
     <th>32 bit</th>
-    <td><a href="/equalizergraphics.com/downloads/FastJPEG_Win32.zip"><img src="/images/windows.png" alt="Windows 32 bit"></a></td>
+    <td><a href="/equalizergraphics.com/downloads/FastJPEG_Win32.zip"><img src="/equalizergraphics.com/images/windows.png" alt="Windows 32 bit"></a></td>
     <td></td>
-    <td><a href="/equalizergraphics.com/downloads/FastJPEG_OSX.tar.gz"><img src="/images/mac.png" alt="OS X 32 bit"></a></td>
+    <td><a href="/equalizergraphics.com/downloads/FastJPEG_OSX.tar.gz"><img src="/equalizergraphics.com/images/mac.png" alt="OS X 32 bit"></a></td>
   </tr>
   <tr>
     <th>64 bit</th>
-    <td><a href="/equalizergraphics.com/downloads/FastJPEG_Win64.zip"><img src="/images/windows.png" alt="Windows 64 bit"></a></td>
-    <td><a href="/equalizergraphics.com/downloads/FastJPEG_Linux_64.tar.gz"><img src="/images/linux.png" alt="Linux 64 bit"></a></td>
+    <td><a href="/equalizergraphics.com/downloads/FastJPEG_Win64.zip"><img src="/equalizergraphics.com/images/windows.png" alt="Windows 64 bit"></a></td>
+    <td><a href="/equalizergraphics.com/downloads/FastJPEG_Linux_64.tar.gz"><img src="/equalizergraphics.com/images/linux.png" alt="Linux 64 bit"></a></td>
     <td></td>
   </tr>
 </table>

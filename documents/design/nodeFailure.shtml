@@ -21,7 +21,7 @@
 <h2>Launching</h2>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/serverState.png">
-    <img src="/documents/design/images/serverState-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/serverState-small.jpg" 
          alt="Entity State Diagram"/></a>
   <div class="label">Server Entity State Diagram</div>
 </div>

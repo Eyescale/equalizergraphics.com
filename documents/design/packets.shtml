@@ -23,7 +23,7 @@
 <h2>Packets</h2>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/packets.png">
-    <img src="/documents/design/images/packets-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/packets-small.jpg" 
          alt="Flow chart of the eq::net packet handling"/></a>
   <div class="label">Equalizer Packet Handling</div>
 </div>

@@ -38,7 +38,7 @@
 <h2>Implementation</h2>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/loadEqualizer.png">
-    <img src="/documents/design/images/loadEqualizer-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/loadEqualizer-small.jpg" 
          alt="Load Balancing Grid"/></a>
   <div class="label">Load Balancing Grid</div>
 </div>
@@ -63,7 +63,7 @@
 </p>
 <div class="float_left">
   <a href="/equalizergraphics.com/documents/design/images/loadEqualizer-tree.png">
-    <img src="/documents/design/images/loadEqualizer-tree-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/loadEqualizer-tree-small.jpg" 
          alt="Load Balancing Grid"/></a>
   <div class="label">Load Balancing Split Tree</div>
 </div>
@@ -83,7 +83,7 @@
 </p>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/loadEqualizer-new.png">
-    <img src="/documents/design/images/loadEqualizer-new-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/loadEqualizer-new-small.jpg" 
          alt="Load Balancing Grid"/></a>
   <div class="label">New Split Computation</div>
 </div>

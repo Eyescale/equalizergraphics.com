@@ -14,7 +14,7 @@ State: Implemented in 0.5
 <h2>Overview</h2>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/WhitePapers/MultiGPU.pdf">
-    <img src="/documents/design/images/Multi-GPU-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/Multi-GPU-small.jpg" 
          alt="Using PBuffers for parallel Multi-GPU rendering"/></a>
   <div class="label">Using PBuffers for parallel Multi-GPU rendering</div>
 </div>

@@ -14,7 +14,7 @@ State: Implemented in 0.5.1
 <h2>Overview</h2>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/statistics.png">
-    <img src="/documents/design/images/statistics-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/statistics-small.jpg" 
          alt="Statistics Overlay"/></a>
   <div class="label">Statistics Overlay</div>
 </div>
@@ -34,7 +34,7 @@ State: Implemented in 0.5.1
 <h2>Details</h2>
 
 <div class="float_left">
-  <img src="/documents/design/images/statisticsDetail.png" 
+  <img src="/equalizergraphics.com/documents/design/images/statisticsDetail.png" 
        alt="Statistics Overlay"/>
   <div class="label">Statistics Overlay with Explanations</div>
 </div><div class="flush_float"></div>

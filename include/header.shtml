@@ -55,23 +55,23 @@
     <div class="poll">
         <a href="http://www.equalizergraphics.com/">
 #ifdef S_EQUALIZER
-          <img src="/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
+          <img src="/equalizergraphics.com/images/Equalizer.png" alt="Equalizer logo" class="active"></a>
 #else
-          <img src="/images/Equalizer_g.png" alt="Equalizer logo"></a>
+          <img src="/equalizergraphics.com/images/Equalizer_g.png" alt="Equalizer logo"></a>
 #endif
         <br>
         <a href="http://www.libcollage.net">
 #ifdef S_COLLAGE
-          <img src="/images/Collage.png" alt="Collage logo" class="active"></a>
+          <img src="/equalizergraphics.com/images/Collage.png" alt="Collage logo" class="active"></a>
 #else
-          <img src="/images/Collage_g.png" alt="Collage logo"></a>
+          <img src="/equalizergraphics.com/images/Collage_g.png" alt="Collage logo"></a>
 #endif
         <br>
         <a href="http://www.equalizergraphics.com/gpu-sd">
 #ifdef S_GPUSD
-          <img src="/images/gpusd.png" alt="GPU-SD logo" class="active"></a>
+          <img src="/equalizergraphics.com/images/gpusd.png" alt="GPU-SD logo" class="active"></a>
 #else
-          <img src="/images/gpusd_g.png" alt="GPU-SD logo"></a>
+          <img src="/equalizergraphics.com/images/gpusd_g.png" alt="GPU-SD logo"></a>
 #endif
         <br>
 

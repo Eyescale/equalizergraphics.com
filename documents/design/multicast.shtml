@@ -93,7 +93,7 @@
 </ul>
 <div class="float_right">
       <a href="/equalizergraphics.com/documents/design/images/rspPackets.png">
-        <img src="/documents/design/images/rspPackets-small.jpg" 
+        <img src="/equalizergraphics.com/documents/design/images/rspPackets-small.jpg" 
          alt="RSP Packet Flow"></a>
   <div class="label">RSP packet control flow</div>
 </div>
@@ -213,7 +213,7 @@
 <h3>Object Mapping</h3>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/objectSync.png">
-    <img src="/documents/design/images/objectSync-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/objectSync-small.jpg" 
          alt="Object Synchronization Diagram (0.9)"/></a>
   <div class="label">Object Synchronization Diagram (0.9)</div>
 </div>
@@ -245,7 +245,7 @@
 <h4>Instance Cache</h4>
 <div class="float_right">
   <a href="/equalizergraphics.com/documents/design/images/objectSyncCache.png">
-    <img src="/documents/design/images/objectSyncCache-small.jpg" 
+    <img src="/equalizergraphics.com/documents/design/images/objectSyncCache-small.jpg" 
          alt="Object Synchronization Diagram using Caching"/></a>
   <div class="label">Object Synchronization Diagram using Caching</div>
 </div>

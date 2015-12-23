@@ -52,7 +52,7 @@
 
 <h3>Example 1: HP xw9300 workstation</h3>
 <div class="float_right"><a href="/equalizergraphics.com/images/perf.png">
-    <img src="/images/perf-small.jpg" alt="Performance comparison"></a>
+    <img src="/equalizergraphics.com/images/perf-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU HP workstation</div>
 </div>
 <p>
@@ -72,7 +72,7 @@
 
 <h3>Example 2: Apple Mac Pro</h3>
 <div class="float_right"><a href="/equalizergraphics.com/images/perfMac.png">
-    <img src="/images/perfMac-small.jpg" alt="Performance comparison"></a>
+    <img src="/equalizergraphics.com/images/perfMac-small.jpg" alt="Performance comparison"></a>
   <div class="label">Performance for a dual-GPU Mac Pro</div>
 </div>
 <p>
@@ -86,7 +86,7 @@
 <a name="powerwall"></a>
 <h2>Powerwalls and Display Walls</h2>
 <div class="float_right"><a href="/equalizergraphics.com/images/Chromium_Equalizer.png">
-    <img src="/images/Chromium_Equalizer-small.jpg"
+    <img src="/equalizergraphics.com/images/Chromium_Equalizer-small.jpg"
          alt="Display wall performance"></a>
   <div class="label">Performance for a Display Wall</div>
 </div>
@@ -131,7 +131,7 @@
 </p>
 
 <div class="float_right"><a href="/equalizergraphics.com/images/perf512.png">
-    <img src="/images/perf512-small.jpg" alt="Performance comparison"></a>
+    <img src="/equalizergraphics.com/images/perf512-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 512<sup>3</sup> volume data set.</div>
 </div>
 <p>
@@ -147,7 +147,7 @@
 
 <div class="flush_float"></div>
 <div class="float_right"><a href="/equalizergraphics.com/images/perf256.png">
-    <img src="/images/perf256-small.jpg" alt="Performance comparison"></a>
+    <img src="/equalizergraphics.com/images/perf256-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a 256<sup>3</sup> volume data set.</div>
 </div>
 <p>
@@ -168,7 +168,7 @@
 
 <h3>Example 2: Polygonal Rendering</h3>
 <div class="float_right"><a href="/equalizergraphics.com/images/perfPoly.png">
-    <img src="/images/perfPoly-small.jpg" alt="Performance comparison"></a>
+    <img src="/equalizergraphics.com/images/perfPoly-small.jpg" alt="Performance comparison"></a>
   <div class="label">Scalability of a polygonal data set.</div>
 </div>
 <p>

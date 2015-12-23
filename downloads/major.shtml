@@ -36,8 +36,8 @@
       </ul>
     </td>
     <td>
-      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
-      <a href="https://github.com/Eyescale/portfiles#readme"><img src="/images/mac.png" alt="Mac OS X"></a>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/equalizergraphics.com/images/ubuntu.png" alt="Ubuntu"></a>
+      <a href="https://github.com/Eyescale/portfiles#readme"><img src="/equalizergraphics.com/images/mac.png" alt="Mac OS X"></a>
     </td>
     <td>Separate Collage library, VRPN and OpenCV head tracking, network device
       discovery.</td>
@@ -59,8 +59,8 @@
       <a href="/equalizergraphics.com/downloads/VMMLib-1.4.0.tar.gz">vmmlib</a>
     </td>
     <td>
-      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
-      <a href="https://github.com/Eyescale/portfiles#readme"><img src="/images/mac.png" alt="Mac OS X"></a>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/equalizergraphics.com/images/ubuntu.png" alt="Ubuntu"></a>
+      <a href="https://github.com/Eyescale/portfiles#readme"><img src="/equalizergraphics.com/images/mac.png" alt="Mac OS X"></a>
     </td>
     <td>Asynchronous readbacks, region of interest, zeroconf support.</td>
   </tr>
@@ -80,12 +80,12 @@
     </td>
     <td>
       <center>1.2.1</center><br>
-      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.1-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/equalizergraphics.com/images/ubuntu.png" alt="Ubuntu"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.1-Darwin.dmg"><img src="/equalizergraphics.com/images/mac.png" alt="OS X 32 bit"></a>
       <hr><center>1.2</center><br>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.0-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.0-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.0-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.0-Darwin.dmg"><img src="/equalizergraphics.com/images/mac.png" alt="OS X 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.0-win32.exe"><img src="/equalizergraphics.com/images/windows32.png" alt="Windows 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.2.0-win64.exe"><img src="/equalizergraphics.com/images/windows64.png" alt="Windows 64 bit"></a>
     </td>
     <td>Automatic configuration, Sequel library, runtime reliability, tile
       compounds.</td>
@@ -107,18 +107,18 @@
     </td>
     <td>
       <center>1.0.2</center>
-      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/images/ubuntu.png" alt="Ubuntu"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.2-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.2-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.2-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
+      <a href="https://launchpad.net/%7Eeilemann/+archive/equalizer/"><img src="/equalizergraphics.com/images/ubuntu.png" alt="Ubuntu"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.2-Darwin.dmg"><img src="/equalizergraphics.com/images/mac.png" alt="OS X 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.2-win32.exe"><img src="/equalizergraphics.com/images/windows32.png" alt="Windows 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.2-win64.exe"><img src="/equalizergraphics.com/images/windows64.png" alt="Windows 64 bit"></a>
       <hr><center>1.0.1</center>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.1-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.1-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.1-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.1-Darwin.dmg"><img src="/equalizergraphics.com/images/mac.png" alt="OS X 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.1-win32.exe"><img src="/equalizergraphics.com/images/windows32.png" alt="Windows 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.1-win64.exe"><img src="/equalizergraphics.com/images/windows64.png" alt="Windows 64 bit"></a>
       <hr><center>1.0</center><br>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.0-Darwin.dmg"><img src="/images/mac.png" alt="OS X 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.0-win32.exe"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.0-win64.exe"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.0-Darwin.dmg"><img src="/equalizergraphics.com/images/mac.png" alt="OS X 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.0-win32.exe"><img src="/equalizergraphics.com/images/windows32.png" alt="Windows 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-1.0.0-win64.exe"><img src="/equalizergraphics.com/images/windows64.png" alt="Windows 64 bit"></a>
     </td>
     <td>Stable API, Collage library, download and upload plugins, runtime stereo
     switch.</td>
@@ -145,8 +145,8 @@
       <a href="http://sourceforge.net/project/showfiles.php?group_id=170962&package_id=195220&release_id=640364">SourceForge</a><br>
     </td>
     <td>
-      <a href="/equalizergraphics.com/downloads/Equalizer-0.6-win32.zip"><img src="/images/windows32.png" alt="Windows 32 bit"></a>
-      <a href="/equalizergraphics.com/downloads/Equalizer-0.6-x64.zip"><img src="/images/windows64.png" alt="Windows 64 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-0.6-win32.zip"><img src="/equalizergraphics.com/images/windows32.png" alt="Windows 32 bit"></a>
+      <a href="/equalizergraphics.com/downloads/Equalizer-0.6-x64.zip"><img src="/equalizergraphics.com/images/windows64.png" alt="Windows 64 bit"></a>
     </td>
     <td>2D and DB load-balancing, DPlex compounds.</td>
   </tr>
