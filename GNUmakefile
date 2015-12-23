@@ -37,7 +37,6 @@ FILES = \
 	forum.html \
 	impressum.html \
 	index.html \
-	lists.html \
 	news.html \
 	relnotes.html \
 	scalability.html \

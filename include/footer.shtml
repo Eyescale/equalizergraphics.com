@@ -22,9 +22,9 @@
        ignored bottom margin on IE7 -->
   <div class="social">
     <script type="text/javascript">addthis_pub  = 'eile';</script>
-    <a href="http://www.addthis.com/bookmark.php" 
-       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" 
-       onmouseout="addthis_close()" 
+    <a href="http://www.addthis.com/bookmark.php"
+       onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')"
+       onmouseout="addthis_close()"
        onclick="return addthis_sendto()">
       <img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16"
            border="0" alt="" />
@@ -35,20 +35,7 @@
   </div>
 #endif
 </div> <!-- div content -->
- 
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-  try {
-  var pageTracker = _gat._getTracker("UA-63007-1");
-  pageTracker._trackPageview();
-  } catch(err) {}
-</script>
-      
 </body>
 
 </html>

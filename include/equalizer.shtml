@@ -31,14 +31,6 @@
               class="used"
 #endif
               >Framework</a></p>
-
-#if 0
-        <p><a href="/equalizergraphics.com/feedback.html"
-#ifdef S_HOME_FEEDBACK
-              class="used"
-#endif
-              >Feedback</a></p>
-#endif
       </div>
 #endif  // S_HOME
 
@@ -156,11 +148,11 @@
 #ifdef S_SUPPORT
       <div class="subnavigation">
 
-        <p><a href="/equalizergraphics.com/lists.html"
+        <p><a href="https://groups.google.com/forum/#!forum/eq-dev"
 #ifdef S_SUPPORT_LISTS
               class="used"
 #endif
-              >Mailing Lists</a></p>
+              >Google Group</a></p>
 
         <p><a href="/equalizergraphics.com/forum.html"
 #ifdef S_SUPPORT_FORUM
