@@ -144,24 +144,6 @@
 #endif
             >Support</a></p>
 
-      <!-- Support sub-navigation-->
-#ifdef S_SUPPORT
-      <div class="subnavigation">
-
-        <p><a href="https://groups.google.com/forum/#!forum/eq-dev"
-#ifdef S_SUPPORT_LISTS
-              class="used"
-#endif
-              >Google Group</a></p>
-
-        <p><a href="/equalizergraphics.com/forum.html"
-#ifdef S_SUPPORT_FORUM
-              class="used"
-#endif
-              >Forum</a></p>
-      </div>
-#endif // S_SUPPORT
-
       <p><a href="/equalizergraphics.com/gallery.html"
 #ifdef S_GALLERY
             class="used"
